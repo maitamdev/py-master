@@ -28,7 +28,10 @@ export function MarkdownContent({
   const html = useMemo(() => {
     if (!content) return '';
     try {
-      return customMarked.parse(content) as string;
+      // Strip HTML comments that cause hydration mismatch
+      const cleaned = content.replace(/<!--[\s\S]*?-->/g, '').trim();
+      if (!cleaned) return '';
+      return customMarked.parse(cleaned) as string;
     } catch {
       return content;
     }

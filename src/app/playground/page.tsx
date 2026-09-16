@@ -212,17 +212,17 @@ export default function PlaygroundPage() {
       </div>
 
       {/* Editor & Output Split Layout */}
-      <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
+      <div className="flex-1 min-h-0 flex flex-col md:flex-row overflow-hidden">
         {/* Editor Pane */}
-        <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col border-b md:border-b-0 md:border-r border-slate-800">
-          <div className="h-8 px-4 bg-slate-900/60 border-b border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+        <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col border-b md:border-b-0 md:border-r border-slate-800 min-h-0">
+          <div className="h-8 px-4 bg-slate-900/60 border-b border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono shrink-0">
             <span className="flex items-center gap-1.5">
               <FileCode className="w-3.5 h-3.5 text-sky-400" />
               main.py
             </span>
             <span className="text-[11px] text-slate-500">Python 3 (Pyodide)</span>
           </div>
-          <div className="flex-1 overflow-hidden">
+          <div className="flex-1 min-h-0 overflow-hidden flex flex-col">
             <CodeEditor value={code} onChange={handleCodeChange} />
           </div>
         </div>

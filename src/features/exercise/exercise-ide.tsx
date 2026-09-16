@@ -480,8 +480,8 @@ export function ExerciseIDE({ exercise }: { exercise: Exercise }) {
             </div>
           </div>
 
-          {/* Monaco Code Editor */}
-          <div className="flex-1 min-h-[120px] overflow-hidden">
+          {/* Monaco / Lite Code Editor */}
+          <div className="flex-1 min-h-[120px] overflow-hidden flex flex-col">
             <CodeEditor value={code} onChange={handleCodeChange} />
           </div>
 

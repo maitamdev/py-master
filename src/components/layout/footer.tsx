@@ -1,7 +1,17 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Code2 } from 'lucide-react';
 
 export function Footer() {
+  const pathname = usePathname();
+
+  // Hide footer on full-screen IDE pages so the IDE takes 100% of viewport without scrolling
+  if (pathname?.startsWith('/playground') || pathname?.startsWith('/exercise')) {
+    return null;
+  }
+
   return (
     <footer className="w-full border-t border-slate-200/60 dark:border-white/[0.06] bg-white dark:bg-[#0a0f1e] transition-colors py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

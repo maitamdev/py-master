@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/layout/header';
@@ -52,14 +53,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" className={`${geistSans.variable} ${geistMono.variable} h-full`} suppressHydrationWarning>
-      <head>
-        <script
+      <head />
+      <body className="min-h-full flex flex-col bg-white dark:bg-[#0a0f1e] text-slate-900 dark:text-slate-100 antialiased selection:bg-blue-500/20 selection:text-blue-700 dark:selection:text-blue-300">
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
                 try {
-                  const theme = localStorage.getItem('python-master:theme') || 'system';
-                  const isDark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                  var theme = localStorage.getItem('python-master:theme') || 'system';
+                  var isDark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
                   if (isDark) {
                     document.documentElement.classList.add('dark');
                   } else {
@@ -70,8 +74,6 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body className="min-h-full flex flex-col bg-white dark:bg-[#0a0f1e] text-slate-900 dark:text-slate-100 antialiased selection:bg-blue-500/20 selection:text-blue-700 dark:selection:text-blue-300">
         <Header />
         <main className="flex-1 flex flex-col">{children}</main>
         <Footer />

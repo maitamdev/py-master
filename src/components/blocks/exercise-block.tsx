@@ -161,7 +161,7 @@ export function ExerciseBlock({
           </div>
 
           {/* Editor Container */}
-          <div className="h-56 rounded-xl overflow-hidden border border-slate-700/80 shadow-inner">
+          <div className="h-80 rounded-xl overflow-hidden border border-slate-700/80 shadow-inner flex flex-col">
             <CodeEditor
               value={code}
               onChange={handleCodeChange}
@@ -171,7 +171,7 @@ export function ExerciseBlock({
           </div>
 
           {/* Inline Output */}
-          <div className="h-36 rounded-xl overflow-hidden border border-slate-800">
+          <div className="h-44 rounded-xl overflow-hidden border border-slate-800">
             <CodeOutput
               output={output}
               state={state}
