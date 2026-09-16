@@ -1,0 +1,701 @@
+{
+  "id": "part06-1-reading-files",
+  "part": 6,
+  "part_slug": "part-6",
+  "slug": "1-reading-files",
+  "is_part_index": false,
+  "title_original": "Reading files",
+  "path": "/part-6/1-reading-files",
+  "source_path": "data/part-6/1-reading-files.md",
+  "source_hash": "5014299636c3edc646085d6127f6b43d9d7185a5bf9ae001ccabbac264e3ecdb",
+  "frontmatter": {
+    "path": "/part-6/1-reading-files",
+    "title": "Reading files",
+    "hidden": false
+  },
+  "chunks_count": 112,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know how to read the contents of files with Python\n- You will know what a text file and a CSV file are\n- You will be able to process the contents of a CSV file in your programs",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know how to read the contents of files with Python\n- You will know what a text file and a CSV file are\n- You will be able to process the contents of a CSV file in your programs\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!--the same text is in sections 3-1, 5-1 and 6-1, check them all if you're changing this-->",
+      "raw_source": "<!--the same text is in sections 3-1, 5-1 and 6-1, check them all if you're changing this-->"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "hint",
+        "name": "About the exercises on this course"
+      },
+      "inner_content": "Becoming a proficient programmer requires a lot of practice, sometimes even quite mechanical practice. It also involves developing problem solving skills and applying intuition. This is why there are a lot of exercises of different kinds on this course. Some of them ask you to quite straightforwardly apply what you have learnt in the material, but some of them are intentionally more challenging and open-ended.\n\nSome of the exercises might at first seem overwhelming, but this is nothing to worry about. None of the exercises is strictly mandatory, and in fact _only 25 % of the points in each part is required to pass the course._ You can find more details about passing the course on the [page on grading](/grading-and-exams).\n\n**The exercises are not in any specific order of difficulty.** Each section usually introduces some new programming concepts, and these are then practised with both simpler and more complicated exercises. **If you come across an exercise that feels too difficult, move on to the next one.** You can always come back to the more difficult exercises if you have time later.\n\nWhen the going inevitably gets tough, a word of consolation: a task that seems impossibly difficult this week will likely feel rather easy in about four weeks' time.",
+      "raw_source": "<text-box variant='hint' name=\"About the exercises on this course\">\n\nBecoming a proficient programmer requires a lot of practice, sometimes even quite mechanical practice. It also involves developing problem solving skills and applying intuition. This is why there are a lot of exercises of different kinds on this course. Some of them ask you to quite straightforwardly apply what you have learnt in the material, but some of them are intentionally more challenging and open-ended.\n\nSome of the exercises might at first seem overwhelming, but this is nothing to worry about. None of the exercises is strictly mandatory, and in fact _only 25 % of the points in each part is required to pass the course._ You can find more details about passing the course on the [page on grading](/grading-and-exams).\n\n**The exercises are not in any specific order of difficulty.** Each section usually introduces some new programming concepts, and these are then practised with both simpler and more complicated exercises. **If you come across an exercise that feels too difficult, move on to the next one.** You can always come back to the more difficult exercises if you have time later.\n\nWhen the going inevitably gets tough, a word of consolation: a task that seems impossibly difficult this week will likely feel rather easy in about four weeks' time.\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A very common use case for programming is handling data stored in files. Programs can read data from files and write the computed results to files. Even large amounts of data become easy to process automatically when files are used.",
+      "raw_source": "A very common use case for programming is handling data stored in files. Programs can read data from files and write the computed results to files. Even large amounts of data become easy to process automatically when files are used."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "On this course we only deal with _text files_. All the files used will consist of lines of text. As an example, the Visual Studio Code editor we use on this course works with text files. NB: even though word processors such as Microsoft Word are usually used with files that contain text, Word documents themselves aren't text files. They also contain formatting information, and are encoded in a way that makes handling them in a program more complicated.",
+      "raw_source": "On this course we only deal with _text files_. All the files used will consist of lines of text. As an example, the Visual Studio Code editor we use on this course works with text files. NB: even though word processors such as Microsoft Word are usually used with files that contain text, Word documents themselves aren't text files. They also contain formatting information, and are encoded in a way that makes handling them in a program more complicated."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Reading data from a file",
+      "raw_source": "## Reading data from a file"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's first work with a file called `example.txt`, with the following contents:",
+      "raw_source": "Let's first work with a file called `example.txt`, with the following contents:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-data",
+      "attributes": {},
+      "inner_content": "Hello there!\nThis example file contains three lines of text.\nThis is the last line.",
+      "raw_source": "<sample-data>\n\nHello there!\nThis example file contains three lines of text.\nThis is the last line.\n\n</sample-data>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A simple way to include files in a Python program is to use the `with` statement. The header line opens the file, and the block where the file can be accessed follows. After the block the file is automatically closed, and can no longer be accessed.",
+      "raw_source": "A simple way to include files in a Python program is to use the `with` statement. The header line opens the file, and the block where the file can be accessed follows. After the block the file is automatically closed, and can no longer be accessed."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "So, the following code opens the file, reads the contents, prints them out, and then closes the file:",
+      "raw_source": "So, the following code opens the file, reads the contents, prints them out, and then closes the file:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "with open(\"example.txt\") as new_file:\n    contents = new_file.read()\n    print(contents)",
+      "raw_source": "```python\nwith open(\"example.txt\") as new_file:\n    contents = new_file.read()\n    print(contents)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Hello there!\nThis example file contains three lines of text.\nThis is the last line.",
+      "raw_source": "<sample-output>\n\nHello there!\nThis example file contains three lines of text.\nThis is the last line.\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The variable `new_file` above is a _file handle_. Through it the file can accessed while it is still open. Here we used the method `read`, which returns the contents of the file as a single string. So, in this case the string returned by `read` would be",
+      "raw_source": "The variable `new_file` above is a _file handle_. Through it the file can accessed while it is still open. Here we used the method `read`, which returns the contents of the file as a single string. So, in this case the string returned by `read` would be"
+    },
+    {
+      "raw_type": "code",
+      "language": "",
+      "code": "\"Hello there!\\nThis example file contains three lines of text.\\nThis is the last line.\"",
+      "raw_source": "```\n\"Hello there!\\nThis example file contains three lines of text.\\nThis is the last line.\"\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Going through the contents of a file",
+      "raw_source": "## Going through the contents of a file"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `read` method is useful for printing out the contents of the entire file, but more often we will want to go through the file line by line.",
+      "raw_source": "The `read` method is useful for printing out the contents of the entire file, but more often we will want to go through the file line by line."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Text files can be thought of as lists of strings, each string representing a single line in the file. We can go through the list with a `for` loop.",
+      "raw_source": "Text files can be thought of as lists of strings, each string representing a single line in the file. We can go through the list with a `for` loop."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following example reads our example file using a `for` loop, removes line breaks from the end of each line, counts the number of lines, and prints each line with its line number. It also keeps track of the length of the lines:",
+      "raw_source": "The following example reads our example file using a `for` loop, removes line breaks from the end of each line, counts the number of lines, and prints each line with its line number. It also keeps track of the length of the lines:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "with open(\"example.txt\") as new_file:\n    count = 0\n    total_length = 0\n\n    for line in new_file:\n        line = line.replace(\"\\n\", \"\")\n        count += 1\n        print(\"Line\", count, line)\n        length = len(line)\n        total_length += length\n\nprint(\"Total length of lines:\", total_length)",
+      "raw_source": "```python\nwith open(\"example.txt\") as new_file:\n    count = 0\n    total_length = 0\n\n    for line in new_file:\n        line = line.replace(\"\\n\", \"\")\n        count += 1\n        print(\"Line\", count, line)\n        length = len(line)\n        total_length += length\n\nprint(\"Total length of lines:\", total_length)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Line 1 Hello there!\nLine 2 This example file contains three lines of text.\nLine 3 This is the last line.\nTotal length of lines: 81",
+      "raw_source": "<sample-output>\n\nLine 1 Hello there!\nLine 2 This example file contains three lines of text.\nLine 3 This is the last line.\nTotal length of lines: 81\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "There is a line break `\\n` at the end of each line in the file, but the `print` function also adds a line break by default. There are no extra line breaks in the printout above, because the line breaks at the ends of the lines are removed with the `replace` method. It replaces each line break character with an empty string. This way the lengths of the lines are also calculated correctly.",
+      "raw_source": "There is a line break `\\n` at the end of each line in the file, but the `print` function also adds a line break by default. There are no extra line breaks in the printout above, because the line breaks at the ends of the lines are removed with the `replace` method. It replaces each line break character with an empty string. This way the lengths of the lines are also calculated correctly."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Largest number",
+        "tmcname": "part06-01_largest_number"
+      },
+      "inner_content": "The file `numbers.txt` contains integer numbers, one number per line. The contents could look like this:\n\n```sh\n2\n45\n108\n3\n-10\n1100\n...etc...\n```\n\nPlease write a function named `largest`, which reads the file and returns the largest number in the file.\n\nNotice that the function does not take any arguments. The file you are working with is always named `numbers.txt`.\n\n**NB:** If Visual Studio Code can't find the file and you have checked that there are no spelling errors, take a look at the instructions following this exercise.",
+      "raw_source": "<programming-exercise name='Largest number' tmcname='part06-01_largest_number'>\n\nThe file `numbers.txt` contains integer numbers, one number per line. The contents could look like this:\n\n```sh\n2\n45\n108\n3\n-10\n1100\n...etc...\n```\n\nPlease write a function named `largest`, which reads the file and returns the largest number in the file.\n\nNotice that the function does not take any arguments. The file you are working with is always named `numbers.txt`.\n\n**NB:** If Visual Studio Code can't find the file and you have checked that there are no spelling errors, take a look at the instructions following this exercise.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "What if Visual Studio Code cannot find my file?",
+      "raw_source": "## What if Visual Studio Code cannot find my file?"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When you execute your code, Visual Studio Code might complain about not finding the file, even though you have checked and double-checked the file name was written correctly, and the file exists. Changing the following setting may fix the problem:",
+      "raw_source": "When you execute your code, Visual Studio Code might complain about not finding the file, even though you have checked and double-checked the file name was written correctly, and the file exists. Changing the following setting may fix the problem:"
+    },
+    {
+      "raw_type": "list",
+      "content": "* Open the settings from the menu bar: _File_ -> _Preferences_ -> _Settings_\n* Find the relevant setting with the search term \"executeinfile\"\n* Choose the tab _Workspace_\n* Select the option under _Python_ -> _Terminal_ -> _Execute In File Dir_",
+      "raw_source": "* Open the settings from the menu bar: _File_ -> _Preferences_ -> _Settings_\n* Find the relevant setting with the search term \"executeinfile\"\n* Choose the tab _Workspace_\n* Select the option under _Python_ -> _Terminal_ -> _Execute In File Dir_"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Your settings window should now look somewhat like this:",
+      "raw_source": "Your settings window should now look somewhat like this:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "6_1_1.png"
+      },
+      "raw_source": "<img src=\"6_1_1.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If this doesn't help, you can copy the file in the _src_ directory",
+      "raw_source": "If this doesn't help, you can copy the file in the _src_ directory"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "6_1_2.png"
+      },
+      "raw_source": "<img src=\"6_1_2.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "directly to the root of the exercise directory",
+      "raw_source": "directly to the root of the exercise directory"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "6_1_3.png"
+      },
+      "raw_source": "<img src=\"6_1_3.png\">"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Debugging code which handles files",
+      "raw_source": "## Debugging code which handles files"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Using the Visual Studio Code [debugger](/part-4/1-vscode#the-built-in-debugger) with programs which handle files will often result in a nasty looking error message:",
+      "raw_source": "Using the Visual Studio Code [debugger](/part-4/1-vscode#the-built-in-debugger) with programs which handle files will often result in a nasty looking error message:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "6_1_4.png"
+      },
+      "raw_source": "<img src=\"6_1_4.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The reason is that the debugger will always look for files in the root of the exercise directory. The _Execute In File Dir_ setting mentioned above will have no effect on this. The easiest solution is to just copy the file to the root of the directory.",
+      "raw_source": "The reason is that the debugger will always look for files in the root of the exercise directory. The _Execute In File Dir_ setting mentioned above will have no effect on this. The easiest solution is to just copy the file to the root of the directory."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You may need to restart Visual Studio Code after copying all the necessary files.",
+      "raw_source": "You may need to restart Visual Studio Code after copying all the necessary files."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Reading CSV files",
+      "raw_source": "## Reading CSV files"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A CSV file, short for _comma-separated Values_, is a text file which contains data separated by a predetermined character. The most common characters used for this purpose are the comma `,` and the semicolon `;`, but any character is, in principle, possible.",
+      "raw_source": "A CSV file, short for _comma-separated Values_, is a text file which contains data separated by a predetermined character. The most common characters used for this purpose are the comma `,` and the semicolon `;`, but any character is, in principle, possible."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "CSV files are commonly used to store records of different kinds. Many database and spreadsheet programs, such as Excel, can import and export data in CSV format, which makes data exchange between different systems easy.",
+      "raw_source": "CSV files are commonly used to store records of different kinds. Many database and spreadsheet programs, such as Excel, can import and export data in CSV format, which makes data exchange between different systems easy."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We already learnt we can go through the lines in a file with a `for` loop, but how can we separate the different fields on a single line? Python has a string method `split` for just this purpose. The method takes the separator character(s) as a string argument, and returns the contents of the target string as a list of strings, separated at the separator.",
+      "raw_source": "We already learnt we can go through the lines in a file with a `for` loop, but how can we separate the different fields on a single line? Python has a string method `split` for just this purpose. The method takes the separator character(s) as a string argument, and returns the contents of the target string as a list of strings, separated at the separator."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "An example of how the method works:",
+      "raw_source": "An example of how the method works:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "text = \"monkey,banana,harpsichord\"\nwords = text.split(\",\")\nfor word in words:\n    print(word)",
+      "raw_source": "```python\ntext = \"monkey,banana,harpsichord\"\nwords = text.split(\",\")\nfor word in words:\n    print(word)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "monkey\nbanana\nharpsichord",
+      "raw_source": "<sample-output>\n\nmonkey\nbanana\nharpsichord\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's assume we have a file `grades.csv`, which contains names of students and the grades they received on some courses. Each line has the data of a single student, and the data is separated by a semicolon.",
+      "raw_source": "Let's assume we have a file `grades.csv`, which contains names of students and the grades they received on some courses. Each line has the data of a single student, and the data is separated by a semicolon."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-data",
+      "attributes": {},
+      "inner_content": "Paul;5;4;5;3;4;5;5;4;2;4\nBeth;3;4;2;4;4;2;3;1;3;3\nRuth;4;5;5;4;5;5;4;5;4;4",
+      "raw_source": "<sample-data>\n\nPaul;5;4;5;3;4;5;5;4;2;4\nBeth;3;4;2;4;4;2;3;1;3;3\nRuth;4;5;5;4;5;5;4;5;4;4\n\n</sample-data>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following program goes through the file line by line, splits each line into its separate parts, and prints out the name and grades of each student.",
+      "raw_source": "The following program goes through the file line by line, splits each line into its separate parts, and prints out the name and grades of each student."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "with open(\"grades.csv\") as new_file:\n    for line in new_file:\n        line = line.replace(\"\\n\", \"\")\n        parts = line.split(\";\")\n        name = parts[0]\n        grades = parts[1:]\n        print(\"Name:\", name)\n        print(\"Grades:\", grades)",
+      "raw_source": "```python\nwith open(\"grades.csv\") as new_file:\n    for line in new_file:\n        line = line.replace(\"\\n\", \"\")\n        parts = line.split(\";\")\n        name = parts[0]\n        grades = parts[1:]\n        print(\"Name:\", name)\n        print(\"Grades:\", grades)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Name: Paul\nGrades: ['5', '4', '5', '3', '4', '5', '5', '4', '2', '4']\nName: Beth\nGrades: ['3', '4', '2', '4', '4', '2', '3', '1', '3', '3']\nName: Ruth\nGrades: ['4', '5', '5', '4', '5', '5', '4', '5', '4', '4']",
+      "raw_source": "<sample-output>\n\nName: Paul\nGrades: ['5', '4', '5', '3', '4', '5', '5', '4', '2', '4']\nName: Beth\nGrades: ['3', '4', '2', '4', '4', '2', '3', '1', '3', '3']\nName: Ruth\nGrades: ['4', '5', '5', '4', '5', '5', '4', '5', '4', '4']\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Fruit market",
+        "tmcname": "part06-02_fruit_market"
+      },
+      "inner_content": "The file `fruits.csv` contains names of fruits, and their prices, in the format specified in this example:\n\n```sh\nbanana;6.50\napple;4.95\norange;8.0\n...etc...\n```\n\nPlease write a function named `read_fruits`, which reads the file and returns a dictionary based on the contents. In the dictionary, the name of the fruit should be the key, and the value should be its price. Prices should be of type `float`.\n\nNB: the function does not take any arguments. The file you are working with is always named `fruits.csv`.",
+      "raw_source": "<programming-exercise name='Fruit market' tmcname='part06-02_fruit_market'>\n\nThe file `fruits.csv` contains names of fruits, and their prices, in the format specified in this example:\n\n```sh\nbanana;6.50\napple;4.95\norange;8.0\n...etc...\n```\n\nPlease write a function named `read_fruits`, which reads the file and returns a dictionary based on the contents. In the dictionary, the name of the fruit should be the key, and the value should be its price. Prices should be of type `float`.\n\nNB: the function does not take any arguments. The file you are working with is always named `fruits.csv`.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Matrix",
+        "tmcname": "part06-03_matrix"
+      },
+      "inner_content": "The file `matrix.txt` contains a matrix in the format specified in the example below:\n\n```sh\n1,0,2,8,2,1,3,2,5,2,2,2\n9,2,4,5,2,4,2,4,1,10,4,2\n...etc...\n```\n\nPlease write two functions, named `matrix_sum` and `matrix_max`. Both go through the matrix in the file, and then return the sum of the elements or the element with the greatest value, as the names of the functions imply.\n\nPlease also write the function `row_sums`, which returns a list containing the sum of each row in the matrix. For example, calling `row_sums` when the matrix in the file is defined as\n\n```sh\n1,2,3\n2,3,4\n```\n\nthe function should return the list `[6, 9]`.\n\nHint: you can also include other helper functions in your program. It is very worthwhile to spend a moment considering which functionalities are shared by the three functions you are asked to write. Notice that the three functions named above do not take any arguments, but any helper functions you write may take arguments. The file you are working with is always named `matrix.txt`.\n\n**NB:** If Visual Studio Code can't find the file and you have checked that there are no spelling errors, take a look at the instructions before this exercise.",
+      "raw_source": "<programming-exercise name='Matrix' tmcname='part06-03_matrix'>\n\nThe file `matrix.txt` contains a matrix in the format specified in the example below:\n\n```sh\n1,0,2,8,2,1,3,2,5,2,2,2\n9,2,4,5,2,4,2,4,1,10,4,2\n...etc...\n```\n\nPlease write two functions, named `matrix_sum` and `matrix_max`. Both go through the matrix in the file, and then return the sum of the elements or the element with the greatest value, as the names of the functions imply.\n\nPlease also write the function `row_sums`, which returns a list containing the sum of each row in the matrix. For example, calling `row_sums` when the matrix in the file is defined as\n\n```sh\n1,2,3\n2,3,4\n```\n\nthe function should return the list `[6, 9]`.\n\nHint: you can also include other helper functions in your program. It is very worthwhile to spend a moment considering which functionalities are shared by the three functions you are asked to write. Notice that the three functions named above do not take any arguments, but any helper functions you write may take arguments. The file you are working with is always named `matrix.txt`.\n\n**NB:** If Visual Studio Code can't find the file and you have checked that there are no spelling errors, take a look at the instructions before this exercise.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Reading the same file multiple times",
+      "raw_source": "## Reading the same file multiple times"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Sometimes it is necessary to process the contents of a file more than once in a single program. Let's have a look at a program which works with some personal data stored in a CSV file:",
+      "raw_source": "Sometimes it is necessary to process the contents of a file more than once in a single program. Let's have a look at a program which works with some personal data stored in a CSV file:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-data",
+      "attributes": {},
+      "inner_content": "Peter;40;Helsinki\nEmily;34;Espoo\nEric;42;London\nAdam;100;Amsterdam\nAlice;58;Paris",
+      "raw_source": "<sample-data>\nPeter;40;Helsinki\nEmily;34;Espoo\nEric;42;London\nAdam;100;Amsterdam\nAlice;58;Paris\n</sample-data>"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "with open(\"people.csv\") as new_file:\n    # print out the names\n    for line in new_file:\n        parts = line.split(\";\")\n        print(\"Name:\", parts[0])\n\n    # find the oldest\n    age_of_oldest = -1\n    for line in new_file:\n        parts = line.split(\";\")\n        name = parts[0]\n        age = int(parts[1])\n        if age > age_of_oldest:\n            age_of_oldest = age\n            oldest = name\n    print(\"the oldest is\", oldest)",
+      "raw_source": "```python\nwith open(\"people.csv\") as new_file:\n    # print out the names\n    for line in new_file:\n        parts = line.split(\";\")\n        print(\"Name:\", parts[0])\n\n    # find the oldest\n    age_of_oldest = -1\n    for line in new_file:\n        parts = line.split(\";\")\n        name = parts[0]\n        age = int(parts[1])\n        if age > age_of_oldest:\n            age_of_oldest = age\n            oldest = name\n    print(\"the oldest is\", oldest)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Running this will result in a somewhat cryptic error message:",
+      "raw_source": "Running this will result in a somewhat cryptic error message:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "Traceback (most recent call last):\n    print(\"the oldest is\"; oldest)\nUnboundLocalError: local variable 'oldest' referenced before assignment",
+      "raw_source": "```python\nTraceback (most recent call last):\n    print(\"the oldest is\"; oldest)\nUnboundLocalError: local variable 'oldest' referenced before assignment\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The reason this happens is that the latter `for` loop is not executed at all, beacuse the file can only be processed once. Once the last line is read, the file handle rests at the end of the file, and the data in the file can no longer be accessed.",
+      "raw_source": "The reason this happens is that the latter `for` loop is not executed at all, beacuse the file can only be processed once. Once the last line is read, the file handle rests at the end of the file, and the data in the file can no longer be accessed."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If we want to access the contents in the second `for` loop, we will have to `open` the file a second time:",
+      "raw_source": "If we want to access the contents in the second `for` loop, we will have to `open` the file a second time:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "with open(\"people.csv\") as new_file:\n    # print out the names\n    for line in new_file:\n        parts = line.split(\";\")\n        print(\"Name:\", parts[0])\n\nwith open(\"people.csv\") as new_file:\n    # find the oldest\n    age_of_oldest = -1\n    for line in new_file:\n        parts = line.split(\";\")\n        name = parts[0]\n        age = int(parts[1])\n        if age > age_of_oldest:\n            age_of_oldest = age\n            oldest = name\n    print(\"the oldest is\", oldest)",
+      "raw_source": "```python\nwith open(\"people.csv\") as new_file:\n    # print out the names\n    for line in new_file:\n        parts = line.split(\";\")\n        print(\"Name:\", parts[0])\n\nwith open(\"people.csv\") as new_file:\n    # find the oldest\n    age_of_oldest = -1\n    for line in new_file:\n        parts = line.split(\";\")\n        name = parts[0]\n        age = int(parts[1])\n        if age > age_of_oldest:\n            age_of_oldest = age\n            oldest = name\n    print(\"the oldest is\", oldest)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "While the above code would work, it contains unnecessary repetition. It is usually best to read the file just once, and store its contents in an appropriate format for further processing:",
+      "raw_source": "While the above code would work, it contains unnecessary repetition. It is usually best to read the file just once, and store its contents in an appropriate format for further processing:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "people = []\n# read the contents of the file and store it in a list\nwith open(\"people.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(\";\")\n        people.append((parts[0], int(parts[1]), parts[2]))\n\n# print out the names\nfor person in people:\n    print(\"Name:\", person[0])\n\n# find the oldest\nage_of_oldest = -1\nfor person in people:\n    name = person[0]\n    age = person[1]\n    if age > age_of_oldest:\n        age_of_oldest = age\n        oldest = name\nprint(\"the oldest is\", oldest)",
+      "raw_source": "```python\npeople = []\n# read the contents of the file and store it in a list\nwith open(\"people.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(\";\")\n        people.append((parts[0], int(parts[1]), parts[2]))\n\n# print out the names\nfor person in people:\n    print(\"Name:\", person[0])\n\n# find the oldest\nage_of_oldest = -1\nfor person in people:\n    name = person[0]\n    age = person[1]\n    if age > age_of_oldest:\n        age_of_oldest = age\n        oldest = name\nprint(\"the oldest is\", oldest)\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "More CSV file processing",
+      "raw_source": "## More CSV file processing"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's continue with the file `grades.csv`, which has the following contents:",
+      "raw_source": "Let's continue with the file `grades.csv`, which has the following contents:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-data",
+      "attributes": {},
+      "inner_content": "Paul;5;4;5;3;4;5;5;4;2;4\nBeth;3;4;2;4;4;2;3;1;3;3\nRuth;4;5;5;4;5;5;4;5;4;4",
+      "raw_source": "<sample-data>\n\nPaul;5;4;5;3;4;5;5;4;2;4\nBeth;3;4;2;4;4;2;3;1;3;3\nRuth;4;5;5;4;5;5;4;5;4;4\n\n</sample-data>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This following program creates a dictionary `grades` based on the contents of the file. The keys are the names of the students, and the value attached to each key is the list of grades attained by the student. The program converts the grades to integer values, so they can be processed easier.",
+      "raw_source": "This following program creates a dictionary `grades` based on the contents of the file. The keys are the names of the students, and the value attached to each key is the list of grades attained by the student. The program converts the grades to integer values, so they can be processed easier."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "grades = {}\nwith open(\"grades.csv\") as new_file:\n    for line in new_file:\n        line = line.replace(\"\\n\", \"\")\n        parts = line.split(\";\")\n        name = parts[0]\n        grades[name] = []\n        for grade in parts[1:]:\n            grades[name].append(int(grade))\n\nprint(grades)",
+      "raw_source": "```python\ngrades = {}\nwith open(\"grades.csv\") as new_file:\n    for line in new_file:\n        line = line.replace(\"\\n\", \"\")\n        parts = line.split(\";\")\n        name = parts[0]\n        grades[name] = []\n        for grade in parts[1:]:\n            grades[name].append(int(grade))\n\nprint(grades)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "{'Paul': [5, 4, 5, 3, 4, 5, 5, 4, 2, 4], 'Beth': [3, 4, 2, 4, 4, 2, 3, 1, 3, 3], 'Ruth': [4, 5, 5, 4, 5, 5, 4, 5, 4, 4]}",
+      "raw_source": "<sample-output>\n\n{'Paul': [5, 4, 5, 3, 4, 5, 5, 4, 2, 4], 'Beth': [3, 4, 2, 4, 4, 2, 3, 1, 3, 3], 'Ruth': [4, 5, 5, 4, 5, 5, 4, 5, 4, 4]}\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Now we can print out some statistics on each student based on the contents of the dictionary `grades`:",
+      "raw_source": "Now we can print out some statistics on each student based on the contents of the dictionary `grades`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "for name, grade_list in grades.items():\n    best = max(grade_list)\n    average = sum(grade_list) / len(grade_list)\n    print(f\"{name}: best grade {best}, average {average:.2f}\")",
+      "raw_source": "```python\nfor name, grade_list in grades.items():\n    best = max(grade_list)\n    average = sum(grade_list) / len(grade_list)\n    print(f\"{name}: best grade {best}, average {average:.2f}\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Paul: best grade 5, average 4.10\nBeth: best grade 4, average 2.90\nRuth: best grade 5, average 4.50",
+      "raw_source": "<sample-output>\n\nPaul: best grade 5, average 4.10\nBeth: best grade 4, average 2.90\nRuth: best grade 5, average 4.50\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Please take a careful look at the program in the example above. It may seem a bit complicated at first, but the technique can be used on files containing many different types of data.",
+      "raw_source": "Please take a careful look at the program in the example above. It may seem a bit complicated at first, but the technique can be used on files containing many different types of data."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Removing unnecessary lines, spaces and line breaks",
+      "raw_source": "## Removing unnecessary lines, spaces and line breaks"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's assume we have a CSV file containing some names, which has been exported from Excel:",
+      "raw_source": "Let's assume we have a CSV file containing some names, which has been exported from Excel:"
+    },
+    {
+      "raw_type": "code",
+      "language": "sh",
+      "code": "first; last\nPaul; Python\nJean; Java\nHarry; Haskell",
+      "raw_source": "```sh\nfirst; last\nPaul; Python\nJean; Java\nHarry; Haskell\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Excel is notorious for adding extra whitespace. Here we have an extra space character between the items, after each semicolon.",
+      "raw_source": "Excel is notorious for adding extra whitespace. Here we have an extra space character between the items, after each semicolon."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We would like to print out the last names of each person on the list. The first line contains the headers for the data, and it can be safely ignored:",
+      "raw_source": "We would like to print out the last names of each person on the list. The first line contains the headers for the data, and it can be safely ignored:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "last_names = []\nwith open(\"people.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(\";\")\n        # ignore the header line\n        if parts[0] == \"first\":\n            continue\n        last_names.append(parts[1])\n\nprint(last_names)",
+      "raw_source": "```python\nlast_names = []\nwith open(\"people.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(\";\")\n        # ignore the header line\n        if parts[0] == \"first\":\n            continue\n        last_names.append(parts[1])\n\nprint(last_names)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Exectuing this would print out",
+      "raw_source": "Exectuing this would print out"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[' Python\\n', ' Java\\n', ' Haskell']",
+      "raw_source": "<sample-output>\n\n[' Python\\n', ' Java\\n', ' Haskell']\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The first two items have a line break character at the end, and all three have an extra leading space character.",
+      "raw_source": "The first two items have a line break character at the end, and all three have an extra leading space character."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We have already used the `replace` method to remove extra whitespace, but a more efficient solution is to use the Python string method `strip`, which removes whitespace from the beginning and end of a string. It removes all spaces, line breaks, tabs and other characters which would not normally be printed out.",
+      "raw_source": "We have already used the `replace` method to remove extra whitespace, but a more efficient solution is to use the Python string method `strip`, which removes whitespace from the beginning and end of a string. It removes all spaces, line breaks, tabs and other characters which would not normally be printed out."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You can try it out in the Python console:",
+      "raw_source": "You can try it out in the Python console:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": ">>> \" tryout \".strip()\n'tryout'\n>>> \"\\n\\ntest\\n\".strip()\n'test'\n>>>",
+      "raw_source": "```python\n>>> \" tryout \".strip()\n'tryout'\n>>> \"\\n\\ntest\\n\".strip()\n'test'\n>>>\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Stripping the string requires only a small change to the program:",
+      "raw_source": "Stripping the string requires only a small change to the program:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "last_names = []\nwith open(\"people.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(';')\n        if parts[0] == \"first\":\n            continue # this was the header line, so it is ignored\n        last_names.append(parts[1].strip())\nprint(last_names)",
+      "raw_source": "```python\nlast_names = []\nwith open(\"people.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(';')\n        if parts[0] == \"first\":\n            continue # this was the header line, so it is ignored\n        last_names.append(parts[1].strip())\nprint(last_names)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Now we have the desired tidy printout:",
+      "raw_source": "Now we have the desired tidy printout:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "['Python', 'Java', 'Haskell']",
+      "raw_source": "<sample-output>\n\n['Python', 'Java', 'Haskell']\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "There are also the related string methods `lstrip` and `rstrip`. They remove only the leading or trailing unprintable characters, l for the left edge of the string and r for the right:",
+      "raw_source": "There are also the related string methods `lstrip` and `rstrip`. They remove only the leading or trailing unprintable characters, l for the left edge of the string and r for the right:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": ">>> \" teststring  \".rstrip()\n' teststring'\n>>> \" teststring  \".lstrip()\n'teststring  '",
+      "raw_source": "```python\n>>> \" teststring  \".rstrip()\n' teststring'\n>>> \" teststring  \".lstrip()\n'teststring  '\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Combining data from different files",
+      "raw_source": "## Combining data from different files"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It is very common for the data processed by a program to be scattered in multiple files. Lets have a look at a situation where the personal details of the personnel of a company are stored in a file called `employees.csv`:",
+      "raw_source": "It is very common for the data processed by a program to be scattered in multiple files. Lets have a look at a situation where the personal details of the personnel of a company are stored in a file called `employees.csv`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "csv",
+      "code": "pic;name;address;city\n080488-123X;Pekka Mikkola;Vilppulantie 7;00700 Helsinki\n290274-044S;Liisa Marttinen;Mannerheimintie 100 A 10;00100 Helsinki\n010479-007Z;Arto Vihavainen;Pihapolku 4;01010 Kerava\n010499-345K;Leevi Hellas;Tapiolantie 11 B;02000 Espoo",
+      "raw_source": "```csv\npic;name;address;city\n080488-123X;Pekka Mikkola;Vilppulantie 7;00700 Helsinki\n290274-044S;Liisa Marttinen;Mannerheimintie 100 A 10;00100 Helsinki\n010479-007Z;Arto Vihavainen;Pihapolku 4;01010 Kerava\n010499-345K;Leevi Hellas;Tapiolantie 11 B;02000 Espoo\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The salaries are stored in a separate file `salaries.csv`:",
+      "raw_source": "The salaries are stored in a separate file `salaries.csv`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "csv",
+      "code": "pic;salary;bonus\n080488-123X;3300;0\n290274-044S;4150;200\n010479-007Z;1300;1200",
+      "raw_source": "```csv\npic;salary;bonus\n080488-123X;3300;0\n290274-044S;4150;200\n010479-007Z;1300;1200\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Each data line in both files contains the _personal identity code_, which identifies whose data we are dealing with. Using the personal identity code as a common factor, it is easy to connect the names and salaries of each employee. We can, for example, print out the following list of monthly incomes:",
+      "raw_source": "Each data line in both files contains the _personal identity code_, which identifies whose data we are dealing with. Using the personal identity code as a common factor, it is easy to connect the names and salaries of each employee. We can, for example, print out the following list of monthly incomes:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "<pre>\nincomes:\nPekka Mikkola    3300 euros\nLiisa Marttinen  4350 euros\nArto Vihavainen  2500 euros\n</pre>",
+      "raw_source": "<sample-output>\n\n<pre>\nincomes:\nPekka Mikkola    3300 euros\nLiisa Marttinen  4350 euros\nArto Vihavainen  2500 euros\n</pre>\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This program uses two dictionaries as helper data structures: `names` and `salaries`. Both use the PIC as key:",
+      "raw_source": "This program uses two dictionaries as helper data structures: `names` and `salaries`. Both use the PIC as key:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "names = {}\n\nwith open(\"employees.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(';')\n        if parts[0] == \"pic\":\n            continue\n        names[parts[0]] = parts[1]\n\nsalaries = {}\n\nwith open(\"salaries.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(';')\n        if parts[0] == \"pic\":\n            continue\n        salaries[parts[0]] = int(parts[1]) +int(parts[2])\n\nprint(\"incomes:\")\n\nfor pic, name in names.items():\n    if pic in salaries:\n        salary = salaries[pic]\n        print(f\"{name:16} {salary} euros\")\n    else:\n        print(f\"{name:16} 0 euros\")",
+      "raw_source": "```python\nnames = {}\n\nwith open(\"employees.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(';')\n        if parts[0] == \"pic\":\n            continue\n        names[parts[0]] = parts[1]\n\nsalaries = {}\n\nwith open(\"salaries.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(';')\n        if parts[0] == \"pic\":\n            continue\n        salaries[parts[0]] = int(parts[1]) +int(parts[2])\n\nprint(\"incomes:\")\n\nfor pic, name in names.items():\n    if pic in salaries:\n        salary = salaries[pic]\n        print(f\"{name:16} {salary} euros\")\n    else:\n        print(f\"{name:16} 0 euros\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "First the program produces the dictionaries `names` and `salaries`. They have the following contents:",
+      "raw_source": "First the program produces the dictionaries `names` and `salaries`. They have the following contents:"
+    },
+    {
+      "raw_type": "code",
+      "language": "sh",
+      "code": "{\n    '080488-123X': 'Pekka Mikkola',\n    '290274-044S': 'Liisa Marttinen',\n    '010479-007Z': 'Arto Vihavainen',\n    '010499-345K': 'Leevi Hellas'\n}\n\n{\n    '080488-123X': 3300,\n    '290274-044S': 4350,\n    '010479-007Z': 2500\n}",
+      "raw_source": "```sh\n{\n    '080488-123X': 'Pekka Mikkola',\n    '290274-044S': 'Liisa Marttinen',\n    '010479-007Z': 'Arto Vihavainen',\n    '010499-345K': 'Leevi Hellas'\n}\n\n{\n    '080488-123X': 3300,\n    '290274-044S': 4350,\n    '010479-007Z': 2500\n}\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `for` loop at the end of the program combines the names of the employees with their respective salaries.",
+      "raw_source": "The `for` loop at the end of the program combines the names of the employees with their respective salaries."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The program also takes care of situations where the employee's pic is not present in the salary file.",
+      "raw_source": "The program also takes care of situations where the employee's pic is not present in the salary file."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Remember, the order in which items are stored in a dictionary does not matter, as the keys are processed based on hash values.",
+      "raw_source": "Remember, the order in which items are stored in a dictionary does not matter, as the keys are processed based on hash values."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Course grading, part 1",
+        "tmcname": "part06-04_course_grading_part_1"
+      },
+      "inner_content": "This program works with two CSV files. One of them contains information about some students on a course:\n\n```csv\nid;first;last\n12345678;peter;pythons\n12345687;jean;javanese\n12345699;alice;adder\n```\n\nThe other contains the number of exercises each student has completed each week:\n\n```csv\nid;e1;e2;e3;e4;e5;e6;e7\n12345678;4;1;1;4;5;2;4\n12345687;3;5;3;1;5;4;6\n12345699;10;2;2;7;10;2;2\n```\n\nAs you can see above, both CSV files also have a header row, which tells you what each column contains.\n\nPlease write a program which asks the user for the names of these two files, reads the files, and then prints out the total number of exercises completed by each student. If the files have the contents in the examples above, the program should print out the following:\n\n<sample-output>\n\nStudent information: **students1.csv**\nExercises completed: **exercises1.csv**\npekka peloton 21\njaana javanainen 27\nliisa virtanen 35\n\n</sample-output>\n\nHint: while testing your program, you may quickly run out of patience if you always have to type in the file names at the prompt. You might want to hard-code the user input, like so:\n\n```python\nif False:\n    # this is never executed\n    student_info = input(\"Student information: \")\n    exercise_data = input(\"Exercises completed: \")\nelse:\n    # hard-coded input\n    student_info = \"students1.csv\"\n    exercise_data = \"exercises1.csv\"\n```\n\nThe actual functionality of the program is now \"hidden\" in the `False` branch of an `if` statement. It will never be executed.\n\nNow, if you want to quickly verify the program works correctly also with user input, you can just replace `False` with `True`:\n\n```python\n\nif True:\n    student_info = input(\"Student information: \")\n    exercise_data = input(\"Exercises completed: \")\nelse:\n    # now this is the False branch, and is never executed\n    student_info = \"students1.csv\"\n    exercise_data = \"exercises1.csv\"\n```\n\nWhen you have verified your program works correctly, you can remove the `if` structure, keeping the commands asking for input.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.\n\n**NB2:** If Visual Studio can't find the file and you have checked that there are no spelling errors, take a look at [these instructions](/part-6/1-reading-files#what-if-visual-studio-code-cannot-find-my-file).",
+      "raw_source": "<programming-exercise name='Course grading, part 1' tmcname='part06-04_course_grading_part_1'>\n\nThis program works with two CSV files. One of them contains information about some students on a course:\n\n```csv\nid;first;last\n12345678;peter;pythons\n12345687;jean;javanese\n12345699;alice;adder\n```\n\nThe other contains the number of exercises each student has completed each week:\n\n```csv\nid;e1;e2;e3;e4;e5;e6;e7\n12345678;4;1;1;4;5;2;4\n12345687;3;5;3;1;5;4;6\n12345699;10;2;2;7;10;2;2\n```\n\nAs you can see above, both CSV files also have a header row, which tells you what each column contains.\n\nPlease write a program which asks the user for the names of these two files, reads the files, and then prints out the total number of exercises completed by each student. If the files have the contents in the examples above, the program should print out the following:\n\n<sample-output>\n\nStudent information: **students1.csv**\nExercises completed: **exercises1.csv**\npekka peloton 21\njaana javanainen 27\nliisa virtanen 35\n\n</sample-output>\n\nHint: while testing your program, you may quickly run out of patience if you always have to type in the file names at the prompt. You might want to hard-code the user input, like so:\n\n```python\nif False:\n    # this is never executed\n    student_info = input(\"Student information: \")\n    exercise_data = input(\"Exercises completed: \")\nelse:\n    # hard-coded input\n    student_info = \"students1.csv\"\n    exercise_data = \"exercises1.csv\"\n```\n\nThe actual functionality of the program is now \"hidden\" in the `False` branch of an `if` statement. It will never be executed.\n\nNow, if you want to quickly verify the program works correctly also with user input, you can just replace `False` with `True`:\n\n```python\n\nif True:\n    student_info = input(\"Student information: \")\n    exercise_data = input(\"Exercises completed: \")\nelse:\n    # now this is the False branch, and is never executed\n    student_info = \"students1.csv\"\n    exercise_data = \"exercises1.csv\"\n```\n\nWhen you have verified your program works correctly, you can remove the `if` structure, keeping the commands asking for input.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.\n\n**NB2:** If Visual Studio can't find the file and you have checked that there are no spelling errors, take a look at [these instructions](/part-6/1-reading-files#what-if-visual-studio-code-cannot-find-my-file).\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Course grading, part 2",
+        "tmcname": "part06-05_course_grading_part_2"
+      },
+      "inner_content": "Let's expand the program created in the previous exercise. Now also the exam points awarded to each student are contained in a CSV file. The contents of the file follow this format:\n\n```csv\nid;e1;e2;e3\n12345678;4;1;4\n12345687;3;5;3\n12345699;10;2;2\n```\n\nIn the above example the student whose student number is 12345678 was awarded 4+1+4 points in the exam, which equals a total of 9 points. \n\nThe program should again ask the user for the names of the files. Then the program should process the files and print out a grade for each student.\n\n<sample-output>\n\nStudent information: **students1.csv**\nExercises completed: **exercises1.csv**\nExam points: **exam_points1.csv**\npekka peloton 0\njaana javanainen 1\nliisa virtanen 3\n\n</sample-output>\n\nEach completed exercise is counted towards _exercise points_, so that completing at least 10 % of the total exercices awards 1 point, completing at least 20 % awards 2 points, etc. Completing all 40 exercises awards 10 points. The number of points awarded is always an integer number.\n\nThe final grade for the course is determined based on the sum of exam and exercise points according to the following table:\n\nexam points + exercise points   | grade\n:--:|:----:\n0-14 | 0 (fail)\n15-17 | 1\n18-20 | 2\n21-23 | 3\n24-27 | 4\n28- | 5\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+      "raw_source": "<programming-exercise name='Course grading, part 2' tmcname='part06-05_course_grading_part_2'>\n\nLet's expand the program created in the previous exercise. Now also the exam points awarded to each student are contained in a CSV file. The contents of the file follow this format:\n\n```csv\nid;e1;e2;e3\n12345678;4;1;4\n12345687;3;5;3\n12345699;10;2;2\n```\n\nIn the above example the student whose student number is 12345678 was awarded 4+1+4 points in the exam, which equals a total of 9 points. \n\nThe program should again ask the user for the names of the files. Then the program should process the files and print out a grade for each student.\n\n<sample-output>\n\nStudent information: **students1.csv**\nExercises completed: **exercises1.csv**\nExam points: **exam_points1.csv**\npekka peloton 0\njaana javanainen 1\nliisa virtanen 3\n\n</sample-output>\n\nEach completed exercise is counted towards _exercise points_, so that completing at least 10 % of the total exercices awards 1 point, completing at least 20 % awards 2 points, etc. Completing all 40 exercises awards 10 points. The number of points awarded is always an integer number.\n\nThe final grade for the course is determined based on the sum of exam and exercise points according to the following table:\n\nexam points + exercise points   | grade\n:--:|:----:\n0-14 | 0 (fail)\n15-17 | 1\n18-20 | 2\n21-23 | 3\n24-27 | 4\n28- | 5\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Course grading, part 3",
+        "tmcname": "part06-06_course_grading_part_3"
+      },
+      "inner_content": "This exercise will continue from the previous one. Now we shall print out some statistics based on the CSV files.\n\n<sample-output>\n\nStudent information: **students1.csv**\nExercises completed: **exercises1.csv**\nExam points: **exam_points1.csv**\n<pre>\nname                          exec_nbr  exec_pts. exm_pts.  tot_pts.  grade\npekka peloton                 21        5         9         14        0\njaana javanainen              27        6         11        17        1\nliisa virtanen                35        8         14        22        3\n</pre>\n\n</sample-output>\n\nEach row contains the information for a single student. The number of exercises completed, the number of exercise points awarded, the number of exam points awarded, the total number of points awarded, and the grade are all displayed in tidy columns. The width of the column for the name should be 30 characters, while the other columns should be 10 characters wide.\n\nYou might find the f-strings covered in [part 4](/part-4/5-print-statement-formatting) useful here.\n\nF-strings differentiate between strings and numbers when it comes to justifying columns:\n\n```python\nword = \"python\"\nprint(f\"{word:10}continues\")\nprint(f\"{word:>10}continues\")\n```\n\n<sample-output>\n\n<pre>\npython    continues\n    pythoncontinues\n</pre>\n\n</sample-output>\n\nAs you can see above, by default strings are justified to the _left_ edge of the area specified for them. The `>` symbol can be used to justify to the right edge.\n\nWith number values the logic is reversed:\n\n```python\nnumber = 42\nprint(f\"{number:10}continues\")\nprint(f\"{number:<10}continues\")\n```\n\n<sample-output>\n\n<pre>\n        42continues\n42        continues\n</pre>\n\n</sample-output>\n\nWith numbers the default behaviour is to justify to the _right_ edge. The symbol `<` can be used to justify to the left edge.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+      "raw_source": "<programming-exercise name='Course grading, part 3' tmcname='part06-06_course_grading_part_3'>\n\nThis exercise will continue from the previous one. Now we shall print out some statistics based on the CSV files.\n\n<sample-output>\n\nStudent information: **students1.csv**\nExercises completed: **exercises1.csv**\nExam points: **exam_points1.csv**\n<pre>\nname                          exec_nbr  exec_pts. exm_pts.  tot_pts.  grade\npekka peloton                 21        5         9         14        0\njaana javanainen              27        6         11        17        1\nliisa virtanen                35        8         14        22        3\n</pre>\n\n</sample-output>\n\nEach row contains the information for a single student. The number of exercises completed, the number of exercise points awarded, the number of exam points awarded, the total number of points awarded, and the grade are all displayed in tidy columns. The width of the column for the name should be 30 characters, while the other columns should be 10 characters wide.\n\nYou might find the f-strings covered in [part 4](/part-4/5-print-statement-formatting) useful here.\n\nF-strings differentiate between strings and numbers when it comes to justifying columns:\n\n```python\nword = \"python\"\nprint(f\"{word:10}continues\")\nprint(f\"{word:>10}continues\")\n```\n\n<sample-output>\n\n<pre>\npython    continues\n    pythoncontinues\n</pre>\n\n</sample-output>\n\nAs you can see above, by default strings are justified to the _left_ edge of the area specified for them. The `>` symbol can be used to justify to the right edge.\n\nWith number values the logic is reversed:\n\n```python\nnumber = 42\nprint(f\"{number:10}continues\")\nprint(f\"{number:<10}continues\")\n```\n\n<sample-output>\n\n<pre>\n        42continues\n42        continues\n</pre>\n\n</sample-output>\n\nWith numbers the default behaviour is to justify to the _right_ edge. The symbol `<` can be used to justify to the left edge.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Spell checker",
+        "tmcname": "part06-07_spellchecker"
+      },
+      "inner_content": "Please write a program which asks the user to type in some text. Your program should then perform a spell check, and print out feedback to the user, so that all misspelled words have stars around them. Please see the two examples below:\n\n<sample-output>\n\nWrite text: **We use ptython to make a spell checker**\n<pre>\nWe use *ptython* to make a spell checker\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nWrite text: **This is acually a good and usefull program**\n<pre>\nThis is *acually* good and *usefull* program\n</pre>\n\n</sample-output>\n\nThe case of the letters should be irrelevant to the functioning of your program.\n\nThe exercise template includes the file `wordlist.txt`, which contains all the words the spell checker should accept as correct.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.\n\n**NB2** If Visual Studio can't find the file and you have checked that there are no spelling errors, take a look at [these instructions](/part-6/1-reading-files#what-if-visual-studio-code-cannot-find-my-file).",
+      "raw_source": "<programming-exercise name='Spell checker' tmcname='part06-07_spellchecker'>\n\nPlease write a program which asks the user to type in some text. Your program should then perform a spell check, and print out feedback to the user, so that all misspelled words have stars around them. Please see the two examples below:\n\n<sample-output>\n\nWrite text: **We use ptython to make a spell checker**\n<pre>\nWe use *ptython* to make a spell checker\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nWrite text: **This is acually a good and usefull program**\n<pre>\nThis is *acually* good and *usefull* program\n</pre>\n\n</sample-output>\n\nThe case of the letters should be irrelevant to the functioning of your program.\n\nThe exercise template includes the file `wordlist.txt`, which contains all the words the spell checker should accept as correct.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.\n\n**NB2** If Visual Studio can't find the file and you have checked that there are no spelling errors, take a look at [these instructions](/part-6/1-reading-files#what-if-visual-studio-code-cannot-find-my-file).\n\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Recipe search",
+        "tmcname": "part06-08_recipe_search"
+      },
+      "inner_content": "This exercise is about creating a program which allows the user to search for recipes based on their names, preparation times, or ingredients used. The program should read the recipes from a file submitted by the user.\n\nEach recipe consists of three or more lines. The first line has the name of the recipe, the second line contains an integer number representing the preparation time in minutes, and the remaining line or lines contain the ingredients used, one on each line. The recipe ends with an empty line, with the exception of the final recipe in the file which just ends with the end of the file. So, there can be more than one recipe in a single file, like in the example below.\n\n```sh\nPancakes\n15\nmilk\neggs\nflour\nsugar\nsalt\nbutter\n\nMeatballs\n45\nmince\neggs\nbreadcrumbs\n\nTofu rolls\n30\ntofu\nrice\nwater\ncarrot\ncucumber\navocado\nwasabi\n\nCake pops\n60\nmilk\nbicarbonate\neggs\nsalt\nsugar\ncardamom\nbutter\n```\n\n**Hint:** it might be best to first read through all the lines in the file and pop them into a list, which is then easier to manipulate in the way described in the exercise.\n\n#### Search for recipes based on the name of the recipe \n\nPlease write a function named `search_by_name(filename: str, word: str)`, which takes a filename and a search string as its arguments. The function should go through the file and select all recipes whose _name_ contains the given search string. The names of these recipes are then returned in a list.\n\nAn example of the function in action:\n\n```python\nfound_recipes = search_by_name(\"recipes1.txt\", \"cake\")\n\nfor recipe in found_recipes:\n    print(recipe)\n```\n\n<sample-output>\n\nPancakes\nCake pops\n\n</sample-output>\n\nAs you can see in the example above, the case of the letters is irrelevant. The search term _cake_ returns both _Pancakes_ and _Cake pops_, even though the latter is capitalized.\n\n**NB:** If Visual Studio can't find the file and you have checked that there are no spelling errors, take a look at [these instructions](/part-6/1-reading-files#what-if-visual-studio-code-cannot-find-my-file).\n\n#### Search for recipes based on the preparation time\n\nPlease write a function named `search_by_time(filename: str, prep_time: int)`, which takes a filename and an integer as its arguments. The function should go through the file and select all recipes whose preparation time is at most the number given.\n\nThe names of these recipes are again returned in a list, but the preparation time should be appended to each name. Please have a look at the example below.\n\n```python\nfound_recipes = search_by_time(\"recipes1.txt\", 20)\n\nfor recipe in found_recipes:\n    print(recipe)\n```\n\n<sample-output>\n\nPancakes, preparation time 15 min\n\n</sample-output>\n\n#### Search for recipes based on the ingredients\n\n**A word of caution:** this third part of the exercise is considerably more demanding than the previous two. If you feel like you aren't making headway, it may be worth your while to move on, complete the other exercises in this part of the material, and then come back to this exercise if you have time later. Remember, you can submit and receive points for the first two parts of this exercise even if you haven't completed the third part.\n\nPlease write a function named `search_by_ingredient(filename: str, ingredient: str)`, which takes a filename and a search string as its arguments. The function should go through the file and select all recipes whose _ingredients_ contain the given search string.\n\nThe names of these recipes are returned in a list just like in the second part, with the preparation time appended. Please have a look at the example below.\n\n```python\nfound_recipes = search_by_ingredient(\"recipes1.txt\", \"eggs\")\n\nfor recipe in found_recipes:\n    print(recipe)\n```\n\n<sample-output>\n\nPancakes, preparation time 15 min\nMeatballs, preparation time 45 min\nCake pops, preparation time 60 min\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Recipe search' tmcname='part06-08_recipe_search'>\n\nThis exercise is about creating a program which allows the user to search for recipes based on their names, preparation times, or ingredients used. The program should read the recipes from a file submitted by the user.\n\nEach recipe consists of three or more lines. The first line has the name of the recipe, the second line contains an integer number representing the preparation time in minutes, and the remaining line or lines contain the ingredients used, one on each line. The recipe ends with an empty line, with the exception of the final recipe in the file which just ends with the end of the file. So, there can be more than one recipe in a single file, like in the example below.\n\n```sh\nPancakes\n15\nmilk\neggs\nflour\nsugar\nsalt\nbutter\n\nMeatballs\n45\nmince\neggs\nbreadcrumbs\n\nTofu rolls\n30\ntofu\nrice\nwater\ncarrot\ncucumber\navocado\nwasabi\n\nCake pops\n60\nmilk\nbicarbonate\neggs\nsalt\nsugar\ncardamom\nbutter\n```\n\n**Hint:** it might be best to first read through all the lines in the file and pop them into a list, which is then easier to manipulate in the way described in the exercise.\n\n#### Search for recipes based on the name of the recipe \n\nPlease write a function named `search_by_name(filename: str, word: str)`, which takes a filename and a search string as its arguments. The function should go through the file and select all recipes whose _name_ contains the given search string. The names of these recipes are then returned in a list.\n\nAn example of the function in action:\n\n```python\nfound_recipes = search_by_name(\"recipes1.txt\", \"cake\")\n\nfor recipe in found_recipes:\n    print(recipe)\n```\n\n<sample-output>\n\nPancakes\nCake pops\n\n</sample-output>\n\nAs you can see in the example above, the case of the letters is irrelevant. The search term _cake_ returns both _Pancakes_ and _Cake pops_, even though the latter is capitalized.\n\n**NB:** If Visual Studio can't find the file and you have checked that there are no spelling errors, take a look at [these instructions](/part-6/1-reading-files#what-if-visual-studio-code-cannot-find-my-file).\n\n#### Search for recipes based on the preparation time\n\nPlease write a function named `search_by_time(filename: str, prep_time: int)`, which takes a filename and an integer as its arguments. The function should go through the file and select all recipes whose preparation time is at most the number given.\n\nThe names of these recipes are again returned in a list, but the preparation time should be appended to each name. Please have a look at the example below.\n\n```python\nfound_recipes = search_by_time(\"recipes1.txt\", 20)\n\nfor recipe in found_recipes:\n    print(recipe)\n```\n\n<sample-output>\n\nPancakes, preparation time 15 min\n\n</sample-output>\n\n#### Search for recipes based on the ingredients\n\n**A word of caution:** this third part of the exercise is considerably more demanding than the previous two. If you feel like you aren't making headway, it may be worth your while to move on, complete the other exercises in this part of the material, and then come back to this exercise if you have time later. Remember, you can submit and receive points for the first two parts of this exercise even if you haven't completed the third part.\n\nPlease write a function named `search_by_ingredient(filename: str, ingredient: str)`, which takes a filename and a search string as its arguments. The function should go through the file and select all recipes whose _ingredients_ contain the given search string.\n\nThe names of these recipes are returned in a list just like in the second part, with the preparation time appended. Please have a look at the example below.\n\n```python\nfound_recipes = search_by_ingredient(\"recipes1.txt\", \"eggs\")\n\nfor recipe in found_recipes:\n    print(recipe)\n```\n\n<sample-output>\n\nPancakes, preparation time 15 min\nMeatballs, preparation time 45 min\nCake pops, preparation time 60 min\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "City bikes",
+        "tmcname": "part06-09_city_bikes"
+      },
+      "inner_content": "In this exercise we will write some functions for working on a file containing location data from the stations for [city bikes in Helsinki](https://www.hsl.fi/en/citybikes).\n\nEach file will follow this format:\n\n```csv\nLongitude;Latitude;FID;name;total_slot;operative;id\n24.950292890004903;60.155444793742276;1;Kaivopuisto;30;Yes;001\n24.956347471358754;60.160959093887129;2;Laivasillankatu;12;Yes;002\n24.944927399779715;60.158189199971673;3;Kapteeninpuistikko;16;Yes;003\n```\n\nEach station has a single line in the file. The line contains the coordinates, name, and other identifying information for the station.\n\n#### Distance between stations\n\nFirst, write a function named `get_station_data(filename: str)`. This function should read the names and locations of all the stations in the file, and return them in a dictionary with the following format:\n\n<sample-output>\n\n<pre>\n{\n  \"Kaivopuisto\": (24.950292890004903, 60.155444793742276),\n  \"Laivasillankatu\": (24.956347471358754, 60.160959093887129),\n  \"Kapteeninpuistikko\": (24.944927399779715, 60.158189199971673)\n}\n</pre>\n\n</sample-output>\n\nDictionary keys are the names of the stations, and the value attached is a tuple containing the location coordinates of the station. The first element in the tuple is the _Longitude_ field, and the second is the _Latitude_ field.\n\nNext, write a function named `distance(stations: dict, station1: str, station2: str)`, which returns the distance between the two stations given as arguments.\n\nThe distance is calculated using the Pythagorean theorem. The multiplication factors below are approximate values for converting latitudes and longitudes to distances in kilometres in the Helsinki region.\n\n```python\n# we will need the function sqrt from the math module \nimport math\n\nx_km = (longitude1 - longitude2) * 55.26\ny_km = (latitude1 - latitude2) * 111.2\ndistance_km = math.sqrt(x_km**2 + y_km**2)\n```\n\nSome examples of the function in action:\n\n```python\nstations = get_station_data('stations1.csv')\nd = distance(stations, \"Designmuseo\", \"Hietalahdentori\")\nprint(d)\nd = distance(stations, \"Viiskulma\", \"Kaivopuisto\")\nprint(d)\n```\n\n<sample-output>\n\n0.9032737292463177\n0.7753594392019532\n\n</sample-output>\n\n**NB:** If Visual Studio can't find the file and you have checked that there are no spelling errors, take a look at [these instructions](/part-6/1-reading-files#what-if-visual-studio-code-cannot-find-my-file).\n\n#### The greatest distance\n\nPlease write a function named `greatest_distance(stations: dict)`, which works out the two stations on the list with the greatest distance from each other. The function should return a tuple, where the first two elements are the names of the two stations, and the third element is the distance between the two.\n\n```python\nstations = get_station_data('stations1.csv')\nstation1, station2, greatest = greatest_distance(stations)\nprint(station1, station2, greatest)\n```\n\n<sample-output>\n\nLaivasillankatu Hietalahdentori 1.478708873076181\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='City bikes' tmcname='part06-09_city_bikes'>\n\nIn this exercise we will write some functions for working on a file containing location data from the stations for [city bikes in Helsinki](https://www.hsl.fi/en/citybikes).\n\nEach file will follow this format:\n\n```csv\nLongitude;Latitude;FID;name;total_slot;operative;id\n24.950292890004903;60.155444793742276;1;Kaivopuisto;30;Yes;001\n24.956347471358754;60.160959093887129;2;Laivasillankatu;12;Yes;002\n24.944927399779715;60.158189199971673;3;Kapteeninpuistikko;16;Yes;003\n```\n\nEach station has a single line in the file. The line contains the coordinates, name, and other identifying information for the station.\n\n#### Distance between stations\n\nFirst, write a function named `get_station_data(filename: str)`. This function should read the names and locations of all the stations in the file, and return them in a dictionary with the following format:\n\n<sample-output>\n\n<pre>\n{\n  \"Kaivopuisto\": (24.950292890004903, 60.155444793742276),\n  \"Laivasillankatu\": (24.956347471358754, 60.160959093887129),\n  \"Kapteeninpuistikko\": (24.944927399779715, 60.158189199971673)\n}\n</pre>\n\n</sample-output>\n\nDictionary keys are the names of the stations, and the value attached is a tuple containing the location coordinates of the station. The first element in the tuple is the _Longitude_ field, and the second is the _Latitude_ field.\n\nNext, write a function named `distance(stations: dict, station1: str, station2: str)`, which returns the distance between the two stations given as arguments.\n\nThe distance is calculated using the Pythagorean theorem. The multiplication factors below are approximate values for converting latitudes and longitudes to distances in kilometres in the Helsinki region.\n\n```python\n# we will need the function sqrt from the math module \nimport math\n\nx_km = (longitude1 - longitude2) * 55.26\ny_km = (latitude1 - latitude2) * 111.2\ndistance_km = math.sqrt(x_km**2 + y_km**2)\n```\n\nSome examples of the function in action:\n\n```python\nstations = get_station_data('stations1.csv')\nd = distance(stations, \"Designmuseo\", \"Hietalahdentori\")\nprint(d)\nd = distance(stations, \"Viiskulma\", \"Kaivopuisto\")\nprint(d)\n```\n\n<sample-output>\n\n0.9032737292463177\n0.7753594392019532\n\n</sample-output>\n\n**NB:** If Visual Studio can't find the file and you have checked that there are no spelling errors, take a look at [these instructions](/part-6/1-reading-files#what-if-visual-studio-code-cannot-find-my-file).\n\n#### The greatest distance\n\nPlease write a function named `greatest_distance(stations: dict)`, which works out the two stations on the list with the greatest distance from each other. The function should return a tuple, where the first two elements are the names of the two stations, and the third element is the distance between the two.\n\n```python\nstations = get_station_data('stations1.csv')\nstation1, station2, greatest = greatest_distance(stations)\nprint(station1, station2, greatest)\n```\n\n<sample-output>\n\nLaivasillankatu Hietalahdentori 1.478708873076181\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!---\nA quiz to review the contents of this section:",
+      "raw_source": "<!---\nA quiz to review the contents of this section:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "69694e01-4c47-5b9d-8a00-b0d96a477dc7"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"69694e01-4c47-5b9d-8a00-b0d96a477dc7\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    }
+  ]
+}

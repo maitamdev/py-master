@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-03_go",
+  "lesson_id": "part05-1-more-lists",
+  "part": 5,
+  "tmc_name": "part05-03_go",
+  "title_original": "Go",
+  "title_vi": "Đi",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "In a game of Go two players take turns to place black and white stones on a game board. The winner is the player who manages to encircle a bigger area on the board with their own game pieces. \n\nPlease write a function named `who_won(game_board: list)`, which takes a two-dimensional array as its argument. The array consists of integer values, which represent the following situations:\n\n* 0: empty square\n* 1: player 1 game piece\n* 2: player 2 game piece\n\nThe scoring rules of Go can be quite complex, but in this exercise it is enough to compare the number of pieces each player has on the game board. Also, the size of the game board is not limited.\n\nThe function should return the value 1 if player 1 won, and the value 2 if player 2 won. If both players have the same number of pieces on the board, the function should return the value 0.",
+  "description_vi": "Trong trò chơi cờ vây, hai người chơi thay phiên nhau đặt các quân đen và quân trắng lên bàn cờ. Người chiến thắng là người chơi có thể bao vây được một khu vực lớn hơn trên bàn cờ bằng các quân cờ của riêng mình. \n\nVui lòng viết một hàm có tên `who_won(game_board: list)`, lấy mảng hai chiều làm đối số. Mảng bao gồm các giá trị nguyên, đại diện cho các tình huống sau:\n\n* 0: hình vuông trống\n* 1: người chơi 1 phần trò chơi\n* 2: người chơi 2 phần trò chơi\n\nQuy tắc tính điểm của cờ vây có thể khá phức tạp, nhưng trong bài tập này chỉ cần so sánh số quân cờ mỗi người chơi có trên bàn cờ là đủ. Ngoài ra, kích thước của bảng trò chơi không bị giới hạn.\n\nHàm sẽ trả về giá trị 1 nếu người chơi 1 thắng và giá trị 2 nếu người chơi 2 thắng. Nếu cả hai người chơi có cùng số quân trên bàn cờ thì hàm sẽ trả về giá trị 0.",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "20c76a74302868db729752917960fb5588b14977e906a02c1ea244a1550bb691",
+  "order": 99
+}

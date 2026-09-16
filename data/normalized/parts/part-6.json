@@ -1,0 +1,48 @@
+{
+  "part": 6,
+  "slug": "part-6",
+  "title_original": "Part 6",
+  "title_vi": "Phần 6",
+  "lessons": [
+    {
+      "id": "part06-1-reading-files",
+      "slug": "1-reading-files",
+      "is_index": false,
+      "title_original": "Reading files",
+      "path": "/part-6/1-reading-files",
+      "blocks_count": 112
+    },
+    {
+      "id": "part06-2-writing-files",
+      "slug": "2-writing-files",
+      "is_index": false,
+      "title_original": "Writing files",
+      "path": "/part-6/2-writing-files",
+      "blocks_count": 74
+    },
+    {
+      "id": "part06-3-errors",
+      "slug": "3-errors",
+      "is_index": false,
+      "title_original": "Handling errors",
+      "path": "/part-6/3-errors",
+      "blocks_count": 69
+    },
+    {
+      "id": "part06-4-scope-of-variables",
+      "slug": "4-scope-of-variables",
+      "is_index": false,
+      "title_original": "Local and global variables",
+      "path": "/part-6/4-scope-of-variables",
+      "blocks_count": 51
+    },
+    {
+      "id": "part06-index",
+      "slug": "index",
+      "is_index": true,
+      "title_original": "Part 6",
+      "path": "/part-6",
+      "blocks_count": 2
+    }
+  ]
+}

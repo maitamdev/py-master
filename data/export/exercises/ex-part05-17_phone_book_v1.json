@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-17_phone_book_v1",
+  "lesson_id": "part05-3-dictionary",
+  "part": 5,
+  "tmc_name": "part05-17_phone_book_v1",
+  "title_original": "Phone book, version 1",
+  "title_vi": "Danh bạ điện thoại, phiên bản 1",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a phone book application. It should work as follows:\n\n<sample-output>\n\ncommand (1 search, 2 add, 3 quit): **2**\nname: **peter**\nnumber: **040-5466745**\nok!\ncommand (1 search, 2 add, 3 quit): **2**\nname: **emily**\nnumber: **045-1212344**\nok!\ncommand (1 search, 2 add, 3 quit): **1**\nname: **peter**\n040-5466745\ncommand (1 search, 2 add, 3 quit): **1**\nname: **mary**\nno number\ncommand (1 search, 2 add, 3 quit): **2**\nname: **peter**\nnumber: **09-22223333**\nok!\ncommand (1 search, 2 add, 3 quit): **1**\nname: **peter**\n09-22223333\ncommand (1 search, 2 add, 3 quit): **3**\nquitting...\n\n</sample-output>\n\nAs you can see above, each name can be attached to a single number only. If a new entry with the same name is added, the number attached to the old entry is replaced with the new number.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+  "description_vi": "Hãy viết một ứng dụng danh bạ điện thoại. Nó sẽ hoạt động như sau:\n\n<sample-output>\n\nlệnh (1 tìm kiếm, 2 thêm, 3 thoát): **2**\ntên: **peter**\nsố: **040-5466745**\nđược rồi!\nlệnh (1 tìm kiếm, 2 thêm, 3 thoát): **2**\nTên: **emily**\nsố: **045-1212344**\nđược rồi!\nlệnh (1 tìm kiếm, 2 thêm, 3 thoát): **1**\ntên: **peter**\n040-5466745\nlệnh (1 tìm kiếm, 2 thêm, 3 thoát): **1**\nTên: **Mary**\nkhông có số\nlệnh (1 tìm kiếm, 2 thêm, 3 thoát): **2**\ntên: **peter**\nsố: **09-22223333**\nđược rồi!\nlệnh (1 tìm kiếm, 2 thêm, 3 thoát): **1**\ntên: **peter**\n09-22223333\nlệnh (1 tìm kiếm, 2 thêm, 3 thoát): **3**\nbỏ cuộc...\n\n</sample-output>\n\nNhư bạn có thể thấy ở trên, mỗi tên chỉ có thể được gắn với một số duy nhất. Nếu một mục mới có cùng tên được thêm vào, số gắn với mục cũ sẽ được thay thế bằng số mới.\n\n**NB:** bài tập này không yêu cầu bạn viết bất kỳ hàm nào, vì vậy bạn nên __không__ đặt bất kỳ mã nào trong khối `if __name__ == \"__main__\"`.",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "43f89b431e51f012f4ce8cbe0290c30a4448984c8eda78b9e134eb40b9a9d1a2",
+  "order": 50
+}

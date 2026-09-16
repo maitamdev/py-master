@@ -1,0 +1,58 @@
+{
+  "id": "part05-index",
+  "part": 5,
+  "part_slug": "part-5",
+  "slug": "index",
+  "is_part_index": true,
+  "title_original": "Part 5",
+  "title_vi": "Tham chiếu, Từ điển (Dictionary) và Tuple",
+  "path": "/part-5",
+  "source_path": "data/part-5/index.md",
+  "source_hash": "85760263f39feef61acd86fb92ae9105363b457dfc708b1863e7c6e34acf0bf9",
+  "order": 1,
+  "blocks_count": 2,
+  "blocks": [
+    {
+      "id": "blk-part05-index-0001",
+      "type": "custom_component",
+      "order": 1,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "component_name": "pages-in-this-section",
+        "attributes": {},
+        "raw_source": "<pages-in-this-section></pages-in-this-section>",
+        "parsed": true
+      }
+    },
+    {
+      "id": "blk-part05-index-0002",
+      "type": "custom_component",
+      "order": 2,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "component_name": "exercises-in-this-section",
+        "attributes": {},
+        "raw_source": "<exercises-in-this-section></exercises-in-this-section>",
+        "parsed": true
+      }
+    }
+  ]
+}

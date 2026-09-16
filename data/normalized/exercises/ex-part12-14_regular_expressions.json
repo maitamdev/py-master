@@ -1,0 +1,16 @@
+{
+  "id": "ex-part12-14_regular_expressions",
+  "lesson_id": "part12-4-regular-expressions",
+  "part": 12,
+  "tmc_name": "part12-14_regular_expressions",
+  "title_original": "Regular expressions",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Here are some exercises for familiarizing yourself with regular expression syntax.\n\n## Days of the week\n\nUsing a regular expression, please write a function named `is_dotw(my_string: str)`. The function should return `True` if the string passed as an argument contains an abbreviation for a day of the week (Mon, Tue, Wed, Thu, Fri, Sat, Sun).\n\nSome examples of how the function should work:\n\n```python\nprint(is_dotw(\"Mon\"))\nprint(is_dotw(\"Fri\"))\nprint(is_dotw(\"Tui\"))\n```\n\n<sample-output>\n\nTrue\nTrue\nFalse\n\n</sample-output>\n\n## Check for vowels\n\nPlease write a function named `all_vowels(my_string: str)` which uses a regular expression to check whether all characters in the given string are vowels.\n\nSome examples of how the function should work:\n\n```python\nprint(all_vowels(\"eioueioieoieou\"))\nprint(all_vowels(\"autoooo\"))\n```\n\n<sample-output>\n\nTrue\nFalse\n\n</sample-output>\n\n## Time of day\n\nPlease write a function named `time_of_day(my_string: str)` which uses a regular expression to check whether a string in the format `XX:YY:ZZ` is a valid time in the 24-hour format, with two digits each for hours, minutes and seconds.\n\nSome examples of how the function should work:\n\n```python\nprint(time_of_day(\"12:43:01\"))\nprint(time_of_day(\"AB:01:CD\"))\nprint(time_of_day(\"17:59:59\"))\nprint(time_of_day(\"33:66:77\"))\n```\n\n<sample-output>\n\nTrue\nFalse\nTrue\nFalse\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "print(is_dotw(\"Mon\"))\nprint(is_dotw(\"Fri\"))\nprint(is_dotw(\"Tui\"))",
+  "grading_data_available": false,
+  "source_hash": "cd3ccc3fe27a33e849a988db28ddfc11ae4db362d76df8cf462057547ab3dec5",
+  "order": 39
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part10-05_supergroup",
+  "lesson_id": "part10-2-access-modifiers",
+  "part": 10,
+  "tmc_name": "part10-05_supergroup",
+  "title_original": "Supergroup",
+  "title_vi": "Siêu nhóm",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The exercise template contains the class definition for a `SuperHero`.\n\nPlease define a class named `SuperGroup` which represents a group of superheroes. The class should contain the following members:\n\n* **Protected** attributes name (str), location (str) and members (list)\n* A constructor which takes the name and location of the group as arguments, in that order\n* Getter methods for the name and location attributes\n* A method named `add_member(hero: SuperHero)` which adds a new member to the group\n* A method named `print_group` which prints out information about the group and its members, following the format specified below\n\nAn example of the class in action:\n\n```python\nsuperperson = SuperHero(\"SuperPerson\", \"Superspeed, superstrength\")\ninvisible = SuperHero(\"Invisible Inca\", \"Invisibility\")\nrevengers = SuperGroup(\"Revengers\", \"Emerald City\")\n\nrevengers.add_member(superperson)\nrevengers.add_member(invisible)\nrevengers.print_group()\n```\n\n<sample-output>\n\nRevengers, Emerald City\nMembers:\nSuperPerson, superpowers: Superspeed, superstrength\nInvisible Inca, superpowers: Invisibility\n\n</sample-output>\n\nIf you need a refresher on getter and setter methods, please have a look at [this section in the previous part](/part-9/3-encapsulation#getters-and-setters) of the material.",
+  "description_vi": "Mẫu bài tập chứa định nghĩa lớp cho `SuperHero`.\n\nVui lòng xác định một lớp có tên `SuperGroup` đại diện cho một nhóm siêu anh hùng. Lớp nên có các thành viên sau:\n\n* **Được bảo vệ** tên thuộc tính (str), vị trí (str) và thành viên (danh sách)\n* Một hàm tạo lấy tên và vị trí của nhóm làm đối số, theo thứ tự đó\n* Phương thức Getter cho thuộc tính tên và vị trí\n* Một phương thức có tên `add_member(hero: SuperHero)` để thêm thành viên mới vào nhóm\n* Phương thức có tên `print_group` in ra thông tin về nhóm và các thành viên trong nhóm, theo định dạng được chỉ định bên dưới\n\nMột ví dụ về lớp đang hoạt động:\n\n```python\nsuperperson = SuperHero(\"SuperPerson\", \"Superspeed, superstrength\")\ninvisible = SuperHero(\"Invisible Inca\", \"Invisibility\")\nrevengers = SuperGroup(\"Revengers\", \"Emerald City\")\n\nrevengers.add_member(superperson)\nrevengers.add_member(invisible)\nrevengers.print_group()\n```\n\n<sample-output>\n\nNhững kẻ báo thù, Thành phố Ngọc lục bảo\nThành viên:\nSuperPerson, siêu năng lực: Siêu tốc độ, siêu sức mạnh\nNgười Inca vô hình, siêu năng lực: Tàng hình\n\n</sample-output>\n\nNếu bạn cần xem lại các phương thức getter và setter, vui lòng xem [phần này trong phần trước](/part-9/3-encapsulation#getters-and-setters) của tài liệu.",
+  "starter_code": "superperson = SuperHero(\"SuperPerson\", \"Superspeed, superstrength\")\ninvisible = SuperHero(\"Invisible Inca\", \"Invisibility\")\nrevengers = SuperGroup(\"Revengers\", \"Emerald City\")\n\nrevengers.add_member(superperson)\nrevengers.add_member(invisible)\nrevengers.print_group()",
+  "grading_data_available": false,
+  "source_hash": "5d67a0db182e838b72ffbc4cc80d8a56331899c353b7295205474faab2f56a6f",
+  "order": 20
+}

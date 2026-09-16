@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-23_anagrams",
+  "lesson_id": "part04-4-definite-iteration",
+  "part": 4,
+  "tmc_name": "part04-23_anagrams",
+  "title_original": "Anagrams",
+  "title_vi": "Đảo chữ",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `anagrams`, which takes two strings as arguments. The function returns `True` if the strings are anagrams of each other. Two words are anagrams if they contain exactly the same characters.\n\nSome examples of how the function should work:\n\n```python\nprint(anagrams(\"tame\", \"meta\")) # True\nprint(anagrams(\"tame\", \"mate\")) # True\nprint(anagrams(\"tame\", \"team\")) # True\nprint(anagrams(\"tabby\", \"batty\")) # False\nprint(anagrams(\"python\", \"java\")) # False\n```\n\nHint: the function `sorted` can be used on strings as well.",
+  "description_vi": "Hãy viết một hàm có tên `anagrams`, hàm này lấy hai chuỗi làm đối số. Hàm trả về `True` nếu các chuỗi là đảo chữ cái của nhau. Hai từ được gọi là đảo chữ nếu chúng chứa các ký tự giống hệt nhau.\n\nMột số ví dụ về cách hoạt động của hàm:\n\n```python\nprint(anagrams(\"tame\", \"meta\")) # True\nprint(anagrams(\"tame\", \"mate\")) # True\nprint(anagrams(\"tame\", \"team\")) # True\nprint(anagrams(\"tabby\", \"batty\")) # False\nprint(anagrams(\"python\", \"java\")) # False\n```\n\nGợi ý: hàm `sorted` cũng có thể được sử dụng trên chuỗi.",
+  "starter_code": "print(anagrams(\"tame\", \"meta\")) # True\nprint(anagrams(\"tame\", \"mate\")) # True\nprint(anagrams(\"tame\", \"team\")) # True\nprint(anagrams(\"tabby\", \"batty\")) # False\nprint(anagrams(\"python\", \"java\")) # False",
+  "grading_data_available": false,
+  "source_hash": "4b0122430d0c2d060f65492685527dd0a732f4b27bbe2e6dae4e2c445a3f13de",
+  "order": 49
+}

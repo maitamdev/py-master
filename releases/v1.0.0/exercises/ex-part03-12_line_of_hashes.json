@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-12_line_of_hashes",
+  "lesson_id": "part03-2-working-with-strings",
+  "part": 3,
+  "tmc_name": "part03-12_line_of_hashes",
+  "title_original": "A line of hashes",
+  "title_vi": "Một dòng băm",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which prints out a line of hash characters, the width of which is chosen by the user.\n\n<sample-output>\n\nWidth: **3**\n<pre>\n###\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nWidth: **8**\n<pre>\n########\n</pre>\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình in ra một dòng ký tự băm, độ rộng của nó do người dùng chọn.\n\n<sample-output>\n\nChiều rộng: **3**\n<pre>\n###\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nChiều rộng: **8**\n<pre>\n########\n</pre>\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "01ec641192532cce88725a090412b3f0c4cda4779d7f6752ccac1be2422da1ba",
+  "order": 53
+}

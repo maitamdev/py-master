@@ -1,0 +1,16 @@
+{
+  "id": "ex-part08-07_pet",
+  "lesson_id": "part08-3-defining-classes",
+  "part": 8,
+  "tmc_name": "part08-07_pet",
+  "title_original": "Define class: Pet",
+  "title_vi": "Định nghĩa lớp: Thú cưng",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please define the class `Pet`. The class should include a constructor, which takes the initial values of the attributes `name`, `species` and `year_of_birth` as its arguments, in that specific order.\n\nPlease also write a function named `new_pet(name: str, species: str, year_of_birth: int)` _outside the class definition_. The function should create and return a new object of type `Pet`, as defined in the class `Pet`.\n\nAn example of how the function is used:\n\n```python\nfluffy = new_pet(\"Fluffy\", \"dog\", 2017)\nprint(fluffy.name)\nprint(fluffy.species)\nprint(fluffy.year_of_birth)\n```\n\n<sample-output>\n\nFluffy\ndog\n2017\n\n</sample-output>",
+  "description_vi": "Vui lòng xác định lớp `Pet`. Lớp này phải bao gồm một hàm tạo, lấy các giá trị ban đầu của các thuộc tính `name`, `species` và `year_of_birth` làm đối số, theo thứ tự cụ thể đó.\n\nVui lòng viết một hàm có tên `new_pet(name: str, species: str, year_of_birth: int)` _bên ngoài định nghĩa lớp_. Hàm sẽ tạo và trả về một đối tượng mới thuộc loại `Pet`, như được định nghĩa trong lớp `Pet`.\n\nMột ví dụ về cách sử dụng chức năng:\n\n```python\nfluffy = new_pet(\"Fluffy\", \"dog\", 2017)\nprint(fluffy.name)\nprint(fluffy.species)\nprint(fluffy.year_of_birth)\n```\n\n<sample-output>\n\nmịn màng\ncon chó\n2017\n\n</sample-output>",
+  "starter_code": "fluffy = new_pet(\"Fluffy\", \"dog\", 2017)\nprint(fluffy.name)\nprint(fluffy.species)\nprint(fluffy.year_of_birth)",
+  "grading_data_available": false,
+  "source_hash": "c45888681bf62d0e8f871f039eba5eaee04d2e2163b91ac95818d7b84fe712f1",
+  "order": 47
+}

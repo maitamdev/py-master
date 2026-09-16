@@ -1,0 +1,484 @@
+{
+  "id": "part08-1-objects-and-methods",
+  "part": 8,
+  "part_slug": "part-8",
+  "slug": "1-objects-and-methods",
+  "is_part_index": false,
+  "title_original": "Objects and methods",
+  "title_vi": "",
+  "path": "/part-8/1-objects-and-methods",
+  "source_path": "data/part-8/1-objects-and-methods.md",
+  "source_hash": "95bc32cda16011613a32c448095ba82d99c1e917037b2b90fcea62bf4b265f57",
+  "order": 1,
+  "blocks_count": 25,
+  "blocks": [
+    {
+      "id": "blk-part08-1-objects-and-methods-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "a3e0afe091b30c1e7d2ff84acaaefb56c0d80c73f4ad9714f481b8a1e32862ed",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know what an object is in programming\n- You will understand what is meant by the independence of individual objects\n- You will be able to create and access objects"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "1d92a743c3c2597a255a3bdaa47cdc76e37874201b488ba9ec2f32f509db26fd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This is the first part of the Advanced Course in Programming. The material is designed to be used with the Visual Studio Code editor, just like the preceding Introduction to Programming course was. If you haven't use Visual Studio Code before, you will find the installation instructions [here](https://www.mooc.fi/en/installation/vscode), and an introduction to the programming environment from the previous course [here](/part-4/1-vscode)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "4b7ed1265391f5897ffcf83bc5204a01b4957b6a1849e59f9be49564abb2f0ab",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the Introduction to Programming course we noticed that it often makes sense to group related data together in our programs. For example, if we are trying to store information about a book, it might make sense to use a tuple or a dictionary to organize the data into a single data structure."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "aaff5ee3f510f215b0aa91c95f30cd4436bf754458fe05ae8734c3944cbb8be6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The solution could look like this when using a tuple:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "004b732f31b5f405dd9bc404b34d3c1012776cb8c24a76ef303052f328415cf6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "name = \"In Search of Lost Typing\"\nauthor = \"Marcel Pythons\"\nyear = 1992\n\n# Combine these in a tuple\nbook = (name, author, year)\n\n# Print the name of the book\nprint(book[0])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "name = \"In Search of Lost Typing\"\nauthor = \"Marcel Pythons\"\nyear = 1992\n\n# Combine these in a tuple\nbook = (name, author, year)\n\n# Print the name of the book\nprint(book[0])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "004b732f31b5f405dd9bc404b34d3c1012776cb8c24a76ef303052f328415cf6",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "abafadb2e938409b84edf91f96bd1d1e1a344cf34167f7296f139d1806ecfe97",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In a case like this, the advantage of using a dictionary is that we can use strings instead of indexes as the keys. That is, we can give descriptive names to the items stored in the data structure:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0007",
+      "type": "code",
+      "order": 7,
+      "source_hash": "e5ff6bfa3cb37cc0a7a80f663b167ef964732b78a4284bf738917ded31cbd0bc",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "name = \"In Search of Lost Typing\"\nauthor = \"Marcel Pythons\"\nyear = 1992\n\n# Combine these in a dictionary\nbook = {\"name\": name, \"author\": author, \"year\": year}\n\n# Print the name of the book\nprint(book[\"name\"])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "name = \"In Search of Lost Typing\"\nauthor = \"Marcel Pythons\"\nyear = 1992\n\n# Combine these in a dictionary\nbook = {\"name\": name, \"author\": author, \"year\": year}\n\n# Print the name of the book\nprint(book[\"name\"])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e5ff6bfa3cb37cc0a7a80f663b167ef964732b78a4284bf738917ded31cbd0bc",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "658388998d449c7198a723df4882cf0f7fe0de73f81cf02e8c7a5d9cf9b5aa3c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In both cases we are creating a new _object_. In programming, the term has the specific meaning of an independent whole, in this case containing some bits of data which are somehow related. Being independent means that any changes made to one object will not affect other objects."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "b0b881256953b4508710fa8177f6bae76091166f800b03f445ea007df619ed64",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If we were to create two structurally identical representations of books, using dictionaries with identical keys, any changes made to one of them would not have any effect on the other:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0010",
+      "type": "code",
+      "order": 10,
+      "source_hash": "081c51b5ae91e20eb9e486be1711776e65aaeeb8cf639594252ee18962081619",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "book1 = {\"name\": \"The Old Man and the Pythons\", \"author\": \"Ernest Pythons\", \"year\": 1952}\nbook2 = {\"name\": \"Seven Pythons\", \"author\": \"Aleksis Python\", \"year\": 1894}\n\nprint(book1[\"name\"])\nprint(book2[\"name\"])\n\nbook1[\"name\"] = \"A Farewell to ARM Processors\"\n\nprint(book1[\"name\"])\nprint(book2[\"name\"])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "book1 = {\"name\": \"The Old Man and the Pythons\", \"author\": \"Ernest Pythons\", \"year\": 1952}\nbook2 = {\"name\": \"Seven Pythons\", \"author\": \"Aleksis Python\", \"year\": 1894}\n\nprint(book1[\"name\"])\nprint(book2[\"name\"])\n\nbook1[\"name\"] = \"A Farewell to ARM Processors\"\n\nprint(book1[\"name\"])\nprint(book2[\"name\"])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "081c51b5ae91e20eb9e486be1711776e65aaeeb8cf639594252ee18962081619",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0011",
+      "type": "sample_output",
+      "order": 11,
+      "source_hash": "e6cc047135ef8d8869dc53bf656e6882ad15c5956d6edf64b923bce7c5b32d51",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The Old Man and the Pythons\nSeven Pythons\nA Farewell to ARM Processors\nSeven Pythons"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The Old Man and the Pythons\nSeven Pythons\nA Farewell to ARM Processors\nSeven Pythons"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe Old Man and the Pythons\nSeven Pythons\nA Farewell to ARM Processors\nSeven Pythons\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0012",
+      "type": "image",
+      "order": 12,
+      "source_hash": "d9173f05d4075c674f9a08e289c0e7ffa65ee5207d5e039ac2c7c97621ef080a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "8_1_1.png",
+        "alt": "",
+        "attributes": {
+          "src": "8_1_1.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0013",
+      "type": "text_box",
+      "order": 13,
+      "source_hash": "e3a24bf55fab524fdd79eae460205ee3373b41fc492854967fc85e56143e5e73",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You may remember from the Introduction to Programming course that any value in Python is internally handled as an object. This means that the value stored in a variable is a _reference to an object_. The data itself is stored within the object in computer memory. If you assign a value to a new variable with the command `a = 3`, the value stored in the variable is _not_ 3, but a _reference to an object which contains the value 3_.\n\nMost other programming languages (at least those which support object-oriented programming) include some specially defined _primitive data types_. These usually include at least integer numbers, floating point numbers and Boolean truth values. Primitives are processed directly, meaning that they are stored directly in variables, not as references. Python has no such primitives, but working with the basic data types in Python is practically very similar. Objects of these basic data types (such as numbers, Boolean values and strings) are _immutable_, meaning that they cannot be changed in memory. If the value stored in a variable of a basic data type needs to be changed, the entire reference is replaced, but the object itself remains intact in memory."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "info",
+        "name_original": "Python objects",
+        "name_vi": "",
+        "attributes": {
+          "variant": "info",
+          "name": "Python objects"
+        }
+      }
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0014",
+      "type": "heading",
+      "order": 14,
+      "source_hash": "f3636fd39c62a3545d1349e4f2f3da28fbd864327164af2da42697b488f3b9ea",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Objects and methods"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "a1a56cb45a721c3a505cf7c54915a139aba784fb6b082dbeacb731c263a44557",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The data stored in an object can be accessed through _methods_. A method is a function which operates on the specific object it is attached to. The way to distinguish methods from other functions is the way in which they are called: first you write the name of the object targeted, followed by a dot, and then the name of the method, with arguments if any. For example, the method `values` returns all the values stored in an object of type dictionary, or `dict`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0016",
+      "type": "code",
+      "order": 16,
+      "source_hash": "8b9023179920a551069be5273c393a6df19a1015e25d2066b31daa72b7f10219",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# this creates an object of type dictionary with the name book\nbook = {\"name\": \"The Old Man and the Pythons\", \"author\": \"Ernest Pythons\", \"year\": 1952}\n\n# Print out all the values\n# The method call values() is written after the name of the variable\n# Remember the dot notation!\nfor value in book.values():\n    print(value)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# this creates an object of type dictionary with the name book\nbook = {\"name\": \"The Old Man and the Pythons\", \"author\": \"Ernest Pythons\", \"year\": 1952}\n\n# Print out all the values\n# The method call values() is written after the name of the variable\n# Remember the dot notation!\nfor value in book.values():\n    print(value)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8b9023179920a551069be5273c393a6df19a1015e25d2066b31daa72b7f10219",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0017",
+      "type": "sample_output",
+      "order": 17,
+      "source_hash": "6cd7f8e687eeda3f4e8d98a8ddc0bea99476e4d95cc321d40454c87a0fdcece8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The Old Man and the Pythons\nErnest Pythons\n1952"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The Old Man and the Pythons\nErnest Pythons\n1952"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe Old Man and the Pythons\nErnest Pythons\n1952\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "1c50a7a78004d766b6d4019c89fbd73df481dd63c518db2f90c076723d013782",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Similarly, string methods target the string object which they are called on. Some examples of string methods include `count` and `find`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0019",
+      "type": "code",
+      "order": 19,
+      "source_hash": "d91d6e3c38322d65ce9926424eec2b4832134ea14629ed525e8f3bb1da76124b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "name = \"Imaginary Irene\"\n\n# Print out the number of times the letter I is found\nprint(name.count(\"I\"))\n\n# The number of letters I found in another string\nprint(\"Irreverent Irises in Islington\".count(\"I\"))\n\n# The index of the substring Irene\nprint(name.find(\"Irene\"))\n\n# This string has no such substring\nprint(\"A completely different string\".find(\"Irene\"))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "name = \"Imaginary Irene\"\n\n# Print out the number of times the letter I is found\nprint(name.count(\"I\"))\n\n# The number of letters I found in another string\nprint(\"Irreverent Irises in Islington\".count(\"I\"))\n\n# The index of the substring Irene\nprint(name.find(\"Irene\"))\n\n# This string has no such substring\nprint(\"A completely different string\".find(\"Irene\"))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d91d6e3c38322d65ce9926424eec2b4832134ea14629ed525e8f3bb1da76124b",
+        "length_lines": 13
+      }
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0020",
+      "type": "sample_output",
+      "order": 20,
+      "source_hash": "5561c5c36e839c949edbb2850c9dc22f8aab0034095ed65c78a47eee68d63e1f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "2\n3\n10\n-1"
+      },
+      "translation": {
+        "language": "text",
+        "content": "2\n3\n10\n-1"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n2\n3\n10\n-1\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "bacbbfe92d4cbb67f62e57a1a23026b39908fd309e7dcf719bf3d6eac0392425",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "String methods return values, but they will not change the contents of a string. As stated above, strings in Python are immutable. This does not apply to all methods, however. Python lists are mutable, so Python list methods may change the contents of the list they are called on:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0022",
+      "type": "code",
+      "order": 22,
+      "source_hash": "3f151534e17421f5f7c6d387f4069b48e21d969c83f573d7a4ee753c6f24971b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [1,2,3]\n\n# Add a couple of items\nmy_list.append(5)\nmy_list.append(1)\n\nprint(my_list)\n\n# Remove the first item\nmy_list.pop(0)\n\nprint(my_list)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [1,2,3]\n\n# Add a couple of items\nmy_list.append(5)\nmy_list.append(1)\n\nprint(my_list)\n\n# Remove the first item\nmy_list.pop(0)\n\nprint(my_list)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3f151534e17421f5f7c6d387f4069b48e21d969c83f573d7a4ee753c6f24971b",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0023",
+      "type": "sample_output",
+      "order": 23,
+      "source_hash": "44577121628737373338e201cfc37550844cb3591ed184b8651dca6b29fbef26",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[1, 2, 3, 5, 1]\n[2, 3, 5, 1]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[1, 2, 3, 5, 1]\n[2, 3, 5, 1]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[1, 2, 3, 5, 1]\n[2, 3, 5, 1]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0024",
+      "type": "exercise",
+      "order": 24,
+      "source_hash": "68f9a37b76451035abdde45a0a083e8774c2fe6cb808ec8b71dadd2a6eb22c79",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `smallest_average(person1: dict, person2: dict, person3: dict)`, which takes three dictionary objects as its arguments.\n\nEach dictionary object contains values mapped to the following keys:\n\n* `\"name\"`: The name of the contestant\n* `\"result1\"`: the first result of the contestant (an integer between 1 and 10)\n* `\"result2\"`: the second result of the contestant (as above)\n* `\"result3\"`: the third result of the contestant (as above)\n\nThe function should calculate the average of the three results for each contestant, and then return the contestant whose average result was the smallest. The return value should be the entire dictionary object containing the contestant's information.\n\nYou may assume there will be no ties, i.e. a single contestant will have the smallest average result.\n\nAn example of the function in action:\n\n```python\nperson1 = {\"name\": \"Mary\", \"result1\": 2, \"result2\": 3, \"result3\": 3}\nperson2 = {\"name\": \"Gary\", \"result1\": 5, \"result2\": 1, \"result3\": 8}\nperson3 = {\"name\": \"Larry\", \"result1\": 3, \"result2\": 1, \"result3\": 1}\n\nprint(smallest_average(person1, person2, person3))\n```\n\n<sample-output>\n\n{'name': 'Larry', 'result1': 3, 'result2': 1, 'result3': 1}\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part08-01_smallest_average",
+        "exercise_type": "programming-exercise",
+        "name": "The smallest average result",
+        "tmc_name": "part08-01_smallest_average",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part08-1-objects-and-methods-0025",
+      "type": "exercise",
+      "order": 25,
+      "source_hash": "86a4db35fe969ee14bdf5e173b6c295223dfddf93304aacd840c925f1ac04601",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In Python, every value stored in a variable is a reference to an object, so any value stored in a list is also a reference to an object. This is also true when modelling a matrix data structure: each value in the top level list is a reference to another list, which in turn contains references to the objects representing the elements of the matrix.\n\nPlease write a function named `row_sums(my_matrix: list)`, which takes an integer matrix as its argument.\n\nThe function should add a new element on each row in the matrix. This element contains the sum of the other elements on that row. The function does not have a return value. It should modify the parameter matrix in place.\n\nAn example of the function in action:\n\n```python\nmy_matrix = [[1, 2], [3, 4]]\nrow_sums(my_matrix)\nprint(my_matrix)\n```\n\n<sample-output>\n\n[[1, 2, 3], [3, 4, 7]]\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part08-02_row_sums ",
+        "exercise_type": "programming-exercise",
+        "name": "Row sums",
+        "tmc_name": "part08-02_row_sums ",
+        "height": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "id": "part10-1-class-hierarchies",
+  "part": 10,
+  "part_slug": "part-10",
+  "slug": "1-class-hierarchies",
+  "is_part_index": false,
+  "title_original": "Class hierarchies",
+  "path": "/part-10/1-class-hierarchies",
+  "source_path": "data/part-10/1-class-hierarchies.md",
+  "source_hash": "a770093e5679679416a60699c945013f6072413eba67f87df584d6cb32837c9c",
+  "frontmatter": {
+    "path": "/part-10/1-class-hierarchies",
+    "title": "Class hierarchies",
+    "hidden": false
+  },
+  "chunks_count": 46,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know what inheritance means in a programming context\n- You will be able to write classes which inherit other classes\n- You will know how inheritance affects the traits in classes",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know what inheritance means in a programming context\n- You will be able to write classes which inherit other classes\n- You will know how inheritance affects the traits in classes\n\n</text-box>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Special classes for special purposes",
+      "raw_source": "## Special classes for special purposes"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Sometimes you come across a situation where you have already defined a class, but then realize you need special traits in some, but not all, instances of the class. Then again, sometimes you realize you've defined two very similar classes with only minor differences. As programmers we aim to always repeat ourselves as little as possible, while maintaining clarity and readability. So how can we accommodate for different implementations of intrinsically similar objects?",
+      "raw_source": "Sometimes you come across a situation where you have already defined a class, but then realize you need special traits in some, but not all, instances of the class. Then again, sometimes you realize you've defined two very similar classes with only minor differences. As programmers we aim to always repeat ourselves as little as possible, while maintaining clarity and readability. So how can we accommodate for different implementations of intrinsically similar objects?"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's have a look at two class definitions: `Student` and `Teacher`. Getter and setter methods have been left out for now, in order to keep the example short.",
+      "raw_source": "Let's have a look at two class definitions: `Student` and `Teacher`. Getter and setter methods have been left out for now, in order to keep the example short."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "\nclass Student:\n\n    def __init__(self, name: str, id: str, email: str, credits: str):\n        self.name = name\n        self.id = id\n        self.email = email\n        self.credits = credits\n\nclass Teacher:\n\n    def __init__(self, name: str, email: str, room: str, teaching_years: int):\n        self.name = name\n        self.email = email\n        self.room = room\n        self.teaching_years = teaching_years\n",
+      "raw_source": "```python\n\nclass Student:\n\n    def __init__(self, name: str, id: str, email: str, credits: str):\n        self.name = name\n        self.id = id\n        self.email = email\n        self.credits = credits\n\nclass Teacher:\n\n    def __init__(self, name: str, email: str, room: str, teaching_years: int):\n        self.name = name\n        self.email = email\n        self.room = room\n        self.teaching_years = teaching_years\n\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Even in a stripped down example, like the above, we already have quite a bit of repetition: both classes contain attributes `name` and `email`. It would be a good idea to have a single attribute definition, so that a single function would suffice for editing both attributes.",
+      "raw_source": "Even in a stripped down example, like the above, we already have quite a bit of repetition: both classes contain attributes `name` and `email`. It would be a good idea to have a single attribute definition, so that a single function would suffice for editing both attributes."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "For example, imagine the school's email address changed. All addresses would have to be updated. We _could_ write two separate versions of essentially the same function:",
+      "raw_source": "For example, imagine the school's email address changed. All addresses would have to be updated. We _could_ write two separate versions of essentially the same function:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "\ndef update_email(o: Student):\n    o.email = o.email.replace(\".com\", \".edu\")\n\ndef update_email2(o: Teacher):\n    o.email = o.email.replace(\".com\", \".edu\")\n",
+      "raw_source": "```python\n\ndef update_email(o: Student):\n    o.email = o.email.replace(\".com\", \".edu\")\n\ndef update_email2(o: Teacher):\n    o.email = o.email.replace(\".com\", \".edu\")\n\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Writing practically the same thing twice is unnecessary repetition, not to mention it doubles the possibilities for errors. It would be a definite improvement if we could use a single function to work with instances of both classes.",
+      "raw_source": "Writing practically the same thing twice is unnecessary repetition, not to mention it doubles the possibilities for errors. It would be a definite improvement if we could use a single function to work with instances of both classes."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Both classes also have attributes which are unique to them. Simply combining _all_ attributes in a single class would mean _all_ instances of the class would then have unnecessary attributes, just different ones for different instances. That doesn't seem like an ideal situation, either.",
+      "raw_source": "Both classes also have attributes which are unique to them. Simply combining _all_ attributes in a single class would mean _all_ instances of the class would then have unnecessary attributes, just different ones for different instances. That doesn't seem like an ideal situation, either."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Inheritance",
+      "raw_source": "## Inheritance"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Object oriented programming languages usually feature a technique called _inheritance_. A class can _inherit_ the traits of another class. In addition to these inherited traits a class can also contain traits which are unique to it.",
+      "raw_source": "Object oriented programming languages usually feature a technique called _inheritance_. A class can _inherit_ the traits of another class. In addition to these inherited traits a class can also contain traits which are unique to it."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Knowing this, it would make sense for the `Teacher` and `Student` classes to have a common base or parent class `Person`:",
+      "raw_source": "Knowing this, it would make sense for the `Teacher` and `Student` classes to have a common base or parent class `Person`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "",
+      "code": "",
+      "raw_source": "```python\n\nclass Person:\n\n    def __init__(self, name: str, email: str):\n        self.name = name\n        self.email = email\n\n ```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The new class contains those traits which are shared by the other two classes. Now `Student` and `Teacher` can _inherit_ these traits and add their own besides.",
+      "raw_source": "The new class contains those traits which are shared by the other two classes. Now `Student` and `Teacher` can _inherit_ these traits and add their own besides."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The syntax for inheritance simply involves adding the base class name in parentheses on the header line:",
+      "raw_source": "The syntax for inheritance simply involves adding the base class name in parentheses on the header line:"
+    },
+    {
+      "raw_type": "code",
+      "language": "",
+      "code": "",
+      "raw_source": "```python\nclass Person:\n\n    def __init__(self, name: str, email: str):\n        self.name = name\n        self.email = email\n\n    def update_email_domain(self, new_domain: str):\n        old_domain = self.email.split(\"@\")[1]\n        self.email = self.email.replace(old_domain, new_domain)\n\n\nclass Student(Person):\n\n    def __init__(self, name: str, id: str, email: str, credits: str):\n        self.name = name\n        self.id = id\n        self.email = email\n        self.credits = credits\n\n\nclass Teacher(Person):\n\n    def __init__(self, name: str, email: str, room: str, teaching_years: int):\n        self.name = name\n        self.email = email\n        self.room = room\n        self.teaching_years = teaching_years\n\n# Let's test our classes\nif __name__ == \"__main__\":\n    saul = Student(\"Saul Student\", \"1234\", \"saul@example.com\", 0)\n    saul.update_email_domain(\"example.edu\")\n    print(saul.email)\n\n    tara = Teacher(\"Tara Teacher\", \"tara@example.fi\", \"A123\", 2)\n    tara.update_email_domain(\"example.ex\")\n    print(tara.email)\n\n ```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Both `Student` and `Teacher` inherit the `Person` class, so both have the traits defined in the `Person` class, including the method `update_email_domain`. The same method works for instances of both the derived classes.",
+      "raw_source": "Both `Student` and `Teacher` inherit the `Person` class, so both have the traits defined in the `Person` class, including the method `update_email_domain`. The same method works for instances of both the derived classes."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's have a look at another example. We have a `Bookshelf` which inherits the class `BookContainer`:",
+      "raw_source": "Let's have a look at another example. We have a `Bookshelf` which inherits the class `BookContainer`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "",
+      "code": "",
+      "raw_source": "```python\nclass Book:\n    \"\"\" This class models a simple book \"\"\"\n    def __init__(self, name: str, author: str):\n        self.name = name\n        self.author = author\n\n\nclass BookContainer:\n    \"\"\" This class models a container for books \"\"\"\n\n    def __init__(self):\n        self.books = []\n\n    def add_book(self, book: Book):\n        self.books.append(book)\n\n    def list_books(self):\n        for book in self.books:\n            print(f\"{book.name} ({book.author})\")\n\n\nclass Bookshelf(BookContainer):\n    \"\"\" This class models a shelf for books \"\"\"\n\n    def __init__(self):\n        super().__init__()\n\n    def add_book(self, book: Book, location: int):\n        self.books.insert(location, book)\n\n ```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The class `Bookshelf` contains the method `add_book`. A method with the same name is defined in the base class  `BookContainer`. This is called _overriding_: if a derived class has a method with the same name as the base class, the derived version overrides the original in instances of the derived class.",
+      "raw_source": "The class `Bookshelf` contains the method `add_book`. A method with the same name is defined in the base class  `BookContainer`. This is called _overriding_: if a derived class has a method with the same name as the base class, the derived version overrides the original in instances of the derived class."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The idea in the example above is that a new book added to a BookContainer always goes to the top, but with a Bookshelf you can specify the location yourself. The method `list_books` works the same for both classes, as there is no overriding method in the derived class.",
+      "raw_source": "The idea in the example above is that a new book added to a BookContainer always goes to the top, but with a Bookshelf you can specify the location yourself. The method `list_books` works the same for both classes, as there is no overriding method in the derived class."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's try out these classes:",
+      "raw_source": "Let's try out these classes:"
+    },
+    {
+      "raw_type": "code",
+      "language": "",
+      "code": "",
+      "raw_source": "```python\nif __name__ == \"__main__\":\n    # Create some books for testing\n    b1 = Book(\"Old Man and the Sea\", \"Ernest Hemingway\")\n    b2 = Book(\"Silent Spring\", \"Rachel Carson\")\n    b3 = Book(\"Pride and Prejudice\", \"Jane Austen\")\n\n    # Create a BookContainer and add the books\n    container = BookContainer()\n    container.add_book(b1)\n    container.add_book(b2)\n    container.add_book(b3)\n\n    # Create a Bookshelf and add the books (always to the beginning)\n    shelf = Bookshelf()\n    shelf.add_book(b1, 0)\n    shelf.add_book(b2, 0)\n    shelf.add_book(b3, 0)\n\n\n    # Tulostetaan\n    print(\"Container:\")\n    container.list_books()\n\n    print()\n\n    print(\"Shelf:\")\n    shelf.list_books()\n ```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Container:\nOld Man and the Sea (Ernest Hemingway)\nSilent Spring (Rachel Carson)\nPride and Prejudice (Jane Austen)\n\nShelf:\nPride and Prejudice (Jane Austen)\nSilent Spring (Rachel Carson)\nOld Man and the Sea (Ernest Hemingway)",
+      "raw_source": "<sample-output>\n\nContainer:\nOld Man and the Sea (Ernest Hemingway)\nSilent Spring (Rachel Carson)\nPride and Prejudice (Jane Austen)\n\nShelf:\nPride and Prejudice (Jane Austen)\nSilent Spring (Rachel Carson)\nOld Man and the Sea (Ernest Hemingway)\n\n </sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "So, the Bookshelf class also has access to the `list_books` method. Through inheritance the method is a member of all the classes derived from the `BookContainer` class.",
+      "raw_source": "So, the Bookshelf class also has access to the `list_books` method. Through inheritance the method is a member of all the classes derived from the `BookContainer` class."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Inheritance and scope of traits",
+      "raw_source": "## Inheritance and scope of traits"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A derived class inherits all traits from its base class. Those traits are directly accessible in the derived class, unless they have been defined as private in the base class (with two underscores before the name of the trait).",
+      "raw_source": "A derived class inherits all traits from its base class. Those traits are directly accessible in the derived class, unless they have been defined as private in the base class (with two underscores before the name of the trait)."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As the attributes of a Bookshelf are identical to a BookContainer, there was no need to rewrite the constructor of Bookshelf. We simply called the constructor of the base class:",
+      "raw_source": "As the attributes of a Bookshelf are identical to a BookContainer, there was no need to rewrite the constructor of Bookshelf. We simply called the constructor of the base class:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class Bookshelf(BookContainer):\n\n    def __init__(self):\n        super().__init__()\n",
+      "raw_source": "```python\nclass Bookshelf(BookContainer):\n\n    def __init__(self):\n        super().__init__()\n\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Any trait in the base class can be accessed from the derived class with the function `super()`. The `self` argument is left out from the method call, as Python adds it automatically.",
+      "raw_source": "Any trait in the base class can be accessed from the derived class with the function `super()`. The `self` argument is left out from the method call, as Python adds it automatically."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "But what if the attributes are not identical; can we still use the base class constructor in some way? Let's have a look at a class named `Thesis` which inherits the `Book` class. The derived class _can_ still call the constructor from the base class:",
+      "raw_source": "But what if the attributes are not identical; can we still use the base class constructor in some way? Let's have a look at a class named `Thesis` which inherits the `Book` class. The derived class _can_ still call the constructor from the base class:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "\nclass Book:\n    \"\"\" This class models a simple book \"\"\"\n\n    def __init__(self, name: str, author: str):\n        self.name = name\n        self.author = author\n\n\nclass Thesis(Book):\n    \"\"\" This class models a graduate thesis \"\"\"\n\n    def __init__(self, name: str, author: str, grade: int):\n        super().__init__(name, author)\n        self.grade = grade\n",
+      "raw_source": "```python\n\nclass Book:\n    \"\"\" This class models a simple book \"\"\"\n\n    def __init__(self, name: str, author: str):\n        self.name = name\n        self.author = author\n\n\nclass Thesis(Book):\n    \"\"\" This class models a graduate thesis \"\"\"\n\n    def __init__(self, name: str, author: str, grade: int):\n        super().__init__(name, author)\n        self.grade = grade\n\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The constructor in the `Thesis` class calls the constructor in the base class `Book` with the arguments for `name` and `author`. Additionally, the constructor in the derived class sets the value for the attribute `grade`. This naturally cannot be a part of the base class constructor, as the base class has no such attribute.",
+      "raw_source": "The constructor in the `Thesis` class calls the constructor in the base class `Book` with the arguments for `name` and `author`. Additionally, the constructor in the derived class sets the value for the attribute `grade`. This naturally cannot be a part of the base class constructor, as the base class has no such attribute."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The above class can be used like this:",
+      "raw_source": "The above class can be used like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "if __name__ == \"__main__\":\n    thesis = Thesis(\"Python and the Universe\", \"Peter Pythons\", 3)\n\n    # Print out the values of the attributes\n    print(thesis.name)\n    print(thesis.author)\n    print(thesis.grade)\n",
+      "raw_source": "```python\nif __name__ == \"__main__\":\n    thesis = Thesis(\"Python and the Universe\", \"Peter Pythons\", 3)\n\n    # Print out the values of the attributes\n    print(thesis.name)\n    print(thesis.author)\n    print(thesis.grade)\n\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Python and the Universe\nPeter Pythons\n3",
+      "raw_source": "<sample-output>\n\nPython and the Universe\nPeter Pythons\n3\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Even if a derived class _overrides_ a method in its base class, the derived class can _still_ call the overridden method in the base class. In the following example we have a basic `BonusCard` and a special `PlatinumCard` for especially loyal customers. The `calculate_bonus` method is overridden in the derived class, but the overriding method calls the base method:",
+      "raw_source": "Even if a derived class _overrides_ a method in its base class, the derived class can _still_ call the overridden method in the base class. In the following example we have a basic `BonusCard` and a special `PlatinumCard` for especially loyal customers. The `calculate_bonus` method is overridden in the derived class, but the overriding method calls the base method:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "\nclass Product:\n\n    def __init__(self, name: str, price: float):\n        self.name = name\n        self.price = price\n\nclass BonusCard:\n\n    def __init__(self):\n        self.products_bought = []\n\n    def add_product(self, product: Product):\n        self.products_bought.append(product)\n\n    def calculate_bonus(self):\n        bonus = 0\n        for product in self.products_bought:\n            bonus += product.price * 0.05\n\n        return bonus\n\nclass PlatinumCard(BonusCard):\n\n    def __init__(self):\n        super().__init__()\n\n    def calculate_bonus(self):\n        # Call the method in the base class\n        bonus = super().calculate_bonus()\n\n        # ...and add five percent to the total\n        bonus = bonus * 1.05\n        return bonus",
+      "raw_source": "```python\n\nclass Product:\n\n    def __init__(self, name: str, price: float):\n        self.name = name\n        self.price = price\n\nclass BonusCard:\n\n    def __init__(self):\n        self.products_bought = []\n\n    def add_product(self, product: Product):\n        self.products_bought.append(product)\n\n    def calculate_bonus(self):\n        bonus = 0\n        for product in self.products_bought:\n            bonus += product.price * 0.05\n\n        return bonus\n\nclass PlatinumCard(BonusCard):\n\n    def __init__(self):\n        super().__init__()\n\n    def calculate_bonus(self):\n        # Call the method in the base class\n        bonus = super().calculate_bonus()\n\n        # ...and add five percent to the total\n        bonus = bonus * 1.05\n        return bonus\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "So, the bonus for a PlatinumCard is calculated by calling the overriden method in the base class, and then adding an extra 5 percent to the base result. An example of how these classes are used:",
+      "raw_source": "So, the bonus for a PlatinumCard is calculated by calling the overriden method in the base class, and then adding an extra 5 percent to the base result. An example of how these classes are used:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "if __name__ == \"__main__\":\n    card = BonusCard()\n    card.add_product(Product(\"Bananas\", 6.50))\n    card.add_product(Product(\"Satsumas\", 7.95))\n    bonus = card.calculate_bonus()\n\n    card2 = PlatinumCard()\n    card2.add_product(Product(\"Bananas\", 6.50))\n    card2.add_product(Product(\"Satsumas\", 7.95))\n    bonus2 = card2.calculate_bonus()\n\n    print(bonus)\n    print(bonus2)",
+      "raw_source": "```python\nif __name__ == \"__main__\":\n    card = BonusCard()\n    card.add_product(Product(\"Bananas\", 6.50))\n    card.add_product(Product(\"Satsumas\", 7.95))\n    bonus = card.calculate_bonus()\n\n    card2 = PlatinumCard()\n    card2.add_product(Product(\"Bananas\", 6.50))\n    card2.add_product(Product(\"Satsumas\", 7.95))\n    bonus2 = card2.calculate_bonus()\n\n    print(bonus)\n    print(bonus2)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "0.7225\n0.7586250000000001",
+      "raw_source": "<sample-output>\n\n0.7225\n0.7586250000000001\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Laptop computer",
+        "tmcname": "part10-01_laptop_computer"
+      },
+      "inner_content": "The exercise template contains a class definition for a `Computer`, which has the attributes `model` and `speed`.\n\nPlease define a class named `LaptopComputer` which _inherits_ the class `Computer`. The constructor of the new class should take a third argument: `weight`, of type integer.\n\nPlease also include a `__str__` method in your class definition. See the example below for the expected format of the string representation printed out.\n\n```python\nlaptop = LaptopComputer(\"NoteBook Pro15\", 1500, 2)\nprint(laptop)\n```\n\n<sample-output>\n\nNoteBook Pro15, 1500 MHz, 2 kg\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Laptop computer' tmcname='part10-01_laptop_computer'>\n\nThe exercise template contains a class definition for a `Computer`, which has the attributes `model` and `speed`.\n\nPlease define a class named `LaptopComputer` which _inherits_ the class `Computer`. The constructor of the new class should take a third argument: `weight`, of type integer.\n\nPlease also include a `__str__` method in your class definition. See the example below for the expected format of the string representation printed out.\n\n```python\nlaptop = LaptopComputer(\"NoteBook Pro15\", 1500, 2)\nprint(laptop)\n```\n\n<sample-output>\n\nNoteBook Pro15, 1500 MHz, 2 kg\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Game Museum",
+        "tmcname": "part10-02_game_museum"
+      },
+      "inner_content": "The exercise template contains class definitions for a `ComputerGame` and a `GameWarehouse`. A GameWarehouse object is used to store ComputerGame objects.\n\nPlease familiarize yourself with these classes. Then define a new class named `GameMuseum` which inherits the `GameWarehouse` class.\n\nThe GameMuseum class should _override_ the `list_games()` method, so that it returns a list of only those games which were made before the year 1990.\n\nThe new class should also have a constructor which _calls the constructor from the parent class `GameWarehouse`_. The constructor takes no arguments.\n\nYou may use the following code to test your implementation:\n\n```python\nmuseum = GameMuseum()\nmuseum.add_game(ComputerGame(\"Pacman\", \"Namco\", 1980))\nmuseum.add_game(ComputerGame(\"GTA 2\", \"Rockstar\", 1999))\nmuseum.add_game(ComputerGame(\"Bubble Bobble\", \"Taito\", 1986))\nfor game in museum.list_games():\n    print(game.name)\n```\n\n<sample-output>\n\nPacman\nBubble Bobble\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Game Museum' tmcname='part10-02_game_museum'>\n\nThe exercise template contains class definitions for a `ComputerGame` and a `GameWarehouse`. A GameWarehouse object is used to store ComputerGame objects.\n\nPlease familiarize yourself with these classes. Then define a new class named `GameMuseum` which inherits the `GameWarehouse` class.\n\nThe GameMuseum class should _override_ the `list_games()` method, so that it returns a list of only those games which were made before the year 1990.\n\nThe new class should also have a constructor which _calls the constructor from the parent class `GameWarehouse`_. The constructor takes no arguments.\n\nYou may use the following code to test your implementation:\n\n```python\nmuseum = GameMuseum()\nmuseum.add_game(ComputerGame(\"Pacman\", \"Namco\", 1980))\nmuseum.add_game(ComputerGame(\"GTA 2\", \"Rockstar\", 1999))\nmuseum.add_game(ComputerGame(\"Bubble Bobble\", \"Taito\", 1986))\nfor game in museum.list_games():\n    print(game.name)\n```\n\n<sample-output>\n\nPacman\nBubble Bobble\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Areas",
+        "tmcname": "part10-03_areas"
+      },
+      "inner_content": "The exercise template contains a class definition for a `Rectangle`. It represents a [rectangle shape](https://en.wikipedia.org/wiki/Rectangle). A Rectangle works like this:\n\n```python\nrectangle = Rectangle(2, 3)\nprint(rectangle)\nprint(\"area:\", rectangle.area())\n```\n\n<sample-output>\n\nrectangle 2x3\narea: 6\n\n</sample-output>\n\n## Square\n\nPlease define a class named `Square` which inherits the `Rectangle` class. The sides of a [square](https://en.wikipedia.org/wiki/Square) are all of equal length, which makes the square a special case of the rectangle. The new class should not contain any new attributes.\n\nA Square object is used as follows:\n\n```python\nsquare = Square(4)\nprint(square)\nprint(\"area:\", square.area())\n```\n\n<sample-output>\n\nsquare 4x4\narea: 16\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Areas' tmcname='part10-03_areas'>\n\nThe exercise template contains a class definition for a `Rectangle`. It represents a [rectangle shape](https://en.wikipedia.org/wiki/Rectangle). A Rectangle works like this:\n\n```python\nrectangle = Rectangle(2, 3)\nprint(rectangle)\nprint(\"area:\", rectangle.area())\n```\n\n<sample-output>\n\nrectangle 2x3\narea: 6\n\n</sample-output>\n\n## Square\n\nPlease define a class named `Square` which inherits the `Rectangle` class. The sides of a [square](https://en.wikipedia.org/wiki/Square) are all of equal length, which makes the square a special case of the rectangle. The new class should not contain any new attributes.\n\nA Square object is used as follows:\n\n```python\nsquare = Square(4)\nprint(square)\nprint(\"area:\", square.area())\n```\n\n<sample-output>\n\nsquare 4x4\narea: 16\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Word game",
+        "tmcname": "part10-04_word_game"
+      },
+      "inner_content": "The exercise template contains the class definition for a `WordGame`. It provides some basic functionality for playing different word-based games:\n\n```python\nimport random\n\nclass WordGame():\n    def __init__(self, rounds: int):\n        self.wins1 = 0\n        self.wins2 = 0\n        self.rounds = rounds\n\n    def round_winner(self, player1_word: str, player2_word: str):\n        # determine a random winner\n        return random.randint(1, 2)\n\n    def play(self):\n        print(\"Word game:\")\n        for i in range(1, self.rounds+1):\n            print(f\"round {i}\")\n            answer1 = input(\"player1: \")\n            answer2 = input(\"player2: \")\n\n            if self.round_winner(answer1, answer2) == 1:\n                self.wins1 += 1\n                print(\"player 1 won\")\n            elif self.round_winner(answer1, answer2) == 2:\n                self.wins2 += 1\n                print(\"player 2 won\")\n            else:\n                pass # it's a tie\n\n        print(\"game over, wins:\")\n        print(f\"player 1: {self.wins1}\")\n        print(f\"player 2: {self.wins2}\")\n```\n\nThe game is played as follows:\n\n```python\np = WordGame(3)\np.play()\n```\n\n<sample-output>\n\nWord game:\nround 1\nplayer1: **longword**\nplayer2: **??**\nplayer 2 won\nround 2\nplayer1: **i'm the best**\nplayer2: **wut?**\nplayer 1 won\nround 3\nplayer1: **who's gonna win**\nplayer2: **me**\nplayer 1 won\ngame over, wins:\nplayer 1: 2\nplayer 2: 1\n\n</sample-output>\n\nIn this \"basic\" version of the game the winner is determined randomly. The input from the players has no effect on the result.\n\n## Longest word wins\n\nPlease define a class named `LongestWord`. It is a version of the game where whoever types in the longest word on each round wins.\n\nThe new version of the game is implemented by _inheriting_ the `WordGame` class. The `round_winner` method should also be suitably overridden. The outline of the new class is as follows:\n\n```python\nclass LongestWord(WordGame):\n    def __init__(self, rounds: int):\n        super().__init__(rounds)\n\n    def round_winner(self, player1_word: str, player2_word: str):\n        # your code for determining the winner goes here\n```\n\nAn example of how the new game is played:\n\n```python\np = LongestWord(3)\np.play()\n```\n\n<sample-output>\n\nWord game:\nround 1\nplayer1: **short**\nplayer2: **longword**\nplayer 2 won\nround 2\nplayer1: **word**\nplayer2: **wut?**\nround 3\nplayer1: **i'm the best**\nplayer2: **no, me**\nplayer 1 won\ngame over, wins:\nplayer 1: 1\nplayer 2: 1\n\n</sample-output>\n\n## Most vowels wins\n\nPlease define another WordGame class named `MostVowels`. In this version of the game whoever has squeezed more vowels into their word wins the round.\n\n## Rock paper scissors\n\nFinally, please define a class named `RockPaperScissors` which allows you to play a game of [rock paper scissors](https://en.wikipedia.org/wiki/Rock_paper_scissors).\n\nThe rules of the game are as follows:\n\n- rock beats scissors (the rock can break the scissors but the scissors can't cut the rock)\n- paper beats rock (the paper can cover the rock)\n- scissors beats paper (the scissors can cut the paper)\n\nIf the input from either player is invalid, they lose the round. If both players type in something else than _rock_, _paper_ or _scissors_, the result is a tie.\n\nAn example of how the game is played:\n\n```python\np = RockPaperScissors(4)\np.play()\n```\n\n<sample-output>\n\nWord game:\nround 1\nplayer1: **rock**\nplayer2: **rock**\nround 2\nplayer1: **rock**\nplayer2: **paper**\nplayer 2 won\nround 3\nplayer1: **scissors**\nplayer2: **paper**\nplayer 1 won\nround 4\nplayer1: **paper**\nplayer2: **dynamite**\nplayer 1 won\ngame over, wins:\nplayer 1: 2\nplayer 2: 1\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Word game' tmcname='part10-04_word_game'>\n\nThe exercise template contains the class definition for a `WordGame`. It provides some basic functionality for playing different word-based games:\n\n```python\nimport random\n\nclass WordGame():\n    def __init__(self, rounds: int):\n        self.wins1 = 0\n        self.wins2 = 0\n        self.rounds = rounds\n\n    def round_winner(self, player1_word: str, player2_word: str):\n        # determine a random winner\n        return random.randint(1, 2)\n\n    def play(self):\n        print(\"Word game:\")\n        for i in range(1, self.rounds+1):\n            print(f\"round {i}\")\n            answer1 = input(\"player1: \")\n            answer2 = input(\"player2: \")\n\n            if self.round_winner(answer1, answer2) == 1:\n                self.wins1 += 1\n                print(\"player 1 won\")\n            elif self.round_winner(answer1, answer2) == 2:\n                self.wins2 += 1\n                print(\"player 2 won\")\n            else:\n                pass # it's a tie\n\n        print(\"game over, wins:\")\n        print(f\"player 1: {self.wins1}\")\n        print(f\"player 2: {self.wins2}\")\n```\n\nThe game is played as follows:\n\n```python\np = WordGame(3)\np.play()\n```\n\n<sample-output>\n\nWord game:\nround 1\nplayer1: **longword**\nplayer2: **??**\nplayer 2 won\nround 2\nplayer1: **i'm the best**\nplayer2: **wut?**\nplayer 1 won\nround 3\nplayer1: **who's gonna win**\nplayer2: **me**\nplayer 1 won\ngame over, wins:\nplayer 1: 2\nplayer 2: 1\n\n</sample-output>\n\nIn this \"basic\" version of the game the winner is determined randomly. The input from the players has no effect on the result.\n\n## Longest word wins\n\nPlease define a class named `LongestWord`. It is a version of the game where whoever types in the longest word on each round wins.\n\nThe new version of the game is implemented by _inheriting_ the `WordGame` class. The `round_winner` method should also be suitably overridden. The outline of the new class is as follows:\n\n```python\nclass LongestWord(WordGame):\n    def __init__(self, rounds: int):\n        super().__init__(rounds)\n\n    def round_winner(self, player1_word: str, player2_word: str):\n        # your code for determining the winner goes here\n```\n\nAn example of how the new game is played:\n\n```python\np = LongestWord(3)\np.play()\n```\n\n<sample-output>\n\nWord game:\nround 1\nplayer1: **short**\nplayer2: **longword**\nplayer 2 won\nround 2\nplayer1: **word**\nplayer2: **wut?**\nround 3\nplayer1: **i'm the best**\nplayer2: **no, me**\nplayer 1 won\ngame over, wins:\nplayer 1: 1\nplayer 2: 1\n\n</sample-output>\n\n## Most vowels wins\n\nPlease define another WordGame class named `MostVowels`. In this version of the game whoever has squeezed more vowels into their word wins the round.\n\n## Rock paper scissors\n\nFinally, please define a class named `RockPaperScissors` which allows you to play a game of [rock paper scissors](https://en.wikipedia.org/wiki/Rock_paper_scissors).\n\nThe rules of the game are as follows:\n\n- rock beats scissors (the rock can break the scissors but the scissors can't cut the rock)\n- paper beats rock (the paper can cover the rock)\n- scissors beats paper (the scissors can cut the paper)\n\nIf the input from either player is invalid, they lose the round. If both players type in something else than _rock_, _paper_ or _scissors_, the result is a tie.\n\nAn example of how the game is played:\n\n```python\np = RockPaperScissors(4)\np.play()\n```\n\n<sample-output>\n\nWord game:\nround 1\nplayer1: **rock**\nplayer2: **rock**\nround 2\nplayer1: **rock**\nplayer2: **paper**\nplayer 2 won\nround 3\nplayer1: **scissors**\nplayer2: **paper**\nplayer 1 won\nround 4\nplayer1: **paper**\nplayer2: **dynamite**\nplayer 1 won\ngame over, wins:\nplayer 1: 2\nplayer 2: 1\n\n</sample-output>\n\n</programming-exercise>"
+    }
+  ]
+}

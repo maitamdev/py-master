@@ -1,0 +1,16 @@
+{
+  "id": "ex-part11-01_square_roots",
+  "lesson_id": "part11-1-list-comprehensions",
+  "part": 11,
+  "tmc_name": "part11-01_square_roots",
+  "title_original": "Square roots",
+  "title_vi": "căn bậc hai",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `square_roots(numbers: list)` which takes a list of integers as its argument. The function should return a new list containing the square roots of the original integers. \n\nThe [math](https://docs.python.org/3/library/math.html) module from the Python standard library contains a suitable function for calculating the square root.\n\nThe function should use a list comprehension. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nlines = square_roots([1,2,3,4])\nfor line in lines:\n    print(line)\n```\n\n<sample-output>\n\n1.0\n1.4142135623730951\n1.7320508075688772\n2.0\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `square_roots(numbers: list)` lấy danh sách các số nguyên làm đối số. Hàm sẽ trả về một danh sách mới chứa căn bậc hai của các số nguyên ban đầu. \n\nMô-đun [math](https://docs.python.org/3/library/math.html) từ thư viện chuẩn Python chứa hàm phù hợp để tính căn bậc hai.\n\nHàm này nên sử dụng khả năng hiểu danh sách. Độ dài tối đa của hàm là hai dòng mã, bao gồm dòng tiêu đề bắt đầu bằng từ khóa `def`.\n\nChức năng này sẽ hoạt động như sau:\n\n```python\nlines = square_roots([1,2,3,4])\nfor line in lines:\n    print(line)\n```\n\n<sample-output>\n\n1.0\n1.4142135623730951\n1.7320508075688772\n2.0\n\n</sample-output>",
+  "starter_code": "lines = square_roots([1,2,3,4])\nfor line in lines:\n    print(line)",
+  "grading_data_available": false,
+  "source_hash": "eeab3ed3bc8ce6759aed93c22a7f4f5f5ebf83be137ef5efa6abadae4a791a11",
+  "order": 26
+}

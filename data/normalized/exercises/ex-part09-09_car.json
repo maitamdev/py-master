@@ -1,0 +1,16 @@
+{
+  "id": "ex-part09-09_car",
+  "lesson_id": "part09-3-encapsulation",
+  "part": 9,
+  "tmc_name": "part09-09_car",
+  "title_original": "Car",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please implement a class named `Car` which has two private, _encapsulated_ variables: the amount of petrol in the tank (0 to 60 litres) and odometer reading (in kilometres). The car consumes one litre of petrol per kilometre.\n\nThe class should also contain the following methods:\n\n- `fill_up()` which fills up the tank\n- `drive(km:int)` which drives the car for the distance indicated, or for however long the petrol in the tank allows\n- `__str__` which returns a string representation of the car as per the examples below\n\nAn example of how the class is used:\n\n```python\ncar = Car()\nprint(car)\ncar.fill_up()\nprint(car)\ncar.drive(20)\nprint(car)\ncar.drive(50)\nprint(car)\ncar.drive(10)\nprint(car)\ncar.fill_up()\ncar.fill_up()\nprint(car)\n```\n\n<sample-output>\n\nCar: odometer reading 0 km, petrol remaining 0 litres\nCar: odometer reading 0 km, petrol remaining 60 litres\nCar: odometer reading 20 km, petrol remaining 40 litres\nCar: odometer reading 60 km, petrol remaining 0 litres\nCar: odometer reading 60 km, petrol remaining 0 litres\nCar: odometer reading 60 km, petrol remaining 60 litres\n\n</sample-output>\n\n**NB:** you are asked to encapsulate the amount of petrol left and the odometer reading. It should not be possible to access them directly from outside the class's own methods.",
+  "description_vi": "",
+  "starter_code": "car = Car()\nprint(car)\ncar.fill_up()\nprint(car)\ncar.drive(20)\nprint(car)\ncar.drive(50)\nprint(car)\ncar.drive(10)\nprint(car)\ncar.fill_up()\ncar.fill_up()\nprint(car)",
+  "grading_data_available": false,
+  "source_hash": "ff858611b48a20fc4e82f738e1795532953e9f7ee493eebe78141f6510cf6022",
+  "order": 28
+}

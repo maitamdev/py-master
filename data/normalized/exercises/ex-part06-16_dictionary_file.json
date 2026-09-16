@@ -1,0 +1,16 @@
+{
+  "id": "ex-part06-16_dictionary_file",
+  "lesson_id": "part06-2-writing-files",
+  "part": 6,
+  "tmc_name": "part06-16_dictionary_file",
+  "title_original": "Dictionary stored in a file",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which functions as a dictionary. The user can type in new entries or look for existing entries.\n\nThe program should work as follows:\n\n<sample-output>\n\n1 - Add word, 2 - Search, 3 - Quit\nFunction: **1**\nThe word in Finnish: **auto**\nThe word in English: **car**\nDictionary entry added\n1 - Add word, 2 - Search, 3 - Quit\nFunction: **1**\nThe word in Finnish: **roska**\nThe word in English: **garbage**\nDictionary entry added\n1 - Add word, 2 - Search, 3 - Quit\nFunction: **1**\nThe word in Finnish: **laukku**\nThe word in English: **bag**\nDictionary entry added\n1 - Add word, 2 - Search, 3 - Quit\nFunction: **2**\nSearch term: **bag**\nroska - garbage\nlaukku - bag\n1 - Add word, 2 - Search, 3 - Quit\nFunction: **2**\nSearch term: **car**\nauto - car\n1 - Add word, 2 - Search, 3 - Quit\nFunction: **2**\nSearch term: **laukku**\nlaukku - bag\n1 - Add word, 2 - Search, 3 - Quit\nFunction: **3**\nBye!\n\n</sample-output>\n\nThe dictionary entries should be written to a file called `dictionary.txt`. The program should first read the contents of the file. New entries are written to the end of the file whenever they are added to the dictionary.\n\nThe format of the data stored in the dictionary is up to you.\n\n**NB:** the automatic tests for this exercise may change the contents of the file. If you want to keep its contents, first make a copy of the file under a different name.\n\n**NB2:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "004131ae84735180c6d8730997aab4a665a824817c4858960c51d09d6d876b06",
+  "order": 71
+}

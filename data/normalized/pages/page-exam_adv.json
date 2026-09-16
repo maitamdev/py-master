@@ -1,0 +1,421 @@
+{
+  "id": "page-exam_adv",
+  "slug": "exam_adv",
+  "title_original": "Advanced Course in Programming exam 15.08.",
+  "title_vi": "",
+  "path": "/exam-adv",
+  "source_path": "data/exam_adv.md",
+  "source_hash": "802cb3782791d6b8a59bb42c29b969cd05be8a19f412121a50295e53964fff72",
+  "blocks_count": 24,
+  "blocks": [
+    {
+      "id": "blk-page-exam_adv-0001",
+      "type": "paragraph",
+      "order": 1,
+      "source_hash": "bc993729b8287f74d2406c636a6cf01ec0c34e4b30fcd00ef3239034a4711043",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!--# Advanced Course in Programming-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-exam_adv-0002",
+      "type": "list",
+      "order": 2,
+      "source_hash": "5c4ab03560a58cda65b4bf946507c1f4736979855d8e277899a3be50ea5f718c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* The exam questions, in the form of programming task instructions, will become available at courses.mooc.fi at 10:00 AM (UTC+3) on the day of the exam.\n* Links to the exam questions can be found from this page on section [Exam questions and starting the exam](#exam-questions-and-starting-the-exam)"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-exam_adv-0003",
+      "type": "heading",
+      "order": 3,
+      "source_hash": "17c0dc2f12a5cb189760296daaaf86b348faffb274660ef798bef7e2693832c6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Taking the programming exam"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 4
+      }
+    },
+    {
+      "id": "blk-page-exam_adv-0004",
+      "type": "list",
+      "order": 4,
+      "source_hash": "1424125a3585d93b677933bb61eb231f7e24dea3e70fce377fe2bc468909c1a9",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* You do not need to enrol for the exam.\n* Taking the programming exam is a mandatory requirement for completing the course."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-exam_adv-0005",
+      "type": "heading",
+      "order": 5,
+      "source_hash": "ceed1aa72e830703389e988ee1bbd439e17471adb6c2d3c7d183022973f73122",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Exam arrangements"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 4
+      }
+    },
+    {
+      "id": "blk-page-exam_adv-0006",
+      "type": "list",
+      "order": 6,
+      "source_hash": "8d3de7b4e6e4c65f03e741c7f15a0a565739daf67be4c7a0514651d5b532cbe7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* Your solutions to the programming tasks in the exam will be submitted in the Visual Studio Code programming environment, in the same manner as the weekly exercises on the course.\n* The course exam can be taken on August 15th 2026 **between 10:00 (UTC+3) AM and 10:00 PM (UTC+3)**.\n* The exam ends at 10:00 PM (UTC+3) at the latest. If you want to be able to spend the maximum time allowed on the exam, you should **start at 6:00 PM (UTC+3) at the latest**.\n* You will have **four hours** to complete the exam. If you have been granted extra time through special arrangements, you will have five hours to complete the exam, and should start at 5:00 PM (UTC+3) at the latest."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-exam_adv-0007",
+      "type": "heading",
+      "order": 7,
+      "source_hash": "6b30e1b4d086d33d0f7282db15a57b1e201816669a1a7f91d75770766a284e49",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Before the exam date"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 4
+      }
+    },
+    {
+      "id": "blk-page-exam_adv-0008",
+      "type": "list",
+      "order": 8,
+      "source_hash": "0ed0136cffbe958b976ebf345e97688f7d0991d234c86fb20f05fc5f13f7f433",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* Read these instructions carefully\n* Fetch the the programming task templates and test submitting the exercises [by following to the instructions below](#fetching-the-programming-task-templates)\n* If you encounter problems with fetching the templates or submitting the exercises, you have other technical problems or questions about exam arrangements, you can ask for help in the course's [Discord](https://study.cs.helsinki.fi/discord/join/ohjelmoinnin_mooc)"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-exam_adv-0009",
+      "type": "heading",
+      "order": 9,
+      "source_hash": "373bc73f091494cf6b3796cade548565f6b247b3ada571704ffe65f44463089d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "At the exam date"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 4
+      }
+    },
+    {
+      "id": "blk-page-exam_adv-0010",
+      "type": "list",
+      "order": 10,
+      "source_hash": "d33860bb77f84b5928c8f49ef241166fa9bd9e049d4e10804328a4424c197154",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* In case of technical problems, the course instructor will be on standby **from 10:00 AM (UTC+3) to 02:00 PM (UTC+3)** on the [Discord](https://study.cs.helsinki.fi/discord/join/ohjelmoinnin_mooc) at channel `ohjelmoinnin_mooc_english`.\n* On the exam date **from 02:00 PM (UTC+3) to 10:00 PM (UTC+3)** discussion in the course's support channels is forbidden. The course's Discord is locked and messages cannot be sent to channels."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-exam_adv-0011",
+      "type": "heading",
+      "order": 11,
+      "source_hash": "f9fd21a85e3d105825a7d3b4ce26d3e9f37c36f4732d10b12a5b1fd62db05206",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Fetching the programming task templates"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 4
+      }
+    },
+    {
+      "id": "blk-page-exam_adv-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "9d50085274c93d5f4eeed4b744d932e80e2fff375a56c09973d5171af85fb0c3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "**You will be able to fetch and test the programming task templates already on the day before the exam.**"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-exam_adv-0013",
+      "type": "list",
+      "order": 13,
+      "source_hash": "92ccdc87f94266b5202e98f99a2465e83a993e00766fe4051314958e89d8f7dc",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "1. Launch Visual Studio Code.\n2. Select the `My courses` view in the TMC menu.\n3. Click the `Add new course` button.\n4. Select the organization `Helsingin yliopisto`.\n5. Select the course `Advanced Course in Programming, spring 2026, Online Exam 4`.\n6. Fetch the programming task templates.\n7. Try submitting the programming tasks.\n8. If you are able to submit the tasks, you are ready to take the exam. If not, get in touch with course instructors. Don't panic, we will work it out."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-exam_adv-0014",
+      "type": "heading",
+      "order": 14,
+      "source_hash": "a64407e2c4e5b8f8c516d51494257056c28161dc29ad4a537f6d0c8ea0bc2fe5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Exam questions and starting the exam"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 4
+      }
+    },
+    {
+      "id": "blk-page-exam_adv-0015",
+      "type": "custom_component",
+      "order": 15,
+      "source_hash": "4deb7370d12d01c24700f797f6afcade5b2337c669ed524b5db68e5453d78182",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please do not ask any questions about specific programming tasks assigned to you on the public course support channels while the exam session is still ongoing. That is, you may only ask task-specific questions about the exam after 10 PM on the day of the exam. Complete the programming tasks to the best of your understanding, and please do indicate in your course feedback if the instructions were confusing."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "component_name": "notice",
+        "attributes": {},
+        "raw_source": "<notice>\nPlease do not ask any questions about specific programming tasks assigned to you on the public course support channels while the exam session is still ongoing. That is, you may only ask task-specific questions about the exam after 10 PM on the day of the exam. Complete the programming tasks to the best of your understanding, and please do indicate in your course feedback if the instructions were confusing.\n</notice>",
+        "parsed": true
+      }
+    },
+    {
+      "id": "blk-page-exam_adv-0016",
+      "type": "list",
+      "order": 16,
+      "source_hash": "fc9df63ab60f7ec33be52e6ceb1a69d0425d30739fe7f401fcb5909f9b64bb9e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* The exam questions, in the form of programming task instructions, will become available at courses.mooc.fi at 10:00 AM on the day of the exam.\n* You should use your usual mooc.fi login details to log in at the exam page.\n* The exam questions can be found from here: <a href=\"https://courses.mooc.fi/org/uh-cs/exams/d6323db8-86e9-4cfb-a8cc-3d4ab858275e\">https://courses.mooc.fi/org/uh-cs/exams/d6323db8-86e9-4cfb-a8cc-3d4ab858275e</a>\n* If you have been granted extra time through special arrangements, open the exam questions from this link: <a href=\"https://courses.mooc.fi/org/uh-cs/exams/fa5ea4ae-c874-4187-b126-df55567b21b7\">https://courses.mooc.fi/org/uh-cs/exams/fa5ea4ae-c874-4187-b126-df55567b21b7</a>\n* Your allocated exam time will begin when you click on the button `START THE EXAM!`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-exam_adv-0017",
+      "type": "heading",
+      "order": 17,
+      "source_hash": "5584bb763edbcac59b72b3a9c1cfee1f0100f15c3b9c56d5079fefebe799fe91",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Submitting your solutions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 4
+      }
+    },
+    {
+      "id": "blk-page-exam_adv-0018",
+      "type": "list",
+      "order": 18,
+      "source_hash": "1c2319fc16f62268b8cdf2807b22f9f76b149e2bcff12ff441ac2eddeacbaa8b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* Your solutions to the programming tasks in the exam are submitted in the same manner as your solutions to the programming exercises on the course.\n* The programming tasks in the exam **will not have automated tests**.\n* Any attempt to submit tasks after the exam time allocated to you have ended will lead to an automatic fail."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-exam_adv-0019",
+      "type": "heading",
+      "order": 19,
+      "source_hash": "d18424466e4d699a87e496b6889a14e3150a7126ff44532fa14e328417cd31cc",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Finishing the exam"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 4
+      }
+    },
+    {
+      "id": "blk-page-exam_adv-0020",
+      "type": "list",
+      "order": 20,
+      "source_hash": "933a832d37b1d057024ee8f7d3d9b3a6975b9eb019ef6df9eaa0aabbcf96f246",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* Please make sure you have submitted all your programming tasks before finishing.\n* You can check the arrival of the exercises you have submitted to the server by **logging in** to the page [https://tmc.mooc.fi/org/hy/courses/1705](https://tmc.mooc.fi/org/hy/courses/1705). The programming task has arrived on the server if you can see the name of the task template and the time when you submitted the task.\n* When you are done, you can close all Visual Studio Code tabs and windows, along with the exam question page. There is no need to do anything else."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-exam_adv-0021",
+      "type": "heading",
+      "order": 21,
+      "source_hash": "c6e332314bb1175ed178244f5a968eed3588882ebb03510f7f4f707c417606d8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Exam results"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 4
+      }
+    },
+    {
+      "id": "blk-page-exam_adv-0022",
+      "type": "list",
+      "order": 22,
+      "source_hash": "fe55029774459b4a4226846e3842b55277bffba8cdd448a3e6229fb35503e3a5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* The results of the exam will be emailed to you when the course has been fully graded. The grading of exam will be completed within 4 weeks of the exam.\n* The email will also contain instructions for registering your course credits.\n* The credits are registered by enrolling in the course at the open university."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-exam_adv-0023",
+      "type": "heading",
+      "order": 23,
+      "source_hash": "06cf74d543b69d2b55c89ec746cbce37283c594dec3587461f627bb8b07025c4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Other information"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 4
+      }
+    },
+    {
+      "id": "blk-page-exam_adv-0024",
+      "type": "list",
+      "order": 24,
+      "source_hash": "f3943eb653bb47678547fe380a3650c2dced303f06edefe1656e37a522991ef4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* You are **not** allowed to collaborate with other students or copy ready solutions from anywhere during the exam. However, **this is an open book exam, so the usual resources, such as course materials, Python Tutor visualisation tool and Google, are allowed.**\n* You are **not** allowed to use Large Language Models, such as ChatGPT or similar, during the exam.\n* Your programming task submissions will be checked with a plagiarism detector. Any cheating detected leads to a failed exam at minimum, but may also lead to expulsion from the course.\n* The programming tasks in the exam will be similar to the programming tasks in the course material. The best way to prepare for the exam is to revisit the course material.\n* Your course results will be emailed to you after the exam, along with instructions for registering your course credits."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    }
+  ]
+}

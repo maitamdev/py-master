@@ -1,0 +1,16 @@
+{
+  "id": "ex-part07-16_spellchecker_2",
+  "lesson_id": "part07-4-data-processing",
+  "part": 7,
+  "tmc_name": "part07-16_spellchecker_2",
+  "title_original": "Spell checker, version 2",
+  "title_vi": "Trình kiểm tra chính tả, phiên bản 2",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "In this exercise you will write an improved version of the Spell checker from the [previous part](/part-6/1-reading-files).\n\nJust like in the previous version, the program should ask the user to type in a line of text. Your program should then perform a spell check, and print out feedback to the user, so that all misspelled words have stars around them. Additionally, _the program should print out a list of suggestions for the misspelled words_.\n\nPlease have a look at the following two examples.\n\n<sample-output>\n\nwrite text: **We use ptython to make a spell checker**\n<pre>\nWe use *ptython* to make a spell checker\nsuggestions:\nptython: python, pythons, typhon\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nwrite text: **this is acually a good and usefull program**\n<pre>\nthis is *acually* a good and *usefull* program\nsuggestions:\nacually: actually, tactually, factually\nusefull: usefully, useful, museful\n</pre>\n\n</sample-output>\n\nThe suggestions should be determined with the function [get\\_close\\_matches](https://docs.python.org/3/library/difflib.html#difflib.get_close_matches) from the Python standard library module [difflib](https://docs.python.org/3/library/difflib.html).\n\n**NB**: For the automatic tests to work correctly, please use the function with the \"default settings\". That is, please pass only two arguments to the function: the misspelled word, and the word list.",
+  "description_vi": "Trong bài tập này, bạn sẽ viết phiên bản cải tiến của Trình kiểm tra chính tả từ [phần trước](/part-6/1-reading-files).\n\nCũng giống như phiên bản trước, chương trình sẽ yêu cầu người dùng nhập một dòng văn bản. Sau đó, chương trình của bạn sẽ thực hiện kiểm tra chính tả và in ra phản hồi cho người dùng để tất cả các từ sai chính tả đều có dấu sao xung quanh chúng. Ngoài ra, _chương trình sẽ in ra danh sách gợi ý các từ sai chính tả_.\n\nMời các bạn xem hai ví dụ sau.\n\n<sample-output>\n\nviết văn bản: **Chúng tôi sử dụng ptython để kiểm tra chính tả**\n<pre>\nChúng tôi sử dụng *ptython* để kiểm tra chính tả\ngợi ý:\nptython: trăn, trăn, typhon\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nviết văn bản: **đây thực sự là một chương trình hay và hữu ích**\n<pre>\nđây *thực sự* là một chương trình tốt và *hữu ích*\ngợi ý:\nacually: thực sự, thực tế, thực tế\nhữu ích: hữu ích, hữu ích, đáng suy ngẫm\n</pre>\n\n</sample-output>\n\nCác đề xuất phải được xác định bằng hàm [get\\_close\\_matches](https://docs.python.org/3/library/difflib.html#difflib.get_close_matches) từ mô-đun thư viện chuẩn Python [difflib](https://docs.python.org/3/library/difflib.html).\n\n**NB**: Để các bài kiểm tra tự động hoạt động chính xác, vui lòng sử dụng chức năng với \"cài đặt mặc định\". Nghĩa là, vui lòng chỉ truyền hai đối số cho hàm: từ sai chính tả và danh sách từ.",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "ab62d3afa7f320fbc0a8f9eae4a496b7e7d4089b1131ae80038520800f68b59f",
+  "order": 40
+}

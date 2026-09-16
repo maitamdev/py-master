@@ -1,0 +1,1108 @@
+{
+  "id": "part02-4-simple-loops",
+  "part": 2,
+  "part_slug": "part-2",
+  "slug": "4-simple-loops",
+  "is_part_index": false,
+  "title_original": "Simple loops",
+  "title_vi": "",
+  "path": "/part-2/4-simple-loops",
+  "source_path": "data/part-2/4-simple-loops.md",
+  "source_hash": "f05e7ea0fe5b742662a75d52a834015e53cfa79fbfb623305546734013fcbb5e",
+  "order": 1,
+  "blocks_count": 60,
+  "blocks": [
+    {
+      "id": "blk-part02-4-simple-loops-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "f52ebcd1a03f7b09d368ba49b9ff4b22c0193036889c00d98398f191a1e7b3e9",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know what a loop means in programming\n- You will be able to use a `while True` loop in your programs\n- You will know how to use the `break` command to break out of a loop"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "e03adcbf9a259e40762743a73848e99905c8c71bb76459ced894a9578f9d74ec",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We have now covered conditional structures in some detail. Another central technique in programming is repetition, or _iteration_. Together these form the fundamental control structures any programmer must master. They are called control structures because essentially they allow you to control which lines of code get executed when. While conditional structures allow you to _choose between_ sections of code, iteration structures allow you to _repeat_ sections of code. They are often called _loops_ because they allow the program to \"loop back\" to some line that was already executed before. The process of executing one repetition of a loop is also referred to as an iteration of the loop."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "55d77e934592eb77a41ac14a12413262e7271dc337e89159fad9392ff9a5a49f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This section introduces a simple `while` loop. Its structure is similar to the conditional statements we already covered. In the next part we will delve into some more sophisticated examples."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "bbf67261e3d88be1aee2c935f422676db5ecc7b9ded9ead82421a471cf521b4e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at a program which asks the user to type in a number and then prints out the number squared. This continues until the user types in -1."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "7648530271f597fd70566d333198b4e287030ca8bd79759483e30b06874ff11b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "while True:\n    number = int(input(\"Please type in a number, -1 to quit: \"))\n\n    if number == -1:\n        break\n\n    print(number ** 2)\n\nprint(\"Thanks and bye!\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "while True:\n    number = int(input(\"Please type in a number, -1 to quit: \"))\n\n    if number == -1:\n        break\n\n    print(number ** 2)\n\nprint(\"Thanks and bye!\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "7648530271f597fd70566d333198b4e287030ca8bd79759483e30b06874ff11b",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "c8d088beb39b6e5f1213ff3bf8150e8b0bb6434670b9a106b06a09ae2c1b6a99",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Running the program could look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0007",
+      "type": "sample_output",
+      "order": 7,
+      "source_hash": "6889e5bb743cc2d7be0dfeabdd02808f9aca2bb830ddd48a654157c95060fa80",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number, -1 to quit: **2**\n4\nPlease type in a number, -1 to quit: **4**\n16\nPlease type in a number, -1 to quit: **10**\n100\nPlease type in a number, -1 to quit: **-1**\nThanks and bye!"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number, -1 to quit: **2**\n4\nPlease type in a number, -1 to quit: **4**\n16\nPlease type in a number, -1 to quit: **10**\n100\nPlease type in a number, -1 to quit: **-1**\nThanks and bye!"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number, -1 to quit: **2**\n4\nPlease type in a number, -1 to quit: **4**\n16\nPlease type in a number, -1 to quit: **10**\n100\nPlease type in a number, -1 to quit: **-1**\nThanks and bye!\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "873628cfa514dd4d139097eca05fd393ee3af6034c35b16febc91736104a7a74",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As you can see above, the program asks for several numbers, thanks to the `while` statement in the program. When the user types in -1, the `break` command is executed, which exits the loop and execution continues from the first line after the `while` block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "28b5706abf5994b1eeaed50e64c2e017d9461b1cef11a0a9049b7d41e81308c0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "With loops, it is crucial that there is always a way to exit the loop at some point in the code, otherwise the repetition could go on forever. To illustrate this, let's change the above example a little:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0010",
+      "type": "code",
+      "order": 10,
+      "source_hash": "7a6930d6fb4b6b57004f74b2cb5bdfdffc55b96f6555dd0751194f80456fde84",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number, -1 to quit: \"))\nwhile True:\n    if number == -1:\n        break\n\n    print(number ** 2)\n\nprint(\"Thanks and bye!\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number, -1 to quit: \"))\nwhile True:\n    if number == -1:\n        break\n\n    print(number ** 2)\n\nprint(\"Thanks and bye!\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "7a6930d6fb4b6b57004f74b2cb5bdfdffc55b96f6555dd0751194f80456fde84",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "3eee80ec6822a28790a2650caaa7842d062a6e4a2099566f09d0309135c49d40",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In this version the program asks the user to type in a number _outside the loop_. If the user types in any other number than -1, the loop is never exited from. This forms an _infinite loop_, which means the block of code within the loop is repeated endlessly:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0012",
+      "type": "sample_output",
+      "order": 12,
+      "source_hash": "0144df395d8cf32c87b07863c41f17dd46ada1bc5282398a9ec04571d64fc142",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number, -1 to quit: **2**\n4\n4\n4\n4\n4\n4\n4\n4\n(continued ad infinitum...)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number, -1 to quit: **2**\n4\n4\n4\n4\n4\n4\n4\n4\n(continued ad infinitum...)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number, -1 to quit: **2**\n4\n4\n4\n4\n4\n4\n4\n4\n(continued ad infinitum...)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "fed2f0e9fb0e7620bb19d7e9d673f51deaeffec8ef75c651342364a6f88526ca",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The following program has a similar structure to the example above the infinite loop, but the user experience is quite different. This program allows the user to proceed only if they type in the correct PIN _1234_:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "3dc6527470d4040c3828356d2c341c68a5e3439e50b6be00314a69dac3e525c7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "while True:\n    code = input(\"Please type in your PIN: \")\n    if code == \"1234\":\n        break\n    print(\"Incorrect...try again\")\n\nprint(\"Correct PIN entered!\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "while True:\n    code = input(\"Please type in your PIN: \")\n    if code == \"1234\":\n        break\n    print(\"Incorrect...try again\")\n\nprint(\"Correct PIN entered!\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3dc6527470d4040c3828356d2c341c68a5e3439e50b6be00314a69dac3e525c7",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0015",
+      "type": "sample_output",
+      "order": 15,
+      "source_hash": "a0ce48178ff6e6fd8b162891ac659c2565c2c27bab802ac6d5f07acb5701c3d6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **9999**\nIncorrect...try again\nPlease type in your PIN: **1234**\nCorrect PIN entered!"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **9999**\nIncorrect...try again\nPlease type in your PIN: **1234**\nCorrect PIN entered!"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **9999**\nIncorrect...try again\nPlease type in your PIN: **1234**\nCorrect PIN entered!\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0016",
+      "type": "exercise",
+      "order": 16,
+      "source_hash": "f706e276b55589ceb71f8bd4c56cf41e8938b6396a8c61f16286acd9c0485b3c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's create a program along the lines of the example above. This program should print out the message \"hi\" and then ask \"Shall we continue?\" until the user inputs \"no\". Then the program should print out \"okay then\" and finish. Please have a look at the example below.\n\n<sample-output>\n\nhi\nShall we continue? **yes**\nhi\nShall we continue? **oui**\nhi\nShall we continue? **jawohl**\nhi\nShall we continue? **no**\nokay then\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-15_shall_we_continue",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Shall we continue?",
+        "tmc_name": "part02-15_shall_we_continue",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0017",
+      "type": "exercise",
+      "order": 17,
+      "source_hash": "d919bab78033b5568b66a37ceca2f2ffdb96f9008d109535da55d23063ab117c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for integer numbers.\n\nIf the number is below zero, the program should print out the message \"Invalid number\".\n\nIf the number is above zero, the program should print out the square root of the number using the Python `sqrt` function.\n\nIn either case, the program should then ask for another number.\n\nIf the user inputs the number zero, the program should stop asking for numbers and exit the loop.\n\nBelow you'll find a reminder of how the `sqrt` function is used. Remember to `import` it in the beginning of the program.\n\n```python\n# sqrt function will not work without this line in the beginning of the program\nfrom math import sqrt\n\nprint(sqrt(9))\n```\n\n<sample-output>\n\n3.0\n\n</sample-output>\n\nAn example of expected behaviour of your program:\n\n<sample-output>\n\nPlease type in a number: **16**\n4.0\nPlease type in a number: **4**\n2.0\nPlease type in a number: **-3**\nInvalid number\nPlease type in a number: **1**\n1.0\nPlease type in a number: **0**\nExiting...\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-16_input_validation",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Input validation",
+        "tmc_name": "part02-16_input_validation",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0018",
+      "type": "exercise",
+      "order": 18,
+      "source_hash": "8a862f26096d0ba514389b5ff6a77d4a82cdf8d9b67a94dada6fdb0d3c35e59a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This program should print out a countdown. The code is as follows:\n\n```python\nnumber = 5\nprint(\"Countdown!\")\nwhile True:\n  print(number)\n  number = number - 1\n  if number > 0:\n    break\n\nprint(\"Now!\")\n```\n\nThis should print out\n\n<sample-output>\n\nCountdown!\n5\n4\n3\n2\n1\nNow!\n\n</sample-output>\n\nHowever, the program doesn't quite work. Please fix it."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-17_countdown",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Fix the code: Countdown",
+        "tmc_name": "part02-17_countdown",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0019",
+      "type": "exercise",
+      "order": 19,
+      "source_hash": "e01d1aad417e2f2f481e706c5eb967c28bdcfd616d6e508a166f18e8955c79ca",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for a password. The program should then ask the user to type in the password again. If the user types in something else than the first password, the program should keep on asking until the user types the first password again correctly.\n\nHave a look at the expected behaviour below:\n\n<sample-output>\n\nPassword: **sekred**\nRepeat password: **secret**\nThey do not match!\nRepeat password: **cantremember**\nThey do not match!\nRepeat password: **sekred**\nUser account created!\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-18_repeat_password",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Repeat password",
+        "tmc_name": "part02-18_repeat_password",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0020",
+      "type": "heading",
+      "order": 20,
+      "source_hash": "a28f6bd404e639f274c939f1cc92e9a24fc0c1b7c7987e2d6deb733dc975970f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Loops and helper variables"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "c521c6c496f70f050a1d94d790f5bc589471a89104e3fe44bff3adde66f41c8e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's make the PIN checking example a bit more realistic. This version gives the user only three attempts at typing in a PIN."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "166b1521287d08fe609bf4a037978ef08889b70ff1de7a0ceb3748cbefb42767",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The program uses two helper variables. The variable `attempts` keeps track of how many times the user has typed in a PIN. The variable `success` is set to either `True` or `False` based on whether the user is successful in signing in."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0023",
+      "type": "code",
+      "order": 23,
+      "source_hash": "4bffaa78ed30e9e60bc49392df212ae46b2ce3deda3e756fccd6d76cef0a52fd",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "attempts = 0\n\nwhile True:\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n\n    if code == \"1234\":\n        success = True\n        break\n\n    if attempts == 3:\n        success = False\n        break\n\n    # this is printed if the code was incorrect AND there have been less than three attempts\n    print(\"Incorrect...try again\")\n\nif success:\n    print(\"Correct PIN entered!\")\nelse:\n    print(\"Too many attempts...\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "attempts = 0\n\nwhile True:\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n\n    if code == \"1234\":\n        success = True\n        break\n\n    if attempts == 3:\n        success = False\n        break\n\n    # this is printed if the code was incorrect AND there have been less than three attempts\n    print(\"Incorrect...try again\")\n\nif success:\n    print(\"Correct PIN entered!\")\nelse:\n    print(\"Too many attempts...\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4bffaa78ed30e9e60bc49392df212ae46b2ce3deda3e756fccd6d76cef0a52fd",
+        "length_lines": 21
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0024",
+      "type": "sample_output",
+      "order": 24,
+      "source_hash": "6ee47a11ec59c846f851e17142be0736b33a7db584671ebdc4b29e2fae706d7a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **1234**\nCorrect PIN entered!"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **1234**\nCorrect PIN entered!"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **1234**\nCorrect PIN entered!\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0025",
+      "type": "sample_output",
+      "order": 25,
+      "source_hash": "b438dbbe34dbf3c683e9e63d43a32d647a407632fff22eb60589b8a9d7ebe199",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **9999**\nIncorrect...try again\nPlease type in your PIN: **4321**\nToo many attempts..."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **9999**\nIncorrect...try again\nPlease type in your PIN: **4321**\nToo many attempts..."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **9999**\nIncorrect...try again\nPlease type in your PIN: **4321**\nToo many attempts...\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "229f7797082ab20d986bc67305a24b890ea79d7248b0daab37fa2893aadb2fc4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The loop is exited _either_ when the user types the correct PIN _or_ if there have been too many attempts. The `if` statement after the loop checks the value of the variable `success` and prints out a message accordingly."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0027",
+      "type": "heading",
+      "order": 27,
+      "source_hash": "c7b3d874ab0875c7b25dfc395c48860d8b8ae524787ce1b3bb6bb957e536ba95",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Debugging print statements in loops"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "c7e1c4b9f31b9ad7b8f80e8aa6cab49f1e8b6e0375ec5a8b48520e6d9f01de19",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Adding loops to programs also adds to the potential sources of bugs. It becomes even more important to master the use of debugging print statements as introduced in the [first section of this part](/part-2/1-programming-terminology)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "56080763599921c559eec86a6f1ed2d02449c0443a2fa5c1bca2e0ea9c8afb1b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at a program almost identical to the previous example, but with one crucial difference:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0030",
+      "type": "code",
+      "order": 30,
+      "source_hash": "e860f8402cea8f2e3c9929811e67a948a17d52f551249fbb30a590a852a30ed3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "attempts = 0\n\nwhile True:\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n\n    if attempts == 3:\n        success = False\n        break\n\n    if code == \"1234\":\n        success = True\n        break\n\n    print(\"Incorrect...try again\")\n\nif success:\n    print(\"Correct PIN entered!\")\nelse:\n    print(\"Too many attempts...\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "attempts = 0\n\nwhile True:\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n\n    if attempts == 3:\n        success = False\n        break\n\n    if code == \"1234\":\n        success = True\n        break\n\n    print(\"Incorrect...try again\")\n\nif success:\n    print(\"Correct PIN entered!\")\nelse:\n    print(\"Too many attempts...\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e860f8402cea8f2e3c9929811e67a948a17d52f551249fbb30a590a852a30ed3",
+        "length_lines": 20
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "8635cc9e2a285ca5ce9a5b39d8ef00f4bb0e667ce3df3fc6ac0597db6381d987",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This version acts strangely when the user types in the correct code on the third attempt:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0032",
+      "type": "sample_output",
+      "order": 32,
+      "source_hash": "c9db9735a4c0eed0a00e57d6441d2f352c2a8dec2c540d50ea1461b1a225e783",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **9999**\nIncorrect...try again\nPlease type in your PIN: **1234**\nToo many attempts..."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **9999**\nIncorrect...try again\nPlease type in your PIN: **1234**\nToo many attempts..."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **9999**\nIncorrect...try again\nPlease type in your PIN: **1234**\nToo many attempts...\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "43a478f4bb4445935d7a8dcc86b753ff1c50707b593b455ffdc8bd33915e3413",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "So, let's try and find the cause by adding some strategic debugging print statements inside the loop:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0034",
+      "type": "code",
+      "order": 34,
+      "source_hash": "3d90944f8d3043d4bc07519eb62ef9fe8d2eb849e27fc245686d8ab1433c57bd",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "while True:\n    print(\"beginning of the while block:\")\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n\n    print(\"attempts:\", attempts)\n    print(\"condition1:\", attempts == 3)\n    if attempts == 3:\n        success = False\n        break\n\n    print(\"code:\", code)\n    print(\"condition2:\", code == \"1234\")\n    if code == \"1234\":\n        success = True\n        break\n\n    print(\"Incorrect...try again\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "while True:\n    print(\"beginning of the while block:\")\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n\n    print(\"attempts:\", attempts)\n    print(\"condition1:\", attempts == 3)\n    if attempts == 3:\n        success = False\n        break\n\n    print(\"code:\", code)\n    print(\"condition2:\", code == \"1234\")\n    if code == \"1234\":\n        success = True\n        break\n\n    print(\"Incorrect...try again\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3d90944f8d3043d4bc07519eb62ef9fe8d2eb849e27fc245686d8ab1433c57bd",
+        "length_lines": 18
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0035",
+      "type": "sample_output",
+      "order": 35,
+      "source_hash": "c3223d6262cf5795754d2854568964c7e28d50675355e683306b601b81c77c12",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "beginning of the while block:\nPlease type in your PIN: **2233**\nattempts: 1\ncondition1: False\ncode: 2233\ncondition2: False\nIncorrect...try again\nbeginning of the while block:\nPlease type in your PIN: **4545**\nattempts: 2\ncondition1: False\ncode: 4545\ncondition2: False\nIncorrect...try again\nbeginning of the while block:\nPlease type in your PIN: **1234**\nattempts: 3\ncondition1: True\nToo many attempts..."
+      },
+      "translation": {
+        "language": "text",
+        "content": "beginning of the while block:\nPlease type in your PIN: **2233**\nattempts: 1\ncondition1: False\ncode: 2233\ncondition2: False\nIncorrect...try again\nbeginning of the while block:\nPlease type in your PIN: **4545**\nattempts: 2\ncondition1: False\ncode: 4545\ncondition2: False\nIncorrect...try again\nbeginning of the while block:\nPlease type in your PIN: **1234**\nattempts: 3\ncondition1: True\nToo many attempts..."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nbeginning of the while block:\nPlease type in your PIN: **2233**\nattempts: 1\ncondition1: False\ncode: 2233\ncondition2: False\nIncorrect...try again\nbeginning of the while block:\nPlease type in your PIN: **4545**\nattempts: 2\ncondition1: False\ncode: 4545\ncondition2: False\nIncorrect...try again\nbeginning of the while block:\nPlease type in your PIN: **1234**\nattempts: 3\ncondition1: True\nToo many attempts...\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "6fff40751b9091480caee78686f4bf4fa3b1a36c6335cc748d8fa6c3408b978a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "From the above printouts we can see that during the third iteration of the loop the condition of the first `if` statement is `True`, and the loop is exited. This iteration never gets to the second `if` statement, which checks whether the code was typed in correctly:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0037",
+      "type": "code",
+      "order": 37,
+      "source_hash": "682e70fce5f430e069bfca6c41b895723f3b91a07039f555d8dbfc785da53ba6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "  while True:\n    # ....\n\n    # this block is executed too early\n    if attempts == 3:\n        success = False\n        break\n\n    # the third iteration never gets this far\n    if code == \"1234\":\n        success = True\n        break"
+      },
+      "translation": {
+        "language": "code",
+        "content": "  while True:\n    # ....\n\n    # this block is executed too early\n    if attempts == 3:\n        success = False\n        break\n\n    # the third iteration never gets this far\n    if code == \"1234\":\n        success = True\n        break"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "682e70fce5f430e069bfca6c41b895723f3b91a07039f555d8dbfc785da53ba6",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "82a6232cbaa11945c4580acc029ac4e8517c6c40cb17b337b4a1c418ebe7ccad",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The order of conditional statements, or of different branches within a conditional statement, is a common cause for bugs, especially in loops. Debugging print statements are often the simplest way of finding their cause."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0039",
+      "type": "exercise",
+      "order": 39,
+      "source_hash": "af3913f5aff6250faceffd82404a523231b47199d69c9edade21b2fcdee934ee",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which keeps asking the user for a PIN code until they type in the correct one, which is _4321_. The program should then print out the number of times the user tried different codes.\n\n<sample-output>\n\nPIN: **3245**\nWrong\nPIN: **1234**\nWrong\nPIN: **0000**\nWrong\nPIN: **4321**\nCorrect! It took you 4 attempts\n\n</sample-output>\n\nIf the user gets it right on the first try, the program should print out something a bit different:\n\n<sample-output>\n\nPIN: **4321**\nCorrect! It only took you one single attempt!\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-19_pin_and_number_of_attempts",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "PIN and number of attempts",
+        "tmc_name": "part02-19_pin_and_number_of_attempts",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0040",
+      "type": "exercise",
+      "order": 40,
+      "source_hash": "6b5eb18a415087f6f454d2974fbc62acfd94e272c15aeda1d4a140d977f9c5fe",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for a year, and prints out the next leap year.\n\n<sample-output>\n\nYear: **2023**\nThe next leap year after 2023 is 2024\n\n</sample-output>\n\nIf the user inputs a year which is a leap year (such as 2024), the program should print out the following leap year:\n\n<sample-output>\n\nYear: **2024**\nThe next leap year after 2024 is 2028\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-20_next_leap_year",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "The next leap year",
+        "tmc_name": "part02-20_next_leap_year",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0041",
+      "type": "heading",
+      "order": 41,
+      "source_hash": "5bf29f82d93f71f7368347f2f5834946ba1c1f9b2db3eb017ccd7072d6bbd499",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Concatenating strings with the + operator"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "e533a7a850e172a682630f1a1a1d042985a0d239b530ab9ee16e39ae3ebe13dd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The above example with PIN checking used a helper variable `attempts` to keep track of how many times the user had tried to type in a code:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0043",
+      "type": "code",
+      "order": 43,
+      "source_hash": "96ad637bc0b6af4f1781cda7beb4e053a768c6a27b4a18c19f7755d999540cdc",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "attempts = 0\n\nwhile True:\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n    # ..."
+      },
+      "translation": {
+        "language": "code",
+        "content": "attempts = 0\n\nwhile True:\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n    # ..."
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "96ad637bc0b6af4f1781cda7beb4e053a768c6a27b4a18c19f7755d999540cdc",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "4409fa4a65f6fe1c954e35084180125db0cc3501b86732bbc4bd77bd67ce2537",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The variable is set to zero outside the loop, and each iteration increases its value by one."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0045",
+      "type": "paragraph",
+      "order": 45,
+      "source_hash": "3a6148752a8d19f6add0ef40efbf351b6e2db9a5dd30ba9c6c198f4e82de72c1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A similar idea of incrementation works with string variables as well. The program could, for instance, keep track of all the PIN codes the user typed in:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0046",
+      "type": "code",
+      "order": 46,
+      "source_hash": "3486c9ec7e4d5ee43784e24e5b960948ffc0ceb0d5819c13b237f537d6c7867f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\ncodes = \"\"\nattempts = 0\n\nwhile True:\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n    codes += code + \", \"\n    # ..."
+      },
+      "translation": {
+        "language": "code",
+        "content": "\ncodes = \"\"\nattempts = 0\n\nwhile True:\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n    codes += code + \", \"\n    # ..."
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3486c9ec7e4d5ee43784e24e5b960948ffc0ceb0d5819c13b237f537d6c7867f",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0047",
+      "type": "paragraph",
+      "order": 47,
+      "source_hash": "62069ca002b3d41b47ca19a6453849369056f31c68efd618a74c88a235db3100",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The helper variable is initialized to _an empty string_, that is, a string with no characters in it:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0048",
+      "type": "code",
+      "order": 48,
+      "source_hash": "948aace44886bff436ee1f1ff0f903ea60779c5be2c0de12a4f63a36a7981e94",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "codes = \"\""
+      },
+      "translation": {
+        "language": "code",
+        "content": "codes = \"\""
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "948aace44886bff436ee1f1ff0f903ea60779c5be2c0de12a4f63a36a7981e94",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0049",
+      "type": "paragraph",
+      "order": 49,
+      "source_hash": "fa899fd33d8a90dde59fbee707f195eb701648bfffa97f97ef7e1237e164423e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "With each iteration the string gets longer, as the code the user typed in is added, along with a comma:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0050",
+      "type": "code",
+      "order": 50,
+      "source_hash": "e5022cb8aaca1bf3321fa9fe72650fc6fb554bd9d785faa85674cd7d0f9c9fb8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    code = input(\"Please type in your PIN: \")\n    codes += code + \", \""
+      },
+      "translation": {
+        "language": "code",
+        "content": "    code = input(\"Please type in your PIN: \")\n    codes += code + \", \""
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e5022cb8aaca1bf3321fa9fe72650fc6fb554bd9d785faa85674cd7d0f9c9fb8",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0051",
+      "type": "paragraph",
+      "order": 51,
+      "source_hash": "27141b7d1858463786d861bc80b06caacca633d87c57d64a23841eca22e76646",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If the user types in the codes _1111 2222 1234_, at the end of the program's execution the value of `codes` would be"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0052",
+      "type": "sample_output",
+      "order": 52,
+      "source_hash": "5595477c0505d189fb7cbbc81538254c34fa525c955c86ab4cf47fe15d0b89a7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "1111, 2222, 1234,"
+      },
+      "translation": {
+        "language": "text",
+        "content": "1111, 2222, 1234,"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n1111, 2222, 1234,\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0053",
+      "type": "exercise",
+      "order": 53,
+      "source_hash": "89bc72bd5b1877efb94f1b281d15a271698c1416e50c7dd69048c24a6403248f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "### Part 1\n\nPlease write a program which keeps asking the user for words. If the user types in `end`, the program should print out the story the words formed, and finish.\n\n<sample-output>\n\nPlease type in a word: **Once**\nPlease type in a word: **upon**\nPlease type in a word: **a**\nPlease type in a word: **time**\nPlease type in a word: **there**\nPlease type in a word: **was**\nPlease type in a word: **a**\nPlease type in a word: **girl**\nPlease type in a word: **end**\nOnce upon a time there was a girl\n\n</sample-output>\n\n### Part 2\n\nChange the program so that the loop ends also if the user types in the same word twice in a row.\n\n<sample-output>\n\nPlease type in a word: **It**\nPlease type in a word: **was**\nPlease type in a word: **a**\nPlease type in a word: **dark**\nPlease type in a word: **and**\nPlease type in a word: **stormy**\nPlease type in a word: **night**\nPlease type in a word: **night**\nIt was a dark and stormy night\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-21_story",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Story",
+        "tmc_name": "part02-21_story",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0054",
+      "type": "exercise",
+      "order": 54,
+      "source_hash": "be054b1a49927c6653959248c2df675f0ede0288b92ae511193a46bc36a70bff",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "### Pre-task\n\nPlease write a program which asks the user for integer numbers. The program should keep asking for numbers until the user types in zero.\n\n<sample-output>\n\nPlease type in integer numbers. Type in 0 to finish.\nNumber: **5**\nNumber: **22**\nNumber: **9**\nNumber: **-2**\nNumber: **0**\n\n</sample-output>\n\n### Part 1: Count\n\nAfter reading in the numbers the program should print out how many numbers were typed in. The zero at the end should not be included in the count.\n\nYou will need a new variable here to keep track of the numbers typed in.\n\n<sample-output>\n\n... the program asks for numbers\nNumbers typed in 4\n\n</sample-output>\n\n### Part 2: Sum\n\nThe program should also print out the sum of all the numbers typed in. The zero at the end should not be included in the calculation.\n\nThe program should now print out the following:\n\n<sample-output>\n\n... the program asks for numbers\nNumbers typed in 4\nThe sum of the numbers is 34\n\n</sample-output>\n\n### Part 3: Mean\n\nThe program should also print out the mean of the numbers. The zero at the end should not be included in the calculation. You may assume the user will always type in at least one valid non-zero number.\n\n<sample-output>\n\n... the program asks for numbers\nNumbers typed in 4\nThe sum of the numbers is 34\nThe mean of the numbers is 8.5\n\n</sample-output>\n\n#### Part 4: Positives and negatives\n\nThe program should also print out statistics on how many of the numbers were positive and how many were negative. The zero at the end should not be included in the calculation.\n\n<sample-output>\n\n... the program asks for numbers\nNumbers typed in 4\nThe sum of the numbers is 34\nThe mean of the numbers is 8.5\nPositive numbers 3\nNegative numbers 1\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-22_working_with_numbers",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Working with numbers",
+        "tmc_name": "part02-22_working_with_numbers",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0055",
+      "type": "paragraph",
+      "order": 55,
+      "source_hash": "d3ac25ddc7ba9779c0556d543e4994d158e16a5a359347a1321dd236f1af0b67",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!--"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0056",
+      "type": "paragraph",
+      "order": 56,
+      "source_hash": "0937af8ca0d984621994ab6ab91b7b2cf722e5cf79e7103d9f4567fc678255c7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0057",
+      "type": "quiz",
+      "order": 57,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "63a51999-e525-5f1d-a333-b26392a5585b",
+        "attributes": {
+          "id": "63a51999-e525-5f1d-a333-b26392a5585b"
+        }
+      }
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0058",
+      "type": "paragraph",
+      "order": 58,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0059",
+      "type": "paragraph",
+      "order": 59,
+      "source_hash": "e7c1a46e91282cacd4221fc454f07d2669740016f75a092ce3959836e6ef0903",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please respond to a quick questionnaire on this week's materials."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-4-simple-loops-0060",
+      "type": "quiz",
+      "order": 60,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "21a09240-92d7-5eb0-bae0-a5f89b5045c2",
+        "attributes": {
+          "id": "21a09240-92d7-5eb0-bae0-a5f89b5045c2"
+        }
+      }
+    }
+  ]
+}

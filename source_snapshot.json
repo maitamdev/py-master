@@ -1,0 +1,17 @@
+{
+  "source_repository": "https://github.com/rage/programming-26",
+  "branch": "main",
+  "commit_sha": "880031470e606619945c9bb896999f26c332c2ca",
+  "commit_date": "2026-09-11T12:40:24+03:00",
+  "commit_author": "karkkieila <erkki.kaila@utu.fi>",
+  "commit_message": "part 2",
+  "imported_at": "2026-09-16T15:46:00+07:00",
+  "course": "Python Programming MOOC 2026",
+  "organization": "University of Helsinki",
+  "department": "Department of Computer Science",
+  "platform": "MOOC.fi",
+  "source_license": {
+    "material_template": "Apache License 2.0 (Henrik Nygren, Antti Leinonen, Agile Education Research group)",
+    "course_material": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+  }
+}

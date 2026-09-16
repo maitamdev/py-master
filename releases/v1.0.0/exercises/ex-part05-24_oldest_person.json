@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-24_oldest_person",
+  "lesson_id": "part05-4-tuple",
+  "part": 5,
+  "tmc_name": "part05-24_oldest_person",
+  "title_original": "The oldest person",
+  "title_vi": "Người già nhất",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `oldest_person(people: list)`, which takes a list of tuples as its argument. In each tuple, the first element is the name of a person, and the second element is their year of birth. The function should find the oldest person on the list and return their name.\n\nAn example of the function in action:\n\n```python\np1 = (\"Adam\", 1977)\np2 = (\"Ellen\", 1985)\np3 = (\"Mary\", 1953)\np4 = (\"Ernest\", 1997)\npeople = [p1, p2, p3, p4]\n\nprint(oldest_person(people))\n```\n\n<sample-output>\n\nMary\n\n</sample-output>",
+  "description_vi": "Vui lòng viết một hàm có tên `oldest_person(people: list)`, hàm này lấy danh sách các bộ dữ liệu làm đối số. Trong mỗi bộ dữ liệu, phần tử đầu tiên là tên của một người và phần tử thứ hai là năm sinh của họ. Hàm sẽ tìm người lớn tuổi nhất trong danh sách và trả về tên của họ.\n\nMột ví dụ về chức năng đang hoạt động:\n\n```python\np1 = (\"Adam\", 1977)\np2 = (\"Ellen\", 1985)\np3 = (\"Mary\", 1953)\np4 = (\"Ernest\", 1997)\npeople = [p1, p2, p3, p4]\n\nprint(oldest_person(people))\n```\n\n<sample-output>\n\nMary\n\n</sample-output>",
+  "starter_code": "p1 = (\"Adam\", 1977)\np2 = (\"Ellen\", 1985)\np3 = (\"Mary\", 1953)\np4 = (\"Ernest\", 1997)\npeople = [p1, p2, p3, p4]\n\nprint(oldest_person(people))",
+  "grading_data_available": false,
+  "source_hash": "620c64c02946e9907f5b943e18f8723731cbec5cbfdda9b5a5270db944134d16",
+  "order": 13
+}

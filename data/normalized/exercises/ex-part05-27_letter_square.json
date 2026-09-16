@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-27_letter_square",
+  "lesson_id": "part05-4-tuple",
+  "part": 5,
+  "tmc_name": "part05-27_letter_square",
+  "title_original": "A square of letters",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "This final exercise in this part is a relatively demanding problem solving task. It can be solved in many different ways. Even though this current section in the material covers tuples, tuples are not necessarily the best way to go about solving this.\n\nPlease write a program which prints out a square of letters as specified in the examples below. You may assume there will be at most 26 layers.\n\n<sample-output>\n\nLayers: **3**\n<pre>\nCCCCC\nCBBBC\nCBABC\nCBBBC\nCCCCC\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nLayers: **4**\n<pre>\nDDDDDDD\nDCCCCCD\nDCBBBCD\nDCBABCD\nDCBBBCD\nDCCCCCD\nDDDDDDD\n</pre>\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "d532d2128d6b2e4c0329bbde46b47134f8680929070acc50fe7839ba638d221b",
+  "order": 46
+}

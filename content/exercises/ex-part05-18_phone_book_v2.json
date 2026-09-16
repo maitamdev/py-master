@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-18_phone_book_v2",
+  "lesson_id": "part05-3-dictionary",
+  "part": 5,
+  "tmc_name": "part05-18_phone_book_v2",
+  "title_original": "Phone book, version 2",
+  "title_vi": "Danh bạ điện thoại, phiên bản 2",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write an improved version of the phone book application. Each entry should now accommodate multiple phone numbers. The application should work otherwise exactly as above, but this time _all_ numbers attached to a name should be printed.\n\n<sample-output>\n\ncommand (1 search, 2 add, 3 quit): **2**\nname: **peter**\nnumber: **040-5466745**\nok!\ncommand (1 search, 2 add, 3 quit): **2**\nname: **emily**\nnumber: **045-1212344**\nok!\ncommand (1 search, 2 add, 3 quit): **1**\nname: **peter**\n040-5466745\ncommand (1 search, 2 add, 3 quit): **1**\nname: **mary**\nno number\ncommand (1 search, 2 add, 3 quit): **2**\nname: **peter**\nnumber: **09-22223333**\nok!\ncommand (1 search, 2 add, 3 quit): **1**\nname: **peter**\n040-5466745\n09-22223333\ncommand (1 search, 2 add, 3 quit): **3**\nquitting...",
+  "description_vi": "Hãy viết một phiên bản cải tiến của ứng dụng danh bạ điện thoại. Mỗi mục bây giờ phải chứa nhiều số điện thoại. Ứng dụng sẽ hoạt động chính xác như trên, nhưng lần này _tất cả_ số gắn liền với tên sẽ được in.\n\n<sample-output>\n\nlệnh (1 tìm kiếm, 2 thêm, 3 thoát): **2**\ntên: **peter**\nsố: **040-5466745**\nđược rồi!\nlệnh (1 tìm kiếm, 2 thêm, 3 thoát): **2**\nTên: **emily**\nsố: **045-1212344**\nđược rồi!\nlệnh (1 tìm kiếm, 2 thêm, 3 thoát): **1**\ntên: **peter**\n040-5466745\nlệnh (1 tìm kiếm, 2 thêm, 3 thoát): **1**\nTên: **Mary**\nkhông có số\nlệnh (1 tìm kiếm, 2 thêm, 3 thoát): **2**\ntên: **peter**\nsố: **09-22223333**\nđược rồi!\nlệnh (1 tìm kiếm, 2 thêm, 3 thoát): **1**\ntên: **peter**\n040-5466745\n09-22223333\nlệnh (1 tìm kiếm, 2 thêm, 3 thoát): **3**\nbỏ cuộc...",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "1b6f03e39723aaa3a350ef79d4316c0fbd0cc170896838f834f3680e0e5629f3",
+  "order": 51
+}

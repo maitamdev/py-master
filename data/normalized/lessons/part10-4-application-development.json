@@ -1,0 +1,2039 @@
+{
+  "id": "part10-4-application-development",
+  "part": 10,
+  "part_slug": "part-10",
+  "slug": "4-application-development",
+  "is_part_index": false,
+  "title_original": "Developing a larger application",
+  "title_vi": "",
+  "path": "/part-10/4-application-development",
+  "source_path": "data/part-10/4-application-development.md",
+  "source_hash": "c184695682c7c73bbea6601be87fc82c1a545758269e51c0a2092757eb7e065d",
+  "order": 1,
+  "blocks_count": 117,
+  "blocks": [
+    {
+      "id": "blk-part10-4-application-development-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "9fc83a258f235a3c2a3a0f38185d386d74fc286e8092d759b315fc9bc049abee",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be familiar with some basic principles of application development\n- You will be comfortable with differentiating between the different parts of an application (user interface, program logic and file handling)\n- You will have practiced writing your own somewhat larger application"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "a0fdf68cd76c55ee3412ebf0aed80a9c66027569221cb99f9ae7f3d14669b705",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Thus far in this course material we have covered a large number of Python features."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "2f069723df522722463970eb1acf4a0adf81b43eea8315914879ed2afd878d0d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The Introduction to Programming course introduced control structures, such as while and for, functions, and basic data structures, such as lists, tuples and dictionaries. In principle, those tools are all that is needed to express anything a programmer may wish to express with Python."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "cc073387844f8ed61af1afe345166694967a064d25f08fa6baf2f5ee0e6fb28b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "On this Advanced Course in Programming, beginning in part 8 of the material, you have become familiar with classes and objects. Let's take a moment to consider when and _why_ they are necessary, if those basic tools from parts 1 to 7 should be enough."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0005",
+      "type": "heading",
+      "order": 5,
+      "source_hash": "eaecf728d7ba416a88c9b15581b30b4c749cf6a133feacbac9661ec32fdf52b8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Managing complexity"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "2be0d77fe255133ddabe53aeea3ab7a2ad3f8ffbcd50dd9d0f75a95084342a90",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Objects and classes are by no means necessary in every programming context. For example, if you are programming a smallish script for one-time use, objects are usually surplus to requirement. However, when you are programming something larger and more complicated, objects become very useful."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "e2ba95ef0249c14a88790f2216217cdeb9be373cbe2787c16fd32ef37ea8a04d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When programs grow in complexity, the amount of details quickly becomes unmanageable, unless the program is organised in some systematic way. Even some of the more complicated exercises on this course so far would have benefited from the examples set in this part of the material."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "283fbc23750d23b2070d6747cfdd04ba4f46593befac8e62daf2cc68e4ba0ef6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Fo decades the concept of [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) has been one of the central principles in programming, and the larger field of computer science. Quoting from Wikipedia:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "5b2f2e9dd09139a401828a36d9d23e9739ac7e445a9417e6e9f4f778f137e98b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "_Separation of concerns is a design principle for separating a computer program into distinct sections such that each section addresses a separate concern. A concern is a set of information that affects the code of a computer program._"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "68d02487613a8244d95d5721f3accb27d506af063551d1e46d3b4695a6934c00",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Separating the program into sections, so that each has its own concern to handle, helps in managing the inevitable complexity of a computer program."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "7b271778d46347f4231b1970f39b13c4705bc6d6d491a9ae7d2609245a43ba51",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Functions are one way of organising a program into distinct, manageable wholes. Instead of writing a single script, the idea is to formulate small, separately verifiable functions which each solve some part of the larger problem."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "23eab8f8f20ae79b94689ae5d903af45195367135d448b730e715c4334d94dd7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Another common approach to managing larger programs is objects, through object oriented programming principles. There are benefits and drawbacks to both approaches, and each programmer has their own favourite. As we have seen so far, objects and classes allow us to collect all the data _and_ the code processing that data within a single unit, in the attributes and methods of an object. Furthermore, objects provide a way of encapsulating the data they control, so that other parts of the program do not have to worry about the internal details of an object."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0013",
+      "type": "heading",
+      "order": 13,
+      "source_hash": "5d70f8b507dfb8003aeb1ed2593f5d70e4b7a1e8c09c2b48de955d5d8780ba77",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A worked example: phone book"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "b8a16e0c25d5580c5a274ae90f2cc6bae12bb4c0b36101c45e57e4099d018786",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "How should a program be divided into classes and objects? This is by no means an easy question with a single acceptable answer, so we will proceed with an example. In part five you completed [a phone book application](/part-5/3-dictionary#programming-exercise-phone-book-version-2), and now we will implement something similar using object oriented programming principles."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "e813114aeeac92db1d46465d67926f64f08a345a5449ea21571c4954b6f3d76d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Following the separation of concerns principle, a program should be divided into sections which each have their own cause to take care of. In object oriented programming this translates to the [single-responsibility principle](https://en.wikipedia.org/wiki/Single-responsibility_principle). Without going into the finer details, its fundamental purpose is clear from the name: _a single class and objects created based on it should have a single responsibility in the program_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "8c237228332658ba2e05fde89fb9f890e6d5a5d40ab75fe9902aa874c45035b8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Object oriented programming is often used as a way of modelling real world objects and phenomena. A single object in the real world is modelled with a single class in program code. In the case of a phone book such objects might be\n- a person\n- a name\n- a phone number"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "84f599ca5268ced77c7d9717e1689658c644f0a2cfe85d8843ba2da1d203771d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A name and a phone number may be thought of as just bits of data which do not merit their own classes, but a _person_ is a distinct physical entity in the real world, and in the programming world it could work as a class. A Person object would be responsible for tying together a name and the phone numbers attached to it."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "4d509ca4d40f608e990f7cb22a0488053e4483607f5dd871265e42419ff04869",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A _phone book_ itself could be a good candidate for a class. Its responsibility would be to manage different person objects and the data they contain."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "b6ca9f5b119af3650c81923550816566d22f6e69f5aaa8820d77492aa04f978d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Now we have outlined the core of our application: _phone book_ and _person_ constitute the programming logic of our application, or _application logic_ in short. Our application would need some other classes, too."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "e6f63283f16595aa3c00556928a40418c54489aff134130c0cfa806e88bb96bc",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "It is usually a good idea to keep any interaction with a user separate from the application logic. It is, after all, a responsibility all on its own. In addition to the core application logic, our program should therefore contain a class which handles the user interface."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "94b89c0b8d74adf738d1bfdf0f64295958041eb3b2cbb240d7cfb289dc926941",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Furthermore, our phone book should have some means of persistent storage between executions. File handling is, again, a clearly separate responsibility, so it deserves a class of its own."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "c0622f27ed89d07cc02569cda681949fdae6c08b49ffe624fbd1c6a378af3989",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Now that we have an outline of the basic components of our program, the question arises: where should we begin programming? Again, there is no right or wrong answer, but it is often a good idea to start with some part of the application logic."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0023",
+      "type": "heading",
+      "order": 23,
+      "source_hash": "d68bbeb9aaf8206073ebe05113513f1c808dbc785e6099f4eb9c02434cedf4c3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Step 1: an outline for the application logic"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "9ede8fc47d83484ce6e8fdf56a446f64dab932cd8442ecf6e8929b2a87ecbab5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's start with the class _PhoneBook_. A skeleton implementation could look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0025",
+      "type": "code",
+      "order": 25,
+      "source_hash": "5ac198a748db4473ee5235ccee535fd5cb6d3c8514e10ff445c5ad228582e2b7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class PhoneBook:\n    def __init__(self):\n        self.__persons = []\n\n    def add_number(self, name: str, number: str):\n        pass\n\n    def get_numbers(self, name: str):\n        pass\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class PhoneBook:\n    def __init__(self):\n        self.__persons = []\n\n    def add_number(self, name: str, number: str):\n        pass\n\n    def get_numbers(self, name: str):\n        pass\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5ac198a748db4473ee5235ccee535fd5cb6d3c8514e10ff445c5ad228582e2b7",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "bda8a11992fee7a28f789cfb80a3e920be9c04d5b25c85e7b40275916e3d11fa",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This class consists of a list of persons along with methods for both adding and fetching data."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "114f25644c000fcc7ca22167f2d2c82af603f41cfae68e0b3e3a1363a8427931",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Each person may be connected with multiple numbers, so let's implement the internal structure of `persons` with a dictionary. A dictionary allows us to search for keys by name, and the value attached to a dictionary key can be a list. So far it looks like we don't really need a separate class to represent a person - an entry in a dictionary will do."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "26c3ff724114fe719cd5b0b80da2feaa38afbbe4f4068a9ce396a6e39d65ef91",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's implement the methods listed above, and test our phone book:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0029",
+      "type": "code",
+      "order": 29,
+      "source_hash": "cc610e05133f1accb7006df51f8cc9d6ec624c545c793dcde0d569d438f92ae2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class PhoneBook:\n    def __init__(self):\n        self.__persons = {}\n\n    def add_number(self, name: str, number: str):\n        if not name in self.__persons:\n            # add a new dictionary entry with an empty list for the numbers\n            self.__persons[name] = []\n\n        self.__persons[name].append(number)\n\n    def get_numbers(self, name: str):\n        if not name in self.__persons:\n            return None\n\n        return self.__persons[name]\n\n# code for testing\nphonebook = PhoneBook()\nphonebook.add_number(\"Eric\", \"02-123456\")\nprint(phonebook.get_numbers(\"Eric\"))\nprint(phonebook.get_numbers(\"Emily\"))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class PhoneBook:\n    def __init__(self):\n        self.__persons = {}\n\n    def add_number(self, name: str, number: str):\n        if not name in self.__persons:\n            # add a new dictionary entry with an empty list for the numbers\n            self.__persons[name] = []\n\n        self.__persons[name].append(number)\n\n    def get_numbers(self, name: str):\n        if not name in self.__persons:\n            return None\n\n        return self.__persons[name]\n\n# code for testing\nphonebook = PhoneBook()\nphonebook.add_number(\"Eric\", \"02-123456\")\nprint(phonebook.get_numbers(\"Eric\"))\nprint(phonebook.get_numbers(\"Emily\"))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "cc610e05133f1accb7006df51f8cc9d6ec624c545c793dcde0d569d438f92ae2",
+        "length_lines": 22
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "d8f5e37a568dcd848b2eda0cd74a7b759dc5c7ce1f2727f45f8c4f0205a0f548",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This should print out the following:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0031",
+      "type": "sample_output",
+      "order": 31,
+      "source_hash": "f34ea6ef037f11e3d49a288fb11d4608e98aee12a42af0222cf2217ed3b72049",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "['02-123456']\nNone"
+      },
+      "translation": {
+        "language": "text",
+        "content": "['02-123456']\nNone"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n['02-123456']\nNone\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "7bb30fdd7f8236f9f80f56c6b83466b395465617d9e492718f3dadbf06314ce4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The method `get_numbers` returns `None` if a name is not included in the phone book. If the name is found, it returns the list of numbers attached to the name."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "884bb939ca249ebea65fa626a2e8876793d95fbb4681c9fe3f84e83de08a85f7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Whenever you make changes to a program it is _always_ worth testing that the code works as expected, before moving on to any other changes. The code used for testing is usually something that is deleted soon after, and as such you might think it's not worth the trouble to write any tests in the first place. In most cases this is not true. Testing is essential to good programming results."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "5071e8eea7441727f5af19fd3ef58b1433e82149641e60a10162be998c544709",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A bug in the program should be caught and fixed as soon as possible. If you get into the habit of verifying the functionality of practically every new line of code, you will find that the bugs are usually easy to locate and fix, as you can be quite certain that the bug was caused by the most recent change. If you only test the program after adding dozens of lines of code, the potential sources for bugs also increase by dozens of times."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0035",
+      "type": "heading",
+      "order": 35,
+      "source_hash": "2805094593095f7e0cca376e0d411509dac517bc6c2ee7ba5957af1b4aa8eb1c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Step 2: an outline for the user interface"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "8cafd66cddbaf2ae34aef9ad5cf4b878a68076be9e5c63be8fd2ea5eb87682af",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "With the core application logic out of the way, it is time to implement a text-based user interface. We will need a new class, `PhoneBookApplication`, with the following initial functionality:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0037",
+      "type": "code",
+      "order": 37,
+      "source_hash": "ea1e506056524d5878cf28ac858d13cfb07fccc80278b722297ec37bb3d38b88",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n\n    def help(self):\n        print(\"commands: \")\n        print(\"0 exit\")\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n                break\n\napplication = PhoneBookApplication()\napplication.execute()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n\n    def help(self):\n        print(\"commands: \")\n        print(\"0 exit\")\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n                break\n\napplication = PhoneBookApplication()\napplication.execute()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ea1e506056524d5878cf28ac858d13cfb07fccc80278b722297ec37bb3d38b88",
+        "length_lines": 18
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "6ab728c33eb7881dbc36ad7005f690987991cc9fa1f24ff2dd409e2efcb31ef7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This program doesn't do very much yet, but let's go through the contents. The constructor method creates a new PhoneBook, which is stored in a private attribute. The method `execute(self)` starts the program's text-based user interface, the core of which is the `while` loop, which keeps asking the user for commands until they type in the command for exiting. There is also a method for intructions, `help(self)`, which is called before entering the loop, so that the instructions are printed out."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "f81999b51f92a610b544cca5fcbc9d59b2173552ee16bf5f578e1f3a1a6860dd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Now, let's add some actual functionality. First, we implement adding new data to the phone book:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0040",
+      "type": "code",
+      "order": 40,
+      "source_hash": "98d368b66dffb4703988068057ef740b08d328d6412b30c97804e94ac08c004b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n\n    def help(self):\n        print(\"commands: \")\n        print(\"0 exit\")\n        print(\"1 add entry\")\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n                break\n            elif command == \"1\":\n                name = input(\"name: \")\n                number = input(\"number: \")\n                self.__phonebook.add_number(name, number)\n\napplication = PhoneBookApplication()\napplication.execute()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n\n    def help(self):\n        print(\"commands: \")\n        print(\"0 exit\")\n        print(\"1 add entry\")\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n                break\n            elif command == \"1\":\n                name = input(\"name: \")\n                number = input(\"number: \")\n                self.__phonebook.add_number(name, number)\n\napplication = PhoneBookApplication()\napplication.execute()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "98d368b66dffb4703988068057ef740b08d328d6412b30c97804e94ac08c004b",
+        "length_lines": 23
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "9610517e09a00d78b77d3b64d1ad63fd3bcd447202c9cc02fd562fcfe412259f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If the user types in _1_ for adding a new number, the user interface asks for a name and a number, and adds these to the PhoneBook using the appropriate method defined in the class."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "adaa43292a00564ccfe1ccefeb4657ae62c738a04439d4b4475a74c322ffa211",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The only responsibility of the user interface is to communicate with the user. Any other functionality, such as storing a new name-number pair, is the responsibility of the PhoneBook object."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0043",
+      "type": "paragraph",
+      "order": 43,
+      "source_hash": "716c3bbad87baa3218af22c017b03533ea1779721c0155474b47f5cd379a2450",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "There is room for improvement in the structure of our user interface class. Let's create a method `add_entry(self)` which handles the command for adding a new entry:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0044",
+      "type": "code",
+      "order": 44,
+      "source_hash": "c4038aadb7c409b07bfb650de49eb94631c7f1c24d1c1eefcf0d3fcff29eeeed",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n\n    def help(self):\n        print(\"commands: \")\n        print(\"0 exit\")\n        print(\"1 add entry\")\n\n    # separation of concerns in action: a new method for adding an entry\n    def add_entry(self):\n        name = input(\"name: \")\n        number = input(\"number: \")\n        self.__phonebook.add_number(name, number)\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n                break\n            elif command == \"1\":\n                self.add_entry()\n\napplication = PhoneBookApplication()\napplication.execute()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n\n    def help(self):\n        print(\"commands: \")\n        print(\"0 exit\")\n        print(\"1 add entry\")\n\n    # separation of concerns in action: a new method for adding an entry\n    def add_entry(self):\n        name = input(\"name: \")\n        number = input(\"number: \")\n        self.__phonebook.add_number(name, number)\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n                break\n            elif command == \"1\":\n                self.add_entry()\n\napplication = PhoneBookApplication()\napplication.execute()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c4038aadb7c409b07bfb650de49eb94631c7f1c24d1c1eefcf0d3fcff29eeeed",
+        "length_lines": 27
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0045",
+      "type": "paragraph",
+      "order": 45,
+      "source_hash": "7dd26d71689d49240077df74ebd371024bbd8e0565917fba685ec7384c9d41c4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The _separation of concerns_ principle extends to the level of methods, too. We could have the entire functionality of the user interface in a single complicated `while` loop, but it is better to separate each functionality into its own method. The responsibility of the `execute()` method is just delegating the commands typed in by the user to the relevant methods. This helps with managing the growing complexity of our program. For example, if we want to later change the way adding entries works, it is immediately clear that we must then focus our efforts on the `add_entry()` method."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0046",
+      "type": "paragraph",
+      "order": 46,
+      "source_hash": "70c6d78071987e5a930e902f5c2b621419a9e7d2fd10345c51b3144454dcaf37",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's include functionality for searching for entries in our user interface. This should have its own method, too:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0047",
+      "type": "code",
+      "order": 47,
+      "source_hash": "1aed8064d53f1042a937bd88d56d00fa1bf571a25e188f1064db38fd4ab1d3ea",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n\n    def help(self):\n        print(\"commands: \")\n        print(\"0 exit\")\n        print(\"1 add entry\")\n        print(\"2 search\")\n\n    def add_entry(self):\n        name = input(\"name: \")\n        number = input(\"number: \")\n        self.__phonebook.add_number(name, number)\n\n    def search(self):\n        name = input(\"name: \")\n        numbers = self.__phonebook.get_numbers(name)\n        if numbers == None:\n            print(\"number unknown\")\n            return\n        for number in numbers:\n            print(number)\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n                break\n            elif command == \"1\":\n                self.add_entry()\n            elif command == \"2\":\n                self.search()\n            else:\n                self.help()\n\napplication = PhoneBookApplication()\napplication.execute()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n\n    def help(self):\n        print(\"commands: \")\n        print(\"0 exit\")\n        print(\"1 add entry\")\n        print(\"2 search\")\n\n    def add_entry(self):\n        name = input(\"name: \")\n        number = input(\"number: \")\n        self.__phonebook.add_number(name, number)\n\n    def search(self):\n        name = input(\"name: \")\n        numbers = self.__phonebook.get_numbers(name)\n        if numbers == None:\n            print(\"number unknown\")\n            return\n        for number in numbers:\n            print(number)\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n                break\n            elif command == \"1\":\n                self.add_entry()\n            elif command == \"2\":\n                self.search()\n            else:\n                self.help()\n\napplication = PhoneBookApplication()\napplication.execute()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "1aed8064d53f1042a937bd88d56d00fa1bf571a25e188f1064db38fd4ab1d3ea",
+        "length_lines": 40
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0048",
+      "type": "paragraph",
+      "order": 48,
+      "source_hash": "242713bad75fdf905c06a1e22f5dcd03a88f8d2963869995ac2e5a67a85b3864",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We now have a simple working phone book application ready for testing. The following is an example run:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0049",
+      "type": "sample_output",
+      "order": 49,
+      "source_hash": "fa0feeba13d61887c2e841905c752a49a1e942f3adf9c874608b0bf6cab0c430",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "commands:\n0 exit\n1 add entry\n2 search\n\ncommand: **1**\nname: **Eric**\nnumber: **02-123456**\n\ncommand: **1**\nname: **Eric**\nnumber: **045-4356713**\n\ncommand: **2**\nname: **Eric**\n02-123456\n045-4356713\n\ncommand: **2**\nname: Emily\nnumber unknown\n\ncommand: **0**"
+      },
+      "translation": {
+        "language": "text",
+        "content": "commands:\n0 exit\n1 add entry\n2 search\n\ncommand: **1**\nname: **Eric**\nnumber: **02-123456**\n\ncommand: **1**\nname: **Eric**\nnumber: **045-4356713**\n\ncommand: **2**\nname: **Eric**\n02-123456\n045-4356713\n\ncommand: **2**\nname: Emily\nnumber unknown\n\ncommand: **0**"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\ncommands:\n0 exit\n1 add entry\n2 search\n\ncommand: **1**\nname: **Eric**\nnumber: **02-123456**\n\ncommand: **1**\nname: **Eric**\nnumber: **045-4356713**\n\ncommand: **2**\nname: **Eric**\n02-123456\n045-4356713\n\ncommand: **2**\nname: Emily\nnumber unknown\n\ncommand: **0**\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0050",
+      "type": "paragraph",
+      "order": 50,
+      "source_hash": "5b622711db1fe078489ebf7dfe8f2b0a4241ffe2a649b73d334a5df9a5a0ec4e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "For such a simple application we have written quite a lot of code. If we'd written it all within the one `while` loop we could probably have gotten away with a lot less code. It is, however, quite easy to read the code, the structure is clear, and we should have no trouble adding new features."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0051",
+      "type": "heading",
+      "order": 51,
+      "source_hash": "91146fdb3e92a270939ccb11ea913818ae6a91ec09cb3ef677ebfb958030cd06",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Step 3: importing data from a file"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0052",
+      "type": "paragraph",
+      "order": 52,
+      "source_hash": "203e839bdb9d7cab173f8326e0280db8f320d22e347f3d7a657cb842d44a1150",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's assume we already have some phone numbers stored in a file, and we want to read this as the program starts up. The data file is in the following CSV format:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0053",
+      "type": "code",
+      "order": 53,
+      "source_hash": "ce49e865933f7674756cb942e880f33cf81d3f32b83936679feb3735963bb6ad",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "Eric;02-1234567;045-4356713\nEmily;040-324344"
+      },
+      "translation": {
+        "language": "code",
+        "content": "Eric;02-1234567;045-4356713\nEmily;040-324344"
+      },
+      "metadata": {
+        "language": "csv",
+        "code_hash": "ce49e865933f7674756cb942e880f33cf81d3f32b83936679feb3735963bb6ad",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0054",
+      "type": "paragraph",
+      "order": 54,
+      "source_hash": "383db28cd64da6ed23ca1ba0c09aecc0cf16353663fbda1a3b84156ed80d5f45",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Handling files is clearly its own area of responsibility, so it merits a class of its own:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0055",
+      "type": "code",
+      "order": 55,
+      "source_hash": "0f7a9b480931354e420e18aa31cc1a03c07f192352e306f124d155ed4e7f3b55",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class FileHandler:\n    def __init__(self, filename):\n        self.__filename = filename\n\n    def load_file(self):\n        names = {}\n        with open(self.__filename) as f:\n            for line in f:\n                parts = line.strip().split(';')\n                name, *numbers = parts\n                names[name] = numbers\n\n        return names"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class FileHandler:\n    def __init__(self, filename):\n        self.__filename = filename\n\n    def load_file(self):\n        names = {}\n        with open(self.__filename) as f:\n            for line in f:\n                parts = line.strip().split(';')\n                name, *numbers = parts\n                names[name] = numbers\n\n        return names"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "0f7a9b480931354e420e18aa31cc1a03c07f192352e306f124d155ed4e7f3b55",
+        "length_lines": 13
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0056",
+      "type": "paragraph",
+      "order": 56,
+      "source_hash": "a786434bd1bbe3fe8eb1f8fe54f1f058b284d22218d32fb4db47d297e05248cc",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The constructor method takes the name of the file as its argument. The method `load_file(self)` reads the contents of the file. It splits each line into two parts: a name and a list of numbers. It then adds these to a dictionary, using the name as the key and the list as the value."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0057",
+      "type": "paragraph",
+      "order": 57,
+      "source_hash": "d8dc32a13140bf2c1e2dae7e6019336ce8ef4a7f727cca6dbd9d6b6e18c02b9e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The method uses a nifty Python feature: it is possible to first select some items from a list separately, and then take the rest of the items in a new list. You can see an example of this below. You may remember from [part 6](/part-6/1-reading-files#reading-csv-files) that the string method `split` returns a list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0058",
+      "type": "code",
+      "order": 58,
+      "source_hash": "3e1e77669bb7c1479c6b477ba2e9c2ed890dd9b5b1d0e7f0c3a113cf32e6a4dd",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [1, 2, 3, 4, 5]\nfirst, second, *rest = my_list\nprint(first)\nprint(second)\nprint(rest)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [1, 2, 3, 4, 5]\nfirst, second, *rest = my_list\nprint(first)\nprint(second)\nprint(rest)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3e1e77669bb7c1479c6b477ba2e9c2ed890dd9b5b1d0e7f0c3a113cf32e6a4dd",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0059",
+      "type": "sample_output",
+      "order": 59,
+      "source_hash": "4021bb3b6c876ab2075bcf4dfed07609995f74c77744835f6892a9c0c4d8947e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "1\n2\n[3, 4, 5]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "1\n2\n[3, 4, 5]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n1\n2\n[3, 4, 5]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0060",
+      "type": "paragraph",
+      "order": 60,
+      "source_hash": "8d7217e65cecd1ed2a72f1ca8e447fee2b309f35b8bcbcf090b5e3c83e705e32",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `*` in front of the variable name `rest` in the assignment statement means that this last variable should contain all the remaining items in the list, from the third one onwards."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0061",
+      "type": "paragraph",
+      "order": 61,
+      "source_hash": "61996d92e91c76477ee8c01f624fac43498df24ad337fa60e22046e53d91e656",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We should absolutely test the file handler separately before including it in our application:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0062",
+      "type": "code",
+      "order": 62,
+      "source_hash": "a9aee1d1a0eb9779437c13c2a1817af280b2eb128535b00be1e66b972395b137",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "t = FileHandler(\"phonebook.txt\")\nprint(t.load_file())"
+      },
+      "translation": {
+        "language": "code",
+        "content": "t = FileHandler(\"phonebook.txt\")\nprint(t.load_file())"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a9aee1d1a0eb9779437c13c2a1817af280b2eb128535b00be1e66b972395b137",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0063",
+      "type": "sample_output",
+      "order": 63,
+      "source_hash": "698675c6a04dd771727310d7ae71b0d2fc60573d2aa1d68f5ac420264cf135b1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "{'Eric': ['02-1234567', '045-4356713'], 'Emily': ['040-324344']}"
+      },
+      "translation": {
+        "language": "text",
+        "content": "{'Eric': ['02-1234567', '045-4356713'], 'Emily': ['040-324344']}"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n{'Eric': ['02-1234567', '045-4356713'], 'Emily': ['040-324344']}\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0064",
+      "type": "paragraph",
+      "order": 64,
+      "source_hash": "14b40fbe076e3d8a2d7da518a2ed68426737c005793e287a48d7abf5e23cc890",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As the file handler seems to work fine, we can add it to our application. Let's assume we want to read the file first thing every time the program is run. The logical place for reading the file would be the constructor of the `PhoneBookApplication` class:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0065",
+      "type": "code",
+      "order": 65,
+      "source_hash": "b8eb9018f7cf2ad5a59b50ee7896676b018676bd5e829bdd9b143952d506d410",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n        self.__filehandler = FileHandler(\"phonebook.txt\")\n\n        # add the names and numbers from the file to the phone book\n        for name, numbers in self.__filehandler.load_file().items():\n            for number in numbers:\n                self.__phonebook.add_number(name, number)\n\n    # the rest of the program"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n        self.__filehandler = FileHandler(\"phonebook.txt\")\n\n        # add the names and numbers from the file to the phone book\n        for name, numbers in self.__filehandler.load_file().items():\n            for number in numbers:\n                self.__phonebook.add_number(name, number)\n\n    # the rest of the program"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b8eb9018f7cf2ad5a59b50ee7896676b018676bd5e829bdd9b143952d506d410",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0066",
+      "type": "paragraph",
+      "order": 66,
+      "source_hash": "625640638d5ecaa6f3c6f53540fa388e25e9f713fc26cdd69239096cb62c45da",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This functionality should also be tested. Once we've made certain the contents of the file are accessible through the user interface of our application, we can move on to the next stage."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0067",
+      "type": "heading",
+      "order": 67,
+      "source_hash": "8630737967433fe6fb79a2d9fb5a2ad855253b7e45373d2f49ada67eb540f584",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Step 4: export data to a file"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0068",
+      "type": "paragraph",
+      "order": 68,
+      "source_hash": "a6444414608bcbf5f5e830d70b0c90e6568066deaa904717e9d4921c25f26604",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The final feature in our basic version of the application is saving the contents of the phone book back in the same file the data was read from."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0069",
+      "type": "paragraph",
+      "order": 69,
+      "source_hash": "70734d81dda86c94826ab11e360e44ceaf365ddb0ee1fdc26ba26a6cca86a771",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This involves a change to the `PhoneBook` class. We need to be able to export the contents of the phone book:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0070",
+      "type": "code",
+      "order": 70,
+      "source_hash": "3d2cbe4a3fca2c1871ab806ecd5dbf9d6c2d054ca4fe7853fb747fb209f53358",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class PhoneBook:\n    def __init__(self):\n        self.__persons = {}\n\n    # ...\n\n    # return all entries (in dictionary format)\n    def all_entries(self):\n        return self.__persons"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class PhoneBook:\n    def __init__(self):\n        self.__persons = {}\n\n    # ...\n\n    # return all entries (in dictionary format)\n    def all_entries(self):\n        return self.__persons"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3d2cbe4a3fca2c1871ab806ecd5dbf9d6c2d054ca4fe7853fb747fb209f53358",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0071",
+      "type": "paragraph",
+      "order": 71,
+      "source_hash": "7512f948f74201ed5ae1ca04d1c44b3f8fbfbb75da8719fab371f9486a1c6ae1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The actual saving to the file should be handled by the `FileHandler` class. Let's add the method `save_file` which takes a dictionary representation of the phone book as its argument:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0072",
+      "type": "code",
+      "order": 72,
+      "source_hash": "07d9fcab10946a7bfd40cd5262a2d29431ca2d0e59465d7cc7e1e6f7ad7cb8e6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class FileHandler():\n    def __init__(self, filename):\n        self.__filename = filename\n\n    def load_file(self):\n        # ...\n\n    def save_file(self, phonebook: dict):\n        with open(self.__filename, \"w\") as f:\n            for name, numbers in phonebook.items():\n                line = [name] + numbers\n                f.write(\";\".join(line) + \"\\n\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class FileHandler():\n    def __init__(self, filename):\n        self.__filename = filename\n\n    def load_file(self):\n        # ...\n\n    def save_file(self, phonebook: dict):\n        with open(self.__filename, \"w\") as f:\n            for name, numbers in phonebook.items():\n                line = [name] + numbers\n                f.write(\";\".join(line) + \"\\n\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "07d9fcab10946a7bfd40cd5262a2d29431ca2d0e59465d7cc7e1e6f7ad7cb8e6",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0073",
+      "type": "paragraph",
+      "order": 73,
+      "source_hash": "cd7a7a1070d01326b7fac718bde1dace3f4256493c685074b95bb489d8d0a5c5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The saving should happen as the program exits. Let's add a method for this purpose to the user interface, and call it before breaking out of the `while` loop:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0074",
+      "type": "code",
+      "order": 74,
+      "source_hash": "6c75bb35b2f3c3e54797bad9db534376b21491f29f25b9662b9b4274481551d0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\nclass PhoneBookApplication:\n    # the rest of the code for the user interface\n\n    # a method which gets executed as the program exits\n    def exit(self):\n        self.__filehandler.save_file(self.__phonebook.all_entries())\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n\n                self.exit()\n                break\n            elif command == \"1\":\n                self.add_entry()\n            elif command == \"2\":\n                self.search()\n            else:\n                self.help()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "\nclass PhoneBookApplication:\n    # the rest of the code for the user interface\n\n    # a method which gets executed as the program exits\n    def exit(self):\n        self.__filehandler.save_file(self.__phonebook.all_entries())\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n\n                self.exit()\n                break\n            elif command == \"1\":\n                self.add_entry()\n            elif command == \"2\":\n                self.search()\n            else:\n                self.help()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6c75bb35b2f3c3e54797bad9db534376b21491f29f25b9662b9b4274481551d0",
+        "length_lines": 23
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0075",
+      "type": "exercise",
+      "order": 75,
+      "source_hash": "4bfa8d5ab0869cb424064f3d1dee3fdaedb51ef807e66bfc32cc667d8dba7d3d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In this exercise you will create a small expansion to the phone book application. The code from the above example is in the exercise template. Please add a command which lets the user search the phone book by number. After the addition the application should work as follows:\n\n<sample-output>\n\ncommands:\n0 exit\n1 add entry\n2 search\n3 search by number\n\ncommand: **1**\nname: **Eric**\nnumber: **02-123456**\n\ncommand: **1**\nname: **Eric**\nnumber: **045-4356713**\n\ncommand: **3**\nnumber: **02-123456**\nEric\n\ncommand: **3**\nnumber: **0100100**\nunknown number\n\ncommand: **0**\n\n</sample-output>\n\nPlease implement this addition with respect to the current structure of the program. This means that in the `PhoneBookApplication` class you should add an appropriate helper method to allow for the new functionality, and also add a new branch to the `while` loop. In the `PhoneBook` class you should add a method which allows for searching with a number.\n\n**NB:** as you test your program and end up with lots of different numbers stored in the `phonebook.txt` file, there is a chance the local tests will not be passed if conflicting data is read from the file as the app starts. You can try emptying the contents of any `phonebook.txt` files you find in the directory for the exercise _before_ running the local tests. Which one of the files is used by your program may depend on your Visual Studio Code settings. Please have a look at the explanation in [part 6](/part-6/1-reading-files#what-if-visual-studio-code-cannot-find-my-file). If your solution is correct, the tests on the server should still pass normally, regardless."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part10-10_phone_book_v1",
+        "exercise_type": "programming-exercise",
+        "name": "Phone book expansion, version 1",
+        "tmc_name": "part10-10_phone_book_v1",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0076",
+      "type": "heading",
+      "order": 76,
+      "source_hash": "0d99e5cac9fee1bc55443d7e9e62e46e03791166b7486a39a2fd9d9d2fb71ac5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Objects in a dictionary"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0077",
+      "type": "paragraph",
+      "order": 77,
+      "source_hash": "5fe3c7b48e2708b2ed1f13e6b0e6ef379b7bc45cee7331f193770ff03df5aabe",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the next exercise you are asked to change your phone book so that the values in the dictionary are _objects_, not lists."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0078",
+      "type": "paragraph",
+      "order": 78,
+      "source_hash": "3d24c95a65b507362c9ec15a81f70be869e2aac370fb2591b2b01453ab698c49",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "There is nothing intrinsically strange about this, but this is the first time on this course that something like this is suggested, so let's go through a simpler example before diving into the exercise."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0079",
+      "type": "paragraph",
+      "order": 79,
+      "source_hash": "2d86ced97426baeb3c04ee7576ab357cb5678fa3f6217ab1791532e4a053d77d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Here we have an application which keeps track of how many exercises students have completed on a course. Each student's exercise count is stored in a simple object:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0080",
+      "type": "code",
+      "order": 80,
+      "source_hash": "fbb2a649a1283744b8b79537c78cf782a8e7d7dc7f1a83e59915e2f037603bbb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class ExerciseCounter:\n    def __init__(self):\n        self.__exercises = 0\n\n    def done(self):\n        self.__exercises += 1\n\n    def how_many(self):\n        return self.__exercises"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class ExerciseCounter:\n    def __init__(self):\n        self.__exercises = 0\n\n    def done(self):\n        self.__exercises += 1\n\n    def how_many(self):\n        return self.__exercises"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "fbb2a649a1283744b8b79537c78cf782a8e7d7dc7f1a83e59915e2f037603bbb",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0081",
+      "type": "paragraph",
+      "order": 81,
+      "source_hash": "7d12d1304a5c9c321ce55bcee1e7f919b1ddb4959c961e5c23bde500e0265be3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The following main function uses the above class:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0082",
+      "type": "code",
+      "order": 82,
+      "source_hash": "e5c43f692352a6ce16cbe6785feedc4cf5dc86d067678cdd4596f290355b0022",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "students = {}\n\nprint(\"let's do some exercises\")\nwhile True:\n    name = input(\"student: \")\n    if len(name) == 0:\n        break\n\n    # create a new object if it doesn't exist yet\n    if not name in students:\n        students[name] = ExerciseCounter()\n\n    # add a new done exercise to the counter\n    students[name].done()\n\nprint()\nprint(\"exercises completed:\")\n\nfor student, exercises in students.items():\n    print(f\"{student}'s exercises: {exercises.how_many()}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "students = {}\n\nprint(\"let's do some exercises\")\nwhile True:\n    name = input(\"student: \")\n    if len(name) == 0:\n        break\n\n    # create a new object if it doesn't exist yet\n    if not name in students:\n        students[name] = ExerciseCounter()\n\n    # add a new done exercise to the counter\n    students[name].done()\n\nprint()\nprint(\"exercises completed:\")\n\nfor student, exercises in students.items():\n    print(f\"{student}'s exercises: {exercises.how_many()}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e5c43f692352a6ce16cbe6785feedc4cf5dc86d067678cdd4596f290355b0022",
+        "length_lines": 20
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0083",
+      "type": "paragraph",
+      "order": 83,
+      "source_hash": "8469cbff9119bcd2c759c535d5a8265a7a4e092f1edb0cf9f6a061f18aa63c22",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Running the above could look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0084",
+      "type": "sample_output",
+      "order": 84,
+      "source_hash": "3f477c7cfcf600be57501c029b5283cbb2a1293f47218e16dccaa4b7e37f1515",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "let's do some exercises\nstudent: **peter**\nstudent: **sarah**\nstudent: **andy**\nstudent: **sarah**\nstudent: **charlotte**\nstudent: **charlotte**\nstudent: **andy**\nstudent: **sarah**\nstudent:\n\nexercises completed:\npeter's exercises: 1\nandy's exercises: 2\nsarah's exercises: 3\ncharlotte's exercises: 2"
+      },
+      "translation": {
+        "language": "text",
+        "content": "let's do some exercises\nstudent: **peter**\nstudent: **sarah**\nstudent: **andy**\nstudent: **sarah**\nstudent: **charlotte**\nstudent: **charlotte**\nstudent: **andy**\nstudent: **sarah**\nstudent:\n\nexercises completed:\npeter's exercises: 1\nandy's exercises: 2\nsarah's exercises: 3\ncharlotte's exercises: 2"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nlet's do some exercises\nstudent: **peter**\nstudent: **sarah**\nstudent: **andy**\nstudent: **sarah**\nstudent: **charlotte**\nstudent: **charlotte**\nstudent: **andy**\nstudent: **sarah**\nstudent:\n\nexercises completed:\npeter's exercises: 1\nandy's exercises: 2\nsarah's exercises: 3\ncharlotte's exercises: 2\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0085",
+      "type": "paragraph",
+      "order": 85,
+      "source_hash": "ea7dcc20ee573a87c9bec6922f103cda6be527834dc71b96dd12ba5d356c270a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "There are a couple of things to consider in the above example. When the user inputs a name, the program first checks if the name is already a key in the dictionary. If the name is not present, a new object is created and added as an entry in the dictionary:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0086",
+      "type": "code",
+      "order": 86,
+      "source_hash": "068701e91566f52ea708d70fc7db984c9924b26c17ddc23cf7403df7e712c55c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "if not name in students:\n    students[name] = ExerciseCounter()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "if not name in students:\n    students[name] = ExerciseCounter()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "068701e91566f52ea708d70fc7db984c9924b26c17ddc23cf7403df7e712c55c",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0087",
+      "type": "paragraph",
+      "order": 87,
+      "source_hash": "e80eb4016774097ce756905426f1eee6cc337ebf8f872f115d473aaa88f32a2a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this we can be _sure_ the object exists, attached to the name of the student which is used as the key. Either it was just created, or it already existed from a previous iteration of the loop. Either way, we can now retrieve the object with the key, and call the method `done`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0088",
+      "type": "code",
+      "order": 88,
+      "source_hash": "83f5e6b12ba6bdf2f9a9f4a2f070c63ad98f2e0dc5377de647b73c341e679e27",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "students[name].done()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "students[name].done()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "83f5e6b12ba6bdf2f9a9f4a2f070c63ad98f2e0dc5377de647b73c341e679e27",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0089",
+      "type": "paragraph",
+      "order": 89,
+      "source_hash": "db58fd0ad05d791e65670726ec6154501b3445014bfaf56f0d0335a6aac860ca",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The above line actually contains two separate events. We could just as well use a helper variable and write it on two separate lines of code:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0090",
+      "type": "code",
+      "order": 90,
+      "source_hash": "6f2893a6886c336a84907a8d094913d6f475fd0c6f169c1fd50d56c5b149ce1b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "students_counter = students[name]\nstudents_counter.done()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "students_counter = students[name]\nstudents_counter.done()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6f2893a6886c336a84907a8d094913d6f475fd0c6f169c1fd50d56c5b149ce1b",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0091",
+      "type": "paragraph",
+      "order": 91,
+      "source_hash": "526af6ae272f48cfeb63444ded53122dbac059ce77edbfb0b8e42b02e85a04e6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "NB: Even though the object is here assigned to a helper variable, the object still exists in the dictionary just as before.  The helper variable contains a _reference_ to the object in the dictionary."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0092",
+      "type": "paragraph",
+      "order": 92,
+      "source_hash": "a6889cb78b6c492771139334bfb45424c23d32be43a158e4a6467728674fdd52",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If you are not quite sure what actually happens in the code above, please do try it out with the [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0093",
+      "type": "exercise",
+      "order": 93,
+      "source_hash": "f08664152221113c870ea0549d2e87110f685c4481f90fe86f8be9e6b627736e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In this exercise you will create another version of the `PhoneBookApplication`. You will add addresses to the data which can be attached to a name. For simplicity's sake the functionality for saving to file has been removed, and some other methods have been renamed to better accommodate the change.\n\n## A separate class for a person's data\n\nPlease change the way the data of a person is handled. Implement a class named `Person`, which takes care of the phone numbers and addresses of persons. The class should work as follows:\n\n```python\nperson = Person(\"Eric\")\nprint(person.name())\nprint(person.numbers())\nprint(person.address())\nperson.add_number(\"040-123456\")\nperson.add_address(\"Mannerheimintie 10 Helsinki\")\nprint(person.numbers())\nprint(person.address())\n```\n\n<sample-output>\n\nEric\n[]\nNone\n['040-123456']\nMannerheimintie 10 Helsinki\n\n</sample-output>\n\n## PhoneBook uses the class Person\n\nPlease change the internal implementation of your application so that your `PhoneBook` class uses objects of class `Person` to store the data in the phone book. That is, the attribute `__persons` should still contain a dictionary, but the values should be Person-objects and not lists. The user of your application should notice no difference; the changes must not affect the user interface.\n\n**WARNING:** whenever you make structural changes to your code, as described in this exercise, always take baby steps and test at every possible stage. Do not try and make all the changes at once. That is a sure way of **running into serious problems with your code**.\n\nA suitable first step might be to write some code for checking the functionality of the `PhoneBook` class directly. For example, the following should at least not cause any errors:\n\n```python\nphonebook = PhoneBook()\nphonebook.add_number(\"Eric\", \"02-123456\")\nprint(phonebook.get_entry(\"Eric\"))\nprint(phonebook.get_entry(\"Emily\"))\n```\n\nNotice the new name for the method for fetching an entry from the phone book. The automatic tests do not check what the printout from your `get_entry` method is, but make sure no errors are raised by the above code, and that the result makes sense within your implementation.\n\nWhen you've made the necessary changes in your program and have absolutely verified the functionality within the `PhoneBook` class, you can move on to the user interface, and see if everything still works as expected.\n\n## Adding an address\n\nPlease implement the functionality for adding an address to an entry in your phone book. The program should work as follows:\n\n<sample-output>\n\ncommands:\n0 exit\n1 add number\n2 search\n3 add address\n\ncommand: **1**\nname: **Eric**\nnumber: **02-123456**\n\ncommand: **3**\nname: **Emily**\naddress: **Viherlaaksontie 7, Espoo**\n\ncommand: **2**\nname: **Eric**\n02-123456\naddress unknown\n\ncommand: **2**\nname: **Emily**\nnumber unknown\nViherlaaksontie 7, Espoo\n\ncommand: **3**\nname: **Eric**\naddress: **Linnankatu 75, Turku**\n\ncommand: 2\nname: **Eric**\n02-123456\nLinnankatu 75, Turku\n\ncommand: **2**\nname: **Wilhelm**\naddress unknown\nnumber unknown\n\ncommand: **0**\n\n</sample-output>\n\n**WARNING and hint:** as stated above in the previous exercise, do not try and make all the changes at once. That is a sure way of **running into serious problems with your code**.\n\nFirst make sure your can reliably add addresses using the `PhoneBook` class directly. Once you have verified this, you can move on to the necessary changes in the user interface."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part10-11_phone_book_v2",
+        "exercise_type": "programming-exercise",
+        "name": "Phone book expansion, version 2",
+        "tmc_name": "part10-11_phone_book_v2",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0094",
+      "type": "heading",
+      "order": 94,
+      "source_hash": "6320dc33a99887af87a02fe10cb2b2ca3d488af97170a8807398d45a74df1f23",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Some concluding remarks"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0095",
+      "type": "paragraph",
+      "order": 95,
+      "source_hash": "9c709b900b0258e0c8a33dbd159f6e02dd2446d6e8a474553b89e8c8c9c129e2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The structure of the PhoneBook example above follows the fundamental principles of object oriented programming rather well. The central tenet is to identify the different responsibilities in the program and divide these logically among the different classes and methods. One of the main motivations for this division is managing complexity. Another important motive is that a logical division of responsibilities - modularity, in professional terminology - often makes the code easier to maintain and expand upon."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0096",
+      "type": "paragraph",
+      "order": 96,
+      "source_hash": "907f1325218d4b05710107ae51a7aa59198b33c801f1fe25bce607601887bd51",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the software packages being developed and used in the wider world, the overwhelmingly most expensive facet of development is maintenance and expansion, meaning debugging existing software and implementing new features. Correctly implemented modularity is financially a very important feature in software development."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0097",
+      "type": "paragraph",
+      "order": 97,
+      "source_hash": "a9cda14f7dc4789ce1c08d85a454d0737c57a7dc3652e41de1d39237077051eb",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "There are some more object oriented programming principles worth highlighting here. The PhoneBook is a good example of how the core application logic can (and should) be separated from _both_ the user interface _and_ any data storage facilities. This is important for a couple of different reasons. First, this separation makes it possible to test the code in smaller units, one class and method at a time. Second, as the core logic is now independent of the interfaces to the outside world, it is possible to change, to an extent, the implementation of either the core logic or the interfaces, without breaking the entire application."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0098",
+      "type": "paragraph",
+      "order": 98,
+      "source_hash": "543095dfc807ab68200e473af62ce9231fb566eb007c01b4efd10d59693feee6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The file handling process in the PhoneBook application proceeds as follows: the program reads the file just once, as it starts up. After this all data is stored in variables in the program. When the program exits, it again stores all data, in practice overwriting the file. In most cases this is the recommended way to deal with external files, as editing the data in situ is often much more complicated."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0099",
+      "type": "paragraph",
+      "order": 99,
+      "source_hash": "96180f7bcbf247b7e8dabd1720688a03a08867b0cc4ba333b9d489488613e876",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "There are many good guidebooks for learning about good programming practices. One such is [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) by Robert Martin. The code examples in the book are implemented in Java, however, so working through the examples can be quite cumbersome at this point in your programming career, although the book itself is much recommended by the course staff. The themes of easily maintained, expandable, good quality code will be further explored on the courses\n[Software Development Methods](https://studies.helsinki.fi/courses/cu/hy-CU-118024742-2020-08-01) and [Software Engineering](https://studies.helsinki.fi/courses/cu/hy-CU-118024909-2020-08-01)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0100",
+      "type": "paragraph",
+      "order": 100,
+      "source_hash": "e41160e69e22030259b62ce1bfe27748ceecc57e664ca3e297ba0fb783730644",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Writing code according to established object oriented programming principles comes at a price. You will likely end up writing more code than you would, were you to write your implementation in one continuous bout of spaghetti code. One of the key skills of a porgrammer is to decide the best approach for each situation. Sometimes it is necessary to just hack something together quickly for immediate use. On the other hand, if in the foreseeable future it can be expected that the code will be reused, maintained or futher developed, either by you or, more critically, by someone else entirely, the readability and logical modularity of the program code become essential. More often than not, if it is worth doing, it is worth doing well, even in the very early stages of development."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0101",
+      "type": "paragraph",
+      "order": 101,
+      "source_hash": "2821cee5e71bdd4b7cd6dc2f45a5a51b20bcd1db36ec7ef1ea6d3bf219791527",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "To finish off this part of the material you will implement one more larger application."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0102",
+      "type": "exercise",
+      "order": 102,
+      "source_hash": "48edaee3d9f2b8cd10836f70defc1497a2838cd71cbf3a9fb9d323ea7c9d3e0c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write an interactive application for keeping track of your studies. The internal structure is up to you, but this would be a good opportunity to practice creating a similar structure as in the PhoneBook example above.\n\nYour program should work as follows:\n\n<sample-output>\n\n1 add course\n2 get course data\n3 statistics\n0 exit\n\ncommand: **1**\ncourse: **ItP**\ngrade: **3**\ncredits: **5**\n\ncommand: **2**\ncourse: **ItP**\nItP (5 cr) grade 3\n\ncommand: **1**\ncourse: **ItP**\ngrade: **5**\ncredits: **5**\n\ncommand: **2**\ncourse: **ItP**\nItP (5 cr) grade 5\n\ncommand: **1**\ncourse: **ItP**\ngrade: **1**\ncredits: **5**\n\ncommand: **2**\ncourse: **ItP**\nItP (5 cr) grade 5\n\ncommand: **2**\ncourse: **Introduction to Java**\nno entry for this course\n\ncommand: **1**\ncourse: **ACiP**\ngrade: **1**\ncredits: **10**\n\ncommand: **1**\ncourse: **ItAI**\ngrade: **2**\ncredits: **5**\n\ncommand: **1**\ncourse: **Algo101**\ngrade: **4**\ncredits: **1**\n\ncommand: **1**\ncourse: **CompModels**\ngrade: **5**\ncredits: **8**\n\ncommand: **3**\n5 completed courses, a total of 29 credits\nmean 3.4\ngrade distribution\n5: xx\n4: x\n3:\n2: x\n1: x\n\ncommand: **0**\n\n</sample-output>\n\nEach course name should result in a single entry in the records. A grade may be raised by re-entering the course details, but the grade should never be lowered.\n\nThis exercise is worth two exercise points. The first is granted after the commands 1, 2 and 0 work correctly in your program. The second is granted if command 3 also works as expected."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part10-12_course_records",
+        "exercise_type": "programming-exercise",
+        "name": "CourseRecords",
+        "tmc_name": "part10-12_course_records",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0103",
+      "type": "heading",
+      "order": 103,
+      "source_hash": "64186d3a47fa48395ca92bc8cf24deb55eb59497bbfc14753195928ef292da66",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Epilogue"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0104",
+      "type": "paragraph",
+      "order": 104,
+      "source_hash": "7ca19453429d79c6c6e4f42261a46a2a4b7c0ade21eb6df640690f81325bcdb6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "To finish off this part of the material, let's return to the user interface of the phone book example for a moment."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0105",
+      "type": "code",
+      "order": 105,
+      "source_hash": "3c19cbc20a6cdd9adf2f8bddbe235edae2c289853a9409ba98b574b4fda75450",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n        self.__filehandler = FileHandler(\"phonebook.txt\")\n\n    # the rest of the program\n\napplication = PhoneBookApplication()\napplication.execute()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n        self.__filehandler = FileHandler(\"phonebook.txt\")\n\n    # the rest of the program\n\napplication = PhoneBookApplication()\napplication.execute()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3c19cbc20a6cdd9adf2f8bddbe235edae2c289853a9409ba98b574b4fda75450",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0106",
+      "type": "paragraph",
+      "order": 106,
+      "source_hash": "bf116cc671dbe1c5a1a14bb6c84aa7b6b458152c9d70048eee20dde8019f8349",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A `PhoneBookApplication` object contains both a `PhoneBook` object and a `FileHandler` object. The name of the file passed to the FileHandler is, at the moment, hard-coded into the `PhoneBookApplication` class. This is a completely irrelevant detail when it comes to the _user interface_ of the application. In fact, it breaks the _separation of concerns_ principle: where a `PhoneBook` object saves its contents should be of no concern to a `PhoneBookApplication`, yet if we wanted to change the location, we'd have to change the code of `PhoneBookApplication`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0107",
+      "type": "paragraph",
+      "order": 107,
+      "source_hash": "d514a78cd44d7c93396db1a0c97f8bd29d4aff6529b71075e1a161a84aea852d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "It would be a better idea to create a FileHandler object somewhere _outside_ the `PhoneBookApplication` class, and pass it as an argument to the application:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0108",
+      "type": "code",
+      "order": 108,
+      "source_hash": "2cd326fb03eb2791c20242fc8e05b080e067dfba10695742f562c3852f88925a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class PhoneBookApplication:\n    def __init__(self, storage_service):\n        self.__phonebook = PhoneBook()\n        self.__storage_service = storage_service\n\n    # the rest of the user interface\n\n# create a FileHandler\nstorage_service = FileHandler(\"phonebook.txt\")\n# pass it as an argument to PhoneBookApplication's constructor\napplication = PhoneBookApplication(storage_service)\napplication.execute()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class PhoneBookApplication:\n    def __init__(self, storage_service):\n        self.__phonebook = PhoneBook()\n        self.__storage_service = storage_service\n\n    # the rest of the user interface\n\n# create a FileHandler\nstorage_service = FileHandler(\"phonebook.txt\")\n# pass it as an argument to PhoneBookApplication's constructor\napplication = PhoneBookApplication(storage_service)\napplication.execute()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2cd326fb03eb2791c20242fc8e05b080e067dfba10695742f562c3852f88925a",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0109",
+      "type": "paragraph",
+      "order": 109,
+      "source_hash": "bc1caad3f2e0820761c232ddd994fa6d9824feec1dcd962d6eca04ffc3db25d3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This removes an _unnecessary dependency_ from the `PhoneBookApplication` class. If the name of the file changes, the user interface no longer needs to be changed. We just need to pass a different argument to the constructor:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0110",
+      "type": "code",
+      "order": 110,
+      "source_hash": "a3eab6866397e53716e3e2d921bec1c6f00ae3cc8e6f794c3d5422a27225d022",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class PhoneBookApplication:\n    def __init__(self, filename):\n        self.__phonebook = PhoneBook()\n        self.__filename = filename\n\n    # the rest of the user interface\n\n# use a different filename\nstorage_service = FileHandler(\"new_phonebook.txt\")\napplication = PhoneBookApplication(storage_service)\napplication.execute()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class PhoneBookApplication:\n    def __init__(self, filename):\n        self.__phonebook = PhoneBook()\n        self.__filename = filename\n\n    # the rest of the user interface\n\n# use a different filename\nstorage_service = FileHandler(\"new_phonebook.txt\")\napplication = PhoneBookApplication(storage_service)\napplication.execute()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a3eab6866397e53716e3e2d921bec1c6f00ae3cc8e6f794c3d5422a27225d022",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0111",
+      "type": "paragraph",
+      "order": 111,
+      "source_hash": "c5c401c62d60a209ca7d0dc9e95d09943083e4076c8264f77bdabb2aba83d4dc",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This change also allows us to consider more exotic storage locations, for instance, a cloud service on the internet. We just need to implement a class which uses the cloud service, and offers `PhoneBookApplication` the exact same methods as `FileHandler`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0112",
+      "type": "paragraph",
+      "order": 112,
+      "source_hash": "e82c17b09ebce10c952c84fa5411b2c7c5a647b292d51db35425e44af69135a3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "An instance of this new \"cloud handler\" class can be passed as an argument to the constructor, and not a single line of code has to be changed in the user interface:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0113",
+      "type": "code",
+      "order": 113,
+      "source_hash": "4653f0cd59db5b6f1e0013b4c5cc19377c5635995a0d1edaba768637b2eb04c1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class CloudHandler:\n    # code for saving the contents of the phone book\n    # in a cloud service on the internet\n\nstorage_service = CloudHandler(\"amazon-cloud\", \"username\", \"passwrd\")\napplication = PhoneBookApplication(storage_service)\napplication.execute()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class CloudHandler:\n    # code for saving the contents of the phone book\n    # in a cloud service on the internet\n\nstorage_service = CloudHandler(\"amazon-cloud\", \"username\", \"passwrd\")\napplication = PhoneBookApplication(storage_service)\napplication.execute()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4653f0cd59db5b6f1e0013b4c5cc19377c5635995a0d1edaba768637b2eb04c1",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part10-4-application-development-0114",
+      "type": "paragraph",
+      "order": 114,
+      "source_hash": "328f1eab1cb7cf6ea9cadf3320ebc3f86acfa6633d96d408d9510fbd5ee521de",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As you have seen before, using techniques like this carries a price tag, as there is more code to write, so a programmer needs to consider whether that is an acceptable tradeoff."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0115",
+      "type": "paragraph",
+      "order": 115,
+      "source_hash": "2ae0f2591e241c1aff8a9233facfa6dd6facf08566d09215dee5a4098ab30df9",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The technique outlined above is called _dependency injection_. As the name implies, the idea is to provide any dependency required by an object from _outside_ the object. It is a very useful tool in a programmer's toolbox, as it makes it easier to implement new features in programs and facilitates automatic testing. This theme will be further explored on the aforementioned courses [Software Development Methods](https://studies.helsinki.fi/courses/cu/hy-CU-118024742-2020-08-01) and [Software Engineering](https://studies.helsinki.fi/courses/cu/hy-CU-118024909-2020-08-01)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0116",
+      "type": "paragraph",
+      "order": 116,
+      "source_hash": "ff05298c0973d60be8b75d25f01bfd9ecc9887b5ea6cf58dd19bc993cf013650",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please respond to a quick questionnaire on this part of the course."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-4-application-development-0117",
+      "type": "quiz",
+      "order": 117,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "0341ead5-6a31-5ce5-92e8-215b8c990c32",
+        "attributes": {
+          "id": "0341ead5-6a31-5ce5-92e8-215b8c990c32"
+        }
+      }
+    }
+  ]
+}

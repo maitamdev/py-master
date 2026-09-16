@@ -1,0 +1,16 @@
+{
+  "id": "ex-part13-12_four_walls",
+  "lesson_id": "part13-3-events",
+  "part": 13,
+  "tmc_name": "part13-12_four_walls",
+  "title_original": "Four walls",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please improve the program in the previous exercise so that the robot cannot pass outside the window in any of the four directions. The end result should look like this:\n\n<img src=\"pygame_four_walls.gif\">",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "4e6a41590e09bb3a0c9a298b37d44c278ff8141df8b933d52aa6ea6c122290d3",
+  "order": 26
+}

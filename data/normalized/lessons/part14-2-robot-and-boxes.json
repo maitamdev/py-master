@@ -1,0 +1,724 @@
+{
+  "id": "part14-2-robot-and-boxes",
+  "part": 14,
+  "part_slug": "part-14",
+  "slug": "2-robot-and-boxes",
+  "is_part_index": false,
+  "title_original": "Robot and boxes",
+  "title_vi": "",
+  "path": "/part-14/2-robot-and-boxes",
+  "source_path": "data/part-14/2-robot-and-boxes.md",
+  "source_hash": "315b69c68281743a8cb93fc59468b0f0b34b07912179ea0d0fbd8b91ede09ab7",
+  "order": 1,
+  "blocks_count": 41,
+  "blocks": [
+    {
+      "id": "blk-part14-2-robot-and-boxes-0001",
+      "type": "paragraph",
+      "order": 1,
+      "source_hash": "a465b3deb1f87e080c9340416b57f461f97bb556004a13b1ede9b6cca732aa4e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The most difficult thing to implement in a Sokoban style game tends to be moving the robot so that it can push boxes in the desired direction. The game should be able to tell when the robot can move in a direction specified, and be able to handle any situation where a box should move also. Let's tackle this challenge now."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0002",
+      "type": "heading",
+      "order": 2,
+      "source_hash": "8f687e14defc016b03c0e88ceb59675033fcaa6aab9fe4ba4457c84b552d1fbf",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Handling key events"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "0c668f183a9e48766e962846f65b1527e12e7fd1cbceafc722e8191202079341",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The player guides the robot with the four arrow keys, so our event handler should also be able to react to the appropriate key events:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0004",
+      "type": "code",
+      "order": 4,
+      "source_hash": "e5f75b6e10e30314dec8ec9c127090dcf887ec94771cbf31c9e8d16f41052aaa",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    def check_events(self):\n        for event in pygame.event.get():\n            if event.type == pygame.KEYDOWN:\n                if event.key == pygame.K_LEFT:\n                    self.move(0, -1)\n                if event.key == pygame.K_RIGHT:\n                    self.move(0, 1)\n                if event.key == pygame.K_UP:\n                    self.move(-1, 0)\n                if event.key == pygame.K_DOWN:\n                    self.move(1, 0)\n\n            if event.type == pygame.QUIT:\n                exit()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    def check_events(self):\n        for event in pygame.event.get():\n            if event.type == pygame.KEYDOWN:\n                if event.key == pygame.K_LEFT:\n                    self.move(0, -1)\n                if event.key == pygame.K_RIGHT:\n                    self.move(0, 1)\n                if event.key == pygame.K_UP:\n                    self.move(-1, 0)\n                if event.key == pygame.K_DOWN:\n                    self.move(1, 0)\n\n            if event.type == pygame.QUIT:\n                exit()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e5f75b6e10e30314dec8ec9c127090dcf887ec94771cbf31c9e8d16f41052aaa",
+        "length_lines": 14
+      }
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "94f9f8227d769a330118ee21e3b62ae2535c7a3ce0e2fe7556188389d38fe931",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Now whenever the player presses an arrow key, the method `move` is called with an appropriate pair of arguments. The first argument contains the movement in the vertical direction, while the second contains the movement in the horizontal direction."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0006",
+      "type": "heading",
+      "order": 6,
+      "source_hash": "9d3e662e1f7340deb80243ec7a8ff9146c619ad0967aa5b669201a3ac4825cd4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Searching for the robot"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "d5a5daf6aba9df89848d580c7e92eab500e2a97748930fe22390f631833dacf6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The game has to know the location of the robot in order to move it correctly. Let's add the method `find_robot` which figures out the location of the robot:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0008",
+      "type": "code",
+      "order": 8,
+      "source_hash": "d469c0b753c5c24d571a337e635a922513bbe6bac0fc6cc0eef1eb7c369b2891",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    def find_robot(self ):\n        for y in range(self.height):\n            for x in range(self.width):\n                if self.map[y][x] in [4, 6]:\n                    return (y, x)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    def find_robot(self ):\n        for y in range(self.height):\n            for x in range(self.width):\n                if self.map[y][x] in [4, 6]:\n                    return (y, x)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d469c0b753c5c24d571a337e635a922513bbe6bac0fc6cc0eef1eb7c369b2891",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "170e1937cf2d0c7c2bb43d453959d82b1de35dd379dab705b8b786b33a50696f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The method goes through all the squares in the game grid and returns the coordinates of the square which contains either the number 4 (the robot on its own) or the number 6 (the robot on a target square)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "be7fdcb9211425c48fea886b2a72440dcd1c5866a1ff7826aa1b890ed5ed4753",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The idea is that whenever the player presses an arrow key, first the location of the robot is established by going through the squares of the grid. This may seem a bit slow and superfluous, as we could just as well keep the location of the robot in a separate variable or two. The advantage of this search approach is that we are not storing the location of the robot in two different locations (in the game grid _and_ separate variables), but instead we just have to worry about the one location (the game grid), which means that the state of the game in computer memory is simpler to handle."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0011",
+      "type": "heading",
+      "order": 11,
+      "source_hash": "33966dbda0aa9be2c21390114ee028f481c0966e4d6d0ff31f5c2e3ccc328e58",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Changes to the game grid"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "6fcbd39e2c0c49b975204cf9161cf82e3e682bb6710b6ba2602e8a358457f3a1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We already called the method `move` above, but we haven't actually defined it yet. Let's do that now."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "1c3ba957ba3fdc9e1bb068b049236f52738dc2306bf6255b18c646cc25ecaf05",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `move` method takes the direction the player wants to move to as its arguments. It then updates the game grid accordingly, or determines the move is not allowed and leaves the grid unchanged."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "e9e68a6b9d52955c778c558c1770bf296ed4151d0ba43670bb5cbe7b77d58fe9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    def move(self, move_y, move_x):\n        robot_old_y, robot_old_x = self.find_robot() \n        robot_new_y = robot_old_y + move_y\n        robot_new_x = robot_old_x + move_x\n\n        if self.map[robot_new_y][robot_new_x] == 1:\n            return\n\n        if self.map[robot_new_y][robot_new_x] in [3, 5]:\n            box_new_y = robot_new_y + move_y\n            box_new_x = robot_new_x + move_x\n\n            if self.map[box_new_y][box_new_x] in [1, 3, 5]:\n                return\n\n            self.map[robot_new_y][robot_new_x] -= 3\n            self.map[box_new_y][box_new_x] += 3\n\n        self.map[robot_old_y][robot_old_x] -= 4\n        self.map[robot_new_y][robot_new_x] += 4"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    def move(self, move_y, move_x):\n        robot_old_y, robot_old_x = self.find_robot() \n        robot_new_y = robot_old_y + move_y\n        robot_new_x = robot_old_x + move_x\n\n        if self.map[robot_new_y][robot_new_x] == 1:\n            return\n\n        if self.map[robot_new_y][robot_new_x] in [3, 5]:\n            box_new_y = robot_new_y + move_y\n            box_new_x = robot_new_x + move_x\n\n            if self.map[box_new_y][box_new_x] in [1, 3, 5]:\n                return\n\n            self.map[robot_new_y][robot_new_x] -= 3\n            self.map[box_new_y][box_new_x] += 3\n\n        self.map[robot_old_y][robot_old_x] -= 4\n        self.map[robot_new_y][robot_new_x] += 4"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e9e68a6b9d52955c778c558c1770bf296ed4151d0ba43670bb5cbe7b77d58fe9",
+        "length_lines": 20
+      }
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "13f8b7a62029f9abdd9e9096ce6f591874d4e0b181904a00acfc76b6ec268d51",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The method has quite a lot of different stages, so let's take a look at each one in turn:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0016",
+      "type": "heading",
+      "order": 16,
+      "source_hash": "dfc0e9c8edbf3912589ffd47c15f0065b7e6a1d83cc63130a797153a78562c3b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The old and new location of the robot"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0017",
+      "type": "code",
+      "order": 17,
+      "source_hash": "af731ee51e2b2886f60fb24909a3b28c393869b40e248f8ab250d79bf1f307dc",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "        robot_old_y, robot_old_x = self.find_robot() \n        robot_new_y = robot_old_y + move_y\n        robot_new_x = robot_old_x + move_x"
+      },
+      "translation": {
+        "language": "code",
+        "content": "        robot_old_y, robot_old_x = self.find_robot() \n        robot_new_y = robot_old_y + move_y\n        robot_new_x = robot_old_x + move_x"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "af731ee51e2b2886f60fb24909a3b28c393869b40e248f8ab250d79bf1f307dc",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "07ca7b4132d14f0023377ef288d1ea036944e1cbb6e8894cf8d787a6574ea91e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "First, the method calls the `find_robot` in order to find the current location of the robot, before the move. This is stored in the variables `robot_old_y` and `robot_old_x`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "c1d28020fe3840ad49ce656f9b1224b7a705bbb55dbd9644474a51105a707ad0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Then the new location of the robot after the prospective move is stored in the variables `robot_new_y` and `robot_new_x`. The new coordinates can be easily calculated by adding the values passed as arguments to the old location of the robot, as both contained vertical and horizontal values."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0020",
+      "type": "heading",
+      "order": 20,
+      "source_hash": "891b1b3c276db30418bf6416c2b400c8a0481948de71a603b79db81b85742821",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Did the robot hit a wall?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0021",
+      "type": "code",
+      "order": 21,
+      "source_hash": "64f166c9838e15172b152ca012caac7a1bb51e251b9db00ac0209b4db286bf96",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "        if self.map[robot_new_y][robot_new_x] == 1:\n            return"
+      },
+      "translation": {
+        "language": "code",
+        "content": "        if self.map[robot_new_y][robot_new_x] == 1:\n            return"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "64f166c9838e15172b152ca012caac7a1bb51e251b9db00ac0209b4db286bf96",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "73695745f20d0daf3909f2f5581e689ba1e05dc0ecbe68c19d0e79964c3e2ee6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `if` statement above takes care of the situation where the robot would hit a wall as a result of the move. Remember, 1 was the position of a wall square in the list of images. This is not allowed, so the method simply returns without any further ado."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0023",
+      "type": "heading",
+      "order": 23,
+      "source_hash": "d04a346ef8d29a61e2d028c788982d1102c18ad9fa154ea13975572d6669f778",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Moving a box"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0024",
+      "type": "code",
+      "order": 24,
+      "source_hash": "36e24a3e8ae530a5cfcd74bf124541f0332936a60f53aa991939d8d1106e6aa8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "        if self.map[robot_new_y][robot_new_x] in [3, 5]:\n            box_new_y = robot_new_y + move_y\n            box_new_x = robot_new_x + move_x\n\n            if self.map[box_new_y][box_new_x] in [1, 3, 5]:\n                return\n\n            self.map[robot_new_y][robot_new_x] -= 3\n            self.map[box_new_y][box_new_x] += 3"
+      },
+      "translation": {
+        "language": "code",
+        "content": "        if self.map[robot_new_y][robot_new_x] in [3, 5]:\n            box_new_y = robot_new_y + move_y\n            box_new_x = robot_new_x + move_x\n\n            if self.map[box_new_y][box_new_x] in [1, 3, 5]:\n                return\n\n            self.map[robot_new_y][robot_new_x] -= 3\n            self.map[box_new_y][box_new_x] += 3"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "36e24a3e8ae530a5cfcd74bf124541f0332936a60f53aa991939d8d1106e6aa8",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "dda2391fe2ab31acc3db1f7e7cd40732de27bd2fd060048e592cd8b754788752",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If the new prospective location of the robot contains a number 3 (a box on its own) or a number 5 (a box in a target square), the robot attempts to move the box to the next square along. For this purpose we need two new variables: `box_new_y` and `box_new_x`, which contain the location of the box after the move."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "0757892a37f8261df7ea08b1d5b3d86219c678de11d147ece8f21d183e012218",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Similarly to the robot, the box cannot be moved to a wall square, with the identifier 1. Neither can the box move onto another box, or a target square with a box on it. If this would happen as a result of the move, the method again simply returns without making any changes to the grid."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "2df46dcce8e0f646a3f72be95dc917680fc2a1174e2e8f8d10ba7a547f206d3c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In any other case the box can move. The value in the box's current grid location is decreased by 3, and the value in its new grid location is increased by 3. Because of the clever ordering of the items in the `images` list, this works out correctly both when the squares involved are floor squares and target squares."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0028",
+      "type": "heading",
+      "order": 28,
+      "source_hash": "64bba109b5b41ad7ff800d72529182f1fbf2046d76b62261db2ecaf90ac7e262",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Moving the robot"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0029",
+      "type": "code",
+      "order": 29,
+      "source_hash": "d38ced05aba8f461362171398e77b0378f60a8582df89caeace4223521a4b512",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "        self.map[robot_old_y][robot_old_x] -= 4\n        self.map[robot_new_y][robot_new_x] += 4"
+      },
+      "translation": {
+        "language": "code",
+        "content": "        self.map[robot_old_y][robot_old_x] -= 4\n        self.map[robot_new_y][robot_new_x] += 4"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d38ced05aba8f461362171398e77b0378f60a8582df89caeace4223521a4b512",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "6d6d2407270cdca1088c7df9d52ddc81ac6278b85550fb4bc8594fd871ee40a8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If the execution of the method has reached this point without returning, it is time to move the robot as well. The procedure is similar to moving the box, but the value subtracted from and added to the appropriate locations in the grid is 4 this time around. This ensures, again through the clever ordering of the items in the `images` list, that the final result on the grid is correct both when floor and target squares are involved in the move."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0031",
+      "type": "heading",
+      "order": 31,
+      "source_hash": "aa1739a1828b4dff97099b8345efe6365bdb465c211b130a88d6c8abc4e07d94",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Refactoring?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "fd96e97d434e5fe8d15a8bb47b1af2fea8555312fc147905751b78994c7e6d03",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Using only the grid to store the state of the game at all times is very handy in the sense that only one variable is permanently invlved in the whole process, and it is relatively easy to update the state of the grid through simple additions and subtractions."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "a107126937857ec1336d67e5c8da39ead9ae960b639d8de5d7f9e14f3ff4b126",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The downside is that it can be a tad difficult to understand the program code of the game. If someone unfamiliar with the logic used saw this following line of code, they would likely be a bit perplexed:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0034",
+      "type": "code",
+      "order": 34,
+      "source_hash": "f6f1ddcdfa12bd3011ca5536e9e6c0334faea31523abebd8ff810af2ed1b4d75",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "            if self.map[box_new_y][box_new_x] in [1, 3, 5]:"
+      },
+      "translation": {
+        "language": "code",
+        "content": "            if self.map[box_new_y][box_new_x] in [1, 3, 5]:"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f6f1ddcdfa12bd3011ca5536e9e6c0334faea31523abebd8ff810af2ed1b4d75",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "040a11c7dac0bf68bc0bb67850dc8ac867d77856591af1d8b5e8be88d52b4d9e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The code snippet above makes use of _magic numbers_ to represent the squares in the grid. ANyone reading the code would have to know that 1 means wall, 3 means a box and 5 means a box in a target square."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "162aed86f39965ee4732d44ad9016c3470f0e9766f208369f560e8c532310a4a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The lines involving the clever subtractions and additions would look even more baffling:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0037",
+      "type": "code",
+      "order": 37,
+      "source_hash": "4f7c49d36de9c5edab22614321c2412a3d206ceb2dd65f15fcd0f82245512de4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "            self.map[robot_new_y][robot_new_x] -= 3"
+      },
+      "translation": {
+        "language": "code",
+        "content": "            self.map[robot_new_y][robot_new_x] -= 3"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4f7c49d36de9c5edab22614321c2412a3d206ceb2dd65f15fcd0f82245512de4",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "dceca99a08f182d9394e89866293b78d7a57a070ef303f81c4ee34da927acce6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The number 3 meant a box just previously, but now it is subtracted from the value of a square on the grid. This works in the context of our numbering scheme, as it changes a box (3) into a normal floor square (0), or a target square with a box (5) into an empty target square (2), but understanding this requiares a primer in the numbering scheme used."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "2952e9caed8a53afbdb0f37c7861199c58ec959352759730186e3b34fecd7bf5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We could make it easier for anyone reading the code by _refactoring_ our implementation. That means improving the structure and readability of the code. One way to achieve this would be to use the names of the squares instead of the numbers 0 to 6, even though this would still not explain how and why numbers can be added and subtracted while maintaining the integrity of the grid."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "6726a0794d690daa50b164a651afcc81b9a2f757fd191a9aad123a6aa8b00374",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Making the program code truly accessible would likely require much more fundamentally transformative refactoring. For example, we could keep the structure of the game map in one location, and store the locations of the robot and the boxes in some separate data structure. The downside of _this_ would be that this would likely result in a lot more code, and the internal structure of the game would become much more complicated."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-2-robot-and-boxes-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "d56a4890bada41165ca943eea48572bf31ffaf4a7452ea75f484448225561709",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Refactoring and code quality is a subject for some subsequent courses, such as _Software Development Methods_ and _Software Engineering_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    }
+  ]
+}

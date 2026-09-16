@@ -1,0 +1,954 @@
+{
+  "id": "part05-4-tuple",
+  "part": 5,
+  "part_slug": "part-5",
+  "slug": "4-tuple",
+  "is_part_index": false,
+  "title_original": "Tuple",
+  "title_vi": "",
+  "path": "/part-5/4-tuple",
+  "source_path": "data/part-5/4-tuple.md",
+  "source_hash": "ca1ac31d88ca5785e942cfef23bf65b65252b1f4c5e678a689638ec6afeec392",
+  "order": 1,
+  "blocks_count": 51,
+  "blocks": [
+    {
+      "id": "blk-part05-4-tuple-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "1ed9458b2a13ead700cf81d9997edcea7f5e5f83575c5b9715e087508ace5e8f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be familiar with the tuple data type\n- You will be able to create tuples from various types of values\n- You will know the difference between a tuple and a list\n- You will be able to name some typical use cases for tuples"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "215259c9ba4c707c64387dd2f8f2ccb042f141524325e29d33fbf1ff846bb2c1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Tuple is a data structure which is, in many ways, similar to a list. The most important differences between the two are:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0003",
+      "type": "list",
+      "order": 3,
+      "source_hash": "b137731f5d5190d08546430cb724a0923f6caf37e24d853576b02177cee9088e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* Tuples are enclosed in parentheses `()`, while lists are enclosed in square brackets `[]`\n* Tuples are _immutable_, while the contents of a list may change"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "df321343c069a7305b4ea86b25d9c8963d1004b698116fcbc22f6070c28acd7a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The following bit of code creates a tuple containing the coordinates of a point:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "80573590e9a3ff981c0d3045c5518c5b88a19867b4f1d9bc8907e8735caff79f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "point = (10, 20)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "point = (10, 20)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "80573590e9a3ff981c0d3045c5518c5b88a19867b4f1d9bc8907e8735caff79f",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "99dd044737dff6260dbaa63c8ecace8490d41431a82ce73a0776e59e662a8905",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The items stored in a tuple are accessed by index, just like the items stored in a list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0007",
+      "type": "code",
+      "order": 7,
+      "source_hash": "baca8dac46320c3808e30ac1ed35c2704d20cc836c1cf6c138857113bf1ed276",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "point = (10, 20)\nprint(\"x coordinate:\", point[0])\nprint(\"y coordinate:\", point[1])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "point = (10, 20)\nprint(\"x coordinate:\", point[0])\nprint(\"y coordinate:\", point[1])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "baca8dac46320c3808e30ac1ed35c2704d20cc836c1cf6c138857113bf1ed276",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0008",
+      "type": "sample_output",
+      "order": 8,
+      "source_hash": "e758e49e9eb61c40adfaa59f6dc727230174cc69481218f461017e32036e8af3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "x coordinate: 10\ny coordinate: 20"
+      },
+      "translation": {
+        "language": "text",
+        "content": "x coordinate: 10\ny coordinate: 20"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nx coordinate: 10\ny coordinate: 20\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "34080a0e436271a475153ee5b99b40f261bdc6431a885c4948eccd105bd51533",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The values stored in a tuple cannot be changed after the tuple has been defined. The following will _not_ work:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0010",
+      "type": "code",
+      "order": 10,
+      "source_hash": "e0e847131d739d05f7970517d5cf4d1f2a95ad0633c4827b5d01350a4d6c2c6a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "point = (10, 20)\npoint[0] = 15"
+      },
+      "translation": {
+        "language": "code",
+        "content": "point = (10, 20)\npoint[0] = 15"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e0e847131d739d05f7970517d5cf4d1f2a95ad0633c4827b5d01350a4d6c2c6a",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0011",
+      "type": "sample_output",
+      "order": 11,
+      "source_hash": "bb34fb7d456d18d73d9139c1cf1ec9169dade228731dcf1a7bdeb29a5b2dde9c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "TypeError: 'tuple' object does not support item assignment"
+      },
+      "translation": {
+        "language": "text",
+        "content": "TypeError: 'tuple' object does not support item assignment"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nTypeError: 'tuple' object does not support item assignment\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0012",
+      "type": "exercise",
+      "order": 12,
+      "source_hash": "5f4256044fe73c77e4ab5e8587a05c7c51068f2553ff546368b911db822ccc68",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `create_tuple(x: int, y: int, z: int)`, which takes three integers as its arguments, and creates and returns a tuple based on the following criteria:\n\n1. The first element in the tuple is the smallest of the arguments\n2. The second element in the tuple is the greatest of the arguments\n3. The third element in the tuple is the sum of the arguments\n\nAn example of its use:\n\n```python\n\nif __name__ == \"__main__\":\n    print(create_tuple(5, 3, -1))\n\n```\n\n<sample-output>\n\n(-1, 5, 7)\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-23_create_tuple",
+        "exercise_type": "programming-exercise",
+        "name": "Create a tuple",
+        "tmc_name": "part05-23_create_tuple",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0013",
+      "type": "exercise",
+      "order": 13,
+      "source_hash": "620c64c02946e9907f5b943e18f8723731cbec5cbfdda9b5a5270db944134d16",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `oldest_person(people: list)`, which takes a list of tuples as its argument. In each tuple, the first element is the name of a person, and the second element is their year of birth. The function should find the oldest person on the list and return their name.\n\nAn example of the function in action:\n\n```python\np1 = (\"Adam\", 1977)\np2 = (\"Ellen\", 1985)\np3 = (\"Mary\", 1953)\np4 = (\"Ernest\", 1997)\npeople = [p1, p2, p3, p4]\n\nprint(oldest_person(people))\n```\n\n<sample-output>\n\nMary\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-24_oldest_person",
+        "exercise_type": "programming-exercise",
+        "name": "The oldest person",
+        "tmc_name": "part05-24_oldest_person",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0014",
+      "type": "exercise",
+      "order": 14,
+      "source_hash": "1acf35a337c80a49c1ffde18cbc5002977f64e950ac0bc6111e2e15160961a32",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In this exercise we are handling tuples just like the ones described in the previous exercise.\n\nPlease write a function named `older_people(people: list, year: int)`, which selects all those people on the list who were born _before_ the year given as an argument. The function should return the names of these people in a new list.\n\nAn example of its use:\n\n```python\np1 = (\"Adam\", 1977)\np2 = (\"Ellen\", 1985)\np3 = (\"Mary\", 1953)\np4 = (\"Ernest\", 1997)\npeople = [p1, p2, p3, p4]\n\nolder = older_people(people, 1979)\nprint(older)\n```\n\n<sample-output>\n\n[ 'Adam', 'Mary' ]\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-25_older_people",
+        "exercise_type": "programming-exercise",
+        "name": "Older people",
+        "tmc_name": "part05-25_older_people",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0015",
+      "type": "heading",
+      "order": 15,
+      "source_hash": "0daf9c86b02c97fb9ba04d5bf9a83ac76f4ea9f62da47cf09c5172e81c2ffa65",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "What is the purpose of a tuple?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "441938d7e7447a46774e4df6fa962efcb495a9f46f2c9c23b38769d7a8b5bd3d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Tuples are ideal for when there is a set collection of values which are in some way connected. For example, when there is a need to handle the x and y coordinates of a point, a tuple is a natural choice, because coordinates will always consist of two values:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0017",
+      "type": "code",
+      "order": 17,
+      "source_hash": "80573590e9a3ff981c0d3045c5518c5b88a19867b4f1d9bc8907e8735caff79f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "point = (10, 20)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "point = (10, 20)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "80573590e9a3ff981c0d3045c5518c5b88a19867b4f1d9bc8907e8735caff79f",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "877efea5d8a697a816b705118071677a8a30701abe29b94038582de10d87bc7e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Technically it is of course possible to also use a list to store these:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0019",
+      "type": "code",
+      "order": 19,
+      "source_hash": "4fc0e4122824253b23559f87aa1b687efa766339b1818004afdce858a07c9a9f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "point = [10, 20]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "point = [10, 20]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4fc0e4122824253b23559f87aa1b687efa766339b1818004afdce858a07c9a9f",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "49832c39f096443269f988e905237adc13e076763e8afb2442065be9a067afce",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A list is a collection of consecutive items in a certain order. The size of a list may also change. When we are storing the coordinates of a point, we want to store the x and y coordinates specifically, not an arbitrary list containing those values."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "8de0ce0588f30a94cc1981e3188466a0c88c93ca54d64a7b04505f17fc1cc96a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Because tuples are immutable, unlike lists, they can be used as keys in a dictionary. The following bit of code creates a dictionary, where the keys are coordinate points:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0022",
+      "type": "code",
+      "order": 22,
+      "source_hash": "31aa391bb0f1c8bed3244bf28e84939bf65a40d018c9dad539ea3c6251f5d5cb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "points = {}\npoints[(3, 5)] = \"monkey\"\npoints[(5, 0)] = \"banana\"\npoints[(1, 2)] = \"harpsichord\"\nprint(points[(3, 5)])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "points = {}\npoints[(3, 5)] = \"monkey\"\npoints[(5, 0)] = \"banana\"\npoints[(1, 2)] = \"harpsichord\"\nprint(points[(3, 5)])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "31aa391bb0f1c8bed3244bf28e84939bf65a40d018c9dad539ea3c6251f5d5cb",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0023",
+      "type": "sample_output",
+      "order": 23,
+      "source_hash": "000c285457fc971f862a79b786476c78812c8897063c6fa9c045f579a3b2d63f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "monkey"
+      },
+      "translation": {
+        "language": "text",
+        "content": "monkey"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\nmonkey\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "d74e1c7cfefc04e634c8d1238661b908d160a4e192acadad45a81da58b1daa86",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Attempting a similar dictionary definition using lists would _not_ work:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0025",
+      "type": "code",
+      "order": 25,
+      "source_hash": "1ce5eab6e007226c7a154cf586f7cb2afd4fabd976f072ce9257818a5e2bde58",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "points = {}\npoints[[3, 5]] = \"monkey\"\npoints[[5, 0]] = \"banana\"\npoints[[1, 2]] = \"harpsichord\"\nprint(points[[3, 5]])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "points = {}\npoints[[3, 5]] = \"monkey\"\npoints[[5, 0]] = \"banana\"\npoints[[1, 2]] = \"harpsichord\"\nprint(points[[3, 5]])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "1ce5eab6e007226c7a154cf586f7cb2afd4fabd976f072ce9257818a5e2bde58",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0026",
+      "type": "sample_output",
+      "order": 26,
+      "source_hash": "8c906e910aefce607ac399cf47cb48e30c9b06bfe1038b55ecf7e88ff3c27ff0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "TypeError: unhashable type: 'list'"
+      },
+      "translation": {
+        "language": "text",
+        "content": "TypeError: unhashable type: 'list'"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nTypeError: unhashable type: 'list'\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0027",
+      "type": "heading",
+      "order": 27,
+      "source_hash": "7ec95dd067ce177ed667e846fdc15008b153f9b28697a4b714d1123c3e1507a6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Tuples without parentheses"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "3f353e1985aaf091b7058487f9d041a7112b7bec157c768ae90271f13f858121",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The parentheses are not strictly necessary when defining tuples. The following two variable assignments are identical in their results:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0029",
+      "type": "code",
+      "order": 29,
+      "source_hash": "bab4601aa5e6af8ccedbe42444ae74778d04d75e76df9213c91202c1acc04127",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "numbers = (1, 2, 3)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "numbers = (1, 2, 3)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "bab4601aa5e6af8ccedbe42444ae74778d04d75e76df9213c91202c1acc04127",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0030",
+      "type": "code",
+      "order": 30,
+      "source_hash": "7d1343469007233a21e69c7ed3d60b559c271e99ddad402577a23b5358f8624f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "numbers = 1, 2, 3"
+      },
+      "translation": {
+        "language": "code",
+        "content": "numbers = 1, 2, 3"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "7d1343469007233a21e69c7ed3d60b559c271e99ddad402577a23b5358f8624f",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "c0fda3d80192c5d4db68d7d799b7c3017f4187edf59b24f11aaaac49a75419bf",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This means we can also easily return multiple values using tuples. Let's have alook at he following example:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0032",
+      "type": "code",
+      "order": 32,
+      "source_hash": "80123fcf61a90dee2bbe705a3509d2a6c0f0a2da476dab7f02b224b6fd7fb597",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def minmax(my_list):\n  return min(my_list), max(my_list)\n\nmy_list = [33, 5, 21, 7, 88, 312, 5]\n\nmin_value, max_value = minmax(my_list)\nprint(f\"The smallest item is {min_value} and the greatest item is {max_value}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def minmax(my_list):\n  return min(my_list), max(my_list)\n\nmy_list = [33, 5, 21, 7, 88, 312, 5]\n\nmin_value, max_value = minmax(my_list)\nprint(f\"The smallest item is {min_value} and the greatest item is {max_value}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "80123fcf61a90dee2bbe705a3509d2a6c0f0a2da476dab7f02b224b6fd7fb597",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0033",
+      "type": "sample_output",
+      "order": 33,
+      "source_hash": "2904b5d5bbec4bd7606768c7ee2550e5b05a430435f9c3efe09985b33bb50840",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The smallest item is 5 and the greatest item is 312"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The smallest item is 5 and the greatest item is 312"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe smallest item is 5 and the greatest item is 312\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "d0a04ae73344e643b3956175f8d329526b5394e128caa5b74ff7967d31c90c20",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This function returns two values in a tuple. The return value is assigned to two variables at once:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0035",
+      "type": "code",
+      "order": 35,
+      "source_hash": "f9b6e476eb20a43fe299c9491a8e1d99244c8f13f12468d9229a372b83532692",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "min_value, max_value = minmax(my_list)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "min_value, max_value = minmax(my_list)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f9b6e476eb20a43fe299c9491a8e1d99244c8f13f12468d9229a372b83532692",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "18812ee5008fbc925b0e1929e37308a0917bd8f9a295ac7a45ce6fda06fa592b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Using parentheses may make the notation more clear. On the left hand side of the assignment statement we also have a tuple, which contains two variable names. The values contained within the tuple returned by the function are assigned to these two variables."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0037",
+      "type": "code",
+      "order": 37,
+      "source_hash": "f22dbdd9cf387d483f5c3679e258f2d251e391d7a6908b052ffb1c2ff21528c3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "(min_value, max_value) = minmax(my_list)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "(min_value, max_value) = minmax(my_list)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f22dbdd9cf387d483f5c3679e258f2d251e391d7a6908b052ffb1c2ff21528c3",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "73cf34a5838418e30fe25e43e9806e3b06972241f294244e6445c718586aa8b5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You may remember the dictionary method `items` in the previous section. We used it to access all the keys and values stored in a dictionary:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0039",
+      "type": "code",
+      "order": 39,
+      "source_hash": "b62ad1716ed349d32f89fd6421a069ac5989354143b30af0958aea74f5f02420",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_dictionary = {}\n\nmy_dictionary[\"apina\"] = \"monkey\"\nmy_dictionary[\"banaani\"] = \"banana\"\nmy_dictionary[\"cembalo\"] = \"harpsichord\"\n\nfor key, value in my_dictionary.items():\n    print(\"key:\", key)\n    print(\"value:\", value)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_dictionary = {}\n\nmy_dictionary[\"apina\"] = \"monkey\"\nmy_dictionary[\"banaani\"] = \"banana\"\nmy_dictionary[\"cembalo\"] = \"harpsichord\"\n\nfor key, value in my_dictionary.items():\n    print(\"key:\", key)\n    print(\"value:\", value)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b62ad1716ed349d32f89fd6421a069ac5989354143b30af0958aea74f5f02420",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "e6465666b6b2a9f8cba6b32b8dab6246856974a5a3087545fc95d6b7828ef097",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Tuples are at work here, too. The method `my_dictionary.items()` returns each key-value pair as a tuple, where the first item is the key and the second item is the value."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "3bf98d15f9e93db6428fda9823a8416737ebf21cf062e4b3761a5410bc3121fa",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Another common use case for tuples is swapping the values of two variables:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0042",
+      "type": "code",
+      "order": 42,
+      "source_hash": "5f1eb2bcdfa2411cb065bb9bdfad65d643d248b50842b17c77488083318be46a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number1, number2 = number2, number1"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number1, number2 = number2, number1"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5f1eb2bcdfa2411cb065bb9bdfad65d643d248b50842b17c77488083318be46a",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0043",
+      "type": "paragraph",
+      "order": 43,
+      "source_hash": "da5e6955de3df5a5c2da6b7f391f08276245514829e7e595f3e556fc04afa47a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The assignment statement above swaps the values stored in the variables `number1` and `number2`. The result is identical to what is achieved with the following bit of code, using a helper variable:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0044",
+      "type": "code",
+      "order": 44,
+      "source_hash": "7884a27d18b97bd8d2c119649439b305f7adda08fb35ed7bdca667354b3104a2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "helper_var = number1\nnumber1 = number2\nnumber2 = helper_var"
+      },
+      "translation": {
+        "language": "code",
+        "content": "helper_var = number1\nnumber1 = number2\nnumber2 = helper_var"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "7884a27d18b97bd8d2c119649439b305f7adda08fb35ed7bdca667354b3104a2",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0045",
+      "type": "exercise",
+      "order": 45,
+      "source_hash": "461987c8df84c4e08936f24f6f041f79cf88989f7ca85e51156a6d4f03e9835e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In this series of exercises you will create a simple student database. Before diving in, please spend a moment reading through the instructions and thinking about what sort of data structures are necessary for organising the data stored by your program.\n\n#### adding students\n\nFirst write a function named `add_student`, which adds a new student to the database. Also write a preliminary version of the function `print_student`, which prints out the information of a single student.\n\nThese function are used as follows:\n\n```python\nstudents = {}\nadd_student(students, \"Peter\")\nadd_student(students, \"Eliza\")\nprint_student(students, \"Peter\")\nprint_student(students, \"Eliza\")\nprint_student(students, \"Jack\")\n```\n\nYour program should now print out\n\n<sample-output>\n\n<pre>\nPeter:\n no completed courses\nEliza:\n no completed courses\nJack: no such person in the database\n</pre>\n\n</sample-output>\n\n#### adding completed courses\n\nPlease write a function named `add_course`, which adds a completed course to the information of a specific student in the database. The course data is a tuple consisting of the name of the course and the grade:\n\n```python\nstudents = {}\nadd_student(students, \"Peter\")\nadd_course(students, \"Peter\", (\"Introduction to Programming\", 3))\nadd_course(students, \"Peter\", (\"Advanced Course in Programming\", 2))\nprint_student(students, \"Peter\")\n```\n\nWhen some courses have been added, the information printed out changes:\n\n<sample-output>\n\n<pre>\nPeter:\n 2 completed courses:\n  Introduction to Programming 3\n  Advanced Course in Programming 2\n average grade 2.5\n</pre>\n\n</sample-output>\n\n#### repeating courses\n\nCourses with grade 0 should be ignored when adding course information. Additionally, if the course is already in the database in that specific student's information, the grade recorded in the database should never be lowered if the course is repeated.\n\n```python\nstudents = {}\nadd_student(students, \"Peter\")\nadd_course(students, \"Peter\", (\"Introduction to Programming\", 3))\nadd_course(students, \"Peter\", (\"Advanced Course in Programming\", 2))\nadd_course(students, \"Peter\", (\"Data Structures and Algorithms\", 0))\nadd_course(students, \"Peter\", (\"Introduction to Programming\", 2))\nprint_student(students, \"Peter\")\n```\n\n<sample-output>\n\n<pre>\nPeter:\n 2 completed courses:\n  Introduction to Programming 3\n  Advanced Course in Programming 2\n average grade 2.5\n</pre>\n\n</sample-output>\n\n#### summary of database\n\nPlease write a function named `summary`, which prints out a summary based on all the information stored in the database.\n\n```python\nstudents = {}\nadd_student(students, \"Peter\")\nadd_student(students, \"Eliza\")\nadd_course(students, \"Peter\", (\"Data Structures and Algorithms\", 1))\nadd_course(students, \"Peter\", (\"Introduction to Programming\", 1))\nadd_course(students, \"Peter\", (\"Advanced Course in Programming\", 1))\nadd_course(students, \"Eliza\", (\"Introduction to Programming\", 5))\nadd_course(students, \"Eliza\", (\"Introduction to Computer Science\", 4))\nsummary(students)\n```\n\nThis should print out\n\n<sample-output>\n\n<pre>\nstudents 2\nmost courses completed 3 Peter\nbest average grade 4.5 Eliza\n</pre>\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-26_student_database",
+        "exercise_type": "programming-exercise",
+        "name": "Student database",
+        "tmc_name": "part05-26_student_database",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0046",
+      "type": "exercise",
+      "order": 46,
+      "source_hash": "d532d2128d6b2e4c0329bbde46b47134f8680929070acc50fe7839ba638d221b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This final exercise in this part is a relatively demanding problem solving task. It can be solved in many different ways. Even though this current section in the material covers tuples, tuples are not necessarily the best way to go about solving this.\n\nPlease write a program which prints out a square of letters as specified in the examples below. You may assume there will be at most 26 layers.\n\n<sample-output>\n\nLayers: **3**\n<pre>\nCCCCC\nCBBBC\nCBABC\nCBBBC\nCCCCC\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nLayers: **4**\n<pre>\nDDDDDDD\nDCCCCCD\nDCBBBCD\nDCBABCD\nDCBBBCD\nDCCCCCD\nDDDDDDD\n</pre>\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-27_letter_square",
+        "exercise_type": "programming-exercise",
+        "name": "A square of letters",
+        "tmc_name": "part05-27_letter_square",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0047",
+      "type": "paragraph",
+      "order": 47,
+      "source_hash": "b97eebcf5a0222c688482a2c1f8f4510ba0c7934c136e1f60999bbcc47c2ab75",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!---\nA quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0048",
+      "type": "quiz",
+      "order": 48,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "69694e01-4c47-5b9d-8a00-b0d96a477dc7",
+        "attributes": {
+          "id": "69694e01-4c47-5b9d-8a00-b0d96a477dc7"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-4-tuple-0049",
+      "type": "paragraph",
+      "order": 49,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0050",
+      "type": "paragraph",
+      "order": 50,
+      "source_hash": "e7c1a46e91282cacd4221fc454f07d2669740016f75a092ce3959836e6ef0903",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please respond to a quick questionnaire on this week's materials."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-4-tuple-0051",
+      "type": "quiz",
+      "order": 51,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "751a95a2-e308-58a0-8283-74fbef6259ed",
+        "attributes": {
+          "id": "751a95a2-e308-58a0-8283-74fbef6259ed"
+        }
+      }
+    }
+  ]
+}

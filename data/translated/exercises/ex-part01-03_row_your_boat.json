@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-03_row_your_boat",
+  "lesson_id": "part01-1-getting-started",
+  "part": 1,
+  "tmc_name": "part01-03_row_your_boat",
+  "title_original": "Row, Row, Row Your Boat",
+  "title_vi": "Chèo, chèo, chèo thuyền của bạn",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which prints out the following lines exactly as they are written here, punctuation and all:\n\n<sample-output>\n\nRow, row, row your boat,\nGently down the stream.\nMerrily, merrily, merrily, merrily,\nLife is but a dream.\n\n</sample-output>",
+  "description_vi": "Hãy viết một chương trình in ra những dòng sau đây chính xác như chúng được viết ở đây, dấu câu và tất cả:\n\n<sample-output>\n\nChèo, chèo, chèo thuyền của bạn,\nNhẹ nhàng xuôi dòng.\nVui vẻ, vui vẻ, vui vẻ, vui vẻ,\nCuộc đời chỉ là một giấc mơ.\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "399e64b87c54d3fc71aa416f03fa826ce60e66fdacae0eeb48919622648b1334",
+  "order": 20
+}

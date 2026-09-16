@@ -1,0 +1,16 @@
+{
+  "id": "ex-part09-01_fastest_car",
+  "lesson_id": "part09-1-objects-and-references",
+  "part": 9,
+  "tmc_name": "part09-01_fastest_car",
+  "title_original": "The fastest car",
+  "title_vi": "Chiếc xe nhanh nhất",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The exercise template contains a class named `Car` which represents the features of a car through two attributes: `make (str)` and `top_speed (int)`.\n\nPlease write a function named `fastest_car(cars: list)` which takes a list of `Car` objects as its argument.\n\nThe function should return the make of the fastest car. You may assume there will always be a single car with the highest top speed. Do not change the list given as an argument, or make any changes to the `Car` class definition.\n\nYou may use the following code to test your function:\n\n```python\nif __name__ == \"__main__\":\n    car1 = Car(\"Saab\", 195)\n    car2 = Car(\"Lada\", 110)\n    car3 = Car(\"Ferrari\", 280)\n    car4 = Car(\"Trabant\", 85)\n\n    cars = [car1, car2, car3, car4]\n    print(fastest_car(cars))\n```\n\n<sample-output>\n\nFerrari\n\n</sample-output>",
+  "description_vi": "Mẫu bài tập chứa một lớp có tên `Car` thể hiện các tính năng của ô tô thông qua hai thuộc tính: `make (str)` và `top_speed (int)`.\n\nVui lòng viết một hàm có tên `fastest_car(cars: list)` lấy danh sách các đối tượng `Car` làm đối số.\n\nHàm này sẽ trả về nhãn hiệu của chiếc xe nhanh nhất. Bạn có thể cho rằng sẽ luôn có một chiếc xe duy nhất có tốc độ tối đa cao nhất. Không thay đổi danh sách được đưa ra làm đối số hoặc thực hiện bất kỳ thay đổi nào đối với định nghĩa lớp `Car`.\n\nBạn có thể sử dụng đoạn mã sau để kiểm tra chức năng của mình:\n\n```python\nif __name__ == \"__main__\":\n    car1 = Car(\"Saab\", 195)\n    car2 = Car(\"Lada\", 110)\n    car3 = Car(\"Ferrari\", 280)\n    car4 = Car(\"Trabant\", 85)\n\n    cars = [car1, car2, car3, car4]\n    print(fastest_car(cars))\n```\n\n<sample-output>\n\nFerrari\n\n</sample-output>",
+  "starter_code": "if __name__ == \"__main__\":\n    car1 = Car(\"Saab\", 195)\n    car2 = Car(\"Lada\", 110)\n    car3 = Car(\"Ferrari\", 280)\n    car4 = Car(\"Trabant\", 85)\n\n    cars = [car1, car2, car3, car4]\n    print(fastest_car(cars))",
+  "grading_data_available": false,
+  "source_hash": "5210f5f37a5b65662a5e953d322ab2df2a006202cf590b65fe1fc0351c5f6f4d",
+  "order": 5
+}

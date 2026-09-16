@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-24_first_letters_of_words",
+  "lesson_id": "part03-3-more-loops",
+  "part": 3,
+  "tmc_name": "part03-24_first_letters_of_words",
+  "title_original": "First letters of words",
+  "title_vi": "Những chữ cái đầu tiên của từ",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user to type in a sentence. The program then prints out the first letter of each word in the sentence, each letter on a separate line.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nPlease type in a sentence: **Humpty Dumpty sat on a wall**\nH\nD\ns\no\na\nw\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình yêu cầu người dùng gõ một câu. Sau đó chương trình sẽ in ra chữ cái đầu tiên của mỗi từ trong câu, mỗi chữ cái nằm trên một dòng riêng biệt.\n\nMột ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nHãy gõ một câu: **Humpty Dumpty ngồi trên tường**\nH\nD\ns\nồ\nmột\nw\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "d67a55397535f7cbf608cbe6d7372d370ca89bb0b37ef0b2e716c2185a7db552",
+  "order": 44
+}

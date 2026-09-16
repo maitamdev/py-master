@@ -1,0 +1,16 @@
+{
+  "id": "ex-part07-02_special_characters",
+  "lesson_id": "part07-1-modules",
+  "part": 7,
+  "tmc_name": "part07-02_special_characters",
+  "title_original": "Special characters",
+  "title_vi": "Ký tự đặc biệt",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The Python module [string](https://docs.python.org/3/library/string.html) contains some string constants, which define certain groups of characters. These include for example lowercase letters and punctuation characters. Please familiarize yourself with these constants, and then write a function named `separate_characters(my_string: str)`. The function takes a string as its argument, and it should separate the characters in the string into three other strings, and return these in a tuple:\n\n* The first string should contain the lowercase and uppercase ASCII letters (string constant `ascii_letters`)\n* The second string should contain all punctuation characters defined by the string constant `punctuation`\n* The third string should contain all the other characters (including whitespace)\n\nThe characters should appear in the three strings in the same order as they appeared in the original string.\n\nAn example of the function in action:\n\n```python\nparts = separate_characters(\"Olé!!! Hey, are ümläüts wörking?\")\nprint(parts[0])\nprint(parts[1])\nprint(parts[2])\n```\n\n<sample-output>\n\nOlHeyaremltswrking\n!!!,?\né  üäü ö \n\n</sample-output>",
+  "description_vi": "Mô-đun Python [chuỗi](https://docs.python.org/3/library/string.html) chứa một số hằng chuỗi xác định các nhóm ký tự nhất định. Chúng bao gồm các chữ cái viết thường và ký tự dấu chấm câu. Hãy làm quen với các hằng số này và sau đó viết hàm có tên `separate_characters(my_string: str)`. Hàm lấy một chuỗi làm đối số của nó và nó sẽ tách các ký tự trong chuỗi thành ba chuỗi khác và trả về các ký tự này trong một bộ dữ liệu:\n\n* Chuỗi đầu tiên phải chứa các chữ cái ASCII viết thường và viết hoa (hằng số chuỗi `ascii_letters`)\n* Chuỗi thứ hai phải chứa tất cả các ký tự dấu chấm câu được xác định bởi hằng chuỗi `punctuation`\n* Chuỗi thứ ba phải chứa tất cả các ký tự khác (bao gồm cả khoảng trắng)\n\nCác ký tự sẽ xuất hiện trong ba chuỗi theo thứ tự giống như chúng xuất hiện trong chuỗi gốc.\n\nMột ví dụ về chức năng đang hoạt động:\n\n```python\nparts = separate_characters(\"Olé!!! Hey, are ümläüts wörking?\")\nprint(parts[0])\nprint(parts[1])\nprint(parts[2])\n```\n\n<sample-output>\n\nOlHeyaremltswrking\n!!!,?\né üäü ồ \n\n</sample-output>",
+  "starter_code": "parts = separate_characters(\"Olé!!! Hey, are ümläüts wörking?\")\nprint(parts[0])\nprint(parts[1])\nprint(parts[2])",
+  "grading_data_available": false,
+  "source_hash": "c7879bf8beeeff481e85c9b712cb374c8bb06f5c3517285315deaa9c96554df0",
+  "order": 37
+}

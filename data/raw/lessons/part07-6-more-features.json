@@ -1,0 +1,232 @@
+{
+  "id": "part07-6-more-features",
+  "part": 7,
+  "part_slug": "part-7",
+  "slug": "6-more-features",
+  "is_part_index": false,
+  "title_original": "More Python features",
+  "path": "/part-7/6-more-features",
+  "source_path": "data/part-7/6-more-features.md",
+  "source_hash": "2256ce54a7d2908d355fa9fd2e5d91a67aae7d03c81dc651fc161007ad12ee55",
+  "frontmatter": {
+    "path": "/part-7/6-more-features",
+    "title": "More Python features",
+    "hidden": false
+  },
+  "chunks_count": 36,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will be familiar with some more Python features",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will be familiar with some more Python features\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "To finish off this course, here you will find various useful Python features.",
+      "raw_source": "To finish off this course, here you will find various useful Python features."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Single line conditionals",
+      "raw_source": "## Single line conditionals"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following two statements produce the exact same results:",
+      "raw_source": "The following two statements produce the exact same results:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "if x%2 == 0:\n    print(\"even\")\nelse:\n    print(\"odd\")",
+      "raw_source": "```python\nif x%2 == 0:\n    print(\"even\")\nelse:\n    print(\"odd\")\n```"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "print(\"even\" if x%2 == 0 else \"odd\")",
+      "raw_source": "```python\nprint(\"even\" if x%2 == 0 else \"odd\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the latter example we have a conditional expression on a single line: `a if [condition] else b`. The value of this expression evaluates to `a` if the condition is true, and `b` if it is false. This structure is sometimes referred to as a _ternary operator_.",
+      "raw_source": "In the latter example we have a conditional expression on a single line: `a if [condition] else b`. The value of this expression evaluates to `a` if the condition is true, and `b` if it is false. This structure is sometimes referred to as a _ternary operator_."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Conditional expressions can be very useful when you need to assign something _conditionally_. For example, if you had the variables `x` and `y`, and you wanted to either increment or set the value of `y` depending on the parity of `x`, you could write it in a normal `if else` statement, like so:",
+      "raw_source": "Conditional expressions can be very useful when you need to assign something _conditionally_. For example, if you had the variables `x` and `y`, and you wanted to either increment or set the value of `y` depending on the parity of `x`, you could write it in a normal `if else` statement, like so:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "if x%2 == 0:\n    y += 1\nelse:\n    y = 0",
+      "raw_source": "```python\nif x%2 == 0:\n    y += 1\nelse:\n    y = 0\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The same could be achieved with a nifty one-liner:",
+      "raw_source": "The same could be achieved with a nifty one-liner:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "y = y + 1 if x%2 == 0 else 0",
+      "raw_source": "```python\ny = y + 1 if x%2 == 0 else 0\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "An \"empty\" block",
+      "raw_source": "## An \"empty\" block"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You may remember from the previous part that you are not allowed to have an empty block in a Python program. If you need to have a block of code which does nothing, for example when testing some other functionality, the `pass` command will let you do this. You could, for instance, write a function which does nothing:",
+      "raw_source": "You may remember from the previous part that you are not allowed to have an empty block in a Python program. If you need to have a block of code which does nothing, for example when testing some other functionality, the `pass` command will let you do this. You could, for instance, write a function which does nothing:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def testing():\n    pass",
+      "raw_source": "```python\ndef testing():\n    pass\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This function would simply return immediately. Leaving the `pass` command out, i.e. having a completely empty block, would produce an error.",
+      "raw_source": "This function would simply return immediately. Leaving the `pass` command out, i.e. having a completely empty block, would produce an error."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def testing():  # this causes an error!",
+      "raw_source": "```python\ndef testing():  # this causes an error!\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Loops with else blocks",
+      "raw_source": "## Loops with else blocks"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In Python, loops can have `else` blocks, too. This section of code is executed if the loop finishes normally.",
+      "raw_source": "In Python, loops can have `else` blocks, too. This section of code is executed if the loop finishes normally."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "For example, in the following example we are looking through a list of numbers. If there is an even number on the list, the program prints out a message and the loop is broken. If there are no even numbers, the loop finishes normally, but a different message is then printed out.",
+      "raw_source": "For example, in the following example we are looking through a list of numbers. If there is an even number on the list, the program prints out a message and the loop is broken. If there are no even numbers, the loop finishes normally, but a different message is then printed out."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [3,5,2,8,1]\nfor x in my_list:\n    if x%2 == 0:\n        print(\"found an even number\", x)\n        break\nelse:\n    print(\"there were no even numbers\")",
+      "raw_source": "```python\nmy_list = [3,5,2,8,1]\nfor x in my_list:\n    if x%2 == 0:\n        print(\"found an even number\", x)\n        break\nelse:\n    print(\"there were no even numbers\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A more traditional way to achieve this would be to use a helper variable to remember whether the desired item was found:",
+      "raw_source": "A more traditional way to achieve this would be to use a helper variable to remember whether the desired item was found:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [3,5,2,8,1]\nfound = False\nfor x in my_list:\n    if x%2 == 0:\n        print(\"found an even number\", x)\n        found = True\n        break\nif not found:\n    print(\"there were no even numbers\")",
+      "raw_source": "```python\nmy_list = [3,5,2,8,1]\nfound = False\nfor x in my_list:\n    if x%2 == 0:\n        print(\"found an even number\", x)\n        found = True\n        break\nif not found:\n    print(\"there were no even numbers\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Using a `for else` statement saves us the trouble of writing a separate variable.",
+      "raw_source": "Using a `for else` statement saves us the trouble of writing a separate variable."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Default parameter value",
+      "raw_source": "## Default parameter value"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A Python function can have a default parameter value. It is used whenever no argument is passed to the function. See the following example:",
+      "raw_source": "A Python function can have a default parameter value. It is used whenever no argument is passed to the function. See the following example:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def say_hello(name=\"Emily\"):\n    print(\"Hi there,\", name)\n\nsay_hello()\nsay_hello(\"Eric\")\nsay_hello(\"Matthew\")\nsay_hello(\"\")",
+      "raw_source": "```python\ndef say_hello(name=\"Emily\"):\n    print(\"Hi there,\", name)\n\nsay_hello()\nsay_hello(\"Eric\")\nsay_hello(\"Matthew\")\nsay_hello(\"\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Hi there, Emily\nHi there, Eric\nHi there, Matthew\nHi there,",
+      "raw_source": "<sample-output>\n\nHi there, Emily\nHi there, Eric\nHi there, Matthew\nHi there,\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "NB: an empty string is still a string, so the default parameter is not used if an empty string is passed to the function.",
+      "raw_source": "NB: an empty string is still a string, so the default parameter is not used if an empty string is passed to the function."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "A variable number of parameters",
+      "raw_source": "## A variable number of parameters"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You can also define a function with a variable number of parameters, by adding a star before the parameter name. All the remaining arguments passed to the function are contained in a tuple, and can be accessed through the named parameter.",
+      "raw_source": "You can also define a function with a variable number of parameters, by adding a star before the parameter name. All the remaining arguments passed to the function are contained in a tuple, and can be accessed through the named parameter."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following function counts the number and sum of its arguments:",
+      "raw_source": "The following function counts the number and sum of its arguments:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def testing(*my_args):\n    print(\"You passed\", len(my_args), \"arguments\")\n    print(\"The sum of the arguments is\", sum(my_args))\n\ntesting(1, 2, 3, 4, 5)",
+      "raw_source": "```python\ndef testing(*my_args):\n    print(\"You passed\", len(my_args), \"arguments\")\n    print(\"The sum of the arguments is\", sum(my_args))\n\ntesting(1, 2, 3, 4, 5)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "You passed 5 arguments\nThe sum of the arguments is 15",
+      "raw_source": "<sample-output>\n\nYou passed 5 arguments\nThe sum of the arguments is 15\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Your own programming language",
+        "tmcname": "part07-18_own_programming_language"
+      },
+      "inner_content": "In this exercise you will write your own programming language executor. You can use any techniques and skills you have learnt on this course thus far.\n\nThe programs will consist of rows, and each row will be in one of the following formats:\n\n* `PRINT [value]`: prints the value\n* `MOV [variable] [value]`: assigns the value to the variable\n* `ADD [variable] [value]`: adds the value to the variable\n* `SUB [variable] [value]`: subtracts the value from the variable\n* `MUL [variable] [value]`: multiplies the variable by the value\n* `[location]:`: names a line of code, so it can be jumped to from elsewhere\n* `JUMP [location]`: jumps to the location specified\n* `IF [condition] JUMP [location]`: if the condition is true, jump to the location specified\n* `END`: finish execution\n\nThe square brackets above are just a notation to signify operands; see below for usage examples.\n\nThe program is executed line by line from the first line onwards. The execution ends when the executor comes across the command `END`, or when there are no more lines to execute.\n\nEach program has 26 pre-defined variables, named `A` to `Z`. Each variable has the value 0 when the program begins. The notation `[variable]` refers to one of these 26 variables.\n\nAll the values processed by the program are integer numbers. The notation `[value]` refers either to a value stored in a variable, or an integer number typed in directly.\n\nThe notation `[location]` refers to any name of a location which consists of lowercase letters `a` to `z` and/or numbers `0` to `9`. Two different locations may not have the same name.\n\nThe notation `[condition]` refers to any expression in the format `[value] [comparison] [value]`, where `[comparison]` is one of the following operators: `==`, `!=`, `<`, `<=`, `>` and `>=`.\n\nPlease write a function named `run(program)`, which takes a list containing the program commands as its argument. Each item on the list is a line of code in the program. The function should return a new list, which contains the results of the `PRINT` commands executed during the program's run.\n\nYou may assume the function will only be given programs which are entirely in the correct format. You do not have to implement any input validation or error handling.\n\nThis exercise is worth two points. You will receive one point if the commands `PRINT`, `MOV`, `ADD`, `SUB`, `MUL` and `END` are working correctly. You will receice another point if the rest of the commands, which are used to implement loops, also work.\n\nBelow are some examples, which you may also use for testing. Example 1:\n\n```python\nprogram1 = []\nprogram1.append(\"MOV A 1\")\nprogram1.append(\"MOV B 2\")\nprogram1.append(\"PRINT A\")\nprogram1.append(\"PRINT B\")\nprogram1.append(\"ADD A B\")\nprogram1.append(\"PRINT A\")\nprogram1.append(\"END\")\nresult = run(program1)\nprint(result)\n```\n\n<sample-output>\n\n[1, 2, 3]\n\n</sample-output>\n\nExample 2:\n\n```python\nprogram2 = []\nprogram2.append(\"MOV A 1\")\nprogram2.append(\"MOV B 10\")\nprogram2.append(\"begin:\")\nprogram2.append(\"IF A >= B JUMP quit\")\nprogram2.append(\"PRINT A\")\nprogram2.append(\"PRINT B\")\nprogram2.append(\"ADD A 1\")\nprogram2.append(\"SUB B 1\")\nprogram2.append(\"JUMP begin\")\nprogram2.append(\"quit:\")\nprogram2.append(\"END\")\nresult = run(program2)\nprint(result)\n```\n\n<sample-output>\n\n[1, 10, 2, 9, 3, 8, 4, 7, 5, 6]\n\n</sample-output>\n\nExample 3 (factorial):\n\n```python\nprogram3 = []\nprogram3.append(\"MOV A 1\")\nprogram3.append(\"MOV B 1\")\nprogram3.append(\"begin:\")\nprogram3.append(\"PRINT A\")\nprogram3.append(\"ADD B 1\")\nprogram3.append(\"MUL A B\")\nprogram3.append(\"IF B <= 10 JUMP begin\")\nprogram3.append(\"END\")\nresult = run(program3)\nprint(result)\n```\n\n<sample-output>\n\n[1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800]\n\n</sample-output>\n\nExample 4 (prime numbers):\n\n```python\nprogram4 = []\nprogram4.append(\"MOV N 50\")\nprogram4.append(\"PRINT 2\")\nprogram4.append(\"MOV A 3\")\nprogram4.append(\"begin:\")\nprogram4.append(\"MOV B 2\")\nprogram4.append(\"MOV Z 0\")\nprogram4.append(\"test:\")\nprogram4.append(\"MOV C B\")\nprogram4.append(\"new:\")\nprogram4.append(\"IF C == A JUMP error\")\nprogram4.append(\"IF C > A JUMP over\")\nprogram4.append(\"ADD C B\")\nprogram4.append(\"JUMP new\")\nprogram4.append(\"error:\")\nprogram4.append(\"MOV Z 1\")\nprogram4.append(\"JUMP over2\")\nprogram4.append(\"over:\")\nprogram4.append(\"ADD B 1\")\nprogram4.append(\"IF B < A JUMP test\")\nprogram4.append(\"over2:\")\nprogram4.append(\"IF Z == 1 JUMP over3\")\nprogram4.append(\"PRINT A\")\nprogram4.append(\"over3:\")\nprogram4.append(\"ADD A 1\")\nprogram4.append(\"IF A <= N JUMP begin\")\nresult = run(program4)\nprint(result)\n```\n\n<sample-output>\n\n[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Your own programming language' tmcname='part07-18_own_programming_language'>\n\nIn this exercise you will write your own programming language executor. You can use any techniques and skills you have learnt on this course thus far.\n\nThe programs will consist of rows, and each row will be in one of the following formats:\n\n* `PRINT [value]`: prints the value\n* `MOV [variable] [value]`: assigns the value to the variable\n* `ADD [variable] [value]`: adds the value to the variable\n* `SUB [variable] [value]`: subtracts the value from the variable\n* `MUL [variable] [value]`: multiplies the variable by the value\n* `[location]:`: names a line of code, so it can be jumped to from elsewhere\n* `JUMP [location]`: jumps to the location specified\n* `IF [condition] JUMP [location]`: if the condition is true, jump to the location specified\n* `END`: finish execution\n\nThe square brackets above are just a notation to signify operands; see below for usage examples.\n\nThe program is executed line by line from the first line onwards. The execution ends when the executor comes across the command `END`, or when there are no more lines to execute.\n\nEach program has 26 pre-defined variables, named `A` to `Z`. Each variable has the value 0 when the program begins. The notation `[variable]` refers to one of these 26 variables.\n\nAll the values processed by the program are integer numbers. The notation `[value]` refers either to a value stored in a variable, or an integer number typed in directly.\n\nThe notation `[location]` refers to any name of a location which consists of lowercase letters `a` to `z` and/or numbers `0` to `9`. Two different locations may not have the same name.\n\nThe notation `[condition]` refers to any expression in the format `[value] [comparison] [value]`, where `[comparison]` is one of the following operators: `==`, `!=`, `<`, `<=`, `>` and `>=`.\n\nPlease write a function named `run(program)`, which takes a list containing the program commands as its argument. Each item on the list is a line of code in the program. The function should return a new list, which contains the results of the `PRINT` commands executed during the program's run.\n\nYou may assume the function will only be given programs which are entirely in the correct format. You do not have to implement any input validation or error handling.\n\nThis exercise is worth two points. You will receive one point if the commands `PRINT`, `MOV`, `ADD`, `SUB`, `MUL` and `END` are working correctly. You will receice another point if the rest of the commands, which are used to implement loops, also work.\n\nBelow are some examples, which you may also use for testing. Example 1:\n\n```python\nprogram1 = []\nprogram1.append(\"MOV A 1\")\nprogram1.append(\"MOV B 2\")\nprogram1.append(\"PRINT A\")\nprogram1.append(\"PRINT B\")\nprogram1.append(\"ADD A B\")\nprogram1.append(\"PRINT A\")\nprogram1.append(\"END\")\nresult = run(program1)\nprint(result)\n```\n\n<sample-output>\n\n[1, 2, 3]\n\n</sample-output>\n\nExample 2:\n\n```python\nprogram2 = []\nprogram2.append(\"MOV A 1\")\nprogram2.append(\"MOV B 10\")\nprogram2.append(\"begin:\")\nprogram2.append(\"IF A >= B JUMP quit\")\nprogram2.append(\"PRINT A\")\nprogram2.append(\"PRINT B\")\nprogram2.append(\"ADD A 1\")\nprogram2.append(\"SUB B 1\")\nprogram2.append(\"JUMP begin\")\nprogram2.append(\"quit:\")\nprogram2.append(\"END\")\nresult = run(program2)\nprint(result)\n```\n\n<sample-output>\n\n[1, 10, 2, 9, 3, 8, 4, 7, 5, 6]\n\n</sample-output>\n\nExample 3 (factorial):\n\n```python\nprogram3 = []\nprogram3.append(\"MOV A 1\")\nprogram3.append(\"MOV B 1\")\nprogram3.append(\"begin:\")\nprogram3.append(\"PRINT A\")\nprogram3.append(\"ADD B 1\")\nprogram3.append(\"MUL A B\")\nprogram3.append(\"IF B <= 10 JUMP begin\")\nprogram3.append(\"END\")\nresult = run(program3)\nprint(result)\n```\n\n<sample-output>\n\n[1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800]\n\n</sample-output>\n\nExample 4 (prime numbers):\n\n```python\nprogram4 = []\nprogram4.append(\"MOV N 50\")\nprogram4.append(\"PRINT 2\")\nprogram4.append(\"MOV A 3\")\nprogram4.append(\"begin:\")\nprogram4.append(\"MOV B 2\")\nprogram4.append(\"MOV Z 0\")\nprogram4.append(\"test:\")\nprogram4.append(\"MOV C B\")\nprogram4.append(\"new:\")\nprogram4.append(\"IF C == A JUMP error\")\nprogram4.append(\"IF C > A JUMP over\")\nprogram4.append(\"ADD C B\")\nprogram4.append(\"JUMP new\")\nprogram4.append(\"error:\")\nprogram4.append(\"MOV Z 1\")\nprogram4.append(\"JUMP over2\")\nprogram4.append(\"over:\")\nprogram4.append(\"ADD B 1\")\nprogram4.append(\"IF B < A JUMP test\")\nprogram4.append(\"over2:\")\nprogram4.append(\"IF Z == 1 JUMP over3\")\nprogram4.append(\"PRINT A\")\nprogram4.append(\"over3:\")\nprogram4.append(\"ADD A 1\")\nprogram4.append(\"IF A <= N JUMP begin\")\nresult = run(program4)\nprint(result)\n```\n\n<sample-output>\n\n[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Please respond to the course feedback questionnaire. The questionnaire results help us improve the course.",
+      "raw_source": "Please respond to the course feedback questionnaire. The questionnaire results help us improve the course."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "8675c2f0-2d0d-54b2-9ce2-7ba7692e95f0"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"8675c2f0-2d0d-54b2-9ce2-7ba7692e95f0\"></quiz>"
+    }
+  ]
+}

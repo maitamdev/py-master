@@ -1,0 +1,130 @@
+{
+  "audit_timestamp": "2026-09-16T09:29:54.553245+00:00",
+  "dataset_source": "data/export",
+  "summary": {
+    "total_lessons": 78,
+    "total_blocks": 3711,
+    "translatable_blocks": 2415,
+    "translated_blocks": 2415,
+    "non_translatable_blocks": 1296,
+    "untranslated_required": 0,
+    "total_exercises": 283
+  },
+  "block_types": {
+    "code": {
+      "count": 732,
+      "translatable": false,
+      "translated": 0,
+      "not_applicable": 732
+    },
+    "custom_component": {
+      "count": 28,
+      "translatable": false,
+      "translated": 0,
+      "not_applicable": 28
+    },
+    "exercise": {
+      "count": 283,
+      "translatable": true,
+      "translated": 283,
+      "not_applicable": 0
+    },
+    "heading": {
+      "count": 267,
+      "translatable": true,
+      "translated": 267,
+      "not_applicable": 0
+    },
+    "image": {
+      "count": 90,
+      "translatable": false,
+      "translated": 3,
+      "not_applicable": 87
+    },
+    "list": {
+      "count": 29,
+      "translatable": true,
+      "translated": 29,
+      "not_applicable": 0
+    },
+    "paragraph": {
+      "count": 1750,
+      "translatable": true,
+      "translated": 1750,
+      "not_applicable": 0
+    },
+    "quiz": {
+      "count": 49,
+      "translatable": true,
+      "translated": 0,
+      "not_applicable": 49
+    },
+    "sample_data": {
+      "count": 10,
+      "translatable": true,
+      "translated": 0,
+      "not_applicable": 10
+    },
+    "sample_output": {
+      "count": 390,
+      "translatable": false,
+      "translated": 0,
+      "not_applicable": 390
+    },
+    "table": {
+      "count": 3,
+      "translatable": true,
+      "translated": 3,
+      "not_applicable": 0
+    },
+    "text_box": {
+      "count": 80,
+      "translatable": true,
+      "translated": 80,
+      "not_applicable": 0
+    }
+  },
+  "exercises": {},
+  "assets": {
+    "total_images": 338,
+    "total_size_bytes": 50718909,
+    "total_size_mb": 48.4
+  },
+  "integrity_checks": {
+    "invalid_json_files": 0,
+    "duplicate_block_ids": 0,
+    "duplicate_exercise_ids": 0,
+    "duplicate_lesson_ids": 0,
+    "empty_translation_content": 0,
+    "altered_code_blocks": 0,
+    "broken_asset_references": 4,
+    "invalid_utf8": 0,
+    "orphan_exercises": 0,
+    "missing_source_hash": 0
+  },
+  "details": {
+    "broken_asset_refs": [
+      {
+        "block_id": "blk-part04-4-definite-iteration-0048",
+        "ref": "4_3_3.png",
+        "lesson": "part04-4-definite-iteration"
+      },
+      {
+        "block_id": "blk-part04-4-definite-iteration-0048",
+        "ref": "4_3_3.png",
+        "lesson": "part04-4-definite-iteration"
+      },
+      {
+        "block_id": "blk-part04-6-strings-and-lists-0081",
+        "ref": "4_3_3.png",
+        "lesson": "part04-6-strings-and-lists"
+      },
+      {
+        "block_id": "blk-part04-6-strings-and-lists-0081",
+        "ref": "4_3_3.png",
+        "lesson": "part04-6-strings-and-lists"
+      }
+    ]
+  },
+  "pass": true
+}

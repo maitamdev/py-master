@@ -1,0 +1,382 @@
+{
+  "id": "page-frontmatter-guide",
+  "slug": "frontmatter-guide",
+  "title_original": "Frontmatter-guide",
+  "title_vi": "",
+  "path": "/frontmatter-guide",
+  "source_path": "data/frontmatter-guide.md",
+  "source_hash": "7767d570a2bc9ec2c9c31823caa3b72408f984baf1e7242dee747d2fbf3f3c40",
+  "blocks_count": 23,
+  "blocks": [
+    {
+      "id": "blk-page-frontmatter-guide-0001",
+      "type": "heading",
+      "order": 1,
+      "source_hash": "482d6419c892db5f70c4b9e25cd1d8bd022988d45ec6bddfb9381da4fdb91fbd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Kaikki mahdolliset frontmatter-fieldit:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "8c7ed2d9be59e21cf7cfc7da75c6c0cb7dd751f4a870f0f9236f0f35cbaf584e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "banner"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0003",
+      "type": "list",
+      "order": 3,
+      "source_hash": "960283edc8cf0aa6ae58358a3dfa37c809ae0535b1c4aa926e04dcc3582ec6ef",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "- Ei pakollinen\n- Boolean-tyyppinen\n- Lisää projektin juuresta löytyvän banner.svg -kuvan sivun yläreunaan.\n- HUOM! Banneri lisätään vain, jos myös information\\_page on true"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "e564b4081d7a9ea4b00dada53bdae70c99b87b6fce869f0c3dd4d2bfa1e53e1c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "hidden"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0005",
+      "type": "list",
+      "order": 5,
+      "source_hash": "65f85f2fa7a15c0d73fe5eea12ee257f69243709d5b7a075ec64dd3c33c20c5f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "- Ei pakollinen\n- Boolean-tyyppinen\n- Sivua ei näy sivupalkissa (HUOM! käytä mieluummin hide\\_in\\_sidebar-kenttää, jos haluat piilottaa sivun ainoastaan sivupalkista)\n- Heittää 404, jos yrittää mennä sivun url:iin"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "aa0ce218be68fa354739224c3f71de1b3edd05e98360a568d8644092e44a92e0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "hide\\_in\\_sidebar"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0007",
+      "type": "list",
+      "order": 7,
+      "source_hash": "4f28d04eb0df07df13ba1b6ddf8aa446e218304ebe2092945bdc58aa889a1d14",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "- Ei pakollinen\n- Boolean-tyyppiä\n- Piilottaa sivun sivupalkista, jos se muuten näkyisi sivupalkissa. Sivupalkissa näkyy oletuksena kaikki index.md-nimiset tiedostot sekä kaikki data-kansion juuressa olevat markdown-tiedostot."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "79cf08882c7e24aaba36918df1b92b955193f2889b4b4240a4afdd2311cb749a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "information\\_page"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0009",
+      "type": "list",
+      "order": 9,
+      "source_hash": "a46b142452aad155a5aa966a63d6d8774b7fc01561eccc62a4469cc469e7e789",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "- Ei pakollinen\n- Boolean-tyyppinen\n- Sivupalkkia varten. Tiedostot, joissa information\\_page on true, ovat ensimmäisinä sivupalkissa"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "bd445c462b7eebbc242e27f08c7d981e97fb28faf17ea73862bf95119b60e0f7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "overview"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0011",
+      "type": "list",
+      "order": 11,
+      "source_hash": "29a611d1afa80c72ffef084d695fb99990bfeb4484a448a6e3bb89b2c11d7e8f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "- Ei pakollinen\n- Boolean-tyyppinen\n- Tarkoitettu kurssin osien indeksisivuille (esim osa-01/index.md). Piilottaa sivujen alareunassa olevan listan osan aliosista. HUOM! Nämä ovat piilotettu myös information\\_page-sivuista, eli tätä ei tarvitse erikseen asettaa false:ksi information\\_page-sivuilla"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "a0af9f865bf637e6736817f4ce552e4cdf7b8c36ea75bc254c1d1f0af744b5bf",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "path"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0013",
+      "type": "list",
+      "order": 13,
+      "source_hash": "e2afa8a1b920b4d913202138897dd56d515f6b99c2a7b61e95d5729e7ab3d6f8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "- Pakollinen\n- String-tyyppinen\n- Polku tiedostoon url:ssa, muodossa baseurl/path"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "a92ca9b684383cd2e3a3dd20a67d404d16046a862e757e79ae6d0e07db17a65a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "separator\\_after"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0015",
+      "type": "list",
+      "order": 15,
+      "source_hash": "8941270114800f8df51a37b2bc2d6d8e6d61767c2cd8f917672ad65b6ad020d5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "- Ei pakollinen\n- String-tyyppinen\n- Lisää sivupalkkiin jakajan sivun linkin jälkeen.\n- Jos asetettu tyhjäksi tekstiksi (separator\\_after: \"\"), pelkkä jakaja ilman otsikkoa. Jos ei tyhjä, jakajan alla on otsikkona asetettu teksti."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "15530d0b89a38fa17e0e2e9fdabd4c3baff55a30986904836b6c220044e533e1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "sidebar\\_priority"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0017",
+      "type": "list",
+      "order": 17,
+      "source_hash": "3966b3a4a75caf37541e74a331b08a22a5ef102cf08508ac60fc4478b58df515",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "- Ei pakollinen\n- Integer-tyyppinen\n- Tarkoitettu vain information\\_page-sivuille\n- Tällä kentällä voi uudelleenjärjestää sivupalkin information\\_page-sivujen linkkejä. Sivupalkissa on oletuksena ensin information\\_page-sivut, sitten muut. Sekä information\\_page-sivut että muut ovat aakkosjärjestyksessä.\n- sidebar\\_priority-kentän omaavat sivut tulevat ennen muita, ja ne ovat suuruusjärjestyksessä suurimmasta pienimpään (`sidebar_priority: 5000` tulee ennen `sidebar_priority: 2000`)"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "aaf2320646108059a87ab5017a86aee454f5378ed95003dbb2e12f4ca5266e0e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "title"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0019",
+      "type": "list",
+      "order": 19,
+      "source_hash": "a8f07fa73e42d6dffa408e9b475cdfa03095bbb59dc90073d13d361ecca1a207",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "- Pakollinen\n- String-tyyppinen\n- Sivun otsikko selaimen yläreunassa, selaimen välilehdessä, sekä itse tiedoston yläreunassa"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "f13982744186359ea8cd35c3f682ec0577f15911415ac1fa720b62a73b8201d3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "upcoming"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0021",
+      "type": "list",
+      "order": 21,
+      "source_hash": "5a612c0b2018643bfd9d8063be88d87fae73d691ca19e642ec7c5675ee30a4c1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "- Ei pakollinen\n- String-tyyppinen\n- Jos asetettu, sivun linkki sivupalkissa on harmaana, ei klikattavissa, ja sen vieressä lukee asetettu teksti.\n- Suosittelemme, että tekstiksi asetetaan sivun julkaisupäivämäärä muodossa \"pv.kk.\", koska kenttä on sen verran pieni ettei vuosiluku mahdu kokonaan näkyville."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "47d9d68406864e053fc806967e08f1338c0fcb84326f3f3082dd61f76e6f788a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "vocabulary\\_page"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-frontmatter-guide-0023",
+      "type": "list",
+      "order": 23,
+      "source_hash": "84210d6236775ad0fa627befc6d50eb1968320014060ea64b81b1519447ab890",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "- Ei pakollinen\n- Boolean-tyyppinen\n- Tarkoitettu ainoastaan sanastosivua varten. Jos tämä on asetettu, sivulla on pääsy dataan sanaston sanoista."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    }
+  ]
+}

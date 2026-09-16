@@ -1,0 +1,16 @@
+{
+  "id": "ex-part10-12_course_records",
+  "lesson_id": "part10-4-application-development",
+  "part": 10,
+  "tmc_name": "part10-12_course_records",
+  "title_original": "CourseRecords",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write an interactive application for keeping track of your studies. The internal structure is up to you, but this would be a good opportunity to practice creating a similar structure as in the PhoneBook example above.\n\nYour program should work as follows:\n\n<sample-output>\n\n1 add course\n2 get course data\n3 statistics\n0 exit\n\ncommand: **1**\ncourse: **ItP**\ngrade: **3**\ncredits: **5**\n\ncommand: **2**\ncourse: **ItP**\nItP (5 cr) grade 3\n\ncommand: **1**\ncourse: **ItP**\ngrade: **5**\ncredits: **5**\n\ncommand: **2**\ncourse: **ItP**\nItP (5 cr) grade 5\n\ncommand: **1**\ncourse: **ItP**\ngrade: **1**\ncredits: **5**\n\ncommand: **2**\ncourse: **ItP**\nItP (5 cr) grade 5\n\ncommand: **2**\ncourse: **Introduction to Java**\nno entry for this course\n\ncommand: **1**\ncourse: **ACiP**\ngrade: **1**\ncredits: **10**\n\ncommand: **1**\ncourse: **ItAI**\ngrade: **2**\ncredits: **5**\n\ncommand: **1**\ncourse: **Algo101**\ngrade: **4**\ncredits: **1**\n\ncommand: **1**\ncourse: **CompModels**\ngrade: **5**\ncredits: **8**\n\ncommand: **3**\n5 completed courses, a total of 29 credits\nmean 3.4\ngrade distribution\n5: xx\n4: x\n3:\n2: x\n1: x\n\ncommand: **0**\n\n</sample-output>\n\nEach course name should result in a single entry in the records. A grade may be raised by re-entering the course details, but the grade should never be lowered.\n\nThis exercise is worth two exercise points. The first is granted after the commands 1, 2 and 0 work correctly in your program. The second is granted if command 3 also works as expected.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "48edaee3d9f2b8cd10836f70defc1497a2838cd71cbf3a9fb9d323ea7c9d3e0c",
+  "order": 102
+}

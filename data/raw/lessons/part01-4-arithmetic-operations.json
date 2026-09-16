@@ -1,0 +1,452 @@
+{
+  "id": "part01-4-arithmetic-operations",
+  "part": 1,
+  "part_slug": "part-1",
+  "slug": "4-arithmetic-operations",
+  "is_part_index": false,
+  "title_original": "Arithmetic operations",
+  "path": "/part-1/4-arithmetic-operations",
+  "source_path": "data/part-1/4-arithmetic-operations.md",
+  "source_hash": "62871d2e9df6030ddca719bd9ae403ec1885a013555938bdddd320f03d50640f",
+  "frontmatter": {
+    "path": "/part-1/4-arithmetic-operations",
+    "title": "Arithmetic operations",
+    "hidden": false
+  },
+  "chunks_count": 70,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will be able to use variables in various arithmetic operations\n- You will know how to deal with numbers in user input\n- You will know how to cast values into other fundamental data types",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will be able to use variables in various arithmetic operations\n- You will know how to deal with numbers in user input\n- You will know how to cast values into other fundamental data types\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the previous sections you've seen examples with basic arithmetics. In the following table you can see the most common arithmetic operators in Python, with examples:",
+      "raw_source": "In the previous sections you've seen examples with basic arithmetics. In the following table you can see the most common arithmetic operators in Python, with examples:"
+    },
+    {
+      "raw_type": "table",
+      "content": "| Operator      | Purpose       | Example      | Result |\n|:-------------:|---------------|--------------|-------|\n| `+`           | Addition      | `2 + 4`      |`6`    |\n| `-`           | Subtraction   | `10 - 2.5`   |`7.5`  |\n| `*`           | Multiplication | `-2 * 123`  |`-246` |\n| `/`           | Division (floating point result) | `9 / 2`     | `4.5` |\n| `//`          | Division (integer result)              | `9 // 2`    | `4`   |\n| `%`           | Modulo        | `9 % 2`      |`1`    |\n| `**`          | Exponentiation | `2 ** 3`    |`8`    |",
+      "raw_source": "| Operator      | Purpose       | Example      | Result |\n|:-------------:|---------------|--------------|-------|\n| `+`           | Addition      | `2 + 4`      |`6`    |\n| `-`           | Subtraction   | `10 - 2.5`   |`7.5`  |\n| `*`           | Multiplication | `-2 * 123`  |`-246` |\n| `/`           | Division (floating point result) | `9 / 2`     | `4.5` |\n| `//`          | Division (integer result)              | `9 // 2`    | `4`   |\n| `%`           | Modulo        | `9 % 2`      |`1`    |\n| `**`          | Exponentiation | `2 ** 3`    |`8`    |"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The order of operations is familiar from mathematics: first calculate the exponents, then multiplication and division, and finally addition and subtraction. The order can be changed with parentheses.",
+      "raw_source": "The order of operations is familiar from mathematics: first calculate the exponents, then multiplication and division, and finally addition and subtraction. The order can be changed with parentheses."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "For example this bit of code",
+      "raw_source": "For example this bit of code"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "print(2 + 3 * 3)\nprint((2 + 3) * 3)",
+      "raw_source": "```python\nprint(2 + 3 * 3)\nprint((2 + 3) * 3)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "prints out",
+      "raw_source": "prints out"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "11\n15",
+      "raw_source": "<sample-output>\n\n11\n15\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Operands, operators and data types",
+      "raw_source": "## Operands, operators and data types"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A calculation usually consists of *operands* and *operators*:",
+      "raw_source": "A calculation usually consists of *operands* and *operators*:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "1_4_1.png"
+      },
+      "raw_source": "<img src=\"1_4_1.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The data type of an operand usually determines the data type of the result: if two integers are added together, the result will also be an integer. If a floating point number is subtracted from another floating point number, the result is a floating point number. In fact, if a single one of the operands in an expression is a floating point number, the result will also be a floating point number, regardless of the other operands.",
+      "raw_source": "The data type of an operand usually determines the data type of the result: if two integers are added together, the result will also be an integer. If a floating point number is subtracted from another floating point number, the result is a floating point number. In fact, if a single one of the operands in an expression is a floating point number, the result will also be a floating point number, regardless of the other operands."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Division `/` is an exception to this rule. Its result is a floating point number, even if the operands are integers. For example `1 / 5` will result in the floating point number `0.2`.",
+      "raw_source": "Division `/` is an exception to this rule. Its result is a floating point number, even if the operands are integers. For example `1 / 5` will result in the floating point number `0.2`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Example:",
+      "raw_source": "Example:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "height = 172.5\nweight = 68.55\n\n# the Body Mass Index, or BMI, is calculated by dividing body mass with the square of height\n# height is converted into metres in the formula\nbmi = weight / (height / 100) ** 2\n\nprint(f\"The BMI is {bmi}\")",
+      "raw_source": "```python\nheight = 172.5\nweight = 68.55\n\n# the Body Mass Index, or BMI, is calculated by dividing body mass with the square of height\n# height is converted into metres in the formula\nbmi = weight / (height / 100) ** 2\n\nprint(f\"The BMI is {bmi}\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This program prints out the following:",
+      "raw_source": "This program prints out the following:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The BMI is 23.037177063642087",
+      "raw_source": "<sample-output>\n\nThe BMI is 23.037177063642087\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Notice Python also has an integer division operator `//`. If the operands are integers, it will produce an integer. The result is rounded down to the nearest integer. For example this program",
+      "raw_source": "Notice Python also has an integer division operator `//`. If the operands are integers, it will produce an integer. The result is rounded down to the nearest integer. For example this program"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "x = 3\ny = 2\n\nprint(f\"/ operator {x/y}\")\nprint(f\"// operator {x//y}\")",
+      "raw_source": "```python\nx = 3\ny = 2\n\nprint(f\"/ operator {x/y}\")\nprint(f\"// operator {x//y}\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "prints out",
+      "raw_source": "prints out"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "/ operator 1.5\n// operator 1",
+      "raw_source": "<sample-output>\n\n/ operator 1.5\n// operator 1\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Numbers as input",
+      "raw_source": "## Numbers as input"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We have already used the `input` command to read in strings from the user. The same function can be used to read in numbers, but the string produced by the function must then be converted to a numeric data type in the program code. In the previous section we cast integers as strings with the `str` function. The same basic principle applies here, but the name of the casting function will be different.",
+      "raw_source": "We have already used the `input` command to read in strings from the user. The same function can be used to read in numbers, but the string produced by the function must then be converted to a numeric data type in the program code. In the previous section we cast integers as strings with the `str` function. The same basic principle applies here, but the name of the casting function will be different."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A string can be converted into an integer with the function `int`. The following program asks the user for their year of birth and stores it in the variable `input_str`. The program then creates another variable `year`, which contains the year converted into an integer. After this the calculation `2021-year` is possible, using the user-supplied value.",
+      "raw_source": "A string can be converted into an integer with the function `int`. The following program asks the user for their year of birth and stores it in the variable `input_str`. The program then creates another variable `year`, which contains the year converted into an integer. After this the calculation `2021-year` is possible, using the user-supplied value."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "input_str = input(\"Which year were you born? \")\nyear = int(input_str)\nprint(f\"Your age at the end of the year 2021: {2021 - year}\" )",
+      "raw_source": "```python\ninput_str = input(\"Which year were you born? \")\nyear = int(input_str)\nprint(f\"Your age at the end of the year 2021: {2021 - year}\" )\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Which year were you born? **1995**\nYour age at the end of the year 2021: 26",
+      "raw_source": "<sample-output>\n\nWhich year were you born? **1995**\nYour age at the end of the year 2021: 26\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Usually you do not need to create two separate variables (like `input_str` and `year` above) to read a number value from the user. Instead, reading the input with the `input` function and converting it with the `int` function can be achieved in one go:",
+      "raw_source": "Usually you do not need to create two separate variables (like `input_str` and `year` above) to read a number value from the user. Instead, reading the input with the `input` function and converting it with the `int` function can be achieved in one go:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "year = int(input(\"Which year were you born? \"))\nprint(f\"Your age at the end of the year 2021: {2021 - year}\" )",
+      "raw_source": "```python\nyear = int(input(\"Which year were you born? \"))\nprint(f\"Your age at the end of the year 2021: {2021 - year}\" )\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Similarly, a string can be converted into a floating point number with the function `float`. This programs asks the user for their height and weight, and uses these to calculate their BMI:",
+      "raw_source": "Similarly, a string can be converted into a floating point number with the function `float`. This programs asks the user for their height and weight, and uses these to calculate their BMI:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "height = float(input(\"What is your height? \"))\nweight = float(input(\"What is your weight? \"))\n\nheight = height / 100\nbmi = weight / height ** 2\n\nprint(f\"The BMI is {bmi}\")",
+      "raw_source": "```python\nheight = float(input(\"What is your height? \"))\nweight = float(input(\"What is your weight? \"))\n\nheight = height / 100\nbmi = weight / height ** 2\n\nprint(f\"The BMI is {bmi}\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "An example printout from the program:",
+      "raw_source": "An example printout from the program:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "What is your height? **163**\nWhat is your weight? **74.45**\nThe BMI is 28.02137829801649",
+      "raw_source": "<sample-output>\n\nWhat is your height? **163**\nWhat is your weight? **74.45**\nThe BMI is 28.02137829801649\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Times five",
+        "tmcname": "part01-13_times_five"
+      },
+      "inner_content": "Please write a program which asks the user for a number. The program then prints out the number multiplied by five.\n\nThe program should function as follows:\n\n<sample-output>\n\nPlease type in a number: **3**\n3 times 5 is 15\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Times five\" tmcname=\"part01-13_times_five\">\n\nPlease write a program which asks the user for a number. The program then prints out the number multiplied by five.\n\nThe program should function as follows:\n\n<sample-output>\n\nPlease type in a number: **3**\n3 times 5 is 15\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Name and age",
+        "tmcname": "part01-14_name_and_age"
+      },
+      "inner_content": "Please write a program which asks the user for their name and year of birth. The program then prints out a message as follows:\n\n<sample-output>\n\nWhat is your name? **Frances Fictitious**\nWhich year were you born? **1990**\nHi Frances Fictitious, you will be 31 years old at the end of the year 2021\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Name and age\" tmcname=\"part01-14_name_and_age\">\n\nPlease write a program which asks the user for their name and year of birth. The program then prints out a message as follows:\n\n<sample-output>\n\nWhat is your name? **Frances Fictitious**\nWhich year were you born? **1990**\nHi Frances Fictitious, you will be 31 years old at the end of the year 2021\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Using variables",
+      "raw_source": "## Using variables"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's have a look at a program which calculates the sum of three numbers given by the user:",
+      "raw_source": "Let's have a look at a program which calculates the sum of three numbers given by the user:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number1 = int(input(\"First number: \"))\nnumber2 = int(input(\"Second number: \"))\nnumber3 = int(input(\"Third number: \"))\n\nsum = number1 + number2 + number3\nprint(f\"The sum of the numbers: {sum}\")",
+      "raw_source": "```python\nnumber1 = int(input(\"First number: \"))\nnumber2 = int(input(\"Second number: \"))\nnumber3 = int(input(\"Third number: \"))\n\nsum = number1 + number2 + number3\nprint(f\"The sum of the numbers: {sum}\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "An example execution of the program:",
+      "raw_source": "An example execution of the program:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "First number: **5**\nSecond number: **21**\nThird number: **7**\nThe sum of the numbers: 33",
+      "raw_source": "<sample-output>\n\nFirst number: **5**\nSecond number: **21**\nThird number: **7**\nThe sum of the numbers: 33\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The program uses four different variables, but two would easily suffice in this case:",
+      "raw_source": "The program uses four different variables, but two would easily suffice in this case:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "sum = 0\n\nnumber = int(input(\"First number: \"))\nsum = sum + number\n\nnumber = int(input(\"Second number: \"))\nsum = sum + number\n\nnumber = int(input(\"Third number: \"))\nsum = sum + number\n\nprint(f\"The sum of the numbers: {sum}\")",
+      "raw_source": "```python\nsum = 0\n\nnumber = int(input(\"First number: \"))\nsum = sum + number\n\nnumber = int(input(\"Second number: \"))\nsum = sum + number\n\nnumber = int(input(\"Third number: \"))\nsum = sum + number\n\nprint(f\"The sum of the numbers: {sum}\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Now all inputs from the user are read into the one and the same variable `number`. The value of the variable `sum` is _increased_ by the value of the variable `number` each time the user inputs a new number.",
+      "raw_source": "Now all inputs from the user are read into the one and the same variable `number`. The value of the variable `sum` is _increased_ by the value of the variable `number` each time the user inputs a new number."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's take a closer look at this command:",
+      "raw_source": "Let's take a closer look at this command:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "sum = sum + number",
+      "raw_source": "```python\nsum = sum + number\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here, the value of the variable `sum` and the value of the variable `number` are added together, and the result is stored back in the variable `sum`. For example, if before the command the value of `sum` is 3 and the value of `number` is 2, after the command is executed, the value of `sum` is 5.",
+      "raw_source": "Here, the value of the variable `sum` and the value of the variable `number` are added together, and the result is stored back in the variable `sum`. For example, if before the command the value of `sum` is 3 and the value of `number` is 2, after the command is executed, the value of `sum` is 5."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Increasing the value of a variable is a very common operation. As such, there is a commonly used shorthand notation which achieves the same result as the explicit summing up above:",
+      "raw_source": "Increasing the value of a variable is a very common operation. As such, there is a commonly used shorthand notation which achieves the same result as the explicit summing up above:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "sum += number",
+      "raw_source": "```python\nsum += number\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This allows us to write the above program a little more concisely:",
+      "raw_source": "This allows us to write the above program a little more concisely:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "sum = 0\n\nnumber = int(input(\"First number: \"))\nsum += number\n\nnumber = int(input(\"Second number: \"))\nsum += number\n\nnumber = int(input(\"Third number: \"))\nsum += number\n\nprint(f\"The sum of the numbers: {sum}\")",
+      "raw_source": "```python\nsum = 0\n\nnumber = int(input(\"First number: \"))\nsum += number\n\nnumber = int(input(\"Second number: \"))\nsum += number\n\nnumber = int(input(\"Third number: \"))\nsum += number\n\nprint(f\"The sum of the numbers: {sum}\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In fact, we don't necessarily need the variable `number` at all. The inputs from the user can also be processed like this:",
+      "raw_source": "In fact, we don't necessarily need the variable `number` at all. The inputs from the user can also be processed like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "sum = 0\n\nsum += int(input(\"First number: \"))\nsum += int(input(\"Second number: \"))\nsum += int(input(\"Third number: \"))\n\nprint(f\"The sum of the numbers: {sum}\")",
+      "raw_source": "```python\nsum = 0\n\nsum += int(input(\"First number: \"))\nsum += int(input(\"Second number: \"))\nsum += int(input(\"Third number: \"))\n\nprint(f\"The sum of the numbers: {sum}\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Of course, it will depend on the context how many variables are needed. If it is required to remember each value the user inputs, it will not be possible to \"reuse\" the same variable to read different values from the user. Consider the following:",
+      "raw_source": "Of course, it will depend on the context how many variables are needed. If it is required to remember each value the user inputs, it will not be possible to \"reuse\" the same variable to read different values from the user. Consider the following:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number1 = int(input(\"First number: \"))\nnumber2 = int(input(\"Second number: \"))\n\nprint(f\"{number1} + {number2} = {number1+number2}\")",
+      "raw_source": "```python\nnumber1 = int(input(\"First number: \"))\nnumber2 = int(input(\"Second number: \"))\n\nprint(f\"{number1} + {number2} = {number1+number2}\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "First number: **2**\nSecond number: **3**\n2 + 3 = 5",
+      "raw_source": "<sample-output>\n\nFirst number: **2**\nSecond number: **3**\n2 + 3 = 5\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "On the other hand, the above program does not have a named variable for storing the sum of the two values.",
+      "raw_source": "On the other hand, the above program does not have a named variable for storing the sum of the two values."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "\"Reusing\" a variable only makes sense when there is a need to temporarily store things of a similar type and purpose, for example when summing numbers.",
+      "raw_source": "\"Reusing\" a variable only makes sense when there is a need to temporarily store things of a similar type and purpose, for example when summing numbers."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the following example the variable `data` is used to first store the name of the user, and then their age. This is not at all sensible.",
+      "raw_source": "In the following example the variable `data` is used to first store the name of the user, and then their age. This is not at all sensible."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "data = input(\"What is your name? \")\nprint(\"Hi \" + data + \"!\")\n\ndata = int(input(\"What is your age? \"))\n# program continues...",
+      "raw_source": "```python\ndata = input(\"What is your name? \")\nprint(\"Hi \" + data + \"!\")\n\ndata = int(input(\"What is your age? \"))\n# program continues...\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A better idea is to use separate variables, with _descriptive_ names:",
+      "raw_source": "A better idea is to use separate variables, with _descriptive_ names:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "name = input(\"What is your name? \")\nprint(\"Hi \" + name + \"!\")\n\nage = int(input(\"What is your age? \"))\n# program continues...",
+      "raw_source": "```python\nname = input(\"What is your name? \")\nprint(\"Hi \" + name + \"!\")\n\nage = int(input(\"What is your age? \"))\n# program continues...\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Seconds in a day",
+        "tmcname": "part01-15_seconds_in_a_day"
+      },
+      "inner_content": "Please write a program which asks the user for a number of days. The program then prints out the number of seconds in the amount of days given.\n\nThe program should function as follows:\n\n<sample-output>\n\nHow many days? **1**\nSeconds in that many days: 86400\n\n</sample-output>\n\nAnother example:\n\n<sample-output>\n\nHow many days? **7**\nSeconds in that many days: 604800\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Seconds in a day\" tmcname=\"part01-15_seconds_in_a_day\">\n\nPlease write a program which asks the user for a number of days. The program then prints out the number of seconds in the amount of days given.\n\nThe program should function as follows:\n\n<sample-output>\n\nHow many days? **1**\nSeconds in that many days: 86400\n\n</sample-output>\n\nAnother example:\n\n<sample-output>\n\nHow many days? **7**\nSeconds in that many days: 604800\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Fix the code: Product",
+        "tmcname": "part01-16_product"
+      },
+      "inner_content": "This program asks the user for three numbers. The program then prints out their product, that is, the numbers multiplied by each other. There is, however, something wrong with the program - it doesn't work quite right, as you can see if you run it. Please fix it.\n\nAn example of the expected execution of the program:\n\n<sample-output>\n\nPlease type in the first number: **2**\nPlease type in the second number: **3**\nPlease type in the third number: **5**\nThe product is 30\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Fix the code: Product\" tmcname=\"part01-16_product\">\n\nThis program asks the user for three numbers. The program then prints out their product, that is, the numbers multiplied by each other. There is, however, something wrong with the program - it doesn't work quite right, as you can see if you run it. Please fix it.\n\nAn example of the expected execution of the program:\n\n<sample-output>\n\nPlease type in the first number: **2**\nPlease type in the second number: **3**\nPlease type in the third number: **5**\nThe product is 30\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Sum and product",
+        "tmcname": "part01-17_sum_and_product"
+      },
+      "inner_content": "Please write a program which asks the user for two numbers. The program will then print out the sum and the product of the two numbers.\n\nThe program should function as follows:\n\n<sample-output>\n\nNumber 1: **3**\nNumber 2: **7**\nThe sum of the numbers: 10\nThe product of the numbers: 21\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Sum and product\" tmcname=\"part01-17_sum_and_product\">\n\nPlease write a program which asks the user for two numbers. The program will then print out the sum and the product of the two numbers.\n\nThe program should function as follows:\n\n<sample-output>\n\nNumber 1: **3**\nNumber 2: **7**\nThe sum of the numbers: 10\nThe product of the numbers: 21\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Sum and mean",
+        "tmcname": "part01-18_sum_and_mean"
+      },
+      "inner_content": "Please write a program which asks the user for four numbers. The program then prints out the sum and the mean of the numbers.\n\nThe program should function as follows:\n\n<sample-output>\n\nNumber 1: **2**\nNumber 2: **1**\nNumber 3: **6**\nNumber 4: **7**\nThe sum of the numbers is 16 and the mean is 4.0\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Sum and mean\" tmcname=\"part01-18_sum_and_mean\">\n\nPlease write a program which asks the user for four numbers. The program then prints out the sum and the mean of the numbers.\n\nThe program should function as follows:\n\n<sample-output>\n\nNumber 1: **2**\nNumber 2: **1**\nNumber 3: **6**\nNumber 4: **7**\nThe sum of the numbers is 16 and the mean is 4.0\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Food expenditure",
+        "tmcname": "part01-19_food_expenditure"
+      },
+      "inner_content": "Please write a program which estimates a user's typical food expenditure.\n\nThe program asks the user how many times a week they eat at the student cafeteria. Then it asks for the price of a typical student lunch, and for money spent on groceries during the week.\n\nBased on this information the program calculates the user's typical food expenditure both weekly and daily.\n\nThe program should function as follows:\n\n<sample-output>\n\nHow many times a week do you eat at the student cafeteria? **4**\nThe price of a typical student lunch? **2.5**\nHow much money do you spend on groceries in a week? **28.5**\n\nAverage food expenditure:\nDaily: 5.5 euros\nWeekly: 38.5 euros\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Food expenditure\" tmcname=\"part01-19_food_expenditure\">\n\nPlease write a program which estimates a user's typical food expenditure.\n\nThe program asks the user how many times a week they eat at the student cafeteria. Then it asks for the price of a typical student lunch, and for money spent on groceries during the week.\n\nBased on this information the program calculates the user's typical food expenditure both weekly and daily.\n\nThe program should function as follows:\n\n<sample-output>\n\nHow many times a week do you eat at the student cafeteria? **4**\nThe price of a typical student lunch? **2.5**\nHow much money do you spend on groceries in a week? **28.5**\n\nAverage food expenditure:\nDaily: 5.5 euros\nWeekly: 38.5 euros\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Students in groups",
+        "tmcname": "part01-20_students_in_groups"
+      },
+      "inner_content": "Please write a program which asks for the number of students on a course and the desired group size. The program will then print out the number of groups formed from the students on the course. If the division is not even, one of the groups may have fewer members than specified.\n\nIf you can't get your code working as expected, it is absolutely okay to move on and come back to this exercise later. The topic of the next section is [conditional statements](/part-1/5-conditional-statements). This exercise can also be solved using a conditional construction.\n\n<sample-output>\n\nHow many students on the course? **8**\nDesired group size? **4**\nNumber of groups formed: 2\n\n</sample-output>\n\n<sample-output>\n\nHow many students on the course? **11**\nDesired group size? **3**\nNumber of groups formed: 4\n\n</sample-output>\n\nHint: the integer division operator `//` could come in handy here.",
+      "raw_source": "<in-browser-programming-exercise name=\"Students in groups\" tmcname=\"part01-20_students_in_groups\">\n\nPlease write a program which asks for the number of students on a course and the desired group size. The program will then print out the number of groups formed from the students on the course. If the division is not even, one of the groups may have fewer members than specified.\n\nIf you can't get your code working as expected, it is absolutely okay to move on and come back to this exercise later. The topic of the next section is [conditional statements](/part-1/5-conditional-statements). This exercise can also be solved using a conditional construction.\n\n<sample-output>\n\nHow many students on the course? **8**\nDesired group size? **4**\nNumber of groups formed: 2\n\n</sample-output>\n\n<sample-output>\n\nHow many students on the course? **11**\nDesired group size? **3**\nNumber of groups formed: 4\n\n</sample-output>\n\nHint: the integer division operator `//` could come in handy here.\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!--",
+      "raw_source": "<!--"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A quiz to review the contents of this section:",
+      "raw_source": "A quiz to review the contents of this section:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "d781d54e-9792-5a79-a018-168940390580"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"d781d54e-9792-5a79-a018-168940390580\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    }
+  ]
+}

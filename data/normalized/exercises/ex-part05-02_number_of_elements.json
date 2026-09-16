@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-02_number_of_elements",
+  "lesson_id": "part05-1-more-lists",
+  "part": 5,
+  "tmc_name": "part05-02_number_of_elements",
+  "title_original": "Number of matching elements",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `count_matching_elements(my_matrix: list, element: int)`, which takes a two-dimensional array of integers and a single integer value as its arguments. The function then counts how many elements within the matrix match the argument value.\n\nAn example of how the function should work:\n\n```python\nm = [[1, 2, 1], [0, 3, 4], [1, 0, 0]]\nprint(count_matching_elements(m, 1))\n```\n\n<sample-output>\n\n3\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "m = [[1, 2, 1], [0, 3, 4], [1, 0, 0]]\nprint(count_matching_elements(m, 1))",
+  "grading_data_available": false,
+  "source_hash": "13f8f215c8d3576593057c2983b20088b1fabfb0552acdb30e60ad7838fed86a",
+  "order": 87
+}

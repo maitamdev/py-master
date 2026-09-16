@@ -1,0 +1,719 @@
+{
+  "id": "part04-5-print-statement-formatting",
+  "part": 4,
+  "part_slug": "part-4",
+  "slug": "5-print-statement-formatting",
+  "is_part_index": false,
+  "title_original": "Print statement formatting",
+  "title_vi": "",
+  "path": "/part-4/5-print-statement-formatting",
+  "source_path": "data/part-4/5-print-statement-formatting.md",
+  "source_hash": "2aa516246687ccb8dd8c993830640da9b5a51d5f842cd1acdeb4addf8e8a66f9",
+  "order": 1,
+  "blocks_count": 39,
+  "blocks": [
+    {
+      "id": "blk-part04-5-print-statement-formatting-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "cf8a61b7cee33929098ae4759d0c8e171f6a0c7d15046526df73652a2e4daa1d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know how to use arguments to format the result of the `print` command\n- You will be able to use f-strings to format printouts"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "d639655e6e6d689abf9220ced2b99541fe9253d19e32e02099bedc09047e63be",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "So far we have learnt three methods for formulating the argument given to the `print` command."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "aabedcd20f007582643a6c74a67707703c998092353d730dffcae8da193ef67d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The first is the `+` operator for strings. It allows simple concatenation of string segments:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0004",
+      "type": "code",
+      "order": 4,
+      "source_hash": "24ec393687f729020f2293b46ee09bf062200d14902c29639b041e3e89685464",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "name = \"Mark\"\nage = 37\nprint(\"Hi \" + name + \" your age is \" + str(age) + \" years\" )"
+      },
+      "translation": {
+        "language": "code",
+        "content": "name = \"Mark\"\nage = 37\nprint(\"Hi \" + name + \" your age is \" + str(age) + \" years\" )"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "24ec393687f729020f2293b46ee09bf062200d14902c29639b041e3e89685464",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "07a102c9c4613de3d8f578b21cf0a5e07d79a710042b63d93694fd0f759d06b0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This method will not work if any of the segments are not strings. In the example above, the variable `age` has been converted into a string with the `str` function, since it is an integer and cannot be concatenated as is."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "70d32a8aa4a6b0ebdf8aea24e3b00b82b0373768416ff458ea7fad26cafc9718",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The second method is considering each segment of the argument as a separate argument, and splitting them up with commas:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0007",
+      "type": "code",
+      "order": 7,
+      "source_hash": "5b26b3ce0892676ce9640fdcc37c159aaafc1db2557eba6a6ce489992cff6618",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(\"Hi\", name, \"your age is\", age, \"years\" )"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(\"Hi\", name, \"your age is\", age, \"years\" )"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5b26b3ce0892676ce9640fdcc37c159aaafc1db2557eba6a6ce489992cff6618",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "8077011d0dc7faa0e5590e2b4a2236fe813a5c7904ed69275b947c284894cd83",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This code produces the exact same result as the previous version. The `print` command normally adds a space character between each argument.The advantage here is that the segments can be of different types, so there is no need to convert anything into a string."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "4138441194e82bf1e6d1a34f139f43c0c64a1586e8963e68abe1f4a653f0f3dc",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If you want to remove the automatically added spaces, you can add a special named argument `sep`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0010",
+      "type": "code",
+      "order": 10,
+      "source_hash": "e5f9da0bb04754494752a23a8bd91da7c3019d1c7cb18d7d5cb55868cf2d65df",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(\"Hi\", name, \"your age is\", age, \"years\", sep=\"\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(\"Hi\", name, \"your age is\", age, \"years\", sep=\"\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e5f9da0bb04754494752a23a8bd91da7c3019d1c7cb18d7d5cb55868cf2d65df",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "013a00455bcf75ac8c4731abfcc720869e2f0efe229ed1c1bec5ac36d064f622",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This prints out"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0012",
+      "type": "sample_output",
+      "order": 12,
+      "source_hash": "35529d5e1014f5e4fb39ca6cfe5167f8366c88f064846501cd9f6b7254dd9725",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "HiMarkyour age is37years"
+      },
+      "translation": {
+        "language": "text",
+        "content": "HiMarkyour age is37years"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHiMarkyour age is37years\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "148e7402153de310b05044d53b7d6800efd60b0b151504ae6698c901df11b8aa",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The argument `sep=\"\"` is a _keyword argument_, and its name is short for _separator_. It specifies that the other arguments should now be separated by an empty string. You can set the separator to any string you like. For example, if you wanted each argument on a separate line, you could set the separator to `\"\\n\"`, which is the newline character:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "3f4944458f029d02924250a219dd4513571cccfed89c4d29150120aa5b8244fd",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(\"Hi\", name, \"your age is\", age, \"years\", sep=\"\\n\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(\"Hi\", name, \"your age is\", age, \"years\", sep=\"\\n\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3f4944458f029d02924250a219dd4513571cccfed89c4d29150120aa5b8244fd",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0015",
+      "type": "sample_output",
+      "order": 15,
+      "source_hash": "3ff962b80afefd79943346dbaeae4b84710e365a925fb203e2fa1ab066087b78",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hi\nMark\nyour age is\n37\nyears"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hi\nMark\nyour age is\n37\nyears"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHi\nMark\nyour age is\n37\nyears\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "be7f6cff7b0cce5e5aef86c16c8199885496dd94be8c0d8ba634177801ee3051",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "By default, the print command always ends in a newline character, but you can change this as well. The keyword argument `end` specifies what is put at the end of a line. Setting `end` to an empty string means that there is no newline character at the end of the printout:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0017",
+      "type": "code",
+      "order": 17,
+      "source_hash": "4993bf1405e28c0ecd93a6944a1f5103d71d5d0124903bc21522f8f45d22badd",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(\"Hi \", end=\"\")\nprint(\"there!\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(\"Hi \", end=\"\")\nprint(\"there!\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4993bf1405e28c0ecd93a6944a1f5103d71d5d0124903bc21522f8f45d22badd",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0018",
+      "type": "sample_output",
+      "order": 18,
+      "source_hash": "d451d2a79e0a1f87270b313ca7d9e589359cb3d2aa906594529dcbc0535fd0f3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hi there!"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hi there!"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHi there!\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0019",
+      "type": "heading",
+      "order": 19,
+      "source_hash": "edd2842aa99016eef92213527f38f773c803e29ce2198fec2a50d9536fb57272",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "f-strings"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "fc4cb7760c363fc7ac5d6ab7a1b0dd04db1990e2690c8eaf99f5cbf6fd50e8b7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The third method to prepare strings is f-strings. The previous example with the name and the age would look like this formulated with f-strings:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0021",
+      "type": "code",
+      "order": 21,
+      "source_hash": "8374dd19a952eea3d95cc18f4f26adc4e970a923ec80ab24658a2daea034e6d8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "name = \"Erkki\"\nage = 39\nprint(f\"Hi {name} your age is {age} years\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "name = \"Erkki\"\nage = 39\nprint(f\"Hi {name} your age is {age} years\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8374dd19a952eea3d95cc18f4f26adc4e970a923ec80ab24658a2daea034e6d8",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "2d3e01808fb800c5ab4e81187c6e9057a9ec7842b28f76b86dbaa8f7634cb7b4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Thus far we have only used very simple f-strings, but they can be very versatile in formatting string type content. One very common use case is setting the number of decimals that are printed out with a floating point number. By default the number is quite high:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0023",
+      "type": "code",
+      "order": 23,
+      "source_hash": "256d946a0dc537a51f55cee273ee9d20f23516ebf6e63bfa40bca9b52b8bc146",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = 1/3\nprint(f\"The number is {number}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = 1/3\nprint(f\"The number is {number}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "256d946a0dc537a51f55cee273ee9d20f23516ebf6e63bfa40bca9b52b8bc146",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0024",
+      "type": "sample_output",
+      "order": 24,
+      "source_hash": "9d4b90698ed694d8f1266c59c53380db9556003f85fd79bf612e89c62267ea7c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The number is 0.333333333333333"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The number is 0.333333333333333"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe number is 0.333333333333333\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "c378bbe65752ef68297eb979a52f2308c4bb81b6ced79594cc545ab8fa3a359d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The specific format we want the number to be displayed in can be set within the curly brackets of the variable expression. Let's add a colon character and a _format specifier_ after the variable name:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0026",
+      "type": "code",
+      "order": 26,
+      "source_hash": "99d38d107664f37709aa434665930fa96ef123aec956fbc3617a2cced70246e4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = 1/3\nprint(f\"The number is {number:.2f}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = 1/3\nprint(f\"The number is {number:.2f}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "99d38d107664f37709aa434665930fa96ef123aec956fbc3617a2cced70246e4",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0027",
+      "type": "code",
+      "order": 27,
+      "source_hash": "cee516d9d78e3ae97a33c33fec9f32498534e2497f0643b3236ca2ec89ab4e54",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "The number is 0.33"
+      },
+      "translation": {
+        "language": "code",
+        "content": "The number is 0.33"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "cee516d9d78e3ae97a33c33fec9f32498534e2497f0643b3236ca2ec89ab4e54",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "3669883ff3d3688c8cb5a640c564f1d4198c71f3ba8d2bdab465cb34f7851b3c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The format specifier `.2f` states that we want to display 2 decimals. The letter _f_ at the end means that we want the variable to be displayed as a `float`, i.e. a floating point number."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "0ed006fe7c30e91b6ba7c2600d6e7582466c1ddc7619abb2bd5509a7522f519d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Here's another example, where we specify the amount of whitespace reserved for the variable in the printout. Both times the variable `name` is included in the resulting string, it has a space of 15 characters reserved. First the names are justified to the left, and then they are justified to the right:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0030",
+      "type": "code",
+      "order": 30,
+      "source_hash": "0c1634f041012bd16cb1028008e00278684b3f3081ae2acc5f98da2a6b75153a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "names =  [ \"Steve\", \"Jean\", \"Katherine\", \"Paul\" ]\nfor name in names:\n  print(f\"{name:15} centre {name:>15}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "names =  [ \"Steve\", \"Jean\", \"Katherine\", \"Paul\" ]\nfor name in names:\n  print(f\"{name:15} centre {name:>15}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "0c1634f041012bd16cb1028008e00278684b3f3081ae2acc5f98da2a6b75153a",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0031",
+      "type": "code",
+      "order": 31,
+      "source_hash": "8c85bd9789a3b4b508c09ab089852ff9848ee2ad1180a76ce503e5c2188c056c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "Steve           centre           Steve\nJean            centre            Jean\nKatherine       centre       Katherine\nPaul            centre            Paul"
+      },
+      "translation": {
+        "language": "code",
+        "content": "Steve           centre           Steve\nJean            centre            Jean\nKatherine       centre       Katherine\nPaul            centre            Paul"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8c85bd9789a3b4b508c09ab089852ff9848ee2ad1180a76ce503e5c2188c056c",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "b59067ee3165fafa99cc1f743dcf25c57af7234cd8db9d2a18ded6267c6c9897",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The uses of f-strings are not restricted to `print` commands. They can be assigned to variables and combined with other strings:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0033",
+      "type": "code",
+      "order": 33,
+      "source_hash": "65d5a85796e8a0afda5ce7c95458767458c456ed37990c9ceb80fab3ef3a084e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "name = \"Larry\"\nage = 48\ncity = \"Palo Alto\"\ngreeting = f\"Hi {name}, you are {age} years of age\"\nprint(greeting + f\", and you live in {city}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "name = \"Larry\"\nage = 48\ncity = \"Palo Alto\"\ngreeting = f\"Hi {name}, you are {age} years of age\"\nprint(greeting + f\", and you live in {city}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "65d5a85796e8a0afda5ce7c95458767458c456ed37990c9ceb80fab3ef3a084e",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0034",
+      "type": "sample_output",
+      "order": 34,
+      "source_hash": "5abd0d23457575511d1a7c37d575d94cff22fc863e7e1de72f36ec359814483a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hi Larry, you are 48 years of age, and you live in Palo Alto"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hi Larry, you are 48 years of age, and you live in Palo Alto"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHi Larry, you are 48 years of age, and you live in Palo Alto\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "d8f3f515ebe4356c5c1278326d640369ad52229545ccfd470fc6c8d0aba20f20",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You can think of an f-string as a sort of function, which creates a normal string based on the \"arguments\" within the curly brackets."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0036",
+      "type": "exercise",
+      "order": 36,
+      "source_hash": "699824c87be190d2364a6c8d99dff19eae2b1fa650ca06b1c4d828b19ce54578",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `formatted`, which takes a list of floating point numbers as its argument. The function returns a new list, which contains each element of the original list in string format, rounded to two decimal points. The order of the items in the list should remain unchanged.\n\n_Hint: use f-strings to format the floating point numbers into suitable strings._\n\nAn example of expected beahviour:\n\n```python\nmy_list = [1.234, 0.3333, 0.11111, 3.446]\nnew_list = formatted(my_list)\nprint(new_list)\n```\n\n<sample-output>\n\n['1.23', '0.33', '0.11', '3.45']\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-32_integers_to_strings",
+        "exercise_type": "programming-exercise",
+        "name": "Integers to strings",
+        "tmc_name": "part04-32_integers_to_strings",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "b97eebcf5a0222c688482a2c1f8f4510ba0c7934c136e1f60999bbcc47c2ab75",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!---\nA quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0038",
+      "type": "quiz",
+      "order": 38,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "90d650f3-fde1-5132-ade9-73f3b4bf6189",
+        "attributes": {
+          "id": "90d650f3-fde1-5132-ade9-73f3b4bf6189"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-5-print-statement-formatting-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    }
+  ]
+}

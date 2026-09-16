@@ -1,0 +1,53 @@
+{
+  "part": 14,
+  "slug": "part-14",
+  "title_original": "Part 14",
+  "title_vi": "Dự án Phát triển Game hoàn chỉnh",
+  "lessons": [
+    {
+      "id": "part14-1-game-project",
+      "slug": "1-game-project",
+      "is_index": false,
+      "title_original": "Game project",
+      "path": "/part-14/1-game-project",
+      "blocks_count": 48,
+      "title_vi": "Dự án trò chơi"
+    },
+    {
+      "id": "part14-2-robot-and-boxes",
+      "slug": "2-robot-and-boxes",
+      "is_index": false,
+      "title_original": "Robot and boxes",
+      "path": "/part-14/2-robot-and-boxes",
+      "blocks_count": 41,
+      "title_vi": "Robot và những chiếc hộp"
+    },
+    {
+      "id": "part14-3-finishing-the-game",
+      "slug": "3-finishing-the-game",
+      "is_index": false,
+      "title_original": "Finishing the game",
+      "path": "/part-14/3-finishing-the-game",
+      "blocks_count": 36,
+      "title_vi": "Kết thúc trò chơi"
+    },
+    {
+      "id": "part14-4-your-own-game",
+      "slug": "4-your-own-game",
+      "is_index": false,
+      "title_original": "Your own game",
+      "path": "/part-14/4-your-own-game",
+      "blocks_count": 34,
+      "title_vi": "Trò chơi của riêng bạn"
+    },
+    {
+      "id": "part14-index",
+      "slug": "index",
+      "is_index": true,
+      "title_original": "Part 14",
+      "path": "/part-14",
+      "blocks_count": 2,
+      "title_vi": "Dự án Phát triển Game hoàn chỉnh"
+    }
+  ]
+}

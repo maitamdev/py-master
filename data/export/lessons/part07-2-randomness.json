@@ -1,0 +1,855 @@
+{
+  "id": "part07-2-randomness",
+  "part": 7,
+  "part_slug": "part-7",
+  "slug": "2-randomness",
+  "is_part_index": false,
+  "title_original": "Randomness",
+  "title_vi": "Tính ngẫu nhiên",
+  "path": "/part-7/2-randomness",
+  "source_path": "data/part-7/2-randomness.md",
+  "source_hash": "60f9737f51a19216c6af57726a4773e206838d39e00ebc024d2005b6199c1dcd",
+  "order": 1,
+  "blocks_count": 46,
+  "blocks": [
+    {
+      "id": "blk-part07-2-randomness-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "737396578ae3322019fe827c00318f3cb23ad903aab2a1aaf7399a0dfdad9222",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be familiar with some of the functions in the module `random` \n- You will be able to make use of random numbers in your programs"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ làm quen với một số chức năng trong module `random` \n- Bạn sẽ có thể sử dụng các số ngẫu nhiên trong chương trình của mình"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "47b1ccb72433cc6daf23782a21635658b57f124daa8654462262bb965d16f1c4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This section concentrates on the module [random](https://docs.python.org/3/library/random.html?highlight=random#module-random) from the Python standard library. It contains tools for generating random numbers and other randomized functionality."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phần này tập trung vào mô-đun [ngẫu nhiên](https://docs.python.org/3/library/random.html?highlight=random#module-random) từ thư viện chuẩn Python. Nó chứa các công cụ để tạo số ngẫu nhiên và chức năng ngẫu nhiên khác."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "ee1fcc38f551c46663cfc4135a536671d6577299d0ac9968f854977e78cb6999",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The sections in this part of the material contain many links to the [documentation](https://docs.python.org/3/library/) of the Python standard library. We recommend following the links to familiarize yourself with how the documentation works."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các phần trong phần tài liệu này chứa nhiều liên kết đến [tài liệu](https://docs.python.org/3/library/) của thư viện chuẩn Python. Chúng tôi khuyên bạn nên nhấp vào các liên kết để làm quen với cách hoạt động của tài liệu."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0004",
+      "type": "heading",
+      "order": 4,
+      "source_hash": "c3a89827ff1163eb0f3201c0fbeaace7f470b93b70bd59d2baae48dc1bfbfe8d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Generating a random number"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tạo số ngẫu nhiên"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "014e886dbdf4417de146952987c16bad7134f54b948d6d7230858e09f4420b5c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The function [randint(a, b)](https://docs.python.org/3/library/random.html?highlight=random#random.randint) returns a random integer value between `a` and `b`, inclusive. For example, the following program works like a generic die:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm [randint(a, b)](https://docs.python.org/3/library/random.html?highlight=random#random.randint) trả về một giá trị số nguyên ngẫu nhiên nằm trong khoảng từ `a` đến `b`. Ví dụ: chương trình sau hoạt động giống như một khuôn chung:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0006",
+      "type": "code",
+      "order": 6,
+      "source_hash": "39d98c938962fa0cf117f4d06ace9c89ed501dbadb1ad7f657ff366038a83e29",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from random import randint\n\nprint(\"The result of the throw:\", randint(1, 6))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from random import randint\n\nprint(\"The result of the throw:\", randint(1, 6))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "39d98c938962fa0cf117f4d06ace9c89ed501dbadb1ad7f657ff366038a83e29",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "a721e3d4e5794f4cc47cb0f6d1057d10efb6e4492c3611ab39d2ec74272045c7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Executing this could print out:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thực hiện điều này có thể in ra:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0008",
+      "type": "sample_output",
+      "order": 8,
+      "source_hash": "e2ba30b8b6cf9604eaeb476a4822e5e6f3384d14ff9925a9f792e3aef1b83564",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The result of the throw: 4"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The result of the throw: 4"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe result of the throw: 4\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "51cd2f5dcbac7e062897119fb6d87462a44cdb230353c451e3dd775b4be5d9a8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following program throws the die ten times:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình sau đây tung xúc xắc mười lần:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0010",
+      "type": "code",
+      "order": 10,
+      "source_hash": "b2b5deec891a85d0463682abf5eeaa4637d285b8b7e6171154a545202c59efb6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from random import randint\n\nfor i in range(10):\n    print(\"The result of the throw:\", randint(1, 6))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from random import randint\n\nfor i in range(10):\n    print(\"The result of the throw:\", randint(1, 6))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b2b5deec891a85d0463682abf5eeaa4637d285b8b7e6171154a545202c59efb6",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "64bd72f249c789b349a4c0782ba8ca32762e5c89be90213174244a710b9009e9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Running the above could print out"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chạy ở trên có thể in ra"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0012",
+      "type": "sample_output",
+      "order": 12,
+      "source_hash": "52d5985756b389d345f056d1c04dca33a0836b021e39bae39b1dc0e85927d27e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The result of the throw: 5\nThe result of the throw: 4\nThe result of the throw: 3\nThe result of the throw: 2\nThe result of the throw: 3\nThe result of the throw: 4\nThe result of the throw: 6\nThe result of the throw: 4\nThe result of the throw: 4\nThe result of the throw: 3"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The result of the throw: 5\nThe result of the throw: 4\nThe result of the throw: 3\nThe result of the throw: 2\nThe result of the throw: 3\nThe result of the throw: 4\nThe result of the throw: 6\nThe result of the throw: 4\nThe result of the throw: 4\nThe result of the throw: 3"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe result of the throw: 5\nThe result of the throw: 4\nThe result of the throw: 3\nThe result of the throw: 2\nThe result of the throw: 3\nThe result of the throw: 4\nThe result of the throw: 6\nThe result of the throw: 4\nThe result of the throw: 4\nThe result of the throw: 3\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "61ba187d05db8b412ceae5a5403b1c3110a8c422c0f0a77d368ca77b4e4d693a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "NB: it is worth remembering that the function `randint` works a bit differently when compared to, for example, slices, or the function `range`, which we've come across previously. The function call `randint(1, 6)` results in a number between 1 and 6 inclusive, but the function call `range(1, 6)` results in a range of numbers from 1 to 5."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lưu ý: cần nhớ rằng hàm `randint` hoạt động hơi khác một chút khi so sánh với các lát cắt hoặc hàm `range` mà chúng ta đã gặp trước đây chẳng hạn. Lệnh gọi hàm `randint(1, 6)` mang lại kết quả là một số từ 1 đến 6, nhưng lệnh gọi hàm `range(1, 6)` lại tạo ra một phạm vi số từ 1 đến 5."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0014",
+      "type": "heading",
+      "order": 14,
+      "source_hash": "143e28bde1b748b83dbfc540e5859ed856b9df8e4ab5f3c6f928755961b3a19f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "More randomizing functions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nhiều chức năng ngẫu nhiên hơn"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "8e606c51df0caffe891186d267aa9ca1f13c53f6b3f9dba165b5b1f9f8cd27ac",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The function [shuffle](https://docs.python.org/3/library/random.html?highlight=random#random.shuffle) will shuffle any data structure passed as an argument, in place. For example, the following program shuffles a list of words:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm [shuffle](https://docs.python.org/3/library/random.html?highlight=random#random.shuffle) sẽ xáo trộn bất kỳ cấu trúc dữ liệu nào được truyền dưới dạng đối số tại chỗ. Ví dụ: chương trình sau đây xáo trộn danh sách các từ:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0016",
+      "type": "code",
+      "order": 16,
+      "source_hash": "19712ac8827302d6d4e4794fe3451dd318f495d87c60babed5883b2db8f9e5f0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from random import shuffle\n\nwords = [\"atlas\", \"banana\", \"carrot\"]\nshuffle(words)\nprint(words)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from random import shuffle\n\nwords = [\"atlas\", \"banana\", \"carrot\"]\nshuffle(words)\nprint(words)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "19712ac8827302d6d4e4794fe3451dd318f495d87c60babed5883b2db8f9e5f0",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0017",
+      "type": "sample_output",
+      "order": 17,
+      "source_hash": "9ee77abd57b2abc4a20a9cf42ef987ec440ccadc5f5ca929e2e27398299da4e0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "['banana', 'atlas', 'carrot']"
+      },
+      "translation": {
+        "language": "text",
+        "content": "['banana', 'atlas', 'carrot']"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n['banana', 'atlas', 'carrot']\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "e1d0fb0e1d4455f112be78ed6195676b794af845695cc51acb3cde7b7087f5c5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The function `choice` returns a randomly picked item from a data structure:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm `choice` trả về một mục được chọn ngẫu nhiên từ cấu trúc dữ liệu:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0019",
+      "type": "code",
+      "order": 19,
+      "source_hash": "728dc20b2def5557d6858a768aae90a45abf3e41d1a0332250c1d4ab67f99f9e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from random import choice\n\nwords = [\"atlas\", \"banana\", \"carrot\"]\nprint(choice(words))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from random import choice\n\nwords = [\"atlas\", \"banana\", \"carrot\"]\nprint(choice(words))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "728dc20b2def5557d6858a768aae90a45abf3e41d1a0332250c1d4ab67f99f9e",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0020",
+      "type": "sample_output",
+      "order": 20,
+      "source_hash": "cd46f0f9267594d579bab2303ce84705bf9f88a2a6780e9b56a298172e85d97c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "'carrot'"
+      },
+      "translation": {
+        "language": "text",
+        "content": "'carrot'"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n'carrot'\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0021",
+      "type": "heading",
+      "order": 21,
+      "source_hash": "02825edf18f7b99340d8169828c4c2c14a75dec329f3a5484e3f66b59fcd6c12",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Lottery numbers"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Số xổ số"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "79a01f913c353715838a9f5fe3b522c5850258f0d3b0487c6a30c1360f883288",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A common example for studying randomness is the case of lottery numbers. Let's try and draw some lottery numbers. In Finland the national lottery consists of a pool of 40 numbers, 7 of which are chosen for each week's draw."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một ví dụ phổ biến để nghiên cứu tính ngẫu nhiên là trường hợp số xổ số. Hãy thử và vẽ một số con số xổ số. Ở Phần Lan, xổ số quốc gia bao gồm một nhóm gồm 40 số, 7 trong số đó được chọn để rút thăm mỗi tuần."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "aa0c6c9f346fb73706418d9f32678365b730bb4fa5c71afa9a66fc8099b7bb55",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A first attempt at drawing a set of numbers could look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lần thử đầu tiên để vẽ một tập hợp số có thể trông như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0024",
+      "type": "code",
+      "order": 24,
+      "source_hash": "90dba8987718a9241c9cf494a9e7a40d724b6c8f3d4d1d1748ddb1e3fe51c64f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from random import randint\n\nfor i in range(7):\n    print(randint(1, 40))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from random import randint\n\nfor i in range(7):\n    print(randint(1, 40))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "90dba8987718a9241c9cf494a9e7a40d724b6c8f3d4d1d1748ddb1e3fe51c64f",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "f96535ba9b7facc00947d7cf43d2dbe8972ce9cfb427d07d7b8b9f6567ced27e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This would not work in the long run, however, as the same number may appear twice in a single weekly draw of seven numbers. We need a way to make sure the numbers drawn are all unique."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tuy nhiên, điều này sẽ không hiệu quả về lâu dài vì cùng một con số có thể xuất hiện hai lần trong một lần rút bảy con số hàng tuần. Chúng ta cần một cách để đảm bảo rằng các số được rút ra đều là duy nhất."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "0d2efa4cf105a3b84f9bf643e6348df5e6911ab3acf250d4d9baee88975f4154",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "One possibility is to store the drawn numbers in a list, and only add a number if it is not already on the list. This can be repeated until the length of the list is seven:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một khả năng là lưu trữ các số đã rút trong danh sách và chỉ thêm một số nếu nó chưa có trong danh sách. Điều này có thể được lặp lại cho đến khi độ dài của danh sách là bảy:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0027",
+      "type": "code",
+      "order": 27,
+      "source_hash": "a36ebf6ae3e187a42025ee8e2222cbd59e1fca27929eb60c0e783c1a2f3d3d6f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from random import randint\n\nweekly_draw = []\nwhile len(weekly_draw) < 7:\n    new_rnd = randint(1, 40)\n    if new_rnd not in weekly_draw:\n        weekly_draw.append(new_rnd)\n\nprint(weekly_draw)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from random import randint\n\nweekly_draw = []\nwhile len(weekly_draw) < 7:\n    new_rnd = randint(1, 40)\n    if new_rnd not in weekly_draw:\n        weekly_draw.append(new_rnd)\n\nprint(weekly_draw)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a36ebf6ae3e187a42025ee8e2222cbd59e1fca27929eb60c0e783c1a2f3d3d6f",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "6f304c32a9a6e110ace95cd919dc13f727a6b34bef8eef0f7986625057a4540c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A more compact approach would be to use the `shuffle` function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một cách tiếp cận nhỏ gọn hơn là sử dụng hàm `shuffle`:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0029",
+      "type": "code",
+      "order": 29,
+      "source_hash": "802d6ee6d1455bce625c704b78aa987c3872c4f234f66d0dac140f255c24cbf9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from random import shuffle\n\nnumber_pool = list(range(1, 41))\nshuffle(number_pool)\nweekly_draw = number_pool[0:7]\nprint(weekly_draw)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from random import shuffle\n\nnumber_pool = list(range(1, 41))\nshuffle(number_pool)\nweekly_draw = number_pool[0:7]\nprint(weekly_draw)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "802d6ee6d1455bce625c704b78aa987c3872c4f234f66d0dac140f255c24cbf9",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "87f717b44792aa6183c59cffe75e0e65c2fe74a9d33748a1f9c5dedb545cb753",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Here the idea is that we first create a list containing the available numbers 1 to 40, rather like the balls in a lottery machine. The pool of numbers is then shuffled, and the first seven numbers chosen for the weekly draw. This saves us the trouble of writing a loop."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ý tưởng ở đây là trước tiên chúng ta tạo một danh sách chứa các số có sẵn từ 1 đến 40, giống như những quả bóng trong máy xổ số. Nhóm số sau đó được xáo trộn và bảy số đầu tiên được chọn để rút thăm hàng tuần. Điều này giúp chúng ta tránh khỏi rắc rối khi viết vòng lặp."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "b4b4692b98b485551a678ba1685338027343fc51874814ceed03f97329e977e0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In fact, the `random` module contains an even easier way to select lottery numbers: the [sample](https://docs.python.org/3/library/random.html?highlight=random#random.sample) function. It returns a random selection of a specified size from a given data structure:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trên thực tế, mô-đun `random` còn có một cách dễ dàng hơn để chọn số xổ số: chức năng [mẫu](https://docs.python.org/3/library/random.html?highlight=random#random.sample). Nó trả về một lựa chọn ngẫu nhiên có kích thước được chỉ định từ cấu trúc dữ liệu nhất định:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0032",
+      "type": "code",
+      "order": 32,
+      "source_hash": "fad9b0c3cc24c46b3dde21890b8dfa73f64c5fd1b92bb752ea96af25e4ae91d0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from random import sample\n\nnumber_pool = list(range(1, 41))\nweekly_draw = sample(number_pool, 7)\nprint(weekly_draw)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from random import sample\n\nnumber_pool = list(range(1, 41))\nweekly_draw = sample(number_pool, 7)\nprint(weekly_draw)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "fad9b0c3cc24c46b3dde21890b8dfa73f64c5fd1b92bb752ea96af25e4ae91d0",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0033",
+      "type": "exercise",
+      "order": 33,
+      "source_hash": "0d010cdecfab7e6c8f4e980814db5df5fddc714701269851d36bd2687a0b43ed",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `lottery_numbers(amount: int, lower: int, upper: int)`, which generates as many random numbers as specified by the first argument. All numbers should fall within the bounds `lower` to `upper`. The numbers should be stored in a list and returned. The numbers should be in ascending order in the returned list.\n\nAs these are lottery numbers, no number should appear twice in the list.\n\nAn example of how the function should work:\n\n```python\nfor number in lottery_numbers(7, 1, 40):\n    print(number)\n```\n\n<sample-output>\n\n4\n7\n11\n16\n22\n29\n38\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng viết một hàm có tên `lottery_numbers(amount: int, lower: int, upper: int)`, hàm này tạo ra nhiều số ngẫu nhiên như được chỉ định bởi đối số đầu tiên. Tất cả các số phải nằm trong giới hạn `lower` đến `upper`. Các số nên được lưu trữ trong một danh sách và trả về. Các số phải theo thứ tự tăng dần trong danh sách trả về.\n\nVì đây là những con số xổ số nên không có con số nào xuất hiện hai lần trong danh sách.\n\nMột ví dụ về cách hoạt động của hàm:\n\n```python\nfor number in lottery_numbers(7, 1, 40):\n    print(number)\n```\n\n<sample-output>\n\n4\n7\n11\n16\n22\n29\n38\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part07-04_lottery_numbers",
+        "exercise_type": "programming-exercise",
+        "name": "Lottery numbers",
+        "tmc_name": "part07-04_lottery_numbers",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0034",
+      "type": "heading",
+      "order": 34,
+      "source_hash": "fa6d3123f709ebbbcfc229ad9819805de411b9d700c474c79238956969f900fe",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Where do these random numbers come from?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Những con số ngẫu nhiên này đến từ đâu?"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "9d9b984d0aba7929cf626bd1784bf41aead8f7ed94acf946e5b11226a97454ec",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The features of the module [random](https://docs.python.org/3/library/random.html) are based on an algorithm which produces random numbers based on a specific initialization value and some arithmetic operations. The initialization value is often called a _seed value_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các tính năng của mô-đun [ngẫu nhiên](https://docs.python.org/3/library/random.html) dựa trên thuật toán tạo ra các số ngẫu nhiên dựa trên giá trị khởi tạo cụ thể và một số phép tính số học. Giá trị khởi tạo thường được gọi là _giá trị hạt giống_."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "e942895111a315a0e3cf14bec9a4fe12575292b0a4ef212271b5b30660b953d5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The seed value can be supplied by the user with the [seed](https://docs.python.org/3/library/random.html?highlight=random#random.seed) function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Người dùng có thể cung cấp giá trị hạt giống bằng hàm [seed](https://docs.python.org/3/library/random.html?highlight=random#random.seed):"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0037",
+      "type": "code",
+      "order": 37,
+      "source_hash": "bef059cf85e48a4985dc21d0d2088f641a483692d685e519ad06911b0f006d1f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from random import randint, seed\n\nseed(1337)\n# this will always produce the same \"random\" number\nprint(randint(1, 100))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from random import randint, seed\n\nseed(1337)\n# this will always produce the same \"random\" number\nprint(randint(1, 100))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "bef059cf85e48a4985dc21d0d2088f641a483692d685e519ad06911b0f006d1f",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "13050aea29b2294d50ba3bbc5f19a53f784f48e77cc1fc83f88fd2763e261400",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If we have functions which rely on randomization, and we set seed value, the function will produce the same result each time it is executed. The result may be different with different Python versions, but in essence randomness is lost by setting a seed value. This can be a useful feature when testing a program, for example."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu chúng ta có các hàm dựa vào ngẫu nhiên và chúng ta đặt giá trị gốc thì hàm sẽ tạo ra kết quả giống nhau mỗi lần nó được thực thi. Kết quả có thể khác với các phiên bản Python khác nhau, nhưng về bản chất, tính ngẫu nhiên bị mất khi đặt giá trị hạt giống. Ví dụ: đây có thể là một tính năng hữu ích khi thử nghiệm một chương trình."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0039",
+      "type": "text_box",
+      "order": 39,
+      "source_hash": "121f589ffce0ce6fa5d6cbc46d9b7f0dfa7a301e54bbef03b5b5d08ad62f7325",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "To be specific, the numbers provided by the `random` module are not truly random. Instead, they are _pseudorandom_. Computers are, in essence, deterministic machines. In an ideal situation, it should be possible to foretell the way they function down to the last bit. Therefore it is very difficult to create truly random numbers with a computer. For many applications, however, pseudorandom numbers are good enough. When true random numbers are required, the seed value is usually generated by some source outside the computer, for example background radiation, noise levels, or [lava lamps](https://blog.cloudflare.com/randomness-101-lavarand-in-production/).\n\nFor more information about randomness, please see <a href=\"https://www.random.org/randomness/\">random.org</a>."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cụ thể, các con số do mô-đun `random` cung cấp không thực sự ngẫu nhiên. Thay vào đó, chúng là _pseudorandom_. Về bản chất, máy tính là những cỗ máy xác định. Trong một tình huống lý tưởng, có thể đoán trước được cách thức hoạt động của chúng cho đến giây phút cuối cùng. Vì vậy, rất khó để tạo ra các số thực sự ngẫu nhiên bằng máy tính. Tuy nhiên, đối với nhiều ứng dụng, số giả ngẫu nhiên là đủ tốt. Khi cần các số ngẫu nhiên thực, giá trị ban đầu thường được tạo bởi một số nguồn bên ngoài máy tính, ví dụ như bức xạ nền, mức độ ồn hoặc [đèn dung nham](https://blog.cloudflare.com/randomness-101-lavarand-in-production/).\n\nĐể biết thêm thông tin về tính ngẫu nhiên, vui lòng xem <a href=\"https://www.random.org/randomness/\">random.org</a>."
+      },
+      "metadata": {
+        "variant": "info",
+        "name_original": "True randomness",
+        "name_vi": "",
+        "attributes": {
+          "variant": "info",
+          "name": "True randomness"
+        }
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0040",
+      "type": "exercise",
+      "order": 40,
+      "source_hash": "4add4cf231490d1e9b02efd952f76ad7f1dcff6abcb10ecfe690ef9ab07cf944",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function which creates passwords of a desired length, consisting of lowercase characters a to z.\n\nAn example of how the function should work:\n\n```python\nfor i in range(10):\n    print(generate_password(8))\n```\n\n<sample-output>\n\nlttehepy\nolsxttjl\ncbjncrzo\ndwxqjdgu\ngpfdcecs\njabyvgar\nxnbbonbl\nktmsjyww\nejhprmel\nrjkoacib\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm tạo mật khẩu có độ dài mong muốn, bao gồm các ký tự chữ thường từ a đến z.\n\nMột ví dụ về cách hoạt động của hàm:\n\n```python\nfor i in range(10):\n    print(generate_password(8))\n```\n\n<sample-output>\n\nlttehepy\nolsxttjl\ncbjncrzo\ndwxqjdgu\ngpfdcecs\njabyvgar\nxnbbonbl\nktmsjyww\nejhprmel\nrjkoacib\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part07-05_password_generator_part_1",
+        "exercise_type": "programming-exercise",
+        "name": "Password generator, part 1",
+        "tmc_name": "part07-05_password_generator_part_1",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0041",
+      "type": "exercise",
+      "order": 41,
+      "source_hash": "fed6adf173b82497ad5e974726fcb5b009181bc4cecac724fdb4ee24aa84ea1e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write an improved version of your password generator. The function now takes three arguments:\n\n* If the second argument is `True`, the generated password should also contain one or more numbers.\n* If the third argument is `True`, the generated password should also contain one or more of these special characters: `!?=+-()#`.\n\nDespite these two additional arguments, the password should always contain at least one lowercase alphabet. You may assume the function will only be called with combinations of arguments that are possible to formulate into passwords following these rules. That is, the arguments will not specify e.g. a password of length 2 which contains both a number and a special characters, for then there would not be space for the mandatory lowercase letter.\n\nAn example of how the function should work:\n\n```python\nfor i in range(10):\n    print(generate_strong_password(8, True, True))\n```\n\n<sample-output>\n\n2?0n+u31\nu=m4nl94\nn#=i6r#(\nda9?zvm?\n7h)!)g?!\na=59x2n5\n(jr6n3b5\n9n(4i+2!\n32+qba#=\nn?b0a7ey\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng viết một phiên bản cải tiến của trình tạo mật khẩu của bạn. Hàm bây giờ có ba đối số:\n\n* Nếu đối số thứ hai là `True`, mật khẩu được tạo cũng phải chứa một hoặc nhiều số.\n* Nếu đối số thứ ba là `True`, mật khẩu được tạo cũng phải chứa một hoặc nhiều ký tự đặc biệt sau: `!?=+-()#`.\n\nBất chấp hai đối số bổ sung này, mật khẩu phải luôn chứa ít nhất một bảng chữ cái viết thường. Bạn có thể cho rằng hàm sẽ chỉ được gọi với sự kết hợp của các đối số có thể tạo thành mật khẩu theo các quy tắc này. Nghĩa là, các đối số sẽ không chỉ định, ví dụ: mật khẩu có độ dài 2 chứa cả số và ký tự đặc biệt, khi đó sẽ không có khoảng trống cho chữ cái viết thường bắt buộc.\n\nMột ví dụ về cách hoạt động của hàm:\n\n```python\nfor i in range(10):\n    print(generate_strong_password(8, True, True))\n```\n\n<sample-output>\n\n2?0n+u31\nu=m4nl94\nn#=i6r#(\nda9?zvm?\n7h)!)g?!\na=59x2n5\n(jr6n3b5\n9n(4i+2!\n32+qba#=\nn?b0a7ey\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part07-06_password_generator_part_2",
+        "exercise_type": "programming-exercise",
+        "name": "Password generator, part 2",
+        "tmc_name": "part07-06_password_generator_part_2",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0042",
+      "type": "exercise",
+      "order": 42,
+      "source_hash": "dea19635a66d1ff43e4f6e01265d75c0c07c41386234d77ab5a15b8e447ecbce",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In this exercise you will write some functions which can be used in games that involve dice.\n\nInstead of normal dice this exercise specifies _non-transitive dice_. You can read up on these [here](https://singingbanana.com/dice/article.htm) or [watch this video](https://www.youtube.com/watch?v=LrIp6CKUlH8).\n\nYou will use three dice:\n\n- Die A has the sides 3, 3, 3, 3, 3, 6\n- Die B has the sides 2, 2, 2, 5, 5, 5\n- Die C has the sides 1, 4, 4, 4, 4, 4\n\n</pre>\n\nPlease write a function named `roll(die: str)`, which rolls the die specified by the argument. An example of how this should work:\n\n```python\nfor i in range(20):\n    print(roll(\"A\"), \" \", end=\"\")\nprint()\nfor i in range(20):\n    print(roll(\"B\"), \" \", end=\"\")\nprint()\nfor i in range(20):\n    print(roll(\"C\"), \" \", end=\"\")\n```\n\n<sample-output>\n\n3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  6  3  6  3\n2  2  5  2  2  5  5  2  2  5  2  5  5  5  2  5  2  2  2  2\n4  4  4  4  4  1  1  4  4  4  1  4  4  4  4  4  4  4  4  4\n\n</sample-output>\n\nAlso write a function named  `play(die1: str, die2: str, times: int)`, which throws both dice as many times as specified by the third argument. The function should return a tuple. The first item should be the number of times die 1 won, the second the number of times die 2 won, and the third item should be the number of ties.\n\n```python\nresult = play(\"A\", \"C\", 1000)\nprint(result)\nresult = play(\"B\", \"B\", 1000)\nprint(result)\n```\n\n<sample-output>\n\n(292, 708, 0)\n(249, 273, 478)\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong bài tập này, bạn sẽ viết một số hàm có thể được sử dụng trong các trò chơi liên quan đến xúc xắc.\n\nThay vì xúc xắc thông thường, bài tập này chỉ định _xúc xắc không chuyển tiếp_. Bạn có thể đọc thêm về những [tại đây](https://singingbanana.com/dice/article.htm) hoặc [xem video này](https://www.youtube.com/watch?v=LrIp6CKUlH8).\n\nBạn sẽ sử dụng ba viên xúc xắc:\n\n- Khuôn A có các cạnh 3, 3, 3, 3, 3, 6\n- Khuôn B có các cạnh 2, 2, 2, 5, 5, 5\n- Khuôn C có các cạnh 1, 4, 4, 4, 4, 4\n\n</pre>\n\nHãy viết một hàm có tên `roll(die: str)` để đổ xúc xắc được chỉ định bởi đối số. Một ví dụ về cách thức hoạt động của nó:\n\n```python\nfor i in range(20):\n    print(roll(\"A\"), \" \", end=\"\")\nprint()\nfor i in range(20):\n    print(roll(\"B\"), \" \", end=\"\")\nprint()\nfor i in range(20):\n    print(roll(\"C\"), \" \", end=\"\")\n```\n\n<sample-output>\n\n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 6 3 6 3\n2 2 5 2 2 5 5 2 2 5 2 5 5 5 2 5 2 2 2 2\n4 4 4 4 4 1 1 4 4 4 1 4 4 4 4 4 4 4 4 4\n\n</sample-output>\n\nĐồng thời viết một hàm có tên `play(die1: str, die2: str, times: int)` để ném cả hai viên xúc xắc nhiều lần theo chỉ định của đối số thứ ba. Hàm sẽ trả về một bộ dữ liệu. Mục đầu tiên phải là số lần chết 1 thắng, mục thứ hai là số lần chết 2 thắng và mục thứ ba phải là số lần hòa.\n\n```python\nresult = play(\"A\", \"C\", 1000)\nprint(result)\nresult = play(\"B\", \"B\", 1000)\nprint(result)\n```\n\n<sample-output>\n\n(292, 708, 0)\n(249, 273, 478)\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part07-07_dice_roller",
+        "exercise_type": "programming-exercise",
+        "name": "Dice roller",
+        "tmc_name": "part07-07_dice_roller",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0043",
+      "type": "exercise",
+      "order": 43,
+      "source_hash": "175d6dd7007d0533c8a895de6a020e010d51074609f00c0a7b7b0b770f259262",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains the file `words.txt`, which contains some English language words, one on each line.\n\nPlease write a function named `words(n: int, beginning: str)`, which returns a list containing `n` random words from the `words.txt` file. All words should begin with the string specified by the second argument. \n\nThe same word should not appear twice in the list. If there are not enough words beginning with the specified string, the function should raise a `ValueError` exception.\n\nAn example of the function in action:\n\n```python\nword_list = words(3, \"ca\")\nfor word in word_list:\n    print(word)\n```\n\n<sample-output>\n\ncat\ncar\ncarbon\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mẫu bài tập chứa tệp `words.txt`, trong đó có một số từ tiếng Anh, mỗi từ một dòng.\n\nVui lòng viết một hàm có tên `words(n: int, beginning: str)`, hàm này trả về danh sách chứa các từ ngẫu nhiên `n` từ tệp `words.txt`. Tất cả các từ phải bắt đầu bằng chuỗi được chỉ định bởi đối số thứ hai. \n\nCùng một từ không nên xuất hiện hai lần trong danh sách. Nếu không có đủ từ bắt đầu bằng chuỗi đã chỉ định, hàm sẽ đưa ra ngoại lệ `ValueError`.\n\nMột ví dụ về chức năng đang hoạt động:\n\n```python\nword_list = words(3, \"ca\")\nfor word in word_list:\n    print(word)\n```\n\n<sample-output>\n\ncon mèo\nxe hơi\ncacbon\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part07-08_random_words",
+        "exercise_type": "programming-exercise",
+        "name": "Random words",
+        "tmc_name": "part07-08_random_words",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "abff66d5c3b87e785a9f5858aa4a5a727e09e7c3dc5b12c46f58c801eff70b2f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!---"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!---"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-2-randomness-0045",
+      "type": "quiz",
+      "order": 45,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "d53a6898-f390-55ef-b266-95694bcbe704",
+        "attributes": {
+          "id": "d53a6898-f390-55ef-b266-95694bcbe704"
+        }
+      }
+    },
+    {
+      "id": "blk-part07-2-randomness-0046",
+      "type": "paragraph",
+      "order": 46,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "-->"
+      },
+      "metadata": {}
+    }
+  ]
+}

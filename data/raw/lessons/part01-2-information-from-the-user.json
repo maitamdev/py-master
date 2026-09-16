@@ -1,0 +1,290 @@
+{
+  "id": "part01-2-information-from-the-user",
+  "part": 1,
+  "part_slug": "part-1",
+  "slug": "2-information-from-the-user",
+  "is_part_index": false,
+  "title_original": "Information from the user",
+  "path": "/part-1/2-information-from-the-user",
+  "source_path": "data/part-1/2-information-from-the-user.md",
+  "source_hash": "db9bc001f6a585f1a0fdcb1dc775dd8e66aea56eca378a2a25132478564f474e",
+  "frontmatter": {
+    "path": "/part-1/2-information-from-the-user",
+    "title": "Information from the user",
+    "hidden": false
+  },
+  "chunks_count": 42,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know how to write a program which uses input from the user\n- You will know how to use variables to store input and print it out\n- You will be able to combine strings",
+      "raw_source": "<text-box variant='learningObjectives' name='Learning objectives'>\n\nAfter this section\n\n- You will know how to write a program which uses input from the user\n- You will know how to use variables to store input and print it out\n- You will be able to combine strings\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "_Input_ refers to any information a user gives to the program. Specifically, the Python command `input` reads in a line of input typed in by the user. It may also be used to display a message to the user, to prompt for specific input.",
+      "raw_source": "_Input_ refers to any information a user gives to the program. Specifically, the Python command `input` reads in a line of input typed in by the user. It may also be used to display a message to the user, to prompt for specific input."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following program reads in the name of the user with the `input` command. It then prints it out with the `print` command:",
+      "raw_source": "The following program reads in the name of the user with the `input` command. It then prints it out with the `print` command:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "name = input(\"What is your name? \")\nprint(\"Hi there, \" + name)",
+      "raw_source": "```python\nname = input(\"What is your name? \")\nprint(\"Hi there, \" + name)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The execution of this program could look like this (input from the user in red):",
+      "raw_source": "The execution of this program could look like this (input from the user in red):"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "What is your name? **Paul Python**\nHi there, Paul Python",
+      "raw_source": "<sample-output>\n\nWhat is your name? **Paul Python**\nHi there, Paul Python\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "What this program prints out is partially dependent on input from the user. That means the execution of the program could also look like this:",
+      "raw_source": "What this program prints out is partially dependent on input from the user. That means the execution of the program could also look like this:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "What is your name? **Paula Programmer**\nHi there, Paula Programmer",
+      "raw_source": "<sample-output>\n\nWhat is your name? **Paula Programmer**\nHi there, Paula Programmer\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The word `name` in this program is a _variable_. In the context of programming, a variable is a location for storing some _value_, such as a string or a number. This value can be used later, and it can also be changed.",
+      "raw_source": "The word `name` in this program is a _variable_. In the context of programming, a variable is a location for storing some _value_, such as a string or a number. This value can be used later, and it can also be changed."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "hint",
+        "name": "Naming variables"
+      },
+      "inner_content": "In principle, variables can be named quite freely, within certain limits specified in the Python language.\n\nIt is a common international programming practice to name variables in English, but you may come across code where variables are named in other languages, such as the native language of the programmer. The name of the variable has no direct effect on its content, so the name, in that sense, does not matter. However, it can often be helpful in understanding how code functions if variables are named logically and in English.",
+      "raw_source": "<text-box variant=\"hint\" name=\"Naming variables\">\n\nIn principle, variables can be named quite freely, within certain limits specified in the Python language.\n\nIt is a common international programming practice to name variables in English, but you may come across code where variables are named in other languages, such as the native language of the programmer. The name of the variable has no direct effect on its content, so the name, in that sense, does not matter. However, it can often be helpful in understanding how code functions if variables are named logically and in English.\n\n</text-box>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Name twice",
+        "tmcname": "part01-06_name_twice"
+      },
+      "inner_content": "Please write a program which asks for the user's name and then prints it twice, on two consecutive lines.\n\nAn example of the how the program should function:\n\n<sample-output>\n\nWhat is your name? **Paul**\nPaul\nPaul\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Name twice\" tmcname=\"part01-06_name_twice\">\n\nPlease write a program which asks for the user's name and then prints it twice, on two consecutive lines.\n\nAn example of the how the program should function:\n\n<sample-output>\n\nWhat is your name? **Paul**\nPaul\nPaul\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Referencing a variable",
+      "raw_source": "## Referencing a variable"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A single variable can be referred to many times in a program:",
+      "raw_source": "A single variable can be referred to many times in a program:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "name = input(\"What is your name? \")\n\nprint(\"Hi, \" + name + \"!\")\nprint(name + \" is quite a nice name.\")",
+      "raw_source": "```python\nname = input(\"What is your name? \")\n\nprint(\"Hi, \" + name + \"!\")\nprint(name + \" is quite a nice name.\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the user gives the name `Paul Python`, this program prints out the following:",
+      "raw_source": "If the user gives the name `Paul Python`, this program prints out the following:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "What is your name? **Paul Python**\nHi, Paul Python!\nPaul Python is quite a nice name.",
+      "raw_source": "<sample-output>\n\nWhat is your name? **Paul Python**\nHi, Paul Python!\nPaul Python is quite a nice name.\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's have a closer look at the way the `print` command is used above. Within the brackets of the command there is both text in quotation marks as well as variable names which refer to input from the user. These have been combined with a `+` operator, which _concatenates_ two strings into a single string.",
+      "raw_source": "Let's have a closer look at the way the `print` command is used above. Within the brackets of the command there is both text in quotation marks as well as variable names which refer to input from the user. These have been combined with a `+` operator, which _concatenates_ two strings into a single string."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Strings and variables can be combined quite freely:",
+      "raw_source": "Strings and variables can be combined quite freely:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "name = input(\"What is your name? \")\n\nprint(\"Hi \" + name + \"! Let me make sure: your name is \" + name + \"?\")",
+      "raw_source": "```python\nname = input(\"What is your name? \")\n\nprint(\"Hi \" + name + \"! Let me make sure: your name is \" + name + \"?\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the user gives the name `Ellen Example` this prints out",
+      "raw_source": "If the user gives the name `Ellen Example` this prints out"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "What is your name? **Ellen Example**\nHi Ellen Example! Let me make sure: your name is Ellen Example?",
+      "raw_source": "<sample-output>\n\nWhat is your name? **Ellen Example**\nHi Ellen Example! Let me make sure: your name is Ellen Example?\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Name and exclamation marks",
+        "tmcname": "part01-07_name_and_exclamation_marks"
+      },
+      "inner_content": "Please write a program which asks for the user's name and then prints it out twice on a single line so that there is an exclamation mark at the beginning of the line, another between the two names and a third one at the end of the line.\n\nThe program should function as follows:\n\n<sample-output>\n\nWhat is your name? **Paul**\n!Paul!Paul!\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Name and exclamation marks\" tmcname=\"part01-07_name_and_exclamation_marks\">\n\nPlease write a program which asks for the user's name and then prints it out twice on a single line so that there is an exclamation mark at the beginning of the line, another between the two names and a third one at the end of the line.\n\nThe program should function as follows:\n\n<sample-output>\n\nWhat is your name? **Paul**\n!Paul!Paul!\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "More than one input",
+      "raw_source": "## More than one input"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A program can ask for more than one input. Notice how below each `input` command stores the received value in a different variable.",
+      "raw_source": "A program can ask for more than one input. Notice how below each `input` command stores the received value in a different variable."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "name = input(\"What is your name? \")\nemail = input(\"What is your email address? \")\nnickname = input(\"What is your nickname? \")\n\nprint(\"Let's make sure we got this right\")\nprint(\"Your name: \" + name)\nprint(\"Your email address: \" + email)\nprint(\"Your nickname: \" + nickname)",
+      "raw_source": "```python\nname = input(\"What is your name? \")\nemail = input(\"What is your email address? \")\nnickname = input(\"What is your nickname? \")\n\nprint(\"Let's make sure we got this right\")\nprint(\"Your name: \" + name)\nprint(\"Your email address: \" + email)\nprint(\"Your nickname: \" + nickname)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The program could print out this, for example:",
+      "raw_source": "The program could print out this, for example:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "What is your name? **Frances Fictitious**\nWhat is your email address? **frances99@example.com**\nWhat is your nickname? **Fran**\nLet's make sure we got this right\nYour name: Frances Fictitious\nYour email address: frances99@example.com\nYour nickname: Fran",
+      "raw_source": "<sample-output>\n\nWhat is your name? **Frances Fictitious**\nWhat is your email address? **frances99@example.com**\nWhat is your nickname? **Fran**\nLet's make sure we got this right\nYour name: Frances Fictitious\nYour email address: frances99@example.com\nYour nickname: Fran\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the same variable is used to store more than one input, each new value will replace the previous one. For example:",
+      "raw_source": "If the same variable is used to store more than one input, each new value will replace the previous one. For example:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "address = input(\"What is your address? \")\nprint(\"So you live at address \" + address)\n\naddress = input(\"Please type in a new address: \")\nprint(\"Your address is now \" + address)",
+      "raw_source": "```python\naddress = input(\"What is your address? \")\nprint(\"So you live at address \" + address)\n\naddress = input(\"Please type in a new address: \")\nprint(\"Your address is now \" + address)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "An example execution of the program:",
+      "raw_source": "An example execution of the program:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "What is your address? **Python Path 101, Flat 3D**\nSo you live at address Python Path 101, Flat 3D\nPlease type in a new address: **New Road 999**\nYour address is now New Road 999",
+      "raw_source": "<sample-output>\n\nWhat is your address? **Python Path 101, Flat 3D**\nSo you live at address Python Path 101, Flat 3D\nPlease type in a new address: **New Road 999**\nYour address is now New Road 999\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This means that if the same variable is used to store two inputs in succession, there is no way to access the first input value after it has been replaced by the second:",
+      "raw_source": "This means that if the same variable is used to store two inputs in succession, there is no way to access the first input value after it has been replaced by the second:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "address = input(\"What is your address? \")\naddress = input(\"Please type in a new address: \")\n\nprint(\"Your address is now \" + address)",
+      "raw_source": "```python\naddress = input(\"What is your address? \")\naddress = input(\"Please type in a new address: \")\n\nprint(\"Your address is now \" + address)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "An example of how the program's output might look like:",
+      "raw_source": "An example of how the program's output might look like:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "What is your address? **Python Path 10**\nPlease type in a new address: **Programmer's Walk 23**\nYour address is now Programmer's Walk 23",
+      "raw_source": "<sample-output>\n\nWhat is your address? **Python Path 10**\nPlease type in a new address: **Programmer's Walk 23**\nYour address is now Programmer's Walk 23\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Name and address",
+        "tmcname": "part01-08_name_and_address"
+      },
+      "inner_content": "Please write a program which asks for the user's name and address. The program should also print out the given information, as follows:\n\n<sample-output>\n\nGiven name: **Steve**\nFamily name: **Sanders**\nStreet address: **91 Station Road**\nCity and postal code: **London EC05 6AW**\nSteve Sanders\n91 Station Road\nLondon EC05 6AW\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Name and address\" tmcname=\"part01-08_name_and_address\">\n\nPlease write a program which asks for the user's name and address. The program should also print out the given information, as follows:\n\n<sample-output>\n\nGiven name: **Steve**\nFamily name: **Sanders**\nStreet address: **91 Station Road**\nCity and postal code: **London EC05 6AW**\nSteve Sanders\n91 Station Road\nLondon EC05 6AW\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Fix the code: Utterances",
+        "tmcname": "part01-09_utterances"
+      },
+      "inner_content": "Here is a program which should ask for three utterances and print them out, like so:\n\n<sample-output>\n\nThe 1st part: **hickory**\nThe 2nd part: **dickory**\nThe 3rd part: **dock**\nhickory-dickory-dock!\n\n</sample-output>\n\nHowever, there is something wrong with the code below. Please fix it.",
+      "raw_source": "<in-browser-programming-exercise name=\"Fix the code: Utterances\" tmcname=\"part01-09_utterances\">\n\nHere is a program which should ask for three utterances and print them out, like so:\n\n<sample-output>\n\nThe 1st part: **hickory**\nThe 2nd part: **dickory**\nThe 3rd part: **dock**\nhickory-dickory-dock!\n\n</sample-output>\n\nHowever, there is something wrong with the code below. Please fix it.\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Story",
+        "tmcname": "part01-10_story"
+      },
+      "inner_content": "Please write a program which prints out the following story. The user gives a name and a year, which should be inserted into the printout.\n\n<sample-output>\n\nPlease type in a name: **Mary**\nPlease type in a year: **1572**\n\nMary is a valiant knight, born in the year 1572. One morning Mary woke up to an awful racket: a dragon was approaching the village. Only Mary could save the village's residents.\n\n</sample-output>\n\nThe story should change according to the input given by the user.",
+      "raw_source": "<in-browser-programming-exercise name=\"Story\" tmcname=\"part01-10_story\">\n\nPlease write a program which prints out the following story. The user gives a name and a year, which should be inserted into the printout.\n\n<sample-output>\n\nPlease type in a name: **Mary**\nPlease type in a year: **1572**\n\nMary is a valiant knight, born in the year 1572. One morning Mary woke up to an awful racket: a dragon was approaching the village. Only Mary could save the village's residents.\n\n</sample-output>\n\nThe story should change according to the input given by the user.\n\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!--",
+      "raw_source": "<!--"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A quiz to review the contents of this section:",
+      "raw_source": "A quiz to review the contents of this section:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "10cb3510-d8a6-5e9b-b372-c85c4c7eb957"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"10cb3510-d8a6-5e9b-b372-c85c4c7eb957\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "part": 12,
+  "slug": "part-12",
+  "title_original": "Part 12",
+  "title_vi": "Hàm như Đối số, Generator và Biểu thức chính quy",
+  "lessons": [
+    {
+      "id": "part12-1-functions-as-arguments",
+      "slug": "1-functions-as-arguments",
+      "is_index": false,
+      "title_original": "Functions as arguments",
+      "path": "/part-12/1-functions-as-arguments",
+      "blocks_count": 67,
+      "title_vi": "Hàm làm đối số"
+    },
+    {
+      "id": "part12-2-generators",
+      "slug": "2-generators",
+      "is_index": false,
+      "title_original": "Generators",
+      "path": "/part-12/2-generators",
+      "blocks_count": 32,
+      "title_vi": "Generator (Trình tạo)"
+    },
+    {
+      "id": "part12-3-functional-programming",
+      "slug": "3-functional-programming",
+      "is_index": false,
+      "title_original": "Functional programming",
+      "path": "/part-12/3-functional-programming",
+      "blocks_count": 95,
+      "title_vi": "Lập trình hàm (Functional Programming)"
+    },
+    {
+      "id": "part12-4-regular-expressions",
+      "slug": "4-regular-expressions",
+      "is_index": false,
+      "title_original": "Regular expressions",
+      "path": "/part-12/4-regular-expressions",
+      "blocks_count": 45,
+      "title_vi": "Biểu thức chính quy"
+    },
+    {
+      "id": "part12-index",
+      "slug": "index",
+      "is_index": true,
+      "title_original": "Part 12",
+      "path": "/part-12",
+      "blocks_count": 2,
+      "title_vi": "Hàm như Đối số, Generator và Biểu thức chính quy"
+    }
+  ]
+}

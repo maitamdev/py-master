@@ -1,0 +1,87 @@
+{
+  "id": "page-index",
+  "slug": "index",
+  "title_original": "About this course",
+  "path": "/",
+  "source_path": "data/index.md",
+  "source_hash": "b967ad3305ca644cc760b2f409b673c4683f84e7985559e30f51f9f98472aa86",
+  "frontmatter": {
+    "path": "/",
+    "title": "About this course",
+    "hidden": false,
+    "information_page": true,
+    "banner": true,
+    "sidebar_priority": 7000
+  },
+  "chunks_count": 13,
+  "raw_chunks": [
+    {
+      "raw_type": "paragraph",
+      "content": "This is the course material page for the Introduction to Programming course (BSCS1001, 5 ECTS) and the Advanced Course in Programming (BSCS1002, 5 ECTS) from the Department of Computer Science at the University of Helsinki.",
+      "raw_source": "This is the course material page for the Introduction to Programming course (BSCS1001, 5 ECTS) and the Advanced Course in Programming (BSCS1002, 5 ECTS) from the Department of Computer Science at the University of Helsinki."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "To pass either of the two courses, you are expected to complete programming exercises and take part in an exam. Please see the [Grading and exams](/grading-and-exams) page for more details.",
+      "raw_source": "To pass either of the two courses, you are expected to complete programming exercises and take part in an exam. Please see the [Grading and exams](/grading-and-exams) page for more details."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The Introduction to Programming course consists of parts 1 through 7 in the material, and the Advanced Course in Programming consists of parts 8 through 14.",
+      "raw_source": "The Introduction to Programming course consists of parts 1 through 7 in the material, and the Advanced Course in Programming consists of parts 8 through 14."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Support channels on the course",
+      "raw_source": "## Support channels on the course"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The official course support channels are available through workshop guidance on campus and Discord. The course channels in Discord are available through [this link](https://study.cs.helsinki.fi/discord/join/ohjelmoinnin_mooc).",
+      "raw_source": "The official course support channels are available through workshop guidance on campus and Discord. The course channels in Discord are available through [this link](https://study.cs.helsinki.fi/discord/join/ohjelmoinnin_mooc)."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Please see the [Support and assistance](/support-and-assistance) page for more details.",
+      "raw_source": "Please see the [Support and assistance](/support-and-assistance) page for more details."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Use Discord primarily for communication. You can be in contact with the course teachers by e-mail ohjelmoinnin-mooc@helsinki.fi.",
+      "raw_source": "Use Discord primarily for communication. You can be in contact with the course teachers by e-mail ohjelmoinnin-mooc@helsinki.fi."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Timetable",
+      "raw_source": "## Timetable"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The course will be open until the end of the year 2026.",
+      "raw_source": "The course will be open until the end of the year 2026."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Lectures",
+      "raw_source": "## Lectures"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The remote lectures in the course are given on Thursdays at 10.15 Finnish time. [You can follow the lectures via Zoom](https://helsinki.zoom.us/j/69552727154?pwd=skwCXNgrTltfFJBe38w2zC2mvxkd2e.1).",
+      "raw_source": "The remote lectures in the course are given on Thursdays at 10.15 Finnish time. [You can follow the lectures via Zoom](https://helsinki.zoom.us/j/69552727154?pwd=skwCXNgrTltfFJBe38w2zC2mvxkd2e.1)."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "There are also lecture recordings from 2025 available in the table below. Please note that dates and other practical information in those lecture videos do not concern this year's course.",
+      "raw_source": "There are also lecture recordings from 2025 available in the table below. Please note that dates and other practical information in those lecture videos do not concern this year's course."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<table>\n  <thead>\n    <tr>\n      <td>Part</td>\n      <td>Recording</td>\n      <td>Slides</td>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Part 1 (2026)</td>\n      <td><a href=\"https://youtu.be/-mmxsTadINo\">Recording 03.09.2026</a></td>\n      <td><a href=\"https://docs.google.com/presentation/d/1zUGqmAumuSVqPLZwgbfhuuhVAm_maBvoAuvNorS5Xw4/edit?usp=sharing\">Slides 1</a></td>\n    </tr>\n    <tr>\n      <td>Part 2 (2026)</td>\n      <td><a href=\"https://youtu.be/Z2ZNgwECF8U\">Recording 10.09.2026</a></td>\n      <td><a href=\"https://docs.google.com/presentation/d/1zYeb3ZSHi1xahDKKqBJg_5eI8gS7zzoIkjR_8__QNWY/edit?usp=sharing\">Slides 2</a></td>\n    </tr>\n    <tr>\n      <td>Part 3 (2025)</td>\n      <td><a href=\"https://youtu.be/kzGJLq6qmlc\">Recording 18.09.2025</a></td>>\n    </tr>\n    <tr>\n      <td>Part 4 (2025)</td>\n      <td><a href=\"https://youtu.be/kL82RuLZ-6g\">Recording 25.09.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 5 (2025)</td>\n      <td><a href=\"https://youtu.be/Q6e6ywoFoHM\">Recording 02.10.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 6 (2025)</td>\n      <td><a href=\"https://youtu.be/V0rzjcPNo0E\">Recording 09.10.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 7 (2025)</td>\n      <td><a href=\"https://youtu.be/6D1bvUdsNyg\">Recording 16.10.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 8 (2025)</td>\n      <td><a href=\"https://youtu.be/puTMAAO8GCM\">Recording 30.10.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 9 (2025)</td>\n      <td><a href=\"https://youtu.be/Kyu3-m2K9CM\">Recording 06.11.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 10 (2025)</td>\n      <td><a href=\"https://youtu.be/mTPc7DWiqHk\">Recording 13.11.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 11 (2025)</td>\n      <td><a href=\"https://youtu.be/F8ZR42dga94\">Recording 20.11.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 12 (2025)</td>\n      <td><a href=\"https://youtu.be/G1k-HffTUiM\">Recording 27.11.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 13 (2025)</td>\n      <td><a href=\"https://youtu.be/3S_kPT5jcRw\">Recording 04.12.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 14</td>\n      <td>No recording, project work</td>\n      <td></td>\n    </tr>\n  </tbody>\n</table>",
+      "raw_source": "<table>\n  <thead>\n    <tr>\n      <td>Part</td>\n      <td>Recording</td>\n      <td>Slides</td>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Part 1 (2026)</td>\n      <td><a href=\"https://youtu.be/-mmxsTadINo\">Recording 03.09.2026</a></td>\n      <td><a href=\"https://docs.google.com/presentation/d/1zUGqmAumuSVqPLZwgbfhuuhVAm_maBvoAuvNorS5Xw4/edit?usp=sharing\">Slides 1</a></td>\n    </tr>\n    <tr>\n      <td>Part 2 (2026)</td>\n      <td><a href=\"https://youtu.be/Z2ZNgwECF8U\">Recording 10.09.2026</a></td>\n      <td><a href=\"https://docs.google.com/presentation/d/1zYeb3ZSHi1xahDKKqBJg_5eI8gS7zzoIkjR_8__QNWY/edit?usp=sharing\">Slides 2</a></td>\n    </tr>\n    <tr>\n      <td>Part 3 (2025)</td>\n      <td><a href=\"https://youtu.be/kzGJLq6qmlc\">Recording 18.09.2025</a></td>>\n    </tr>\n    <tr>\n      <td>Part 4 (2025)</td>\n      <td><a href=\"https://youtu.be/kL82RuLZ-6g\">Recording 25.09.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 5 (2025)</td>\n      <td><a href=\"https://youtu.be/Q6e6ywoFoHM\">Recording 02.10.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 6 (2025)</td>\n      <td><a href=\"https://youtu.be/V0rzjcPNo0E\">Recording 09.10.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 7 (2025)</td>\n      <td><a href=\"https://youtu.be/6D1bvUdsNyg\">Recording 16.10.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 8 (2025)</td>\n      <td><a href=\"https://youtu.be/puTMAAO8GCM\">Recording 30.10.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 9 (2025)</td>\n      <td><a href=\"https://youtu.be/Kyu3-m2K9CM\">Recording 06.11.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 10 (2025)</td>\n      <td><a href=\"https://youtu.be/mTPc7DWiqHk\">Recording 13.11.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 11 (2025)</td>\n      <td><a href=\"https://youtu.be/F8ZR42dga94\">Recording 20.11.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 12 (2025)</td>\n      <td><a href=\"https://youtu.be/G1k-HffTUiM\">Recording 27.11.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 13 (2025)</td>\n      <td><a href=\"https://youtu.be/3S_kPT5jcRw\">Recording 04.12.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 14</td>\n      <td>No recording, project work</td>\n      <td></td>\n    </tr>\n  </tbody>\n</table>"
+    }
+  ]
+}

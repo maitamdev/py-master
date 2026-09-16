@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-11_first_second_last",
+  "lesson_id": "part04-2-more-functions",
+  "part": 4,
+  "tmc_name": "part04-11_first_second_last",
+  "title_original": "First, second and last words",
+  "title_vi": "Lời đầu tiên, lời thứ hai và lời cuối cùng",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write three functions: `first_word`, `second_word` and `last_word`. Each function takes a string argument.\n\nAs their names imply, the functions return either the first, the second or the last word in the sentence they receive as their string argument.\n\nIn each case you may assume the argument string contains at least two separate words, and all words are separated by exactly one space character. There will be no spaces in the beginning or at the end of the argument strings.\n\n```python\nsentence = \"it was a dark and stormy python\"\n\nprint(first_word(sentence)) # it\nprint(second_word(sentence)) # was\nprint(last_word(sentence)) # python\n```\n\n<sample-output>\n\nit\nwas\npython\n\n</sample-output>\n\n```python\nsentence = \"it was\"\n\nprint(second_word(sentence)) # was\nprint(last_word(sentence)) # was\n```",
+  "description_vi": "Hãy viết ba hàm: `first_word`, `second_word` và `last_word`. Mỗi hàm lấy một đối số chuỗi.\n\nĐúng như tên gọi của chúng, các hàm trả về từ đầu tiên, thứ hai hoặc từ cuối cùng trong câu mà chúng nhận được làm đối số chuỗi.\n\nTrong mỗi trường hợp, bạn có thể giả sử chuỗi đối số chứa ít nhất hai từ riêng biệt và tất cả các từ được phân tách bằng chính xác một ký tự khoảng trắng. Sẽ không có khoảng trắng ở đầu hoặc cuối chuỗi đối số.\n\n```python\nsentence = \"it was a dark and stormy python\"\n\nprint(first_word(sentence)) # it\nprint(second_word(sentence)) # was\nprint(last_word(sentence)) # python\n```\n\n<sample-output>\n\nnó\nđã là\ntrăn\n\n</sample-output>\n\n```python\nsentence = \"it was\"\n\nprint(second_word(sentence)) # was\nprint(last_word(sentence)) # was\n```",
+  "starter_code": "sentence = \"it was a dark and stormy python\"\n\nprint(first_word(sentence)) # it\nprint(second_word(sentence)) # was\nprint(last_word(sentence)) # python",
+  "grading_data_available": false,
+  "source_hash": "32da018b431613d80a91f663f3b2a6becb2504414efae4790af40aaa19d119c9",
+  "order": 81
+}

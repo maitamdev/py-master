@@ -1,0 +1,367 @@
+{
+  "id": "part09-3-encapsulation",
+  "part": 9,
+  "part_slug": "part-9",
+  "slug": "3-encapsulation",
+  "is_part_index": false,
+  "title_original": "Encapsulation",
+  "path": "/part-9/3-encapsulation",
+  "source_path": "data/part-9/3-encapsulation.md",
+  "source_hash": "c1854681c51946b10a7fd44cc766a541680553823a2672697467808bcb73e866",
+  "frontmatter": {
+    "path": "/part-9/3-encapsulation",
+    "title": "Encapsulation",
+    "hidden": false
+  },
+  "chunks_count": 58,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know what encapsulation means\n- You will be able to create private attributes\n- You will know how to create getters and setters for your attributes",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know what encapsulation means\n- You will be able to create private attributes\n- You will know how to create getters and setters for your attributes\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In object oriented programming the term _client_ refers to a program which uses a class, or instances of a class. A class offers the client _services_ through which the client can access the objects created based on the class. The goals here are that",
+      "raw_source": "In object oriented programming the term _client_ refers to a program which uses a class, or instances of a class. A class offers the client _services_ through which the client can access the objects created based on the class. The goals here are that"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "1) the use of a class and/or objects is as simple as possible from the client's point of view\n2) the _integrity_ of any object is preserved at all times",
+      "raw_source": "1) the use of a class and/or objects is as simple as possible from the client's point of view\n2) the _integrity_ of any object is preserved at all times"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The integrity of an object means that the _state_ of an object always remains acceptable. In practice this means that the values of the object's attributes are always acceptable. For example, an object representing a date should never have 13 as the value of the month, an object modelling a student should never have a negative number as the value of study credits attained, and so forth.",
+      "raw_source": "The integrity of an object means that the _state_ of an object always remains acceptable. In practice this means that the values of the object's attributes are always acceptable. For example, an object representing a date should never have 13 as the value of the month, an object modelling a student should never have a negative number as the value of study credits attained, and so forth."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's take a look at a class named Student:",
+      "raw_source": "Let's take a look at a class named Student:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class Student:\n    def __init__(self, name: str, student_number: str):\n        self.name = name\n        self.student_number = student_number\n        self.study_credits = 0\n\n    def add_credits(self, study_credits):\n        if study_credits > 0:\n            self.study_credits += study_credits",
+      "raw_source": "```python\nclass Student:\n    def __init__(self, name: str, student_number: str):\n        self.name = name\n        self.student_number = student_number\n        self.study_credits = 0\n\n    def add_credits(self, study_credits):\n        if study_credits > 0:\n            self.study_credits += study_credits\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `Student` object offers its clients the method `add_credits`, which allows the client to add a specified number of credits to the student's total. The method ensures the value passed as the argument is above zero. The following code adds study credits on three occasions:",
+      "raw_source": "The `Student` object offers its clients the method `add_credits`, which allows the client to add a specified number of credits to the student's total. The method ensures the value passed as the argument is above zero. The following code adds study credits on three occasions:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "sally = Student(\"Sally Student\", \"12345\")\nsally.add_credits(5)\nsally.add_credits(5)\nsally.add_credits(10)\nprint(\"Study credits:\", sally.study_credits)",
+      "raw_source": "```python\nsally = Student(\"Sally Student\", \"12345\")\nsally.add_credits(5)\nsally.add_credits(5)\nsally.add_credits(10)\nprint(\"Study credits:\", sally.study_credits)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Study credits: 20",
+      "raw_source": "<sample-output>\n\nStudy credits: 20\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Despite the method definition it is still possible to access the `study_credits` attribute directly. This could result in an erroneous state where the integrity of the object is lost:",
+      "raw_source": "Despite the method definition it is still possible to access the `study_credits` attribute directly. This could result in an erroneous state where the integrity of the object is lost:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "sally = Student(\"Sally Student\", \"12345\")\nsally.study_credits = -100\nprint(\"Study credits:\", sally.study_credits)",
+      "raw_source": "```python\nsally = Student(\"Sally Student\", \"12345\")\nsally.study_credits = -100\nprint(\"Study credits:\", sally.study_credits)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Study credits: -100",
+      "raw_source": "<sample-output>\n\nStudy credits: -100\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Encapsulation",
+      "raw_source": "## Encapsulation"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A common feature in object oriented programming languages is that classes can usually hide their attributes from any prospective clients. Hidden attributes are usually called _private_. In Python this privacy is achieved by adding two underscores `__` to the beginning of the attribute name:",
+      "raw_source": "A common feature in object oriented programming languages is that classes can usually hide their attributes from any prospective clients. Hidden attributes are usually called _private_. In Python this privacy is achieved by adding two underscores `__` to the beginning of the attribute name:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class CreditCard:\n    # the attribute number is private, while the attribute name is accessible\n    def __init__(self, number: str, name: str):\n        self.__number = number\n        self.name = name",
+      "raw_source": "```python\nclass CreditCard:\n    # the attribute number is private, while the attribute name is accessible\n    def __init__(self, number: str, name: str):\n        self.__number = number\n        self.name = name\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A private attribute is not directly visible to the client. Trying to refer to it causes an error. In the above example the `name` attribute can be easily accessed and changed:",
+      "raw_source": "A private attribute is not directly visible to the client. Trying to refer to it causes an error. In the above example the `name` attribute can be easily accessed and changed:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "card = CreditCard(\"123456\",\"Randy Riches\")\nprint(card.name)\ncard.name = \"Charlie Churchmouse\"\nprint(card.name)",
+      "raw_source": "```python\ncard = CreditCard(\"123456\",\"Randy Riches\")\nprint(card.name)\ncard.name = \"Charlie Churchmouse\"\nprint(card.name)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Randy Riches\nCharlie Churchmouse",
+      "raw_source": "<sample-output>\n\nRandy Riches\nCharlie Churchmouse\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Trying to print out the card number, however, causes and error:",
+      "raw_source": "Trying to print out the card number, however, causes and error:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "card = CreditCard(\"123456\",\"Randy Riches\")\nprint(card.__number)",
+      "raw_source": "```python\ncard = CreditCard(\"123456\",\"Randy Riches\")\nprint(card.__number)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "AttributeError: 'CreditCard' object has no attribute '__number'",
+      "raw_source": "<sample-output>\n\nAttributeError: 'CreditCard' object has no attribute '__number'\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Hiding attributes from clients is called _encapsulation_. As the name implies, the attribute is \"enclosed in a capsule\". The client is then offered a suitable interface for accessing and processing the data stored in the object.",
+      "raw_source": "Hiding attributes from clients is called _encapsulation_. As the name implies, the attribute is \"enclosed in a capsule\". The client is then offered a suitable interface for accessing and processing the data stored in the object."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's add another encapsulated attribute: the balance on the credit card. This time we'll also add publicly visible methods which allow the client to access and change the balance:",
+      "raw_source": "Let's add another encapsulated attribute: the balance on the credit card. This time we'll also add publicly visible methods which allow the client to access and change the balance:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class CreditCard:\n    def __init__(self, number: str, name: str, balance: float):\n        self.__number = number\n        self.name = name\n        self.__balance = balance\n\n    def deposit_money(self, amount: float):\n        if amount > 0:\n            self.__balance += amount\n\n    def withdraw_money(self, amount: float):\n        if amount > 0 and amount <= self.__balance:\n            self.__balance -= amount\n\n    def retrieve_balance(self):\n        return self.__balance",
+      "raw_source": "```python\nclass CreditCard:\n    def __init__(self, number: str, name: str, balance: float):\n        self.__number = number\n        self.name = name\n        self.__balance = balance\n\n    def deposit_money(self, amount: float):\n        if amount > 0:\n            self.__balance += amount\n\n    def withdraw_money(self, amount: float):\n        if amount > 0 and amount <= self.__balance:\n            self.__balance -= amount\n\n    def retrieve_balance(self):\n        return self.__balance\n```"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "card = CreditCard(\"123456\", \"Randy Riches\", 5000)\nprint(card.retrieve_balance())\ncard.deposit_money(100)\nprint(card.retrieve_balance())\ncard.withdraw_money(500)\nprint(card.retrieve_balance())\n# The following will not work because the balance is not sufficient\ncard.withdraw_money(10000)\nprint(card.retrieve_balance())",
+      "raw_source": "```python\ncard = CreditCard(\"123456\", \"Randy Riches\", 5000)\nprint(card.retrieve_balance())\ncard.deposit_money(100)\nprint(card.retrieve_balance())\ncard.withdraw_money(500)\nprint(card.retrieve_balance())\n# The following will not work because the balance is not sufficient\ncard.withdraw_money(10000)\nprint(card.retrieve_balance())\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "5000\n5100\n4600\n4600",
+      "raw_source": "<sample-output>\n\n5000\n5100\n4600\n4600\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The balance cannot be changed directly because the attribute is private, but we've included the methods `deposit_money` and `withdraw_money` for changing the value. The method `retrieve_balance` returns the value stored in balance. The methods include some rudimentary checks for retaining the integrity of the object: for instance, the card cannot be overdrawn.",
+      "raw_source": "The balance cannot be changed directly because the attribute is private, but we've included the methods `deposit_money` and `withdraw_money` for changing the value. The method `retrieve_balance` returns the value stored in balance. The methods include some rudimentary checks for retaining the integrity of the object: for instance, the card cannot be overdrawn."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Car",
+        "tmcname": "part09-09_car"
+      },
+      "inner_content": "Please implement a class named `Car` which has two private, _encapsulated_ variables: the amount of petrol in the tank (0 to 60 litres) and odometer reading (in kilometres). The car consumes one litre of petrol per kilometre.\n\nThe class should also contain the following methods:\n\n- `fill_up()` which fills up the tank\n- `drive(km:int)` which drives the car for the distance indicated, or for however long the petrol in the tank allows\n- `__str__` which returns a string representation of the car as per the examples below\n\nAn example of how the class is used:\n\n```python\ncar = Car()\nprint(car)\ncar.fill_up()\nprint(car)\ncar.drive(20)\nprint(car)\ncar.drive(50)\nprint(car)\ncar.drive(10)\nprint(car)\ncar.fill_up()\ncar.fill_up()\nprint(car)\n```\n\n<sample-output>\n\nCar: odometer reading 0 km, petrol remaining 0 litres\nCar: odometer reading 0 km, petrol remaining 60 litres\nCar: odometer reading 20 km, petrol remaining 40 litres\nCar: odometer reading 60 km, petrol remaining 0 litres\nCar: odometer reading 60 km, petrol remaining 0 litres\nCar: odometer reading 60 km, petrol remaining 60 litres\n\n</sample-output>\n\n**NB:** you are asked to encapsulate the amount of petrol left and the odometer reading. It should not be possible to access them directly from outside the class's own methods.",
+      "raw_source": "<programming-exercise name='Car' tmcname='part09-09_car'>\n\nPlease implement a class named `Car` which has two private, _encapsulated_ variables: the amount of petrol in the tank (0 to 60 litres) and odometer reading (in kilometres). The car consumes one litre of petrol per kilometre.\n\nThe class should also contain the following methods:\n\n- `fill_up()` which fills up the tank\n- `drive(km:int)` which drives the car for the distance indicated, or for however long the petrol in the tank allows\n- `__str__` which returns a string representation of the car as per the examples below\n\nAn example of how the class is used:\n\n```python\ncar = Car()\nprint(car)\ncar.fill_up()\nprint(car)\ncar.drive(20)\nprint(car)\ncar.drive(50)\nprint(car)\ncar.drive(10)\nprint(car)\ncar.fill_up()\ncar.fill_up()\nprint(car)\n```\n\n<sample-output>\n\nCar: odometer reading 0 km, petrol remaining 0 litres\nCar: odometer reading 0 km, petrol remaining 60 litres\nCar: odometer reading 20 km, petrol remaining 40 litres\nCar: odometer reading 60 km, petrol remaining 0 litres\nCar: odometer reading 60 km, petrol remaining 0 litres\nCar: odometer reading 60 km, petrol remaining 60 litres\n\n</sample-output>\n\n**NB:** you are asked to encapsulate the amount of petrol left and the odometer reading. It should not be possible to access them directly from outside the class's own methods.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "A brief note on private attributes, Python and object oriented programming",
+      "raw_source": "## A brief note on private attributes, Python and object oriented programming"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "There are ways around the underscore `__` notation for hiding attributes, which you may come across if you search for resources online. No Python attribute is truly private, and this is intentional on the part of the creators of Python. On the other hand, a Python programmer is generally expected to respect the visibility guidelines set in classes, and it takes a special effort to get around these. In other object oriented programming languages, such as Java, private variables are often truly hidden, and it is best if you think of private Python variables as such as well.",
+      "raw_source": "There are ways around the underscore `__` notation for hiding attributes, which you may come across if you search for resources online. No Python attribute is truly private, and this is intentional on the part of the creators of Python. On the other hand, a Python programmer is generally expected to respect the visibility guidelines set in classes, and it takes a special effort to get around these. In other object oriented programming languages, such as Java, private variables are often truly hidden, and it is best if you think of private Python variables as such as well."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Getters and setters",
+      "raw_source": "## Getters and setters"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In object oriented programming, methods which are dedicated to accessing and changing attributes are usually called _getters_ and _setters_. Not all Python programmers use the terms \"getter\" and \"setter\", but the concept of _properties_ outlined below is very similar, which is why we will use the generally accepted object oriented programming terminology here.",
+      "raw_source": "In object oriented programming, methods which are dedicated to accessing and changing attributes are usually called _getters_ and _setters_. Not all Python programmers use the terms \"getter\" and \"setter\", but the concept of _properties_ outlined below is very similar, which is why we will use the generally accepted object oriented programming terminology here."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "So, above we created some public methods for accessing private attributes, but there is a more straightforward, \"pythonic\" way of accessing attributes. Let's have a look at a simple class named `Wallet` with a single, private attribute `money`:",
+      "raw_source": "So, above we created some public methods for accessing private attributes, but there is a more straightforward, \"pythonic\" way of accessing attributes. Let's have a look at a simple class named `Wallet` with a single, private attribute `money`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class Wallet:\n    def __init__(self):\n        self.__money = 0",
+      "raw_source": "```python\nclass Wallet:\n    def __init__(self):\n        self.__money = 0\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We can add getter and setter methods for accessing the private attribute using the `@property` decorator:",
+      "raw_source": "We can add getter and setter methods for accessing the private attribute using the `@property` decorator:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class Wallet:\n    def __init__(self):\n        self.__money = 0\n\n    # A getter method\n    @property\n    def money(self):\n        return self.__money\n\n    # A setter method\n    @money.setter\n    def money(self, money):\n        if money >= 0:\n            self.__money = money",
+      "raw_source": "```python\nclass Wallet:\n    def __init__(self):\n        self.__money = 0\n\n    # A getter method\n    @property\n    def money(self):\n        return self.__money\n\n    # A setter method\n    @money.setter\n    def money(self, money):\n        if money >= 0:\n            self.__money = money\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "First, we define a getter method, which returns the amount of money currently in the wallet. Then we define a setter method, which sets a new value for the money attribute while making sure the new value is not negative.",
+      "raw_source": "First, we define a getter method, which returns the amount of money currently in the wallet. Then we define a setter method, which sets a new value for the money attribute while making sure the new value is not negative."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The new methods can be used like so:",
+      "raw_source": "The new methods can be used like so:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "wallet = Wallet()\nprint(wallet.money)\n\nwallet.money = 50\nprint(wallet.money)\n\nwallet.money = -30\nprint(wallet.money)",
+      "raw_source": "```python\nwallet = Wallet()\nprint(wallet.money)\n\nwallet.money = 50\nprint(wallet.money)\n\nwallet.money = -30\nprint(wallet.money)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "0\n50\n50",
+      "raw_source": "<sample-output>\n\n0\n50\n50\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As far as the client is concerned, using these new methods is no different from directly accessing an attribute. Parentheses are not necessary; instead it is perfectly acceptable to state `wallet.money = 50`, as if we were simply assigning a value to a variable. Indeed, the purpose was to hide (i.e. encapsulate) the internal implementation of the attribute while offering an easy way of accessing and modifying the data stored in the object.",
+      "raw_source": "As far as the client is concerned, using these new methods is no different from directly accessing an attribute. Parentheses are not necessary; instead it is perfectly acceptable to state `wallet.money = 50`, as if we were simply assigning a value to a variable. Indeed, the purpose was to hide (i.e. encapsulate) the internal implementation of the attribute while offering an easy way of accessing and modifying the data stored in the object."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The previous example has a small problem: the client is not notified of the failure to set a negative value for the money attribute. When a value supplied is clearly wrong, it is usually a good idea to raise an exception and thus let the client know. In this case the exception should probably be of type `ValueError` to signify that the value supplied was unacceptable.",
+      "raw_source": "The previous example has a small problem: the client is not notified of the failure to set a negative value for the money attribute. When a value supplied is clearly wrong, it is usually a good idea to raise an exception and thus let the client know. In this case the exception should probably be of type `ValueError` to signify that the value supplied was unacceptable."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here we have an improved version of the class, along with some code for testing it:",
+      "raw_source": "Here we have an improved version of the class, along with some code for testing it:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class Wallet:\n    def __init__(self):\n        self.__money = 0\n\n    # A getter method\n    @property\n    def money(self):\n        return self.__money\n\n    # A setter method\n    @money.setter\n    def money(self, money):\n        if money >= 0:\n            self.__money = money\n        else:\n            raise ValueError(\"The amount must not be below zero\")",
+      "raw_source": "```python\nclass Wallet:\n    def __init__(self):\n        self.__money = 0\n\n    # A getter method\n    @property\n    def money(self):\n        return self.__money\n\n    # A setter method\n    @money.setter\n    def money(self, money):\n        if money >= 0:\n            self.__money = money\n        else:\n            raise ValueError(\"The amount must not be below zero\")\n```"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "wallet.money = -30\nprint(wallet.money)",
+      "raw_source": "```python\nwallet.money = -30\nprint(wallet.money)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "ValueError: The amount must not be below zero",
+      "raw_source": "<sample-output>\n\nValueError: The amount must not be below zero\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "**NB:** the getter method, i.e. the `@property` decorator, must be introduced before the setter method, or there will be an error when the class is executed. This is because the `@property` decorator defines the name of the \"attribute\" offerred to the client. The setter method, added with `.setter`, simply adds a new functionality to it.",
+      "raw_source": "**NB:** the getter method, i.e. the `@property` decorator, must be introduced before the setter method, or there will be an error when the class is executed. This is because the `@property` decorator defines the name of the \"attribute\" offerred to the client. The setter method, added with `.setter`, simply adds a new functionality to it."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Recording",
+        "tmcname": "part09-10_recording"
+      },
+      "inner_content": "Please create a class named `Recording` which models a single recording. The class should have one private variable: `__length` of type integer.\n\nPlease implement the following:\n\n* a constructor which takes the length as an argument\n* a getter method `length` which returns the length of the recording\n* a setter method which sets the length of the recording\n\nIt should be possible to make use of the class as follows:\n\n```python\nthe_wall = Recording(43)\nprint(the_wall.length)\nthe_wall.length = 44\nprint(the_wall.length)\n```\n\n<sample-output>\n\n43\n44\n\n</sample-output>\n\n\nIf the argument for either the constructor or the setter method is below zero, this should raise a `ValueError`.\n\nIf you need a refresher on raising exceptions, please see [part 6](/part-6/3-errors#raising-exceptions) of the course materials.",
+      "raw_source": "<programming-exercise name='Recording' tmcname='part09-10_recording'>\n\nPlease create a class named `Recording` which models a single recording. The class should have one private variable: `__length` of type integer.\n\nPlease implement the following:\n\n* a constructor which takes the length as an argument\n* a getter method `length` which returns the length of the recording\n* a setter method which sets the length of the recording\n\nIt should be possible to make use of the class as follows:\n\n```python\nthe_wall = Recording(43)\nprint(the_wall.length)\nthe_wall.length = 44\nprint(the_wall.length)\n```\n\n<sample-output>\n\n43\n44\n\n</sample-output>\n\n\nIf the argument for either the constructor or the setter method is below zero, this should raise a `ValueError`.\n\nIf you need a refresher on raising exceptions, please see [part 6](/part-6/3-errors#raising-exceptions) of the course materials.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following example has a class with two private attributes, along with getters and setters for both. Please try the program out with different values passed as arguments:",
+      "raw_source": "The following example has a class with two private attributes, along with getters and setters for both. Please try the program out with different values passed as arguments:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class Player:\n    def __init__(self, name: str, player_number: int):\n        self.__name = name\n        self.__player_number = player_number\n\n    @property\n    def name(self):\n        return self.__name\n\n    @name.setter\n    def name(self, name: str):\n        if name != \"\":\n            self.__name = name\n        else:\n            raise ValueError(\"The name may not be an empty string\")\n\n    @property\n    def player_number(self):\n        return self.__player_number\n\n    @player_number.setter\n    def player_number(self, player_number: int):\n        if player_number > 0:\n            self.__player_number = player_number\n        else:\n            raise ValueError(\"The player number must be a positive integer\")",
+      "raw_source": "```python\nclass Player:\n    def __init__(self, name: str, player_number: int):\n        self.__name = name\n        self.__player_number = player_number\n\n    @property\n    def name(self):\n        return self.__name\n\n    @name.setter\n    def name(self, name: str):\n        if name != \"\":\n            self.__name = name\n        else:\n            raise ValueError(\"The name may not be an empty string\")\n\n    @property\n    def player_number(self):\n        return self.__player_number\n\n    @player_number.setter\n    def player_number(self, player_number: int):\n        if player_number > 0:\n            self.__player_number = player_number\n        else:\n            raise ValueError(\"The player number must be a positive integer\")\n```"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "player = Player(\"Betty Ballmer\", 10)\nprint(player.name)\nprint(player.player_number)\n\nplayer.name = \"Buster Ballmer\"\nplayer.player_number = 11\nprint(player.name)\nprint(player.player_number)",
+      "raw_source": "```python\nplayer = Player(\"Betty Ballmer\", 10)\nprint(player.name)\nprint(player.player_number)\n\nplayer.name = \"Buster Ballmer\"\nplayer.player_number = 11\nprint(player.name)\nprint(player.player_number)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Betty Ballmer\n10\nBuster Ballmer\n11",
+      "raw_source": "<sample-output>\n\nBetty Ballmer\n10\nBuster Ballmer\n11\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "To finish off this section, let's take a look at a class which models a simple diary. All attributes are private, but they are handled through differing interfaces: the owner of the diary has getter and setter methods, but the diary entries are processed with \"traditional\" methods. In this case it makes sense to deny the client all access to the internal data structure of the diary. Only the public methods are directly visible to the client.",
+      "raw_source": "To finish off this section, let's take a look at a class which models a simple diary. All attributes are private, but they are handled through differing interfaces: the owner of the diary has getter and setter methods, but the diary entries are processed with \"traditional\" methods. In this case it makes sense to deny the client all access to the internal data structure of the diary. Only the public methods are directly visible to the client."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Encapsulation also ensures that the internal implementation of the class can be changed at will, provided that the public interface stays intact. The client does not have to know or care whether the internal data structure is based on lists, dictionaries, or something completely different.",
+      "raw_source": "Encapsulation also ensures that the internal implementation of the class can be changed at will, provided that the public interface stays intact. The client does not have to know or care whether the internal data structure is based on lists, dictionaries, or something completely different."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class Diary:\n    def __init__(self, owner: str):\n        self.__owner = owner\n        self.__entries = []\n\n    @property\n    def owner(self):\n        return self.__owner\n\n    @owner.setter\n    def owner(self, owner):\n        if owner != \"\":\n            self.__owner = owner\n        else:\n            raise ValueError(\"The owner may not be an empty string\")\n\n    def add_entry(self, entry: str):\n        self.__entries.append(entry)\n\n    def print_entries(self):\n        print(\"A total of\", len(self.__entries), \"entries\")\n        for entry in self.__entries:\n            print(\"- \" + entry)",
+      "raw_source": "```python\nclass Diary:\n    def __init__(self, owner: str):\n        self.__owner = owner\n        self.__entries = []\n\n    @property\n    def owner(self):\n        return self.__owner\n\n    @owner.setter\n    def owner(self, owner):\n        if owner != \"\":\n            self.__owner = owner\n        else:\n            raise ValueError(\"The owner may not be an empty string\")\n\n    def add_entry(self, entry: str):\n        self.__entries.append(entry)\n\n    def print_entries(self):\n        print(\"A total of\", len(self.__entries), \"entries\")\n        for entry in self.__entries:\n            print(\"- \" + entry)\n```"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "diary = Diary(\"Peter\")\ndiary.add_entry(\"Today I ate porridge\")\ndiary.add_entry(\"Today I learned object oriented programming\")\ndiary.add_entry(\"Today I went to bed early\")\ndiary.print_entries()",
+      "raw_source": "```python\ndiary = Diary(\"Peter\")\ndiary.add_entry(\"Today I ate porridge\")\ndiary.add_entry(\"Today I learned object oriented programming\")\ndiary.add_entry(\"Today I went to bed early\")\ndiary.print_entries()\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "A total of 3 entries\n- Today I ate porridge\n- Today I learned object oriented programming\n- Today I went to bed early",
+      "raw_source": "<sample-output>\n\nA total of 3 entries\n- Today I ate porridge\n- Today I learned object oriented programming\n- Today I went to bed early\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Weather station",
+        "tmcname": "part09-11_weather_station"
+      },
+      "inner_content": "Please create a class named `WeatherStation` which is used to store observations about the weather. The class should have the following public attributes:\n\n* a constructor which takes the name of the station as its argument\n* a method named `add_observation(observation: str)` which adds an observation as the last entry in a list\n* a method named `latest_observation()` which returns the latest observation added to the list. If there are no observations yet, the method should return an _empty string_.\n* a method named `number_of_observations()` which returns the total number of observations added\n* a `__str__` method which returns the name of the station and the total number of observations added as per the example below.\n\nAll attributes should be encapsulated, so they can't be directly accessed. It is up to you how you implement the class, as long as the public interface is exactly as described above.\n\nAn example of how the class is used:\n\n```python\nstation = WeatherStation(\"Houston\")\nstation.add_observation(\"Rain 10mm\")\nstation.add_observation(\"Sunny\")\nprint(station.latest_observation())\n\nstation.add_observation(\"Thunderstorm\")\nprint(station.latest_observation())\n\nprint(station.number_of_observations())\nprint(station)\n```\n\n<sample-output>\n\nSunny\nThunderstorm\n3\nHouston, 3 observations\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Weather station' tmcname='part09-11_weather_station'>\n\nPlease create a class named `WeatherStation` which is used to store observations about the weather. The class should have the following public attributes:\n\n* a constructor which takes the name of the station as its argument\n* a method named `add_observation(observation: str)` which adds an observation as the last entry in a list\n* a method named `latest_observation()` which returns the latest observation added to the list. If there are no observations yet, the method should return an _empty string_.\n* a method named `number_of_observations()` which returns the total number of observations added\n* a `__str__` method which returns the name of the station and the total number of observations added as per the example below.\n\nAll attributes should be encapsulated, so they can't be directly accessed. It is up to you how you implement the class, as long as the public interface is exactly as described above.\n\nAn example of how the class is used:\n\n```python\nstation = WeatherStation(\"Houston\")\nstation.add_observation(\"Rain 10mm\")\nstation.add_observation(\"Sunny\")\nprint(station.latest_observation())\n\nstation.add_observation(\"Thunderstorm\")\nprint(station.latest_observation())\n\nprint(station.number_of_observations())\nprint(station)\n```\n\n<sample-output>\n\nSunny\nThunderstorm\n3\nHouston, 3 observations\n\n</sample-output>\n\n</programming-exercise>"
+    }
+  ]
+}

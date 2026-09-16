@@ -1,0 +1,16 @@
+{
+  "id": "ex-part12-02_seasons",
+  "lesson_id": "part12-1-functions-as-arguments",
+  "part": 12,
+  "tmc_name": "part12-02_seasons",
+  "title_original": "Sort by number of seasons",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `sort_by_seasons(items: list)` which takes a list of dictionaries as its argument. Each dictionary contains the information of a single TV show. The function should sort this list by the number of seasons each show has, in ascending order. The function should not change the original list, but return a new list instead.\n\nThe function should work as follows:\n\n```python\nshows = [{ \"name\": \"Dexter\", \"rating\" : 8.6, \"seasons\":9 }, { \"name\": \"Friends\", \"rating\" : 8.9, \"seasons\":10 },  { \"name\": \"Simpsons\", \"rating\" : 8.7, \"seasons\":32 }  ]\n\nfor show in sort_by_seasons(shows):\n    print(f\"{show['name']} {show['seasons']} seasons\")\n```\n\n<sample-output>\nDexter 9 seasons\nFriends 10 seasons\nSimpsons 32 seasons\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "shows = [{ \"name\": \"Dexter\", \"rating\" : 8.6, \"seasons\":9 }, { \"name\": \"Friends\", \"rating\" : 8.9, \"seasons\":10 },  { \"name\": \"Simpsons\", \"rating\" : 8.7, \"seasons\":32 }  ]\n\nfor show in sort_by_seasons(shows):\n    print(f\"{show['name']} {show['seasons']} seasons\")",
+  "grading_data_available": false,
+  "source_hash": "b52b0c6b42d58f841c23d82f265010cf4d204497a23641fc99137ec4f99c359f",
+  "order": 27
+}

@@ -1,0 +1,287 @@
+{
+  "id": "part07-4-data-processing",
+  "part": 7,
+  "part_slug": "part-7",
+  "slug": "4-data-processing",
+  "is_part_index": false,
+  "title_original": "Data processing",
+  "path": "/part-7/4-data-processing",
+  "source_path": "data/part-7/4-data-processing.md",
+  "source_hash": "b091e08686455a597e1eca34d657171eb69b452ec1758f1d5a762093fa1dd0e0",
+  "frontmatter": {
+    "path": "/part-7/4-data-processing",
+    "title": "Data processing",
+    "hidden": false
+  },
+  "chunks_count": 43,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know how to use a module to process CSV files\n- You will know how to use a module to process JSON files\n- You will be able to retrieve and read files from the internet",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know how to use a module to process CSV files\n- You will know how to use a module to process JSON files\n- You will be able to retrieve and read files from the internet\n\n</text-box>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Reading CSV files",
+      "raw_source": "## Reading CSV files"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "CSV is such a simple format that so far we have accessed the with hand-written code. There is, however, a ready-made module in the Python standard library for working with CSV files: [csv](https://docs.python.org/3/library/csv.html). It works like this:",
+      "raw_source": "CSV is such a simple format that so far we have accessed the with hand-written code. There is, however, a ready-made module in the Python standard library for working with CSV files: [csv](https://docs.python.org/3/library/csv.html). It works like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import csv\n\nwith open(\"test.csv\") as my_file:\n    for line in csv.reader(my_file, delimiter=\";\"):\n        print(line)",
+      "raw_source": "```python\nimport csv\n\nwith open(\"test.csv\") as my_file:\n    for line in csv.reader(my_file, delimiter=\";\"):\n        print(line)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The above code reads all lines in the CSV file `test.csv`, separates the contents of each line into a list using the delimiter `;`, and prints each list. So, assuming the contents of the line are as follows:",
+      "raw_source": "The above code reads all lines in the CSV file `test.csv`, separates the contents of each line into a list using the delimiter `;`, and prints each list. So, assuming the contents of the line are as follows:"
+    },
+    {
+      "raw_type": "code",
+      "language": "x",
+      "code": "012121212;5\n012345678;2\n015151515;4",
+      "raw_source": "```x\n012121212;5\n012345678;2\n015151515;4\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The code would print out this:",
+      "raw_source": "The code would print out this:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "['012121212', '5']\n['012345678', '2']\n['015151515', '4']",
+      "raw_source": "<sample-output>\n\n['012121212', '5']\n['012345678', '2']\n['015151515', '4']\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Since the CSV format is so simple, what's the use of having a separate module when we can just as well use the `split` function? Well, for one, the way the module is built, it will also work correctly if the values in the file are strings, which may also contain the delimiter character. If some line in the file looked like this",
+      "raw_source": "Since the CSV format is so simple, what's the use of having a separate module when we can just as well use the `split` function? Well, for one, the way the module is built, it will also work correctly if the values in the file are strings, which may also contain the delimiter character. If some line in the file looked like this"
+    },
+    {
+      "raw_type": "code",
+      "language": "x",
+      "code": "\"aaa;bbb\";\"ccc;ddd\"",
+      "raw_source": "```x\n\"aaa;bbb\";\"ccc;ddd\"\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "the above code would produce this:",
+      "raw_source": "the above code would produce this:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "['aaa;bbb', 'ccc;ddd']",
+      "raw_source": "<sample-output>\n\n['aaa;bbb', 'ccc;ddd']\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Using the `split` function would also split within the strings, which would likely break the data, and our program in the process.",
+      "raw_source": "Using the `split` function would also split within the strings, which would likely break the data, and our program in the process."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Reading JSON files",
+      "raw_source": "## Reading JSON files"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "CSV is just one of many machine-readable data formats. [JSON](https://www.json.org/json-en.html) is another, and it is used often when data has to be transferred between applications.",
+      "raw_source": "CSV is just one of many machine-readable data formats. [JSON](https://www.json.org/json-en.html) is another, and it is used often when data has to be transferred between applications."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "JSON files are text files with a strict format, which is perhaps a little less accessible to the human eye than the CSV format. The following example uses the file `courses.json`, which contains information about some courses:",
+      "raw_source": "JSON files are text files with a strict format, which is perhaps a little less accessible to the human eye than the CSV format. The following example uses the file `courses.json`, which contains information about some courses:"
+    },
+    {
+      "raw_type": "code",
+      "language": "x",
+      "code": "[\n    {\n        \"name\": \"Introduction to Programming\",\n        \"abbreviation\": \"ItP\",\n        \"periods\": [1, 3]\n    },\n    {\n        \"name\": \"Advanced Course in Programming\",\n        \"abbreviation\": \"ACiP\",\n        \"periods\": [2, 4]\n    },\n    {\n        \"name\": \"Database Application\",\n        \"abbreviation\": \"DbApp\",\n        \"periods\": [1, 2, 3, 4]\n    }\n]",
+      "raw_source": "```x\n[\n    {\n        \"name\": \"Introduction to Programming\",\n        \"abbreviation\": \"ItP\",\n        \"periods\": [1, 3]\n    },\n    {\n        \"name\": \"Advanced Course in Programming\",\n        \"abbreviation\": \"ACiP\",\n        \"periods\": [2, 4]\n    },\n    {\n        \"name\": \"Database Application\",\n        \"abbreviation\": \"DbApp\",\n        \"periods\": [1, 2, 3, 4]\n    }\n]\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The structure of a JSON file might look quite familiar to you by now. The JSON file above looks exactly like a Python list, which contains three Python dictionaries.",
+      "raw_source": "The structure of a JSON file might look quite familiar to you by now. The JSON file above looks exactly like a Python list, which contains three Python dictionaries."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The standard library has a module for working with JSON files: [json](https://docs.python.org/3/library/json.html). The function `loads` takes any argument passed in a JSON format and transforms it into a Python data structure. So, processing the `courses.json` file with the code below",
+      "raw_source": "The standard library has a module for working with JSON files: [json](https://docs.python.org/3/library/json.html). The function `loads` takes any argument passed in a JSON format and transforms it into a Python data structure. So, processing the `courses.json` file with the code below"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import json\n\nwith open(\"courses.json\") as my_file:\n    data = my_file.read()\n\ncourses = json.loads(data)\nprint(courses)",
+      "raw_source": "```python\nimport json\n\nwith open(\"courses.json\") as my_file:\n    data = my_file.read()\n\ncourses = json.loads(data)\nprint(courses)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "would print out the following:",
+      "raw_source": "would print out the following:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[{'name': 'Introduction to Programming', 'abbreviation': 'ItP', 'periods': [1, 3]}, {'name': 'Advanced Course in Programming', 'abbreviation': 'ACiP', 'periods': [2, 4]}, {'name': 'Database Application', 'abbreviation': 'DbApp', 'periods': [1, 2, 3, 4]}]",
+      "raw_source": "<sample-output>\n\n[{'name': 'Introduction to Programming', 'abbreviation': 'ItP', 'periods': [1, 3]}, {'name': 'Advanced Course in Programming', 'abbreviation': 'ACiP', 'periods': [2, 4]}, {'name': 'Database Application', 'abbreviation': 'DbApp', 'periods': [1, 2, 3, 4]}]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If we also wanted to print out the name of each course, we could expand our program with a `for` loop:",
+      "raw_source": "If we also wanted to print out the name of each course, we could expand our program with a `for` loop:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "for course in courses:\n    print(course[\"name\"])",
+      "raw_source": "```python\nfor course in courses:\n    print(course[\"name\"])\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Introduction to Programming\nAdvanced Course in Programming\nDatabase Application",
+      "raw_source": "<sample-output>\n\nIntroduction to Programming\nAdvanced Course in Programming\nDatabase Application\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Handling JSON files",
+        "tmcname": "part07-12_json_files"
+      },
+      "inner_content": "Let's have a look at a JSON file, which contains some information about students in the following format:\n\n```json\n[\n    {\n        \"name\": \"Peter Pythons\",\n        \"age\": 27,\n        \"hobbies\": [\n            \"coding\",\n            \"knitting\"\n        ]\n    },\n    {\n        \"name\": \"Jean Javanese\",\n        \"age\": 24,\n        \"hobbies\": [\n            \"coding\",\n            \"rock climbing\",\n            \"reading\"\n        ]\n    }\n]\n```\n\nPlease write a function named `print_persons(filename: str)`, which reads a JSON file in the above format, and prints the contents as shown below. The file may contain any number of entries.\n\n<sample-output>\n\nPeter Pythons 27 years (coding, knitting)\nJean Javanese 24 years (coding, rock climbing, reading)\n\n</sample-output>\n\nThe hobbies should be listed in the same order as they appear in the JSON file.",
+      "raw_source": "<programming-exercise name='Handling JSON files' tmcname='part07-12_json_files'>\n\nLet's have a look at a JSON file, which contains some information about students in the following format:\n\n```json\n[\n    {\n        \"name\": \"Peter Pythons\",\n        \"age\": 27,\n        \"hobbies\": [\n            \"coding\",\n            \"knitting\"\n        ]\n    },\n    {\n        \"name\": \"Jean Javanese\",\n        \"age\": 24,\n        \"hobbies\": [\n            \"coding\",\n            \"rock climbing\",\n            \"reading\"\n        ]\n    }\n]\n```\n\nPlease write a function named `print_persons(filename: str)`, which reads a JSON file in the above format, and prints the contents as shown below. The file may contain any number of entries.\n\n<sample-output>\n\nPeter Pythons 27 years (coding, knitting)\nJean Javanese 24 years (coding, rock climbing, reading)\n\n</sample-output>\n\nThe hobbies should be listed in the same order as they appear in the JSON file.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Retrieving a file from the internet",
+      "raw_source": "## Retrieving a file from the internet"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The Python standard library also contains modules for dealing with online content, and one useful function is [urllib.request.urlopen](\nhttps://docs.python.org/3/library/urllib.request.html#urllib.request.urlopen). You are encouraged to have a look at the entire module, but the following example should be enough for you to get to grips with the function. It can be used to retrieve content from the internet, so it can be processed in your programs.",
+      "raw_source": "The Python standard library also contains modules for dealing with online content, and one useful function is [urllib.request.urlopen](\nhttps://docs.python.org/3/library/urllib.request.html#urllib.request.urlopen). You are encouraged to have a look at the entire module, but the following example should be enough for you to get to grips with the function. It can be used to retrieve content from the internet, so it can be processed in your programs."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following code would print out the contents of the University of Helsinki front page:",
+      "raw_source": "The following code would print out the contents of the University of Helsinki front page:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import urllib.request\n\nmy_request = urllib.request.urlopen(\"https://helsinki.fi\")\nprint(my_request.read())",
+      "raw_source": "```python\nimport urllib.request\n\nmy_request = urllib.request.urlopen(\"https://helsinki.fi\")\nprint(my_request.read())\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Pages intended for human eyes do not usually look very pretty when their code is printed out. In the following examples, however, we will work with machine-readable _data_ from an online source. Much of the machine-readable data available online is in JSON format.",
+      "raw_source": "Pages intended for human eyes do not usually look very pretty when their code is printed out. In the following examples, however, we will work with machine-readable _data_ from an online source. Much of the machine-readable data available online is in JSON format."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Course statistics",
+        "tmcname": "part07-13_course_statistics"
+      },
+      "inner_content": "#### Retrieving the list of active courses\n\nAt the address <https://studies.cs.helsinki.fi/stats-mock/api/courses> you will find basic information about some of the courses offered by the University of Helsinki Department of Computer Science, in JSON format.\n\nPlease write a function named `retrieve_all()`, which retrieves the data of all the courses which are currently active (the field `enabled` has the value `true`). These should be returned as a list of tuples, in the following format:\n\n<sample-output>\n\n<pre>\n[\n    ('Full Stack Open 2020', 'ofs2019', 2020, 201),\n    ('DevOps with Docker 2019', 'docker2019', 2019, 36),\n    ('DevOps with Docker 2020', 'docker2020', 2020, 36),\n    ('Beta DevOps with Kubernetes', 'beta-dwk-20', 2020, 28)\n]\n</pre>\n\n</sample-output>\n\nEach tuple contains the following fields from the original data:\n\n- the name of the course: `fullName`\n- `name`\n- `year`\n- the sum of the values listed in `exercises`\n\n\n**NB**: It is essential that you retrieve the data with the function `urllib.request.urlopen`, or the automated tests may not work correctly.\n\n**NB2:** The tests are designed so that they slightly modify the data retrieved from the internet, to make sure you do not hard-code your return values.\n\n**NB3:** Some Mac users have come across the following issue:\n\n```sh\nFile \"/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/urllib/request.py\", line 1353, in do_open\n    raise URLError(err)\nurllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1124)>\n```\n\nThe solution depends on how Python is installed on your machine. In some cases executing the following in a terminal helps:\n\n```sh\ncd \"/Applications/Python 3.8/\"\nsudo \"./Install Certificates.command\n```\n\nThe path used in the `cd` command above depends on the version of Python you have installed. The path may also be, for example, `\"/Applications/Python 3.9/\"`.\n\n[Various solutions](https://stackoverflow.com/questions/27835619/urllib-and-ssl-certificate-verify-failed-error) to the problem have been suggested.\n\nOne trick some have found useful:\n\n```python\nimport urllib.request\nimport json\nimport ssl # add this library to your import section\n\ndef retrieve_all():\n    # add the following line to the beginning of all your functions\n    context = ssl._create_unverified_context()\n    # the rest of your function\n```\n\nAnother potential workaround:\n\n ```python\nimport urllib.request\nimport certifi # add this library to your import section\nimport json\n\ndef retrieve_all():\n    address = \"https://studies.cs.helsinki.fi/stats-mock/api/courses\"\n    # add a second argument to the function call\n    request = urllib.request.urlopen(address, cafile=certifi.where())\n    # the rest of your function\n```\n\n#### Retrieving the data for a single course\n\nEach course also has its own URL, where more specific weekly data about the course is available. The URLs follow the format <https://studies.cs.helsinki.fi/stats-mock/api/courses/****/stats>, where you would replace the stars with the contents of the field `name` for the course you want to access.\n\nFor example, the data for the course `docker2019` is at the address <https://studies.cs.helsinki.fi/stats-mock/api/courses/docker2019/stats>.\n\nPlease write a function named `retrieve_course(course_name: str)`, which returns statistics for the specified course, in dictionary format.\n\nFor example, the function call `retrieve_course(\"docker2019\")` would return a dictionary with the following contents:\n\n<sample-output>\n\n<pre>\n{\n    'weeks': 4,\n    'students': 220,\n    'hours': 5966,\n    'hours_average': 27,\n    'exercises': 4988,\n    'exercises_average': 22\n}\n</pre>\n\n</sample-output>\n\nThe values in the dictionary are determined as follows:\n\n- `weeks`: the number of JSON object literals retrieved\n- `students`: the maximum number of students in all the weeks\n- `hours`: the sum of all `hour_total` values in the different weeks\n- `hours_average`: the `hours` value divided by the `students` value (rounded down to the closest integer value)\n- `exercises`: the sum of all `exercise_total` values in the different weeks\n- `exercises_average`: the `exercises` value divided by the `students` value (rounded down to the closest integer value)\n\n**NB**: See the notices in Part 1 of the exercise, as they apply here, too.\n\n**NB2**: The Python [math](https://docs.python.org/3/library/math.html) module has a useful function for rounding down integers.",
+      "raw_source": "<programming-exercise name='Course statistics' tmcname='part07-13_course_statistics'>\n\n#### Retrieving the list of active courses\n\nAt the address <https://studies.cs.helsinki.fi/stats-mock/api/courses> you will find basic information about some of the courses offered by the University of Helsinki Department of Computer Science, in JSON format.\n\nPlease write a function named `retrieve_all()`, which retrieves the data of all the courses which are currently active (the field `enabled` has the value `true`). These should be returned as a list of tuples, in the following format:\n\n<sample-output>\n\n<pre>\n[\n    ('Full Stack Open 2020', 'ofs2019', 2020, 201),\n    ('DevOps with Docker 2019', 'docker2019', 2019, 36),\n    ('DevOps with Docker 2020', 'docker2020', 2020, 36),\n    ('Beta DevOps with Kubernetes', 'beta-dwk-20', 2020, 28)\n]\n</pre>\n\n</sample-output>\n\nEach tuple contains the following fields from the original data:\n\n- the name of the course: `fullName`\n- `name`\n- `year`\n- the sum of the values listed in `exercises`\n\n\n**NB**: It is essential that you retrieve the data with the function `urllib.request.urlopen`, or the automated tests may not work correctly.\n\n**NB2:** The tests are designed so that they slightly modify the data retrieved from the internet, to make sure you do not hard-code your return values.\n\n**NB3:** Some Mac users have come across the following issue:\n\n```sh\nFile \"/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/urllib/request.py\", line 1353, in do_open\n    raise URLError(err)\nurllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1124)>\n```\n\nThe solution depends on how Python is installed on your machine. In some cases executing the following in a terminal helps:\n\n```sh\ncd \"/Applications/Python 3.8/\"\nsudo \"./Install Certificates.command\n```\n\nThe path used in the `cd` command above depends on the version of Python you have installed. The path may also be, for example, `\"/Applications/Python 3.9/\"`.\n\n[Various solutions](https://stackoverflow.com/questions/27835619/urllib-and-ssl-certificate-verify-failed-error) to the problem have been suggested.\n\nOne trick some have found useful:\n\n```python\nimport urllib.request\nimport json\nimport ssl # add this library to your import section\n\ndef retrieve_all():\n    # add the following line to the beginning of all your functions\n    context = ssl._create_unverified_context()\n    # the rest of your function\n```\n\nAnother potential workaround:\n\n ```python\nimport urllib.request\nimport certifi # add this library to your import section\nimport json\n\ndef retrieve_all():\n    address = \"https://studies.cs.helsinki.fi/stats-mock/api/courses\"\n    # add a second argument to the function call\n    request = urllib.request.urlopen(address, cafile=certifi.where())\n    # the rest of your function\n```\n\n#### Retrieving the data for a single course\n\nEach course also has its own URL, where more specific weekly data about the course is available. The URLs follow the format <https://studies.cs.helsinki.fi/stats-mock/api/courses/****/stats>, where you would replace the stars with the contents of the field `name` for the course you want to access.\n\nFor example, the data for the course `docker2019` is at the address <https://studies.cs.helsinki.fi/stats-mock/api/courses/docker2019/stats>.\n\nPlease write a function named `retrieve_course(course_name: str)`, which returns statistics for the specified course, in dictionary format.\n\nFor example, the function call `retrieve_course(\"docker2019\")` would return a dictionary with the following contents:\n\n<sample-output>\n\n<pre>\n{\n    'weeks': 4,\n    'students': 220,\n    'hours': 5966,\n    'hours_average': 27,\n    'exercises': 4988,\n    'exercises_average': 22\n}\n</pre>\n\n</sample-output>\n\nThe values in the dictionary are determined as follows:\n\n- `weeks`: the number of JSON object literals retrieved\n- `students`: the maximum number of students in all the weeks\n- `hours`: the sum of all `hour_total` values in the different weeks\n- `hours_average`: the `hours` value divided by the `students` value (rounded down to the closest integer value)\n- `exercises`: the sum of all `exercise_total` values in the different weeks\n- `exercises_average`: the `exercises` value divided by the `students` value (rounded down to the closest integer value)\n\n**NB**: See the notices in Part 1 of the exercise, as they apply here, too.\n\n**NB2**: The Python [math](https://docs.python.org/3/library/math.html) module has a useful function for rounding down integers.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Who cheated",
+        "tmcname": "part07-14_who_cheated"
+      },
+      "inner_content": "The file `start_times.csv` contains individual start times for a programming exam, in the format `name;hh:mm`. An example:\n\n```csv\njarmo;09:00\ntimo;18:42\nkalle;13:23\n```\n\nAdditionally, the file `submissions.csv` contains points and handin times for individual exercises. The format here is `name;task;points;hh:mm`. An example:\n\n```csv\njarmo;1;8;16:05\ntimo;2;10;21:22\njarmo;2;10;19:15\njne...\n```\n\nYour task is to find the students who spent over 3 hours on the exam tasks. That is, any student whose _any_ task was handed in over 3 hours later than their exam start time is labelled a cheater. There may be more than one submission for the same task for each student. You may assume all times are within the same day.\n\nPlease write a function named `cheaters()`, which returns a list containing the names of the students who cheated",
+      "raw_source": "<programming-exercise name='Who cheated' tmcname='part07-14_who_cheated'>\n\nThe file `start_times.csv` contains individual start times for a programming exam, in the format `name;hh:mm`. An example:\n\n```csv\njarmo;09:00\ntimo;18:42\nkalle;13:23\n```\n\nAdditionally, the file `submissions.csv` contains points and handin times for individual exercises. The format here is `name;task;points;hh:mm`. An example:\n\n```csv\njarmo;1;8;16:05\ntimo;2;10;21:22\njarmo;2;10;19:15\njne...\n```\n\nYour task is to find the students who spent over 3 hours on the exam tasks. That is, any student whose _any_ task was handed in over 3 hours later than their exam start time is labelled a cheater. There may be more than one submission for the same task for each student. You may assume all times are within the same day.\n\nPlease write a function named `cheaters()`, which returns a list containing the names of the students who cheated\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Who cheated, version 2",
+        "tmcname": "part07-15_who_cheated_2"
+      },
+      "inner_content": "You have the CSV files from the previous exercise at your disposal again. Please write a function named `final_points()`, which returns the final exam points received by the students, in a dictionary format, following these criteria:\n\n* If there are multiple submissions for the same task, the submission with the highest number of points is taken into account.\n* If the submission was made over 3 hours after the start time, the submission is ignored.\n\nThe tasks are numbered 1 to 8, and each submission is graded with 0 to 6 points.\n\nIn the dictionary returned the key should be the name of the student, and the value the total points received by the student.\n\nHint: nested dictionaries might be a good approach when processing the tasks and submission times of each student.",
+      "raw_source": "<programming-exercise name='Who cheated, version 2' tmcname='part07-15_who_cheated_2'>\n\nYou have the CSV files from the previous exercise at your disposal again. Please write a function named `final_points()`, which returns the final exam points received by the students, in a dictionary format, following these criteria:\n\n* If there are multiple submissions for the same task, the submission with the highest number of points is taken into account.\n* If the submission was made over 3 hours after the start time, the submission is ignored.\n\nThe tasks are numbered 1 to 8, and each submission is graded with 0 to 6 points.\n\nIn the dictionary returned the key should be the name of the student, and the value the total points received by the student.\n\nHint: nested dictionaries might be a good approach when processing the tasks and submission times of each student.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Looking for modules",
+      "raw_source": "## Looking for modules"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The official Python documentation contains information on all modules available in the standard library:",
+      "raw_source": "The official Python documentation contains information on all modules available in the standard library:"
+    },
+    {
+      "raw_type": "list",
+      "content": "* https://docs.python.org/3/library/",
+      "raw_source": "* https://docs.python.org/3/library/"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In addition to the standard library, the internet is full of freely available Python modules for different purposes. Some commonly used modules are listed here:",
+      "raw_source": "In addition to the standard library, the internet is full of freely available Python modules for different purposes. Some commonly used modules are listed here:"
+    },
+    {
+      "raw_type": "list",
+      "content": "* https://wiki.python.org/moin/UsefulModules",
+      "raw_source": "* https://wiki.python.org/moin/UsefulModules"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Spell checker, version 2",
+        "tmcname": "part07-16_spellchecker_2"
+      },
+      "inner_content": "In this exercise you will write an improved version of the Spell checker from the [previous part](/part-6/1-reading-files).\n\nJust like in the previous version, the program should ask the user to type in a line of text. Your program should then perform a spell check, and print out feedback to the user, so that all misspelled words have stars around them. Additionally, _the program should print out a list of suggestions for the misspelled words_.\n\nPlease have a look at the following two examples.\n\n<sample-output>\n\nwrite text: **We use ptython to make a spell checker**\n<pre>\nWe use *ptython* to make a spell checker\nsuggestions:\nptython: python, pythons, typhon\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nwrite text: **this is acually a good and usefull program**\n<pre>\nthis is *acually* a good and *usefull* program\nsuggestions:\nacually: actually, tactually, factually\nusefull: usefully, useful, museful\n</pre>\n\n</sample-output>\n\nThe suggestions should be determined with the function [get\\_close\\_matches](https://docs.python.org/3/library/difflib.html#difflib.get_close_matches) from the Python standard library module [difflib](https://docs.python.org/3/library/difflib.html).\n\n**NB**: For the automatic tests to work correctly, please use the function with the \"default settings\". That is, please pass only two arguments to the function: the misspelled word, and the word list.",
+      "raw_source": "<programming-exercise name='Spell checker, version 2' tmcname='part07-16_spellchecker_2'>\n\nIn this exercise you will write an improved version of the Spell checker from the [previous part](/part-6/1-reading-files).\n\nJust like in the previous version, the program should ask the user to type in a line of text. Your program should then perform a spell check, and print out feedback to the user, so that all misspelled words have stars around them. Additionally, _the program should print out a list of suggestions for the misspelled words_.\n\nPlease have a look at the following two examples.\n\n<sample-output>\n\nwrite text: **We use ptython to make a spell checker**\n<pre>\nWe use *ptython* to make a spell checker\nsuggestions:\nptython: python, pythons, typhon\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nwrite text: **this is acually a good and usefull program**\n<pre>\nthis is *acually* a good and *usefull* program\nsuggestions:\nacually: actually, tactually, factually\nusefull: usefully, useful, museful\n</pre>\n\n</sample-output>\n\nThe suggestions should be determined with the function [get\\_close\\_matches](https://docs.python.org/3/library/difflib.html#difflib.get_close_matches) from the Python standard library module [difflib](https://docs.python.org/3/library/difflib.html).\n\n**NB**: For the automatic tests to work correctly, please use the function with the \"default settings\". That is, please pass only two arguments to the function: the misspelled word, and the word list.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!---",
+      "raw_source": "<!---"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "311e3116-a763-50b5-b79e-056fdccb3394"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"311e3116-a763-50b5-b79e-056fdccb3394\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    }
+  ]
+}

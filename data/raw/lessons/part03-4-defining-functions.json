@@ -1,0 +1,495 @@
+{
+  "id": "part03-4-defining-functions",
+  "part": 3,
+  "part_slug": "part-3",
+  "slug": "4-defining-functions",
+  "is_part_index": false,
+  "title_original": "Defining functions",
+  "path": "/part-3/4-defining-functions",
+  "source_path": "data/part-3/4-defining-functions.md",
+  "source_hash": "e47561fea1de99dd9f3be482607093d491cfc6b6065c01ad1ba32a613ac5f698",
+  "frontmatter": {
+    "path": "/part-3/4-defining-functions",
+    "title": "Defining functions",
+    "hidden": false
+  },
+  "chunks_count": 77,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know how to write and call your own functions\n- You will understand what is meant by the argument and the parameter of a function\n- You will be able to define parameters in your own functions",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know how to write and call your own functions\n- You will understand what is meant by the argument and the parameter of a function\n- You will be able to define parameters in your own functions\n\n</text-box>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Parsons Code Lab",
+      "raw_source": "## Parsons Code Lab"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As part of ongoing research on computer science education at the University of Helsinki, a new programming practice software, Parsons Code Lab, is being developed. In the software, you get to solve programming exercises in the form of [Parsons problems](https://en.wikipedia.org/wiki/Parsons_problem); by ordering and filling in blocks of code.",
+      "raw_source": "As part of ongoing research on computer science education at the University of Helsinki, a new programming practice software, Parsons Code Lab, is being developed. In the software, you get to solve programming exercises in the form of [Parsons problems](https://en.wikipedia.org/wiki/Parsons_problem); by ordering and filling in blocks of code."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "By clicking the link below, you'll get access to a set of exercises that lets you review many of the central programming concepts you have learned so far: loops, conditionals, string operations, etc. These exercises are voluntary supporting material and will not affect grading in any way. The course teacher can, however, view statistics on exercise attempts via the teacher dashboard of the software.",
+      "raw_source": "By clicking the link below, you'll get access to a set of exercises that lets you review many of the central programming concepts you have learned so far: loops, conditionals, string operations, etc. These exercises are voluntary supporting material and will not affect grading in any way. The course teacher can, however, view statistics on exercise attempts via the teacher dashboard of the software."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "[To exercises](https://parsonscodelab.web.helsinki.fi/laurasini/set/introduction-to-programming-halfway-review)",
+      "raw_source": "[To exercises](https://parsonscodelab.web.helsinki.fi/laurasini/set/introduction-to-programming-halfway-review)"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Kindly note that the software is in active development and there might be some issues.\nPlease help the development by sharing any possible issues and comments via an anonymous feedback questionnaire! It will take approx. 1 minute to fill in but will help further development immeasurably.",
+      "raw_source": "Kindly note that the software is in active development and there might be some issues.\nPlease help the development by sharing any possible issues and comments via an anonymous feedback questionnaire! It will take approx. 1 minute to fill in but will help further development immeasurably."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "[Give feedback](https://elomake.helsinki.fi/lomakkeet/IYqXp/lomake.html)",
+      "raw_source": "[Give feedback](https://elomake.helsinki.fi/lomakkeet/IYqXp/lomake.html)"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Exercise activity and feedback may be used in research in a completely anonymized form.\nThank you for your contribution!",
+      "raw_source": "Exercise activity and feedback may be used in research in a completely anonymized form.\nThank you for your contribution!"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "The function definition",
+      "raw_source": "## The function definition"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We have already used functions such as `len`, `print` and `input` in our programs. These are functions built into Python, and so they are always ready at our disposal, no matter which environment we are programming in. However, it is also possible to define your own functions.",
+      "raw_source": "We have already used functions such as `len`, `print` and `input` in our programs. These are functions built into Python, and so they are always ready at our disposal, no matter which environment we are programming in. However, it is also possible to define your own functions."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Before a function can be used, it must be defined. Any function definition begins with the keyword `def`, short for _define_. Then comes the _name_ of the function, followed by parentheses and a colon character. This is called the _header_ of the function. After this, indented just like `while` and `if` blocks, comes the _body_ of the function.",
+      "raw_source": "Before a function can be used, it must be defined. Any function definition begins with the keyword `def`, short for _define_. Then comes the _name_ of the function, followed by parentheses and a colon character. This is called the _header_ of the function. After this, indented just like `while` and `if` blocks, comes the _body_ of the function."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "For example, the following code defines the function `message`:",
+      "raw_source": "For example, the following code defines the function `message`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def message():\n    print(\"This is my very own function!\")",
+      "raw_source": "```python\ndef message():\n    print(\"This is my very own function!\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the program above is executed, nothing seems to happen. This is because the code in the body of the function is only executed when the function is _called_.",
+      "raw_source": "If the program above is executed, nothing seems to happen. This is because the code in the body of the function is only executed when the function is _called_."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Calling a function is as simple as mentioning its name in your code. Adding a function call to the end of the above program, like so",
+      "raw_source": "Calling a function is as simple as mentioning its name in your code. Adding a function call to the end of the above program, like so"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def message():\n    print(\"This is my very own function!\")\n\nmessage()",
+      "raw_source": "```python\ndef message():\n    print(\"This is my very own function!\")\n\nmessage()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "results in a printed statement:",
+      "raw_source": "results in a printed statement:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "This is my very own function!",
+      "raw_source": "<sample-output>\n\nThis is my very own function!\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When a function has been defined it can be called multiple times:",
+      "raw_source": "When a function has been defined it can be called multiple times:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def message():\n    print(\"This is my very own function!\")\n\nmessage()\nmessage()\nmessage()",
+      "raw_source": "```python\ndef message():\n    print(\"This is my very own function!\")\n\nmessage()\nmessage()\nmessage()\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "This is my very own function!\nThis is my very own function!\nThis is my very own function!",
+      "raw_source": "<sample-output>\n\nThis is my very own function!\nThis is my very own function!\nThis is my very own function!\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "hint",
+        "name": "Testing your own functions"
+      },
+      "inner_content": "NB: from now on the majority of the exercises on this course will ask you to write your own function(s).\n\nWhen a program consists of only functions, executing it doesn't seem to have any effect. The following code doesn't print out anything, even though there is a print statement:\n\n```python\ndef greet():\n    print(\"Hi!\")\n```\n\nThe reason nothing is printed out is that the code within the body of the `greet` function is only executed when the function is called.\n\nThe \"main\" program below the function should contain appropriate function calls, so that the program can be tested. In fact, Python treats all code that is not within function definitions as part of the _main function_, which gets executed when the file itself is evaluated or executed. So, lets add a function call:\n\n```python\ndef greet():\n    print(\"Hi!\")\n\n# All code not within function definitions is part of\n# the main function of the program\n# Calling our function:\n\ngreet()\n```\n\n**Important**: on this course the automatic tests that are run on the exercise files require an empty main function. No commands should be left in the main function of your solution. That is, any code that you yourself use for testing must be contained in a specially defined `if` block:\n\n```python\ndef greet():\n    print(\"Hi!\")\n\n# Write your main function within a block like this:\nif __name__ == \"__main__\":\n    greet()\n```\n\nAny code left outside the above block causes an error:\n\n<img src=\"3_4_1.png\">\n\nThe purpose of this is to make sure that your solution gets tested on a clean slate, as the tests often check what your functions print out. It is worth noting that the tests will not execute any code from within the `if __name__ == \"__main__\"` block, so no code that is needed to fulfil the requirements of the exercise should be placed within the block.",
+      "raw_source": "<text-box variant='hint' name='Testing your own functions'>\n\nNB: from now on the majority of the exercises on this course will ask you to write your own function(s).\n\nWhen a program consists of only functions, executing it doesn't seem to have any effect. The following code doesn't print out anything, even though there is a print statement:\n\n```python\ndef greet():\n    print(\"Hi!\")\n```\n\nThe reason nothing is printed out is that the code within the body of the `greet` function is only executed when the function is called.\n\nThe \"main\" program below the function should contain appropriate function calls, so that the program can be tested. In fact, Python treats all code that is not within function definitions as part of the _main function_, which gets executed when the file itself is evaluated or executed. So, lets add a function call:\n\n```python\ndef greet():\n    print(\"Hi!\")\n\n# All code not within function definitions is part of\n# the main function of the program\n# Calling our function:\n\ngreet()\n```\n\n**Important**: on this course the automatic tests that are run on the exercise files require an empty main function. No commands should be left in the main function of your solution. That is, any code that you yourself use for testing must be contained in a specially defined `if` block:\n\n```python\ndef greet():\n    print(\"Hi!\")\n\n# Write your main function within a block like this:\nif __name__ == \"__main__\":\n    greet()\n```\n\nAny code left outside the above block causes an error:\n\n<img src=\"3_4_1.png\">\n\nThe purpose of this is to make sure that your solution gets tested on a clean slate, as the tests often check what your functions print out. It is worth noting that the tests will not execute any code from within the `if __name__ == \"__main__\"` block, so no code that is needed to fulfil the requirements of the exercise should be placed within the block.\n\n</text-box>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Seven Brothers",
+        "tmcname": "part03-28_seven_brothers"
+      },
+      "inner_content": "Please write a function named `seven_brothers`. When the function is called, it should print out the names of the seven brothers in alphabetical order, as in the example below. See the [similarly named exercise in part 1](/part-1/1-getting-started#programming-exercise-fix-the-code-seven-brothers) for more details about the brothers.\n\n\n<sample-output>\n\nAapo\nEero\nJuhani\nLauri\nSimeoni\nTimo\nTuomas\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Seven Brothers\" tmcname=\"part03-28_seven_brothers\">\n\nPlease write a function named `seven_brothers`. When the function is called, it should print out the names of the seven brothers in alphabetical order, as in the example below. See the [similarly named exercise in part 1](/part-1/1-getting-started#programming-exercise-fix-the-code-seven-brothers) for more details about the brothers.\n\n\n<sample-output>\n\nAapo\nEero\nJuhani\nLauri\nSimeoni\nTimo\nTuomas\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Function arguments",
+      "raw_source": "## Function arguments"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Functions often take one or more _arguments_, which may affect what the function does. For example, the built-in Python functions `print` and `input` take as argument(s) the text that is to be displayed:",
+      "raw_source": "Functions often take one or more _arguments_, which may affect what the function does. For example, the built-in Python functions `print` and `input` take as argument(s) the text that is to be displayed:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "print(\"Hi!\")                           # argument is the string \"Hi!\"\nname = input(\"What is your name? \")    # argument is the string \"What is your name? \"\nprint(name)                            # argument is the value of the variable name",
+      "raw_source": "```python\nprint(\"Hi!\")                           # argument is the string \"Hi!\"\nname = input(\"What is your name? \")    # argument is the string \"What is your name? \"\nprint(name)                            # argument is the value of the variable name\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It was mentioned before that the terms _argument_ and _parameter_ are often used to refer to the same thing. The distinction is that while _argument_ is used with the data passed to the function when the function is called, _inside_ the function the arguments are assigned to variables called _parameters_. So, approximately, when the function is called, we call the passed bits of data arguments, but when we are defining the function, we call them parameters.",
+      "raw_source": "It was mentioned before that the terms _argument_ and _parameter_ are often used to refer to the same thing. The distinction is that while _argument_ is used with the data passed to the function when the function is called, _inside_ the function the arguments are assigned to variables called _parameters_. So, approximately, when the function is called, we call the passed bits of data arguments, but when we are defining the function, we call them parameters."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This may seem like a futile semantic distintion, and to make things even muddier, not all sources follow this definition. On this course we attempt to keep the distinction clear, however, as knowing the correct terminology will help you understand other sources besides this course material.",
+      "raw_source": "This may seem like a futile semantic distintion, and to make things even muddier, not all sources follow this definition. On this course we attempt to keep the distinction clear, however, as knowing the correct terminology will help you understand other sources besides this course material."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's define some functions that take arguments. In the function definition, the parameters are defined within the parentheses after the function name:",
+      "raw_source": "Let's define some functions that take arguments. In the function definition, the parameters are defined within the parentheses after the function name:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def hello(target):\n    print(\"Hello\", target)",
+      "raw_source": "```python\ndef hello(target):\n    print(\"Hello\", target)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Calling this function twice, like so",
+      "raw_source": "Calling this function twice, like so"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "hello(\"Emily\")\nhello(\"world!\")",
+      "raw_source": "```python\nhello(\"Emily\")\nhello(\"world!\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "prints out two different greetings:",
+      "raw_source": "prints out two different greetings:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Hello Emily\nHello world!",
+      "raw_source": "<sample-output>\n\nHello Emily\nHello world!\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's take a closer look at the function definition:",
+      "raw_source": "Let's take a closer look at the function definition:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def hello(target):\n    print(\"Hello\", target)",
+      "raw_source": "```python\ndef hello(target):\n    print(\"Hello\", target)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "On the first line, in the function header, we defined that this function takes an argument, and assigns it to a parameter named `target`. In the body of the function the `print` command uses the value stored in `target`.",
+      "raw_source": "On the first line, in the function header, we defined that this function takes an argument, and assigns it to a parameter named `target`. In the body of the function the `print` command uses the value stored in `target`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When the function is called, the parameter `target` has the value given as an argument in the function call. For example, the following function call",
+      "raw_source": "When the function is called, the parameter `target` has the value given as an argument in the function call. For example, the following function call"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "name = \"Alan\"\nhello(name)",
+      "raw_source": "```python\nname = \"Alan\"\nhello(name)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "causes the parameter `target` to be set to the value `\"Alan\"`.",
+      "raw_source": "causes the parameter `target` to be set to the value `\"Alan\"`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The names of functions and their parameters follow the same principles as the names of variables. They should be descriptive, and contain primarily lowercase letters and underscore characters. Again, there are some exceptions to these guidelines, but we will ignore those for now.",
+      "raw_source": "The names of functions and their parameters follow the same principles as the names of variables. They should be descriptive, and contain primarily lowercase letters and underscore characters. Again, there are some exceptions to these guidelines, but we will ignore those for now."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "The first character",
+        "tmcname": "part03-29_first_character"
+      },
+      "inner_content": "The exercise contains the outline of the function `first_character`. Please complete it so that it prints out the first character of the string it takes as its argument.\n\n```python\ndef first_character(text):\n     # write your code here\n\n# testing the function:\nif __name__ == \"__main__\":\n    first_character('python')\n    first_character('yellow')\n    first_character('tomorrow')\n    first_character('heliotrope')\n    first_character('open')\n    first_character('night')\n```\n\n<sample-output>\n\np\ny\nt\nh\no\nn\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"The first character\" tmcname=\"part03-29_first_character\">\n\nThe exercise contains the outline of the function `first_character`. Please complete it so that it prints out the first character of the string it takes as its argument.\n\n```python\ndef first_character(text):\n     # write your code here\n\n# testing the function:\nif __name__ == \"__main__\":\n    first_character('python')\n    first_character('yellow')\n    first_character('tomorrow')\n    first_character('heliotrope')\n    first_character('open')\n    first_character('night')\n```\n\n<sample-output>\n\np\ny\nt\nh\no\nn\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "hint",
+        "name": "Testing your functions with arguments"
+      },
+      "inner_content": "Whenever your function takes one or more arguments, it is recommended to test it with various different arguments.\n\nPay special heed to \"special cases\" specific to the type of argument you are using. How will your function behave if the argument is zero or a negative number, or a floating point number instead of an integer? What happens if the argument is an empty string?\n\nIf the exercise assignment doesn't explicitly tell you to include function calls, you may freely include your own within the main function `if` block as explained above. The tests will ignore everything within the if block.",
+      "raw_source": "<text-box variant='hint' name='Testing your functions with arguments'>\n\nWhenever your function takes one or more arguments, it is recommended to test it with various different arguments.\n\nPay special heed to \"special cases\" specific to the type of argument you are using. How will your function behave if the argument is zero or a negative number, or a floating point number instead of an integer? What happens if the argument is an empty string?\n\nIf the exercise assignment doesn't explicitly tell you to include function calls, you may freely include your own within the main function `if` block as explained above. The tests will ignore everything within the if block.\n\n</text-box>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "More examples",
+      "raw_source": "## More examples"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's have a look at some more examples of functions which take arguments. In the following function definition the parameter is a number:",
+      "raw_source": "Let's have a look at some more examples of functions which take arguments. In the following function definition the parameter is a number:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def squared(x):\n    print(f\"The square of the number {x} is {x * x}\")\n\nsquared(2)\nsquared(5)",
+      "raw_source": "```python\ndef squared(x):\n    print(f\"The square of the number {x} is {x * x}\")\n\nsquared(2)\nsquared(5)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The square of the number 2 is 4\nThe square of the number 5 is 25",
+      "raw_source": "<sample-output>\n\nThe square of the number 2 is 4\nThe square of the number 5 is 25\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Meanwhile, in this function definition there is an `if` statement within the body of the function:",
+      "raw_source": "Meanwhile, in this function definition there is an `if` statement within the body of the function:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def hello(name):\n    if name == \"Emily\":\n        print(\"Hello\", name)\n    else:\n        print(\"Hi\", name)\n\nhello(\"Emily\")\nhello(\"Mark\")",
+      "raw_source": "```python\ndef hello(name):\n    if name == \"Emily\":\n        print(\"Hello\", name)\n    else:\n        print(\"Hi\", name)\n\nhello(\"Emily\")\nhello(\"Mark\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Hello Emily\nHi Mark",
+      "raw_source": "<sample-output>\n\nHello Emily\nHi Mark\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This function takes two arguments:",
+      "raw_source": "This function takes two arguments:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def sum(x, y):\n    result = x + y\n    print(f\"The sum of the arguments {x} and {y} is {result}\")\n\nsum(1, 2)\nsum(5, 24)",
+      "raw_source": "```python\ndef sum(x, y):\n    result = x + y\n    print(f\"The sum of the arguments {x} and {y} is {result}\")\n\nsum(1, 2)\nsum(5, 24)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The sum of the arguments 1 and 2 is 3\nThe sum of the arguments 5 and 24 is 29",
+      "raw_source": "<sample-output>\n\nThe sum of the arguments 1 and 2 is 3\nThe sum of the arguments 5 and 24 is 29\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The function also includes the helper variable `result`, which it uses to store the sum of its arguments.",
+      "raw_source": "The function also includes the helper variable `result`, which it uses to store the sum of its arguments."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Notice how the names of the parameters within the function definition have no relation to any variables outside it. We might just as well call the above function like this:",
+      "raw_source": "Notice how the names of the parameters within the function definition have no relation to any variables outside it. We might just as well call the above function like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "x = 100\ny = 30\nsum(1, 2)\nsum(x + y, 10)",
+      "raw_source": "```python\nx = 100\ny = 30\nsum(1, 2)\nsum(x + y, 10)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This should print out",
+      "raw_source": "This should print out"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The sum of the arguments 1 and 2 is 3\nThe sum of the arguments 130 and 10 is 140",
+      "raw_source": "<sample-output>\n\nThe sum of the arguments 1 and 2 is 3\nThe sum of the arguments 130 and 10 is 140\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the first function call the parameters are assigned the values `x = 1` and `y = 2`. In the second function call they are assigned the values `x = 130` and `y = 10`, regardless of the similarly named variables used in the function call.",
+      "raw_source": "In the first function call the parameters are assigned the values `x = 1` and `y = 2`. In the second function call they are assigned the values `x = 130` and `y = 10`, regardless of the similarly named variables used in the function call."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We will come back to function definitions in the beginning of the next part of the course.",
+      "raw_source": "We will come back to function definitions in the beginning of the next part of the course."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!--a similar warning is in sections 3-4, 4-6 and 5-1, check them all if you're changing this-->\n## Warning: using global variables within functions",
+      "raw_source": "<!--a similar warning is in sections 3-4, 4-6 and 5-1, check them all if you're changing this-->\n## Warning: using global variables within functions"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the examples above we saw that it is possible to assign new variables within function definitions. The function can also see variables assigned outside it, in the main function. Such variables are called _global_ variables.",
+      "raw_source": "In the examples above we saw that it is possible to assign new variables within function definitions. The function can also see variables assigned outside it, in the main function. Such variables are called _global_ variables."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Using global variables from within functions is usually a bad idea. Among other issues, doing so may cause bugs which are difficult to trace.",
+      "raw_source": "Using global variables from within functions is usually a bad idea. Among other issues, doing so may cause bugs which are difficult to trace."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Below is an example of a function which uses a global variable \"by mistake\":",
+      "raw_source": "Below is an example of a function which uses a global variable \"by mistake\":"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# this is a global variable\nname = \"Betty\"\n\ndef hello(given_name):\n    # using the global variable instead of the parameter by mistake\n    print(\"Hello\", name)\n\nhello(\"Steve\")\nhello(\"Betty\")",
+      "raw_source": "```python\n# this is a global variable\nname = \"Betty\"\n\ndef hello(given_name):\n    # using the global variable instead of the parameter by mistake\n    print(\"Hello\", name)\n\nhello(\"Steve\")\nhello(\"Betty\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Hello Betty\nHello Betty",
+      "raw_source": "<sample-output>\n\nHello Betty\nHello Betty\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "No matter how many different arguments we call the function with, it will always print out the value `\"Betty\"` stored in the global variable.",
+      "raw_source": "No matter how many different arguments we call the function with, it will always print out the value `\"Betty\"` stored in the global variable."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Mean",
+        "tmcname": "part03-30_mean"
+      },
+      "inner_content": "Please write a function named `mean`, which takes three integer arguments. The function should print out the arithmetic mean of the three arguments.\n\n```python\nmean(5, 3, 1)\nmean(10, 1, 1)\n```\n\n<sample-output>\n\n3.0\n4.0\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Mean\" tmcname=\"part03-30_mean\">\n\nPlease write a function named `mean`, which takes three integer arguments. The function should print out the arithmetic mean of the three arguments.\n\n```python\nmean(5, 3, 1)\nmean(10, 1, 1)\n```\n\n<sample-output>\n\n3.0\n4.0\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Print many times",
+        "tmcname": "part03-31_print_many_times"
+      },
+      "inner_content": "Please write a function named `print_many_times(text, times)`, which takes a string and an integer as arguments. The integer argument specifies how many times the string argument should be printed out:\n\n```python\nprint_many_times(\"hi\", 5)\n\nprint()\n\ntext = \"All Pythons, except one, grow up\"\ntimes = 3\nprint_many_times(text, times)\n```\n<sample-output>\n\nhi\nhi\nhi\nhi\nhi\n\nAll Pythons, except one, grow up.\nAll Pythons, except one, grow up.\nAll Pythons, except one, grow up.\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Print many times\" tmcname=\"part03-31_print_many_times\">\n\nPlease write a function named `print_many_times(text, times)`, which takes a string and an integer as arguments. The integer argument specifies how many times the string argument should be printed out:\n\n```python\nprint_many_times(\"hi\", 5)\n\nprint()\n\ntext = \"All Pythons, except one, grow up\"\ntimes = 3\nprint_many_times(text, times)\n```\n<sample-output>\n\nhi\nhi\nhi\nhi\nhi\n\nAll Pythons, except one, grow up.\nAll Pythons, except one, grow up.\nAll Pythons, except one, grow up.\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "A square of hashes",
+        "tmcname": "part03-32_square_of_hashes"
+      },
+      "inner_content": "Please write a function named `hash_square(length)`, which takes an integer argument. The function prints out a square of hash characters, and the argument specifies the length of the side of the square.\n\n```python\nhash_square(3)\nprint()\nhash_square(5)\n```\n\n<sample-output>\n\n<pre>\n###\n###\n###\n\n#####\n#####\n#####\n#####\n#####\n</pre>\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"A square of hashes\" tmcname=\"part03-32_square_of_hashes\">\n\nPlease write a function named `hash_square(length)`, which takes an integer argument. The function prints out a square of hash characters, and the argument specifies the length of the side of the square.\n\n```python\nhash_square(3)\nprint()\nhash_square(5)\n```\n\n<sample-output>\n\n<pre>\n###\n###\n###\n\n#####\n#####\n#####\n#####\n#####\n</pre>\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Chessboard",
+        "tmcname": "part03-33_chessboard"
+      },
+      "inner_content": "Please write a function named `chessboard`, which prints out a chessboard made out of ones and zeroes. The function takes an integer argument, which specifies the length of the side of the board. See the examples below for details:\n\n```python\nchessboard(3)\nprint()\nchessboard(6)\n```\n\n<sample-output>\n\n<pre>\n101\n010\n101\n\n101010\n010101\n101010\n010101\n101010\n010101\n</pre>\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Chessboard\" tmcname=\"part03-33_chessboard\">\n\nPlease write a function named `chessboard`, which prints out a chessboard made out of ones and zeroes. The function takes an integer argument, which specifies the length of the side of the board. See the examples below for details:\n\n```python\nchessboard(3)\nprint()\nchessboard(6)\n```\n\n<sample-output>\n\n<pre>\n101\n010\n101\n\n101010\n010101\n101010\n010101\n101010\n010101\n</pre>\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "A word squared",
+        "tmcname": "part03-34_word_squared"
+      },
+      "inner_content": "Please write a function named `squared`, which takes a string argument and an integer argument, and prints out a square of characters as specified by the examples below.\n\n```python\nsquared(\"ab\", 3)\nprint()\nsquared(\"aybabtu\", 5)\n```\n\n<sample-output>\n\n<pre>\naba\nbab\naba\n\naybab\ntuayb\nabtua\nybabt\nuayba\n</pre>\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"A word squared\" tmcname=\"part03-34_word_squared\">\n\nPlease write a function named `squared`, which takes a string argument and an integer argument, and prints out a square of characters as specified by the examples below.\n\n```python\nsquared(\"ab\", 3)\nprint()\nsquared(\"aybabtu\", 5)\n```\n\n<sample-output>\n\n<pre>\naba\nbab\naba\n\naybab\ntuayb\nabtua\nybabt\nuayba\n</pre>\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!---\nA quiz to review the contents of this section:",
+      "raw_source": "<!---\nA quiz to review the contents of this section:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "b04f1d8b-d207-5a8c-abbd-e42a3af7c12d"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"b04f1d8b-d207-5a8c-abbd-e42a3af7c12d\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Please respond to a quick questionnaire on this week's materials.",
+      "raw_source": "Please respond to a quick questionnaire on this week's materials."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "4420ccdc-8422-598a-9057-89b32e8f282a"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"4420ccdc-8422-598a-9057-89b32e8f282a\"></quiz>"
+    }
+  ]
+}

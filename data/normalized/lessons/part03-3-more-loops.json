@@ -1,0 +1,923 @@
+{
+  "id": "part03-3-more-loops",
+  "part": 3,
+  "part_slug": "part-3",
+  "slug": "3-more-loops",
+  "is_part_index": false,
+  "title_original": "More loops",
+  "title_vi": "",
+  "path": "/part-3/3-more-loops",
+  "source_path": "data/part-3/3-more-loops.md",
+  "source_hash": "d9211b76d4dc2a5147e5960aa0f7d7eb7a2b4c9086a4b8f8fdc817e93899a59a",
+  "order": 1,
+  "blocks_count": 50,
+  "blocks": [
+    {
+      "id": "blk-part03-3-more-loops-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "33573a02e2263565a26303717fa62474c3c72cb7543ea13b2ce103e78f2a70b4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will understand when the `break` command is needed to break out of loops\n- You will be able to use the `continue` command to move to the next iteration\n- You will understand how nested loops work"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0002",
+      "type": "heading",
+      "order": 2,
+      "source_hash": "96d0900d9ed5859f79ab3c935bab13b26d80746b5d84aaebc268c84674020d84",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The break command"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "0c6ebae9772539ebb083ee7fc7bc29a77cc3254b2f4cfb207768e9a0fdaaadff",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You have already come across the `break` command. It can be used to stop the execution of a loop immediately. A typical example of where it is used is a situation where the program asks the user for input, and the execution ends only when a specific input is received."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "986aec6e91a13917635261a8b90e444ac35ba63dab6af8e8c2a6dc25cc1d0f69",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The same functionality can be achieved without the `break` command, using a suitable condition. The two programs below both ask the user to type in numbers, and calculate the sum of the numbers until the user types in -1."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "e618ba936559190fc309e54d6651f53002c421b7b62207a400b6ff39d57db88b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# 1st version using the break command\n\nsum = 0\n\nwhile True:\n    number = int(input(\"Please type in a number, -1 to exit: \"))\n    if number == -1:\n        break\n    sum += number\n\nprint (f\"The sum is {sum}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# 1st version using the break command\n\nsum = 0\n\nwhile True:\n    number = int(input(\"Please type in a number, -1 to exit: \"))\n    if number == -1:\n        break\n    sum += number\n\nprint (f\"The sum is {sum}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e618ba936559190fc309e54d6651f53002c421b7b62207a400b6ff39d57db88b",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0006",
+      "type": "code",
+      "order": 6,
+      "source_hash": "9dbd6d741a86ba5bacee8d37bcc4943f1d55569e4959789a7c2828646f73f4af",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# 2nd version without the break command\n\nsum = 0\nnumber = 0\n\nwhile number != -1:\n    number = int(input(\"Please type in a number, -1 to exit: \"))\n    if number != -1:\n        sum += number\n\nprint (f\"The sum is {sum}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# 2nd version without the break command\n\nsum = 0\nnumber = 0\n\nwhile number != -1:\n    number = int(input(\"Please type in a number, -1 to exit: \"))\n    if number != -1:\n        sum += number\n\nprint (f\"The sum is {sum}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "9dbd6d741a86ba5bacee8d37bcc4943f1d55569e4959789a7c2828646f73f4af",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "e7377c752ef07d97975a8a7c9aa5fe855d00578769556fcba125d465f7207954",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Both programs print out the same thing with the same inputs, for example:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0008",
+      "type": "sample_output",
+      "order": 8,
+      "source_hash": "d3f946cfcd75be64872f66ceb50a4f81cfca3b17cc94aae739fd296aad7306b3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number, -1 to exit: **2**\nPlease type in a number, -1 to exit: **4**\nPlease type in a number, -1 to exit: **5**\nPlease type in a number, -1 to exit: **3**\nPlease type in a number, -1 to exit: **-1**\nThe sum is 14"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number, -1 to exit: **2**\nPlease type in a number, -1 to exit: **4**\nPlease type in a number, -1 to exit: **5**\nPlease type in a number, -1 to exit: **3**\nPlease type in a number, -1 to exit: **-1**\nThe sum is 14"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number, -1 to exit: **2**\nPlease type in a number, -1 to exit: **4**\nPlease type in a number, -1 to exit: **5**\nPlease type in a number, -1 to exit: **3**\nPlease type in a number, -1 to exit: **-1**\nThe sum is 14\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "2c9fd5a54b78ec03d41cd3d7caf639ce538da3da370cf81bac9281f189070f07",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "So, the two programs are functionally practically identical. However, the first method is often easier, as the condition `number == -1` appears only once, and the variable `number` doesn't have to be initialised outside the loop."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "14182d24a7babd2ec95fc87ae0dae5b1a4cbd8ce791e882fbde908b48a62224b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `break` command and a suitable condition can also be used together in a while loop. For example, the following loop is repeated as long as the sum of the numbers is at most 100, but it also stops if the user types in the number -1."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0011",
+      "type": "code",
+      "order": 11,
+      "source_hash": "1605eef66378e40e691e4aa1904f8f84083889318c316adf2d70cd806d453675",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "sum = 0\n\nwhile sum <= 100:\n    number = int(input(\"Please type in a number, -1 to exit: \"))\n    if number == -1:\n        break\n    sum += number\n\nprint (f\"The sum is {sum}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "sum = 0\n\nwhile sum <= 100:\n    number = int(input(\"Please type in a number, -1 to exit: \"))\n    if number == -1:\n        break\n    sum += number\n\nprint (f\"The sum is {sum}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "1605eef66378e40e691e4aa1904f8f84083889318c316adf2d70cd806d453675",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "49754e408562ba74cf071c7160323a9b4dad90bbaf50a7a697ca2b249a80e9ba",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Some examples of the program's execution:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0013",
+      "type": "sample_output",
+      "order": 13,
+      "source_hash": "0a9b8c2cf8e33b25a3f0253dd1d49367856923f067604997581a8751e7a51465",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number, -1 to exit: **15**\nPlease type in a number, -1 to exit: **8**\nPlease type in a number, -1 to exit: **21**\nPlease type in a number, -1 to exit: **-1**\nThe sum is 44"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number, -1 to exit: **15**\nPlease type in a number, -1 to exit: **8**\nPlease type in a number, -1 to exit: **21**\nPlease type in a number, -1 to exit: **-1**\nThe sum is 44"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number, -1 to exit: **15**\nPlease type in a number, -1 to exit: **8**\nPlease type in a number, -1 to exit: **21**\nPlease type in a number, -1 to exit: **-1**\nThe sum is 44\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0014",
+      "type": "sample_output",
+      "order": 14,
+      "source_hash": "cb1ab62cbd6868b2af9cde11701ad3fc24ca4ac7f12d7128a64160812a9795ff",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number, -1 to exit: **15**\nPlease type in a number, -1 to exit: **8**\nPlease type in a number, -1 to exit: **21**\nPlease type in a number, -1 to exit: **45**\nPlease type in a number, -1 to exit: **17**\nThe sum is 106"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number, -1 to exit: **15**\nPlease type in a number, -1 to exit: **8**\nPlease type in a number, -1 to exit: **21**\nPlease type in a number, -1 to exit: **45**\nPlease type in a number, -1 to exit: **17**\nThe sum is 106"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number, -1 to exit: **15**\nPlease type in a number, -1 to exit: **8**\nPlease type in a number, -1 to exit: **21**\nPlease type in a number, -1 to exit: **45**\nPlease type in a number, -1 to exit: **17**\nThe sum is 106\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "8e26a1365775484298ed6938cf638767879c8aecf96c86a14ca0963030c09de5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the first example the execution of the loop stops because the user types in the number -1. In the second example it stops because the sum of the numbers exceeds 100."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "7bced7b3ba619dad1540fdf17a64889d63a5644dc50d25667c8829e337e9f157",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As always in programming, there are many ways to reach the same functionality. The following program is functionally identical to the above:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0017",
+      "type": "code",
+      "order": 17,
+      "source_hash": "2a0ce52c8232434dd812f65faf077ac988b6d3804b69d0948bf332c870a3d378",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "sum = 0\n\nwhile True:\n    number = int(input(\"Please type in a number, -1 to exit: \"))\n    if number == -1:\n        break\n    sum += number\n    if sum > 100:\n        break\n\nprint (f\"The sum is {sum}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "sum = 0\n\nwhile True:\n    number = int(input(\"Please type in a number, -1 to exit: \"))\n    if number == -1:\n        break\n    sum += number\n    if sum > 100:\n        break\n\nprint (f\"The sum is {sum}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2a0ce52c8232434dd812f65faf077ac988b6d3804b69d0948bf332c870a3d378",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0018",
+      "type": "heading",
+      "order": 18,
+      "source_hash": "95cd075cfe15341ecbc8984f3798ccf9e8bc2be665fb9e537528802ca4f5ab92",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The continue command"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "54ce2b2186b8ed8bf9468d4b274f915ff7472f0e51553f2b5991b8acf102c8fa",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Another way to change the way a loop is executed is the `continue` command. It causes the execution of the loop to jump straight to the beginning of the loop, where the condition of the loop is. Then the execution continues normally with checking the condition:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0020",
+      "type": "image",
+      "order": 20,
+      "source_hash": "b6419b72a9ad9f4ca0e7a8393581ac355c4fb79fc0e825f6b0af09db17a08447",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "3_3_1.png",
+        "alt": "",
+        "attributes": {
+          "src": "3_3_1.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "15445e652c56a51386fae66a9b1ccb16d42b5291a100443928541dedb8e8b422",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "For example, the following program sums up numbers from input, but it only includes the numbers which are smaller than 10. If the number is 10 or greater, the execution jumps to the beginning of the loop and the number is not added to the sum."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0022",
+      "type": "code",
+      "order": 22,
+      "source_hash": "6bc345e472ee8e8b7ef09046859018a1b0f85989831e079354f2f9a964fb4071",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "sum = 0\n\nwhile True:\n    number = int(input(\"Please type in a number, -1 to exit: \"))\n    if number == -1:\n        break\n    if number >= 10:\n        continue\n    sum += number\n\nprint (f\"The sum is {sum}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "sum = 0\n\nwhile True:\n    number = int(input(\"Please type in a number, -1 to exit: \"))\n    if number == -1:\n        break\n    if number >= 10:\n        continue\n    sum += number\n\nprint (f\"The sum is {sum}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6bc345e472ee8e8b7ef09046859018a1b0f85989831e079354f2f9a964fb4071",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0023",
+      "type": "sample_output",
+      "order": 23,
+      "source_hash": "c1881a939335885cbd8bd49ebacd5bcd1edca1094e5bad069726b3d046b0c64b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number, -1 to exit: **4**\nPlease type in a number, -1 to exit: **7**\nPlease type in a number, -1 to exit: **99**\nPlease type in a number, -1 to exit: **5**\nPlease type in a number, -1 to exit: **-1**\nThe sum is 16"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number, -1 to exit: **4**\nPlease type in a number, -1 to exit: **7**\nPlease type in a number, -1 to exit: **99**\nPlease type in a number, -1 to exit: **5**\nPlease type in a number, -1 to exit: **-1**\nThe sum is 16"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number, -1 to exit: **4**\nPlease type in a number, -1 to exit: **7**\nPlease type in a number, -1 to exit: **99**\nPlease type in a number, -1 to exit: **5**\nPlease type in a number, -1 to exit: **-1**\nThe sum is 16\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0024",
+      "type": "heading",
+      "order": 24,
+      "source_hash": "e00ee3205e88308cbc80bd62c93a0965d3cd173994045d3c31878056fb45854b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Nested loops"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "9c0d9504864f75c60c8260ba85b10000bc3f7600689453431a14626d227368f3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Just like `if` statements, loops can also be placed inside other loops. For example, the following program uses a loop to ask the user to input numbers. It then uses another loop inside the first one to print a countdown from the given number down to 1:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0026",
+      "type": "code",
+      "order": 26,
+      "source_hash": "d0b80f0dbcdc0e4b8fe00e6360b59743c6bad78ea5c6e15703477d228ff35cea",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "while True:\n    number = int(input(\"Please type in a number: \"))\n    if number == -1:\n        break\n    while number > 0:\n        print(number)\n        number -= 1"
+      },
+      "translation": {
+        "language": "code",
+        "content": "while True:\n    number = int(input(\"Please type in a number: \"))\n    if number == -1:\n        break\n    while number > 0:\n        print(number)\n        number -= 1"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d0b80f0dbcdc0e4b8fe00e6360b59743c6bad78ea5c6e15703477d228ff35cea",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0027",
+      "type": "sample_output",
+      "order": 27,
+      "source_hash": "f0017c0477b3fd98ceb9cfbd8a1eca844dd60a1dc0c2c0f053b2908be343c5f4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number: **4**\n4\n3\n2\n1\nPlease type in a number: **3**\n3\n2\n1\nPlease type in a number: **6**\n6\n5\n4\n3\n2\n1\nPlease type in a number: **-1**"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number: **4**\n4\n3\n2\n1\nPlease type in a number: **3**\n3\n2\n1\nPlease type in a number: **6**\n6\n5\n4\n3\n2\n1\nPlease type in a number: **-1**"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number: **4**\n4\n3\n2\n1\nPlease type in a number: **3**\n3\n2\n1\nPlease type in a number: **6**\n6\n5\n4\n3\n2\n1\nPlease type in a number: **-1**\n\n</Sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "d4e7d919b8cda18ecc1ac07e5d4f20d9ce29fa5c9da56c4cd5b320ff6b8db046",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When there are nested loops, `break` and `continue` commands only affect the innermost loop which they are a part of. The previous example could also be written like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0029",
+      "type": "code",
+      "order": 29,
+      "source_hash": "e2fb7916d35b2ce164f0ce7e676bb07ba5f442cd3b017478ebd9b8c7d20eccb6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "while True:\n    number = int(input(\"Please type in a number: \"))\n    if number == -1:\n        break\n    while True:\n        if number <= 0:\n            break\n        print(number)\n        number -= 1"
+      },
+      "translation": {
+        "language": "code",
+        "content": "while True:\n    number = int(input(\"Please type in a number: \"))\n    if number == -1:\n        break\n    while True:\n        if number <= 0:\n            break\n        print(number)\n        number -= 1"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e2fb7916d35b2ce164f0ce7e676bb07ba5f442cd3b017478ebd9b8c7d20eccb6",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "67afd9065157414d11e7ed0fd271b089792abcb751c2b531074016c006061bb7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Here the latter `break` command only stops the innermost loop, which is used to print the numbers."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0031",
+      "type": "heading",
+      "order": 31,
+      "source_hash": "33b01a73ecd5054dfe4b95272245bf08c0efaedf4d6582a2e9fd7d99c9373448",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "More helper variables with loops"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "2f242d85fa98a8c77e0f612b64badaf43966cad45aaa3b924a3409321f562719",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We've already used helper variables, which increase or decrease with every iteration of a loop, many times before, so the following program should look quite familiar in structure. The program prints out all even numbers above zero until it reaches a limit set by the user:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0033",
+      "type": "code",
+      "order": 33,
+      "source_hash": "cc413a85afcd7a323ea1c46780cc905c402838de6be2c6efdaf8f2ebf4e9b48b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "limit = int(input(\"Please type in a number: \"))\ni = 0\nwhile i < limit:\n    print(i)\n    i += 2"
+      },
+      "translation": {
+        "language": "code",
+        "content": "limit = int(input(\"Please type in a number: \"))\ni = 0\nwhile i < limit:\n    print(i)\n    i += 2"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "cc413a85afcd7a323ea1c46780cc905c402838de6be2c6efdaf8f2ebf4e9b48b",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0034",
+      "type": "sample_output",
+      "order": 34,
+      "source_hash": "a9494b3a04841179b6b006a27b0022c47ce333cbd0629f1257a41f6edcc40e82",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number: **8**\n0\n2\n4\n6"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number: **8**\n0\n2\n4\n6"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number: **8**\n0\n2\n4\n6\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "566640091a91b8b898f7b177e4b63c1890087f567500525159e3e943ab1ae066",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The helper variable `i` is set to 0 before the loop, and it increases by two with every iteration."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "3931d093f50be15c14c1dbf9804be45584a5118abeb87c9fc553a49d6981c242",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Using nested loops sometimes necessitates a separate helper variable for the inner loop. The program below prints out a \"number pyramid\" based on a number given by the user:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0037",
+      "type": "code",
+      "order": 37,
+      "source_hash": "a551ea588e273f3d8e650d6b44314e2c633d551163eecd2ce6d239a2cd2bcc7b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\nwhile number > 0:\n    i = 0\n    while i < number:\n        print(f\"{i} \", end=\"\")\n        i += 1\n    print()\n    number -= 1"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\nwhile number > 0:\n    i = 0\n    while i < number:\n        print(f\"{i} \", end=\"\")\n        i += 1\n    print()\n    number -= 1"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a551ea588e273f3d8e650d6b44314e2c633d551163eecd2ce6d239a2cd2bcc7b",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0038",
+      "type": "sample_output",
+      "order": 38,
+      "source_hash": "85c1b9d2639c92963671576a1d5286c379e0caeb56652e308515d2876840f974",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number: **5**\n0 1 2 3 4\n0 1 2 3\n0 1 2\n0 1\n0"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number: **5**\n0 1 2 3 4\n0 1 2 3\n0 1 2\n0 1\n0"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number: **5**\n0 1 2 3 4\n0 1 2 3\n0 1 2\n0 1\n0\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "1735529913b15a83ac64226d3c8d4e04da21eef7419fa3a4a17470ce3adeae34",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In this program the outer loop uses the helper variable `number`, which decreases by 1 with each iteration until it reaches 0. The helper variable `i` is set to 0 just before the inner loop is entered, each time the outer loop repeats."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "8fed197ba5b9a0ecec56906411acee211bcb3c88d970e4e1ccfcda4af4ef2899",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The inner loop uses the helper variable `i`, which increases by 1 with each iteration of the inner loop. The inner loop repeats until `i` is equal to `number`, and prints out each value of `i` on the same line, separated by a space character. When the inner loop finishes, the `print` command in the outer loop starts a new line."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "873c657d600681a379e91521c7c617ce4ab3b374ebd46a374a77ca518e0a2d52",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Now remember that with each iteration of the outer loop the value of `number` decreases, so the amount of times the inner loop repeats also decreases. With each repetition the line of numbers gets shorter, and thus we get the pyramid shape."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "c890a84999ab777761bb9c1fe96e16e730b0ebf0d3e940f61e99396c00228141",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Nested loops can get confusing fast, but understanding the way they work is essential. You may well find the Python Tutor [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit) helpful in understanding how this example works. Copy the above code into the code window of the tool and follow the formation of the printout and the changing values of the helper variables as the execution progresses."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0043",
+      "type": "exercise",
+      "order": 43,
+      "source_hash": "a48f64323c7290e371205bd4557d060f9774e73d46688803090364e73ee5b207",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for a positive integer number. The program then prints out a list of multiplication operations until both operands reach the number given by the user. See the examples below for details:\n\n<sample-output>\n\nPlease type in a number: 2\n1 x 1 = 1\n1 x 2 = 2\n2 x 1 = 2\n2 x 2 = 4\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: 3\n1 x 1 = 1\n1 x 2 = 2\n1 x 3 = 3\n2 x 1 = 2\n2 x 2 = 4\n2 x 3 = 6\n3 x 1 = 3\n3 x 2 = 6\n3 x 3 = 9\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-23_multiplication",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Multiplication",
+        "tmc_name": "part03-23_multiplication",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0044",
+      "type": "exercise",
+      "order": 44,
+      "source_hash": "d67a55397535f7cbf608cbe6d7372d370ca89bb0b37ef0b2e716c2185a7db552",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user to type in a sentence. The program then prints out the first letter of each word in the sentence, each letter on a separate line.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nPlease type in a sentence: **Humpty Dumpty sat on a wall**\nH\nD\ns\no\na\nw\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-24_first_letters_of_words",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "First letters of words",
+        "tmc_name": "part03-24_first_letters_of_words",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0045",
+      "type": "exercise",
+      "order": 45,
+      "source_hash": "188d77602601a6853eae7345f548870afeea90a549da4cc55469b0bd2086c387",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user to type in an integer number. If the user types in a number equal to or below 0, the execution ends. Otherwise the program prints out the factorial of the number.\n\nThe factorial of a number involves multiplying the number by all the positive integers smaller than itself. In other words, it is the product of all positive integers less than or equal to the number. For example, the factorial of 5 is 1 * 2 * 3 * 4 * 5 = 120.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nPlease type in a number: **3**\nThe factorial of the number 3 is 6\nPlease type in a number: **4**\nThe factorial of the number 4 is 24\nPlease type in a number: **-1**\nThanks and bye!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **1**\nThe factorial of the number 1 is 1\nPlease type in a number: **0**\nThanks and bye!\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-25_factorial",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Factorial",
+        "tmc_name": "part03-25_factorial",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0046",
+      "type": "exercise",
+      "order": 46,
+      "source_hash": "be6bb832bf967529d08d3f1c676b6991c214ecde44b9194b8e7e93636d9ce7f7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user to type in a number. The program then prints out all the positive integer values from 1 up to the number. However, the order of the numbers is changed so that each pair or numbers is flipped. That is, 2 comes before 1, 4 before 3 and so forth. See the examples below for details.\n\n<sample-output>\n\nPlease type in a number: **5**\n2\n1\n4\n3\n5\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **6**\n2\n1\n4\n3\n6\n5\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-26_flip_the_pairs",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Flip the pairs",
+        "tmc_name": "part03-26_flip_the_pairs",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0047",
+      "type": "exercise",
+      "order": 47,
+      "source_hash": "dbd3375ba1c9c7e0e46b22b560eaf67deaf85d033bf4474ad145874da34e9f77",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user to type in a number. The program then prints out the positive integers between 1 and the number itself, alternating between the two ends of the range as in the examples below.\n\n<sample-output>\n\nPlease type in a number: **5**\n1\n5\n2\n4\n3\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **6**\n1\n6\n2\n5\n3\n4\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-27_taking_turns",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Taking turns",
+        "tmc_name": "part03-27_taking_turns",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0048",
+      "type": "paragraph",
+      "order": 48,
+      "source_hash": "b97eebcf5a0222c688482a2c1f8f4510ba0c7934c136e1f60999bbcc47c2ab75",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!---\nA quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-3-more-loops-0049",
+      "type": "quiz",
+      "order": 49,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "b1118ae8-8dd4-563a-b6a5-0c274136535c",
+        "attributes": {
+          "id": "b1118ae8-8dd4-563a-b6a5-0c274136535c"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-3-more-loops-0050",
+      "type": "paragraph",
+      "order": 50,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-21_negative_to_positive",
+  "lesson_id": "part04-4-definite-iteration",
+  "part": 4,
+  "tmc_name": "part04-21_negative_to_positive",
+  "title_original": "From negative to positive",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for a positive integer N. The program then prints out all numbers between -N and N inclusive, but _leaves out the number 0_. Each number should be printed on a separate line.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nPlease type in a positive integer: **4**\n-4\n-3\n-2\n-1\n1\n2\n3\n4\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "c07b07f45938cbed808a44197cb4f2a562c27322f8f649984910bb62d272d50b",
+  "order": 35
+}

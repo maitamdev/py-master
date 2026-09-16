@@ -1,0 +1,16 @@
+{
+  "id": "ex-part12-06_ballplayers",
+  "lesson_id": "part12-1-functions-as-arguments",
+  "part": 12,
+  "tmc_name": "part12-06_ballplayers",
+  "title_original": "BallPlayers",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The exercise template contains the definition for a class named `BallPlayer`. It has the following public attributes:\n\n* name\n* shirt number `number`\n* scored goals `goals`\n* assists completed `assists`\n* minutes played `minutes`\n\nPlease implement the following functions. NB: each function has a different type of return value.\n\n## Most goals\n\nPlease write a function named `most_goals` which takes a list of ball players as its argument.\n\nThe function should return the name of the player who scored the most goals, in string format.\n\n## Most points\n\nPlease write a function named `most_points`, which takes a list of ball players as its argument.\n\nThe function should return a tuple containing the name and shirt number of the player who has scored the most points. The total number of points is the number of goals and the number of assists combined.\n\n## Least minutes\n\nPlease write a function named `least_minutes`, which takes a list of ball players as its argument.\n\nThe function should return the `BallPlayer` object which has the smallest value of minutes played.\n\nYou can test your functions with the following program:\n\n```python\nif __name__ == \"__main__\":\n    player1 = BallPlayer(\"Archie Bonkers\", 13, 5, 12, 46)\n    player2 = BallPlayer(\"Speedy Tickets\", 7, 2, 26, 55)\n    player3 = BallPlayer(\"Cruella De Hill\", 9, 1, 32, 26)\n    player4 = BallPlayer(\"Devilled Tasmanian\", 12, 1, 11, 41)\n    player5 = BallPlayer(\"Donald Quack\", 4, 3, 9, 12)\n    \n    team = [player1, player2, player3, player4, player5]\n    print(most_goals(team))\n    print(most_points(team))\n    print(least_minutes(team))\n```\n\nThis should print out:\n\n<sample-output>\n\nArchie Bonkers\n('Cruella De Hill', 9)\nBallPlayer(name=Donald Quack, number=4, goals=3, passes=9, minutes=12)\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "if __name__ == \"__main__\":\n    player1 = BallPlayer(\"Archie Bonkers\", 13, 5, 12, 46)\n    player2 = BallPlayer(\"Speedy Tickets\", 7, 2, 26, 55)\n    player3 = BallPlayer(\"Cruella De Hill\", 9, 1, 32, 26)\n    player4 = BallPlayer(\"Devilled Tasmanian\", 12, 1, 11, 41)\n    player5 = BallPlayer(\"Donald Quack\", 4, 3, 9, 12)\n    \n    team = [player1, player2, player3, player4, player5]\n    print(most_goals(team))\n    print(most_points(team))\n    print(least_minutes(team))",
+  "grading_data_available": false,
+  "source_hash": "88629567abcd511f89834793211ce161f44fbb45cd3c6f3c79ffa25598db4c34",
+  "order": 58
+}

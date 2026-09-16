@@ -1,0 +1,469 @@
+{
+  "id": "page-grading-and-exams",
+  "slug": "grading-and-exams",
+  "title_original": "Grading and exams",
+  "title_vi": "Chấm điểm và thi",
+  "path": "/grading-and-exams",
+  "source_path": "data/grading-and-exams.md",
+  "source_hash": "d11a94b72fc25af9787b7e7ef4a47e33add151119ca843b16311ba0edd71ec9a",
+  "blocks_count": 27,
+  "blocks": [
+    {
+      "id": "blk-page-grading-and-exams-0001",
+      "type": "paragraph",
+      "order": 1,
+      "source_hash": "1d729c94d3f20c7f7d17adf5308952fdad795ed826bdf0c83fd7f3ae68bcbf2a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "To pass the Python Programming MOOC courses, you are expected to both complete exercises and take part in an exam."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Để vượt qua các khóa học MOOC về Lập trình Python, bạn phải hoàn thành các bài tập và tham gia một kỳ thi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-grading-and-exams-0002",
+      "type": "heading",
+      "order": 2,
+      "source_hash": "e700c2cf612bbefde770bca00315a39741e98445d443a7eff44fd2fd52ba0b2b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Upcoming exams"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Kỳ thi sắp tới"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-grading-and-exams-0003",
+      "type": "heading",
+      "order": 3,
+      "source_hash": "8e228e8fdee63bce0988cacc2fde2432afbb539caf1bf5a3158a3f05f33ed7e0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Introduction to Programming"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Giới thiệu về lập trình"
+      },
+      "metadata": {
+        "level": 4
+      }
+    },
+    {
+      "id": "blk-page-grading-and-exams-0004",
+      "type": "list",
+      "order": 4,
+      "source_hash": "434c7dc8c0af859f88a5a6f286f10bfcec200be6ff905b0ae64b2e40c784faf6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* ~~Saturday 07.03.2026~~\n* ~~Saturday 02.05.2026~~\n* ~~Saturday 06.06.2026~~\n* ~~Saturday 18.07.2026~~\n* Saturday 05.09.2026\n* Tuesday 27.10.2026\n* Saturday 5.12.2026\n* Saturday 16.1.2027"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* ~~Thứ Bảy ngày 07.03.2026~~\n* ~~Thứ bảy ngày 02.05.2026~~\n* ~~Thứ bảy ngày 06.06.2026~~\n* ~~Thứ Bảy ngày 18.07.2026~~\n* Thứ Bảy ngày 05.09.2026\n* Thứ Ba 27.10.2026\n* Thứ bảy ngày 5.12.2026\n* Thứ bảy 16.1.2027"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-grading-and-exams-0005",
+      "type": "heading",
+      "order": 5,
+      "source_hash": "b4772e9ebe335a65872dadfe274034c285e47c0edda9bb18c7cc586d02bdb9e1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Advanced Course in Programming"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khóa học lập trình nâng cao"
+      },
+      "metadata": {
+        "level": 4
+      }
+    },
+    {
+      "id": "blk-page-grading-and-exams-0006",
+      "type": "list",
+      "order": 6,
+      "source_hash": "9e939c5dd4eea2f3da495a9c089e9cd53434691bc21dee5ed3ec9aa368432f32",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* ~~Saturday 14.03.2026~~\n* ~~Saturday 09.05.2026~~\n* ~~Saturday 13.06.2026~~\n* ~~Saturday 15.08.2026~~\n* Tuesday 20.10.2026\n* Saturday 15.12.2026\n* Saturday 23.01.2027\n* Saturday 27.02.2027"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* ~~Thứ Bảy ngày 14.03.2026~~\n* ~~Thứ bảy ngày 09.05.2026~~\n* ~~Thứ Bảy ngày 13.06.2026~~\n* ~~Thứ Bảy ngày 15.08.2026~~\n* Thứ Ba 20.10.2026\n* Thứ Bảy 15.12.2026\n* Thứ Bảy 23.01.2027\n* Thứ Bảy 27.02.2027"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-grading-and-exams-0007",
+      "type": "heading",
+      "order": 7,
+      "source_hash": "cb8bbed917565e150dd7b1d0cef619ccb2092a656ffbb597bbcd6449fc9a8eb5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Taking a programming exam"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Làm bài kiểm tra lập trình"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-page-grading-and-exams-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "a66acdd6b740d3c52741276fd53b51ff2a71d4ffcc18e9caab7faed3cfa47789",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Once you have completed the required number of exercises for either of the courses, you may take the relevant course exam at any of the times listed above. Specifically, you must have received at least 25% of the exercise points for each of the seven parts of the course by 8 AM on the morning of the exam. If you are taking the advanced course exam, part 14 must be fully completed. If any of the seven point totals fall short of this limit, your exam submission will not be graded."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khi bạn đã hoàn thành số lượng bài tập cần thiết cho một trong các khóa học, bạn có thể tham gia kỳ thi khóa học liên quan vào bất kỳ thời điểm nào được liệt kê ở trên. Cụ thể, bạn phải đạt được ít nhất 25% số điểm bài tập cho mỗi phần trong số bảy phần của khóa học trước 8 giờ sáng vào buổi sáng của kỳ thi. Nếu bạn đang tham gia kỳ thi khóa học nâng cao, phần 14 phải được hoàn thành đầy đủ. Nếu bất kỳ điểm nào trong tổng số bảy điểm không vượt quá giới hạn này, bài thi của bạn sẽ không được chấm điểm."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-grading-and-exams-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "27d65bac2bbaffba61fba12b3e10844978431f5f1553a86cbdc29ab474dff4cd",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Submissions are assessed separately for the Introduction to Programming course (parts 1-7) and the Advanced Course in Programming (parts 8-14)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các bài nộp được đánh giá riêng biệt cho khóa học Giới thiệu về Lập trình (phần 1-7) và Khóa học Lập trình Nâng cao (phần 8-14)."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-grading-and-exams-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "0b8c70a2c6c58eb12e6a6f6ca2754fdb4f989521fb2baab31f0e7c115bbdb43d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You may take part in any number of the exams listed above. The highest grade achieved will be your final grade."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn có thể tham gia bất kỳ số lượng bài kiểm tra nào được liệt kê ở trên. Điểm cao nhất đạt được sẽ là điểm cuối cùng của bạn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-grading-and-exams-0011",
+      "type": "heading",
+      "order": 11,
+      "source_hash": "85416c6ee2bcbb66ba5e6c9a76cde8ac0a684ae588c86e68ed32d38b37b43327",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Information about exam arrangements"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thông tin về việc sắp xếp kỳ thi"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-page-grading-and-exams-0012",
+      "type": "custom_component",
+      "order": 12,
+      "source_hash": "53de93fca82b4c1a9e9d8058549cecf2640b64ce0774c9751552fb83f9889589",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "All times are local time in Helsinki, Finland"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tất cả các giờ được tính theo giờ địa phương ở Helsinki, Phần Lan"
+      },
+      "metadata": {
+        "component_name": "notice",
+        "attributes": {},
+        "raw_source": "<notice>All times are local time in Helsinki, Finland</notice>",
+        "parsed": true
+      }
+    },
+    {
+      "id": "blk-page-grading-and-exams-0013",
+      "type": "list",
+      "order": 13,
+      "source_hash": "f03083f96bee4a6296f298db9e0070598e9a59dd97864a396e8fc670ad3dc351",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* You do not need to enroll for the exam.\n* The course exam can be taken on exam date **between 10:00 AM and 10:00 PM**.\n* The exam ends at 10:00 PM at the latest. If you want to be able to spend the maximum time allowed on the exam, you should **start at 6:00 PM at the latest**.\n* You will have **four hours** to complete the exam. If you have been granted extra time through special arrangements, you will have five hours to complete the exam, and should start at 5:00 PM at the latest.\n* Your solutions to the programming tasks in the exam are submitted in the same manner as your solutions to the programming exercises on the course."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* Bạn không cần phải đăng ký dự thi.\n* Kỳ thi của khóa học có thể được thực hiện vào ngày thi **từ 10:00 sáng đến 10:00 tối**.\n* Kỳ thi kết thúc muộn nhất vào lúc 22h. Nếu muốn có thể dành thời gian tối đa cho phép làm bài thi, bạn nên **bắt đầu muộn nhất vào lúc 6 giờ chiều**.\n* Bạn sẽ có **bốn giờ** để hoàn thành bài kiểm tra. Nếu bạn được cho thêm thời gian thông qua sự sắp xếp đặc biệt, bạn sẽ có năm giờ để hoàn thành bài kiểm tra và phải bắt đầu muộn nhất là lúc 5 giờ chiều.\n* Lời giải của bạn cho các bài tập lập trình trong bài kiểm tra được gửi theo cách tương tự như lời giải của bạn cho các bài tập lập trình trong khóa học."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-grading-and-exams-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "888b4cb81687d0c3df7d1fb68b3c91c48c423ce3976d4fc66591d8381318d546",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "More detailed instructions will be published on these pages before the exam date."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hướng dẫn chi tiết hơn sẽ được công bố trên các trang này trước ngày thi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-grading-and-exams-0015",
+      "type": "heading",
+      "order": 15,
+      "source_hash": "ecc9a3774c93071d8db81128401dbab6e7f55d053f4cd43793cc101209153c95",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Exercise points"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điểm bài tập"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-page-grading-and-exams-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "70e55b69bf4cd27e4a89521a0452e4d3fa20ccbcb9ad2ef3a3efd2f6397b6c4c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Each programming exercise and quiz in each part is worth a number of exercise points. You can find a list of all the exercises in a specific part by clicking the \"List of exercises in this part\" menu on the index page of that part. You can see your current exercise points total by clicking the blue blob in the bottom right corner of any page in the course material. The percentage in the \"Total points\" section for each part is the critical one for passing the course."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mỗi bài tập lập trình và bài kiểm tra trong mỗi phần đều có giá trị bằng một số điểm bài tập. Bạn có thể tìm thấy danh sách tất cả các bài tập trong một phần cụ thể bằng cách nhấp vào menu \"Danh sách các bài tập trong phần này\" trên trang mục lục của phần đó. Bạn có thể xem tổng điểm bài tập hiện tại của mình bằng cách nhấp vào đốm màu xanh lam ở góc dưới cùng bên phải của bất kỳ trang nào trong tài liệu khóa học. Tỷ lệ phần trăm trong phần \"Tổng điểm\" cho mỗi phần là tỷ lệ quan trọng để vượt qua khóa học."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-grading-and-exams-0017",
+      "type": "heading",
+      "order": 17,
+      "source_hash": "f4ac2c337af6e07b995ea08710c1532b2d3812c830cb1df91f52eb6a2a09e786",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Grading guidelines"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hướng dẫn chấm điểm"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-page-grading-and-exams-0018",
+      "type": "heading",
+      "order": 18,
+      "source_hash": "0f5d6a67b13b97a4223997ecfcb0cc9d0d96cc7c4af6590bb811d5f29bdf1591",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Grading scale"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "thang điểm"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-grading-and-exams-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "31422fa90a73fbedfaee04eece98a62163fc5a859277459ae044b8ce571d77e1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "MOOC is divided into two courses: Introduction to Programming (parts 1 to 7) and Advanced Course in Programming (parts 8 to 14).\nBoth courses are graded on the following scale:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "MOOC được chia thành hai khóa học: Nhập môn Lập trình (phần 1 đến 7) và Khóa học Lập trình Nâng cao (phần 8 đến 14).\nCả hai khóa học đều được chấm điểm theo thang điểm sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-grading-and-exams-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "0be7f946fc2af3828b6a57401e334e237f36ae1d8f2ca1532347fe914db9ddcd",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<table>\n    <thead>\n    <tr>\n        <th>Total points</th>\n        <th>Final grade</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr>\n        <td>90 % or more</td>\n        <td>5 (Excellent)</td>\n    </tr>\n    <tr>\n        <td>80 % or more, less than 90 %</td>\n        <td>4 (Very good)</td>\n    </tr>\n    <tr>\n        <td>70 % or more, less than 80 %</td>\n        <td>3 (Good)</td>\n    </tr>\n    <tr>\n        <td>60 % or more, less than 70 %</td>\n        <td>2 (Satisfactory)</td>\n    </tr>\n    <tr>\n        <td>50 % or more, less than 60 %</td>\n        <td>1 (Sufficient)</td>\n    </tr>\n    <tr>\n        <td>less than 50 %</td>\n        <td>Fail</td>\n    </tr>\n    </tbody>\n</table>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<table>\n    <thead>\n    <tr>\n        <th>Tổng số điểm</th>\n        <th>Lớp cuối cùng</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr>\n        <td>90 % trở lên</td>\n        <td>5 (Xuất sắc)</td>\n    </tr>\n    <tr>\n        <td>80 % trở lên, nhỏ hơn 90 %</td>\n        <td>4 (Rất tốt)</td>\n    </tr>\n    <tr>\n        <td>70 % trở lên, nhỏ hơn 80 %</td>\n        <td>3 (Tốt)</td>\n    </tr>\n    <tr>\n        <td>60% trở lên, nhỏ hơn 70%</td>\n        <td>2 (Đạt yêu cầu)</td>\n    </tr>\n    <tr>\n        <td>50 % trở lên, nhỏ hơn 60 %</td>\n        <td>1 (Đủ)</td>\n    </tr>\n    <tr>\n        <td>ít hơn 50 %</td>\n        <td>Fail</td>\n    </tr>\n    </tbody>\n</table>"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-grading-and-exams-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "35d0117c6550ad439cf13a5f9201405edb791232d1074b3d70b1257c26f8c045",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The final grade is calculated based on the number of exercise points received during the course (50 % of the final grade) and points received in the exam (50 % of the final grade). Your exercise points percentage equals `([all received exercise points] / [number of exercise points available on course]) * 100`. We are working on including this percentage in the visualization in the bottom right corner of each page."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điểm cuối khóa được tính dựa trên số điểm bài tập đạt được trong suốt khóa học (50% điểm cuối khóa) và điểm đạt được trong bài kiểm tra (50% điểm cuối khóa). Phần trăm điểm tập thể dục của bạn bằng `([all received exercise points] / [number of exercise points available on course]) * 100`. Chúng tôi đang nỗ lực đưa tỷ lệ phần trăm này vào phần hiển thị ở góc dưới bên phải của mỗi trang."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-grading-and-exams-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "350b4307cdb328c10ec0c7c5519c552ed4c104338c944fb9b90fc5e629d99722",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "For example, if your total points percentage for the exercises for the whole course is 42 %, and you receive 79 % of the points in the exam, your final points percentage will be (42 % + 79 %) / 2 = 60.5 %, which equals grade 2 (Satisfactory)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ: nếu tổng điểm phần trăm của bạn cho các bài tập trong cả khóa học là 42 % và bạn nhận được 79 % số điểm trong bài thi thì tỷ lệ điểm cuối cùng của bạn sẽ là (42 % + 79 %) / 2 = 60,5 %, bằng điểm 2 (Đạt)."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-grading-and-exams-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "bdc62dc1cb36395940ed4b3fa484fd05d92e79da904e7c8789963cc328685649",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "To pass the course, you must have received at least 25% of the exercise points for each part of the course, regardless of the above calculation."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Để vượt qua khóa học, bạn phải đạt ít nhất 25% số điểm bài tập cho mỗi phần của khóa học, bất kể cách tính trên."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-grading-and-exams-0024",
+      "type": "heading",
+      "order": 24,
+      "source_hash": "b151fa9938cc3973e746ff5eb9c477627babbac10a0a7033791373d8b061c324",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Exam points cutoff"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hạn chế điểm thi"
+      },
+      "metadata": {
+        "level": 4
+      }
+    },
+    {
+      "id": "blk-page-grading-and-exams-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "567e84a83d44f969f52c2489601d56bce7f057db03519edfe9e84949c981b7b9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "To pass the course, you must receive at least 50% of the total points available in the exam."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Để vượt qua khóa học, bạn phải đạt ít nhất 50% tổng số điểm có được trong kỳ thi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-grading-and-exams-0026",
+      "type": "heading",
+      "order": 26,
+      "source_hash": "692296b0b9c0cfb8cb948d6a36159db44c1107dbfaca605a120826cfe1a1120f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Suspected cheating"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nghi ngờ gian lận"
+      },
+      "metadata": {
+        "level": 4
+      }
+    },
+    {
+      "id": "blk-page-grading-and-exams-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "f10eda4c9302a5f70fd0bb100c79fb2eba4d7e585288879eb892cf7457f30271",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If, during the examination of exam papers, there is reason to suspect cheating based on either the exam answers or MOOC answers, the exam taker will be sent a request for a response. If the response is acceptable, a short remote interview will be arranged, during which the exam taker will explain their solutions to the tasks assigned by the teacher. If there is reason to believe that the solutions were made independently, the student will receive a normal grade for the course, and no suspicion will be noted anywhere. If the student is unable to provide an acceptable explanation or explain their solutions in an acceptable manner, the exam and course performance will be rejected and the matter will be referred for further consideration in accordance with the University of Helsinki's exam cheating rules."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu trong quá trình kiểm tra bài thi, có lý do để nghi ngờ gian lận dựa trên câu trả lời bài thi hoặc câu trả lời MOOC, người làm bài thi sẽ được gửi yêu cầu phản hồi. Nếu câu trả lời được chấp nhận, một cuộc phỏng vấn ngắn từ xa sẽ được sắp xếp, trong đó thí sinh sẽ giải thích cách giải quyết của họ đối với các nhiệm vụ do giáo viên giao. Nếu có lý do để tin rằng các giải pháp được thực hiện một cách độc lập, học sinh sẽ nhận được điểm bình thường cho khóa học và sẽ không có sự nghi ngờ nào được ghi nhận ở bất cứ đâu. Nếu sinh viên không thể đưa ra lời giải thích có thể chấp nhận được hoặc giải thích giải pháp của mình theo cách có thể chấp nhận được, kết quả bài kiểm tra và khóa học sẽ bị từ chối và vấn đề sẽ được đưa ra xem xét thêm theo quy định về gian lận trong kỳ thi của Đại học Helsinki."
+      },
+      "metadata": {}
+    }
+  ]
+}

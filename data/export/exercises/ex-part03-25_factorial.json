@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-25_factorial",
+  "lesson_id": "part03-3-more-loops",
+  "part": 3,
+  "tmc_name": "part03-25_factorial",
+  "title_original": "Factorial",
+  "title_vi": "giai thừa",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user to type in an integer number. If the user types in a number equal to or below 0, the execution ends. Otherwise the program prints out the factorial of the number.\n\nThe factorial of a number involves multiplying the number by all the positive integers smaller than itself. In other words, it is the product of all positive integers less than or equal to the number. For example, the factorial of 5 is 1 * 2 * 3 * 4 * 5 = 120.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nPlease type in a number: **3**\nThe factorial of the number 3 is 6\nPlease type in a number: **4**\nThe factorial of the number 4 is 24\nPlease type in a number: **-1**\nThanks and bye!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **1**\nThe factorial of the number 1 is 1\nPlease type in a number: **0**\nThanks and bye!\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình yêu cầu người dùng nhập vào một số nguyên. Nếu người dùng nhập một số bằng hoặc nhỏ hơn 0 thì quá trình thực thi sẽ kết thúc. Ngược lại chương trình sẽ in ra giai thừa của số đó.\n\nGiai thừa của một số bao gồm việc nhân số đó với tất cả các số nguyên dương nhỏ hơn chính nó. Nói cách khác, nó là tích của tất cả các số nguyên dương nhỏ hơn hoặc bằng số đó. Ví dụ: giai thừa của 5 là 1 * 2 * 3 * 4 * 5 = 120.\n\nMột số ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nVui lòng nhập một số: **3**\nGiai thừa của số 3 là 6\nVui lòng nhập một số: **4**\nGiai thừa của số 4 là 24\nVui lòng nhập một số: **-1**\nCảm ơn và tạm biệt!\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập một số: **1**\nGiai thừa của số 1 là 1\nVui lòng nhập một số: **0**\nCảm ơn và tạm biệt!\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "188d77602601a6853eae7345f548870afeea90a549da4cc55469b0bd2086c387",
+  "order": 45
+}

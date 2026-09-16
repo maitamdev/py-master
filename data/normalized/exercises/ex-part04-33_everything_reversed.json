@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-33_everything_reversed",
+  "lesson_id": "part04-6-strings-and-lists",
+  "part": 4,
+  "tmc_name": "part04-33_everything_reversed",
+  "title_original": "Everything reversed",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `everything_reversed`, which takes a list of strings as its argument. The function returns a new list with all of the items on the original list reversed. Also the order of items should be reversed on the new list.\n\nAn example of how the function should work:\n\n```python\nmy_list = [\"Hi\", \"there\", \"example\", \"one more\"]\nnew_list = everything_reversed(my_list)\nprint(new_list)\n```\n\n<sample-output>\n\n['erom eno', 'elpmaxe', 'ereht', 'iH']\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "my_list = [\"Hi\", \"there\", \"example\", \"one more\"]\nnew_list = everything_reversed(my_list)\nprint(new_list)",
+  "grading_data_available": false,
+  "source_hash": "e58711b29ebcbc3285105321e3f9e5460bf54f00c026f20ad42d6aee0b4630a6",
+  "order": 26
+}

@@ -1,0 +1,48 @@
+{
+  "part": 3,
+  "slug": "part-3",
+  "title_original": "Part 3",
+  "title_vi": "Phần 3",
+  "lessons": [
+    {
+      "id": "part03-1-loops-with-conditions",
+      "slug": "1-loops-with-conditions",
+      "is_index": false,
+      "title_original": "Loops with conditions",
+      "path": "/part-3/1-loops-with-conditions",
+      "blocks_count": 81
+    },
+    {
+      "id": "part03-2-working-with-strings",
+      "slug": "2-working-with-strings",
+      "is_index": false,
+      "title_original": "Working with strings",
+      "path": "/part-3/2-working-with-strings",
+      "blocks_count": 93
+    },
+    {
+      "id": "part03-3-more-loops",
+      "slug": "3-more-loops",
+      "is_index": false,
+      "title_original": "More loops",
+      "path": "/part-3/3-more-loops",
+      "blocks_count": 50
+    },
+    {
+      "id": "part03-4-defining-functions",
+      "slug": "4-defining-functions",
+      "is_index": false,
+      "title_original": "Defining functions",
+      "path": "/part-3/4-defining-functions",
+      "blocks_count": 77
+    },
+    {
+      "id": "part03-index",
+      "slug": "index",
+      "is_index": true,
+      "title_original": "Part 3",
+      "path": "/part-3",
+      "blocks_count": 2
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "id": "part14-3-finishing-the-game",
+  "part": 14,
+  "part_slug": "part-14",
+  "slug": "3-finishing-the-game",
+  "is_part_index": false,
+  "title_original": "Finishing the game",
+  "path": "/part-14/3-finishing-the-game",
+  "source_path": "data/part-14/3-finishing-the-game.md",
+  "source_hash": "18b6422327266cafa63cccbeb1131bc7907f841740e6e1bc7d9feecee3c642f4",
+  "frontmatter": {
+    "path": "/part-14/3-finishing-the-game",
+    "title": "Finishing the game",
+    "hidden": false
+  },
+  "chunks_count": 36,
+  "raw_chunks": [
+    {
+      "raw_type": "paragraph",
+      "content": "Our game is already quite functional, so it is time to add some finishing touches to it. We will add a counter for displaying the moves taken, an option to start a new game and close the game with keyboard input, and a notification for when the player succeeds in solving the game.",
+      "raw_source": "Our game is already quite functional, so it is time to add some finishing touches to it. We will add a counter for displaying the moves taken, an option to start a new game and close the game with keyboard input, and a notification for when the player succeeds in solving the game."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Move counter",
+      "raw_source": "## Move counter"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The move counter near the bottom edge of the game window displaye the number of moves taken by the player so far. This can be used to find the solution with the least number of moves.",
+      "raw_source": "The move counter near the bottom edge of the game window displaye the number of moves taken by the player so far. This can be used to find the solution with the least number of moves."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The counter requires some shanges to the code. First, let's change the constructor so that there is adequate space for the counter, and that we have an appropriate font at our disposal in order to draw the text:",
+      "raw_source": "The counter requires some shanges to the code. First, let's change the constructor so that there is adequate space for the counter, and that we have an appropriate font at our disposal in order to draw the text:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    def __init__(self):\n        ...\n        self.window = pygame.display.set_mode((window_width, window_height + self.scale))\n\n        self.game_font = pygame.font.SysFont(\"Arial\", 24)\n        ...",
+      "raw_source": "```python\n    def __init__(self):\n        ...\n        self.window = pygame.display.set_mode((window_width, window_height + self.scale))\n\n        self.game_font = pygame.font.SysFont(\"Arial\", 24)\n        ...\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The move counter is initialized to zero at the beginning of the game. Each move increases it by one:",
+      "raw_source": "The move counter is initialized to zero at the beginning of the game. Each move increases it by one:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    def new_game(self):\n        ...\n        self.moves = 0",
+      "raw_source": "```python\n    def new_game(self):\n        ...\n        self.moves = 0\n```"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    def move(self, move_y, move_x):\n        ...\n        self.moves += 1\n",
+      "raw_source": "```python\n    def move(self, move_y, move_x):\n        ...\n        self.moves += 1\n\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Each time the window contents are updated, the number of moves taken shown on the screen should also be updated:",
+      "raw_source": "Each time the window contents are updated, the number of moves taken shown on the screen should also be updated:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    def draw_window(self):\n        ...\n        game_text = self.game_font.render(\"Moves: \" + str(self.moves), True, (255, 0, 0))\n        self.window.blit(game_text, (25, self.height * self.scale + 10))\n        ...",
+      "raw_source": "```python\n    def draw_window(self):\n        ...\n        game_text = self.game_font.render(\"Moves: \" + str(self.moves), True, (255, 0, 0))\n        self.window.blit(game_text, (25, self.height * self.scale + 10))\n        ...\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "New game and exiting the game",
+      "raw_source": "## New game and exiting the game"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Next, let's add keyboard commands for starting a new game with F2 and exiting the game with Esc. Both are rather easy to implement:",
+      "raw_source": "Next, let's add keyboard commands for starting a new game with F2 and exiting the game with Esc. Both are rather easy to implement:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    def check_events(self):\n        ...\n                if event.key == pygame.K_F2:\n                    self.new_game()\n                if event.key == pygame.K_ESCAPE:\n                    exit()\n        ...",
+      "raw_source": "```python\n    def check_events(self):\n        ...\n                if event.key == pygame.K_F2:\n                    self.new_game()\n                if event.key == pygame.K_ESCAPE:\n                    exit()\n        ...\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We should also add information about this functionality for the player to see:",
+      "raw_source": "We should also add information about this functionality for the player to see:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    def draw_window(self):\n        ...\n        game_text = self.game_font.render(\"F2 = new game\", True, (255, 0, 0))\n        self.window.blit(game_text, (200, self.height * self.scale + 10))\n\n        game_text = self.game_font.render(\"Esc = exit game\", True, (255, 0, 0))\n        self.window.blit(game_text, (400, self.height * self.scale + 10))\n        ...",
+      "raw_source": "```python\n    def draw_window(self):\n        ...\n        game_text = self.game_font.render(\"F2 = new game\", True, (255, 0, 0))\n        self.window.blit(game_text, (200, self.height * self.scale + 10))\n\n        game_text = self.game_font.render(\"Esc = exit game\", True, (255, 0, 0))\n        self.window.blit(game_text, (400, self.height * self.scale + 10))\n        ...\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Solving the game",
+      "raw_source": "## Solving the game"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The player has solved the game when each box is in one of the target squares. The following method takes care of checking this:",
+      "raw_source": "The player has solved the game when each box is in one of the target squares. The following method takes care of checking this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    def game_solved(self):\n        for y in range(self.height):\n            for x in range(self.width):\n                if self.map[y][x] in [2, 6]:\n                    return False\n        return True",
+      "raw_source": "```python\n    def game_solved(self):\n        for y in range(self.height):\n            for x in range(self.width):\n                if self.map[y][x] in [2, 6]:\n                    return False\n        return True\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The method goes through all the squares in the game grid. If any of the squares is a 2 (an empty target square) or a 6 (a robot in a target square) the game is not yet solved, so the method returns `False`. If no such square is present in the grid, all target squares must be occupied by boxes, the game is solved, and the method returns `True`.",
+      "raw_source": "The method goes through all the squares in the game grid. If any of the squares is a 2 (an empty target square) or a 6 (a robot in a target square) the game is not yet solved, so the method returns `False`. If no such square is present in the grid, all target squares must be occupied by boxes, the game is solved, and the method returns `True`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the player solves the game, we should display an appropriate message with the `draw_window` method:",
+      "raw_source": "If the player solves the game, we should display an appropriate message with the `draw_window` method:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    def draw_window(self):\n        ...\n        if self.game_solved():\n            game_text = self.game_font.render(\"Congratulations, you solved the game!\", True, (255, 0, 0))\n            game_text_x = self.scale * self.width / 2 - game_text.get_width() / 2\n            game_text_y = self.scale * self.height / 2 - game_text.get_height() / 2\n            pygame.draw.rect(self.window, (0, 0, 0), (game_text_x, game_text_y, game_text.get_width(), game_text.get_height()))\n            self.window.blit(game_text, (game_text_x, game_text_y))\n        ...",
+      "raw_source": "```python\n    def draw_window(self):\n        ...\n        if self.game_solved():\n            game_text = self.game_font.render(\"Congratulations, you solved the game!\", True, (255, 0, 0))\n            game_text_x = self.scale * self.width / 2 - game_text.get_width() / 2\n            game_text_y = self.scale * self.height / 2 - game_text.get_height() / 2\n            pygame.draw.rect(self.window, (0, 0, 0), (game_text_x, game_text_y, game_text.get_width(), game_text.get_height()))\n            self.window.blit(game_text, (game_text_x, game_text_y))\n        ...\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "For completeness' sake, let's also change the `move` method so that the player can no longer move when they have solved the game:",
+      "raw_source": "For completeness' sake, let's also change the `move` method so that the player can no longer move when they have solved the game:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    def move(self, move_y, move_x):\n        if self.game_solved():\n            return\n        ...",
+      "raw_source": "```python\n    def move(self, move_y, move_x):\n        if self.game_solved():\n            return\n        ...\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The player can still see the game grid and the final state of the game, however.",
+      "raw_source": "The player can still see the game grid and the final state of the game, however."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "A hint for testing",
+      "raw_source": "## A hint for testing"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When developing games it often happens that you'd want to check what happens in some later situation in the game. For example, in this game the moment where the game is solved is one such situation.",
+      "raw_source": "When developing games it often happens that you'd want to check what happens in some later situation in the game. For example, in this game the moment where the game is solved is one such situation."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It can be difficult to test the correct functioning of a situation like that, as you'd normally ahve to solve the game to reach that point in the game. As programmers we can make some temporary alleviations in our games, to make it easier to test them. For example, we could add the following to make it temporarily easier to solve the game:",
+      "raw_source": "It can be difficult to test the correct functioning of a situation like that, as you'd normally ahve to solve the game to reach that point in the game. As programmers we can make some temporary alleviations in our games, to make it easier to test them. For example, we could add the following to make it temporarily easier to solve the game:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    def game_solved(self):\n        return True",
+      "raw_source": "```python\n    def game_solved(self):\n        return True\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Now the method always returns `True`, which means that the game is \"solved\" to begin with. This makes it easy to check that the noification at the end looks good and the player can no longer move on the grid after solving. When this functionality is thoroughly tested, we can revoke the changes.",
+      "raw_source": "Now the method always returns `True`, which means that the game is \"solved\" to begin with. This makes it easy to check that the noification at the end looks good and the player can no longer move on the grid after solving. When this functionality is thoroughly tested, we can revoke the changes."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Your game on GitHub?",
+      "raw_source": "## Your game on GitHub?"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The game is now finished. If you want an easy way to play around with the code and images, you can retrieve the source code from GitHub:",
+      "raw_source": "The game is now finished. If you want an easy way to play around with the code and images, you can retrieve the source code from GitHub:"
+    },
+    {
+      "raw_type": "list",
+      "content": "* [https://github.com/moocfi/sokoban](https://github.com/moocfi/sokoban)",
+      "raw_source": "* [https://github.com/moocfi/sokoban](https://github.com/moocfi/sokoban)"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "GitHub is a popular place for many kinds of programming projects. It can be used to store the source code and other materials of all your own programming projects as well, and your program will then be maintained through git version control, and it can be easily shared with others. You will become very familiar with git and GitHub if you continue on to other mooc.fi programming courses.",
+      "raw_source": "GitHub is a popular place for many kinds of programming projects. It can be used to store the source code and other materials of all your own programming projects as well, and your program will then be maintained through git version control, and it can be easily shared with others. You will become very familiar with git and GitHub if you continue on to other mooc.fi programming courses."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "How many moves are required?",
+      "raw_source": "## How many moves are required?"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The grid in this game is quite small, but the game is not all that easy. The first challenge is simply passing the game, but the next stage is trying to do so with as few moves as possible. How short is the shortest path to a solution?",
+      "raw_source": "The grid in this game is quite small, but the game is not all that easy. The first challenge is simply passing the game, but the next stage is trying to do so with as few moves as possible. How short is the shortest path to a solution?"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Looking for the shortest possible solution is not an easy task at all, but there are computational solutions to this as well. They are one of the subjects of the _Data Structures and Algorithms_ course.",
+      "raw_source": "Looking for the shortest possible solution is not an easy task at all, but there are computational solutions to this as well. They are one of the subjects of the _Data Structures and Algorithms_ course."
+    }
+  ]
+}

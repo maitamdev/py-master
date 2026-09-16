@@ -1,0 +1,305 @@
+{
+  "id": "part09-2-objects-as-attributes",
+  "part": 9,
+  "part_slug": "part-9",
+  "slug": "2-objects-as-attributes",
+  "is_part_index": false,
+  "title_original": "Objects as attributes",
+  "path": "/part-9/2-objects-as-attributes",
+  "source_path": "data/part-9/2-objects-as-attributes.md",
+  "source_hash": "562f1a6e34b53a6cae0d40469f854393eed9a65e96fa61977b9ac52a0f04f8e3",
+  "frontmatter": {
+    "path": "/part-9/2-objects-as-attributes",
+    "title": "Objects as attributes",
+    "hidden": false
+  },
+  "chunks_count": 48,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know how to use objects as attributes in other objects\n- You will be familiar with the keyword `None`",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know how to use objects as attributes in other objects\n- You will be familiar with the keyword `None`\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We have already seen examples of classes which have lists as attributes. As there is thus nothing stopping us from including mutable objects as attributes in our classes, we might as well use instances of our own classes as attributes in other classes we've defined ourselves. In the following examples we will define the classes `Course`, `Student` and `CompletedCourse`. A completed course makes use of the first two classes. The class definitions are very short and simple in order to better concentrate on the technique of using instances of our own classes as attributes.",
+      "raw_source": "We have already seen examples of classes which have lists as attributes. As there is thus nothing stopping us from including mutable objects as attributes in our classes, we might as well use instances of our own classes as attributes in other classes we've defined ourselves. In the following examples we will define the classes `Course`, `Student` and `CompletedCourse`. A completed course makes use of the first two classes. The class definitions are very short and simple in order to better concentrate on the technique of using instances of our own classes as attributes."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We will assume each class is defined in a separate file.",
+      "raw_source": "We will assume each class is defined in a separate file."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "First we define the class `Course` in a file named `course.py`:",
+      "raw_source": "First we define the class `Course` in a file named `course.py`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class Course:\n    def __init__(self, name: str, code: str, credits: int):\n        self.name = name\n        self.code = code\n        self.credits = credits",
+      "raw_source": "```python\nclass Course:\n    def __init__(self, name: str, code: str, credits: int):\n        self.name = name\n        self.code = code\n        self.credits = credits\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Next, the class `Student` in a file named `student.py`:",
+      "raw_source": "Next, the class `Student` in a file named `student.py`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class Student:\n    def __init__(self, name: str, student_number: str, credits: int):\n        self.name = name\n        self.student_number = student_number\n        self.credits = credits",
+      "raw_source": "```python\nclass Student:\n    def __init__(self, name: str, student_number: str, credits: int):\n        self.name = name\n        self.student_number = student_number\n        self.credits = credits\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Finally, the class `CompletedCourse` is defined in a file named `completedcourse.py`. As it uses the other two classes, they have to be imported before they can be used:",
+      "raw_source": "Finally, the class `CompletedCourse` is defined in a file named `completedcourse.py`. As it uses the other two classes, they have to be imported before they can be used:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from course import Course\nfrom student import Student\n\nclass CompletedCourse:\n    def __init__(self, student: Student, course: Course, grade: int):\n        self.student = student\n        self.course = course\n        self.grade = grade",
+      "raw_source": "```python\nfrom course import Course\nfrom student import Student\n\nclass CompletedCourse:\n    def __init__(self, student: Student, course: Course, grade: int):\n        self.student = student\n        self.course = course\n        self.grade = grade\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here is an example of a main function which adds some completed courses to a list:",
+      "raw_source": "Here is an example of a main function which adds some completed courses to a list:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from completedcourse import CompletedCourse\nfrom course import Course\nfrom student import Student\n\n# Create a list of students\nstudents = []\nstudents.append(Student(\"Ollie\", \"1234\", 10))\nstudents.append(Student(\"Peter\", \"3210\", 23))\nstudents.append(Student(\"Lena\", \"9999\", 43))\nstudents.append(Student(\"Tina\", \"3333\", 8))\n\n# Create a course named Introduction to Programming\nitp = Course(\"Introduction to Programming\", \"itp1\", 5)\n\n# Add completed courses for each student, with grade 3 for all\ncompleted = []\nfor student in students:\n    completed.append(CompletedCourse(student, itp, 3))\n\n# Print out the name of the student for each completed course\nfor course in completed:\n    print(course.student.name)",
+      "raw_source": "```python\nfrom completedcourse import CompletedCourse\nfrom course import Course\nfrom student import Student\n\n# Create a list of students\nstudents = []\nstudents.append(Student(\"Ollie\", \"1234\", 10))\nstudents.append(Student(\"Peter\", \"3210\", 23))\nstudents.append(Student(\"Lena\", \"9999\", 43))\nstudents.append(Student(\"Tina\", \"3333\", 8))\n\n# Create a course named Introduction to Programming\nitp = Course(\"Introduction to Programming\", \"itp1\", 5)\n\n# Add completed courses for each student, with grade 3 for all\ncompleted = []\nfor student in students:\n    completed.append(CompletedCourse(student, itp, 3))\n\n# Print out the name of the student for each completed course\nfor course in completed:\n    print(course.student.name)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Ollie\nPeter\nLena\nTina",
+      "raw_source": "<sample-output>\n\nOllie\nPeter\nLena\nTina\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "What exactly is happening with all the dots on the line `print(course.student.name)`?",
+      "raw_source": "What exactly is happening with all the dots on the line `print(course.student.name)`?"
+    },
+    {
+      "raw_type": "list",
+      "content": "* `course` is an instance of the class `CompletedCourse`\n* `student` refers to an attribute of the `CompletedCourse` object, which is an object of type `Student`\n* the attribute `name` in the `Student` object contains the name of the student",
+      "raw_source": "* `course` is an instance of the class `CompletedCourse`\n* `student` refers to an attribute of the `CompletedCourse` object, which is an object of type `Student`\n* the attribute `name` in the `Student` object contains the name of the student"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "When is an import necessary?",
+      "raw_source": "## When is an import necessary?"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the examples above an `import` statement appeared quite a few times:",
+      "raw_source": "In the examples above an `import` statement appeared quite a few times:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from completedcourse import CompletedCourse\nfrom course import Course\nfrom student import Student\n\n# rest of the main function",
+      "raw_source": "```python\nfrom completedcourse import CompletedCourse\nfrom course import Course\nfrom student import Student\n\n# rest of the main function\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "An `import` statement is only necessary when using code which is defined somewhere outside the current file (or Python interpreter session). This includes situations where we want to use something defined in the Python standard library. For example, the `math` module contains some mathematical operations:",
+      "raw_source": "An `import` statement is only necessary when using code which is defined somewhere outside the current file (or Python interpreter session). This includes situations where we want to use something defined in the Python standard library. For example, the `math` module contains some mathematical operations:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import math\n\nx = 10\nprint(f\"the square root of {x} is {math.sqrt(x)}\")",
+      "raw_source": "```python\nimport math\n\nx = 10\nprint(f\"the square root of {x} is {math.sqrt(x)}\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the example above we assumed the three classes were each defined in a separate file, and the main function was run from yet another file. This is why the `import` statements were necessary.",
+      "raw_source": "In the example above we assumed the three classes were each defined in a separate file, and the main function was run from yet another file. This is why the `import` statements were necessary."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If all program code is written in the same file, as most of the exercises on this course advise you to do, **you will not need** `import` statements to use the classes you have defined.",
+      "raw_source": "If all program code is written in the same file, as most of the exercises on this course advise you to do, **you will not need** `import` statements to use the classes you have defined."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If you find yourself writing something along the lines of",
+      "raw_source": "If you find yourself writing something along the lines of"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from person import Person\n\n# more code goes here",
+      "raw_source": "```python\nfrom person import Person\n\n# more code goes here\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "it is likely you have gotten something wrong. If you need a refresher, the `import` statement was first introduced in [part 7](/part-7/1-modules) of this course material.",
+      "raw_source": "it is likely you have gotten something wrong. If you need a refresher, the `import` statement was first introduced in [part 7](/part-7/1-modules) of this course material."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Pets",
+        "tmcname": "part09-06_pets"
+      },
+      "inner_content": "The exercise template contains the outlines of two classes: `Person` and `Pet`. Each person has one pet. Please change the `__str__` method in the class `Person` so that it also prints out information about the person's pet as shown in the example below.\n\nThe string returned by the method _must follow the format specified below exactly_.\n\n```python\nhulda = Pet(\"Hulda\", \"mixed-breed dog\")\nlevi = Person(\"Levi\", hulda)\n\nprint(levi)\n```\n\n<sample-output>\n\nLevi, whose pal is Hulda, a mixed-breed dog\n\n</sample-output>\n\n**NB:** all class definitions are in the same text file. You should not need to `import` anything.",
+      "raw_source": "<programming-exercise name='Pets' tmcname='part09-06_pets'>\n\nThe exercise template contains the outlines of two classes: `Person` and `Pet`. Each person has one pet. Please change the `__str__` method in the class `Person` so that it also prints out information about the person's pet as shown in the example below.\n\nThe string returned by the method _must follow the format specified below exactly_.\n\n```python\nhulda = Pet(\"Hulda\", \"mixed-breed dog\")\nlevi = Person(\"Levi\", hulda)\n\nprint(levi)\n```\n\n<sample-output>\n\nLevi, whose pal is Hulda, a mixed-breed dog\n\n</sample-output>\n\n**NB:** all class definitions are in the same text file. You should not need to `import` anything.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "A list of objects as an attribute of an object",
+      "raw_source": "## A list of objects as an attribute of an object"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the examples above we used single instances of other classes as attributes: a Person has a single Pet as an attribute, and a CompletedCourse has one Student and one Course as its attributes.",
+      "raw_source": "In the examples above we used single instances of other classes as attributes: a Person has a single Pet as an attribute, and a CompletedCourse has one Student and one Course as its attributes."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In object oriented programming it is often the case that we want to have a _collection_ of objects as an attribute. For example, the relationship between a sports team and its players follows this pattern:",
+      "raw_source": "In object oriented programming it is often the case that we want to have a _collection_ of objects as an attribute. For example, the relationship between a sports team and its players follows this pattern:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class Player:\n    def __init__(self, name: str, goals: int):\n        self.name = name\n        self.goals = goals\n\n    def __str__(self):\n        return f\"{self.name} ({self.goals} goals)\"\n\nclass Team:\n    def __init__(self, name: str):\n        self.name = name\n        self.players = []\n\n    def add_player(self, player: Player):\n        self.players.append(player)\n\n    def summary(self):\n        goals = []\n        for player in self.players:\n            goals.append(player.goals)\n        print(\"Team:\", self.name)\n        print(\"Players:\", len(self.players))\n        print(\"Goals scored by each player:\", goals)",
+      "raw_source": "```python\nclass Player:\n    def __init__(self, name: str, goals: int):\n        self.name = name\n        self.goals = goals\n\n    def __str__(self):\n        return f\"{self.name} ({self.goals} goals)\"\n\nclass Team:\n    def __init__(self, name: str):\n        self.name = name\n        self.players = []\n\n    def add_player(self, player: Player):\n        self.players.append(player)\n\n    def summary(self):\n        goals = []\n        for player in self.players:\n            goals.append(player.goals)\n        print(\"Team:\", self.name)\n        print(\"Players:\", len(self.players))\n        print(\"Goals scored by each player:\", goals)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "An example of our class in action:",
+      "raw_source": "An example of our class in action:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "ca = Team(\"Campus Allstars\")\nca.add_player(Player(\"Eric\", 10))\nca.add_player(Player(\"Emily\", 22))\nca.add_player(Player(\"Andy\", 1))\nca.summary()",
+      "raw_source": "```python\nca = Team(\"Campus Allstars\")\nca.add_player(Player(\"Eric\", 10))\nca.add_player(Player(\"Emily\", 22))\nca.add_player(Player(\"Andy\", 1))\nca.summary()\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Team: Campus Allstars\nPlayers: 3\nGoals scored by each player: [10, 22, 1]",
+      "raw_source": "<sample-output>\n\nTeam: Campus Allstars\nPlayers: 3\nGoals scored by each player: [10, 22, 1]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "A box of presents",
+        "tmcname": "part09-07_box_of_presents"
+      },
+      "inner_content": "In this exercise you will practice wrapping presents. You will write two classes: `Present` and `Box`. A present has a name and a weight, and a box contains presents.\n\n## The Present class\n\nPlease define the class `Present` which can be used to represent different kinds of presents. The class definition should contain attributes for the name and the weight (in kg) of the present. Instances of the class should work as follows:\n\n```python\nbook = Present(\"ABC Book\", 2)\n\nprint(\"The name of the present:\", book.name)\nprint(\"The weight of the present:\", book.weight)\nprint(\"Present:\", book)\n```\n\nThis should print out\n\n<sample-output>\n\nThe name of the present: ABC Book\nThe weight of the present: 2\nPresent: ABC Book (2 kg)\n\n</sample-output>\n\n## The Box class\n\nPlease define the class `Box`. You should be able to add presents to the box, and the box should keep track of the combined weight of the presents within. The class definition should contain these methods:\n\n- `add_present(self, present: Present)` which adds the present given as an argument to the box. The method has no return value.\n- `total_weight(self)` which returns the combined weight of the presents in the box.\n\nYou may use the following code to test your class:\n\n```python\nbook = Present(\"ABC Book\", 2)\n\nbox = Box()\nbox.add_present(book)\nprint(box.total_weight())\n\ncd = Present(\"Pink Floyd: Dark Side of the Moon\", 1)\nbox.add_present(cd)\nprint(box.total_weight())\n```\n\n<sample-output>\n\n2\n3\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='A box of presents' tmcname='part09-07_box_of_presents'>\n\nIn this exercise you will practice wrapping presents. You will write two classes: `Present` and `Box`. A present has a name and a weight, and a box contains presents.\n\n## The Present class\n\nPlease define the class `Present` which can be used to represent different kinds of presents. The class definition should contain attributes for the name and the weight (in kg) of the present. Instances of the class should work as follows:\n\n```python\nbook = Present(\"ABC Book\", 2)\n\nprint(\"The name of the present:\", book.name)\nprint(\"The weight of the present:\", book.weight)\nprint(\"Present:\", book)\n```\n\nThis should print out\n\n<sample-output>\n\nThe name of the present: ABC Book\nThe weight of the present: 2\nPresent: ABC Book (2 kg)\n\n</sample-output>\n\n## The Box class\n\nPlease define the class `Box`. You should be able to add presents to the box, and the box should keep track of the combined weight of the presents within. The class definition should contain these methods:\n\n- `add_present(self, present: Present)` which adds the present given as an argument to the box. The method has no return value.\n- `total_weight(self)` which returns the combined weight of the presents in the box.\n\nYou may use the following code to test your class:\n\n```python\nbook = Present(\"ABC Book\", 2)\n\nbox = Box()\nbox.add_present(book)\nprint(box.total_weight())\n\ncd = Present(\"Pink Floyd: Dark Side of the Moon\", 1)\nbox.add_present(cd)\nprint(box.total_weight())\n```\n\n<sample-output>\n\n2\n3\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "None: a reference to nothing",
+      "raw_source": "## None: a reference to nothing"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In Python programming all initialised variables refer to an object. There are, however, inevitably situations where we need to refer to something which does not exist, without causing errors. The keyword `None` represents exactly such an \"empty\" object.",
+      "raw_source": "In Python programming all initialised variables refer to an object. There are, however, inevitably situations where we need to refer to something which does not exist, without causing errors. The keyword `None` represents exactly such an \"empty\" object."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Continuing from the Team and Player example above, let's assume we want to add a method for searching for players on the team by the name of the player. If no such player is found, it might make sense to return `None`:",
+      "raw_source": "Continuing from the Team and Player example above, let's assume we want to add a method for searching for players on the team by the name of the player. If no such player is found, it might make sense to return `None`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class Player:\n    def __init__(self, name: str, goals: int):\n        self.name = name\n        self.goals = goals\n\n    def __str__(self):\n        return f\"{self.name} ({self.goals} goals)\"\n\nclass Team:\n    def __init__(self, name: str):\n        self.name = name\n        self.players = []\n\n    def add_player(self, player: Player):\n        self.players.append(player)\n\n    def find_player(self, name: str):\n        for player in self.players:\n            if player.name == name:\n                return player\n        return None",
+      "raw_source": "```python\nclass Player:\n    def __init__(self, name: str, goals: int):\n        self.name = name\n        self.goals = goals\n\n    def __str__(self):\n        return f\"{self.name} ({self.goals} goals)\"\n\nclass Team:\n    def __init__(self, name: str):\n        self.name = name\n        self.players = []\n\n    def add_player(self, player: Player):\n        self.players.append(player)\n\n    def find_player(self, name: str):\n        for player in self.players:\n            if player.name == name:\n                return player\n        return None\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's test our function:",
+      "raw_source": "Let's test our function:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "ca = Team(\"Campus Allstars\")\nca.add_player(Player(\"Eric\", 10))\nca.add_player(Player(\"Amily\", 22))\nca.add_player(Player(\"Andy\", 1))\n\nplayer1 = ca.find_player(\"Andy\")\nprint(player1)\nplayer2 = ca.find_player(\"Charlie\")\nprint(player2)",
+      "raw_source": "```python\nca = Team(\"Campus Allstars\")\nca.add_player(Player(\"Eric\", 10))\nca.add_player(Player(\"Amily\", 22))\nca.add_player(Player(\"Andy\", 1))\n\nplayer1 = ca.find_player(\"Andy\")\nprint(player1)\nplayer2 = ca.find_player(\"Charlie\")\nprint(player2)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Andy (1 goals)\nNone",
+      "raw_source": "<sample-output>\n\nAndy (1 goals)\nNone\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Be careful with `None`, though. It can sometimes cause more trouble than it solves. It is a common programming error to try to access a method or an attribute through a reference which evaluates to `None`:",
+      "raw_source": "Be careful with `None`, though. It can sometimes cause more trouble than it solves. It is a common programming error to try to access a method or an attribute through a reference which evaluates to `None`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "ca = Team(\"Campus Allstars\")\nca.add_player(Player(\"Eric\", 10))\n\nplayer = ca.find_player(\"Charlie\")\nprint(f\"Goals by Charlie: {player.goals}\")",
+      "raw_source": "```python\nca = Team(\"Campus Allstars\")\nca.add_player(Player(\"Eric\", 10))\n\nplayer = ca.find_player(\"Charlie\")\nprint(f\"Goals by Charlie: {player.goals}\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Executing the above would cause an error:",
+      "raw_source": "Executing the above would cause an error:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nAttributeError: 'NoneType' object has no attribute 'goals'",
+      "raw_source": "<sample-output>\n\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nAttributeError: 'NoneType' object has no attribute 'goals'\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It is a good idea to check for `None` before trying to access any attributes or methods of return values:",
+      "raw_source": "It is a good idea to check for `None` before trying to access any attributes or methods of return values:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "ca = Team(\"Campus Allstars\")\nca.add_player(Player(\"Eric\", 10))\n\nplayer = ca.find_player(\"Charlie\")\nif player is not None:\n    print(f\"Goals by Charlie: {player.goals}\")\nelse:\n    print(f\"Charlie doesn't play in Campus Allstars :(\")",
+      "raw_source": "```python\nca = Team(\"Campus Allstars\")\nca.add_player(Player(\"Eric\", 10))\n\nplayer = ca.find_player(\"Charlie\")\nif player is not None:\n    print(f\"Goals by Charlie: {player.goals}\")\nelse:\n    print(f\"Charlie doesn't play in Campus Allstars :(\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Charlie doesn't play in Campus Allstars :(",
+      "raw_source": "<sample-output>\n\nCharlie doesn't play in Campus Allstars :(\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "The shortest person in the room",
+        "tmcname": "part09-08_shortest_in_room"
+      },
+      "inner_content": "The exercise template contains the class `Person`. A person has a name and a height. In this exercise you will implement the class `Room`. You may add any number of persons to a room, and you may also search for and remove the shortest person in the room.\n\n## Room\n\nPlease define the class `Room`. It should have a list of persons as an attribute, and also contain the following methods:\n\n- `add(person: Person)` adds the person given as an argument to the room.\n- `is_empty()` returns `True` or `False` depending on whether the room is empty.\n- `print_contents()` prints out the contents of the list of persons in the room.\n\nPlease have a look at the following usage example:\n\n```python\nroom = Room()\nprint(\"Is the room empty?\", room.is_empty())\nroom.add(Person(\"Lea\", 183))\nroom.add(Person(\"Kenya\", 172))\nroom.add(Person(\"Ally\", 166))\nroom.add(Person(\"Nina\", 162))\nroom.add(Person(\"Dorothy\", 155))\nprint(\"Is the room empty?\", room.is_empty())\nroom.print_contents()\n```\n\n<sample-output>\n\nIs the room empty? True\nIs the room empty? False\nThere are 5 persons in the room, and their combined height is 838 cm\nLea (183 cm)\nKenya (172 cm)\nAlly (166 cm)\nNina (162 cm)\nDorothy (155 cm)\n\n</sample-output>\n\n## The shortest person\n\nPlease define the method `shortest()` within the `Room` class definition. The method should return the shortest person in the room it is called on. If the room is empty, the method should return `None`. The method should _not_ remove the person fron the room.\n\n```python\nroom = Room()\n\nprint(\"Is the room empty?\", room.is_empty())\nprint(\"Shortest:\", room.shortest())\n\nroom.add(Person(\"Lea\", 183))\nroom.add(Person(\"Kenya\", 172))\nroom.add(Person(\"Nina\", 162))\nroom.add(Person(\"Ally\", 166))\n\nprint()\n\nprint(\"Is the room empty?\", room.is_empty())\nprint(\"Shortest:\", room.shortest())\n\nprint()\n\nroom.print_contents()\n```\n\n<sample-output>\n\nIs the room empty? True\nShortest: None\n\nIs the room empty? False\nShortest: Nina\n\nThere are 4 persons in the room, and their combined height is 683 cm\nLea (183 cm)\nKenya (172 cm)\nNina (162 cm)\nAlly (166 cm)\n\n</sample-output>\n\n## Removing a person from the room\n\nPlease define the method `remove_shortest()` within the `Room` class definition. The method should remove the shortest `Person` object from the room and return the reference to the object. If the room is empty, the method should return `None`.\n\n```python\nroom = Room()\n\nroom.add(Person(\"Lea\", 183))\nroom.add(Person(\"Kenya\", 172))\nroom.add(Person(\"Nina\", 162))\nroom.add(Person(\"Ally\", 166))\nroom.print_contents()\n\nprint()\n\nremoved = room.remove_shortest()\nprint(f\"Removed from room: {removed.name}\")\n\nprint()\n\nroom.print_contents()\n```\n\n<sample-output>\n\nThere are 4 persons in the room, and their combined height is 683 cm\nLea (183 cm)\nKenya (172 cm)\nNina (162 cm)\nAlly (166 cm)\n\nRemoved from room: Nina\n\nThere are 3 persons in the room, and their combined height is 521 cm\nLea (183 cm)\nKenya (172 cm)\nAlly (166 cm)\n\n</sample-output>\n\n**Hint**: in [part 4](/part-4/3-lists#removing-items-from-a-list) you will find instructions for removing items from a list.\n\n**Hint2**: it is always possible to call another method of the same class from within a method. The following should work just fine:\n\n```python\nclass Room:\n    # ...\n    def shortest(self):\n        # your code goes here\n\n    def remove_shortest(self):\n        shortest_person = self.shortest()\n        # ...\n```",
+      "raw_source": "<programming-exercise name='The shortest person in the room' tmcname='part09-08_shortest_in_room'>\n\nThe exercise template contains the class `Person`. A person has a name and a height. In this exercise you will implement the class `Room`. You may add any number of persons to a room, and you may also search for and remove the shortest person in the room.\n\n## Room\n\nPlease define the class `Room`. It should have a list of persons as an attribute, and also contain the following methods:\n\n- `add(person: Person)` adds the person given as an argument to the room.\n- `is_empty()` returns `True` or `False` depending on whether the room is empty.\n- `print_contents()` prints out the contents of the list of persons in the room.\n\nPlease have a look at the following usage example:\n\n```python\nroom = Room()\nprint(\"Is the room empty?\", room.is_empty())\nroom.add(Person(\"Lea\", 183))\nroom.add(Person(\"Kenya\", 172))\nroom.add(Person(\"Ally\", 166))\nroom.add(Person(\"Nina\", 162))\nroom.add(Person(\"Dorothy\", 155))\nprint(\"Is the room empty?\", room.is_empty())\nroom.print_contents()\n```\n\n<sample-output>\n\nIs the room empty? True\nIs the room empty? False\nThere are 5 persons in the room, and their combined height is 838 cm\nLea (183 cm)\nKenya (172 cm)\nAlly (166 cm)\nNina (162 cm)\nDorothy (155 cm)\n\n</sample-output>\n\n## The shortest person\n\nPlease define the method `shortest()` within the `Room` class definition. The method should return the shortest person in the room it is called on. If the room is empty, the method should return `None`. The method should _not_ remove the person fron the room.\n\n```python\nroom = Room()\n\nprint(\"Is the room empty?\", room.is_empty())\nprint(\"Shortest:\", room.shortest())\n\nroom.add(Person(\"Lea\", 183))\nroom.add(Person(\"Kenya\", 172))\nroom.add(Person(\"Nina\", 162))\nroom.add(Person(\"Ally\", 166))\n\nprint()\n\nprint(\"Is the room empty?\", room.is_empty())\nprint(\"Shortest:\", room.shortest())\n\nprint()\n\nroom.print_contents()\n```\n\n<sample-output>\n\nIs the room empty? True\nShortest: None\n\nIs the room empty? False\nShortest: Nina\n\nThere are 4 persons in the room, and their combined height is 683 cm\nLea (183 cm)\nKenya (172 cm)\nNina (162 cm)\nAlly (166 cm)\n\n</sample-output>\n\n## Removing a person from the room\n\nPlease define the method `remove_shortest()` within the `Room` class definition. The method should remove the shortest `Person` object from the room and return the reference to the object. If the room is empty, the method should return `None`.\n\n```python\nroom = Room()\n\nroom.add(Person(\"Lea\", 183))\nroom.add(Person(\"Kenya\", 172))\nroom.add(Person(\"Nina\", 162))\nroom.add(Person(\"Ally\", 166))\nroom.print_contents()\n\nprint()\n\nremoved = room.remove_shortest()\nprint(f\"Removed from room: {removed.name}\")\n\nprint()\n\nroom.print_contents()\n```\n\n<sample-output>\n\nThere are 4 persons in the room, and their combined height is 683 cm\nLea (183 cm)\nKenya (172 cm)\nNina (162 cm)\nAlly (166 cm)\n\nRemoved from room: Nina\n\nThere are 3 persons in the room, and their combined height is 521 cm\nLea (183 cm)\nKenya (172 cm)\nAlly (166 cm)\n\n</sample-output>\n\n**Hint**: in [part 4](/part-4/3-lists#removing-items-from-a-list) you will find instructions for removing items from a list.\n\n**Hint2**: it is always possible to call another method of the same class from within a method. The following should work just fine:\n\n```python\nclass Room:\n    # ...\n    def shortest(self):\n        # your code goes here\n\n    def remove_shortest(self):\n        shortest_person = self.shortest()\n        # ...\n```\n\n</programming-exercise>"
+    }
+  ]
+}

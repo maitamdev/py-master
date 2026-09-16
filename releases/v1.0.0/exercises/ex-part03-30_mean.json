@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-30_mean",
+  "lesson_id": "part03-4-defining-functions",
+  "part": 3,
+  "tmc_name": "part03-30_mean",
+  "title_original": "Mean",
+  "title_vi": "Nghĩa là",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `mean`, which takes three integer arguments. The function should print out the arithmetic mean of the three arguments.\n\n```python\nmean(5, 3, 1)\nmean(10, 1, 1)\n```\n\n<sample-output>\n\n3.0\n4.0\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `mean`, hàm này nhận ba đối số nguyên. Hàm sẽ in ra giá trị trung bình số học của ba đối số.\n\n```python\nmean(5, 3, 1)\nmean(10, 1, 1)\n```\n\n<sample-output>\n\n3.0\n4.0\n\n</sample-output>",
+  "starter_code": "mean(5, 3, 1)\nmean(10, 1, 1)",
+  "grading_data_available": false,
+  "source_hash": "288d1273292d4094387720543cf0923154279f7133e0bd654795213e0bc5728a",
+  "order": 68
+}

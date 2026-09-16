@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-29_first_character",
+  "lesson_id": "part03-4-defining-functions",
+  "part": 3,
+  "tmc_name": "part03-29_first_character",
+  "title_original": "The first character",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "The exercise contains the outline of the function `first_character`. Please complete it so that it prints out the first character of the string it takes as its argument.\n\n```python\ndef first_character(text):\n     # write your code here\n\n# testing the function:\nif __name__ == \"__main__\":\n    first_character('python')\n    first_character('yellow')\n    first_character('tomorrow')\n    first_character('heliotrope')\n    first_character('open')\n    first_character('night')\n```\n\n<sample-output>\n\np\ny\nt\nh\no\nn\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "def first_character(text):\n     # write your code here\n\n# testing the function:\nif __name__ == \"__main__\":\n    first_character('python')\n    first_character('yellow')\n    first_character('tomorrow')\n    first_character('heliotrope')\n    first_character('open')\n    first_character('night')",
+  "grading_data_available": false,
+  "source_hash": "3f1bcab040b4205c28ba224ad9d7da86f4a82bc020413d841af020b46d58b815",
+  "order": 42
+}

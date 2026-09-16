@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-02_seven_brothers",
+  "lesson_id": "part01-1-getting-started",
+  "part": 1,
+  "tmc_name": "part01-02_seven_brothers",
+  "title_original": "Fix the code: Seven Brothers",
+  "title_vi": "Sửa mã: Bảy anh em",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "\"Seitsemän veljestä\" is one of the first novels ever written in Finnish. It is the story of seven orphaned brothers learning to make their way in the world ([read more on Wikipedia](https://en.wikipedia.org/wiki/Seitsem%C3%A4n_veljest%C3%A4)).\n\nThis program is supposed to print out the names of the brothers in alphabetical order, but it's not working quite right yet. Please fix the program so that the names are printed in the correct order.\n\n\n```python\nprint(\"Simeoni\")\nprint(\"Juhani\")\nprint(\"Eero\")\nprint(\"Lauri\")\nprint(\"Aapo\")\nprint(\"Tuomas\")\nprint(\"Timo\")\n```",
+  "description_vi": "\"Seitsemän veljestä\" là một trong những cuốn tiểu thuyết đầu tiên được viết bằng tiếng Phần Lan. Đó là câu chuyện về bảy anh em mồ côi đang học cách tự lập trên thế giới ([đọc thêm trên Wikipedia](https://en.wikipedia.org/wiki/Seitsem%C3%A4n_veljest%C3%A4)).\n\nChương trình này lẽ ra sẽ in ra tên của các anh em theo thứ tự bảng chữ cái, nhưng nó vẫn chưa hoạt động bình thường. Hãy sửa lại chương trình để các tên được in theo đúng thứ tự.\n\n\n```python\nprint(\"Simeoni\")\nprint(\"Juhani\")\nprint(\"Eero\")\nprint(\"Lauri\")\nprint(\"Aapo\")\nprint(\"Tuomas\")\nprint(\"Timo\")\n```",
+  "starter_code": "print(\"Simeoni\")\nprint(\"Juhani\")\nprint(\"Eero\")\nprint(\"Lauri\")\nprint(\"Aapo\")\nprint(\"Tuomas\")\nprint(\"Timo\")",
+  "grading_data_available": false,
+  "source_hash": "15dbd6a9fd917d4421df17925a3d9186652efdb08dcab7037b48f0c1b1548230",
+  "order": 19
+}

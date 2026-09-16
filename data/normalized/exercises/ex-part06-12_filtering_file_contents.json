@@ -1,0 +1,16 @@
+{
+  "id": "ex-part06-12_filtering_file_contents",
+  "lesson_id": "part06-2-writing-files",
+  "part": 6,
+  "tmc_name": "part06-12_filtering_file_contents",
+  "title_original": "Filtering the contents of a file",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The file `solutions.csv` contains some solutions to mathematics problems:\n\n```csv\nArto;2+5;7\nPekka;3-2;1\nErkki;9+3;11\nArto;8-3;4\nPekka;5+5;10\n...jne...\n```\n\nAs you can see above, on each line the format is `name_of_student;problem;result`. All the operations are either addition or subtraction, and each has exactly two operands.\n\nPlease write a function named `filter_solutions()` which\n\n* Reads the contents of the file `solutions.csv`\n* writes those lines which have a _correct_ result into the file `correct.csv`\n* writes those lines which have an _incorrect_ result into the file `incorrect.csv`\n\nUsing the example above, the file `correct.csv` would contain the lines \n\n```sh\nArto;2+5;7\nPekka;3-2;1\nPekka;5+5;10\n```\n\nThe other two would be in the file `incorrect.csv`.\n\nPlease write the lines in the same order as they appear in the original file. Do not change the original file.\n\nNB: the function should have the exact same result, no matter how many times it is called. That is, it shouldn't matter if the function is called once\n\n```python\nfilter_solutions()\n```\n\nor multiple times in a row\n\n```python\nfilter_solutions()\nfilter_solutions()\nfilter_solutions()\nfilter_solutions()\n```\n\nAfter the execution, the contents of the files `correct.csv` and `incorrect.csv` should be exactly the same in either case.",
+  "description_vi": "",
+  "starter_code": "filter_solutions()",
+  "grading_data_available": false,
+  "source_hash": "452d536460eda597318b58c305c74f09a63351472a6d1a3028379e7341deaf68",
+  "order": 49
+}

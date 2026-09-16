@@ -1,0 +1,16 @@
+{
+  "id": "ex-part13-17_asteroids",
+  "lesson_id": "part13-4-more-pygame-techniques",
+  "part": 13,
+  "tmc_name": "part13-17_asteroids",
+  "title_original": "Asteroids",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please create a game where asteroids fall from the sky. The player moves a robot left and right and tries to collect the falling rocks. The player gets a point for each asteroid collected, and the points total is shown at the top of the window. The game ends when the player misses an asteroid. The end result should look like this:\n\n<img src=\"pygame_asteroids.gif\">\n\nNB: the above animation is from the Finnish version of the course. You may use the word \"Points\" instead of the Finnish equivalent \"Pisteet\" depicted above.\n\nThe exercise template contains the image `rock.png` for the asteroid.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "7749cba183e4698caaa4e9dfb83694748fa91eca075408a4ca8f607b08d905f7",
+  "order": 20
+}

@@ -1,0 +1,303 @@
+{
+  "id": "part13-2-animation",
+  "part": 13,
+  "part_slug": "part-13",
+  "slug": "2-animation",
+  "is_part_index": false,
+  "title_original": "Animation",
+  "path": "/part-13/2-animation",
+  "source_path": "data/part-13/2-animation.md",
+  "source_hash": "c2ad89dcccacd4bbee0ddc8e0a6a3565938d5ff926e4394858bea079c8c53c8c",
+  "frontmatter": {
+    "path": "/part-13/2-animation",
+    "title": "Animation",
+    "hidden": false
+  },
+  "chunks_count": 46,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know how to create an animation with pygame\n- You will be able to use a clock to set the speed of your program\n- You will be able to use basic trigonometric functions in your animations",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know how to create an animation with pygame\n- You will be able to use a clock to set the speed of your program\n- You will be able to use basic trigonometric functions in your animations\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Many games have moving characters, so a logical next step is creating animations. We can create the illusion of movement by drawing the same image in different locations on the screen and timing the changes appropriately.",
+      "raw_source": "Many games have moving characters, so a logical next step is creating animations. We can create the illusion of movement by drawing the same image in different locations on the screen and timing the changes appropriately."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Creating an animation",
+      "raw_source": "## Creating an animation"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following code creates an animation where a robot moves from left to right in a pygame window:",
+      "raw_source": "The following code creates an animation where a robot moves from left to right in a pygame window:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nx = 0\ny = 0\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()\n\n    x += 1\n    clock.tick(60)",
+      "raw_source": "```python\nimport pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nx = 0\ny = 0\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()\n\n    x += 1\n    clock.tick(60)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When this is executed, the result should look like this:",
+      "raw_source": "When this is executed, the result should look like this:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "pygame_animation.gif"
+      },
+      "raw_source": "<img src=\"pygame_animation.gif\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's take a closer look at the commands involved. If we want to trace the movement of the image on the screen, we need to know its location, which is why we have two variables for the coordinates of the top left corner of the image:",
+      "raw_source": "Let's take a closer look at the commands involved. If we want to trace the movement of the image on the screen, we need to know its location, which is why we have two variables for the coordinates of the top left corner of the image:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "x = 0\ny = 0",
+      "raw_source": "```python\nx = 0\ny = 0\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We also have a clock, which we use to make sure the speed of the animation is just right:",
+      "raw_source": "We also have a clock, which we use to make sure the speed of the animation is just right:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "clock = pygame.time.Clock()",
+      "raw_source": "```python\nclock = pygame.time.Clock()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The main loop draws the image at its current location with each iteration:",
+      "raw_source": "The main loop draws the image at its current location with each iteration:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()",
+      "raw_source": "```python\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "First the method `fill` fills the window with black, as before. The colour is passed as a tuple containing the RGB values for the colour. In this case the argument is `(0, 0, 0)`, which means that all three components - red, green and blue - have value 0. Each component can have a value between 0 and 255. So, if we passed `(255, 255, 255)` as the argument, we'd get a white window, and with `(255, 0, 0)` we'd get a red window. RGB colour codes form the backbone of digital colouring, and there are many tools online for working with them, for example [RGB Color Codes Chart](https://www.rapidtables.com/web/color/RGB_Color.html).",
+      "raw_source": "First the method `fill` fills the window with black, as before. The colour is passed as a tuple containing the RGB values for the colour. In this case the argument is `(0, 0, 0)`, which means that all three components - red, green and blue - have value 0. Each component can have a value between 0 and 255. So, if we passed `(255, 255, 255)` as the argument, we'd get a white window, and with `(255, 0, 0)` we'd get a red window. RGB colour codes form the backbone of digital colouring, and there are many tools online for working with them, for example [RGB Color Codes Chart](https://www.rapidtables.com/web/color/RGB_Color.html)."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "After the window is filled with colour the image is drawn at the given location with the `blit` method. Then the contents of the window are updated with the function `pygame.display.flip`.",
+      "raw_source": "After the window is filled with colour the image is drawn at the given location with the `blit` method. Then the contents of the window are updated with the function `pygame.display.flip`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Finally, the value stored in `x` is incremented, which makes the image move one pixel to the right with each iteration:",
+      "raw_source": "Finally, the value stored in `x` is incremented, which makes the image move one pixel to the right with each iteration:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    x += 1",
+      "raw_source": "```python\n    x += 1\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The clock method `tick` is called at the end:",
+      "raw_source": "The clock method `tick` is called at the end:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    clock.tick(60)",
+      "raw_source": "```python\n    clock.tick(60)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The method `tick` takes care of the speed of the animation. The argument `60` dictates that the loop should be executed 60 times a second, which means that the image moves 60 pixels to the right each second. This approximately matches the _FPS_ or _frames per second_ value used with games.",
+      "raw_source": "The method `tick` takes care of the speed of the animation. The argument `60` dictates that the loop should be executed 60 times a second, which means that the image moves 60 pixels to the right each second. This approximately matches the _FPS_ or _frames per second_ value used with games."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In principle, the `tick` method makes sure that the animation runs at the same speed on every computer. If there was no such timing involved, the speed of the animation would depend on the speed of the computer.",
+      "raw_source": "In principle, the `tick` method makes sure that the animation runs at the same speed on every computer. If there was no such timing involved, the speed of the animation would depend on the speed of the computer."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Bouncing off a wall",
+      "raw_source": "## Bouncing off a wall"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The previous animation was otherwise excellent, but as the robot reached a wall, it just kept going out of sight. Let's make the robot bounce off the wall.",
+      "raw_source": "The previous animation was otherwise excellent, but as the robot reached a wall, it just kept going out of sight. Let's make the robot bounce off the wall."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nx = 0\ny = 0\nvelocity = 1\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()\n    \n    x += velocity\n    if velocity > 0 and x+robot.get_width() >= 640:\n        velocity = -velocity\n    if velocity < 0 and x <= 0:\n        velocity = -velocity\n\n    clock.tick(60)",
+      "raw_source": "```python\nimport pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nx = 0\ny = 0\nvelocity = 1\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()\n    \n    x += velocity\n    if velocity > 0 and x+robot.get_width() >= 640:\n        velocity = -velocity\n    if velocity < 0 and x <= 0:\n        velocity = -velocity\n\n    clock.tick(60)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Running the above code should look like this:",
+      "raw_source": "Running the above code should look like this:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "pygame_animation2.gif"
+      },
+      "raw_source": "<img src=\"pygame_animation2.gif\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "There is a new variable `velocity` which determines the direction of the movement. If the value is above zero, movement is to the right, and if it is below zero, movement is to the left. More precisely in this case, if the value is `1`, the robot moves to the right, and if it is `-1`, the robot moves to the left.",
+      "raw_source": "There is a new variable `velocity` which determines the direction of the movement. If the value is above zero, movement is to the right, and if it is below zero, movement is to the left. More precisely in this case, if the value is `1`, the robot moves to the right, and if it is `-1`, the robot moves to the left."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following lines make the robot bounce off the side walls:",
+      "raw_source": "The following lines make the robot bounce off the side walls:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    if velocity > 0 and x+robot.get_width() >= 640:\n        velocity = -velocity\n    if velocity < 0 and x <= 0:\n        velocity = -velocity",
+      "raw_source": "```python\n    if velocity > 0 and x+robot.get_width() >= 640:\n        velocity = -velocity\n    if velocity < 0 and x <= 0:\n        velocity = -velocity\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the velocity is above zero so that the robot is moving to the right, and the right edge if the image goes beyond the right edge of the window, the direction is reversed and the robot starts moving to the left. Similarly, if the velocity is below zero so that the robot is moving to the left, and the left edge of the image reaches the left edge of the window, the direction is again reversed and the robot starts moving to the right again.",
+      "raw_source": "If the velocity is above zero so that the robot is moving to the right, and the right edge if the image goes beyond the right edge of the window, the direction is reversed and the robot starts moving to the left. Similarly, if the velocity is below zero so that the robot is moving to the left, and the left edge of the image reaches the left edge of the window, the direction is again reversed and the robot starts moving to the right again."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This makes the robot move on a path from the left edge of the window to the right edge, and back to the left, and then to the right again, repeated ad infinitum.",
+      "raw_source": "This makes the robot move on a path from the left edge of the window to the right edge, and back to the left, and then to the right again, repeated ad infinitum."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Rotation",
+      "raw_source": "## Rotation"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's create one more animation. This time the robot should _rotate_ in a circle around the centre of the window:",
+      "raw_source": "Let's create one more animation. This time the robot should _rotate_ in a circle around the centre of the window:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import pygame\nimport math\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nangle = 0\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()\n\n    x = 320+math.cos(angle)*100-robot.get_width()/2\n    y = 240+math.sin(angle)*100-robot.get_height()/2\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()\n\n    angle += 0.01\n    clock.tick(60)",
+      "raw_source": "```python\nimport pygame\nimport math\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nangle = 0\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()\n\n    x = 320+math.cos(angle)*100-robot.get_width()/2\n    y = 240+math.sin(angle)*100-robot.get_height()/2\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()\n\n    angle += 0.01\n    clock.tick(60)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Running the above code should look like this:",
+      "raw_source": "Running the above code should look like this:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "pygame_rotation.gif"
+      },
+      "raw_source": "<img src=\"pygame_rotation.gif\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Rotation in a relatively precise circle is achieved with the help of some basic trigonometric functions. The varible `angle` contains the angle of the robots location in relation to the centre of the window and the horizontal line running through it. The sine and cosine functions from the Python math library are used to calculate the coordinates of the robot's location:",
+      "raw_source": "Rotation in a relatively precise circle is achieved with the help of some basic trigonometric functions. The varible `angle` contains the angle of the robots location in relation to the centre of the window and the horizontal line running through it. The sine and cosine functions from the Python math library are used to calculate the coordinates of the robot's location:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "        x = 320+math.cos(angle)*100-robot.get_width()/2\n        y = 240+math.sin(angle)*100-robot.get_height()/2",
+      "raw_source": "```python\n        x = 320+math.cos(angle)*100-robot.get_width()/2\n        y = 240+math.sin(angle)*100-robot.get_height()/2\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The robot rotates around a circle of radius 100 around the centre of the window. The hypotenuse in this scenario is the radius of the circle. The cosine function gives the length of the _adjacent_ side of a right triangle in relation to the hypotenuse, which means that it gives us the `x` coordinate of the location. The sine function gives the length of the _opposite_ side, i.e. the `y` coordinate. The location is then adjusted for the size of the image, so that the centre of the circle is at the centre of the window.",
+      "raw_source": "The robot rotates around a circle of radius 100 around the centre of the window. The hypotenuse in this scenario is the radius of the circle. The cosine function gives the length of the _adjacent_ side of a right triangle in relation to the hypotenuse, which means that it gives us the `x` coordinate of the location. The sine function gives the length of the _opposite_ side, i.e. the `y` coordinate. The location is then adjusted for the size of the image, so that the centre of the circle is at the centre of the window."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "With each iteration the size of the `angle` is incremented by 0.01:llä. As we are using radians, a full circle is 2π, which equals about 6.28. It takes about 628 iterations for the robot to go a full circle, and at 60 iterations per second this takes just over 10 seconds.",
+      "raw_source": "With each iteration the size of the `angle` is incremented by 0.01:llä. As we are using radians, a full circle is 2π, which equals about 6.28. It takes about 628 iterations for the robot to go a full circle, and at 60 iterations per second this takes just over 10 seconds."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Vertical movement",
+        "tmcname": "part13-05_vertical_movement"
+      },
+      "inner_content": "Please create an animation where the robot moves up and down in an endless loop. The end result should look like this:\n\n<img src=\"pygame_vertical.gif\">",
+      "raw_source": "<programming-exercise name='Vertical movement' tmcname='part13-05_vertical_movement'>\n\nPlease create an animation where the robot moves up and down in an endless loop. The end result should look like this:\n\n<img src=\"pygame_vertical.gif\">\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Round the perimeter",
+        "tmcname": "part13-06_round_the_perimeter"
+      },
+      "inner_content": "Please create an animation where the robot traces the perimeter of the window. The end result should look like this:\n\n<img src=\"pygame_perimeter.gif\">",
+      "raw_source": "<programming-exercise name='Round the perimeter' tmcname='part13-06_round_the_perimeter'>\n\nPlease create an animation where the robot traces the perimeter of the window. The end result should look like this:\n\n<img src=\"pygame_perimeter.gif\">\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Two robots",
+        "tmcname": "part13-07_two_robots"
+      },
+      "inner_content": "Please create an animation where two robots move back and forth to the left and right. The lower robot should move at double the speed of the upper one. The end result should look like this:\n\n<img src=\"pygame_move2.gif\">",
+      "raw_source": "<programming-exercise name='Two robots' tmcname='part13-07_two_robots'>\n\nPlease create an animation where two robots move back and forth to the left and right. The lower robot should move at double the speed of the upper one. The end result should look like this:\n\n<img src=\"pygame_move2.gif\">\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Robots in a circle",
+        "tmcname": "part13-08_robot_circle"
+      },
+      "inner_content": "Please create an animation where ten robots go round in a circle. The end result should look like this:\n\n<img src=\"pygame_circle.gif\">",
+      "raw_source": "<programming-exercise name='Robots in a circle' tmcname='part13-08_robot_circle'>\n\nPlease create an animation where ten robots go round in a circle. The end result should look like this:\n\n<img src=\"pygame_circle.gif\">\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Bouncing ball",
+        "tmcname": "part13-09_bouncing_ball"
+      },
+      "inner_content": "Please create an animation where a ball bounces from the edges of the window. The end result should look like this:\n\n<img src=\"pygame_bounce.gif\">\n\nThe exercise template contains the image `ball.png`.",
+      "raw_source": "<programming-exercise name='Bouncing ball' tmcname='part13-09_bouncing_ball'>\n\nPlease create an animation where a ball bounces from the edges of the window. The end result should look like this:\n\n<img src=\"pygame_bounce.gif\">\n\nThe exercise template contains the image `ball.png`.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Robot invasion",
+        "tmcname": "part13-10_robot_invasion"
+      },
+      "inner_content": "Please create an animation where robots fall from the sky randomly. When a robot reaches the ground, it starts moving to the left or to the right, and finaly disappears off the screen. The end result should look like this:\n\n<img src=\"pygame_invasion.gif\">",
+      "raw_source": "<programming-exercise name='Robot invasion' tmcname='part13-10_robot_invasion'>\n\nPlease create an animation where robots fall from the sky randomly. When a robot reaches the ground, it starts moving to the left or to the right, and finaly disappears off the screen. The end result should look like this:\n\n<img src=\"pygame_invasion.gif\">\n\n</programming-exercise>"
+    }
+  ]
+}

@@ -1,0 +1,781 @@
+{
+  "id": "part01-2-information-from-the-user",
+  "part": 1,
+  "part_slug": "part-1",
+  "slug": "2-information-from-the-user",
+  "is_part_index": false,
+  "title_original": "Information from the user",
+  "title_vi": "Thông tin từ người dùng",
+  "path": "/part-1/2-information-from-the-user",
+  "source_path": "data/part-1/2-information-from-the-user.md",
+  "source_hash": "db9bc001f6a585f1a0fdcb1dc775dd8e66aea56eca378a2a25132478564f474e",
+  "order": 1,
+  "blocks_count": 42,
+  "blocks": [
+    {
+      "id": "blk-part01-2-information-from-the-user-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "05aa7328d98228af6cd2f0efa0fb191802655c9c7d4fcf50cb8754346b732648",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know how to write a program which uses input from the user\n- You will know how to use variables to store input and print it out\n- You will be able to combine strings"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ biết cách viết chương trình sử dụng dữ liệu đầu vào từ người dùng\n- Bạn sẽ biết cách sử dụng các biến để lưu trữ dữ liệu đầu vào và in ra\n- Bạn sẽ có thể kết hợp các chuỗi"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "6ee661f78cd43ff38007027ef14a9e839576c96627e8da47aa7f825ccc4b4fd9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "_Input_ refers to any information a user gives to the program. Specifically, the Python command `input` reads in a line of input typed in by the user. It may also be used to display a message to the user, to prompt for specific input."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "_Input_ đề cập đến bất kỳ thông tin nào người dùng cung cấp cho chương trình. Cụ thể, lệnh Python `input` đọc dòng đầu vào do người dùng nhập vào. Nó cũng có thể được sử dụng để hiển thị một thông báo cho người dùng, nhắc nhở người dùng nhập thông tin cụ thể."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "2105fc4ff6038ac615fa9fdba838b2a3dc685370cd1cbd81e3cbbe9e867ff41a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following program reads in the name of the user with the `input` command. It then prints it out with the `print` command:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình sau đọc tên người dùng bằng lệnh `input`. Sau đó nó in ra bằng lệnh `print`:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0004",
+      "type": "code",
+      "order": 4,
+      "source_hash": "a85008a3599aa937dabc9fd7a00bd99607c923a7ec1264729b2ef6c381df13c0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "name = input(\"What is your name? \")\nprint(\"Hi there, \" + name)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "name = input(\"What is your name? \")\nprint(\"Hi there, \" + name)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a85008a3599aa937dabc9fd7a00bd99607c923a7ec1264729b2ef6c381df13c0",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "3c913415e8be0e9b58e4b34c5e7e55ab7cb05543c50da3d8b276c34677905bf5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The execution of this program could look like this (input from the user in red):"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Việc thực thi chương trình này có thể trông như thế này (đầu vào từ người dùng màu đỏ):"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0006",
+      "type": "sample_output",
+      "order": 6,
+      "source_hash": "076c8e2a34a04858c01e9fefdb5b34c651c0b9f4745144f082e913edfbc2098a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "What is your name? **Paul Python**\nHi there, Paul Python"
+      },
+      "translation": {
+        "language": "text",
+        "content": "What is your name? **Paul Python**\nHi there, Paul Python"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nWhat is your name? **Paul Python**\nHi there, Paul Python\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "666980ad911084599a597d04afcf65a3b5bc18493266a595c5c6c12a9cad86e0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "What this program prints out is partially dependent on input from the user. That means the execution of the program could also look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Những gì chương trình này in ra phụ thuộc một phần vào thông tin đầu vào từ người dùng. Điều đó có nghĩa là việc thực thi chương trình cũng có thể trông như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0008",
+      "type": "sample_output",
+      "order": 8,
+      "source_hash": "34c5c6e50adb472eefd15b1fa8966c196d12646f9506586d4d6ebf4c7e09f9b1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "What is your name? **Paula Programmer**\nHi there, Paula Programmer"
+      },
+      "translation": {
+        "language": "text",
+        "content": "What is your name? **Paula Programmer**\nHi there, Paula Programmer"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nWhat is your name? **Paula Programmer**\nHi there, Paula Programmer\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "b5ea97e5d01342e56a9dcd468929f4c2170787daab586d8c37ea6f4ab336385d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The word `name` in this program is a _variable_. In the context of programming, a variable is a location for storing some _value_, such as a string or a number. This value can be used later, and it can also be changed."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Từ `name` trong chương trình này là một _biến_. Trong ngữ cảnh lập trình, biến là vị trí lưu trữ một số _value_, chẳng hạn như một chuỗi hoặc một số. Giá trị này có thể được sử dụng sau này và nó cũng có thể được thay đổi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0010",
+      "type": "text_box",
+      "order": 10,
+      "source_hash": "236af07e5294504f049069cb93ae4a161a7622abd854dc07d0f10bf6a8d2eaf5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In principle, variables can be named quite freely, within certain limits specified in the Python language.\n\nIt is a common international programming practice to name variables in English, but you may come across code where variables are named in other languages, such as the native language of the programmer. The name of the variable has no direct effect on its content, so the name, in that sense, does not matter. However, it can often be helpful in understanding how code functions if variables are named logically and in English."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Về nguyên tắc, các biến có thể được đặt tên khá tự do, trong những giới hạn nhất định được chỉ định bằng ngôn ngữ Python.\n\nThông lệ lập trình quốc tế phổ biến là đặt tên biến bằng tiếng Anh, nhưng bạn có thể gặp mã trong đó các biến được đặt tên bằng ngôn ngữ khác, chẳng hạn như ngôn ngữ mẹ đẻ của lập trình viên. Tên của biến không có ảnh hưởng trực tiếp đến nội dung của nó, vì vậy tên, theo nghĩa đó, không quan trọng. Tuy nhiên, nó thường có thể hữu ích trong việc hiểu cách thức hoạt động của mã nếu các biến được đặt tên một cách logic và bằng tiếng Anh."
+      },
+      "metadata": {
+        "variant": "hint",
+        "name_original": "Naming variables",
+        "name_vi": "",
+        "attributes": {
+          "variant": "hint",
+          "name": "Naming variables"
+        }
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0011",
+      "type": "exercise",
+      "order": 11,
+      "source_hash": "ac328785cf98b77db18634d1f82da8df435bf13646b929f84fb5ee58a3473af4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks for the user's name and then prints it twice, on two consecutive lines.\n\nAn example of the how the program should function:\n\n<sample-output>\n\nWhat is your name? **Paul**\nPaul\nPaul\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình hỏi tên người dùng rồi in ra hai lần, trên hai dòng liên tiếp.\n\nMột ví dụ về cách chương trình sẽ hoạt động:\n\n<sample-output>\n\nTên bạn là gì? **Paul**\nPhao-lô\nPhao-lô\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-06_name_twice",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Name twice",
+        "tmc_name": "part01-06_name_twice",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0012",
+      "type": "heading",
+      "order": 12,
+      "source_hash": "47fadc88a1c314c8fae1e1deb25d0dc41c373342d0eed71ae0cde25b256dda8d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Referencing a variable"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tham chiếu một biến"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "bbece04c46b462fe28ab0ae3fdf22686749059b1861f11f552268d5dd66b5a83",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A single variable can be referred to many times in a program:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một biến có thể được nhắc đến nhiều lần trong một chương trình:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "8692b27f4345d5663a5ce0c3661ccdbca061c55b246a2af9d2e44db6c761e8c4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "name = input(\"What is your name? \")\n\nprint(\"Hi, \" + name + \"!\")\nprint(name + \" is quite a nice name.\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "name = input(\"What is your name? \")\n\nprint(\"Hi, \" + name + \"!\")\nprint(name + \" is quite a nice name.\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8692b27f4345d5663a5ce0c3661ccdbca061c55b246a2af9d2e44db6c761e8c4",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "5b0d8d96ae04ddfd2bdee1410747cf5601c8c67a0e1614dcf83919bb7eee875a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If the user gives the name `Paul Python`, this program prints out the following:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu người dùng đặt tên `Paul Python`, chương trình này sẽ in ra như sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0016",
+      "type": "sample_output",
+      "order": 16,
+      "source_hash": "9427f82eb3c6b11e8f8262da633c47a0ee7d36ca148d121794c79acd6a2561c7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "What is your name? **Paul Python**\nHi, Paul Python!\nPaul Python is quite a nice name."
+      },
+      "translation": {
+        "language": "text",
+        "content": "What is your name? **Paul Python**\nHi, Paul Python!\nPaul Python is quite a nice name."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nWhat is your name? **Paul Python**\nHi, Paul Python!\nPaul Python is quite a nice name.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "db3ac1d4a7361bad3ff086ac5a82e02170a6901227f2eb8e0547bf2393c1d545",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's have a closer look at the way the `print` command is used above. Within the brackets of the command there is both text in quotation marks as well as variable names which refer to input from the user. These have been combined with a `+` operator, which _concatenates_ two strings into a single string."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy xem xét kỹ hơn cách sử dụng lệnh `print` ở trên. Trong dấu ngoặc của lệnh có cả văn bản trong dấu ngoặc kép cũng như tên biến tham chiếu đến dữ liệu đầu vào từ người dùng. Chúng đã được kết hợp với toán tử `+`, toán tử này nối hai chuỗi thành một chuỗi duy nhất."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "644757046b6336c11535557f6ce1df31d22d9f57391d35376fcc3d832c402fea",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Strings and variables can be combined quite freely:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các chuỗi và biến có thể được kết hợp khá tự do:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0019",
+      "type": "code",
+      "order": 19,
+      "source_hash": "fac36e68125e2952ad654cee9ef8a1c9ba9764d7cf4f029d4c9a2949c7e7b36e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "name = input(\"What is your name? \")\n\nprint(\"Hi \" + name + \"! Let me make sure: your name is \" + name + \"?\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "name = input(\"What is your name? \")\n\nprint(\"Hi \" + name + \"! Let me make sure: your name is \" + name + \"?\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "fac36e68125e2952ad654cee9ef8a1c9ba9764d7cf4f029d4c9a2949c7e7b36e",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "c14372e86e990a1d4366f04ce7d054416e376e83537cfc4062fcf3aa4e613a4e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If the user gives the name `Ellen Example` this prints out"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu người dùng cung cấp tên `Ellen Example` thì nó sẽ in ra"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0021",
+      "type": "sample_output",
+      "order": 21,
+      "source_hash": "57a51e25f4e62134c0e0ad927983adb5316a285d267b54ac2a527c2e187ad5fa",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "What is your name? **Ellen Example**\nHi Ellen Example! Let me make sure: your name is Ellen Example?"
+      },
+      "translation": {
+        "language": "text",
+        "content": "What is your name? **Ellen Example**\nHi Ellen Example! Let me make sure: your name is Ellen Example?"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nWhat is your name? **Ellen Example**\nHi Ellen Example! Let me make sure: your name is Ellen Example?\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0022",
+      "type": "exercise",
+      "order": 22,
+      "source_hash": "26169378ee4864095f9fae6f9ceaee3ec6cf9142f68e37bb33a6627656824b00",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks for the user's name and then prints it out twice on a single line so that there is an exclamation mark at the beginning of the line, another between the two names and a third one at the end of the line.\n\nThe program should function as follows:\n\n<sample-output>\n\nWhat is your name? **Paul**\n!Paul!Paul!\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình hỏi tên người dùng rồi in ra hai lần trên một dòng sao cho có dấu chấm than ở đầu dòng, một dấu chấm than ở giữa hai tên và dấu thứ ba ở cuối dòng.\n\nChương trình sẽ hoạt động như sau:\n\n<sample-output>\n\nTên bạn là gì? **Paul**\n!Paul!Paul!\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-07_name_and_exclamation_marks",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Name and exclamation marks",
+        "tmc_name": "part01-07_name_and_exclamation_marks",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0023",
+      "type": "heading",
+      "order": 23,
+      "source_hash": "3006645ebf6f08beb2e30cce3b30005b869156504fc5aee38a6a855b8a984614",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "More than one input"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nhiều hơn một đầu vào"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "f8384d1c5cb00bdd41d43ce50901349938319160b8834db50ec1a887d71b3111",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A program can ask for more than one input. Notice how below each `input` command stores the received value in a different variable."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một chương trình có thể yêu cầu nhiều hơn một đầu vào. Lưu ý bên dưới mỗi lệnh `input` lưu trữ giá trị nhận được trong một biến khác như thế nào."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0025",
+      "type": "code",
+      "order": 25,
+      "source_hash": "14fc36fb8a33e1029c3f2e083daad7af96d28a50fe6817764e9aa137ba8937b9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "name = input(\"What is your name? \")\nemail = input(\"What is your email address? \")\nnickname = input(\"What is your nickname? \")\n\nprint(\"Let's make sure we got this right\")\nprint(\"Your name: \" + name)\nprint(\"Your email address: \" + email)\nprint(\"Your nickname: \" + nickname)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "name = input(\"What is your name? \")\nemail = input(\"What is your email address? \")\nnickname = input(\"What is your nickname? \")\n\nprint(\"Let's make sure we got this right\")\nprint(\"Your name: \" + name)\nprint(\"Your email address: \" + email)\nprint(\"Your nickname: \" + nickname)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "14fc36fb8a33e1029c3f2e083daad7af96d28a50fe6817764e9aa137ba8937b9",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "a23e78d0c75c683e50b09687e1d2d810e1a8565bb7b341750b8bdcc276215031",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The program could print out this, for example:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình có thể in ra cái này, ví dụ:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0027",
+      "type": "sample_output",
+      "order": 27,
+      "source_hash": "f1f153174c4130c13013b888f825a9f5e693d6ef08247419783608955666e01a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "What is your name? **Frances Fictitious**\nWhat is your email address? **frances99@example.com**\nWhat is your nickname? **Fran**\nLet's make sure we got this right\nYour name: Frances Fictitious\nYour email address: frances99@example.com\nYour nickname: Fran"
+      },
+      "translation": {
+        "language": "text",
+        "content": "What is your name? **Frances Fictitious**\nWhat is your email address? **frances99@example.com**\nWhat is your nickname? **Fran**\nLet's make sure we got this right\nYour name: Frances Fictitious\nYour email address: frances99@example.com\nYour nickname: Fran"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nWhat is your name? **Frances Fictitious**\nWhat is your email address? **frances99@example.com**\nWhat is your nickname? **Fran**\nLet's make sure we got this right\nYour name: Frances Fictitious\nYour email address: frances99@example.com\nYour nickname: Fran\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "13a1fe296762451e3219975de912fbb687a702a3e6a3d6c57d9a5ceb5ea7eaab",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If the same variable is used to store more than one input, each new value will replace the previous one. For example:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu cùng một biến được sử dụng để lưu trữ nhiều hơn một giá trị đầu vào thì mỗi giá trị mới sẽ thay thế giá trị trước đó. Ví dụ:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0029",
+      "type": "code",
+      "order": 29,
+      "source_hash": "996f84f89104cca1551af1e4d2d417710f90e1d332700b2be1f2eebd5c0f8e30",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "address = input(\"What is your address? \")\nprint(\"So you live at address \" + address)\n\naddress = input(\"Please type in a new address: \")\nprint(\"Your address is now \" + address)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "address = input(\"What is your address? \")\nprint(\"So you live at address \" + address)\n\naddress = input(\"Please type in a new address: \")\nprint(\"Your address is now \" + address)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "996f84f89104cca1551af1e4d2d417710f90e1d332700b2be1f2eebd5c0f8e30",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "a1319648ef6e58a42ecb5a8f4a1211c209f127d0b5b7f0d178d78036ff648e6d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "An example execution of the program:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một ví dụ thực hiện chương trình:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0031",
+      "type": "sample_output",
+      "order": 31,
+      "source_hash": "37c3169fb0b7d824be0a6949951f971285bff0fd852fbb772f49b60c091b36e6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "What is your address? **Python Path 101, Flat 3D**\nSo you live at address Python Path 101, Flat 3D\nPlease type in a new address: **New Road 999**\nYour address is now New Road 999"
+      },
+      "translation": {
+        "language": "text",
+        "content": "What is your address? **Python Path 101, Flat 3D**\nSo you live at address Python Path 101, Flat 3D\nPlease type in a new address: **New Road 999**\nYour address is now New Road 999"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nWhat is your address? **Python Path 101, Flat 3D**\nSo you live at address Python Path 101, Flat 3D\nPlease type in a new address: **New Road 999**\nYour address is now New Road 999\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "331c0c9b34778713d92efd6dc6f1b5ab2446e069438625d8c18ad7b5ea500b26",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This means that if the same variable is used to store two inputs in succession, there is no way to access the first input value after it has been replaced by the second:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điều này có nghĩa là nếu cùng một biến được sử dụng để lưu trữ hai đầu vào liên tiếp thì không có cách nào để truy cập giá trị đầu vào đầu tiên sau khi nó được thay thế bằng giá trị đầu vào thứ hai:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0033",
+      "type": "code",
+      "order": 33,
+      "source_hash": "5f4e224679177923c55846ee9c3f8413e4457c4d0cb3d0f3bb890f9450f843ae",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "address = input(\"What is your address? \")\naddress = input(\"Please type in a new address: \")\n\nprint(\"Your address is now \" + address)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "address = input(\"What is your address? \")\naddress = input(\"Please type in a new address: \")\n\nprint(\"Your address is now \" + address)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5f4e224679177923c55846ee9c3f8413e4457c4d0cb3d0f3bb890f9450f843ae",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "93a3191dfcfa94831072c2fb215bfcda2dc9cbfbf8f7eab0f5006771767de619",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "An example of how the program's output might look like:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một ví dụ về kết quả đầu ra của chương trình có thể trông như thế nào:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0035",
+      "type": "sample_output",
+      "order": 35,
+      "source_hash": "9ea0401af5454189896ad4b694777b48f18862f5d6e22da1710463b9e86d8619",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "What is your address? **Python Path 10**\nPlease type in a new address: **Programmer's Walk 23**\nYour address is now Programmer's Walk 23"
+      },
+      "translation": {
+        "language": "text",
+        "content": "What is your address? **Python Path 10**\nPlease type in a new address: **Programmer's Walk 23**\nYour address is now Programmer's Walk 23"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nWhat is your address? **Python Path 10**\nPlease type in a new address: **Programmer's Walk 23**\nYour address is now Programmer's Walk 23\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0036",
+      "type": "exercise",
+      "order": 36,
+      "source_hash": "114f817a8fac37b461ddd9db45c0ad7f724fab35ae4a13de7f6569af6194306d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks for the user's name and address. The program should also print out the given information, as follows:\n\n<sample-output>\n\nGiven name: **Steve**\nFamily name: **Sanders**\nStreet address: **91 Station Road**\nCity and postal code: **London EC05 6AW**\nSteve Sanders\n91 Station Road\nLondon EC05 6AW\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình hỏi tên và địa chỉ của người dùng. Chương trình cũng sẽ in ra các thông tin đã cho như sau:\n\n<sample-output>\n\nTên thật: **Steve**\nHọ: **Sanders**\nĐịa chỉ đường phố: **91 Đường Trạm**\nThành phố và mã bưu chính: **London EC05 6AW**\nSteve Sanders\nĐường ga 91\nLuân Đôn EC05 6AW\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-08_name_and_address",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Name and address",
+        "tmc_name": "part01-08_name_and_address",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0037",
+      "type": "exercise",
+      "order": 37,
+      "source_hash": "3a27784e08e8caf8acd444fc760ecfa171db3101eb0b7b7d68015d538f438dd6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Here is a program which should ask for three utterances and print them out, like so:\n\n<sample-output>\n\nThe 1st part: **hickory**\nThe 2nd part: **dickory**\nThe 3rd part: **dock**\nhickory-dickory-dock!\n\n</sample-output>\n\nHowever, there is something wrong with the code below. Please fix it."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đây là một chương trình sẽ yêu cầu ba câu nói và in chúng ra, như sau:\n\n<sample-output>\n\nPhần 1: **hickory**\nPhần 2: **dickory**\nPhần thứ 3: **bến**\nhickory-dickory-dock!\n\n</sample-output>\n\nTuy nhiên, có điều gì đó không ổn với đoạn mã bên dưới. Hãy sửa nó."
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-09_utterances",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Fix the code: Utterances",
+        "tmc_name": "part01-09_utterances",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0038",
+      "type": "exercise",
+      "order": 38,
+      "source_hash": "91cc8462d527f7d577dfe2997c06a01dc9efc45f051ab83a3afa6466aecf4a27",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which prints out the following story. The user gives a name and a year, which should be inserted into the printout.\n\n<sample-output>\n\nPlease type in a name: **Mary**\nPlease type in a year: **1572**\n\nMary is a valiant knight, born in the year 1572. One morning Mary woke up to an awful racket: a dragon was approaching the village. Only Mary could save the village's residents.\n\n</sample-output>\n\nThe story should change according to the input given by the user."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình in ra câu chuyện sau đây. Người dùng cung cấp tên và năm sẽ được chèn vào bản in.\n\n<sample-output>\n\nVui lòng nhập tên: **Mary**\nVui lòng nhập năm: **1572**\n\nMary là một hiệp sĩ dũng cảm, sinh năm 1572. Một buổi sáng Mary thức dậy với một tiếng ồn ào khủng khiếp: một con rồng đang tiến đến gần ngôi làng. Chỉ có Mary mới có thể cứu được cư dân trong làng.\n\n</sample-output>\n\nCâu chuyện sẽ thay đổi theo thông tin đầu vào do người dùng đưa ra."
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-10_story",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Story",
+        "tmc_name": "part01-10_story",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "d3ac25ddc7ba9779c0556d543e4994d158e16a5a359347a1321dd236f1af0b67",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!--"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!--"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "0937af8ca0d984621994ab6ab91b7b2cf722e5cf79e7103d9f4567fc678255c7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một bài kiểm tra để ôn lại nội dung của phần này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0041",
+      "type": "quiz",
+      "order": 41,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "10cb3510-d8a6-5e9b-b372-c85c4c7eb957",
+        "attributes": {
+          "id": "10cb3510-d8a6-5e9b-b372-c85c4c7eb957"
+        }
+      }
+    },
+    {
+      "id": "blk-part01-2-information-from-the-user-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "-->"
+      },
+      "metadata": {}
+    }
+  ]
+}

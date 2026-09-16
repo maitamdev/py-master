@@ -1,0 +1,16 @@
+{
+  "id": "ex-part11-01_square_roots",
+  "lesson_id": "part11-1-list-comprehensions",
+  "part": 11,
+  "tmc_name": "part11-01_square_roots",
+  "title_original": "Square roots",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `square_roots(numbers: list)` which takes a list of integers as its argument. The function should return a new list containing the square roots of the original integers. \n\nThe [math](https://docs.python.org/3/library/math.html) module from the Python standard library contains a suitable function for calculating the square root.\n\nThe function should use a list comprehension. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nlines = square_roots([1,2,3,4])\nfor line in lines:\n    print(line)\n```\n\n<sample-output>\n\n1.0\n1.4142135623730951\n1.7320508075688772\n2.0\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "lines = square_roots([1,2,3,4])\nfor line in lines:\n    print(line)",
+  "grading_data_available": false,
+  "source_hash": "eeab3ed3bc8ce6759aed93c22a7f4f5f5ebf83be137ef5efa6abadae4a791a11",
+  "order": 26
+}

@@ -1,0 +1,26 @@
+{
+  "id": "page-all-exercises",
+  "slug": "all-exercises",
+  "title_original": "All exercises",
+  "path": "/all-exercises",
+  "source_path": "data/all-exercises.md",
+  "source_hash": "665c9027cadeb9ac9d65e4323e97672a6720042a79aaa6c4e87782111acc8a3c",
+  "frontmatter": {
+    "path": "/all-exercises",
+    "title": "All exercises",
+    "hidden": false,
+    "hide_in_sidebar": false,
+    "sidebar_priority": 5000,
+    "course_info_page": true
+  },
+  "chunks_count": 1,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "exercises-in-all-sections",
+      "attributes": {},
+      "inner_content": "",
+      "raw_source": "<exercises-in-all-sections></exercises-in-all-sections>"
+    }
+  ]
+}

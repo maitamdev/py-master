@@ -1,0 +1,665 @@
+{
+  "id": "part07-6-more-features",
+  "part": 7,
+  "part_slug": "part-7",
+  "slug": "6-more-features",
+  "is_part_index": false,
+  "title_original": "More Python features",
+  "title_vi": "Các tính năng khác của Python",
+  "path": "/part-7/6-more-features",
+  "source_path": "data/part-7/6-more-features.md",
+  "source_hash": "2256ce54a7d2908d355fa9fd2e5d91a67aae7d03c81dc651fc161007ad12ee55",
+  "order": 1,
+  "blocks_count": 36,
+  "blocks": [
+    {
+      "id": "blk-part07-6-more-features-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "6d2afb601574e4848e7a78103dc7e286ea5d9f417a77705677b44e4366eafab8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be familiar with some more Python features"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ làm quen với một số tính năng khác của Python"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "f580849c22ec5ce0e019fbcacdb98ce17d9f3cc356ad524ea90f5c2356306209",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "To finish off this course, here you will find various useful Python features."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Để kết thúc khóa học này, tại đây bạn sẽ tìm thấy nhiều tính năng Python hữu ích khác nhau."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-6-more-features-0003",
+      "type": "heading",
+      "order": 3,
+      "source_hash": "51e14d5a63c51dc5a6638794a003801702d727b4e98580f4e0b6baa9a339b4e3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Single line conditionals"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điều kiện dòng đơn"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "36306a0f772ba0beb4e433820281fa9c8bbcd2f86467df1b57fe4a7fee241a07",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following two statements produce the exact same results:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hai tuyên bố sau đây tạo ra kết quả giống hệt nhau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-6-more-features-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "872958acd36249deaf491fba811b8db687d9d69769f54c921d305e6f4a71c6c1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "if x%2 == 0:\n    print(\"even\")\nelse:\n    print(\"odd\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "if x%2 == 0:\n    print(\"even\")\nelse:\n    print(\"odd\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "872958acd36249deaf491fba811b8db687d9d69769f54c921d305e6f4a71c6c1",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0006",
+      "type": "code",
+      "order": 6,
+      "source_hash": "0904486ae062dc5a3b3d0f513cd169b872a0bd882ef3c6a8b8c303e1487681ed",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(\"even\" if x%2 == 0 else \"odd\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(\"even\" if x%2 == 0 else \"odd\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "0904486ae062dc5a3b3d0f513cd169b872a0bd882ef3c6a8b8c303e1487681ed",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "c405e9a0ba09e8b70aebdffa499e847f5cb9ba13ce4631ae65fd06c2d59521b4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the latter example we have a conditional expression on a single line: `a if [condition] else b`. The value of this expression evaluates to `a` if the condition is true, and `b` if it is false. This structure is sometimes referred to as a _ternary operator_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong ví dụ sau, chúng ta có biểu thức điều kiện trên một dòng: `a if [condition] else b`. Giá trị của biểu thức này ước tính là `a` nếu điều kiện đúng và `b` nếu điều kiện sai. Cấu trúc này đôi khi được gọi là _toán tử bậc ba_."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-6-more-features-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "5fff694ffa093bbef6cb2106068e765785f565fdd59eebff2bf52e72c4df5aaf",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Conditional expressions can be very useful when you need to assign something _conditionally_. For example, if you had the variables `x` and `y`, and you wanted to either increment or set the value of `y` depending on the parity of `x`, you could write it in a normal `if else` statement, like so:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Biểu thức điều kiện có thể rất hữu ích khi bạn cần gán điều gì đó _có điều kiện_. Ví dụ: nếu bạn có các biến `x` và `y` và bạn muốn tăng hoặc đặt giá trị của `y` tùy thuộc vào tính chẵn lẻ của `x`, bạn có thể viết nó trong câu lệnh `if else` bình thường, như sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-6-more-features-0009",
+      "type": "code",
+      "order": 9,
+      "source_hash": "638578c047d8c003f272c0930a4172416afcf2610b67ef78ad9be0d1ebfb736c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "if x%2 == 0:\n    y += 1\nelse:\n    y = 0"
+      },
+      "translation": {
+        "language": "code",
+        "content": "if x%2 == 0:\n    y += 1\nelse:\n    y = 0"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "638578c047d8c003f272c0930a4172416afcf2610b67ef78ad9be0d1ebfb736c",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "d66121f716ae6a608a5043a4ff6f1f93999374f530bfb828074964e8ec1f085e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The same could be achieved with a nifty one-liner:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điều tương tự có thể đạt được với một lớp lót tiện lợi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-6-more-features-0011",
+      "type": "code",
+      "order": 11,
+      "source_hash": "c64882db59e949526a850ba73818976c76771f77f5bd345d625c4947da367b8f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "y = y + 1 if x%2 == 0 else 0"
+      },
+      "translation": {
+        "language": "code",
+        "content": "y = y + 1 if x%2 == 0 else 0"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c64882db59e949526a850ba73818976c76771f77f5bd345d625c4947da367b8f",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0012",
+      "type": "heading",
+      "order": 12,
+      "source_hash": "daaa400c8c0e2f83f80288f1dea891ceda71c8a77a7c6f774005d5d6653467e7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "An \"empty\" block"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khối \"trống\""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "191be61e8eb331654dbed1691221f1be17acb6aeb47c576ded176930d2214954",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You may remember from the previous part that you are not allowed to have an empty block in a Python program. If you need to have a block of code which does nothing, for example when testing some other functionality, the `pass` command will let you do this. You could, for instance, write a function which does nothing:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn có thể nhớ ở phần trước rằng bạn không được phép có khối trống trong chương trình Python. Nếu bạn cần có một khối mã không làm gì cả, chẳng hạn như khi kiểm tra một số chức năng khác, lệnh `pass` sẽ cho phép bạn thực hiện việc này. Ví dụ, bạn có thể viết một hàm không làm gì cả:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-6-more-features-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "a7acaf2219bf13982984375645201fde11d45c4d2d2d5e01d1ae2034f0e8582a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def testing():\n    pass"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def testing():\n    pass"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a7acaf2219bf13982984375645201fde11d45c4d2d2d5e01d1ae2034f0e8582a",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "f64b103987955ef714765aba2861d2812a8ed9e6efc7c5f9bd24d039e41bb395",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This function would simply return immediately. Leaving the `pass` command out, i.e. having a completely empty block, would produce an error."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm này chỉ đơn giản là sẽ trở lại ngay lập tức. Việc bỏ lệnh `pass`, tức là có một khối hoàn toàn trống, sẽ gây ra lỗi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-6-more-features-0016",
+      "type": "code",
+      "order": 16,
+      "source_hash": "0760b715ffb407ddfa38435dbcc4c357bd70c3fd302da17617f7e2e1dd028a65",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def testing():  # this causes an error!"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def testing():  # this causes an error!"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "0760b715ffb407ddfa38435dbcc4c357bd70c3fd302da17617f7e2e1dd028a65",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0017",
+      "type": "heading",
+      "order": 17,
+      "source_hash": "0a1427a7ea86de6d14321c6301ca55b82431dada8aa9a648dfe93f8cc688f581",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Loops with else blocks"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vòng lặp với các khối khác"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "be430d1838390fc1bb3b5a982e33a9a8f8acec5cf24468381ef5f985400da9ca",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In Python, loops can have `else` blocks, too. This section of code is executed if the loop finishes normally."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong Python, các vòng lặp cũng có thể có các khối `else`. Phần mã này được thực thi nếu vòng lặp kết thúc bình thường."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-6-more-features-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "1603041c735bbc374c05127616e56b32d2793bbc86052c55980bbcda90d4e0fd",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "For example, in the following example we are looking through a list of numbers. If there is an even number on the list, the program prints out a message and the loop is broken. If there are no even numbers, the loop finishes normally, but a different message is then printed out."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ: trong ví dụ sau chúng ta đang xem qua một danh sách các số. Nếu có số chẵn trong danh sách, chương trình sẽ in ra thông báo và vòng lặp bị hỏng. Nếu không có số chẵn, vòng lặp sẽ kết thúc bình thường nhưng sau đó một thông báo khác sẽ được in ra."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-6-more-features-0020",
+      "type": "code",
+      "order": 20,
+      "source_hash": "15677dc8962f215c7a5ff979837017dd151a5b33e1c341c8d583a5c6fa04bf02",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [3,5,2,8,1]\nfor x in my_list:\n    if x%2 == 0:\n        print(\"found an even number\", x)\n        break\nelse:\n    print(\"there were no even numbers\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [3,5,2,8,1]\nfor x in my_list:\n    if x%2 == 0:\n        print(\"found an even number\", x)\n        break\nelse:\n    print(\"there were no even numbers\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "15677dc8962f215c7a5ff979837017dd151a5b33e1c341c8d583a5c6fa04bf02",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "4340656c3fe8306015f417166e88db409d6eb1a740e789019ce3a0f797eda619",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A more traditional way to achieve this would be to use a helper variable to remember whether the desired item was found:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một cách truyền thống hơn để đạt được điều này là sử dụng biến trợ giúp để ghi nhớ xem mục mong muốn có được tìm thấy hay không:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-6-more-features-0022",
+      "type": "code",
+      "order": 22,
+      "source_hash": "48f8743b610ebad4d471fe204b303ddfb82220b8bcef6f592712f6c17538dfba",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [3,5,2,8,1]\nfound = False\nfor x in my_list:\n    if x%2 == 0:\n        print(\"found an even number\", x)\n        found = True\n        break\nif not found:\n    print(\"there were no even numbers\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [3,5,2,8,1]\nfound = False\nfor x in my_list:\n    if x%2 == 0:\n        print(\"found an even number\", x)\n        found = True\n        break\nif not found:\n    print(\"there were no even numbers\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "48f8743b610ebad4d471fe204b303ddfb82220b8bcef6f592712f6c17538dfba",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "61fee926ce5fc2de034b9348836235cbdab3e7331e97e75fb10ca9493e2b4442",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Using a `for else` statement saves us the trouble of writing a separate variable."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sử dụng câu lệnh `for else` giúp chúng ta tránh khỏi rắc rối khi viết một biến riêng biệt."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-6-more-features-0024",
+      "type": "heading",
+      "order": 24,
+      "source_hash": "4ad0af08153186b06cf27e13429ff440ab20b7b34eac8f26228c2c9ddab4362d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Default parameter value"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Giá trị tham số mặc định"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "894e126d7f4447a7f68c91c474030d1848a9409aca9d2edca0069eddc5ccf9a7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A Python function can have a default parameter value. It is used whenever no argument is passed to the function. See the following example:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm Python có thể có giá trị tham số mặc định. Nó được sử dụng bất cứ khi nào không có đối số nào được truyền cho hàm. Xem ví dụ sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-6-more-features-0026",
+      "type": "code",
+      "order": 26,
+      "source_hash": "3c38e86217ad3c2f37f35a64560acc0c824081815da72ea57348f23502fb5348",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def say_hello(name=\"Emily\"):\n    print(\"Hi there,\", name)\n\nsay_hello()\nsay_hello(\"Eric\")\nsay_hello(\"Matthew\")\nsay_hello(\"\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def say_hello(name=\"Emily\"):\n    print(\"Hi there,\", name)\n\nsay_hello()\nsay_hello(\"Eric\")\nsay_hello(\"Matthew\")\nsay_hello(\"\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3c38e86217ad3c2f37f35a64560acc0c824081815da72ea57348f23502fb5348",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0027",
+      "type": "sample_output",
+      "order": 27,
+      "source_hash": "196f9c5d99f95616e270ae0a0ac17697b5aa4449254fee39a17ca4e6d361c33f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hi there, Emily\nHi there, Eric\nHi there, Matthew\nHi there,"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hi there, Emily\nHi there, Eric\nHi there, Matthew\nHi there,"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHi there, Emily\nHi there, Eric\nHi there, Matthew\nHi there,\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "6ed022872fc86002400402baba751bce44c1bff675d64eb647b68eded48b8b6f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "NB: an empty string is still a string, so the default parameter is not used if an empty string is passed to the function."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lưu ý: chuỗi trống vẫn là chuỗi, do đó tham số mặc định không được sử dụng nếu chuỗi trống được truyền cho hàm."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-6-more-features-0029",
+      "type": "heading",
+      "order": 29,
+      "source_hash": "6bde2d725f546eca573715ce98ecac3d4ad134d11413b184f0df62b68f197bb0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A variable number of parameters"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một số lượng tham số thay đổi"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "218b436480bef7231622417b42c72b9cf9d924713ad87490b7a3cd0fb542c808",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You can also define a function with a variable number of parameters, by adding a star before the parameter name. All the remaining arguments passed to the function are contained in a tuple, and can be accessed through the named parameter."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn cũng có thể xác định hàm có số lượng tham số thay đổi bằng cách thêm dấu sao trước tên tham số. Tất cả các đối số còn lại được truyền cho hàm đều được chứa trong một bộ và có thể được truy cập thông qua tham số đã đặt tên."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-6-more-features-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "778f521da4cd95cf1d9683e9ac16425f3345f01660ca5016f470983244051c1e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following function counts the number and sum of its arguments:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm sau đếm số lượng và tổng các đối số của nó:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-6-more-features-0032",
+      "type": "code",
+      "order": 32,
+      "source_hash": "2bc159f8948dc955b084337e42632637ada442832e2e1d4ff3d3b8a6b2570b3b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def testing(*my_args):\n    print(\"You passed\", len(my_args), \"arguments\")\n    print(\"The sum of the arguments is\", sum(my_args))\n\ntesting(1, 2, 3, 4, 5)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def testing(*my_args):\n    print(\"You passed\", len(my_args), \"arguments\")\n    print(\"The sum of the arguments is\", sum(my_args))\n\ntesting(1, 2, 3, 4, 5)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2bc159f8948dc955b084337e42632637ada442832e2e1d4ff3d3b8a6b2570b3b",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0033",
+      "type": "sample_output",
+      "order": 33,
+      "source_hash": "be2b0c54a087990ca35cda126930a5f78b32b83d8d1b2d98d95868e9c2df8e9d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "You passed 5 arguments\nThe sum of the arguments is 15"
+      },
+      "translation": {
+        "language": "text",
+        "content": "You passed 5 arguments\nThe sum of the arguments is 15"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nYou passed 5 arguments\nThe sum of the arguments is 15\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0034",
+      "type": "exercise",
+      "order": 34,
+      "source_hash": "a3c105d85b05b4df905e5e9c6d1596a502e50adafdb419046fae21e1b1efdc86",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In this exercise you will write your own programming language executor. You can use any techniques and skills you have learnt on this course thus far.\n\nThe programs will consist of rows, and each row will be in one of the following formats:\n\n* `PRINT [value]`: prints the value\n* `MOV [variable] [value]`: assigns the value to the variable\n* `ADD [variable] [value]`: adds the value to the variable\n* `SUB [variable] [value]`: subtracts the value from the variable\n* `MUL [variable] [value]`: multiplies the variable by the value\n* `[location]:`: names a line of code, so it can be jumped to from elsewhere\n* `JUMP [location]`: jumps to the location specified\n* `IF [condition] JUMP [location]`: if the condition is true, jump to the location specified\n* `END`: finish execution\n\nThe square brackets above are just a notation to signify operands; see below for usage examples.\n\nThe program is executed line by line from the first line onwards. The execution ends when the executor comes across the command `END`, or when there are no more lines to execute.\n\nEach program has 26 pre-defined variables, named `A` to `Z`. Each variable has the value 0 when the program begins. The notation `[variable]` refers to one of these 26 variables.\n\nAll the values processed by the program are integer numbers. The notation `[value]` refers either to a value stored in a variable, or an integer number typed in directly.\n\nThe notation `[location]` refers to any name of a location which consists of lowercase letters `a` to `z` and/or numbers `0` to `9`. Two different locations may not have the same name.\n\nThe notation `[condition]` refers to any expression in the format `[value] [comparison] [value]`, where `[comparison]` is one of the following operators: `==`, `!=`, `<`, `<=`, `>` and `>=`.\n\nPlease write a function named `run(program)`, which takes a list containing the program commands as its argument. Each item on the list is a line of code in the program. The function should return a new list, which contains the results of the `PRINT` commands executed during the program's run.\n\nYou may assume the function will only be given programs which are entirely in the correct format. You do not have to implement any input validation or error handling.\n\nThis exercise is worth two points. You will receive one point if the commands `PRINT`, `MOV`, `ADD`, `SUB`, `MUL` and `END` are working correctly. You will receice another point if the rest of the commands, which are used to implement loops, also work.\n\nBelow are some examples, which you may also use for testing. Example 1:\n\n```python\nprogram1 = []\nprogram1.append(\"MOV A 1\")\nprogram1.append(\"MOV B 2\")\nprogram1.append(\"PRINT A\")\nprogram1.append(\"PRINT B\")\nprogram1.append(\"ADD A B\")\nprogram1.append(\"PRINT A\")\nprogram1.append(\"END\")\nresult = run(program1)\nprint(result)\n```\n\n<sample-output>\n\n[1, 2, 3]\n\n</sample-output>\n\nExample 2:\n\n```python\nprogram2 = []\nprogram2.append(\"MOV A 1\")\nprogram2.append(\"MOV B 10\")\nprogram2.append(\"begin:\")\nprogram2.append(\"IF A >= B JUMP quit\")\nprogram2.append(\"PRINT A\")\nprogram2.append(\"PRINT B\")\nprogram2.append(\"ADD A 1\")\nprogram2.append(\"SUB B 1\")\nprogram2.append(\"JUMP begin\")\nprogram2.append(\"quit:\")\nprogram2.append(\"END\")\nresult = run(program2)\nprint(result)\n```\n\n<sample-output>\n\n[1, 10, 2, 9, 3, 8, 4, 7, 5, 6]\n\n</sample-output>\n\nExample 3 (factorial):\n\n```python\nprogram3 = []\nprogram3.append(\"MOV A 1\")\nprogram3.append(\"MOV B 1\")\nprogram3.append(\"begin:\")\nprogram3.append(\"PRINT A\")\nprogram3.append(\"ADD B 1\")\nprogram3.append(\"MUL A B\")\nprogram3.append(\"IF B <= 10 JUMP begin\")\nprogram3.append(\"END\")\nresult = run(program3)\nprint(result)\n```\n\n<sample-output>\n\n[1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800]\n\n</sample-output>\n\nExample 4 (prime numbers):\n\n```python\nprogram4 = []\nprogram4.append(\"MOV N 50\")\nprogram4.append(\"PRINT 2\")\nprogram4.append(\"MOV A 3\")\nprogram4.append(\"begin:\")\nprogram4.append(\"MOV B 2\")\nprogram4.append(\"MOV Z 0\")\nprogram4.append(\"test:\")\nprogram4.append(\"MOV C B\")\nprogram4.append(\"new:\")\nprogram4.append(\"IF C == A JUMP error\")\nprogram4.append(\"IF C > A JUMP over\")\nprogram4.append(\"ADD C B\")\nprogram4.append(\"JUMP new\")\nprogram4.append(\"error:\")\nprogram4.append(\"MOV Z 1\")\nprogram4.append(\"JUMP over2\")\nprogram4.append(\"over:\")\nprogram4.append(\"ADD B 1\")\nprogram4.append(\"IF B < A JUMP test\")\nprogram4.append(\"over2:\")\nprogram4.append(\"IF Z == 1 JUMP over3\")\nprogram4.append(\"PRINT A\")\nprogram4.append(\"over3:\")\nprogram4.append(\"ADD A 1\")\nprogram4.append(\"IF A <= N JUMP begin\")\nresult = run(program4)\nprint(result)\n```\n\n<sample-output>\n\n[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong bài tập này, bạn sẽ viết trình thực thi ngôn ngữ lập trình của riêng mình. Bạn có thể sử dụng bất kỳ kỹ thuật và kỹ năng nào bạn đã học được trong khóa học này cho đến nay.\n\nCác chương trình sẽ bao gồm các hàng và mỗi hàng sẽ có một trong các định dạng sau:\n\n* `PRINT [value]`: in giá trị\n* `MOV [variable] [value]`: gán giá trị cho biến\n* `ADD [variable] [value]`: cộng giá trị cho biến\n* `SUB [variable] [value]`: trừ giá trị của biến\n* `MUL [variable] [value]`: nhân biến với giá trị\n* `[location]:`: đặt tên cho một dòng mã để có thể nhảy từ nơi khác sang\n* `JUMP [location]`: nhảy tới vị trí được chỉ định\n* `IF [condition] JUMP [location]`: nếu điều kiện đúng thì nhảy tới vị trí đã chỉ định\n* `END`: kết thúc thực hiện\n\nDấu ngoặc vuông ở trên chỉ là ký hiệu để biểu thị các toán hạng; xem bên dưới để biết ví dụ sử dụng.\n\nChương trình được thực hiện từng dòng một từ dòng đầu tiên trở đi. Quá trình thực thi kết thúc khi người thực thi gặp lệnh `END` hoặc khi không còn dòng nào để thực thi.\n\nMỗi chương trình có 26 biến được xác định trước, được đặt tên là `A` đến `Z`. Mỗi biến có giá trị 0 khi chương trình bắt đầu. Ký hiệu `[variable]` đề cập đến một trong 26 biến này.\n\nTất cả các giá trị được chương trình xử lý đều là số nguyên. Ký hiệu `[value]` đề cập đến giá trị được lưu trữ trong một biến hoặc số nguyên được nhập trực tiếp.\n\nKý hiệu `[location]` đề cập đến bất kỳ tên nào của vị trí bao gồm các chữ cái viết thường `a` đến `z` và/hoặc số `0` đến `9`. Hai địa điểm khác nhau có thể không có cùng tên.\n\nKý hiệu `[condition]` đề cập đến bất kỳ biểu thức nào ở định dạng `[value] [comparison] [value]`, trong đó `[comparison]` là một trong các toán tử sau: `==`, `!=`, `<`, `<=`, `>` và `>=`.\n\nHãy viết một hàm có tên `run(program)`, hàm này lấy danh sách chứa các lệnh chương trình làm đối số. Mỗi mục trong danh sách là một dòng mã trong chương trình. Hàm sẽ trả về một danh sách mới chứa kết quả của các lệnh `PRINT` được thực thi trong quá trình chạy chương trình.\n\nBạn có thể cho rằng hàm này sẽ chỉ được cung cấp cho các chương trình hoàn toàn có định dạng chính xác. Bạn không phải thực hiện bất kỳ xác thực đầu vào hoặc xử lý lỗi nào.\n\nBài tập này có giá trị hai điểm. Bạn sẽ nhận được một điểm nếu các lệnh `PRINT`, `MOV`, `ADD`, `SUB`, `MUL` và `END` hoạt động chính xác. Bạn sẽ nhận được một điểm khác nếu các lệnh còn lại, được sử dụng để triển khai vòng lặp, cũng hoạt động.\n\nDưới đây là một số ví dụ mà bạn cũng có thể sử dụng để thử nghiệm. Ví dụ 1:\n\n```python\nprogram1 = []\nprogram1.append(\"MOV A 1\")\nprogram1.append(\"MOV B 2\")\nprogram1.append(\"PRINT A\")\nprogram1.append(\"PRINT B\")\nprogram1.append(\"ADD A B\")\nprogram1.append(\"PRINT A\")\nprogram1.append(\"END\")\nresult = run(program1)\nprint(result)\n```\n\n<sample-output>\n\n[1, 2, 3]\n\n</sample-output>\n\nVí dụ 2:\n\n```python\nprogram2 = []\nprogram2.append(\"MOV A 1\")\nprogram2.append(\"MOV B 10\")\nprogram2.append(\"begin:\")\nprogram2.append(\"IF A >= B JUMP quit\")\nprogram2.append(\"PRINT A\")\nprogram2.append(\"PRINT B\")\nprogram2.append(\"ADD A 1\")\nprogram2.append(\"SUB B 1\")\nprogram2.append(\"JUMP begin\")\nprogram2.append(\"quit:\")\nprogram2.append(\"END\")\nresult = run(program2)\nprint(result)\n```\n\n<sample-output>\n\n[1, 10, 2, 9, 3, 8, 4, 7, 5, 6]\n\n</sample-output>\n\nVí dụ 3 (giai thừa):\n\n```python\nprogram3 = []\nprogram3.append(\"MOV A 1\")\nprogram3.append(\"MOV B 1\")\nprogram3.append(\"begin:\")\nprogram3.append(\"PRINT A\")\nprogram3.append(\"ADD B 1\")\nprogram3.append(\"MUL A B\")\nprogram3.append(\"IF B <= 10 JUMP begin\")\nprogram3.append(\"END\")\nresult = run(program3)\nprint(result)\n```\n\n<sample-output>\n\n[1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800]\n\n</sample-output>\n\nVí dụ 4 (số nguyên tố):\n\n```python\nprogram4 = []\nprogram4.append(\"MOV N 50\")\nprogram4.append(\"PRINT 2\")\nprogram4.append(\"MOV A 3\")\nprogram4.append(\"begin:\")\nprogram4.append(\"MOV B 2\")\nprogram4.append(\"MOV Z 0\")\nprogram4.append(\"test:\")\nprogram4.append(\"MOV C B\")\nprogram4.append(\"new:\")\nprogram4.append(\"IF C == A JUMP error\")\nprogram4.append(\"IF C > A JUMP over\")\nprogram4.append(\"ADD C B\")\nprogram4.append(\"JUMP new\")\nprogram4.append(\"error:\")\nprogram4.append(\"MOV Z 1\")\nprogram4.append(\"JUMP over2\")\nprogram4.append(\"over:\")\nprogram4.append(\"ADD B 1\")\nprogram4.append(\"IF B < A JUMP test\")\nprogram4.append(\"over2:\")\nprogram4.append(\"IF Z == 1 JUMP over3\")\nprogram4.append(\"PRINT A\")\nprogram4.append(\"over3:\")\nprogram4.append(\"ADD A 1\")\nprogram4.append(\"IF A <= N JUMP begin\")\nresult = run(program4)\nprint(result)\n```\n\n<sample-output>\n\n[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part07-18_own_programming_language",
+        "exercise_type": "programming-exercise",
+        "name": "Your own programming language",
+        "tmc_name": "part07-18_own_programming_language",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part07-6-more-features-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "879dcf09efffec8f9b6f4bd3242a9dff181c5ec3a0ec34c514604998ccc8d404",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please respond to the course feedback questionnaire. The questionnaire results help us improve the course."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng trả lời bảng câu hỏi phản hồi về khóa học. Kết quả của bảng câu hỏi giúp chúng tôi cải thiện khóa học."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-6-more-features-0036",
+      "type": "quiz",
+      "order": 36,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "8675c2f0-2d0d-54b2-9ce2-7ba7692e95f0",
+        "attributes": {
+          "id": "8675c2f0-2d0d-54b2-9ce2-7ba7692e95f0"
+        }
+      }
+    }
+  ]
+}

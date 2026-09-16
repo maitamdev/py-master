@@ -1,0 +1,680 @@
+{
+  "id": "part07-5-creating-modules",
+  "part": 7,
+  "part_slug": "part-7",
+  "slug": "5-creating-modules",
+  "is_part_index": false,
+  "title_original": "Creating your own modules",
+  "title_vi": "",
+  "path": "/part-7/5-creating-modules",
+  "source_path": "data/part-7/5-creating-modules.md",
+  "source_hash": "cc116845b0ac3d783924d6558cc346c299159d40ecb9a7d8f9dd2186a9656d52",
+  "order": 1,
+  "blocks_count": 37,
+  "blocks": [
+    {
+      "id": "blk-part07-5-creating-modules-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "4ef7e4fa3b55104a702cea4a8ef268a0ee867d6acc0a21f0c55941b4cdae355e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be able to write your own modules\n- You will know what the Python variable `__name__` and the value `__main__` signify"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "038d5178d1575fe7cc65dfb571d1f3084e85296ba91fd44221974bca37fe4ca2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Writing your own Python modules is easy. Any file containing valid Python code can be imported as a module. Let's assume we have a file named `words.py` with the following contents:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0003",
+      "type": "code",
+      "order": 3,
+      "source_hash": "91805d56d5bd6fa5907b07840690bf48c53edbd8723570324521a3340aafa73b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def first_word(my_string: str):\n    parts = my_string.split(\" \")\n    return parts[0]\n\ndef last_word(my_string: str):\n    parts = my_string.split(\" \")\n    return parts[-1]\n\ndef number_of_words(my_string: str):\n    parts = my_string.split(\" \")\n    return len(parts)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def first_word(my_string: str):\n    parts = my_string.split(\" \")\n    return parts[0]\n\ndef last_word(my_string: str):\n    parts = my_string.split(\" \")\n    return parts[-1]\n\ndef number_of_words(my_string: str):\n    parts = my_string.split(\" \")\n    return len(parts)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "91805d56d5bd6fa5907b07840690bf48c53edbd8723570324521a3340aafa73b",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "d4ac5e683f173712fdc31253a71cb1066eecec32f481afddfc57a06a2bbe0a05",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The functions defined in the file can be accessed by importing the file:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "8724e69bf1eb0232f9042d7ade25e934638e43785524556048b47f84147ff8d0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import words\n\nmy_string = \"Sheila sells seashells by the seashore\"\n\nprint(words.first_word(my_string))\nprint(words.last_word(my_string))\nprint(words.number_of_words(my_string))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import words\n\nmy_string = \"Sheila sells seashells by the seashore\"\n\nprint(words.first_word(my_string))\nprint(words.last_word(my_string))\nprint(words.number_of_words(my_string))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8724e69bf1eb0232f9042d7ade25e934638e43785524556048b47f84147ff8d0",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0006",
+      "type": "sample_output",
+      "order": 6,
+      "source_hash": "4262b9694ebee1968e231cf0e064a0e07b829fcf6c8096f261da62ea7184428b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Sheila\nseashore\n6"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Sheila\nseashore\n6"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nSheila\nseashore\n6\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "35c566f9069e71bdfb7bfa726a9b8e8d6301790f3ee2116e059207e9ad75ba08",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "NB: the file containing the Python module must be located either in the same directory with the program importing it, or in one of the default Python directories, or else the Python interpreter will not find it when the `import` statement is executed."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "92072a2c9c1756ac2535a6598177d3f9afbe3c4d8fc9e1769b0e00a697fe0886",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We can use our own modules just as we have learnt to use the modules from the Python standard library:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0009",
+      "type": "code",
+      "order": 9,
+      "source_hash": "5086a79d5d9f8645184c6e05d0f3ddc5abfdc5441d7dfad83e64aa2e6f78d90e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from words import first_word, last_word\n\nsentence = input(\"Please type in a sentence: \")\n\nprint(\"The first word was: \" + first_word(sentence))\nprint(\"The last word was: \" + last_word(sentence))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from words import first_word, last_word\n\nsentence = input(\"Please type in a sentence: \")\n\nprint(\"The first word was: \" + first_word(sentence))\nprint(\"The last word was: \" + last_word(sentence))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5086a79d5d9f8645184c6e05d0f3ddc5abfdc5441d7dfad83e64aa2e6f78d90e",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0010",
+      "type": "sample_output",
+      "order": 10,
+      "source_hash": "935285b0ecea95e3c90a7a440c4060df045bef8476e2e1bef8cc94358a701f44",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a sentence: **Python is a swell programming language**\nThe first word was: Python\nThe last word was: language"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a sentence: **Python is a swell programming language**\nThe first word was: Python\nThe last word was: language"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a sentence: **Python is a swell programming language**\nThe first word was: Python\nThe last word was: language\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0011",
+      "type": "heading",
+      "order": 11,
+      "source_hash": "91ef7a6adc5a2fb013a6549df9644f4cd0eafb14a10062cc43961057182a7f19",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Putting type hints to use"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "2f57056bfd9ccd0ac4e494a891f5681945205d874b88cf31c5f0b27f1350502a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When using modules, type hinting becomes especially useful. If you are using an editor which has built-in support for type hinting, using different modules becomes much easier."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "c936533322df0a0364d9afe279bc11c2eaef4dbc453916d40c53324ad1e94a2d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "For example, Visual Studio Code will display the type hints when you are writing code:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0014",
+      "type": "image",
+      "order": 14,
+      "source_hash": "7afc3aa3903c82c66e546704112c5bec2c0a3b1eea470800cd17d3be3bbde488",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "7_vihje.png",
+        "alt": "",
+        "attributes": {
+          "src": "7_vihje.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0015",
+      "type": "heading",
+      "order": 15,
+      "source_hash": "c559365e54ea20625837b1073aa321c41e7b3867c55d845c3516ba7183e7d68b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Main function code in a module"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "d82650526d0f619b3fcadf771e9d738a616e6bad8e35665896c8cf58932df01d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If a module contains any code which is not contained within a function definition (that is, if the module contains code in the main function of the module), this code is executed automatically whenever the module is imported."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "da292839c6755cae824ad071480a6e28f2859eff9d80454426eae60b5273b31e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's assume our `words.py` file also contained some test cases:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0018",
+      "type": "code",
+      "order": 18,
+      "source_hash": "4535dcc8417f30095032689c60a5d8d827afbe00f30f32e6767f692c9a83db04",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def first_word(my_string: str):\n    parts = my_string.split(\" \")\n    return parts[0]\n\ndef last_word(my_string: str):\n    parts = my_string.split(\" \")\n    return parts[-1]\n\ndef number_of_words(my_string: str):\n    parts = my_string.split(\" \")\n    return len(parts)\n\nprint(first_word(\"This is a test\"))\nprint(last_word(\"Here we are still testing\"))\nprint(number_of_words(\"One two three four five\"))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def first_word(my_string: str):\n    parts = my_string.split(\" \")\n    return parts[0]\n\ndef last_word(my_string: str):\n    parts = my_string.split(\" \")\n    return parts[-1]\n\ndef number_of_words(my_string: str):\n    parts = my_string.split(\" \")\n    return len(parts)\n\nprint(first_word(\"This is a test\"))\nprint(last_word(\"Here we are still testing\"))\nprint(number_of_words(\"One two three four five\"))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4535dcc8417f30095032689c60a5d8d827afbe00f30f32e6767f692c9a83db04",
+        "length_lines": 15
+      }
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "7526471e0fec3972e9fa5b9dbbc62c1be632b94d2a3e3aa4a639659b7e0fa063",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Now, if we import the module with an `import` statement, all the code in the module which is outside the defined functions is automatically executed:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0020",
+      "type": "code",
+      "order": 20,
+      "source_hash": "8724e69bf1eb0232f9042d7ade25e934638e43785524556048b47f84147ff8d0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import words\n\nmy_string = \"Sheila sells seashells by the seashore\"\n\nprint(words.first_word(my_string))\nprint(words.last_word(my_string))\nprint(words.number_of_words(my_string))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import words\n\nmy_string = \"Sheila sells seashells by the seashore\"\n\nprint(words.first_word(my_string))\nprint(words.last_word(my_string))\nprint(words.number_of_words(my_string))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8724e69bf1eb0232f9042d7ade25e934638e43785524556048b47f84147ff8d0",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0021",
+      "type": "sample_output",
+      "order": 21,
+      "source_hash": "8194a5e4dda1d999c83d2165beeb550f983586d7912c13057c19a4536db467a5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "This\ntesting\n5\nSheila\nseashore\n6"
+      },
+      "translation": {
+        "language": "text",
+        "content": "This\ntesting\n5\nSheila\nseashore\n6"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThis\ntesting\n5\nSheila\nseashore\n6\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "8bbcbbe784209ad3ee7621b9184d15ddb8011490da080d29f7c03b2cd485277f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As you can see above, this is not a good outcome, because the program we are trying to write is messed with by the test cases from the module itself."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "d1221fadeaef69f952edc6d640ced1a0e7cdaef3ff1067f54ee72b2184548d06",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Luckily, there is a solution, and it is one which you have used many times before in the exercises on this course. We just need to test if the program is being executed on its own, or if the code has been imported with an `import` statement. Python has a built-in variable `__name__`, which contains the name of the program being executed. If the program is being executed on its own, the value of the variable is `__main__`. If the program has been imported, the value of the variable is the name of the imported module (in this case, `words`)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "5e9328bcb42b734c24d62f5763f484fe6095421269f34151816d30b3b11db3b1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Knowing this, we can add a conditional statement, which lets us only execute the text cases if the program is executed on its own. As you can see below, the structure looks familiar:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0025",
+      "type": "code",
+      "order": 25,
+      "source_hash": "96e16c9b83efa453e061feaf34bb0df10e8f6b5c19a98925eb25a7ba79d82afd",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def first_word(my_string: str) -> str:\n    parts = my_string.split(\" \")\n    return parts[0]\n\ndef last_word(my_string: str) -> str:\n    parts = my_string.split(\" \")\n    return parts[-1]\n\ndef number_of_words(my_string: str) -> int:\n    parts = my_string.split(\" \")\n    return len(parts)\n\nif __name__ == \"__main__\":\n    # testing functionality\n    print(first_word(\"This is a test\"))\n    print(last_word(\"Here we are still testing\"))\n    print(number_of_words(\"One two three four five\"))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def first_word(my_string: str) -> str:\n    parts = my_string.split(\" \")\n    return parts[0]\n\ndef last_word(my_string: str) -> str:\n    parts = my_string.split(\" \")\n    return parts[-1]\n\ndef number_of_words(my_string: str) -> int:\n    parts = my_string.split(\" \")\n    return len(parts)\n\nif __name__ == \"__main__\":\n    # testing functionality\n    print(first_word(\"This is a test\"))\n    print(last_word(\"Here we are still testing\"))\n    print(number_of_words(\"One two three four five\"))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "96e16c9b83efa453e061feaf34bb0df10e8f6b5c19a98925eb25a7ba79d82afd",
+        "length_lines": 17
+      }
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "c067ad75beafb37cbf832b86416cce5c6cb1391925c0977768362a6d27a66b71",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If you execute the module on its own, the test cases are printed out:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0027",
+      "type": "sample_output",
+      "order": 27,
+      "source_hash": "07f7db6ecc78084583ec17337f0b91ca47cd5c57201a3299faa6d37b11419876",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "This\ntesting\n5"
+      },
+      "translation": {
+        "language": "text",
+        "content": "This\ntesting\n5"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThis\ntesting\n5\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "3115b8c0152fc9ba143a1159483d318c7701b3d7a0b976dacc5f3fc24f80d545",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When the module is imported into another program, the test cases are not executed:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0029",
+      "type": "code",
+      "order": 29,
+      "source_hash": "8724e69bf1eb0232f9042d7ade25e934638e43785524556048b47f84147ff8d0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import words\n\nmy_string = \"Sheila sells seashells by the seashore\"\n\nprint(words.first_word(my_string))\nprint(words.last_word(my_string))\nprint(words.number_of_words(my_string))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import words\n\nmy_string = \"Sheila sells seashells by the seashore\"\n\nprint(words.first_word(my_string))\nprint(words.last_word(my_string))\nprint(words.number_of_words(my_string))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8724e69bf1eb0232f9042d7ade25e934638e43785524556048b47f84147ff8d0",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0030",
+      "type": "sample_output",
+      "order": 30,
+      "source_hash": "4262b9694ebee1968e231cf0e064a0e07b829fcf6c8096f261da62ea7184428b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Sheila\nseashore\n6"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Sheila\nseashore\n6"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nSheila\nseashore\n6\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "6126e5b965cef9444f3a761e0f0687ff5f4fa08d9eea54e5e0c8ef2c1beb35fd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the exercises on this course, whenever you were asked to write functions, you were usually also expected to wrap test cases in an `if __name__ == \"__main__\"` block exactly like the one above. Now you know why."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0032",
+      "type": "exercise",
+      "order": 32,
+      "source_hash": "5852181ba7580120f1e96c47f217e517407e84ee866a199b82936d99319ebf26",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a module named `string_helper`, which contains the following functions:\n\nThe function `change_case(orig_string: str)` creates and returns a new version of the parameter string. The lowercase letters in the original should be uppercase, and uppercase letters should be lowercase.\n\nThe function `split_in_half(orig_string: str)` splits the parameter string in half, and returns the results in a tuple. If the original has an odd number of characters, the first half should be shorter.\n\nThe function `remove_special_characters(orig_string: str)` returns a new version of the parameter string, with all special characters removed. Only lowercase and uppercase letters, numbers and spaces are allowed in the returned string.\n\nSome examples of how the module would be used:\n\n```python\nimport string_helper\n\nmy_string = \"Well hello there!\"\n\nprint(string_helper.change_case(my_string))\n\np1, p2 = string_helper.split_in_half(my_string)\n\nprint(p1)\nprint(p2)\n\nm2 = string_helper.remove_special_characters(\"This is a test, lets see how it goes!!!11!\")\nprint(m2)\n```\n\n<sample-output>\n\nwELL HELLO THERE!\nWell hel\nlo there!\nThis is a test lets see how it goes11\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part07-17_string_helper",
+        "exercise_type": "programming-exercise",
+        "name": "String helper",
+        "tmc_name": "part07-17_string_helper",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "abff66d5c3b87e785a9f5858aa4a5a727e09e7c3dc5b12c46f58c801eff70b2f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!---"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0034",
+      "type": "quiz",
+      "order": 34,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "2203412c-628c-54a3-bd77-edebd5ce4f67",
+        "attributes": {
+          "id": "2203412c-628c-54a3-bd77-edebd5ce4f67"
+        }
+      }
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "e7c1a46e91282cacd4221fc454f07d2669740016f75a092ce3959836e6ef0903",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please respond to a quick questionnaire on this week's materials."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-5-creating-modules-0037",
+      "type": "quiz",
+      "order": 37,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "953a13c1-b365-557e-b3f5-da39f8814f3e",
+        "attributes": {
+          "id": "953a13c1-b365-557e-b3f5-da39f8814f3e"
+        }
+      }
+    }
+  ]
+}

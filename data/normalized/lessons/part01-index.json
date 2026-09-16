@@ -1,0 +1,58 @@
+{
+  "id": "part01-index",
+  "part": 1,
+  "part_slug": "part-1",
+  "slug": "index",
+  "is_part_index": true,
+  "title_original": "Part 1",
+  "title_vi": "",
+  "path": "/part-1",
+  "source_path": "data/part-1/index.md",
+  "source_hash": "5343a7ba6329d046e1d839e6ff3fe0b5a1c1a5383f28f742ec0c4e15b7fe602d",
+  "order": 1,
+  "blocks_count": 2,
+  "blocks": [
+    {
+      "id": "blk-part01-index-0001",
+      "type": "custom_component",
+      "order": 1,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "component_name": "pages-in-this-section",
+        "attributes": {},
+        "raw_source": "<pages-in-this-section></pages-in-this-section>",
+        "parsed": true
+      }
+    },
+    {
+      "id": "blk-part01-index-0002",
+      "type": "custom_component",
+      "order": 2,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "component_name": "exercises-in-this-section",
+        "attributes": {},
+        "raw_source": "<exercises-in-this-section></exercises-in-this-section>",
+        "parsed": true
+      }
+    }
+  ]
+}

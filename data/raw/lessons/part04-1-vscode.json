@@ -1,0 +1,300 @@
+{
+  "id": "part04-1-vscode",
+  "part": 4,
+  "part_slug": "part-4",
+  "slug": "1-vscode",
+  "is_part_index": false,
+  "title_original": "The Visual Studio Code editor, Python interpreter and built-in debugging tool",
+  "path": "/part-4/1-vscode",
+  "source_path": "data/part-4/1-vscode.md",
+  "source_hash": "6f4ce22b25ec0b8410dc9d8f10136068e52da5ecda78d6e6358a8ec85c40d9d4",
+  "frontmatter": {
+    "path": "/part-4/1-vscode",
+    "title": "The Visual Studio Code editor, Python interpreter and built-in debugging tool",
+    "hidden": false
+  },
+  "chunks_count": 49,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will be equipped to use the Visual Studio Code editor to complete exercises on this course\n- You will be familiar with the interactive Python interpreter, and will be able to use it to run code",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will be equipped to use the Visual Studio Code editor to complete exercises on this course\n- You will be familiar with the interactive Python interpreter, and will be able to use it to run code\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Thus far all the exercises on this course have been completed directly on the course pages in embedded editor windows. Programming in the browser is very suitable for the very first steps in programming, but now it is time to start using a separate editor especially made for programming.",
+      "raw_source": "Thus far all the exercises on this course have been completed directly on the course pages in embedded editor windows. Programming in the browser is very suitable for the very first steps in programming, but now it is time to start using a separate editor especially made for programming."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "There are dozens of different editors that are suited to programming. On this course we will use the [Visual Studio Code](https://code.visualstudio.com/) editor, which has been gaining traction in recent years.",
+      "raw_source": "There are dozens of different editors that are suited to programming. On this course we will use the [Visual Studio Code](https://code.visualstudio.com/) editor, which has been gaining traction in recent years."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Please install the Visual Studio Code editor on your own computer now. You may also need to install Python and the Visual Studio Code plugin for Python. You will also need the TMC plugin, which will take care of running the tests that go with the exercises. In the TMC plugin, select **MOOC** as the organization and **Python Programming 2026** as the course.",
+      "raw_source": "Please install the Visual Studio Code editor on your own computer now. You may also need to install Python and the Visual Studio Code plugin for Python. You will also need the TMC plugin, which will take care of running the tests that go with the exercises. In the TMC plugin, select **MOOC** as the organization and **Python Programming 2026** as the course."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "[Here is a guide](https://www.mooc.fi/en/installation/vscode) to installing and running all of these. Read the instructions on working on and submitting exercises, and then complete the task below:",
+      "raw_source": "[Here is a guide](https://www.mooc.fi/en/installation/vscode) to installing and running all of these. Read the instructions on working on and submitting exercises, and then complete the task below:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Hello Visual Studio Code",
+        "tmcname": "part04-01_hello_visual_studio_code"
+      },
+      "inner_content": "Please write a program which asks the user which editor they are using. The program should keep on asking until the user types in _Visual Studio Code_.\n\nHave a look at the example of expected behaviour below:\n\n<sample-output>\n\nEditor: **Emacs**\nnot good\nEditor: **Vim**\nnot good\nEditor: **Word**\nawful\nEditor: **Atom**\nnot good\nEditor: **Visual Studio Code**\nan excellent choice!\n\n</sample-output>\n\nIf the user types in Word or Notepad, the program counters with _awful_. Other unacceptable editor choices receive the reply _not good_.\n\nThe program should be case-insensitive in its reactions. That is, the same user input in lowercase, uppercase or mixed case should trigger the same reaction:\n\n<sample-output>\n\nEditor: **NOTEPAD**\nawful\nEditor: **viSUal STudiO cODe**\nan excellent choice!\n\n</sample-output>\n\nHint: The simplest way to achieve this is converting all characters to the same case. The Python string method `lower` converts a string to lowercase entirely. An example of its use:\n\n```python\nmystring = \"Visual Studio CODE\"\nif \"visual studio code\" == mystring.lower():\n    print(\"this was the string I was looking for!\")\n```\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block. The same applies to any upcoming exercises that don't explicitly ask for functions.",
+      "raw_source": "<programming-exercise name='Hello Visual Studio Code' tmcname='part04-01_hello_visual_studio_code'>\n\nPlease write a program which asks the user which editor they are using. The program should keep on asking until the user types in _Visual Studio Code_.\n\nHave a look at the example of expected behaviour below:\n\n<sample-output>\n\nEditor: **Emacs**\nnot good\nEditor: **Vim**\nnot good\nEditor: **Word**\nawful\nEditor: **Atom**\nnot good\nEditor: **Visual Studio Code**\nan excellent choice!\n\n</sample-output>\n\nIf the user types in Word or Notepad, the program counters with _awful_. Other unacceptable editor choices receive the reply _not good_.\n\nThe program should be case-insensitive in its reactions. That is, the same user input in lowercase, uppercase or mixed case should trigger the same reaction:\n\n<sample-output>\n\nEditor: **NOTEPAD**\nawful\nEditor: **viSUal STudiO cODe**\nan excellent choice!\n\n</sample-output>\n\nHint: The simplest way to achieve this is converting all characters to the same case. The Python string method `lower` converts a string to lowercase entirely. An example of its use:\n\n```python\nmystring = \"Visual Studio CODE\"\nif \"visual studio code\" == mystring.lower():\n    print(\"this was the string I was looking for!\")\n```\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block. The same applies to any upcoming exercises that don't explicitly ask for functions.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Executing code",
+      "raw_source": "## Executing code"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In Visual Studio Code, the easiest way to execute your code is clicking on the triangle in the upper right hand corner. Sometimes it happens that some program is left running in the background, maybe waiting for input from the user or stuck in an infinite loop, without you realising it. You might only notice this when trying to execute the next program, which simply will not run because the previous execution is still hogging up resources. A quick fix is pressing on the keys _Control_+_C_ at the same time, which stops the execution of any ongoing process. The next program should now run fine.",
+      "raw_source": "In Visual Studio Code, the easiest way to execute your code is clicking on the triangle in the upper right hand corner. Sometimes it happens that some program is left running in the background, maybe waiting for input from the user or stuck in an infinite loop, without you realising it. You might only notice this when trying to execute the next program, which simply will not run because the previous execution is still hogging up resources. A quick fix is pressing on the keys _Control_+_C_ at the same time, which stops the execution of any ongoing process. The next program should now run fine."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "The interactive Python interpreter",
+      "raw_source": "## The interactive Python interpreter"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "One of the most important tools for any Python programmer is the interactive Python interpreter.",
+      "raw_source": "One of the most important tools for any Python programmer is the interactive Python interpreter."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Starting up the interpreter may depend on your platform. In a Linux or Mac system, you can type in `python3` in the terminal. In Windows, the command on the command line might be `python`. Firing up the interpreter on a Mac looks like this:",
+      "raw_source": "Starting up the interpreter may depend on your platform. In a Linux or Mac system, you can type in `python3` in the terminal. In Windows, the command on the command line might be `python`. Firing up the interpreter on a Mac looks like this:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "4_1_1.png"
+      },
+      "raw_source": "<img src=\"4_1_1.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It is also possible to start the interpreter inside Visual Studio Code. First you should execute a program by clicking on the triangle. This should open a _Terminal_ section on your screen, where you can now type in `python3` (or `python`):",
+      "raw_source": "It is also possible to start the interpreter inside Visual Studio Code. First you should execute a program by clicking on the triangle. This should open a _Terminal_ section on your screen, where you can now type in `python3` (or `python`):"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "4_1_2.png"
+      },
+      "raw_source": "<img src=\"4_1_2.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You can also try a browser-based Python interpreter, such as <https://www.python.org/shell/>.",
+      "raw_source": "You can also try a browser-based Python interpreter, such as <https://www.python.org/shell/>."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The interpreter is a way of executing Python code line by line as soon as you write it. When you write a line of code and press _Enter_, the interpreter executes the code right away and shows you the results:",
+      "raw_source": "The interpreter is a way of executing Python code line by line as soon as you write it. When you write a line of code and press _Enter_, the interpreter executes the code right away and shows you the results:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "4_1_3.png"
+      },
+      "raw_source": "<img src=\"4_1_3.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Any Python code that can be written in a file can also be written in the interpreter. You can even assign variables and define methods:",
+      "raw_source": "Any Python code that can be written in a file can also be written in the interpreter. You can even assign variables and define methods:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": ">>> t = [1,2,3,4,5]\n>>> for number in t:\n...   print(number)\n...\n1\n2\n3\n4\n5\n>>> def absolute_value(number):\n...   if number<0:\n...      number = -number\n...   return number\n...\n>>> x = 10\n>>> y = -7\n>>> absolute_value(number)\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'number' is not defined\n>>> absolute_value(x)\n10\n>>> absolute_value(y)\n7\n>>>",
+      "raw_source": "```python\n>>> t = [1,2,3,4,5]\n>>> for number in t:\n...   print(number)\n...\n1\n2\n3\n4\n5\n>>> def absolute_value(number):\n...   if number<0:\n...      number = -number\n...   return number\n...\n>>> x = 10\n>>> y = -7\n>>> absolute_value(number)\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'number' is not defined\n>>> absolute_value(x)\n10\n>>> absolute_value(y)\n7\n>>>\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The interpreter is best suited to making small checks. For instance, you can try out functions and methods, or check if they exist at all:",
+      "raw_source": "The interpreter is best suited to making small checks. For instance, you can try out functions and methods, or check if they exist at all:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": ">>> \"TextYteXt\".toupper()\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nAttributeError: 'str' object has no attribute 'toupper'\n>>> \"TextYteXt\".upper()\n'TEXTYTEXT'\n>>>",
+      "raw_source": "```python\n>>> \"TextYteXt\".toupper()\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nAttributeError: 'str' object has no attribute 'toupper'\n>>> \"TextYteXt\".upper()\n'TEXTYTEXT'\n>>>\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If there is a method you need, and you can _almost_ remember its name, it's sometimes faster to skip Google and use the `dir` function in the interpreter. It tells you which methods are available to use on a given object:",
+      "raw_source": "If there is a method you need, and you can _almost_ remember its name, it's sometimes faster to skip Google and use the `dir` function in the interpreter. It tells you which methods are available to use on a given object:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": ">>> dir(\"this is a string\")\n['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__',\n'__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__',\n'__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__',\n'__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__',\n'__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__',\n'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find',\n'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit',\n'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join',\n'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust','rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase',\n'title', 'translate', 'upper', 'zfill']",
+      "raw_source": "```python\n>>> dir(\"this is a string\")\n['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__',\n'__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__',\n'__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__',\n'__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__',\n'__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__',\n'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find',\n'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit',\n'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join',\n'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust','rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase',\n'title', 'translate', 'upper', 'zfill']\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Python strings have a lot of methods available, as you can see above. At this point it might be best to ignore any methods that have underscores in their names, but the rest may well prove useful. Some of them you can figure out by trying them out, and the rest you can search for online.",
+      "raw_source": "Python strings have a lot of methods available, as you can see above. At this point it might be best to ignore any methods that have underscores in their names, but the rest may well prove useful. Some of them you can figure out by trying them out, and the rest you can search for online."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Python lists don't have quite so many methods:",
+      "raw_source": "Python lists don't have quite so many methods:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": ">>> dir([])\n['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__',\n'__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__',\n'__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__',\n'__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__',\n'__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__',\n'__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop',\n'remove', 'reverse', 'sort']\n>>>",
+      "raw_source": "```python\n>>> dir([])\n['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__',\n'__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__',\n'__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__',\n'__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__',\n'__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__',\n'__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop',\n'remove', 'reverse', 'sort']\n>>>\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's try a few of them, `reverse` and `clear` seem promising:",
+      "raw_source": "Let's try a few of them, `reverse` and `clear` seem promising:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": ">>> numbers = [1,2,3,4,5]\n>>> numbers.reverse()\n>>> numbers\n[5, 4, 3, 2, 1]\n>>> numbers.clear()\n>>> numbers\n[]",
+      "raw_source": "```python\n>>> numbers = [1,2,3,4,5]\n>>> numbers.reverse()\n>>> numbers\n[5, 4, 3, 2, 1]\n>>> numbers.clear()\n>>> numbers\n[]\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As you can see, these methods do pretty much what you would expect based on their names.",
+      "raw_source": "As you can see, these methods do pretty much what you would expect based on their names."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Notice how the interpreter doesn't print out anything when you run the command `numbers.reverse()`. This is because the interpreter prints something out only if the line of code has a value. The `reverse()` method here doesn't return any value.",
+      "raw_source": "Notice how the interpreter doesn't print out anything when you run the command `numbers.reverse()`. This is because the interpreter prints something out only if the line of code has a value. The `reverse()` method here doesn't return any value."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the above example we printed out the value of the list `numbers` by typing in just the name of the variable. In fact, it is rarely necessary to explicitly type in `print` commands in the interpreter. You can include them if you want to, however.",
+      "raw_source": "In the above example we printed out the value of the list `numbers` by typing in just the name of the variable. In fact, it is rarely necessary to explicitly type in `print` commands in the interpreter. You can include them if you want to, however."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Remember to close the interpreter when you are finished. The commands `quit()` or `exit()` will close it, as will the key combo _Control_+_D_ (Linux/Mac) or _Control_+_Z_ (Windows). Especially in Visual Studio Code this is important, as trying to execute another Python program while the interpreter is still running results in a rather cryptic error message:",
+      "raw_source": "Remember to close the interpreter when you are finished. The commands `quit()` or `exit()` will close it, as will the key combo _Control_+_D_ (Linux/Mac) or _Control_+_Z_ (Windows). Especially in Visual Studio Code this is important, as trying to execute another Python program while the interpreter is still running results in a rather cryptic error message:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "4_1_4.png"
+      },
+      "raw_source": "<img src=\"4_1_4.png\">"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "The built-in debugger",
+      "raw_source": "## The built-in debugger"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We have already spent a fair amount of time and effort on developing debugging skills, mainly through print statement debugging. The Visual Studio Code editor has another tool at your disposal: a built-in _visual debugger_.",
+      "raw_source": "We have already spent a fair amount of time and effort on developing debugging skills, mainly through print statement debugging. The Visual Studio Code editor has another tool at your disposal: a built-in _visual debugger_."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "To start debugging, first you have to define a _breakpoint_ in your code. A breakpoint is a point in your program where the debugger halts execution. You can set a breakpoint by clicking on the left edge of any line in your program.",
+      "raw_source": "To start debugging, first you have to define a _breakpoint_ in your code. A breakpoint is a point in your program where the debugger halts execution. You can set a breakpoint by clicking on the left edge of any line in your program."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following example is a slightly faulty attempt at solving the exercise _The sum of consecutive numbers_ in the [previous part](/part-3/1-loops-with-conditions). There is a breakpoint on line 5:",
+      "raw_source": "The following example is a slightly faulty attempt at solving the exercise _The sum of consecutive numbers_ in the [previous part](/part-3/1-loops-with-conditions). There is a breakpoint on line 5:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "4_1_5.png"
+      },
+      "raw_source": "<img src=\"4_1_5.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "After the breakpoint has been set, choose _Start debugging_ from the _Run_ menu. This opens a list of options, where you should select _Python File_:",
+      "raw_source": "After the breakpoint has been set, choose _Start debugging_ from the _Run_ menu. This opens a list of options, where you should select _Python File_:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "4_1_6.png"
+      },
+      "raw_source": "<img src=\"4_1_6.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This starts the debugger, which executes your code as usual until the execution reaches a breakpoint and halts. If your code asks for input, remember to type that in in the terminal:",
+      "raw_source": "This starts the debugger, which executes your code as usual until the execution reaches a breakpoint and halts. If your code asks for input, remember to type that in in the terminal:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "4_1_7.png"
+      },
+      "raw_source": "<img src=\"4_1_7.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "On the left there is now the _Variables_ view, which contains the current values of all variables active in the code. You can proceed with the execution line by line by clicking on the down arrow, which is labelled _Step into_.",
+      "raw_source": "On the left there is now the _Variables_ view, which contains the current values of all variables active in the code. You can proceed with the execution line by line by clicking on the down arrow, which is labelled _Step into_."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the image below the loop in the code has already been repeated a few times:",
+      "raw_source": "In the image below the loop in the code has already been repeated a few times:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "4_1_8.png"
+      },
+      "raw_source": "<img src=\"4_1_8.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The debugger has a _Debug console_ tab, which lets you evaluate expressions with the current values stored in the variables. For example, you can check the value of the Boolean expression in the condition of the loop:",
+      "raw_source": "The debugger has a _Debug console_ tab, which lets you evaluate expressions with the current values stored in the variables. For example, you can check the value of the Boolean expression in the condition of the loop:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "4_1_9.png"
+      },
+      "raw_source": "<img src=\"4_1_9.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You can include several breakpoints in your program code. When execution has halted, you can start it again by clicking on the blue triangle. Execution proceeds until it reaches the next breakpoint.",
+      "raw_source": "You can include several breakpoints in your program code. When execution has halted, you can start it again by clicking on the blue triangle. Execution proceeds until it reaches the next breakpoint."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The built-in visual debugger is a good alternative to debugging print statements. It is up to you which you choose to employ more in the future. Each programmer has their own preferences, but it's always a good idea to try different options before settling on any single solution.",
+      "raw_source": "The built-in visual debugger is a good alternative to debugging print statements. It is up to you which you choose to employ more in the future. Each programmer has their own preferences, but it's always a good idea to try different options before settling on any single solution."
+    }
+  ]
+}

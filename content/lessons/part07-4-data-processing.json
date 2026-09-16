@@ -1,0 +1,791 @@
+{
+  "id": "part07-4-data-processing",
+  "part": 7,
+  "part_slug": "part-7",
+  "slug": "4-data-processing",
+  "is_part_index": false,
+  "title_original": "Data processing",
+  "title_vi": "Xử lý dữ liệu",
+  "path": "/part-7/4-data-processing",
+  "source_path": "data/part-7/4-data-processing.md",
+  "source_hash": "b091e08686455a597e1eca34d657171eb69b452ec1758f1d5a762093fa1dd0e0",
+  "order": 1,
+  "blocks_count": 43,
+  "blocks": [
+    {
+      "id": "blk-part07-4-data-processing-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "f66f62deb9db9256cc49cd33c117e2e4941dfc290dd60e01bee453bdd0fdd87d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know how to use a module to process CSV files\n- You will know how to use a module to process JSON files\n- You will be able to retrieve and read files from the internet"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ biết cách sử dụng mô-đun để xử lý tệp CSV\n- Bạn sẽ biết cách sử dụng module để xử lý file JSON\n- Bạn sẽ có thể truy xuất và đọc các tập tin từ internet"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0002",
+      "type": "heading",
+      "order": 2,
+      "source_hash": "808e9d3fe85b48319f27bcd4d38b0e705ddb94d9c4fbcaebff40201bce28c165",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Reading CSV files"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đọc tệp CSV"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "823ad9d5ef768e8caffb9e3d363613e427705e511a04ce2445ef3a528207380d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "CSV is such a simple format that so far we have accessed the with hand-written code. There is, however, a ready-made module in the Python standard library for working with CSV files: [csv](https://docs.python.org/3/library/csv.html). It works like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "CSV là một định dạng đơn giản đến mức cho đến nay chúng tôi đã truy cập được bằng mã viết tay. Tuy nhiên, có một mô-đun được tạo sẵn trong thư viện chuẩn Python để làm việc với các tệp CSV: [csv](https://docs.python.org/3/library/csv.html). Nó hoạt động như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0004",
+      "type": "code",
+      "order": 4,
+      "source_hash": "093facbf584fc78ef5357bdd59fc9a56b9d830c0f19a8aa2caa6542bb27ee564",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import csv\n\nwith open(\"test.csv\") as my_file:\n    for line in csv.reader(my_file, delimiter=\";\"):\n        print(line)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import csv\n\nwith open(\"test.csv\") as my_file:\n    for line in csv.reader(my_file, delimiter=\";\"):\n        print(line)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "093facbf584fc78ef5357bdd59fc9a56b9d830c0f19a8aa2caa6542bb27ee564",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "ac8a14924467e57b51f3c0431152d5f771c791deb166a0981225ab12be888d18",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The above code reads all lines in the CSV file `test.csv`, separates the contents of each line into a list using the delimiter `;`, and prints each list. So, assuming the contents of the line are as follows:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đoạn mã trên đọc tất cả các dòng trong tệp CSV `test.csv`, tách nội dung của từng dòng thành một danh sách bằng dấu phân cách `;` và in từng danh sách. Vì vậy, giả sử nội dung của dòng như sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0006",
+      "type": "code",
+      "order": 6,
+      "source_hash": "8b87e673b84e56a3814ecadee5191821aa4acde4be11334622024b05b7ee4e4e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "012121212;5\n012345678;2\n015151515;4"
+      },
+      "translation": {
+        "language": "code",
+        "content": "012121212;5\n012345678;2\n015151515;4"
+      },
+      "metadata": {
+        "language": "x",
+        "code_hash": "8b87e673b84e56a3814ecadee5191821aa4acde4be11334622024b05b7ee4e4e",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "3e4ef581cac39abbff98f8edcec8f6d0ba2784e8d450d143430b2ac482e6b6fa",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The code would print out this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mã sẽ in ra điều này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0008",
+      "type": "sample_output",
+      "order": 8,
+      "source_hash": "df7864059cd23294ac63133bf4611de159fd644a9e63bc306f2051e1a2f02bee",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "['012121212', '5']\n['012345678', '2']\n['015151515', '4']"
+      },
+      "translation": {
+        "language": "text",
+        "content": "['012121212', '5']\n['012345678', '2']\n['015151515', '4']"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n['012121212', '5']\n['012345678', '2']\n['015151515', '4']\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "07b618ba013c22f32afd0692eb3c122462eb057b60883541db1f20791fbab57c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Since the CSV format is so simple, what's the use of having a separate module when we can just as well use the `split` function? Well, for one, the way the module is built, it will also work correctly if the values in the file are strings, which may also contain the delimiter character. If some line in the file looked like this"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vì định dạng CSV rất đơn giản, việc có một mô-đun riêng có ích lợi gì khi chúng ta cũng có thể sử dụng chức năng `split`? Đầu tiên, cách xây dựng mô-đun, nó cũng sẽ hoạt động chính xác nếu các giá trị trong tệp là chuỗi, cũng có thể chứa ký tự phân cách. Nếu một số dòng trong tập tin trông như thế này"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0010",
+      "type": "code",
+      "order": 10,
+      "source_hash": "f689ff03d49f5df4a59e81c5bcf1c6bd3cbbea7d8e90f284606313a9561ab47d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\"aaa;bbb\";\"ccc;ddd\""
+      },
+      "translation": {
+        "language": "code",
+        "content": "\"aaa;bbb\";\"ccc;ddd\""
+      },
+      "metadata": {
+        "language": "x",
+        "code_hash": "f689ff03d49f5df4a59e81c5bcf1c6bd3cbbea7d8e90f284606313a9561ab47d",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "5c77e9574b945ec95eb8fd7e7f332136e4544a4e87e1b3ea884ca8ff23d8e364",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "the above code would produce this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "đoạn mã trên sẽ tạo ra điều này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0012",
+      "type": "sample_output",
+      "order": 12,
+      "source_hash": "ef2d272cf3cd030fd15f185b50b18ac79338f377e884bf231ad66792e2e72415",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "['aaa;bbb', 'ccc;ddd']"
+      },
+      "translation": {
+        "language": "text",
+        "content": "['aaa;bbb', 'ccc;ddd']"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n['aaa;bbb', 'ccc;ddd']\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "08f66484d70903713114f591ccabf596d581250b0dd4e37425c07d53577edc80",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Using the `split` function would also split within the strings, which would likely break the data, and our program in the process."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Việc sử dụng hàm `split` cũng sẽ phân chia trong các chuỗi, điều này có thể làm hỏng dữ liệu và chương trình của chúng tôi trong quá trình đó."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0014",
+      "type": "heading",
+      "order": 14,
+      "source_hash": "9ab7a850e7d72bf80c3b3109f92b2acf524bbc0b41855a1ba641af943900ccaa",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Reading JSON files"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đọc tệp JSON"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "1bfd4d0ad7f584d3e261a8090ca7b7276ccdec63867ac953d83afac50a66d30a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "CSV is just one of many machine-readable data formats. [JSON](https://www.json.org/json-en.html) is another, and it is used often when data has to be transferred between applications."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "CSV chỉ là một trong nhiều định dạng dữ liệu có thể đọc được bằng máy. [JSON](https://www.json.org/json-en.html) là một loại khác và được sử dụng thường xuyên khi dữ liệu phải được truyền giữa các ứng dụng."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "03c9ae80040751673bc93492fe7d9239f6d2476fac48aaf9eaa68d18332360b9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "JSON files are text files with a strict format, which is perhaps a little less accessible to the human eye than the CSV format. The following example uses the file `courses.json`, which contains information about some courses:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tệp JSON là các tệp văn bản có định dạng nghiêm ngặt, có lẽ mắt người khó truy cập hơn một chút so với định dạng CSV. Ví dụ sau sử dụng tệp `courses.json`, chứa thông tin về một số khóa học:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0017",
+      "type": "code",
+      "order": 17,
+      "source_hash": "07134f10cbbe848b5410dda1fdcc0341b8d8e4adc6999b659c1d1fb77265417b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "[\n    {\n        \"name\": \"Introduction to Programming\",\n        \"abbreviation\": \"ItP\",\n        \"periods\": [1, 3]\n    },\n    {\n        \"name\": \"Advanced Course in Programming\",\n        \"abbreviation\": \"ACiP\",\n        \"periods\": [2, 4]\n    },\n    {\n        \"name\": \"Database Application\",\n        \"abbreviation\": \"DbApp\",\n        \"periods\": [1, 2, 3, 4]\n    }\n]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "[\n    {\n        \"name\": \"Introduction to Programming\",\n        \"abbreviation\": \"ItP\",\n        \"periods\": [1, 3]\n    },\n    {\n        \"name\": \"Advanced Course in Programming\",\n        \"abbreviation\": \"ACiP\",\n        \"periods\": [2, 4]\n    },\n    {\n        \"name\": \"Database Application\",\n        \"abbreviation\": \"DbApp\",\n        \"periods\": [1, 2, 3, 4]\n    }\n]"
+      },
+      "metadata": {
+        "language": "x",
+        "code_hash": "07134f10cbbe848b5410dda1fdcc0341b8d8e4adc6999b659c1d1fb77265417b",
+        "length_lines": 17
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "17fa02e77d0d5d8b47056faeafbd657d2d10e3f769afe62db0601c2e3e98e441",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The structure of a JSON file might look quite familiar to you by now. The JSON file above looks exactly like a Python list, which contains three Python dictionaries."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cấu trúc của một tệp JSON có thể khá quen thuộc với bạn bây giờ. Tệp JSON ở trên trông giống hệt một danh sách Python, chứa ba từ điển Python."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "0347984598c8f1cecd22f34f34947da6e442fdf1a9cba2686fb57f835cc9479f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The standard library has a module for working with JSON files: [json](https://docs.python.org/3/library/json.html). The function `loads` takes any argument passed in a JSON format and transforms it into a Python data structure. So, processing the `courses.json` file with the code below"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thư viện chuẩn có một mô-đun để làm việc với các tệp JSON: [json](https://docs.python.org/3/library/json.html). Hàm `loads` nhận bất kỳ đối số nào được truyền ở định dạng JSON và chuyển đổi nó thành cấu trúc dữ liệu Python. Vì vậy, xử lý tệp `courses.json` với mã bên dưới"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0020",
+      "type": "code",
+      "order": 20,
+      "source_hash": "2f3a3aa4e3cf5f52feb438cbf9e0e4501fc45fd234b39cc4154ae05f9fdefdb9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import json\n\nwith open(\"courses.json\") as my_file:\n    data = my_file.read()\n\ncourses = json.loads(data)\nprint(courses)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import json\n\nwith open(\"courses.json\") as my_file:\n    data = my_file.read()\n\ncourses = json.loads(data)\nprint(courses)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2f3a3aa4e3cf5f52feb438cbf9e0e4501fc45fd234b39cc4154ae05f9fdefdb9",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "e94d183fde747eb21cfe7189cf73ddc4d95b93eaad958b06f546130ff7ed7697",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "would print out the following:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "sẽ in ra như sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0022",
+      "type": "sample_output",
+      "order": 22,
+      "source_hash": "e1c0d663f9f8efd877c8d76f3eb2b37f3678e1648d5c18be7102dbabc3942d9e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[{'name': 'Introduction to Programming', 'abbreviation': 'ItP', 'periods': [1, 3]}, {'name': 'Advanced Course in Programming', 'abbreviation': 'ACiP', 'periods': [2, 4]}, {'name': 'Database Application', 'abbreviation': 'DbApp', 'periods': [1, 2, 3, 4]}]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[{'name': 'Introduction to Programming', 'abbreviation': 'ItP', 'periods': [1, 3]}, {'name': 'Advanced Course in Programming', 'abbreviation': 'ACiP', 'periods': [2, 4]}, {'name': 'Database Application', 'abbreviation': 'DbApp', 'periods': [1, 2, 3, 4]}]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[{'name': 'Introduction to Programming', 'abbreviation': 'ItP', 'periods': [1, 3]}, {'name': 'Advanced Course in Programming', 'abbreviation': 'ACiP', 'periods': [2, 4]}, {'name': 'Database Application', 'abbreviation': 'DbApp', 'periods': [1, 2, 3, 4]}]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "2397ccc5d4675ccfc749b65387630e8a3e6cdcd84a59d8892c523fd8e2c33965",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If we also wanted to print out the name of each course, we could expand our program with a `for` loop:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu chúng tôi cũng muốn in tên của từng khóa học, chúng tôi có thể mở rộng chương trình của mình bằng vòng lặp `for`:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0024",
+      "type": "code",
+      "order": 24,
+      "source_hash": "aaf6f10d4898f5ec23a49a8da61ddcaeb1b1e191ec6df6d1fa3e1d7dc77015b2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "for course in courses:\n    print(course[\"name\"])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "for course in courses:\n    print(course[\"name\"])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "aaf6f10d4898f5ec23a49a8da61ddcaeb1b1e191ec6df6d1fa3e1d7dc77015b2",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0025",
+      "type": "sample_output",
+      "order": 25,
+      "source_hash": "418009cfd58a575fd087850554165888e64e4e324a355d47ddf93a2aaca7d2c5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Introduction to Programming\nAdvanced Course in Programming\nDatabase Application"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Introduction to Programming\nAdvanced Course in Programming\nDatabase Application"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nIntroduction to Programming\nAdvanced Course in Programming\nDatabase Application\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0026",
+      "type": "exercise",
+      "order": 26,
+      "source_hash": "a6b12daba427cca2e618b0555e00584af56c14053650798b0942b1aa569813b2",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at a JSON file, which contains some information about students in the following format:\n\n```json\n[\n    {\n        \"name\": \"Peter Pythons\",\n        \"age\": 27,\n        \"hobbies\": [\n            \"coding\",\n            \"knitting\"\n        ]\n    },\n    {\n        \"name\": \"Jean Javanese\",\n        \"age\": 24,\n        \"hobbies\": [\n            \"coding\",\n            \"rock climbing\",\n            \"reading\"\n        ]\n    }\n]\n```\n\nPlease write a function named `print_persons(filename: str)`, which reads a JSON file in the above format, and prints the contents as shown below. The file may contain any number of entries.\n\n<sample-output>\n\nPeter Pythons 27 years (coding, knitting)\nJean Javanese 24 years (coding, rock climbing, reading)\n\n</sample-output>\n\nThe hobbies should be listed in the same order as they appear in the JSON file."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy xem một tệp JSON chứa một số thông tin về học sinh ở định dạng sau:\n\n```json\n[\n    {\n        \"name\": \"Peter Pythons\",\n        \"age\": 27,\n        \"hobbies\": [\n            \"coding\",\n            \"knitting\"\n        ]\n    },\n    {\n        \"name\": \"Jean Javanese\",\n        \"age\": 24,\n        \"hobbies\": [\n            \"coding\",\n            \"rock climbing\",\n            \"reading\"\n        ]\n    }\n]\n```\n\nVui lòng viết một hàm có tên `print_persons(filename: str)` để đọc tệp JSON ở định dạng trên và in nội dung như hiển thị bên dưới. Tệp có thể chứa bất kỳ số lượng mục nào.\n\n<sample-output>\n\nPeter Pythons 27 tuổi (viết mã, đan lát)\nJean Javanese 24 tuổi (viết mã, leo núi, đọc sách)\n\n</sample-output>\n\nCác sở thích phải được liệt kê theo thứ tự như chúng xuất hiện trong tệp JSON."
+      },
+      "metadata": {
+        "exercise_id": "ex-part07-12_json_files",
+        "exercise_type": "programming-exercise",
+        "name": "Handling JSON files",
+        "tmc_name": "part07-12_json_files",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0027",
+      "type": "heading",
+      "order": 27,
+      "source_hash": "50100d1c4247c6f5e73d97ea693a5715729d509109c9151d5c6088b6d6d08a31",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Retrieving a file from the internet"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lấy một tập tin từ internet"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "ae193ba0d9af399e71415141a2ad463407f73a526e44e3b83ca14270a79ceb68",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The Python standard library also contains modules for dealing with online content, and one useful function is [urllib.request.urlopen](\nhttps://docs.python.org/3/library/urllib.request.html#urllib.request.urlopen). You are encouraged to have a look at the entire module, but the following example should be enough for you to get to grips with the function. It can be used to retrieve content from the internet, so it can be processed in your programs."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đoạn mã sau sẽ in ra nội dung của một trang web mẫu:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "b1744b84b61f379e4dfd49698c59a03eb877c24ee7d050ed411c346e7aec7d30",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following code would print out the contents of the University of Helsinki front page:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đoạn mã sau sẽ in ra nội dung của một trang web mẫu:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0030",
+      "type": "code",
+      "order": 30,
+      "source_hash": "1083226631dca468bc8ffdbc4bd941e3612a5bc50f5770f93879a769deddbeef",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import urllib.request\n\nmy_request = urllib.request.urlopen(\"https://helsinki.fi\")\nprint(my_request.read())"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import urllib.request\n\nmy_request = urllib.request.urlopen(\"https://example.com\")\nprint(my_request.read())"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "1083226631dca468bc8ffdbc4bd941e3612a5bc50f5770f93879a769deddbeef",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "59b7e54beef237ea9e5b4752ce59a400aac55535a2d394a00245c62328b81c48",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Pages intended for human eyes do not usually look very pretty when their code is printed out. In the following examples, however, we will work with machine-readable _data_ from an online source. Much of the machine-readable data available online is in JSON format."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các trang dành cho mắt người thường trông không đẹp lắm khi mã của chúng được in ra. Tuy nhiên, trong các ví dụ sau, chúng ta sẽ làm việc với _data_ có thể đọc được bằng máy từ một nguồn trực tuyến. Phần lớn dữ liệu có thể đọc được bằng máy có sẵn trực tuyến ở định dạng JSON."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0032",
+      "type": "exercise",
+      "order": 32,
+      "source_hash": "c7ceb13f6563c8587c5981f9ccc3bc455e874c34f536b6876c2df2cf1b0ddfd4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "#### Retrieving the list of active courses\n\nAt the address <https://studies.cs.helsinki.fi/stats-mock/api/courses> you will find basic information about some of the courses offered by the University of Helsinki Department of Computer Science, in JSON format.\n\nPlease write a function named `retrieve_all()`, which retrieves the data of all the courses which are currently active (the field `enabled` has the value `true`). These should be returned as a list of tuples, in the following format:\n\n<sample-output>\n\n<pre>\n[\n    ('Full Stack Open 2020', 'ofs2019', 2020, 201),\n    ('DevOps with Docker 2019', 'docker2019', 2019, 36),\n    ('DevOps with Docker 2020', 'docker2020', 2020, 36),\n    ('Beta DevOps with Kubernetes', 'beta-dwk-20', 2020, 28)\n]\n</pre>\n\n</sample-output>\n\nEach tuple contains the following fields from the original data:\n\n- the name of the course: `fullName`\n- `name`\n- `year`\n- the sum of the values listed in `exercises`\n\n\n**NB**: It is essential that you retrieve the data with the function `urllib.request.urlopen`, or the automated tests may not work correctly.\n\n**NB2:** The tests are designed so that they slightly modify the data retrieved from the internet, to make sure you do not hard-code your return values.\n\n**NB3:** Some Mac users have come across the following issue:\n\n```sh\nFile \"/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/urllib/request.py\", line 1353, in do_open\n    raise URLError(err)\nurllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1124)>\n```\n\nThe solution depends on how Python is installed on your machine. In some cases executing the following in a terminal helps:\n\n```sh\ncd \"/Applications/Python 3.8/\"\nsudo \"./Install Certificates.command\n```\n\nThe path used in the `cd` command above depends on the version of Python you have installed. The path may also be, for example, `\"/Applications/Python 3.9/\"`.\n\n[Various solutions](https://stackoverflow.com/questions/27835619/urllib-and-ssl-certificate-verify-failed-error) to the problem have been suggested.\n\nOne trick some have found useful:\n\n```python\nimport urllib.request\nimport json\nimport ssl # add this library to your import section\n\ndef retrieve_all():\n    # add the following line to the beginning of all your functions\n    context = ssl._create_unverified_context()\n    # the rest of your function\n```\n\nAnother potential workaround:\n\n ```python\nimport urllib.request\nimport certifi # add this library to your import section\nimport json\n\ndef retrieve_all():\n    address = \"https://studies.cs.helsinki.fi/stats-mock/api/courses\"\n    # add a second argument to the function call\n    request = urllib.request.urlopen(address, cafile=certifi.where())\n    # the rest of your function\n```\n\n#### Retrieving the data for a single course\n\nEach course also has its own URL, where more specific weekly data about the course is available. The URLs follow the format <https://studies.cs.helsinki.fi/stats-mock/api/courses/****/stats>, where you would replace the stars with the contents of the field `name` for the course you want to access.\n\nFor example, the data for the course `docker2019` is at the address <https://studies.cs.helsinki.fi/stats-mock/api/courses/docker2019/stats>.\n\nPlease write a function named `retrieve_course(course_name: str)`, which returns statistics for the specified course, in dictionary format.\n\nFor example, the function call `retrieve_course(\"docker2019\")` would return a dictionary with the following contents:\n\n<sample-output>\n\n<pre>\n{\n    'weeks': 4,\n    'students': 220,\n    'hours': 5966,\n    'hours_average': 27,\n    'exercises': 4988,\n    'exercises_average': 22\n}\n</pre>\n\n</sample-output>\n\nThe values in the dictionary are determined as follows:\n\n- `weeks`: the number of JSON object literals retrieved\n- `students`: the maximum number of students in all the weeks\n- `hours`: the sum of all `hour_total` values in the different weeks\n- `hours_average`: the `hours` value divided by the `students` value (rounded down to the closest integer value)\n- `exercises`: the sum of all `exercise_total` values in the different weeks\n- `exercises_average`: the `exercises` value divided by the `students` value (rounded down to the closest integer value)\n\n**NB**: See the notices in Part 1 of the exercise, as they apply here, too.\n\n**NB2**: The Python [math](https://docs.python.org/3/library/math.html) module has a useful function for rounding down integers."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "#### Lấy danh sách các khóa học đang hoạt động\n\nTại địa chỉ <https://studies.cs.helsinki.fi/stats-mock/api/courses> bạn sẽ tìm thấy thông tin cơ bản về một số khóa học do các khóa học trực tuyến mở cung cấp, ở định dạng JSON.\n\nVui lòng viết một hàm có tên `retrieve_all()` để lấy dữ liệu của tất cả các khóa học hiện đang hoạt động (trường `enabled` có giá trị `true`). Chúng phải được trả về dưới dạng danh sách các bộ dữ liệu, theo định dạng sau:\n\n<sample-output>\n\n<pre>\n[\n    (\"Full Stack Open 2020\", 'ofs2019', 2020, 201),\n    ('DevOps với Docker 2019', 'docker2019', 2019, 36),\n    ('DevOps với Docker 2020', 'docker2020', 2020, 36),\n    ('Beta DevOps với Kubernetes', 'beta-dwk-20', 2020, 28)\n]\n</pre>\n\n</sample-output>\n\nMỗi bộ dữ liệu chứa các trường sau từ dữ liệu gốc:\n\n- Tên khóa học: `fullName`\n- `name`\n- `year`\n- tổng các giá trị được liệt kê trong `exercises`\n\n\n**NB**: Điều cần thiết là bạn phải truy xuất dữ liệu bằng chức năng `urllib.request.urlopen`, nếu không các bài kiểm tra tự động có thể không hoạt động chính xác.\n\n**NB2:** Các bài kiểm tra được thiết kế sao cho chúng sửa đổi một chút dữ liệu được lấy từ internet, nhằm đảm bảo bạn không mã hóa cứng các giá trị trả về của mình.\n\n**NB3:** Một số người dùng Mac đã gặp phải sự cố sau:\n\n```sh\nFile \"/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/urllib/request.py\", line 1353, in do_open\n    raise URLError(err)\nurllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1124)>\n```\n\nGiải pháp phụ thuộc vào cách cài đặt Python trên máy của bạn. Trong một số trường hợp, việc thực hiện các thao tác sau trong terminal sẽ giúp:\n\n```sh\ncd \"/Applications/Python 3.8/\"\nsudo \"./Install Certificates.command\n```\n\nĐường dẫn được sử dụng trong lệnh `cd` ở trên tùy thuộc vào phiên bản Python bạn đã cài đặt. Đường dẫn cũng có thể là `\"/Applications/Python 3.9/\"` chẳng hạn.\n\n[Nhiều giải pháp khác nhau](https://stackoverflow.com/questions/27835619/urllib-and-ssl-certificate-verify-failed-error) cho vấn đề đã được đề xuất.\n\nMột thủ thuật mà một số người thấy hữu ích:\n\n```python\nimport urllib.request\nimport json\nimport ssl # add this library to your import section\n\ndef retrieve_all():\n    # add the following line to the beginning of all your functions\n    context = ssl._create_unverified_context()\n    # the rest of your function\n```\n\nMột cách giải quyết tiềm năng khác:\n\n```python\nimport urllib.request\nimport certifi # add this library to your import section\nimport json\n\ndef retrieve_all():\n    address = \"https://studies.cs.helsinki.fi/stats-mock/api/courses\"\n    # add a second argument to the function call\n    request = urllib.request.urlopen(address, cafile=certifi.where())\n    # the rest of your function\n```\n\n#### Truy xuất dữ liệu cho một khóa học\n\nMỗi khóa học cũng có URL riêng, nơi có sẵn dữ liệu hàng tuần cụ thể hơn về khóa học. Các URL tuân theo định dạng <https://studies.cs.helsinki.fi/stats-mock/api/courses/****/stats>, trong đó bạn sẽ thay thế các ngôi sao bằng nội dung của trường `name` cho khóa học bạn muốn truy cập.\n\nVí dụ: dữ liệu cho khóa học `docker2019` có tại địa chỉ <https://studies.cs.helsinki.fi/stats-mock/api/courses/docker2019/stats>.\n\nVui lòng viết một hàm có tên `retrieve_course(course_name: str)` để trả về số liệu thống kê cho khóa học đã chỉ định ở định dạng từ điển.\n\nVí dụ: lệnh gọi `retrieve_course(\"docker2019\")` sẽ trả về một từ điển có nội dung sau:\n\n<sample-output>\n\n<pre>\n{\n    'tuần': 4,\n    'sinh viên': 220,\n    'giờ': 5966,\n    'giờ_trung bình': 27,\n    'bài tập': 4988,\n    'bài tập_trung bình': 22\n}\n</pre>\n\n</sample-output>\n\nCác giá trị trong từ điển được xác định như sau:\n\n- `weeks`: số lượng ký tự đối tượng JSON được truy xuất\n- `students`: số lượng học viên tối đa trong tất cả các tuần\n- `hours`: tổng của tất cả các giá trị `hour_total` trong các tuần khác nhau\n- `hours_average`: lấy giá trị `hours` chia cho giá trị `students` (làm tròn xuống giá trị nguyên gần nhất)\n- `exercises`: tổng của tất cả các giá trị `exercise_total` trong các tuần khác nhau\n- `exercises_average`: lấy giá trị `exercises` chia cho giá trị `students` (làm tròn xuống giá trị nguyên gần nhất)\n\n**NB**: Xem các thông báo trong Phần 1 của bài tập vì chúng cũng được áp dụng ở đây.\n\n**NB2**: Mô-đun Python [math](https://docs.python.org/3/library/math.html) có chức năng hữu ích để làm tròn số nguyên."
+      },
+      "metadata": {
+        "exercise_id": "ex-part07-13_course_statistics",
+        "exercise_type": "programming-exercise",
+        "name": "Course statistics",
+        "tmc_name": "part07-13_course_statistics",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0033",
+      "type": "exercise",
+      "order": 33,
+      "source_hash": "15d8ec14def2bc61b2dc44558f8f9b4bb7be5e10d7948bff11c867dcc2d15383",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The file `start_times.csv` contains individual start times for a programming exam, in the format `name;hh:mm`. An example:\n\n```csv\njarmo;09:00\ntimo;18:42\nkalle;13:23\n```\n\nAdditionally, the file `submissions.csv` contains points and handin times for individual exercises. The format here is `name;task;points;hh:mm`. An example:\n\n```csv\njarmo;1;8;16:05\ntimo;2;10;21:22\njarmo;2;10;19:15\njne...\n```\n\nYour task is to find the students who spent over 3 hours on the exam tasks. That is, any student whose _any_ task was handed in over 3 hours later than their exam start time is labelled a cheater. There may be more than one submission for the same task for each student. You may assume all times are within the same day.\n\nPlease write a function named `cheaters()`, which returns a list containing the names of the students who cheated"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tệp `start_times.csv` chứa thời gian bắt đầu riêng lẻ cho kỳ thi lập trình, ở định dạng `name;hh:mm`. Một ví dụ:\n\n```csv\njarmo;09:00\ntimo;18:42\nkalle;13:23\n```\n\nNgoài ra, tệp `submissions.csv` còn chứa điểm và thời gian nộp bài cho từng bài tập. Định dạng ở đây là `name;task;points;hh:mm`. Một ví dụ:\n\n```csv\njarmo;1;8;16:05\ntimo;2;10;21:22\njarmo;2;10;19:15\njne...\n```\n\nNhiệm vụ của bạn là tìm những học sinh đã dành hơn 3 giờ để làm bài thi. Nghĩa là, bất kỳ học sinh nào có bài tập _bất kỳ_ nào được giao muộn hơn 3 giờ so với thời gian bắt đầu bài thi của họ đều bị coi là kẻ gian lận. Có thể có nhiều bài nộp cho cùng một nhiệm vụ cho mỗi học sinh. Bạn có thể cho rằng tất cả thời gian đều trong cùng một ngày.\n\nHãy viết hàm `cheaters()` trả về danh sách chứa tên những học sinh gian lận"
+      },
+      "metadata": {
+        "exercise_id": "ex-part07-14_who_cheated",
+        "exercise_type": "programming-exercise",
+        "name": "Who cheated",
+        "tmc_name": "part07-14_who_cheated",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0034",
+      "type": "exercise",
+      "order": 34,
+      "source_hash": "ae234708398d019445be10af905f6c699db022401baa0e1bfb8859cc910fc35b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You have the CSV files from the previous exercise at your disposal again. Please write a function named `final_points()`, which returns the final exam points received by the students, in a dictionary format, following these criteria:\n\n* If there are multiple submissions for the same task, the submission with the highest number of points is taken into account.\n* If the submission was made over 3 hours after the start time, the submission is ignored.\n\nThe tasks are numbered 1 to 8, and each submission is graded with 0 to 6 points.\n\nIn the dictionary returned the key should be the name of the student, and the value the total points received by the student.\n\nHint: nested dictionaries might be a good approach when processing the tasks and submission times of each student."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn có thể tùy ý sử dụng lại các tệp CSV từ bài tập trước. Vui lòng viết một hàm có tên `final_points()` để trả về điểm thi cuối kỳ mà học sinh nhận được ở định dạng từ điển, tuân theo các tiêu chí sau:\n\n* Nếu có nhiều bài nộp cho cùng một nhiệm vụ, bài nộp có số điểm cao nhất sẽ được tính.\n* Nếu việc gửi được thực hiện hơn 3 giờ sau thời gian bắt đầu, việc gửi sẽ bị bỏ qua.\n\nCác nhiệm vụ được đánh số từ 1 đến 8 và mỗi bài nộp được cho điểm từ 0 đến 6 điểm.\n\nTrong từ điển trả về, khóa phải là tên của học sinh và giá trị tổng số điểm mà học sinh đó nhận được.\n\nGợi ý: từ điển lồng nhau có thể là một cách tiếp cận tốt khi xử lý nhiệm vụ và thời gian nộp bài của mỗi học sinh."
+      },
+      "metadata": {
+        "exercise_id": "ex-part07-15_who_cheated_2",
+        "exercise_type": "programming-exercise",
+        "name": "Who cheated, version 2",
+        "tmc_name": "part07-15_who_cheated_2",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0035",
+      "type": "heading",
+      "order": 35,
+      "source_hash": "9bf754c1dd35d77dfb47cc47858600d383e73a27c368e9645b2f9f5c2bc2186a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Looking for modules"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đang tìm kiếm mô-đun"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "5c5b9e47e4e77aba19c4e94335a8c9fcab5a6f25d4c53fac19ac8a31b060e2aa",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The official Python documentation contains information on all modules available in the standard library:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tài liệu Python chính thức chứa thông tin về tất cả các mô-đun có sẵn trong thư viện chuẩn:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0037",
+      "type": "list",
+      "order": 37,
+      "source_hash": "4943e31d4c06ab4a86bf5e5eb1bdac2e93bee0f1a24cc4876cb2bf5f6f9ce589",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* https://docs.python.org/3/library/"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* https://docs.python.org/3/library/"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "c1dd22689e1308f099ecca4afc0673151ee538a1c3773c5b45efc019f94d25e5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In addition to the standard library, the internet is full of freely available Python modules for different purposes. Some commonly used modules are listed here:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ngoài thư viện tiêu chuẩn, internet còn có đầy đủ các mô-đun Python có sẵn miễn phí cho các mục đích khác nhau. Một số mô-đun thường được sử dụng được liệt kê ở đây:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0039",
+      "type": "list",
+      "order": 39,
+      "source_hash": "3b6fa3e006795e5300de058e4a97193d9a689d63a5e4f3779dc08308cc23b514",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* https://wiki.python.org/moin/UsefulModules"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* https://wiki.python.org/moin/UsefulModules"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0040",
+      "type": "exercise",
+      "order": 40,
+      "source_hash": "ab62d3afa7f320fbc0a8f9eae4a496b7e7d4089b1131ae80038520800f68b59f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In this exercise you will write an improved version of the Spell checker from the [previous part](/part-6/1-reading-files).\n\nJust like in the previous version, the program should ask the user to type in a line of text. Your program should then perform a spell check, and print out feedback to the user, so that all misspelled words have stars around them. Additionally, _the program should print out a list of suggestions for the misspelled words_.\n\nPlease have a look at the following two examples.\n\n<sample-output>\n\nwrite text: **We use ptython to make a spell checker**\n<pre>\nWe use *ptython* to make a spell checker\nsuggestions:\nptython: python, pythons, typhon\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nwrite text: **this is acually a good and usefull program**\n<pre>\nthis is *acually* a good and *usefull* program\nsuggestions:\nacually: actually, tactually, factually\nusefull: usefully, useful, museful\n</pre>\n\n</sample-output>\n\nThe suggestions should be determined with the function [get\\_close\\_matches](https://docs.python.org/3/library/difflib.html#difflib.get_close_matches) from the Python standard library module [difflib](https://docs.python.org/3/library/difflib.html).\n\n**NB**: For the automatic tests to work correctly, please use the function with the \"default settings\". That is, please pass only two arguments to the function: the misspelled word, and the word list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong bài tập này, bạn sẽ viết phiên bản cải tiến của Trình kiểm tra chính tả từ [phần trước](/part-6/1-reading-files).\n\nCũng giống như phiên bản trước, chương trình sẽ yêu cầu người dùng nhập một dòng văn bản. Sau đó, chương trình của bạn sẽ thực hiện kiểm tra chính tả và in ra phản hồi cho người dùng để tất cả các từ sai chính tả đều có dấu sao xung quanh chúng. Ngoài ra, _chương trình sẽ in ra danh sách gợi ý các từ sai chính tả_.\n\nMời các bạn xem hai ví dụ sau.\n\n<sample-output>\n\nviết văn bản: **Chúng tôi sử dụng ptython để kiểm tra chính tả**\n<pre>\nChúng tôi sử dụng *ptython* để kiểm tra chính tả\ngợi ý:\nptython: trăn, trăn, typhon\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nviết văn bản: **đây thực sự là một chương trình hay và hữu ích**\n<pre>\nđây *thực sự* là một chương trình tốt và *hữu ích*\ngợi ý:\nacually: thực sự, thực tế, thực tế\nhữu ích: hữu ích, hữu ích, đáng suy ngẫm\n</pre>\n\n</sample-output>\n\nCác đề xuất phải được xác định bằng hàm [get\\_close\\_matches](https://docs.python.org/3/library/difflib.html#difflib.get_close_matches) từ mô-đun thư viện chuẩn Python [difflib](https://docs.python.org/3/library/difflib.html).\n\n**NB**: Để các bài kiểm tra tự động hoạt động chính xác, vui lòng sử dụng chức năng với \"cài đặt mặc định\". Nghĩa là, vui lòng chỉ truyền hai đối số cho hàm: từ sai chính tả và danh sách từ."
+      },
+      "metadata": {
+        "exercise_id": "ex-part07-16_spellchecker_2",
+        "exercise_type": "programming-exercise",
+        "name": "Spell checker, version 2",
+        "tmc_name": "part07-16_spellchecker_2",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "abff66d5c3b87e785a9f5858aa4a5a727e09e7c3dc5b12c46f58c801eff70b2f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!---"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!---"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-4-data-processing-0042",
+      "type": "quiz",
+      "order": 42,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "311e3116-a763-50b5-b79e-056fdccb3394",
+        "attributes": {
+          "id": "311e3116-a763-50b5-b79e-056fdccb3394"
+        }
+      }
+    },
+    {
+      "id": "blk-part07-4-data-processing-0043",
+      "type": "paragraph",
+      "order": 43,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "-->"
+      },
+      "metadata": {}
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part10-09_iterable_shopping_list",
+  "lesson_id": "part10-3-oo-programming-techniques",
+  "part": 10,
+  "tmc_name": "part10-09_iterable_shopping_list",
+  "title_original": "An iterable shopping list",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The exercise template contains the `ShoppingList` class from the [exercise in part 8](/part-8/2-classes-and-objects#programming-exercise-shopping-list). Please adjust the class so that it is iterable and can thus be used as follows:\n\n```python\nshopping_list = ShoppingList()\nshopping_list.add(\"bananas\", 10)\nshopping_list.add(\"apples\", 5)\nshopping_list.add(\"pineapple\", 1)\n\nfor product in shopping_list:\n    print(f\"{product[0]}: {product[1]} units\")\n```\n\n<sample-output>\n\nbananas: 10 units\napples: 5 units\npineapple: 1 units\n\n</sample-output>\n\nThe `__next__` method of your iterator should return tuples, where the first item is the name of the product and the second item is the amount.",
+  "description_vi": "",
+  "starter_code": "shopping_list = ShoppingList()\nshopping_list.add(\"bananas\", 10)\nshopping_list.add(\"apples\", 5)\nshopping_list.add(\"pineapple\", 1)\n\nfor product in shopping_list:\n    print(f\"{product[0]}: {product[1]} units\")",
+  "grading_data_available": false,
+  "source_hash": "d4e530fb2fc4681a2f3dc53c7c42b0e21e47b1b0c3dabac783b11847275bc19a",
+  "order": 62
+}

@@ -1,0 +1,33 @@
+{
+  "id": "page-all-exercises",
+  "slug": "all-exercises",
+  "title_original": "All exercises",
+  "title_vi": "",
+  "path": "/all-exercises",
+  "source_path": "data/all-exercises.md",
+  "source_hash": "665c9027cadeb9ac9d65e4323e97672a6720042a79aaa6c4e87782111acc8a3c",
+  "blocks_count": 1,
+  "blocks": [
+    {
+      "id": "blk-page-all-exercises-0001",
+      "type": "custom_component",
+      "order": 1,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "component_name": "exercises-in-all-sections",
+        "attributes": {},
+        "raw_source": "<exercises-in-all-sections></exercises-in-all-sections>",
+        "parsed": true
+      }
+    }
+  ]
+}

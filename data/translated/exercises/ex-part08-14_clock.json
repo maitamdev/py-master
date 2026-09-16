@@ -1,0 +1,16 @@
+{
+  "id": "ex-part08-14_clock",
+  "lesson_id": "part08-5-more-examples-of-classes",
+  "part": 8,
+  "tmc_name": "part08-14_clock",
+  "title_original": "Clock",
+  "title_vi": "Cái đồng hồ",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please define a new class named `Clock` which expands on the capabilities of your `Stopwatch` class. It should work as follows:\n\n```python\nclock = Clock(23, 59, 55)\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\n\nclock.set(12, 5)\nprint(clock)\n```\n\n<sample-output>\n23:59:55\n23:59:56\n23:59:57\n23:59:58\n23:59:59\n00:00:00\n00:00:01\n12:05:00\n</sample-output>\n\nAs you can see above, the constructor should take initial values for the hours, minutes and seconds as arguments, and set these appropriately. The `tick` method adds one second to the clock. The `set` method sets new values for the hours and the minutes, and _sets the seconds to zero_.",
+  "description_vi": "Vui lòng xác định một lớp mới có tên `Clock` để mở rộng khả năng của lớp `Stopwatch` của bạn. Nó sẽ hoạt động như sau:\n\n```python\nclock = Clock(23, 59, 55)\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\n\nclock.set(12, 5)\nprint(clock)\n```\n\n<sample-output>\n23:59:55\n23:59:56\n23:59:57\n23:59:58\n23:59:59\n00:00:00\n00:00:01\n12:05:00\n</sample-output>\n\nNhư bạn có thể thấy ở trên, hàm tạo nên lấy các giá trị ban đầu cho giờ, phút và giây làm đối số và đặt các giá trị này một cách thích hợp. Phương pháp `tick` thêm một giây vào đồng hồ. Phương thức `set` đặt giá trị mới cho giờ và phút và _đặt giây về 0_.",
+  "starter_code": "clock = Clock(23, 59, 55)\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\n\nclock.set(12, 5)\nprint(clock)",
+  "grading_data_available": false,
+  "source_hash": "32f2fe540a5067836ad0ad55f6157966480ce5736fb5617cd6433c306a9dd0ab",
+  "order": 27
+}

@@ -1,0 +1,146 @@
+{
+  "id": "page-error_messages",
+  "slug": "error_messages",
+  "title_original": "Common error messages",
+  "path": "/error_messages",
+  "source_path": "data/error_messages.md",
+  "source_hash": "1d6b120c224703f83b7a3ebc9d44cc921cb60651db863cb8d50cdd696c9ed023",
+  "frontmatter": {
+    "path": "/error_messages",
+    "title": "Common error messages",
+    "hidden": false,
+    "information_page": true,
+    "sidebar_priority": 2000,
+    "separator_after": "Introduction to Programming"
+  },
+  "chunks_count": 23,
+  "raw_chunks": [
+    {
+      "raw_type": "paragraph",
+      "content": "This page contains information about the most common error messages you may come across when completing the programming exercises on this course.",
+      "raw_source": "This page contains information about the most common error messages you may come across when completing the programming exercises on this course."
+    },
+    {
+      "raw_type": "heading",
+      "level": 3,
+      "content": "My printout looks identical to the example in the instructions, but my submission still fails",
+      "raw_source": "### My printout looks identical to the example in the instructions, but my submission still fails"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Make sure your program doesn't print any extra whitespace, such as space characters. Notice that the default behaviour of the `print` function is to add a space between any strings separated with a comma.",
+      "raw_source": "Make sure your program doesn't print any extra whitespace, such as space characters. Notice that the default behaviour of the `print` function is to add a space between any strings separated with a comma."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    print(\"Hello\",\"World!\")    # This prints out: Hello World!",
+      "raw_source": "```python\n    print(\"Hello\",\"World!\")    # This prints out: Hello World!\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 3,
+      "content": "SyntaxError: bad input on line [line number]",
+      "raw_source": "### SyntaxError: bad input on line [line number]"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This error message usually appears when there is a typo in your code which the Python interpreter finds hard to classify more specifically. For example, there may be a colon character missing from the end of an `if` statement, or a keyword, such as `while`, may have been misspelled. The only way to fix this problem is to inspect the line indicated in the error message.",
+      "raw_source": "This error message usually appears when there is a typo in your code which the Python interpreter finds hard to classify more specifically. For example, there may be a colon character missing from the end of an `if` statement, or a keyword, such as `while`, may have been misspelled. The only way to fix this problem is to inspect the line indicated in the error message."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    number1 = 1\n    number1 = 2\n    if number1 < number2    # ':' missing\n        print('number2 is greater')",
+      "raw_source": "```python\n    number1 = 1\n    number1 = 2\n    if number1 < number2    # ':' missing\n        print('number2 is greater')\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the line indicated in the error message looks correct, the error may often be one line above or below the line indicated, so check around the issue, too.",
+      "raw_source": "If the line indicated in the error message looks correct, the error may often be one line above or below the line indicated, so check around the issue, too."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "**NB: The programming exercises in the early parts of this course use a framework called Skulpt to run Python code in the browser.** Skulpt is quite limited compared to a regular Python interpreter, and thus the error messages printed out are often less informative. For example, the `bad input on line` error message may refer to many different programming errors, and it is difficult to find out the true cause of the error just based on this message.",
+      "raw_source": "**NB: The programming exercises in the early parts of this course use a framework called Skulpt to run Python code in the browser.** Skulpt is quite limited compared to a regular Python interpreter, and thus the error messages printed out are often less informative. For example, the `bad input on line` error message may refer to many different programming errors, and it is difficult to find out the true cause of the error just based on this message."
+    },
+    {
+      "raw_type": "heading",
+      "level": 3,
+      "content": "SyntaxError: unindent does not match any outer indentation level on line [line number]",
+      "raw_source": "### SyntaxError: unindent does not match any outer indentation level on line [line number]"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Your code is indented incorrectly at the line indicated in the error message. For example, all lines within an `if` block must be indented the same. To fix this error, indent all lines within a block of code with the exact same amount of whitespace.\nThe following code would cause this error:",
+      "raw_source": "Your code is indented incorrectly at the line indicated in the error message. For example, all lines within an `if` block must be indented the same. To fix this error, indent all lines within a block of code with the exact same amount of whitespace.\nThe following code would cause this error:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    if True:\n        print('Indented correctly')\n       print('Indented incorrectly!')",
+      "raw_source": "```python\n    if True:\n        print('Indented correctly')\n       print('Indented incorrectly!')\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 3,
+      "content": "NameError: name [variable name] is not defined on line [line number]",
+      "raw_source": "### NameError: name [variable name] is not defined on line [line number]"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You are trying to refer to a variable or object which does not exist at that specific point in your program. It may be that the variable has not yet been assigned a value, or there is a typo in the variable name. It may also be the case that you have defined a variable inside a function, and are trying to refer to that same variable outside the function.",
+      "raw_source": "You are trying to refer to a variable or object which does not exist at that specific point in your program. It may be that the variable has not yet been assigned a value, or there is a typo in the variable name. It may also be the case that you have defined a variable inside a function, and are trying to refer to that same variable outside the function."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    person = input('Please type in your name: ')\n    input('Please type in your age: ')\n\n    print(\"Hi\", pearson)                # error: person was typed pearson\n    print(\"You are\", age, \"years old\")  # error: the variable age has not been defined",
+      "raw_source": "```python\n    person = input('Please type in your name: ')\n    input('Please type in your age: ')\n\n    print(\"Hi\", pearson)                # error: person was typed pearson\n    print(\"You are\", age, \"years old\")  # error: the variable age has not been defined\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 3,
+      "content": "TypeError: unsupported operand type(s) for Add: 'int' and 'str' on line [line number]",
+      "raw_source": "### TypeError: unsupported operand type(s) for Add: 'int' and 'str' on line [line number]"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You may be trying to add an integer and a string together, without first converting the string into an integer value. Strings can be converted into integers with the `int()` function. A similar error message may appear if you try to perform other arithmetic operations, such as division or subtraction, on strings.",
+      "raw_source": "You may be trying to add an integer and a string together, without first converting the string into an integer value. Strings can be converted into integers with the `int()` function. A similar error message may appear if you try to perform other arithmetic operations, such as division or subtraction, on strings."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It may also be the case that you are trying to create a new string by combining a string and an integer. You should first convert the integer into a string with the `str()` function.",
+      "raw_source": "It may also be the case that you are trying to create a new string by combining a string and an integer. You should first convert the integer into a string with the `str()` function."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    my_age = input(\"Please type in your age: \")\n    my_name = input(\"Please type in your name: \")\n\n    print(my_age//2)   # error: the variable my_age has not been converted into an integer",
+      "raw_source": "```python\n    my_age = input(\"Please type in your age: \")\n    my_name = input(\"Please type in your name: \")\n\n    print(my_age//2)   # error: the variable my_age has not been converted into an integer\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 3,
+      "content": "TypeError: cannot concatenate 'str' and 'int' objects on line [line number]",
+      "raw_source": "### TypeError: cannot concatenate 'str' and 'int' objects on line [line number]"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "See above.",
+      "raw_source": "See above."
+    },
+    {
+      "raw_type": "heading",
+      "level": 3,
+      "content": "Pylance is crashing",
+      "raw_source": "### Pylance is crashing"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This is usually caused by the TMC plugin having too many exercises open at the same time. You can try closing unused exercises from the TMC menu in the VS code sidebar.\nClick the TMC menu open, under my courses open the courses you have, and click on \"close all\" on parts which you are no longer working on.\nYou can always reopen the exercises if you decide to return to the part.",
+      "raw_source": "This is usually caused by the TMC plugin having too many exercises open at the same time. You can try closing unused exercises from the TMC menu in the VS code sidebar.\nClick the TMC menu open, under my courses open the courses you have, and click on \"close all\" on parts which you are no longer working on.\nYou can always reopen the exercises if you decide to return to the part."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part11-14_recursive_sum",
+  "lesson_id": "part11-3-recursion",
+  "part": 11,
+  "tmc_name": "part11-14_recursive_sum",
+  "title_original": "Recursive sum",
+  "title_vi": "Tổng đệ quy",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a recursive function named `recursive_sum(number: int)` which calculates the sum `1 + 2 + ... + number`. The exercise template contains the following outline:\n\n```python\ndef recursive_sum(number: int):\n    # if the number is 1, there is nothing else to add\n    if number <= 1:\n        return number\n\n    # fill in the rest of the function\n```\n\nSome examples:\n\n```python\nresult = recursive_sum(3)\nprint(result)\n\nprint(recursive_sum(5))\nprint(recursive_sum(10))\n```\n\n<sample-output>\n\n6\n15\n55\n\n</sample-output>",
+  "description_vi": "Hãy viết hàm đệ quy có tên `recursive_sum(number: int)` để tính tổng `1 + 2 + ... + number`. Mẫu bài tập có dàn ý sau:\n\n```python\ndef recursive_sum(number: int):\n    # if the number is 1, there is nothing else to add\n    if number <= 1:\n        return number\n\n    # fill in the rest of the function\n```\n\nMột số ví dụ:\n\n```python\nresult = recursive_sum(3)\nprint(result)\n\nprint(recursive_sum(5))\nprint(recursive_sum(10))\n```\n\n<sample-output>\n\n6\n15\n55\n\n</sample-output>",
+  "starter_code": "def recursive_sum(number: int):\n    # if the number is 1, there is nothing else to add\n    if number <= 1:\n        return number\n\n    # fill in the rest of the function",
+  "grading_data_available": false,
+  "source_hash": "292437168b050afe4e3d124b70d46a601e68994b02ae2f2779a0ae6edb7dbf2f",
+  "order": 43
+}

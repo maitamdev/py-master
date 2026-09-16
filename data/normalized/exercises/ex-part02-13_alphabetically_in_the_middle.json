@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-13_alphabetically_in_the_middle",
+  "lesson_id": "part02-3-combining-conditions",
+  "part": 2,
+  "tmc_name": "part02-13_alphabetically_in_the_middle",
+  "title_original": "Alphabetically in the middle",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for three letters. The program should then print out whichever of the three letters would be in the middle if the letters were in alphabetical order.\n\nYou may assume the letters will be either all uppercase, or all lowercase.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\n1st letter: x\n2nd letter: c\n3rd letter: p\nThe letter in the middle is p\n\n</sample-output>\n\n<sample-output>\n\n1st letter: C\n2nd letter: B\n3rd letter: A\nThe letter in the middle is B\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "6f6d323e7e6f881213bf30bf5a2f4607b4f35ebab51913b58d6211a7a7b67b42",
+  "order": 35
+}

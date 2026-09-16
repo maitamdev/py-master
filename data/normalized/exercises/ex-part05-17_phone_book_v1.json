@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-17_phone_book_v1",
+  "lesson_id": "part05-3-dictionary",
+  "part": 5,
+  "tmc_name": "part05-17_phone_book_v1",
+  "title_original": "Phone book, version 1",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a phone book application. It should work as follows:\n\n<sample-output>\n\ncommand (1 search, 2 add, 3 quit): **2**\nname: **peter**\nnumber: **040-5466745**\nok!\ncommand (1 search, 2 add, 3 quit): **2**\nname: **emily**\nnumber: **045-1212344**\nok!\ncommand (1 search, 2 add, 3 quit): **1**\nname: **peter**\n040-5466745\ncommand (1 search, 2 add, 3 quit): **1**\nname: **mary**\nno number\ncommand (1 search, 2 add, 3 quit): **2**\nname: **peter**\nnumber: **09-22223333**\nok!\ncommand (1 search, 2 add, 3 quit): **1**\nname: **peter**\n09-22223333\ncommand (1 search, 2 add, 3 quit): **3**\nquitting...\n\n</sample-output>\n\nAs you can see above, each name can be attached to a single number only. If a new entry with the same name is added, the number attached to the old entry is replaced with the new number.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "43f89b431e51f012f4ce8cbe0290c30a4448984c8eda78b9e134eb40b9a9d1a2",
+  "order": 50
+}

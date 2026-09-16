@@ -1,0 +1,16 @@
+{
+  "id": "ex-part09-12_service_charge",
+  "lesson_id": "part09-4-scope-of-methods",
+  "part": 9,
+  "tmc_name": "part09-12_service_charge",
+  "title_original": "Service charge",
+  "title_vi": "Phí dịch vụ",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please create a class named `BankAccount` which models a bank account. The class should contain \n\n* a constructor which takes the name of the owner (str), account number (str) and balance (float) as arguments\n* a method `deposit(amount: float)` for depositing money to the account\n* a method `withdraw(amount: float)` for withdrawing money from the account\n* a getter method `balance` which returns the balance of the account\n\nThe class should also contain the private method\n\n* `__service_charge()`, which decreases the balance on the account by one percent. Whenever either of the methods `deposit` or `withdraw` is called, this method should also be called. The service charge is calculated and subtracted only after the actual operation is completed (that is, after the amount specified has been added to or subtracted from the balance).\n\nAll data attributes within the class definition should be private.\n\nYou may use the following code for testing your class:\n\n```python\naccount = BankAccount(\"Randy Riches\", \"12345-6789\", 1000)\naccount.withdraw(100)\nprint(account.balance)\naccount.deposit(100)\nprint(account.balance)\n\n```\n\n<sample-output>\n\n891.0\n981.09\n\n</sample-output>",
+  "description_vi": "Vui lòng tạo một lớp có tên `BankAccount` để mô hình hóa tài khoản ngân hàng. Lớp nên chứa \n\n* một hàm tạo lấy tên chủ sở hữu (str), số tài khoản (str) và số dư (float) làm đối số\n* phương thức `deposit(amount: float)` để gửi tiền vào tài khoản\n* phương thức `withdraw(amount: float)` để rút tiền từ tài khoản\n* một phương thức getter `balance` trả về số dư tài khoản\n\nLớp cũng nên chứa phương thức riêng tư\n\n* `__service_charge()`, làm giảm số dư trên tài khoản xuống 1%. Bất cứ khi nào một trong hai phương thức `deposit` hoặc `withdraw` được gọi thì phương thức này cũng phải được gọi. Phí dịch vụ chỉ được tính và trừ sau khi hoạt động thực tế hoàn thành (nghĩa là sau khi số tiền được chỉ định đã được cộng hoặc trừ khỏi số dư).\n\nTất cả các thuộc tính dữ liệu trong định nghĩa lớp phải ở chế độ riêng tư.\n\nBạn có thể sử dụng đoạn mã sau để kiểm tra lớp của mình:\n\n```python\naccount = BankAccount(\"Randy Riches\", \"12345-6789\", 1000)\naccount.withdraw(100)\nprint(account.balance)\naccount.deposit(100)\nprint(account.balance)\n\n```\n\n<sample-output>\n\n891.0\n981.09\n\n</sample-output>",
+  "starter_code": "account = BankAccount(\"Randy Riches\", \"12345-6789\", 1000)\naccount.withdraw(100)\nprint(account.balance)\naccount.deposit(100)\nprint(account.balance)\n",
+  "grading_data_available": false,
+  "source_hash": "ee172c2e375a2d42ac941819edc430b7671f56008d0aa05bae5d6a1bf8d2e3ba",
+  "order": 20
+}

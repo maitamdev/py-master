@@ -1,0 +1,283 @@
+{
+  "id": "part13-3-events",
+  "part": 13,
+  "part_slug": "part-13",
+  "slug": "3-events",
+  "is_part_index": false,
+  "title_original": "Events",
+  "path": "/part-13/3-events",
+  "source_path": "data/part-13/3-events.md",
+  "source_hash": "c10e79dd2d634aaa895f930b366099b19233180b8f080c99620aad0ed0fdd3c6",
+  "frontmatter": {
+    "path": "/part-13/3-events",
+    "title": "Events",
+    "hidden": false
+  },
+  "chunks_count": 43,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will be familiar with pygame events\n- You will be able to write a program which reacts to key presses\n- You will be able to write a program which reacts to mouse events",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will be familiar with pygame events\n- You will be able to write a program which reacts to key presses\n- You will be able to write a program which reacts to mouse events\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Thus far our main loops have only executed predetermined animations and reacted to only `pygame.QUIT` type events, even though the loop gets a list of all events from the operating system. Let's get to grips with some other types of events, then.",
+      "raw_source": "Thus far our main loops have only executed predetermined animations and reacted to only `pygame.QUIT` type events, even though the loop gets a list of all events from the operating system. Let's get to grips with some other types of events, then."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Handling events",
+      "raw_source": "## Handling events"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This program prints out information about all the events passed by the operating system to the pygame program, while it is running:",
+      "raw_source": "This program prints out information about all the events passed by the operating system to the pygame program, while it is running:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nwhile True:\n    for event in pygame.event.get():\n        print(event)\n        if event.type == pygame.QUIT:\n            exit()",
+      "raw_source": "```python\nimport pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nwhile True:\n    for event in pygame.event.get():\n        print(event)\n        if event.type == pygame.QUIT:\n            exit()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's assume the program was left running for a while, and then the exit button was clicked. The program prints out the following info:",
+      "raw_source": "Let's assume the program was left running for a while, and then the exit button was clicked. The program prints out the following info:"
+    },
+    {
+      "raw_type": "code",
+      "language": "x",
+      "code": "<Event(4-MouseMotion {'pos': (495, 274), 'rel': (495, 274), 'buttons': (0, 0, 0), 'window': None})>\n<Event(4-MouseMotion {'pos': (494, 274), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'window': None})>\n<Event(4-MouseMotion {'pos': (492, 274), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'window': None})>\n<Event(4-MouseMotion {'pos': (491, 274), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'window': None})>\n<Event(5-MouseButtonDown {'pos': (491, 274), 'button': 1, 'window': None})>\n<Event(6-MouseButtonUp {'pos': (491, 274), 'button': 1, 'window': None})>\n<Event(2-KeyDown {'unicode': 'a', 'key': 97, 'mod': 0, 'scancode': 38, 'window': None})>\n<Event(3-KeyUp {'key': 97, 'mod': 0, 'scancode': 38, 'window': None})>\n<Event(2-KeyDown {'unicode': 'b', 'key': 98, 'mod': 0, 'scancode': 56, 'window': None})>\n<Event(3-KeyUp {'key': 98, 'mod': 0, 'scancode': 56, 'window': None})>\n<Event(2-KeyDown {'unicode': 'c', 'key': 99, 'mod': 0, 'scancode': 54, 'window': None})>\n<Event(3-KeyUp {'key': 99, 'mod': 0, 'scancode': 54, 'window': None})>\n<Event(12-Quit {})>",
+      "raw_source": "```x\n<Event(4-MouseMotion {'pos': (495, 274), 'rel': (495, 274), 'buttons': (0, 0, 0), 'window': None})>\n<Event(4-MouseMotion {'pos': (494, 274), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'window': None})>\n<Event(4-MouseMotion {'pos': (492, 274), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'window': None})>\n<Event(4-MouseMotion {'pos': (491, 274), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'window': None})>\n<Event(5-MouseButtonDown {'pos': (491, 274), 'button': 1, 'window': None})>\n<Event(6-MouseButtonUp {'pos': (491, 274), 'button': 1, 'window': None})>\n<Event(2-KeyDown {'unicode': 'a', 'key': 97, 'mod': 0, 'scancode': 38, 'window': None})>\n<Event(3-KeyUp {'key': 97, 'mod': 0, 'scancode': 38, 'window': None})>\n<Event(2-KeyDown {'unicode': 'b', 'key': 98, 'mod': 0, 'scancode': 56, 'window': None})>\n<Event(3-KeyUp {'key': 98, 'mod': 0, 'scancode': 56, 'window': None})>\n<Event(2-KeyDown {'unicode': 'c', 'key': 99, 'mod': 0, 'scancode': 54, 'window': None})>\n<Event(3-KeyUp {'key': 99, 'mod': 0, 'scancode': 54, 'window': None})>\n<Event(12-Quit {})>\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The first few events concern mouse usage, ten there are some events from the keyboard, and finally the last event closes the program. Each event has at least a type, but they may also offer some other identifying info, such as the location of the mouse cursor or the key that was pressed.",
+      "raw_source": "The first few events concern mouse usage, ten there are some events from the keyboard, and finally the last event closes the program. Each event has at least a type, but they may also offer some other identifying info, such as the location of the mouse cursor or the key that was pressed."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You can look for event descriptions in the [pygame documentation](https://www.pygame.org/docs/ref/event.html), but it can sometimes be easier to print out events with the code above, and look for the event that occurs when something you want to react to happens.",
+      "raw_source": "You can look for event descriptions in the [pygame documentation](https://www.pygame.org/docs/ref/event.html), but it can sometimes be easier to print out events with the code above, and look for the event that occurs when something you want to react to happens."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Keyboard events",
+      "raw_source": "## Keyboard events"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This program can process events where the user presses the arrow key either to the right or to the left on their keyboard. The program prints out which key was pressed.",
+      "raw_source": "This program can process events where the user presses the arrow key either to the right or to the left on their keyboard. The program prints out which key was pressed."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_LEFT:\n                print(\"left\")\n            if event.key == pygame.K_RIGHT:\n                print(\"right\")\n\n        if event.type == pygame.QUIT:\n            exit()",
+      "raw_source": "```python\nimport pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_LEFT:\n                print(\"left\")\n            if event.key == pygame.K_RIGHT:\n                print(\"right\")\n\n        if event.type == pygame.QUIT:\n            exit()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The constants `pygame.K_LEFT` and `pygame.K_RIGHT` refer to the arrow keys to the left and right. The pgyame key constants for the different keys on a keyboard are listed in the [pygame documentation](https://www.pygame.org/docs/ref/key.html#key-constants-label).",
+      "raw_source": "The constants `pygame.K_LEFT` and `pygame.K_RIGHT` refer to the arrow keys to the left and right. The pgyame key constants for the different keys on a keyboard are listed in the [pygame documentation](https://www.pygame.org/docs/ref/key.html#key-constants-label)."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "For example, if the user presses the arrow key to the right twice, then the left one once, and then the right one once more, the program prints out",
+      "raw_source": "For example, if the user presses the arrow key to the right twice, then the left one once, and then the right one once more, the program prints out"
+    },
+    {
+      "raw_type": "code",
+      "language": "x",
+      "code": "right\nright\nleft\nright",
+      "raw_source": "```x\nright\nright\nleft\nright\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We now have all the tools needed to move a character, or _sprite_, on the screen to the right and left with the arrow keys. The following code will achieve this:",
+      "raw_source": "We now have all the tools needed to move a character, or _sprite_, on the screen to the right and left with the arrow keys. The following code will achieve this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\nx = 0\ny = 480-robot.get_height()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_LEFT:\n                x -= 10\n            if event.key == pygame.K_RIGHT:\n                x += 10\n\n        if event.type == pygame.QUIT:\n            exit()\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()",
+      "raw_source": "```python\nimport pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\nx = 0\ny = 480-robot.get_height()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_LEFT:\n                x -= 10\n            if event.key == pygame.K_RIGHT:\n                x += 10\n\n        if event.type == pygame.QUIT:\n            exit()\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Depending on how you use your arrow keys, running the program could look like this:",
+      "raw_source": "Depending on how you use your arrow keys, running the program could look like this:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "pygame_move_robot.gif"
+      },
+      "raw_source": "<img src=\"pygame_move_robot.gif\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the code above we have the variables `x` and `y` which contain the coordinate location for the sprite. The variable `y` is set so that the sprite appears at the bottom of the window. The `y` value does not change throughout the execution of the program. The `x` value, however, increases by 10 whenever the user presses the arrow key to the right, and decreases by 10 whenever the left arrow key is pressed.",
+      "raw_source": "In the code above we have the variables `x` and `y` which contain the coordinate location for the sprite. The variable `y` is set so that the sprite appears at the bottom of the window. The `y` value does not change throughout the execution of the program. The `x` value, however, increases by 10 whenever the user presses the arrow key to the right, and decreases by 10 whenever the left arrow key is pressed."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The program works otherwise quite well, but the key needs to be pressed again each time we want to move again. It would be better if the movement was continuous as the key was held down. The following program offfers this functionality:",
+      "raw_source": "The program works otherwise quite well, but the key needs to be pressed again each time we want to move again. It would be better if the movement was continuous as the key was held down. The following program offfers this functionality:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\nx = 0\ny = 480-robot.get_height()\n\nto_right = False\nto_left = False\n\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_LEFT:\n                to_left = True\n            if event.key == pygame.K_RIGHT:\n                to_right = True\n\n        if event.type == pygame.KEYUP:\n            if event.key == pygame.K_LEFT:\n                to_left = False\n            if event.key == pygame.K_RIGHT:\n                to_right = False\n\n        if event.type == pygame.QUIT:\n            exit()\n\n    if to_right:\n        x += 2\n    if to_left:\n        x -= 2\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()\n\n    clock.tick(60)",
+      "raw_source": "```python\nimport pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\nx = 0\ny = 480-robot.get_height()\n\nto_right = False\nto_left = False\n\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_LEFT:\n                to_left = True\n            if event.key == pygame.K_RIGHT:\n                to_right = True\n\n        if event.type == pygame.KEYUP:\n            if event.key == pygame.K_LEFT:\n                to_left = False\n            if event.key == pygame.K_RIGHT:\n                to_right = False\n\n        if event.type == pygame.QUIT:\n            exit()\n\n    if to_right:\n        x += 2\n    if to_left:\n        x -= 2\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()\n\n    clock.tick(60)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The code now contains the variables `to_right` and `to_left`. These contain knowledge of whether the sprite should be moving to the right or to the left at any given moment. When the user presses down an arrow key, the value stored in the relevant variable become `True`. When the key is released, the value changes to `False`.",
+      "raw_source": "The code now contains the variables `to_right` and `to_left`. These contain knowledge of whether the sprite should be moving to the right or to the left at any given moment. When the user presses down an arrow key, the value stored in the relevant variable become `True`. When the key is released, the value changes to `False`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The clock is used to time the movements of the sprite, so that they potentially happen 60 times each second. If an arrow key is pressed, the sprite moves two pixels to the right or to the left. This means the sprite moves 120 pixels per second if the key is kept pressed down.",
+      "raw_source": "The clock is used to time the movements of the sprite, so that they potentially happen 60 times each second. If an arrow key is pressed, the sprite moves two pixels to the right or to the left. This means the sprite moves 120 pixels per second if the key is kept pressed down."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Four directions",
+        "tmcname": "part13-11_four_directions"
+      },
+      "inner_content": "Please write a program where the player can move a robot in four directions with the arrow keys on the keyboard. The end result should look like this:\n\n<img src=\"pygame_four_directions.gif\">",
+      "raw_source": "<programming-exercise name='Four directions' tmcname='part13-11_four_directions'>\n\nPlease write a program where the player can move a robot in four directions with the arrow keys on the keyboard. The end result should look like this:\n\n<img src=\"pygame_four_directions.gif\">\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Four walls",
+        "tmcname": "part13-12_four_walls"
+      },
+      "inner_content": "Please improve the program in the previous exercise so that the robot cannot pass outside the window in any of the four directions. The end result should look like this:\n\n<img src=\"pygame_four_walls.gif\">",
+      "raw_source": "<programming-exercise name='Four walls' tmcname='part13-12_four_walls'>\n\nPlease improve the program in the previous exercise so that the robot cannot pass outside the window in any of the four directions. The end result should look like this:\n\n<img src=\"pygame_four_walls.gif\">\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Two players",
+        "tmcname": "part13-13_two_players"
+      },
+      "inner_content": "Please write a program where two players each direct their own robot. One of the players should use the arrow keys while the other could use, for example, the w-s-a-d keys. The end result should look like this:\n\n<img src=\"pygame_two_players.gif\">",
+      "raw_source": "<programming-exercise name='Two players' tmcname='part13-13_two_players'>\n\nPlease write a program where two players each direct their own robot. One of the players should use the arrow keys while the other could use, for example, the w-s-a-d keys. The end result should look like this:\n\n<img src=\"pygame_two_players.gif\">\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Mouse events",
+      "raw_source": "## Mouse events"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following code reacts to events where a mouse button is pressed down while the cursor is within the window area:",
+      "raw_source": "The following code reacts to events where a mouse button is pressed down while the cursor is within the window area:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.MOUSEBUTTONDOWN:\n            print(\"you pressed the button number\", event.button, \"at location\", event.pos)\n\n        if event.type == pygame.QUIT:\n            exit()",
+      "raw_source": "```python\nimport pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.MOUSEBUTTONDOWN:\n            print(\"you pressed the button number\", event.button, \"at location\", event.pos)\n\n        if event.type == pygame.QUIT:\n            exit()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The execution of this program should look more or less like this:",
+      "raw_source": "The execution of this program should look more or less like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "x",
+      "code": "you pressed the button number 1 at location (82, 135)\nyou pressed the button number 1 at location (369, 135)\nyou pressed the button number 1 at location (269, 297)\nyou pressed the button number 3 at location (515, 324)",
+      "raw_source": "```x\nyou pressed the button number 1 at location (82, 135)\nyou pressed the button number 1 at location (369, 135)\nyou pressed the button number 1 at location (269, 297)\nyou pressed the button number 3 at location (515, 324)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Button number 1 refers to the left mouse button and button number 3 refers to the right mouse button.",
+      "raw_source": "Button number 1 refers to the left mouse button and button number 3 refers to the right mouse button."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This next program combines mouse event handling and drawing an image on the screen. When the user presses a mouse button while the mouse cursor is within the bounds of the window, an image of a robot is drawn at that location.",
+      "raw_source": "This next program combines mouse event handling and drawing an image on the screen. When the user presses a mouse button while the mouse cursor is within the bounds of the window, an image of a robot is drawn at that location."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.MOUSEBUTTONDOWN:\n            x = event.pos[0]-robot.get_width()/2\n            y = event.pos[1]-robot.get_height()/2\n\n            window.fill((0, 0, 0))\n            window.blit(robot, (x, y))\n            pygame.display.flip()\n\n        if event.type == pygame.QUIT:\n            exit()",
+      "raw_source": "```python\nimport pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.MOUSEBUTTONDOWN:\n            x = event.pos[0]-robot.get_width()/2\n            y = event.pos[1]-robot.get_height()/2\n\n            window.fill((0, 0, 0))\n            window.blit(robot, (x, y))\n            pygame.display.flip()\n\n        if event.type == pygame.QUIT:\n            exit()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The execution of the program could look like this:",
+      "raw_source": "The execution of the program could look like this:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "pygame_cursor.gif"
+      },
+      "raw_source": "<img src=\"pygame_cursor.gif\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following program contains an animation where the robot sprite follows the mouse cursor.The location of the sprite is stored in the variables `robot_x` and `robot_y`. When the mouse moves, its location is stored in the variables `target_x` ja `target_y`. If the robot is not at this location, it moves to the approproate direction.",
+      "raw_source": "The following program contains an animation where the robot sprite follows the mouse cursor.The location of the sprite is stored in the variables `robot_x` and `robot_y`. When the mouse moves, its location is stored in the variables `target_x` ja `target_y`. If the robot is not at this location, it moves to the approproate direction."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nrobot_x = 0\nrobot_y = 0\ntarget_x = 0\ntarget_y = 0\n\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.MOUSEMOTION:\n            target_x = event.pos[0]-robot.get_width()/2\n            target_y = event.pos[1]-robot.get_height()/2\n\n        if event.type == pygame.QUIT:\n            exit(0)\n\n    if robot_x > target_x:\n        robot_x -= 1\n    if robot_x < target_x:\n        robot_x += 1\n    if robot_y > target_y:\n        robot_y -= 1\n    if robot_y < target_y:\n        robot_y += 1\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (robot_x, robot_y))\n    pygame.display.flip()\n\n    clock.tick(60)",
+      "raw_source": "```python\nimport pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nrobot_x = 0\nrobot_y = 0\ntarget_x = 0\ntarget_y = 0\n\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.MOUSEMOTION:\n            target_x = event.pos[0]-robot.get_width()/2\n            target_y = event.pos[1]-robot.get_height()/2\n\n        if event.type == pygame.QUIT:\n            exit(0)\n\n    if robot_x > target_x:\n        robot_x -= 1\n    if robot_x < target_x:\n        robot_x += 1\n    if robot_y > target_y:\n        robot_y -= 1\n    if robot_y < target_y:\n        robot_y += 1\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (robot_x, robot_y))\n    pygame.display.flip()\n\n    clock.tick(60)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The program's execution should look more or less like this:",
+      "raw_source": "The program's execution should look more or less like this:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "pygame_cursor2.gif"
+      },
+      "raw_source": "<img src=\"pygame_cursor2.gif\">"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Robot and mouse",
+        "tmcname": "part13-14_robot_and_mouse"
+      },
+      "inner_content": "Please write a program where the robot follows the mouse cursor so that the centre of the robot is always directly at the mouse cursor. The end result should look like this:\n\n<img src=\"pygame_robot_cursor.gif\">",
+      "raw_source": "<programming-exercise name='Robot and mouse' tmcname='part13-14_robot_and_mouse'>\n\nPlease write a program where the robot follows the mouse cursor so that the centre of the robot is always directly at the mouse cursor. The end result should look like this:\n\n<img src=\"pygame_robot_cursor.gif\">\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "The location of the robot",
+        "tmcname": "part13-15_robot_location"
+      },
+      "inner_content": "Please write a program where the robot appears at a random location within the window. When the player clicks on the robot with the mouse, the robot moves to a new location. The end result should look like this:\n\n<img src=\"pygame_robot_location.gif\">",
+      "raw_source": "<programming-exercise name='The location of the robot' tmcname='part13-15_robot_location'>\n\nPlease write a program where the robot appears at a random location within the window. When the player clicks on the robot with the mouse, the robot moves to a new location. The end result should look like this:\n\n<img src=\"pygame_robot_location.gif\">\n\n</programming-exercise>"
+    }
+  ]
+}

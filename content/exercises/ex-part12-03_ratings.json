@@ -1,0 +1,16 @@
+{
+  "id": "ex-part12-03_ratings",
+  "lesson_id": "part12-1-functions-as-arguments",
+  "part": 12,
+  "tmc_name": "part12-03_ratings",
+  "title_original": "Sort by ratings",
+  "title_vi": "Sắp xếp theo xếp hạng",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `sort_by_ratings(items: list)` which takes a list of dictionaries as its argument. The structure of the dictionaries is identical to the previous exercise. This function should sort the dictionaries in _descending order based on the shows' ratings_. The function should not change the original list, but return a new list instead.\n\n```python\nshows = [{ \"name\": \"Dexter\", \"rating\" : 8.6, \"seasons\":9 }, { \"name\": \"Friends\", \"rating\" : 8.9, \"seasons\":10 },  { \"name\": \"Simpsons\", \"rating\" : 8.7, \"seasons\":32 }  ]\n\nprint(\"Rating according to IMDB\")\nfor show in sort_by_ratings(shows):\n    print(f\"{show['name']}  {show['rating']}\")\n```\n\n<sample-output>\n\nRating according to IMDB\nFriends 8.9\nSimpsons 8.7\nDexter 8.6\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `sort_by_ratings(items: list)` lấy danh sách các từ điển làm đối số. Cấu trúc của từ điển giống hệt với bài tập trước. Hàm này sẽ sắp xếp các từ điển theo _thứ tự giảm dần dựa trên xếp hạng của chương trình_. Hàm không được thay đổi danh sách ban đầu mà thay vào đó sẽ trả về một danh sách mới.\n\n```python\nshows = [{ \"name\": \"Dexter\", \"rating\" : 8.6, \"seasons\":9 }, { \"name\": \"Friends\", \"rating\" : 8.9, \"seasons\":10 },  { \"name\": \"Simpsons\", \"rating\" : 8.7, \"seasons\":32 }  ]\n\nprint(\"Rating according to IMDB\")\nfor show in sort_by_ratings(shows):\n    print(f\"{show['name']}  {show['rating']}\")\n```\n\n<sample-output>\n\nĐánh giá theo IMDB\nBạn bè 8.9\nGia Đình Simpson 8.7\nDexter 8.6\n\n</sample-output>",
+  "starter_code": "shows = [{ \"name\": \"Dexter\", \"rating\" : 8.6, \"seasons\":9 }, { \"name\": \"Friends\", \"rating\" : 8.9, \"seasons\":10 },  { \"name\": \"Simpsons\", \"rating\" : 8.7, \"seasons\":32 }  ]\n\nprint(\"Rating according to IMDB\")\nfor show in sort_by_ratings(shows):\n    print(f\"{show['name']}  {show['rating']}\")",
+  "grading_data_available": false,
+  "source_hash": "936d5c2c49884e0e40f0435766350769d15a264d13956cb1f274f603e48eb5f7",
+  "order": 28
+}

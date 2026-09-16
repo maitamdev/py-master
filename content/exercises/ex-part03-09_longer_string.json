@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-09_longer_string",
+  "lesson_id": "part03-2-working-with-strings",
+  "part": 3,
+  "tmc_name": "part03-09_longer_string",
+  "title_original": "The longer string",
+  "title_vi": "Chuỗi dài hơn",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for two strings and then prints out whichever is the longer of the two - that is, whichever has the more characters. If the strings are of equal length, the program should print out \"The strings are equally long\".\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nPlease type in string 1: **hey**\nPlease type in string 2: **hiya**\nhiya is longer\n\n</sample-output>\n\n<sample-output>\n\nPlease type in string 1: **howdy doody**\nPlease type in string 2: **hola**\nhowdy doody is longer\n\n</sample-output>\n\n<sample-output>\n\nPlease type in string 1: **hey**\nPlease type in string 2: **bye**\nThe strings are equally long\n\n</sample-output>",
+  "description_vi": "Hãy viết một chương trình yêu cầu người dùng nhập hai chuỗi rồi in ra chuỗi nào dài hơn trong hai chuỗi - tức là chuỗi nào có nhiều ký tự hơn. Nếu các chuỗi có độ dài bằng nhau thì chương trình sẽ in ra \"Các chuỗi có độ dài bằng nhau\".\n\nMột số ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nVui lòng nhập chuỗi 1: **hey**\nVui lòng nhập chuỗi 2: **hiya**\nxin chào, nó dài hơn\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập chuỗi 1: **howdy doody**\nVui lòng nhập chuỗi 2: **hola**\ntrời ơi, doody dài hơn\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập chuỗi 1: **hey**\nVui lòng nhập chuỗi 2: **bye**\nCác dây đều dài bằng nhau\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "b47dd9e10158f6ff39c8489590b5dfe9c111316d0dab7b9b87d6ab97b0d81222",
+  "order": 21
+}

@@ -1,0 +1,1893 @@
+{
+  "id": "part04-2-more-functions",
+  "part": 4,
+  "part_slug": "part-4",
+  "slug": "2-more-functions",
+  "is_part_index": false,
+  "title_original": "More functions",
+  "title_vi": "",
+  "path": "/part-4/2-more-functions",
+  "source_path": "data/part-4/2-more-functions.md",
+  "source_hash": "e6cf02c95d6549082bc3b2ad0ede944efaefb73301dd04f84d2b692926d9e455",
+  "order": 1,
+  "blocks_count": 103,
+  "blocks": [
+    {
+      "id": "blk-part04-2-more-functions-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "3c6173ca6f73fe420d45ea509477372dd2c5a7f2720f937e249e5edfe39c244a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know more about the arguments and parameters of functions\n- You will know how to return values from functions, and how to use the values in your code\n- You will be able to add type hints for parameters and return values"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "209c2321f6d784a5375fee9a0dfd527b3abad6f6d77dac69a550f2bb00f6dd22",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's quickly recap Python functions. Functions are defined with the keyword `def`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0003",
+      "type": "code",
+      "order": 3,
+      "source_hash": "51e06479e689ed6c4bf2b3de5a215b3548f06fbb5278c7f4229d2032658e4ba9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def message():\n    print(\"This message was brought to you by a function\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def message():\n    print(\"This message was brought to you by a function\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "51e06479e689ed6c4bf2b3de5a215b3548f06fbb5278c7f4229d2032658e4ba9",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "8b450c075d5dc2940687c6d5e97cb9aba8ab1041c660f214c5635e35fa79e991",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This function can be called in your program code like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "38fd8ec7beb97c7d358ee150e62716f454fced436b7b50763d70c6ef285fe3eb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "message()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "message()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "38fd8ec7beb97c7d358ee150e62716f454fced436b7b50763d70c6ef285fe3eb",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "cf2ed27d6c9db2534c399b1e3df4a5182b3371d04df457f1d152959f13b22051",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Your program would then print out"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0007",
+      "type": "sample_output",
+      "order": 7,
+      "source_hash": "33083fce514c298e5b1bbe58b2ff9f9b3ae0e07dc48acf09c5067f95619dcb49",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "This message was brought to you by a function"
+      },
+      "translation": {
+        "language": "text",
+        "content": "This message was brought to you by a function"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThis message was brought to you by a function\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0008",
+      "type": "heading",
+      "order": 8,
+      "source_hash": "1dbfc919eebb1cff6cad36357330e938c5c46d47f0829bc333503533434867ae",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The parameters and arguments of a function"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "bbc269f0c991c948cefa356f6c8dcccebb6b0c3a3f97362b7d2ef294e494c679",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A function can take one or more arguments. When the function is called, the arguments are assigned to variables, which are defined in the function definition. These variables are called parameters, and they are listed inside the parentheses after the function name."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "8122f17cf7250fd85954ff1cf5cf2773281c269079fc787962d7c731676da0c2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the following code the function `greet` has one parameter defined, while the function `sum` has two."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0011",
+      "type": "code",
+      "order": 11,
+      "source_hash": "a75d8e327bc13c786f91c6acd7c68570ead368d34359bff186ec926d1739076c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def greet(name):\n    print(\"Hello there,\", name)\n\ndef sum(a, b):\n    print(\"The sum of the arguments is\", a + b)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def greet(name):\n    print(\"Hello there,\", name)\n\ndef sum(a, b):\n    print(\"The sum of the arguments is\", a + b)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a75d8e327bc13c786f91c6acd7c68570ead368d34359bff186ec926d1739076c",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0012",
+      "type": "code",
+      "order": 12,
+      "source_hash": "f477bf4ae7bb9794892de846edc0307fac247bc21321309b6ebe93699ee13b50",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "greet(\"Emily\")\nsum(2, 3)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "greet(\"Emily\")\nsum(2, 3)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f477bf4ae7bb9794892de846edc0307fac247bc21321309b6ebe93699ee13b50",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0013",
+      "type": "sample_output",
+      "order": 13,
+      "source_hash": "c6b7a72d3fc8821cccf665a69c3bf65c432f9c41da7e459f46f5abd5efa30400",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hello there, Emily\nThe sum of the arguments is 5"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hello there, Emily\nThe sum of the arguments is 5"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHello there, Emily\nThe sum of the arguments is 5\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0014",
+      "type": "text_box",
+      "order": 14,
+      "source_hash": "59170b8b8bd7b602ac0decc517a8bcb65a0ffaafed24782f5f362b71c42b40df",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The terminology around data passed to functions can feel confusing. To make matters worse, some sources refer to what we have called parameters and arguments as _formal_ and _actual parameters_. Other sources call them _formal_ and _actual arguments_. [The Python documentation](https://docs.python.org/3/glossary.html#term-argument) specifies only the terms _argument_ and _parameter_, so that is what we will use as well.\n\nWhat actually happens when the function call `greet(\"Emily\")` is executed?\n\nIn the function definition `greet(name)` the parameter `name` behaves for all intents and purposes just like a normal variable. We can use it within the function just like we have used variables in the many main functions in our programs thus far.\n\nIn the function call `greet(\"Emily\")` the argument `\"Emily\"` is just like any other string we have come across before. For example, we can assign it to a variable.\n\nSo, when the function call is executed, the value of the argument, `\"Emily\"`, is assigned to the parameter variable `name`. For the duration of _this execution_ of the function, `name = \"Emily\"`. When the function is called with a different argument, the value of `name` will be different.\n\nThis terminology may all seem a bit superfluous, but computer science as a discipline does aim to be as exact a science as possible. Using well defined terminology helps."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "hint",
+        "name_original": "Formal vs actual, parameter vs argument",
+        "name_vi": "",
+        "attributes": {
+          "variant": "hint",
+          "name": "Formal vs actual, parameter vs argument"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0015",
+      "type": "heading",
+      "order": 15,
+      "source_hash": "cabcef118228aec34d82ea56898218911d9b3191cc3551f6f65d2bbf27b2b49e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Error messages when running tests"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "a4d4152406dd08dc12897b96110d9ce78e189a3d518c01b3e5ac6ecc8a9c4e75",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Most exercises on this course have automatic tests attached to them. If your program doesn't work as specified in the task, the tests will show an error message, which may or may not be helpful. It is usually worth the trouble to read the error message carefully."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "ad5001d5d853e6aa08aa1d7f3e400351a37372e0908813ee64a55da99da62a26",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In some situations the error message might not tell you very much at all. In the next exercise below you may come across this error message:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0018",
+      "type": "image",
+      "order": 18,
+      "source_hash": "ecfb1a6e1d611f3560de25eda0af659bad3c209bcf91dcb80ff1c6ecbf31e6b1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "4_2_1.png",
+        "alt": "",
+        "attributes": {
+          "src": "4_2_1.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "65d8f42ef18dbf5c44392acfe0d6fb56d40b4cb474ccb26ae2a5beb135615186",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The message just states that you should be able to call the function `line` with the specified arguments:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0020",
+      "type": "code",
+      "order": 20,
+      "source_hash": "83cdf63412796ff9ebef01cca26e320df8591c4c5ca9d419afe5cc784909679c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "line(5, \"\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "line(5, \"\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "83cdf63412796ff9ebef01cca26e320df8591c4c5ca9d419afe5cc784909679c",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "f1e850cedd402c5e850546953954ce054f9eb42cb5bd24a131969c00c8fa6941",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The actual issue becomes clear when we try executing the function call specified in the error message. You can do this by copying the function call into your program and clicking on the triangle:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0022",
+      "type": "image",
+      "order": 22,
+      "source_hash": "1cc203afbd51e79c30c8d29f0717291aa775fa1e8726286d4ceed82ac00dd1ea",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "4_2_2.png",
+        "alt": "",
+        "attributes": {
+          "src": "4_2_2.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "03dbaf228e99d166927f71367f68896810416433a242eb1b0c924d5f8e125321",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The last lines produced by the execution, highlighted in the above image, tell us that line 4 of our code causes the error _IndexError: string index out of range_. In the [previous part](/part-3/2-working-with-strings) there was a similar example, where we tried to use an index that fell outside the scope of the string. This time the error appears because we are trying to access the first character of an empty string, that is, a string of length 0."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0024",
+      "type": "exercise",
+      "order": 24,
+      "source_hash": "ab08364c1007e9dae837608201e8927639a38dd6bff84dfdcb764694cfe92fe3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `line`, which takes two arguments: an integer and a string. The function prints out a line of text, the length of which is specified by the first argument. The character used to draw the line should be the first character in the second argument. If the second argument is an empty string, the line should consist of stars.\n\nAn example of expected behaviour:\n\n```python\nline(7, \"%\")\nline(10, \"LOL\")\nline(3, \"\")\n```\n\n<sample-output>\n\n<pre>\n%%%%%%%\nLLLLLLLLLL\n***\n</pre>\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-02_line",
+        "exercise_type": "programming-exercise",
+        "name": "Line",
+        "tmc_name": "part04-02_line",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0025",
+      "type": "heading",
+      "order": 25,
+      "source_hash": "f702b853efdce6dc3e7236b2f7b3d717a1f635d5e1e55608a61e124351340569",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Function calls within function calls"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "b030c12af914dac78a384b95fe9e018a9ab7680ec802aea0a742389078f88cff",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You can call a function from within another function. In fact, we have done so many times before, when we called the `print` function within our own functions in the previous part. Our own functions are functionally no different. In the following example the function `greet_many_times` calls the function `greet` as many times as specified by the argument `times`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0027",
+      "type": "code",
+      "order": 27,
+      "source_hash": "ffa7a6f40f0b22e3a1c53099ae4b4a54a89b4e3c55a8bf3ed0cff62c4fbfddfc",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def greet(name):\n    print(\"Hello there,\", name)\n\ndef greet_many_times(name, times):\n    while times > 0:\n        greet(name)\n        times -= 1\n\ngreet_many_times(\"Emily\", 3)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def greet(name):\n    print(\"Hello there,\", name)\n\ndef greet_many_times(name, times):\n    while times > 0:\n        greet(name)\n        times -= 1\n\ngreet_many_times(\"Emily\", 3)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ffa7a6f40f0b22e3a1c53099ae4b4a54a89b4e3c55a8bf3ed0cff62c4fbfddfc",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0028",
+      "type": "sample_output",
+      "order": 28,
+      "source_hash": "e29dfbf2f0f0be6cb7a24264a87b8b46a0bfa76ade1d3bb675a462f03d6cb10d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hello there, Emily\nHello there, Emily\nHello there, Emily"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hello there, Emily\nHello there, Emily\nHello there, Emily"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHello there, Emily\nHello there, Emily\nHello there, Emily\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0029",
+      "type": "exercise",
+      "order": 29,
+      "source_hash": "3bab8c22c7f0c90fd239ae2812c8f80522a5f7bc26f7a05f4e47ae4bca729caf",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `box_of_hashes`, which prints out a rectangle of hash characters. The function takes one argument, which specifies the height of the rectangle. The rectangle should be ten characters wide.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in your `line` function.\n\nSome examples of how the function should work:\n\n```python\nbox_of_hashes(5)\nprint()\nbox_of_hashes(2)\n```\n\n<sample-output>\n\n<pre>\n##########\n##########\n##########\n##########\n##########\n\n##########\n##########\n</pre>\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-03_box_of_hashes",
+        "exercise_type": "programming-exercise",
+        "name": "A box of hashes",
+        "tmc_name": "part04-03_box_of_hashes",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0030",
+      "type": "exercise",
+      "order": 30,
+      "source_hash": "875c267400ce4ef3a905c43f7eb259e32775baf479548bbbee8f488a6af1e343",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `square_of_hashes`, which draws a square of hash characters. The function takes one argument, which determines the length of the side of the square.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in the `line` function.\n\nSome examples:\n\n```python\nsquare_of_hashes(5)\nprint()\nsquare_of_hashes(3)\n```\n\n<sample-output>\n\n<pre>\n#####\n#####\n#####\n#####\n#####\n\n###\n###\n###\n</pre>\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-04_square_of_hashes",
+        "exercise_type": "programming-exercise",
+        "name": "A square of hashes",
+        "tmc_name": "part04-04_square_of_hashes",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0031",
+      "type": "exercise",
+      "order": 31,
+      "source_hash": "9c4b17c1d9475391c7d8190938f51f9107d7001a5ce17593d961b49a84ae7323",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `square`, which prints out a square of characters, and takes two arguments. The first parameter specifies the length of the side of the square. The second parameter specifies the character used to draw the square.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in the `line` function.\n\nSome examples:\n\n```python\nsquare(5, \"*\")\nprint()\nsquare(3, \"o\")\n```\n\n<sample-output>\n\n<pre>\n*****\n*****\n*****\n*****\n*****\n\nooo\nooo\nooo\n</pre>\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-05_square",
+        "exercise_type": "programming-exercise",
+        "name": "A square",
+        "tmc_name": "part04-05_square",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0032",
+      "type": "exercise",
+      "order": 32,
+      "source_hash": "def4bd508f5c29a1a4462ce632cd805f99d985514af6ba3cb91476821bee4363",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `triangle`, which draws a triangle of hashes, and takes one argument. The triangle should be as tall and as wide as the value of the argument.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in the `line` function.\n\nSome examples:\n\n```python\ntriangle(6)\nprint()\ntriangle(3)\n```\n\n<sample-output>\n\n<pre>\n#\n##\n###\n####\n#####\n######\n\n#\n##\n###\n</pre>\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-06_triangle",
+        "exercise_type": "programming-exercise",
+        "name": "A triangle",
+        "tmc_name": "part04-06_triangle",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0033",
+      "type": "exercise",
+      "order": 33,
+      "source_hash": "cec0c335c30ac3e89c22fb22df789ea69f9ecc238eed17783c71f449551fd5e7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `shape`, which takes four arguments. The first two parameters specify a triangle, as above, and the character used to draw it. The first parameter also specifies the width of a rectangle, while the third parameter specifies its height. The fourth parameter specifies the filler character of the rectangle. The function prints first the triangle, and then the rectangle below it.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in the `line` function.\n\nSome examples:\n\n```python\nshape(5, \"X\", 3, \"*\")\nprint()\nshape(2, \"o\", 4, \"+\")\nprint()\nshape(3, \".\", 0, \",\")\n```\n\n<sample-output>\n\n<pre>\nX\nXX\nXXX\nXXXX\nXXXXX\n*****\n*****\n*****\n\no\noo\n++\n++\n++\n++\n\n.\n..\n...\n</pre>\n\n</sample-output>\n\n**Hint**\n\nDon't try and solve this exercise \"all at once\". A good first step would be to make sure you can print the triangle reliably. Then you can try adding the rectangle.\n\nThis is one of the most important skills of a programmer: **concentrate on small, tangible sections of the problem at a time**. Solve and verify partial solutions, and use them to build towards a complete solution."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-07_shape",
+        "exercise_type": "programming-exercise",
+        "name": "A shape",
+        "tmc_name": "part04-07_shape",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0034",
+      "type": "exercise",
+      "order": 34,
+      "source_hash": "d818be0a8ba7349e370584f93f289ae063ae0c739cdabb4fc3de1d944d6184ee",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `spruce`, which takes one argument. The function prints out the text `a spruce!`, and the a spruce tree, the size of which is specified by the argument.\n\nCalling `spruce(3)` should print out\n\n<sample-output>\n\n<pre>\na spruce!\n  *\n ***\n*****\n  *\n</pre>\n\n</sample-output>\n\nCalling `spruce(5)` should print out\n\n<sample-output>\n\n<pre>\na spruce!\n    *\n   ***\n  *****\n *******\n*********\n    *\n</pre>\n\n</sample-output>\n\n**NB: to the left of the spruce there should be exactly the right amount of whitespace**. If the shape of the spruce looks correct, but the left edge of the tree is not touching the left edge of the text area in the terminal, the tests will not accept the solution."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-08_spruce",
+        "exercise_type": "programming-exercise",
+        "name": "A spruce",
+        "tmc_name": "part04-08_spruce",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0035",
+      "type": "heading",
+      "order": 35,
+      "source_hash": "5f0dc05169e43cedbe60aab2925e8e961fc1a1a96d7b114cf406091ae49519f7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The return value of a function"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "40b143cc33a1eccd1c01e9c24c380c76b394b3aec8b0c0560ef9df2812788b1f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Functions can also return values. For instance, the built-in Python function `input` _returns_ an input string typed in by the user. The value returned by a function can be stored in a variable:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0037",
+      "type": "code",
+      "order": 37,
+      "source_hash": "cc64d2e70daac729dca9d7800f713e7dc7c1b88120ec6ac0bfbae97da5083e4e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "word = input(\"Please type in a word: \")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "word = input(\"Please type in a word: \")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "cc64d2e70daac729dca9d7800f713e7dc7c1b88120ec6ac0bfbae97da5083e4e",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "979e63d6b16149cf864eae0b4c6eb4ef5ff3462cc7add8047073ab0fb7a569b5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When you want an integer value from the user, the input from the user has to be converted into an integer. The function we've used for this purpose is `int`, and it also returns a value:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0039",
+      "type": "code",
+      "order": 39,
+      "source_hash": "7c2f0610b4f3b9e37e08808d64159a2130c8cfe534bf9bd11aeeeabb08b63b37",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in an integer: \"))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in an integer: \"))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "7c2f0610b4f3b9e37e08808d64159a2130c8cfe534bf9bd11aeeeabb08b63b37",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "e0b8025c3dc3cba6de438364622b4540a689f2c438b43152f75cc05c874cd543",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The function `int` takes the string returned by `input` as its argument, and returns an integer type value, if an integer can be parsed from the string."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0041",
+      "type": "heading",
+      "order": 41,
+      "source_hash": "eff9f016c449d19a4ccd0bc3ccc8bdc434b40af35a35adbbd71122b509cefd54",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The return statement"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "8e9a884c00cca8559ed66869601086da142689c0c97e37325ebc441c619d55b3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The functions you define yourself can also return values. To do this you need the `return` statement. For example, the following function `my_sum` returns the sum of its parameters:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0043",
+      "type": "code",
+      "order": 43,
+      "source_hash": "a115e6e4aa3f335e5d0835d8f9e92e2711c1cdb35a1d4237c80d66ff5b993a3b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def my_sum(a, b):\n    return a + b\n\nresult = my_sum(2, 3)\n\nprint(\"Sum:\", result)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def my_sum(a, b):\n    return a + b\n\nresult = my_sum(2, 3)\n\nprint(\"Sum:\", result)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a115e6e4aa3f335e5d0835d8f9e92e2711c1cdb35a1d4237c80d66ff5b993a3b",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0044",
+      "type": "sample_output",
+      "order": 44,
+      "source_hash": "56019edeb1ef0b02b532eb7db97ba27f49a18dd54a08af0393cbf5e8f657a077",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Sum: 5"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Sum: 5"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nSum: 5\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0045",
+      "type": "paragraph",
+      "order": 45,
+      "source_hash": "1c4013d0d3eb0ee581dae092177c2cb5be26a2ef395708caf267bd711a3e63f2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Here's another example of a return value. This function asks for the user's name and returns the string the user types in:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0046",
+      "type": "code",
+      "order": 46,
+      "source_hash": "ee26dd8f076d708d85212e1c24c7921856a906861f2eb31e00fd5bdd457d3d61",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def ask_for_name():\n    name = input(\"What is your name? \")\n    return name\n\nname = ask_for_name()\nprint(\"Hello there,\", name)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def ask_for_name():\n    name = input(\"What is your name? \")\n    return name\n\nname = ask_for_name()\nprint(\"Hello there,\", name)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ee26dd8f076d708d85212e1c24c7921856a906861f2eb31e00fd5bdd457d3d61",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0047",
+      "type": "sample_output",
+      "order": 47,
+      "source_hash": "8ae5821da0b11e836d91d51f63cc1178a244bd06278dbf0b5ca1ea1706d9729e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "What is your name? **Anna**\nHello there, Anna"
+      },
+      "translation": {
+        "language": "text",
+        "content": "What is your name? **Anna**\nHello there, Anna"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nWhat is your name? **Anna**\nHello there, Anna\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0048",
+      "type": "paragraph",
+      "order": 48,
+      "source_hash": "191f6fa6948540978fed1d85d6a6e8f6f5e4c0cdfeb4fe32ab42b68887152d90",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `return` statement ends the execution of the function immediately. The following is a nifty way to create a comparison function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0049",
+      "type": "code",
+      "order": 49,
+      "source_hash": "64c492d4b813b63c1911942590e0ce4e74645b0b5b5757697e29cb9b4c7abbec",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def smallest(a,b):\n    if a < b:\n        return a\n    return b\n\nprint(smallest(3, 7))\nprint(smallest(5, 2))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def smallest(a,b):\n    if a < b:\n        return a\n    return b\n\nprint(smallest(3, 7))\nprint(smallest(5, 2))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "64c492d4b813b63c1911942590e0ce4e74645b0b5b5757697e29cb9b4c7abbec",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0050",
+      "type": "paragraph",
+      "order": 50,
+      "source_hash": "51c9bd4c9d6067859154ad7159623d7042544f95e7496ff114834ebd2f786bf3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The idea here is that if `a` is smaller than `b`, the function returns `a` and exits immediately. If not, the execution continues to the next line, where the value `b` is returned. A function can never execute two separate `return` statements with a single function call."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0051",
+      "type": "sample_output",
+      "order": 51,
+      "source_hash": "5bbe4d1413098c65d79980ab31a8a4ec62bbb6c7b4ecadecf4ac095744768422",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "3\n2"
+      },
+      "translation": {
+        "language": "text",
+        "content": "3\n2"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n3\n2\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0052",
+      "type": "paragraph",
+      "order": 52,
+      "source_hash": "056acf0a4775ae16e2d3763b81958cc63be05078781d739981878cebae97433b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You can make use of the `return` statement even if the function doesn't return a value. Its purpose then is to end the execution of the function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0053",
+      "type": "code",
+      "order": 53,
+      "source_hash": "b26fb828d28c2c9b4da0db435ece75d16c3742fb2fb814bbb7d9e07e48014e5f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def greet(name):\n    if name == \"\":\n        print(\"???\")\n        return\n    print(\"Hello there,\", name)\n\ngreet(\"Emily\")\ngreet(\"\")\ngreet(\"Mark\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def greet(name):\n    if name == \"\":\n        print(\"???\")\n        return\n    print(\"Hello there,\", name)\n\ngreet(\"Emily\")\ngreet(\"\")\ngreet(\"Mark\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b26fb828d28c2c9b4da0db435ece75d16c3742fb2fb814bbb7d9e07e48014e5f",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0054",
+      "type": "paragraph",
+      "order": 54,
+      "source_hash": "2a866bd75e8054e38e6b58f7fce104897e008244d1f763b1df467646a1f18b17",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If the argument (which gets stored in the variable `name`) is an empty string, the function prints out `???` and exits."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0055",
+      "type": "sample_output",
+      "order": 55,
+      "source_hash": "dbbaf1c0e56673ef407ead572993d1ba9b6e6eba75f120d799f0cdb73d7e9edd",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hello there, Emily\n???\nHello there, Mark"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hello there, Emily\n???\nHello there, Mark"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHello there, Emily\n???\nHello there, Mark\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0056",
+      "type": "heading",
+      "order": 56,
+      "source_hash": "15e60fb0fca717727ee7f3e72db30257f1b019c1911e1f5507c1b24855b9a37e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Using return values from functions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0057",
+      "type": "paragraph",
+      "order": 57,
+      "source_hash": "9e031f38e70c68515cd319418c051e541b0bdeeb5c30fb1adfc11643b5f655c8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We already know that the return values of functions can be stored in variables:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0058",
+      "type": "code",
+      "order": 58,
+      "source_hash": "d2573a320efcf790129025d4634650712e417bbce8d3659693f5d296cd286917",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def my_sum(a, b):\n    return a + b\n\nresult = my_sum(4, 6)\nprint(\"The sum is\", result)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def my_sum(a, b):\n    return a + b\n\nresult = my_sum(4, 6)\nprint(\"The sum is\", result)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d2573a320efcf790129025d4634650712e417bbce8d3659693f5d296cd286917",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0059",
+      "type": "sample_output",
+      "order": 59,
+      "source_hash": "c1b9875457da4830dfddd9bae4c12238b44a57bf254dc1e120f593f4cdaabe3d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The sum is 10"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The sum is 10"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe sum is 10\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0060",
+      "type": "paragraph",
+      "order": 60,
+      "source_hash": "722cb68c7c80b42d584f113460d70525005ee7dc377d852f41495ca70b7e3500",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The return value of a function is a value just like any other. It is not necessary to store it in a variable in order to give it as an argument to the `print` command:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0061",
+      "type": "code",
+      "order": 61,
+      "source_hash": "6c392180d6e65695bf08ec1b81d0d02095442e6aa8c19d548323a13c030875f3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(\"The sum is\", my_sum(4, 6))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(\"The sum is\", my_sum(4, 6))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6c392180d6e65695bf08ec1b81d0d02095442e6aa8c19d548323a13c030875f3",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0062",
+      "type": "paragraph",
+      "order": 62,
+      "source_hash": "1643b77e3a28f373f562cc1e7065762672009004b0b17ac048e79eae55369b51",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The return value of a function can become the argument of another function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0063",
+      "type": "code",
+      "order": 63,
+      "source_hash": "71c50400ab9d8c497fca52dda3487cf050131ee07e63ed60c16534df57f9a69b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def my_sum(a, b):\n    return a+b\n\ndef difference(a, b):\n    return a-b\n\nresult = difference(my_sum(5, 2), my_sum(2, 3))\nprint(\"The result is\", result)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def my_sum(a, b):\n    return a+b\n\ndef difference(a, b):\n    return a-b\n\nresult = difference(my_sum(5, 2), my_sum(2, 3))\nprint(\"The result is\", result)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "71c50400ab9d8c497fca52dda3487cf050131ee07e63ed60c16534df57f9a69b",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0064",
+      "type": "sample_output",
+      "order": 64,
+      "source_hash": "0a8bcfd769eceddb794a2b27edaf93860fa60d5a69126356f25b265f835a61c4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The result is 2"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The result is 2"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe result is 2\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0065",
+      "type": "paragraph",
+      "order": 65,
+      "source_hash": "3af9f99c2231e8e31b5491ce7d1462bcf6d86d3cf2b42b24838ddd143573121e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In this case the inner function calls `my_sum(5, 2)` and `my_sum(2, 3)` are executed first. The values they return (7 and 5) are used as the arguments of the outer function call."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0066",
+      "type": "paragraph",
+      "order": 66,
+      "source_hash": "1bc5970604fa3d569f028864a7c38674480551e59ccd190f22f10c4267c0fc2d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The outer function call `difference(7, 5)` returns the value 2, which is stored in the variable `result` and printed out."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0067",
+      "type": "paragraph",
+      "order": 67,
+      "source_hash": "ee88090f8b4bda3d632ebfb2717a791b63218ccd08fd41ac03b90ddcdd99c3e1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In summary, values returned by functions work exactly like any other value in Python. They can be printed out, stored in variables, used in expressions and used as arguments in other function calls."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0068",
+      "type": "heading",
+      "order": 68,
+      "source_hash": "19d3040629dfd07a28d10abf4351dc01a5b7f8b72f4b12c3f6af85aff0d640be",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The difference between return and print"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0069",
+      "type": "paragraph",
+      "order": 69,
+      "source_hash": "d78c0b7ca1f5b85c89ab0082765756d247b390ed35710bb5c9d5895368bc0709",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Sometimes the difference between a function _returning_ a value and a _print statement_ within a function can be confusing. Let's have a look at two different ways of implementing a function for working out which of two values is greater:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0070",
+      "type": "code",
+      "order": 70,
+      "source_hash": "f24845342ce941cd936de1ee7a290ddb58bb702804dbaf3d90fcfa5b0468c7ec",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def max1(a, b):\n    if a > b:\n        return a\n    else:\n        return b\n\ndef max2(a, b):\n    if a > b:\n        print(a)\n    else:\n        print(b)\n\nresult = max1(3, 5)\nprint(result)\n\nmax2(7, 2)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def max1(a, b):\n    if a > b:\n        return a\n    else:\n        return b\n\ndef max2(a, b):\n    if a > b:\n        print(a)\n    else:\n        print(b)\n\nresult = max1(3, 5)\nprint(result)\n\nmax2(7, 2)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f24845342ce941cd936de1ee7a290ddb58bb702804dbaf3d90fcfa5b0468c7ec",
+        "length_lines": 16
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0071",
+      "type": "sample_output",
+      "order": 71,
+      "source_hash": "745d8362a10d6de5ff28f81592004138d0844abb9cf4ed59994917a307973732",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "5\n7"
+      },
+      "translation": {
+        "language": "text",
+        "content": "5\n7"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n5\n7\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0072",
+      "type": "paragraph",
+      "order": 72,
+      "source_hash": "a5b57024c84beedaaf1438287586f47fc4077a367a3ddd38fddb7973ed36cf7e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Both versions seem to be working just fine, as the maximum values are printed correctly. There is a fundamental difference between the two, however. The first of the two functions, `max1`, does not print out anything on its own, but instead it _returns_ the value which is greater. If we execute the following line"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0073",
+      "type": "code",
+      "order": 73,
+      "source_hash": "da67b4666aa3fe9b1dd0894dfed8b880b56c59533d7b59eaabd78c6c90cf128a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "max1(3, 5)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "max1(3, 5)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "da67b4666aa3fe9b1dd0894dfed8b880b56c59533d7b59eaabd78c6c90cf128a",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0074",
+      "type": "paragraph",
+      "order": 74,
+      "source_hash": "2a96a0394c2c5c5da241439017b089292146a05e260f8116442229e0d72e18fb",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "nothing seems to happen. The return value of the function has to be _used_ in some way in the code which called the function. For instance, it can be stored in a variable and printed out:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0075",
+      "type": "code",
+      "order": 75,
+      "source_hash": "d81123cdf9faa9e32426c10754fdbb7b300a84f3686bd933da20e033a324802b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "result = max1(3, 5)\nprint(result)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "result = max1(3, 5)\nprint(result)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d81123cdf9faa9e32426c10754fdbb7b300a84f3686bd933da20e033a324802b",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0076",
+      "type": "paragraph",
+      "order": 76,
+      "source_hash": "1e777d5f599a215d8209ab6d03824d6ab06146918f2ad337d0e701b167487029",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The second version, `max2`, uses the `print` command _within the function_ to print out the greater value. If we want to see the value, it is enough to call the function"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0077",
+      "type": "code",
+      "order": 77,
+      "source_hash": "9727089a6678b4b5f0804b103440a3166efa339ce04f193d1ef5230a30ffa713",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "max2(7, 5)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "max2(7, 5)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "9727089a6678b4b5f0804b103440a3166efa339ce04f193d1ef5230a30ffa713",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0078",
+      "type": "paragraph",
+      "order": 78,
+      "source_hash": "771fd7df6b741a90490af44afeb707d74dd30137b9dff4d11f9dd2450c94bd79",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "and the greater value is printed out. The downside of this handy function is that the value worked out by the function is not available for use in the program which called it. That is why functions which return values are often the better option."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0079",
+      "type": "exercise",
+      "order": 79,
+      "source_hash": "045b884a15e3aa5109f3a69a56746bdc2c93f0434a555d45c8553eaadfe50504",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named  `greatest_number`, which takes three arguments. The function returns the greatest in value of the three.\n\nAn example of how the function is used:\n\n```python\nprint(greatest_number(3, 4, 1)) # 4\nprint(greatest_number(99, -4, 7)) # 99\nprint(greatest_number(0, 0, 0)) # 0\n```"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-09_greatest_number",
+        "exercise_type": "programming-exercise",
+        "name": "The greatest number",
+        "tmc_name": "part04-09_greatest_number",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0080",
+      "type": "exercise",
+      "order": 80,
+      "source_hash": "ef68ce6e39aab6f36c6fb38502b35e717b102e7299b02bbad6edb60bf0ad5cef",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `same_chars`, which takes one string and two integers as arguments. The integers refer to indexes within the string. The function should return `True` if the two characters at the indexes specified are the same. Otherwise, and especially if either of the indexes falls outside the scope of the string, the function returns `False`.\n\nSome examples of how the function is used:\n\n```python\n# same characters m and m\nprint(same_chars(\"programmer\", 6, 7)) # True\n\n# different characters p and r\nprint(same_chars(\"programmer\", 0, 4)) # False\n\n# the second index is not within the string\nprint(same_chars(\"programmer\", 0, 12)) # False\n```"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-10_same_characters",
+        "exercise_type": "programming-exercise",
+        "name": "Same characters",
+        "tmc_name": "part04-10_same_characters",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0081",
+      "type": "exercise",
+      "order": 81,
+      "source_hash": "32da018b431613d80a91f663f3b2a6becb2504414efae4790af40aaa19d119c9",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write three functions: `first_word`, `second_word` and `last_word`. Each function takes a string argument.\n\nAs their names imply, the functions return either the first, the second or the last word in the sentence they receive as their string argument.\n\nIn each case you may assume the argument string contains at least two separate words, and all words are separated by exactly one space character. There will be no spaces in the beginning or at the end of the argument strings.\n\n```python\nsentence = \"it was a dark and stormy python\"\n\nprint(first_word(sentence)) # it\nprint(second_word(sentence)) # was\nprint(last_word(sentence)) # python\n```\n\n<sample-output>\n\nit\nwas\npython\n\n</sample-output>\n\n```python\nsentence = \"it was\"\n\nprint(second_word(sentence)) # was\nprint(last_word(sentence)) # was\n```"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-11_first_second_last",
+        "exercise_type": "programming-exercise",
+        "name": "First, second and last words",
+        "tmc_name": "part04-11_first_second_last",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0082",
+      "type": "heading",
+      "order": 82,
+      "source_hash": "333a5d8e988c90fe1743daa0dc6d54de39e56cc602d4b4654bd2fbefc293d12a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The type of the argument"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0083",
+      "type": "paragraph",
+      "order": 83,
+      "source_hash": "51deab8fdf3dac51cfa203785debff1e8b22ec205f38de869932e43487cf7562",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A quick recap of the data types we've come across so far:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0084",
+      "type": "paragraph",
+      "order": 84,
+      "source_hash": "775e3f387f1a543fc521db1308847bf3776c110f6646dd73264b541c200ef4a7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Type          | Python data type | Example\n:-------------|:----------------:|------\ninteger       | `int`            | `23`\nfloating point number | `float`  | `-0.45`\nstring        | `str`            | `\"Peter Python\"`\nBoolean value | `bool`           | `True`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0085",
+      "type": "paragraph",
+      "order": 85,
+      "source_hash": "8916dc0b88205e7bc0c4125f65b3a78f055a2752a58bf6f33ef085fd7e9d6703",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When you call a function, it will only work correctly if the arguments you give it are of the right type. Let's have a look at an example:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0086",
+      "type": "code",
+      "order": 86,
+      "source_hash": "6232af61e523e70623d29c22feaabd6cab1bfdcc5e68435750855b8969d66659",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def print_many_times(message, times):\n    while times > 0:\n        print(message)\n        times -= 1"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def print_many_times(message, times):\n    while times > 0:\n        print(message)\n        times -= 1"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6232af61e523e70623d29c22feaabd6cab1bfdcc5e68435750855b8969d66659",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0087",
+      "type": "paragraph",
+      "order": 87,
+      "source_hash": "ea6dcdbae56424c8c3e0486835b48d263e07b47d9a51361bf93a59260130b356",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The function works as expected if we call it like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0088",
+      "type": "code",
+      "order": 88,
+      "source_hash": "ed8921382d7d890eae692923c550289e5959f7b5717ab9c401ce17a4600c64ca",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print_many_times(\"Hello there\", 5)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print_many_times(\"Hello there\", 5)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ed8921382d7d890eae692923c550289e5959f7b5717ab9c401ce17a4600c64ca",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0089",
+      "type": "sample_output",
+      "order": 89,
+      "source_hash": "5dc82b27cc884c1cf57c3601a5701c3f8728d9e5e0620f214a9f2700f624873b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hello there\nHello there\nHello there\nHello there\nHello there"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hello there\nHello there\nHello there\nHello there\nHello there"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHello there\nHello there\nHello there\nHello there\nHello there\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0090",
+      "type": "paragraph",
+      "order": 90,
+      "source_hash": "3cd382f29d509062df74dbdb819817b3fbf46ea056b260df88a64ddbbd0b3c21",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "However, if we give the function an argument of the wrong type, it will not work:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0091",
+      "type": "code",
+      "order": 91,
+      "source_hash": "995da154c8c1eb41d3240929aa427f286dd6abe0ad5c86eecb3175fc779e2d4b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print_many_times(\"Hello there\", \"Emily\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print_many_times(\"Hello there\", \"Emily\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "995da154c8c1eb41d3240929aa427f286dd6abe0ad5c86eecb3175fc779e2d4b",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0092",
+      "type": "sample_output",
+      "order": 92,
+      "source_hash": "d9f58cf8726ca762ce0273738164a208100883a66f25c2dad20f865442710884",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "TypeError: '>' not supported between instances of 'str' and 'int'"
+      },
+      "translation": {
+        "language": "text",
+        "content": "TypeError: '>' not supported between instances of 'str' and 'int'"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nTypeError: '>' not supported between instances of 'str' and 'int'\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0093",
+      "type": "paragraph",
+      "order": 93,
+      "source_hash": "70b3a265e7c19094d1ef7a1b01d3e90cd406b48ce25b428df52a1cb6cdf46f1d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The problem here is that the second parameter `times` is compared to an integer, `0`, on line 2 of the function definition. The argument given was `\"Emily\"`, which is a string, not an integer. Strings and integers cannot be compared so simply, so an error ensues."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0094",
+      "type": "paragraph",
+      "order": 94,
+      "source_hash": "05b4f3fcf695e38ccd0af1b660330991dc7a956df0f219d584e3ed1a1855cf54",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "To avoid issues like this you can include _type hints_ in your function definitions. The type hint specifies the type of the argument intended for the function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0095",
+      "type": "code",
+      "order": 95,
+      "source_hash": "c876329f4ed474068eb310657287828c6c09c225a93b34b0f5404a0fe556be97",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def print_many_times(message : str, times : int):\n    while times > 0:\n        print(message)\n        times -= 1"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def print_many_times(message : str, times : int):\n    while times > 0:\n        print(message)\n        times -= 1"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c876329f4ed474068eb310657287828c6c09c225a93b34b0f5404a0fe556be97",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0096",
+      "type": "paragraph",
+      "order": 96,
+      "source_hash": "972bb17675885a6d2c574072d98b39a39f346238699f38367c52fb1e668f4ae6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This tells anyone using the function that the argument stored in `message` is supposed to be a string, and the argument stored in `times` is supposed to be an integer."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0097",
+      "type": "paragraph",
+      "order": 97,
+      "source_hash": "3e99c4ae75fcad90c417306d5263fd4b0ecf6e475fde54338d1fda8a0ae53dfb",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Similarly, the return value of a function can be hinted at in the function definition:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0098",
+      "type": "code",
+      "order": 98,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": ""
+      },
+      "translation": {
+        "language": "code",
+        "content": ""
+      },
+      "metadata": {
+        "language": "",
+        "code_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "length_lines": 0
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0099",
+      "type": "paragraph",
+      "order": 99,
+      "source_hash": "f73ad2d1ff45d4b2ecead452c720f555fbc977645b6c886083275cf04f9acaff",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This tells the user of the function that the function is supposed to return a string."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0100",
+      "type": "paragraph",
+      "order": 100,
+      "source_hash": "91610d164910439dbc18b7d26f1d27169c6dda531f53ce7d05a5f19fa5660a10",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "**NB:** Type hinting is literally just hinting about the type of the argument or the return value. It is not a guarantee of type, and definitely not a safeguard against type errors. If a function receives an argument or returns a value of the wrong type, the function is still executed, but it might not work correctly."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0101",
+      "type": "paragraph",
+      "order": 101,
+      "source_hash": "b97eebcf5a0222c688482a2c1f8f4510ba0c7934c136e1f60999bbcc47c2ab75",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!---\nA quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-2-more-functions-0102",
+      "type": "quiz",
+      "order": 102,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "fb289a3b-288a-5a9f-b3d2-07ceae5866ea",
+        "attributes": {
+          "id": "fb289a3b-288a-5a9f-b3d2-07ceae5866ea"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-2-more-functions-0103",
+      "type": "paragraph",
+      "order": 103,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-06_triangle",
+  "lesson_id": "part04-2-more-functions",
+  "part": 4,
+  "tmc_name": "part04-06_triangle",
+  "title_original": "A triangle",
+  "title_vi": "Một hình tam giác",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `triangle`, which draws a triangle of hashes, and takes one argument. The triangle should be as tall and as wide as the value of the argument.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in the `line` function.\n\nSome examples:\n\n```python\ntriangle(6)\nprint()\ntriangle(3)\n```\n\n<sample-output>\n\n<pre>\n#\n##\n###\n####\n#####\n######\n\n#\n##\n###\n</pre>\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `triangle` để vẽ một tam giác chứa các giá trị băm và nhận một đối số. Hình tam giác phải cao và rộng bằng giá trị của đối số.\n\nHàm sẽ gọi hàm `line` từ bài tập trên để in ra thực tế. Sao chép lời giải của bạn cho bài tập đó ở phía trên mã của bài tập này. Vui lòng không thay đổi bất cứ điều gì trong chức năng `line`.\n\nMột số ví dụ:\n\n```python\ntriangle(6)\nprint()\ntriangle(3)\n```\n\n<sample-output>\n\n<pre>\n#\n##\n###\n####\n#####\n######\n\n#\n##\n###\n</pre>\n\n</sample-output>",
+  "starter_code": "triangle(6)\nprint()\ntriangle(3)",
+  "grading_data_available": false,
+  "source_hash": "def4bd508f5c29a1a4462ce632cd805f99d985514af6ba3cb91476821bee4363",
+  "order": 32
+}

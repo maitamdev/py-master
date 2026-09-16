@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-13_rectangle_of_hashes",
+  "lesson_id": "part03-2-working-with-strings",
+  "part": 3,
+  "tmc_name": "part03-13_rectangle_of_hashes",
+  "title_original": "A rectangle of hashes",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please modify the previous program so that it also asks for the height, and prints out a rectangle of hash characters accordingly.\n\n<sample-output>\n\nWidth: **10**\nHeight: **3**\n##########\n##########\n##########\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "cb41952f964414b9b93d75404d6ab57e597f5f0234b755a9e31e8e00b6705936",
+  "order": 54
+}

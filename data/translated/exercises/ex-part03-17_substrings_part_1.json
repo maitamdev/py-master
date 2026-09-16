@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-17_substrings_part_1",
+  "lesson_id": "part03-2-working-with-strings",
+  "part": 3,
+  "tmc_name": "part03-17_substrings_part_1",
+  "title_original": "Substrings, part 1",
+  "title_vi": "Chuỗi con, phần 1",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user to type in a string. The program then prints out all the substrings which begin with the first character, from the shortest to the longest. Have a look at the example below.\n\n<sample-output>\n\nPlease type in a string: **test**\nt\nte\ntes\ntest\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình yêu cầu người dùng nhập một chuỗi. Sau đó, chương trình in ra tất cả các chuỗi con bắt đầu bằng ký tự đầu tiên, từ ngắn nhất đến dài nhất. Hãy xem ví dụ dưới đây.\n\n<sample-output>\n\nVui lòng nhập một chuỗi: **test**\nt\nbạn\ntes\nkiểm tra\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "2c84aaa9e9b8bfdb92e619afe9f329e302487d3b3890d87a499df904571c1563",
+  "order": 66
+}

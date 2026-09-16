@@ -1,0 +1,16 @@
+{
+  "id": "ex-part10-01_laptop_computer",
+  "lesson_id": "part10-1-class-hierarchies",
+  "part": 10,
+  "tmc_name": "part10-01_laptop_computer",
+  "title_original": "Laptop computer",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The exercise template contains a class definition for a `Computer`, which has the attributes `model` and `speed`.\n\nPlease define a class named `LaptopComputer` which _inherits_ the class `Computer`. The constructor of the new class should take a third argument: `weight`, of type integer.\n\nPlease also include a `__str__` method in your class definition. See the example below for the expected format of the string representation printed out.\n\n```python\nlaptop = LaptopComputer(\"NoteBook Pro15\", 1500, 2)\nprint(laptop)\n```\n\n<sample-output>\n\nNoteBook Pro15, 1500 MHz, 2 kg\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "laptop = LaptopComputer(\"NoteBook Pro15\", 1500, 2)\nprint(laptop)",
+  "grading_data_available": false,
+  "source_hash": "5a58812bb04a0fcbc70cb8bd38ee2a28d3a86169c65e441454ea67340ec3e73a",
+  "order": 43
+}

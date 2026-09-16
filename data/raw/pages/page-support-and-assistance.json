@@ -1,0 +1,80 @@
+{
+  "id": "page-support-and-assistance",
+  "slug": "support-and-assistance",
+  "title_original": "Support and assistance",
+  "path": "/support-and-assistance",
+  "source_path": "data/support-and-assistance.md",
+  "source_hash": "a6b3e5af1e5f49c55b9085b2b00e950cee6f15090105ffd0845ba10929f21d3f",
+  "frontmatter": {
+    "path": "/support-and-assistance",
+    "title": "Support and assistance",
+    "hidden": false,
+    "information_page": true,
+    "sidebar_priority": 4000
+  },
+  "chunks_count": 12,
+  "raw_chunks": [
+    {
+      "raw_type": "heading",
+      "level": 3,
+      "content": "Guidance during autumn",
+      "raw_source": "### Guidance during autumn"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "**The guidance schedule will be updated in early September, with more guidance slots available**",
+      "raw_source": "**The guidance schedule will be updated in early September, with more guidance slots available**"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The 2026 course will offer guidance at both the Kumpula campus and on Discord. The sessions on campus are held in Exactum BK107. The guidance sessions are at the following times (UPDATED on Sep 3th):",
+      "raw_source": "The 2026 course will offer guidance at both the Kumpula campus and on Discord. The sessions on campus are held in Exactum BK107. The guidance sessions are at the following times (UPDATED on Sep 3th):"
+    },
+    {
+      "raw_type": "list",
+      "content": "* Mondays 16:00 to 19:00\n* Tuesdays 13:00 to 16:00\n* Thursdays 16:00 to 19:00\n* Fridays 13:00 to 16:00",
+      "raw_source": "* Mondays 16:00 to 19:00\n* Tuesdays 13:00 to 16:00\n* Thursdays 16:00 to 19:00\n* Fridays 13:00 to 16:00"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!-- Kumpulan kampuksella Exactumin salissa BK107 keskiviikkoisin klo 12–16 sekä perjantaisin klo 12–16.",
+      "raw_source": "<!-- Kumpulan kampuksella Exactumin salissa BK107 keskiviikkoisin klo 12–16 sekä perjantaisin klo 12–16."
+    },
+    {
+      "raw_type": "table",
+      "content": "| Time / Date | MON | TUE | WED | THU | FRI |\n|-----|----|----|----|----|----|\n| 10-11 | - | X | - | - | X |\n| 11-12 | - | X | - | - | X |\n| 12-13 | - | - | - | X | - |\n| 13-14 | - | - | - | X | - |\n| 14-15 | - | - | - | - | - |\n| 15-16 | - | - | X | - | - |\n| 16-17 | - | X | X | - | - |\n| 17-18 | - | X | - | - | - |-->",
+      "raw_source": "| Time / Date | MON | TUE | WED | THU | FRI |\n|-----|----|----|----|----|----|\n| 10-11 | - | X | - | - | X |\n| 11-12 | - | X | - | - | X |\n| 12-13 | - | - | - | X | - |\n| 13-14 | - | - | - | X | - |\n| 14-15 | - | - | - | - | - |\n| 15-16 | - | - | X | - | - |\n| 16-17 | - | X | X | - | - |\n| 17-18 | - | X | - | - | - |-->"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "During the on-campus sessions there might be help available also on Discord if the assistants have time to follow the course Discord. Naturally, you can still ask for assistance in Discord whenever needed.",
+      "raw_source": "During the on-campus sessions there might be help available also on Discord if the assistants have time to follow the course Discord. Naturally, you can still ask for assistance in Discord whenever needed."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "*The schedule is subject to change.*",
+      "raw_source": "*The schedule is subject to change.*"
+    },
+    {
+      "raw_type": "heading",
+      "level": 4,
+      "content": "Discord",
+      "raw_source": "#### Discord"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Discord is a communication platform which allows both text-based and voice/video chats. You can find out more about the platform [on the Discord website](https://discord.com/).",
+      "raw_source": "Discord is a communication platform which allows both text-based and voice/video chats. You can find out more about the platform [on the Discord website](https://discord.com/)."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The course channels are available through [this link](https://study.cs.helsinki.fi/discord/join/ohjelmoinnin_mooc). See especially the `ohjelmoinnin_mooc_english` and the `ohjelmoinnin_mooc_voice` channels for support in English.",
+      "raw_source": "The course channels are available through [this link](https://study.cs.helsinki.fi/discord/join/ohjelmoinnin_mooc). See especially the `ohjelmoinnin_mooc_english` and the `ohjelmoinnin_mooc_voice` channels for support in English."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Instructor will be on standby on the course channels in Discord at guidance time. Instructor will also reply to questions sent via private messages. Discord also has a discussion about the course outside of the guidance hours, so it’s worth joining!",
+      "raw_source": "Instructor will be on standby on the course channels in Discord at guidance time. Instructor will also reply to questions sent via private messages. Discord also has a discussion about the course outside of the guidance hours, so it’s worth joining!"
+    }
+  ]
+}

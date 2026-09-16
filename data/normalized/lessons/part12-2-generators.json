@@ -1,0 +1,598 @@
+{
+  "id": "part12-2-generators",
+  "part": 12,
+  "part_slug": "part-12",
+  "slug": "2-generators",
+  "is_part_index": false,
+  "title_original": "Generators",
+  "title_vi": "",
+  "path": "/part-12/2-generators",
+  "source_path": "data/part-12/2-generators.md",
+  "source_hash": "782337d280d540efd87919159a8beee91f5354376a91442c9857c4a3217e7868",
+  "order": 1,
+  "blocks_count": 32,
+  "blocks": [
+    {
+      "id": "blk-part12-2-generators-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "99502794e13a965ef7201f7a9bc4660d9a9abf07d2c9c390c36dc6355e4e782c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know what a Python generator is\n- You will be familiar with the keyword `yield`\n- You will be able to write your own generator functions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part12-2-generators-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "b8aba29301a360c60bd33f8a10099ccd6ded218fa76d89f9084af0675acfcb96",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We have already come across situations where we're dealing with a series of items, and we'd need the next item(s) in the series, but we wouldn't necessarily want to formulate the entire series up to that point each time a new item is required. Some recursive series, such as the Fibonacci number, are a good example of such a situation. If each function call recursively generates the entire series up to the desired point, we end up generating the beginning of the series many times over."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-2-generators-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "27aa27230e078c333a6014a06be87e28b20c371913448aff886529586e423d72",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Python _generators_ are a way of producing just the next item in a series when it is needed, essentially running the generation process for the series only once (for a given execution of a program). They work mostly like normal functions, as they can be called and will return values, but the value a generator function returns differs from a normal function. A normal function should return the same value every time, given the same arguments. A generator function, on the other hand, should remember its current state and return the next item in the series, which may be different from the previous item."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-2-generators-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "b049cc35af850f18361bd9059fe5c94961f5c7f56f5f6230e466ec864fc883d1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Just as there are many ways of solving most any programming problem, there are many ways of achieving a functionality similar to generators, but generators can help make the program easier to understand, and can in certain situations save memory or other computational resources."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-2-generators-0005",
+      "type": "heading",
+      "order": 5,
+      "source_hash": "e08914cbd4eb09f7eaa403c1a01839cb47199c77b9c52362c5a0fa9cf3351f47",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The keyword yield"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part12-2-generators-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "75b7e407151acfacc619fc6860b2a069d5e041d6e40792ffcdf324c5a99301d9",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A generator function must contain the keyword `yield`, which marks out the value which the function returns. Let's take a look at a function which generates integer numbers, starting from zero and ending at a pre-determined maximum value:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-2-generators-0007",
+      "type": "code",
+      "order": 7,
+      "source_hash": "32b863f892c2babf747083c5e78d53e44eba52b845cf0467223df558cb4af316",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\ndef counter(max_value: int):\n    number = 0\n    while number <= max_value:\n        yield number\n        number += 1\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "\ndef counter(max_value: int):\n    number = 0\n    while number <= max_value:\n        yield number\n        number += 1\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "32b863f892c2babf747083c5e78d53e44eba52b845cf0467223df558cb4af316",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part12-2-generators-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "666960ef7678d0f1345638a176d0236bdb58d28f9131481bad4d672461ae48e4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Now the `counter` function can be passed as an argument to the function `next()`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-2-generators-0009",
+      "type": "code",
+      "order": 9,
+      "source_hash": "da8da46bcc9db08b9962f7666de2bce1d3f4415cb1bb93b3ac933d8feefab717",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    numbers = counter(10)\n    print(\"First value:\")\n    print(next(numbers))\n    print(\"Second value:\")\n    print(next(numbers))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    numbers = counter(10)\n    print(\"First value:\")\n    print(next(numbers))\n    print(\"Second value:\")\n    print(next(numbers))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "da8da46bcc9db08b9962f7666de2bce1d3f4415cb1bb93b3ac933d8feefab717",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part12-2-generators-0010",
+      "type": "sample_output",
+      "order": 10,
+      "source_hash": "16a46231948eecd51a4fefff647e24c144721abfaa5c024245d6acf928fdaf54",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "First value:\n0\nSecond value:\n1"
+      },
+      "translation": {
+        "language": "text",
+        "content": "First value:\n0\nSecond value:\n1"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nFirst value:\n0\nSecond value:\n1\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-2-generators-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "916fd3148d8bfd9ac7540727813974480d4e45f1be37977695ff129e4a0d66bc",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As you can see from the example above, the keyword `yield` is similar to the keyword `return`: both are used to define a return value. The difference is that `yield` doesn't \"close\" the function in the same sense as `return`. A generator function with the `yield` keyword keeps track of its state, and the next time it is called, it will continue from the same state."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-2-generators-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "7863a93cb1835ded056da4fbe08f366972e94ae904eda7965a261800b3941c63",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This generator also requires a maximum value, which was `10` in the example above. When the generator runs out of values, it will raise a `StopIteration` exception:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-2-generators-0013",
+      "type": "code",
+      "order": 13,
+      "source_hash": "e63d97fcc29204a778bd9cee5ad3d2c7a9c10121b871790c457c983f9d5eabe1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    # creates a generator with maximum value 1\n    numbers = counter(1)\n    print(next(numbers))\n    print(next(numbers))\n    print(next(numbers))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    # creates a generator with maximum value 1\n    numbers = counter(1)\n    print(next(numbers))\n    print(next(numbers))\n    print(next(numbers))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e63d97fcc29204a778bd9cee5ad3d2c7a9c10121b871790c457c983f9d5eabe1",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part12-2-generators-0014",
+      "type": "sample_output",
+      "order": 14,
+      "source_hash": "313823b5595114512d8f9e91deb287a0ed0eb736457da0d349cf884109b01c9c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "0\n1\nTraceback (most recent call last):\n  File \"generator_example.py\", line 11, in <module>\n    print(next(numbers))\nStopIteration"
+      },
+      "translation": {
+        "language": "text",
+        "content": "0\n1\nTraceback (most recent call last):\n  File \"generator_example.py\", line 11, in <module>\n    print(next(numbers))\nStopIteration"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n0\n1\nTraceback (most recent call last):\n  File \"generator_example.py\", line 11, in <module>\n    print(next(numbers))\nStopIteration\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-2-generators-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "302b8e9953b126dea1c73e1c038d261d18a56ba74193bcef4801b317a1451a40",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exception can be caught with a `try` - `except` block:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-2-generators-0016",
+      "type": "code",
+      "order": 16,
+      "source_hash": "e6fe04ebb29c540582fc0196cde79001334aad08355b1e6b0ebef0bf78024d61",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    numbers = counter(1)\n    try:\n        print(next(numbers))\n        print(next(numbers))\n        print(next(numbers))\n    except StopIteration:\n        print(\"ran out of numbers\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    numbers = counter(1)\n    try:\n        print(next(numbers))\n        print(next(numbers))\n        print(next(numbers))\n    except StopIteration:\n        print(\"ran out of numbers\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e6fe04ebb29c540582fc0196cde79001334aad08355b1e6b0ebef0bf78024d61",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part12-2-generators-0017",
+      "type": "sample_output",
+      "order": 17,
+      "source_hash": "7f35d518d5326e3e225c72913d1e22cf3dc67fd10ed23747d6c1946d7018271e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "0\n1\nran out of numbers"
+      },
+      "translation": {
+        "language": "text",
+        "content": "0\n1\nran out of numbers"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n0\n1\nran out of numbers\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-2-generators-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "7949fc6038aab8bb0c54dfc8169f76adea479d0f62b943be089d3a83c4de8185",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Traversing through all the items in a generator is easily done with a `for` loop:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-2-generators-0019",
+      "type": "code",
+      "order": 19,
+      "source_hash": "ee6e282434ebcd14b56db7363f6a615d31037caa9fe749c847f7f9fc03bb3d1a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    numbers = counter(5)\n    for number in numbers:\n        print(number)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    numbers = counter(5)\n    for number in numbers:\n        print(number)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ee6e282434ebcd14b56db7363f6a615d31037caa9fe749c847f7f9fc03bb3d1a",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part12-2-generators-0020",
+      "type": "sample_output",
+      "order": 20,
+      "source_hash": "9f012dedf7408899567879319463ef67e65e5e6c34e511bee2c1a2c56cfd9370",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "0\n1\n2\n3\n4\n5"
+      },
+      "translation": {
+        "language": "text",
+        "content": "0\n1\n2\n3\n4\n5"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n0\n1\n2\n3\n4\n5\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-2-generators-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "c1b0c9ff7b689c1409f6d8372baa814f16d865a4199706ae359e76eb73092a5c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Generators do not have to have a defined maximum value or termination point. They can generate values infinitely (within other computational and physical constraints, naturally)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-2-generators-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "310df25f5f96f8d19c448bda03c2d2cd5307f6e317cd4293bd30dbbde6e18e0d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Pay mind, though: traversing a generator with a `for` loop only works if the generator terminates at some point. If the generator is built on an infinite loop, trying to traverse it with a simple `for` loop will cause an endless execution, just like a `while` loop with no end or break condition would."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-2-generators-0023",
+      "type": "exercise",
+      "order": 23,
+      "source_hash": "495c47999cd0793de48b0ffebed775b03311a486e2b4f94f1276fae9c77c028f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a generator function named `even_numbers(beginning: int, maximum: int)` which takes two integers as its arguments. The function should produce even numbers starting from `beginning` and ending with, at most, `maximum`.\n\nTwo examples of how the function works:\n\n```python\nnumbers = even_numbers(2, 10)\nfor number in numbers:\n    print(number)\n```\n\n<sample-output>\n\n2\n4\n6\n8\n10\n\n</sample-output>\n\n```python\nnumbers = even_numbers(11, 21)\nfor number in numbers:\n    print(number)\n```\n\n<sample-output>\n\n12\n14\n16\n18\n20\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part12-08_even_numbers",
+        "exercise_type": "programming-exercise",
+        "name": "Even numbers",
+        "tmc_name": "part12-08_even_numbers",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part12-2-generators-0024",
+      "type": "exercise",
+      "order": 24,
+      "source_hash": "b5d2dd35db9452c8c4609239ab66691b69f7e5aad022b906057018c93574bf3f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A prime number is a number which is divisible only by itself and the number 1. By convention prime numbers are defined as positive integers from the number 2 upwards. The first six prime numbers are 2, 3, 5, 7, 11 and 13.\n\nPlease write a generator function `prime_numbers()` which creates a new generator. The generator should return new prime numbers, one by one in sequence, from 2 onwards. NB: this generator never terminates. It will generate numbers for as long as they are needed.\n\nFor example:\n\n```python\nnumbers = prime_numbers()\nfor i in range(8):\n    print(next(numbers))\n```\n\n<sample-output>\n\n2\n3\n5\n7\n11\n13\n17\n19\n\n</sample-output>\n\n**Hint:** you can use a loop to check if a number is a prime number. If we are checking the number `x`, the loop would go through the numbers `2` to `x-1`. If `x` is divisible by any one of these, it is not a prime number."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part12-09_prime_numbers",
+        "exercise_type": "programming-exercise",
+        "name": "Prime numbers",
+        "tmc_name": "part12-09_prime_numbers",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part12-2-generators-0025",
+      "type": "heading",
+      "order": 25,
+      "source_hash": "03bc82143ecec946ce98d49f177ea1f7dba58dcca978744355a81f6c3591772f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Generator comprehensions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part12-2-generators-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "a2ab2a6d571625c241bf3083bb39ad92913375a2c965f2d00dca86311b9582ed",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You do not necessarily need a function definition to create a generator. We can use a structure similar to a list comprehension instead. This time we use _round_ brackets to signify a generator instead of a list or a dictionary:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-2-generators-0027",
+      "type": "code",
+      "order": 27,
+      "source_hash": "39d50b43e5e2707fd130a81e1398c2ef84fe42ebe8d7df32df80010cbdf64412",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# This generator returns squares of integers\nsquares = (x ** 2 for x in range(1, 64))\n\nprint(squares) # the printout of a generator object isn't too informative\n\nfor i in range(5):\n    print(next(squares))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# This generator returns squares of integers\nsquares = (x ** 2 for x in range(1, 64))\n\nprint(squares) # the printout of a generator object isn't too informative\n\nfor i in range(5):\n    print(next(squares))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "39d50b43e5e2707fd130a81e1398c2ef84fe42ebe8d7df32df80010cbdf64412",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part12-2-generators-0028",
+      "type": "sample_output",
+      "order": 28,
+      "source_hash": "c0e17fbe1c9bb710b8c92bb434c6cb006b9f38b1fbc862e6174b3ebc286bc7ce",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "<generator object &lt;genexpr&gt; at 0x000002B4224EBFC0>\n1\n4\n9\n16\n25"
+      },
+      "translation": {
+        "language": "text",
+        "content": "<generator object &lt;genexpr&gt; at 0x000002B4224EBFC0>\n1\n4\n9\n16\n25"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n<generator object &lt;genexpr&gt; at 0x000002B4224EBFC0>\n1\n4\n9\n16\n25\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-2-generators-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "03a0a37f6833559de6c146c40c4cc8f3d906f1586f934c44465ade12d839e4c8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the following example we print out substrings of the English alphabet, each three characters long. This prints out the first 10 items in the generator:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-2-generators-0030",
+      "type": "code",
+      "order": 30,
+      "source_hash": "b39c2aa65d5d59028c9eb489287915ffc91ec4a4d953e947e2923382444ae586",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "substrings = (\"abcdefghijklmnopqrstuvwxyz\"[i : i + 3] for i in range(24))\n\n# print out first 10 substrings\nfor i in range(10):\n    print(next(substrings))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "substrings = (\"abcdefghijklmnopqrstuvwxyz\"[i : i + 3] for i in range(24))\n\n# print out first 10 substrings\nfor i in range(10):\n    print(next(substrings))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b39c2aa65d5d59028c9eb489287915ffc91ec4a4d953e947e2923382444ae586",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part12-2-generators-0031",
+      "type": "sample_output",
+      "order": 31,
+      "source_hash": "7828cf24f4cd2d1a6b2df5a2f3131051110cfc9309eafa0815a0999a553dbd80",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "abc\nbcd\ncde\ndef\nefg\nfgh\nghi\nhij\nijk\njkl"
+      },
+      "translation": {
+        "language": "text",
+        "content": "abc\nbcd\ncde\ndef\nefg\nfgh\nghi\nhij\nijk\njkl"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nabc\nbcd\ncde\ndef\nefg\nfgh\nghi\nhij\nijk\njkl\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-2-generators-0032",
+      "type": "exercise",
+      "order": 32,
+      "source_hash": "5a9ff371cc13fb2c23664b7354136739adffe30f175d9e9b855ceaa6a99b6a35",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `word_generator(characters: str, length: int, amount: int)` which returns a new generator for generating random words based on the parameters given.\n\nA random word is generated by selecting from the string named `characters` as many characters as is indicated by the argument `length`. The same character can appear many times in a random word.\n\nThe generator returns as many words as specified by the argument `amount` before terminating.\n\nAn example run of the word generator:\n\n```python\nwordgen = word_generator(\"abcdefg\", 3, 5)\nfor word in wordgen:\n    print(word)\n```\n\n<sample-output>\n\ndbf\nbaf\nead\nfga\nccc\n\n</sample-output>\n\nNB: it is up to you how you implement this function. You may use a \"traditional\" generator or a generator comprehension equally well."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part12-10_random_words",
+        "exercise_type": "programming-exercise",
+        "name": "Random words",
+        "tmc_name": "part12-10_random_words",
+        "height": null
+      }
+    }
+  ]
+}

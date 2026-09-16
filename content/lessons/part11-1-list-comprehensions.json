@@ -1,0 +1,1250 @@
+{
+  "id": "part11-1-list-comprehensions",
+  "part": 11,
+  "part_slug": "part-11",
+  "slug": "1-list-comprehensions",
+  "is_part_index": false,
+  "title_original": "List comprehensions",
+  "title_vi": "List Comprehension",
+  "path": "/part-11/1-list-comprehensions",
+  "source_path": "data/part-11/1-list-comprehensions.md",
+  "source_hash": "806b30b71da061cb3c2c1de14d7d59b9b32bee3fa663caf049ff3af04e1e4c8e",
+  "order": 1,
+  "blocks_count": 69,
+  "blocks": [
+    {
+      "id": "blk-part11-1-list-comprehensions-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "a9c4bd18c9982c7dd0bc80dc4d72fb7db400afb2e57c08c518ed0f7345e3a388",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know what list comprehensions are\n- You will be able to use list comprehensions to create new lists"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ biết hiểu danh sách là gì\n- Bạn sẽ có thể sử dụng tính năng hiểu danh sách để tạo danh sách mới"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "13e18875a0d58f52474de8475ecaa1b9e8b4b9864bd90342f3a9132e684685f4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "One of the situations where programming is at its most powerful is processing sequences of items and events. Computers are good at repeating things. For example, in the previous parts of this material we have been iterating over strings, lists and dictionaries in various ways."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một trong những tình huống mà lập trình phát huy hiệu quả nhất là xử lý chuỗi các mục và sự kiện. Máy tính rất giỏi lặp lại mọi thứ. Ví dụ, trong các phần trước của tài liệu này, chúng ta đã lặp lại các chuỗi, danh sách và từ điển theo nhiều cách khác nhau."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "62d9b2c98b6c68babf31754936e19e2a68d2e9e88c0565f3c499eb0f43dc5c97",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's assume we have a list of integers, and we would need the same list of items in string format. A traditional way of completing the task could look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Giả sử chúng ta có một danh sách các số nguyên và chúng ta sẽ cần cùng một danh sách các mục ở định dạng chuỗi. Cách hoàn thành nhiệm vụ truyền thống có thể trông như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0004",
+      "type": "code",
+      "order": 4,
+      "source_hash": "2234503572a92d54405070a49c7674d96ef6b6ec83bcf42d78a0babf47db61e5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "numbers = [1, 2, 3, 6, 5, 4, 7]\n\nstrings = []\nfor number in numbers:\n    strings.append(str(number))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "numbers = [1, 2, 3, 6, 5, 4, 7]\n\nstrings = []\nfor number in numbers:\n    strings.append(str(number))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2234503572a92d54405070a49c7674d96ef6b6ec83bcf42d78a0babf47db61e5",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0005",
+      "type": "heading",
+      "order": 5,
+      "source_hash": "82d18c2d556ebbc03bb234d035f41508c1dfca2501b19602e69b62c268338913",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "List comprehensions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "List Comprehension"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "4ed04eafec66c6edb76eab42cb1209e0853c58ec8ff9227456b4e375110eb736",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "There is also a more \"pythonic\" way of generating lists from existing lists. These are called _list comprehensions_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ngoài ra còn có một cách tạo danh sách \"pythonic\" hơn từ các danh sách hiện có. Chúng được gọi là _list hiểu_."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "b69492dc1cea50ec3fd9fd6f89eee9f70103cd398819a406b3102f76dd71e49c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The idea is to fit on a single line both the description of what should be done to each item on the list, and the assignment of the result to a new list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ý tưởng là đặt trên một dòng duy nhất cả phần mô tả những việc cần làm cho từng mục trong danh sách và việc gán kết quả cho danh sách mới."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "df86db6e0b394a42d04d237c55e73958082e91e9bc4334c8943e6bf6e4d4c1be",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the above example, the operation performed on each item on the list was very simple: each integer was converted into a string. Let's see what this would look like implemented with a list comprehension:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong ví dụ trên, thao tác thực hiện trên mỗi mục trong danh sách rất đơn giản: mỗi số nguyên được chuyển đổi thành một chuỗi. Hãy xem điều này sẽ trông như thế nào khi được thực hiện bằng cách hiểu danh sách:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0009",
+      "type": "code",
+      "order": 9,
+      "source_hash": "606f512d9f4ffc45da37fd67d5fabdf6df9486bac47aef80bf6ae192ca445c54",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "numbers = [1, 2, 3, 6, 5, 4, 7]\nstrings = [str(number) for number in numbers]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "numbers = [1, 2, 3, 6, 5, 4, 7]\nstrings = [str(number) for number in numbers]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "606f512d9f4ffc45da37fd67d5fabdf6df9486bac47aef80bf6ae192ca445c54",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "50ba8e09e40d81d06af1a78f276c805fa3db868e9811ba9cebd593edcc50b34d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The second line above contains many of the same elements as the more traditional iterative apporach, but the syntax is different. One way of generalising a list comprehension statement would be"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Dòng thứ hai ở trên chứa nhiều phần tử giống như ứng dụng lặp lại truyền thống hơn, nhưng cú pháp thì khác. Một cách khái quát hóa một tuyên bố hiểu danh sách sẽ là"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "2071cfcfc54386aff197ba68d9f331463581273dd5cbf28d5fc7f1d27536c68d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "`[<expression> for <item> in <series>]`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "`[XTAGPH0000X for XTAGPH0001X in XTAGPH0002X]`"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "843a289c7731ff57ea08a2b18f97c9c48f9a711918e0fdfd66adb5d3b807e455",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The square brackets around the list comprehension statement signal to Python that the result should be a new list. One by one, each item in the original list is processed, and the result is stored in the new list, just like in the iterative approach above. As a result we have a new list with exactly as many items as were in the original, and all items have been processed in an identical fashion."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Dấu ngoặc vuông xung quanh câu lệnh hiểu danh sách báo hiệu cho Python rằng kết quả phải là một danh sách mới. Lần lượt, từng mục trong danh sách ban đầu được xử lý và kết quả được lưu trữ trong danh sách mới, giống như cách tiếp cận lặp lại ở trên. Kết quả là chúng tôi có một danh sách mới với số lượng mục chính xác như trong danh sách ban đầu và tất cả các mục đã được xử lý theo cách giống hệt nhau."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "784fc752276d135360d9eaca2fe1ba6670c8c84d12a3c6ac04e2b15b5c75ad74",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "(NB: the originals for the images in this part are temporarily missing, which is why there is some Finnish vocabulary in the illustrations in this part. We are working on fixing this.)"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "(Lưu ý: bản gốc của hình ảnh trong phần này tạm thời bị thiếu, đó là lý do tại sao có một số từ vựng tiếng Phần Lan trong hình minh họa ở phần này. Chúng tôi đang nỗ lực khắc phục vấn đề này.)"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0014",
+      "type": "image",
+      "order": 14,
+      "source_hash": "835cf32d4677c3845ec8e82e91464b11f0d37fb9961dd3ca1ea7d5145a02623e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "11_1_2.png",
+        "alt": "",
+        "attributes": {
+          "src": "11_1_2.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "b11144c5c2039663faa6b05fd9ebe1c3f05116266e310ece1e4f650ce76d629a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "List comprehensions can handle much more complicated operations as well. We can perform calculations, such as multiplying the original items by ten:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Việc hiểu danh sách cũng có thể xử lý các hoạt động phức tạp hơn nhiều. Chúng ta có thể thực hiện các phép tính, chẳng hạn như nhân các mục ban đầu với 10:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0016",
+      "type": "code",
+      "order": 16,
+      "source_hash": "2792dc10281f0cd5281ccc59c4606febff9016426cc2a44163b41234da6213b2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "numbers = list(range(1,10))\nprint(numbers)\n\nnumbers_multiplied = [number * 10 for number in numbers]\nprint(numbers_multiplied)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "numbers = list(range(1,10))\nprint(numbers)\n\nnumbers_multiplied = [number * 10 for number in numbers]\nprint(numbers_multiplied)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2792dc10281f0cd5281ccc59c4606febff9016426cc2a44163b41234da6213b2",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0017",
+      "type": "sample_output",
+      "order": 17,
+      "source_hash": "5632a58ff618f24b91188f70881bfe4921611c7660e8e9a0ec9cfbc084ddc89f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[1, 2, 3, 4, 5, 6, 7, 8, 9]\n[10, 20, 30, 40, 50, 60, 70, 80, 90]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[1, 2, 3, 4, 5, 6, 7, 8, 9]\n[10, 20, 30, 40, 50, 60, 70, 80, 90]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[1, 2, 3, 4, 5, 6, 7, 8, 9]\n[10, 20, 30, 40, 50, 60, 70, 80, 90]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "9ce0aa50aa083a414e33ed6eb4029c2fbce585a4141aea52f3ad8be7e31bca64",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In fact, the expression within the list comprehension statement can be any Python expression. You can even call functions you've defined yourself:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trên thực tế, biểu thức trong câu lệnh hiểu danh sách có thể là bất kỳ biểu thức Python nào. Bạn thậm chí có thể gọi các hàm mà bạn đã tự xác định:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0019",
+      "type": "code",
+      "order": 19,
+      "source_hash": "8a7bfcdf64568c15e135a0632170494188a85746477c5f588f85c6a6d7e62380",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def factorial(n: int):\n    \"\"\" The function calculates the factorial n! for integers above zero \"\"\"\n    k = 1\n    while n >= 2:\n        k *= n\n        n -= 1\n    return k\n\nif __name__ == \"__main__\":\n    numbers = [5, 2, 4, 3, 0]\n    factorials = [factorial(number) for number in numbers]\n    print(factorials)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def factorial(n: int):\n    \"\"\" The function calculates the factorial n! for integers above zero \"\"\"\n    k = 1\n    while n >= 2:\n        k *= n\n        n -= 1\n    return k\n\nif __name__ == \"__main__\":\n    numbers = [5, 2, 4, 3, 0]\n    factorials = [factorial(number) for number in numbers]\n    print(factorials)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8a7bfcdf64568c15e135a0632170494188a85746477c5f588f85c6a6d7e62380",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0020",
+      "type": "sample_output",
+      "order": 20,
+      "source_hash": "762283abda70e8e720d1d895435dbff758e76899e9322f213360804fd0a5b2a5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[120, 2, 24, 6, 1]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[120, 2, 24, 6, 1]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[120, 2, 24, 6, 1]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "b5e3431350dc5eae77816db7222901a39b4ec6d8f3e6d3001f4dc68be0a362df",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "With the more familiar `for` loop the same process could be expressed like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Với vòng lặp `for` quen thuộc hơn, quy trình tương tự có thể được biểu diễn như sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0022",
+      "type": "code",
+      "order": 22,
+      "source_hash": "42b068d6702a27ea90898935aa602ee34e24d56a3daccab7599e7907c05e49bc",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def factorial(n: int):\n    \"\"\" The function calculates the factorial n! for integers above zero \"\"\"\n    k = 1\n    while n >= 2:\n        k *= n\n        n -= 1\n    return k\n\nif __name__ == \"__main__\":\n    numbers = [5, 2, 4, 3, 0]\n    factorials = []\n    for number in numbers:\n        factorials.append(factorial(number))\n    print(factorials)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def factorial(n: int):\n    \"\"\" The function calculates the factorial n! for integers above zero \"\"\"\n    k = 1\n    while n >= 2:\n        k *= n\n        n -= 1\n    return k\n\nif __name__ == \"__main__\":\n    numbers = [5, 2, 4, 3, 0]\n    factorials = []\n    for number in numbers:\n        factorials.append(factorial(number))\n    print(factorials)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "42b068d6702a27ea90898935aa602ee34e24d56a3daccab7599e7907c05e49bc",
+        "length_lines": 14
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "dbfba3094eceac23b4c016e706650a13a711379cc037f369ce0e6efeb3eb91b1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "List comprehensions allow us to express the same functionality more consisely, usually without losing any of the readability."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Việc hiểu danh sách cho phép chúng ta diễn đạt chức năng tương tự một cách ngắn gọn hơn, thường không làm mất đi bất kỳ khả năng đọc nào."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "5a56a83e250038d20c4f2ef95a010efb85ba2274df72bfd7ba5a232555b35b05",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We can also return a list comprehension statement from a function directly. If we needed a function for producing factorials for lists of numbers, we could achieve it very concisely:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta cũng có thể trực tiếp trả về một câu lệnh hiểu danh sách từ một hàm. Nếu chúng ta cần một hàm để tạo giai thừa cho danh sách các số, thì chúng ta có thể thực hiện nó một cách rất chính xác:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0025",
+      "type": "code",
+      "order": 25,
+      "source_hash": "c8724c2f08f8971bef0fd1bef7bf3f1f273214b693a405c76c0ede5c283f2542",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def factorials(numbers: list):\n    return [factorial(number) for number in numbers]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def factorials(numbers: list):\n    return [factorial(number) for number in numbers]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c8724c2f08f8971bef0fd1bef7bf3f1f273214b693a405c76c0ede5c283f2542",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0026",
+      "type": "exercise",
+      "order": 26,
+      "source_hash": "eeab3ed3bc8ce6759aed93c22a7f4f5f5ebf83be137ef5efa6abadae4a791a11",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `square_roots(numbers: list)` which takes a list of integers as its argument. The function should return a new list containing the square roots of the original integers. \n\nThe [math](https://docs.python.org/3/library/math.html) module from the Python standard library contains a suitable function for calculating the square root.\n\nThe function should use a list comprehension. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nlines = square_roots([1,2,3,4])\nfor line in lines:\n    print(line)\n```\n\n<sample-output>\n\n1.0\n1.4142135623730951\n1.7320508075688772\n2.0\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `square_roots(numbers: list)` lấy danh sách các số nguyên làm đối số. Hàm sẽ trả về một danh sách mới chứa căn bậc hai của các số nguyên ban đầu. \n\nMô-đun [math](https://docs.python.org/3/library/math.html) từ thư viện chuẩn Python chứa hàm phù hợp để tính căn bậc hai.\n\nHàm này nên sử dụng khả năng hiểu danh sách. Độ dài tối đa của hàm là hai dòng mã, bao gồm dòng tiêu đề bắt đầu bằng từ khóa `def`.\n\nHàm này sẽ hoạt động như sau:\n\n```python\nlines = square_roots([1,2,3,4])\nfor line in lines:\n    print(line)\n```\n\n<sample-output>\n\n1.0\n1.4142135623730951\n1.7320508075688772\n2.0\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-01_square_roots",
+        "exercise_type": "programming-exercise",
+        "name": "Square roots",
+        "tmc_name": "part11-01_square_roots",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0027",
+      "type": "exercise",
+      "order": 27,
+      "source_hash": "41d13fed4f939ebdeb9f55ed72319ed8573610d1c9aa8833b479508be0b97a41",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `rows_of_stars(numbers: list)` which takes a list of integers as its argument. The function should return a new list containing rows of stars. The length of each row should correspond to the integer at the same index in the original list. The function should use a list comprehension to achieve this.\n\nThe maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nrows = rows_of_stars([1,2,3,4])\nfor row in rows:\n    print(row)\n\nprint()\n\nrows = rows_of_stars([4, 3, 2, 1, 10])\nfor row in rows:\n    print(row)\n```\n\n<sample-output>\n\n<pre>\n*\n**\n***\n****\n\n****\n***\n**\n*\n**********\n</pre>\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `rows_of_stars(numbers: list)` lấy danh sách các số nguyên làm đối số. Hàm sẽ trả về một danh sách mới chứa các hàng sao. Độ dài của mỗi hàng phải tương ứng với số nguyên có cùng chỉ mục trong danh sách ban đầu. Hàm nên sử dụng khả năng hiểu danh sách để đạt được điều này.\n\nĐộ dài tối đa của hàm là hai dòng mã, bao gồm dòng tiêu đề bắt đầu bằng từ khóa `def`.\n\nHàm này sẽ hoạt động như sau:\n\n```python\nrows = rows_of_stars([1,2,3,4])\nfor row in rows:\n    print(row)\n\nprint()\n\nrows = rows_of_stars([4, 3, 2, 1, 10])\nfor row in rows:\n    print(row)\n```\n\n<sample-output>\n\n<pre>\n*\n**\n***\n****\n\n****\n***\n**\n*\n**********\n</pre>\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-02_rows_of_stars",
+        "exercise_type": "programming-exercise",
+        "name": "Rows of stars",
+        "tmc_name": "part11-02_rows_of_stars",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0028",
+      "type": "exercise",
+      "order": 28,
+      "source_hash": "a20de028528744151264b7cb45275978af58e32246b2f5f3c505aab1ed8ecd21",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains the class definition `ExamResult`. The class has the following public attributes:\n\n* name\n* grade1\n* grade2\n* grade3\n\nPlease write a function named `best_results(results: list)` which takes a list of ExamResult objects as its argument.\n\nThe function should return a new list containing only the best result from each ExamResult object. The function should use a list comprehension to achieve this.\n\nThe maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nresult1 = ExamResult(\"Peter\",5,3,4)\nresult2 = ExamResult(\"Pippa\",3,4,1)\nresult3 = ExamResult(\"Paul\",2,1,3)\nresults = [result1, result2, result3]\nprint(best_results(results))\n```\n\n<sample-output>\n\n[5, 4, 3]\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mẫu bài tập chứa định nghĩa lớp `ExamResult`. Lớp này có các thuộc tính công khai sau:\n\n* tên\n* lớp 1\n* lớp 2\n* lớp 3\n\nVui lòng viết một hàm có tên `best_results(results: list)` lấy danh sách các đối tượng ExamResult làm đối số.\n\nHàm sẽ trả về một danh sách mới chỉ chứa kết quả tốt nhất từ ​​mỗi đối tượng ExamResult. Hàm nên sử dụng khả năng hiểu danh sách để đạt được điều này.\n\nĐộ dài tối đa của hàm là hai dòng mã, bao gồm dòng tiêu đề bắt đầu bằng từ khóa `def`.\n\nHàm này sẽ hoạt động như sau:\n\n```python\nresult1 = ExamResult(\"Peter\",5,3,4)\nresult2 = ExamResult(\"Pippa\",3,4,1)\nresult3 = ExamResult(\"Paul\",2,1,3)\nresults = [result1, result2, result3]\nprint(best_results(results))\n```\n\n<sample-output>\n\n[5, 4, 3]\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-03_best_exam_result",
+        "exercise_type": "programming-exercise",
+        "name": "Best exam result",
+        "tmc_name": "part11-03_best_exam_result",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0029",
+      "type": "exercise",
+      "order": 29,
+      "source_hash": "669ff453a5f13baba37b2db244c74089bab76b7fd031caa65f994e417f529e4a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `lengths(lists: list)` which takes a list containing lists of integers as its argument. The function should return a new list, containing the lengths of the lists within the argument list.\n\nThe function should use a list comprehension to achieve this. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nlists = [[1,2,3,4,5], [324, -1, 31, 7],[]]\nprint(lengths(lists))\n```\n\n<sample-output>\n\n[5, 4, 0]\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `lengths(lists: list)` lấy danh sách chứa danh sách các số nguyên làm đối số. Hàm sẽ trả về một danh sách mới, chứa độ dài của danh sách trong danh sách đối số.\n\nHàm nên sử dụng khả năng hiểu danh sách để đạt được điều này. Độ dài tối đa của hàm là hai dòng mã, bao gồm dòng tiêu đề bắt đầu bằng từ khóa `def`.\n\nHàm này sẽ hoạt động như sau:\n\n```python\nlists = [[1,2,3,4,5], [324, -1, 31, 7],[]]\nprint(lengths(lists))\n```\n\n<sample-output>\n\n[5, 4, 0]\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-04_lengths",
+        "exercise_type": "programming-exercise",
+        "name": "Lengths",
+        "tmc_name": "part11-04_lengths",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0030",
+      "type": "heading",
+      "order": 30,
+      "source_hash": "d75544108d0920e70645f61a2191af9f8615a5ec647b0d2eb9ad86ba1b7ae2a5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Filtering items"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lọc các mục"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "a70c7825717e80b702cdb8653438b9f41b9e1872160f567503c04e5364efac53",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the examples above all of our lists remained the same length before and after a list comprehension operation. In each case, all the items in the original list were used as the basis of the new list. But sometimes we only need _some_ of the original items. How can this be achieved?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong các ví dụ trên, tất cả các danh sách của chúng tôi vẫn giữ nguyên độ dài trước và sau thao tác hiểu danh sách. Trong mỗi trường hợp, tất cả các mục trong danh sách ban đầu đều được sử dụng làm cơ sở cho danh sách mới. Nhưng đôi khi chúng ta chỉ cần _một số_ món đồ ban đầu. Làm thế nào điều này có thể đạt được?"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "cf10ea0e25cf2b935dc323d7d5efdc50245dbaea3d70095bd2e7460ff55099cf",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A list comprehension statement also allows for a condition, so that we can check the items against the condition and select only those which match. The general syntax is as follows:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Câu lệnh hiểu danh sách cũng cho phép một điều kiện, để chúng ta có thể kiểm tra các mục theo điều kiện đó và chỉ chọn những mục phù hợp. Cú pháp chung như sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "dbb4a9041f8f13eacc4c536121650e8060eb2362d8c080a73dc122a6523e0d4d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "`[<expression> for <item> in <series> if <Boolean expression>]`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "`[XTAGPH0000X for XTAGPH0001X in XTAGPH0002X if XTAGPH0003X]`"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "28c4d0998fdcf85807745483a2999ae8f7f4a70e3f656fbbefee5aee8f7ff351",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The statement above is otherwise identical to the general form introduced in the beginning of this section, but now there is an if statement at the end. Only those items from the original list for which the Boolean expression is true are used as the basis of the new list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Câu lệnh trên giống hệt với dạng chung được giới thiệu ở đầu phần này, nhưng bây giờ có câu lệnh if ở cuối. Chỉ những mục từ danh sách ban đầu có biểu thức Boolean đúng mới được sử dụng làm cơ sở cho danh sách mới."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "5bd06924e79f634718ef780ee5f851fb8304271df3d0ccf84e5c414dc79defb1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the example below we select all the even items from the original list as the basis of the new list. In fact, these items are not further processed in any way; they are assigned to the new list as is:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong ví dụ bên dưới, chúng tôi chọn tất cả các mục chẵn từ danh sách ban đầu làm cơ sở cho danh sách mới. Trên thực tế, những mục này không được xử lý thêm dưới bất kỳ hình thức nào; chúng được gán vào danh sách mới như sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0036",
+      "type": "code",
+      "order": 36,
+      "source_hash": "5899cc10da245f203a8947ebb786a8d4568dbeed8b3eb8f7ff4af2069f0242fa",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "numbers = [1, 1, 2, 3, 4, 6, 4, 5, 7, 10, 12, 3]\n\neven_items = [item for item in numbers if item % 2 == 0]\nprint(even_items)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "numbers = [1, 1, 2, 3, 4, 6, 4, 5, 7, 10, 12, 3]\n\neven_items = [item for item in numbers if item % 2 == 0]\nprint(even_items)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5899cc10da245f203a8947ebb786a8d4568dbeed8b3eb8f7ff4af2069f0242fa",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0037",
+      "type": "sample_output",
+      "order": 37,
+      "source_hash": "8a59fb30c9defbb47855c6a1b2fe39fa0ff9467ddd23bde0f60877f3961c1fd1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[2, 4, 6, 4, 10, 12]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[2, 4, 6, 4, 10, 12]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[2, 4, 6, 4, 10, 12]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "07dbc23b2158e64391949e83e4e0907bfdb7a723b00c797c0b627cc0696a1a9e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The expression in the list comprehension statement above is just a simple `item`, which means that no operations are to be performed on the items in the list. The expression could be any Python expression, just like in the previous examples. For example, the following list comprehension statement takes all the even items in a list, multiplies each by ten, and stores the result in a new list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Biểu thức trong câu lệnh hiểu danh sách ở trên chỉ là một `item` đơn giản, có nghĩa là không có thao tác nào được thực hiện trên các mục trong danh sách. Biểu thức có thể là bất kỳ biểu thức Python nào, giống như trong các ví dụ trước. Ví dụ: câu lệnh hiểu danh sách sau đây lấy tất cả các mục chẵn trong danh sách, nhân mỗi mục với 10 và lưu kết quả vào một danh sách mới:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0039",
+      "type": "code",
+      "order": 39,
+      "source_hash": "997fcf9a8dac313c2af7374ca21c40b03cdc6e4f86c2e8851e61ceca81cf98a3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "numbers = [1, 1, 2, 3, 4, 6, 4, 5, 7, 10, 12, 3]\n\neven_items = [item * 10 for item in numbers if item % 2 == 0]\nprint(even_items)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "numbers = [1, 1, 2, 3, 4, 6, 4, 5, 7, 10, 12, 3]\n\neven_items = [item * 10 for item in numbers if item % 2 == 0]\nprint(even_items)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "997fcf9a8dac313c2af7374ca21c40b03cdc6e4f86c2e8851e61ceca81cf98a3",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0040",
+      "type": "sample_output",
+      "order": 40,
+      "source_hash": "30292c90b849c30d9f761e90034003e1db8e1d07af2918100119e2bf9920106b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[20, 40, 60, 40, 100, 120]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[20, 40, 60, 40, 100, 120]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[20, 40, 60, 40, 100, 120]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "149ac6e31276aeea1da64dd7529a0927c2208ed1dadd216435256a681526bd02",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "As you come across more and more complicated list comprehensions, you may find it useful to try reading the condition first. After all, the items are processed only if they pass the test, so it often makes sense to first figure out which items pass the filtering stage. Sometimes the expression in a list comprehension statement would not even be possible for all the items in the original list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khi bạn gặp phải cách hiểu danh sách ngày càng phức tạp hơn, bạn có thể thấy hữu ích khi thử đọc điều kiện trước. Xét cho cùng, các mục chỉ được xử lý nếu chúng vượt qua bài kiểm tra, vì vậy, trước tiên, việc tìm ra mục nào vượt qua giai đoạn lọc thường là điều hợp lý. Đôi khi, biểu thức trong câu lệnh hiểu danh sách thậm chí không thể thực hiện được đối với tất cả các mục trong danh sách ban đầu."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "a00b14a8166fc8d5004b34c9c1b41a53e9f19b8c4e9c98fc75455bd19797847a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "For example, the factorial operation is only defined for non-negative integers. If we can't be sure a list only contains values of zero or above, the contents have to be filtered before passing them on to the factorial function we made before:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ: phép toán giai thừa chỉ được xác định cho số nguyên không âm. Nếu chúng ta không thể chắc chắn rằng danh sách chỉ chứa các giá trị từ 0 trở lên thì nội dung đó phải được lọc trước khi chuyển chúng sang hàm giai thừa mà chúng ta đã thực hiện trước đó:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0043",
+      "type": "code",
+      "order": 43,
+      "source_hash": "41ee7eb98dd81ac0cde83aa257dffc57ee86e9a870b3114f2cf8105842550497",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def factorial(n: int):\n    \"\"\" The function calculates the factorial n! for integers above zero \"\"\"\n    k = 1\n    while n >= 2:\n        k *= n\n        n -= 1\n    return k\n\nif __name__ == \"__main__\":\n    numbers = [-2, 3, -1, 4, -10, 5, 1]\n    factorials = [factorial(number) for number in numbers if number >= 0]\n    print(factorials)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def factorial(n: int):\n    \"\"\" The function calculates the factorial n! for integers above zero \"\"\"\n    k = 1\n    while n >= 2:\n        k *= n\n        n -= 1\n    return k\n\nif __name__ == \"__main__\":\n    numbers = [-2, 3, -1, 4, -10, 5, 1]\n    factorials = [factorial(number) for number in numbers if number >= 0]\n    print(factorials)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "41ee7eb98dd81ac0cde83aa257dffc57ee86e9a870b3114f2cf8105842550497",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0044",
+      "type": "sample_output",
+      "order": 44,
+      "source_hash": "e3b800c569ee9450bcc861ae4cc0e60af15c84df11263974c0dae3cd31c55b81",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[6, 24, 120, 1]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[6, 24, 120, 1]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[6, 24, 120, 1]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0045",
+      "type": "paragraph",
+      "order": 45,
+      "source_hash": "2a5826a0d6db5bf3a68515eb7c34dc2cfc28b35630c5ab029ee4979cc0e735c0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "As we saw in our very first list comprehension example, where integers were converted into strings, the items in the new list do not have to be of the same type as the items in the original list. Continuing from the factorial example above, we can create a tuple from each original item and its processed counterpart, and store these in a list, combining everything we've learned so far in a single list comprehension statement:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Như chúng ta đã thấy trong ví dụ hiểu danh sách đầu tiên, trong đó các số nguyên được chuyển đổi thành chuỗi, các mục trong danh sách mới không nhất thiết phải cùng loại với các mục trong danh sách ban đầu. Tiếp tục từ ví dụ giai thừa ở trên, chúng ta có thể tạo một bộ dữ liệu từ mỗi mục ban đầu và đối tượng đã xử lý của nó, đồng thời lưu trữ chúng trong một danh sách, kết hợp mọi thứ chúng ta đã học được cho đến nay trong một câu lệnh hiểu danh sách duy nhất:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0046",
+      "type": "code",
+      "order": 46,
+      "source_hash": "2ec74a72c7c5dd785d7a5f24ec37d57968936bac147974315ce02b9d7c251cd9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def factorial(n: int):\n    \"\"\" The function calculates the factorial n! for integers above zero \"\"\"\n    k = 1\n    while n >= 2:\n        k *= n\n        n -= 1\n    return k\n\nif __name__ == \"__main__\":\n    numbers = [-2, 3, 2, 1, 4, -10, 5, 1, 6]\n    # the variable name abbreviated here so that this would be easier to read\n    factorials = [(n, factorial(n)) for n in numbers if n > 0 and n % 2 == 0]\n    print(factorials)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def factorial(n: int):\n    \"\"\" The function calculates the factorial n! for integers above zero \"\"\"\n    k = 1\n    while n >= 2:\n        k *= n\n        n -= 1\n    return k\n\nif __name__ == \"__main__\":\n    numbers = [-2, 3, 2, 1, 4, -10, 5, 1, 6]\n    # the variable name abbreviated here so that this would be easier to read\n    factorials = [(n, factorial(n)) for n in numbers if n > 0 and n % 2 == 0]\n    print(factorials)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2ec74a72c7c5dd785d7a5f24ec37d57968936bac147974315ce02b9d7c251cd9",
+        "length_lines": 13
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0047",
+      "type": "sample_output",
+      "order": 47,
+      "source_hash": "7bdb3d1b1b55646ca9bd9fd2d326d8414cf74b421e9e656b154d06d79d26e926",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[(2, 2), (4, 24), (6, 720)]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[(2, 2), (4, 24), (6, 720)]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[(2, 2), (4, 24), (6, 720)]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0048",
+      "type": "paragraph",
+      "order": 48,
+      "source_hash": "acd83238a71972e119d626ba05eea0c8a7b1a929322674edb4f49d3837c37ad6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Picking the above example apart, we have the Boolean expression `n > 0 and n % 2 == 0`. This means that only items which are both positive and divisible by two are accepted for further processing from the original list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tách riêng ví dụ trên ra, chúng ta có biểu thức Boolean `n > 0 and n % 2 == 0`. Điều này có nghĩa là chỉ các mục vừa dương vừa chia hết cho 2 mới được chấp nhận để xử lý thêm từ danh sách ban đầu."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0049",
+      "type": "paragraph",
+      "order": 49,
+      "source_hash": "3e48013fbef10c4deb0a34b1e6f45e8624cbad95d33944bc420777ee7e61325d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "These positive, even numbers are then each in turn processed into the format `(n, factorial(n))`. This is a tuple, where the first item is the number itself, and the second item is the result returned by the factorial function."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau đó, các số chẵn, dương này lần lượt được xử lý thành định dạng `(n, factorial(n))`. Đây là một bộ dữ liệu, trong đó mục đầu tiên là chính số đó và mục thứ hai là kết quả được trả về bởi hàm giai thừa."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0050",
+      "type": "exercise",
+      "order": 50,
+      "source_hash": "cf7aa3be45a6f5f1340cd299621106f18c7c597387dafe0f463811610f0c1f3d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `remove_smaller_than(numbers: list, limit: int)` which takes a list of integers and a limit value (also in integer format) as its arguments.\n\nThe function should use a list comprehension to produce a new list without the values which are smaller than the limit value.\n\nThe maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nAn example of the function in use:\n\n```python\nnumbers = [1,65, 32, -6, 9, 11]\nprint(remove_smaller_than(numbers, 10))\n\nprint(remove_smaller_than([-4, 7, 8, -100], 0))\n```\n\n<sample-output>\n\n[65, 32, 11]\n[7, 8]\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng viết một hàm có tên `remove_smaller_than(numbers: list, limit: int)` lấy danh sách các số nguyên và giá trị giới hạn (cũng ở định dạng số nguyên) làm đối số của nó.\n\nHàm nên sử dụng khả năng hiểu danh sách để tạo danh sách mới không có giá trị nhỏ hơn giá trị giới hạn.\n\nĐộ dài tối đa của hàm là hai dòng mã, bao gồm dòng tiêu đề bắt đầu bằng từ khóa `def`.\n\nMột ví dụ về chức năng được sử dụng:\n\n```python\nnumbers = [1,65, 32, -6, 9, 11]\nprint(remove_smaller_than(numbers, 10))\n\nprint(remove_smaller_than([-4, 7, 8, -100], 0))\n```\n\n<sample-output>\n\n[65, 32, 11]\n[7, 8]\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-05_remove_smaller_than",
+        "exercise_type": "programming-exercise",
+        "name": "Remove smaller than",
+        "tmc_name": "part11-05_remove_smaller_than",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0051",
+      "type": "exercise",
+      "order": 51,
+      "source_hash": "f83e1d7f2dc36d93bd4866dbb28fecd45dfe61d3aeadff3088ce5ada6ee59c34",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `begin_with_vowel(words: list)` which takes a list of strings as its argument.\n\nThe function should use a list comprehension technique to create and return a new list, containing only those words from the original list which begin with a vowel (a, e, i, o, u). Both lowercase and uppercase letters should be accepted.\n\nThe maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nAn example of the function in use:\n\n```python\nword_list = [\"automobile\",\"motorbike\",\"Animal\",\"cat\",\"Dog\",\"APPLE\",\"orange\"]\nfor vowelled in begin_with_vowel(word_list):\n    print(vowelled)\n```\n\n<sample-output>\n\nautomobile\nAnimal\nAPPLE\norange\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng viết một hàm có tên `begin_with_vowel(words: list)` lấy danh sách các chuỗi làm đối số.\n\nHàm nên sử dụng kỹ thuật hiểu danh sách để tạo và trả về một danh sách mới, chỉ chứa những từ trong danh sách ban đầu bắt đầu bằng nguyên âm (a, e, i, o, u). Cả chữ thường và chữ hoa đều phải được chấp nhận.\n\nĐộ dài tối đa của hàm là hai dòng mã, bao gồm dòng tiêu đề bắt đầu bằng từ khóa `def`.\n\nMột ví dụ về chức năng được sử dụng:\n\n```python\nword_list = [\"automobile\",\"motorbike\",\"Animal\",\"cat\",\"Dog\",\"APPLE\",\"orange\"]\nfor vowelled in begin_with_vowel(word_list):\n    print(vowelled)\n```\n\n<sample-output>\n\nô tô\nđộng vật\nTÁO\ntrái cam\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-06_begin_with_vowel",
+        "exercise_type": "programming-exercise",
+        "name": "Begin with a vowel",
+        "tmc_name": "part11-06_begin_with_vowel",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0052",
+      "type": "heading",
+      "order": 52,
+      "source_hash": "1b54e3b12ca7e9145973728fff22095bf3a0e906263ab35aa75e4879c5eaa6c0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Alternative execution with list comprehensions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thực hiện thay thế với việc hiểu danh sách"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0053",
+      "type": "paragraph",
+      "order": 53,
+      "source_hash": "9e057bc444775dfd2261758071b8dda811280e377263d2fdc6e9024f2f9c706b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Often when we have a conditional statement, we also include an `else` branch. As we can use conditions in list comprehensions, the else branch is also available with list comprehensions. The general syntax of the conditional used with list comprehensions looks like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thông thường khi chúng tôi có một câu lệnh có điều kiện, chúng tôi cũng bao gồm nhánh `else`. Vì chúng ta có thể sử dụng các điều kiện trong việc hiểu danh sách, nên nhánh else cũng có sẵn cho việc hiểu danh sách. Cú pháp chung của điều kiện được sử dụng với tính năng hiểu danh sách trông như sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0054",
+      "type": "paragraph",
+      "order": 54,
+      "source_hash": "388c5c3bb8c2cef6381a73b62ac722118ac7890ff5be97d29ed64524330a257e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "`<expression 1> if <condition> else <expression 2>`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "`XTAGPH0000X if XTAGPH0001X else XTAGPH0002X`"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0055",
+      "type": "paragraph",
+      "order": 55,
+      "source_hash": "408265b2042c0da8a262c0f0f91351b9d597d9496f050f3ab6dde0e22bfc0cd9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We came across these single line conditionals, or ternary operators, already in [part 7](/part-7/6-more-features). The expression above evaluates to either `expression 1` or `expression 2`, depending on whether the condition is true or false."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng tôi đã xem qua các toán tử điều kiện một dòng hoặc toán tử ba ngôi này đã có trong [phần 7](/part-7/6-more-features). Biểu thức trên đánh giá thành `expression 1` hoặc `expression 2`, tùy thuộc vào điều kiện là đúng hay sai."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0056",
+      "type": "paragraph",
+      "order": 56,
+      "source_hash": "0933af889aa65f91c4d277fa1c5fc8063e5bcebc7a3df37250a9b2ef70364cbf",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "As a refresher on the subject, if we needed to print out the larger of two numbers, and we wanted to use just a single print statement, we could fit it all on a single line:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Để ôn lại chủ đề này, nếu chúng ta cần in ra số lớn hơn trong hai số và chúng ta chỉ muốn sử dụng một câu lệnh `print` duy nhất, chúng ta có thể in tất cả trên một dòng:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0057",
+      "type": "code",
+      "order": 57,
+      "source_hash": "cafd6c5f8504cf25c959cfedd9d0419bd6f360c347895dfaad60c80eb1663c25",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number1 = int(input(\"Type in number 1:\"))\nnumber2 = int(input(\"Type in number 2:\"))\nprint (number1 if number1 > number2 else number2)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number1 = int(input(\"Type in number 1:\"))\nnumber2 = int(input(\"Type in number 2:\"))\nprint (number1 if number1 > number2 else number2)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "cafd6c5f8504cf25c959cfedd9d0419bd6f360c347895dfaad60c80eb1663c25",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0058",
+      "type": "paragraph",
+      "order": 58,
+      "source_hash": "f9f70328891fa07866c405eaf2142567d2735dffb696a19bb956358b6f81a491",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Combining the ternary operator syntax with a list comprehension statement yields the following general structure:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Việc kết hợp cú pháp toán tử bậc ba với câu lệnh hiểu danh sách sẽ mang lại cấu trúc chung sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0059",
+      "type": "paragraph",
+      "order": 59,
+      "source_hash": "83b46dba6c6961cde02de257a53945d49ef41432fff6fee7f6a4e189fef5103e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "`[<expression 1> if <condition> else <expression 2> for <item> in <series>]`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "`[XTAGPH0000X if XTAGPH0001X else XTAGPH0002X for XTAGPH0003X in XTAGPH0004X]`"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0060",
+      "type": "paragraph",
+      "order": 60,
+      "source_hash": "f06442bc7b393d9175eb73b359eb07ef298ec1311614c568c1c5d4947cfaabbc",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This may look a little confusing, as the conditional structure now comes before the actual list comprehension part. This is just the way the syntax has been defined, at least at the moment. If there is also an `else` branch, the conditional comes first. If there is just an `if`, it goes to the end. You can try swapping them around and see what happens."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điều này có vẻ hơi khó hiểu vì cấu trúc điều kiện hiện xuất hiện trước phần hiểu danh sách thực tế. Đây chỉ là cách cú pháp đã được xác định, ít nhất là vào lúc này. Nếu cũng có nhánh `else` thì điều kiện sẽ được ưu tiên trước. Nếu chỉ có `if` thì đi đến cuối cùng. Bạn có thể thử hoán đổi chúng xung quanh và xem điều gì sẽ xảy ra."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0061",
+      "type": "paragraph",
+      "order": 61,
+      "source_hash": "2f5ee6dbf404277beec89d2e132cc2213cde896df6ec9a657f56100d3ebbf858",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Including an else operator means that we will again process every item from the original list. Depending on whether the condition is true or false, either `expression 1` or `expression 2` is performed on each item on the list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Việc bao gồm toán tử else có nghĩa là chúng tôi sẽ xử lý lại mọi mục từ danh sách ban đầu. Tùy thuộc vào điều kiện đúng hay sai, `expression 1` hoặc `expression 2` được thực hiện trên mỗi mục trong danh sách."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0062",
+      "type": "paragraph",
+      "order": 62,
+      "source_hash": "048a0da22ee8f41c715d639bdae93c75b52c79a24ab6e1e4c442024f317cda9c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following example checks if the items on a list are zero or above. Any such item is accepted as is, but all negative items are negated, so that the sign is changed from negative to positive. The result is a list containing the absolute values of the items in the original list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ sau đây kiểm tra xem các mục trong danh sách có bằng 0 hay cao hơn không. Bất kỳ mục nào như vậy đều được chấp nhận, nhưng tất cả các mục âm đều bị phủ định, do đó dấu được thay đổi từ âm sang dương. Kết quả là danh sách chứa giá trị tuyệt đối của các mục trong danh sách ban đầu."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0063",
+      "type": "code",
+      "order": 63,
+      "source_hash": "fc219dba453074f5888f8bf0bcd16d8406d2c920d829fc9555771e6349e90882",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "numbers = [1, -3, 45, -110, 2, 9, -11]\nabs_vals = [number if number >= 0 else -number for number in numbers]\nprint(abs_vals)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "numbers = [1, -3, 45, -110, 2, 9, -11]\nabs_vals = [number if number >= 0 else -number for number in numbers]\nprint(abs_vals)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "fc219dba453074f5888f8bf0bcd16d8406d2c920d829fc9555771e6349e90882",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0064",
+      "type": "sample_output",
+      "order": 64,
+      "source_hash": "c06db85c8c8839ce758d68f33a0753adf69574fc4481254fa9a1748cd7b37faa",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[1, 3, 45, 110, 2, 9, 11]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[1, 3, 45, 110, 2, 9, 11]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[1, 3, 45, 110, 2, 9, 11]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0065",
+      "type": "paragraph",
+      "order": 65,
+      "source_hash": "688ffbf4f98eb67cc150b7369c28aa1c7796adada7477a2e8d9780980a8e7407",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Reiterating what happens above: if the condition `number >= 0` is true, the item undergoes expression `number`, and the result is the item itself. If the condition is false, the item undergoes expression `-number`, so that it becomes positive in value."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nhắc lại những gì xảy ra ở trên: nếu điều kiện `number >= 0` là đúng, mục đó sẽ trải qua biểu thức `number` và kết quả là chính mục đó. Nếu điều kiện sai, mục sẽ trải qua biểu thức `-number` để nó có giá trị dương."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0066",
+      "type": "paragraph",
+      "order": 66,
+      "source_hash": "cc2b6e13988fb144660797997602de76505f55f07cd66b87396f0377868fc5f9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the following example we have the function `string_lengths` which takes a list as its argument, and returns another list with the lengths of any strings in the original list. This function is okay with list items of any type, however. If the item is a string, it calculates its length. If the item is anything else, it inserts -1 in the list it returns."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong ví dụ sau, chúng ta có hàm `string_lengths` lấy một danh sách làm đối số và trả về một danh sách khác có độ dài của bất kỳ chuỗi nào trong danh sách ban đầu. Tuy nhiên, hàm này phù hợp với bất kỳ loại mục danh sách nào. Nếu mục là một chuỗi, nó sẽ tính độ dài của nó. Nếu mục đó là bất cứ thứ gì khác, nó sẽ chèn -1 vào danh sách mà nó trả về."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0067",
+      "type": "code",
+      "order": 67,
+      "source_hash": "06e6e8562b5a5b8252f3bf78f477fec8bd7fa9c642a8cb8e8da7c7c012a56ffb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def string_lengths(my_list: list):\n    \"\"\" The function returns the lengths of strings in a new list \"\"\"\n    return [len(item) if type(item) == str else -1 for item in my_list]\n\nif __name__ == \"__main__\":\n    test_list = [\"hi\", 3, True, \"there\", -123.344, \"toodlepip\", 2, False]\n    lengths = string_lengths(test_list)\n    print(lengths)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def string_lengths(my_list: list):\n    \"\"\" The function returns the lengths of strings in a new list \"\"\"\n    return [len(item) if type(item) == str else -1 for item in my_list]\n\nif __name__ == \"__main__\":\n    test_list = [\"hi\", 3, True, \"there\", -123.344, \"toodlepip\", 2, False]\n    lengths = string_lengths(test_list)\n    print(lengths)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "06e6e8562b5a5b8252f3bf78f477fec8bd7fa9c642a8cb8e8da7c7c012a56ffb",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0068",
+      "type": "sample_output",
+      "order": 68,
+      "source_hash": "8ffc8b069890e0c6d43339800f350b59761f1f1b7a901b2d9b50fe7fabe8e873",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[2, -1, -1, 5, -1, 9, -1, -1]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[2, -1, -1, 5, -1, 9, -1, -1]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[2, -1, -1, 5, -1, 9, -1, -1]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-1-list-comprehensions-0069",
+      "type": "exercise",
+      "order": 69,
+      "source_hash": "c54fb8ceb2aec723d84253d5b0f230fa1392b481bd973fc1f29c5ea86130e85c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "## LotteryNumbers matched\n\nPlease write a class named `LotteryNumbers` which takes the week number (an integer value) and a list of seven integers as its constructor arguments. The list should contain the correct lottery numbers for the given week. \n\nPlease also write a method named `number_of_hits(numbers: list)` which takes a list of integers as its argument. The method returns the number of correct entries in the parameter list.\n\nThe method should use a list comprehension to achieve this. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nAn example of how the class and function are used:\n\n```python\nweek5 = LotteryNumbers(5, [1,2,3,4,5,6,7])\nmy_numbers = [1,4,7,11,13,19,24]\n\nprint(week5.number_of_hits(my_numbers))\n```\n\n<sample-output>\n\n3\n\n</sample-output>\n\n## LotteryNumbers matched in place\n\nPlease write a method named `hits_in_place(numbers)` which takes a list of seven integers as its argument, and returns a new list of seven integers. The new list contains only those items from the original list which match the week's correct numbers. These must remain at the same indexes as they were in the original list. The rest of the indexes should be filled with values `-1`.\n\nThe method should use a list comprehension to achieve this. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nPlease take a look at the example below:\n\n```python\nweek8 = LotteryNumbers(8, [1,2,3,10,20,30,33])\nmy_numbers = [1,4,7,10,11,20,30]\n\nprint(week8.hits_in_place(my_numbers))\n```\n\n<sample-output>\n\n[1, -1, -1, 10, -1, 20, 30]\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "## Xổ sốSố trùng khớp\n\nVui lòng viết một lớp có tên `LotteryNumbers` lấy số tuần (giá trị số nguyên) và danh sách bảy số nguyên làm đối số hàm tạo của nó. Danh sách phải chứa các số xổ số chính xác cho tuần nhất định. \n\nNgoài ra, vui lòng viết một phương thức có tên `number_of_hits(numbers: list)` lấy danh sách các số nguyên làm đối số. Phương thức trả về số mục đúng trong danh sách tham số.\n\nPhương thức này nên sử dụng khả năng hiểu danh sách để đạt được điều này. Độ dài tối đa của hàm là hai dòng mã, bao gồm dòng tiêu đề bắt đầu bằng từ khóa `def`.\n\nMột ví dụ về cách sử dụng lớp và hàm:\n\n```python\nweek5 = LotteryNumbers(5, [1,2,3,4,5,6,7])\nmy_numbers = [1,4,7,11,13,19,24]\n\nprint(week5.number_of_hits(my_numbers))\n```\n\n<sample-output>\n\n3\n\n</sample-output>\n\n## Số xổ số trùng khớp tại chỗ\n\nVui lòng viết một phương thức có tên `hits_in_place(numbers)` lấy danh sách bảy số nguyên làm đối số và trả về một danh sách mới gồm bảy số nguyên. Danh sách mới chỉ chứa những mục từ danh sách ban đầu khớp với số chính xác của tuần. Chúng phải giữ nguyên chỉ mục như trong danh sách ban đầu. Phần còn lại của các chỉ mục phải chứa các giá trị `-1`.\n\nPhương thức này nên sử dụng khả năng hiểu danh sách để đạt được điều này. Độ dài tối đa của hàm là hai dòng mã, bao gồm dòng tiêu đề bắt đầu bằng từ khóa `def`.\n\nXin hãy xem ví dụ dưới đây:\n\n```python\nweek8 = LotteryNumbers(8, [1,2,3,10,20,30,33])\nmy_numbers = [1,4,7,10,11,20,30]\n\nprint(week8.hits_in_place(my_numbers))\n```\n\n<sample-output>\n\n[1, -1, -1, 10, -1, 20, 30]\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-07_lottery_numbers",
+        "exercise_type": "programming-exercise",
+        "name": "Lottery numbers",
+        "tmc_name": "part11-07_lottery_numbers",
+        "height": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "part": 8,
+  "slug": "part-8",
+  "title_original": "Part 8",
+  "title_vi": "Lập trình Hướng đối tượng: Lớp và Phương thức",
+  "lessons": [
+    {
+      "id": "part08-1-objects-and-methods",
+      "slug": "1-objects-and-methods",
+      "is_index": false,
+      "title_original": "Objects and methods",
+      "path": "/part-8/1-objects-and-methods",
+      "blocks_count": 25,
+      "title_vi": "Đối tượng và phương thức"
+    },
+    {
+      "id": "part08-2-classes-and-objects",
+      "slug": "2-classes-and-objects",
+      "is_index": false,
+      "title_original": "Classes and objects",
+      "path": "/part-8/2-classes-and-objects",
+      "blocks_count": 43,
+      "title_vi": "Lớp và đối tượng"
+    },
+    {
+      "id": "part08-3-defining-classes",
+      "slug": "3-defining-classes",
+      "is_index": false,
+      "title_original": "Defining classes",
+      "path": "/part-8/3-defining-classes",
+      "blocks_count": 49,
+      "title_vi": "Định nghĩa lớp"
+    },
+    {
+      "id": "part08-4-defining-methods",
+      "slug": "4-defining-methods",
+      "is_index": false,
+      "title_original": "Defining methods",
+      "path": "/part-8/4-defining-methods",
+      "blocks_count": 37,
+      "title_vi": "Định nghĩa phương thức"
+    },
+    {
+      "id": "part08-5-more-examples-of-classes",
+      "slug": "5-more-examples-of-classes",
+      "is_index": false,
+      "title_original": "More examples of classes",
+      "path": "/part-8/5-more-examples-of-classes",
+      "blocks_count": 39,
+      "title_vi": "Thêm ví dụ về các lớp"
+    },
+    {
+      "id": "part08-index",
+      "slug": "index",
+      "is_index": true,
+      "title_original": "Part 8",
+      "path": "/part-8",
+      "blocks_count": 2,
+      "title_vi": "Lập trình Hướng đối tượng: Lớp và Phương thức"
+    }
+  ]
+}

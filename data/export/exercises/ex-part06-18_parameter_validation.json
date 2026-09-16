@@ -1,0 +1,16 @@
+{
+  "id": "ex-part06-18_parameter_validation",
+  "lesson_id": "part06-3-errors",
+  "part": 6,
+  "tmc_name": "part06-18_parameter_validation",
+  "title_original": "Parameter validation",
+  "title_vi": "Xác thực tham số",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `new_person(name: str, age: int)`, which creates and returns a tuple containing the data in the arguments. The first element should be the name and the second the age.\n\nIf the values stored in the parameter variables are not valid, the function should throw a `ValueError` exception.\n\nInvalid parameters in this case include:\n\n* name is an empty string\n* name contains less than two words\n* name is longer than 40 characters\n* age is a negative number\n* age is greater than 150",
+  "description_vi": "Hãy viết một hàm có tên `new_person(name: str, age: int)` để tạo và trả về một bộ chứa dữ liệu trong các đối số. Phần tử đầu tiên phải là tên và phần tử thứ hai là tuổi.\n\nNếu các giá trị được lưu trữ trong các biến tham số không hợp lệ thì hàm sẽ đưa ra ngoại lệ `ValueError`.\n\nCác tham số không hợp lệ trong trường hợp này bao gồm:\n\n* tên là một chuỗi rỗng\n* tên chứa ít hơn hai từ\n* tên dài hơn 40 ký tự\n* tuổi là số âm\n* tuổi lớn hơn 150",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "61b62dab4310aab559bae4a3bae9ef738fe5dc670d6048f2180eb9bba05fa239",
+  "order": 65
+}

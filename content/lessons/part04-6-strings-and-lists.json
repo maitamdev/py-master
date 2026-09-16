@@ -1,0 +1,1564 @@
+{
+  "id": "part04-6-strings-and-lists",
+  "part": 4,
+  "part_slug": "part-4",
+  "slug": "6-strings-and-lists",
+  "is_part_index": false,
+  "title_original": "More strings and lists",
+  "title_vi": "Nhiều chuỗi và danh sách hơn",
+  "path": "/part-4/6-strings-and-lists",
+  "source_path": "data/part-4/6-strings-and-lists.md",
+  "source_hash": "742aea446293f870b5a632f5b2fe1f358a04d24c43763274788a74ea5d23f985",
+  "order": 1,
+  "blocks_count": 86,
+  "blocks": [
+    {
+      "id": "blk-part04-6-strings-and-lists-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "da612c60b26c3707dea7048ce0c5dd5ba00433888ed29cea98032638adea7afe",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be familiar with more methods for slicing strings and lists\n- You will understand what immutability of strings means\n- You will be able to use the methods `count` and `replace`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ làm quen với nhiều phương pháp cắt chuỗi và danh sách hơn\n- Bạn sẽ hiểu tính bất biến của chuỗi nghĩa là gì\n- Bạn sẽ có thể sử dụng các phương thức `count` và `replace`"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "f7f2c1ff72a8324f878fa6c228495befbae1f0ec526ac0ee5b36df89ed53b944",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You are already familiar with the `[]` syntax for accessing a part of a string:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn đã quen với cú pháp `[]` để truy cập một phần của chuỗi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0003",
+      "type": "code",
+      "order": 3,
+      "source_hash": "05b0cfc08087b95046fd74c5943f62c3a5e97506c6017e1cc842e69ba467e3c5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_string = \"exemplary\"\nprint(my_string[3:7])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_string = \"exemplary\"\nprint(my_string[3:7])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "05b0cfc08087b95046fd74c5943f62c3a5e97506c6017e1cc842e69ba467e3c5",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0004",
+      "type": "sample_output",
+      "order": 4,
+      "source_hash": "bf98e04ebbd3ec9c26eb3fc7ea80c0f6d90a9e4636a3caef20954297ea0775f3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "mpla"
+      },
+      "translation": {
+        "language": "text",
+        "content": "mpla"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nmpla\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "c310b4654dcdcf1e30bb0766b86ff367706e216667ffb929e64ffec2c3ece942",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The same syntax works with lists. Lists can be sliced just like strings:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cú pháp tương tự áp dụng với danh sách. Danh sách có thể được cắt lát giống như chuỗi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0006",
+      "type": "code",
+      "order": 6,
+      "source_hash": "df3be2e5878337514058b65ba3af08c4965bb2a65ccbaaaa0c4069692ff27546",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [3,4,2,4,6,1,2,4,2]\nprint(my_list[3:7])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [3,4,2,4,6,1,2,4,2]\nprint(my_list[3:7])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "df3be2e5878337514058b65ba3af08c4965bb2a65ccbaaaa0c4069692ff27546",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0007",
+      "type": "sample_output",
+      "order": 7,
+      "source_hash": "bc69827671159a3877d680483986fe8a9bf06a2ec9f6d6aa4e0f45eda5237438",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[4, 6, 1, 2]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[4, 6, 1, 2]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[4, 6, 1, 2]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0008",
+      "type": "heading",
+      "order": 8,
+      "source_hash": "6b0a7e59205625b896ef152e3b7ab07e99f0b1c27c1bde28d6514da1afe62de9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "More slices"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thêm lát nữa"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "1b8a25e2ea5f6f38a6d00240dd21f4519895a5fe0180665a43ed04a68d82442e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In fact, the `[]` syntax works very similarly to the `range` function, which means we can also give it a step:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trên thực tế, cú pháp `[]` hoạt động rất giống với hàm `range`, có nghĩa là chúng ta cũng có thể thực hiện thêm một bước:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0010",
+      "type": "code",
+      "order": 10,
+      "source_hash": "aa28348c61277a3010ecb065a36db5b427519812c001092ed4ee5020872392f6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_string = \"exemplary\"\nprint(my_string[0:7:2])\nmy_list = [1,2,3,4,5,6,7,8]\nprint(my_list[6:2:-1])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_string = \"exemplary\"\nprint(my_string[0:7:2])\nmy_list = [1,2,3,4,5,6,7,8]\nprint(my_list[6:2:-1])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "aa28348c61277a3010ecb065a36db5b427519812c001092ed4ee5020872392f6",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0011",
+      "type": "sample_output",
+      "order": 11,
+      "source_hash": "9dbfd80d27a3c5695e8dfaebb5ff5c458d33b44d66a014152f4de1e3cecdfab8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "eepa\n[7, 6, 5, 4]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "eepa\n[7, 6, 5, 4]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\neepa\n[7, 6, 5, 4]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "9c9de29d76b7c160f5011f3eb0eecc4c039fba163373c03726cda5ec24d43b3d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If we omit either of the indexes, the operator defaults to including everything. Among other things, this allows us to write a very short program to reverse a string:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu chúng ta bỏ qua một trong hai chỉ mục, toán tử sẽ mặc định bao gồm mọi thứ. Trong số những thứ khác, điều này cho phép chúng ta viết một chương trình rất ngắn để đảo ngược một chuỗi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0013",
+      "type": "code",
+      "order": 13,
+      "source_hash": "29c715e4972100cf803c9498f3e7317968f1029a9564362c7405e66c1a8f5524",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_string = input(\"Please type in a string: \")\nprint(my_string[::-1])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_string = input(\"Please type in a string: \")\nprint(my_string[::-1])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "29c715e4972100cf803c9498f3e7317968f1029a9564362c7405e66c1a8f5524",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0014",
+      "type": "sample_output",
+      "order": 14,
+      "source_hash": "189f5a5286ec2904e79bac54dd5278eeadcfbe4fca6ea2b1a2a0282c0ac84235",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a string: **exemplary**\nyralpmexe"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a string: **exemplary**\nyralpmexe"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a string: **exemplary**\nyralpmexe\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "27cf6f9b4fc4011be6826651e993f3ca22c8ca26679e755aba2aea7e1a44157d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!--a similar warning is in sections 3-4, 4-6 and 5-1, check them all if you're changing this-->\n## Warning: using global variables within functions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!--một cảnh báo tương tự có trong phần 3-4, 4-6 và 5-1, hãy kiểm tra tất cả nếu bạn thay đổi phần này-->\n## Cảnh báo: sử dụng biến toàn cục trong hàm"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "c96153243d233b509cd2d5dbec4201bb35c250480942cbef8cfad188c36d78b4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We know it is possible to assign new variables within function definitions, but the function can also see variables assigned outside it, in the main function. Such variables are called _global_ variables."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta biết rằng có thể gán các biến mới trong định nghĩa hàm, nhưng hàm cũng có thể thấy các biến được gán bên ngoài nó, trong hàm chính. Các biến như vậy được gọi là biến _global_."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "99f27aabfffa53827b6d115e12d9343d346363d9034bc1da05936a8a72c6fcb5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Using global variables from within functions is usually a bad idea. Among other issues, doing so may cause bugs which are difficult to trace."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sử dụng các biến toàn cục từ bên trong các hàm thường là một ý tưởng tồi. Trong số các vấn đề khác, làm như vậy có thể gây ra lỗi khó theo dõi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "f166be0b8a1b5b094b9773e7d09bc3987d94e25b1a443e95efe39c35e865e9a4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Below is an example of a function which uses a global variable \"by mistake\":"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Dưới đây là ví dụ về hàm sử dụng biến toàn cục \"do nhầm lẫn\":"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0019",
+      "type": "code",
+      "order": 19,
+      "source_hash": "ff50bcb8fd97b75d1c5ea511393270f92cce6c39d4338614a6a315a8d7026a3f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def print_reversed(names: list):\n    # using the global variable instead of the parameter by accident\n    i = len(name_list) - 1\n    while i >= 0:\n        print(name_list[i])\n        i -= 1\n\n# here the global variable is assigned\nname_list = [\"Steve\", \"Jean\", \"Katherine\", \"Paul\"]\nprint_reversed(name_list)\nprint()\nprint_reversed([\"Huey\", \"Dewey\", \"Louie\"])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def print_reversed(names: list):\n    # using the global variable instead of the parameter by accident\n    i = len(name_list) - 1\n    while i >= 0:\n        print(name_list[i])\n        i -= 1\n\n# here the global variable is assigned\nname_list = [\"Steve\", \"Jean\", \"Katherine\", \"Paul\"]\nprint_reversed(name_list)\nprint()\nprint_reversed([\"Huey\", \"Dewey\", \"Louie\"])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ff50bcb8fd97b75d1c5ea511393270f92cce6c39d4338614a6a315a8d7026a3f",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0020",
+      "type": "sample_output",
+      "order": 20,
+      "source_hash": "8b5ae8c3eb1f7f082005001e184f1968c15c608e763a1f3ce16adb897079db3b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Paul\nKatherine\nJean\nSteve\n\nPaul\nKatherine\nJean\nSteve"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Paul\nKatherine\nJean\nSteve\n\nPaul\nKatherine\nJean\nSteve"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPaul\nKatherine\nJean\nSteve\n\nPaul\nKatherine\nJean\nSteve\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "20acf475355b218324190946464627ca9c76f224a02b8e70018f9b064dd34936",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Even though both function calls have the right kind of argument, the function always prints out what is stored in the global variable `name_list`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mặc dù cả hai lệnh gọi hàm đều có loại đối số phù hợp nhưng hàm này vẫn luôn in ra những gì được lưu trữ trong biến toàn cục `name_list`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "b2f9f8043f25cb5f10baf17fecb2e92e09f20c0812ee2ca6b7f9bf2f8558b43b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "To make matters even more muddled, remember that all code for testing your functions should be placed within the `if __name__ == \"__main__\":` block for the automatic tests. The previous example should be modified:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Để làm cho vấn đề trở nên rắc rối hơn nữa, hãy nhớ rằng tất cả mã để kiểm tra các hàm của bạn phải được đặt trong khối `if __name__ == \"__main__\":` để kiểm tra tự động. Ví dụ trước cần được sửa đổi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0023",
+      "type": "code",
+      "order": 23,
+      "source_hash": "fb405448b506bf8d3d96b787b07f98f1cb0cfd1da7114f95a6b51562a61a08cc",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def print_reversed(names: list):\n    # using the global variable instead of the parameter by accident\n    i = len(name_list) - 1\n    while i>=0:\n        print(name_list[i])\n        i -= 1\n\n# All the code for testing the function should be within this block\nif __name__ == \"__main__\":\n    # here the global variable is assigned\n    name_list = [\"Steve\", \"Jean\", \"Katherine\", \"Paul\"]\n    print_reversed(name_list)\n    print()\n    print_reversed([\"Huey\", \"Dewey\", \"Louie\"])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def print_reversed(names: list):\n    # using the global variable instead of the parameter by accident\n    i = len(name_list) - 1\n    while i>=0:\n        print(name_list[i])\n        i -= 1\n\n# All the code for testing the function should be within this block\nif __name__ == \"__main__\":\n    # here the global variable is assigned\n    name_list = [\"Steve\", \"Jean\", \"Katherine\", \"Paul\"]\n    print_reversed(name_list)\n    print()\n    print_reversed([\"Huey\", \"Dewey\", \"Louie\"])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "fb405448b506bf8d3d96b787b07f98f1cb0cfd1da7114f95a6b51562a61a08cc",
+        "length_lines": 14
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "b81174304c236bab4a4f8a5be175ee301debb6f6a343202a3c8b8812f982bd7c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Notice the global variable is assigned within the `if` block now."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lưu ý rằng biến toàn cục hiện được gán trong khối `if`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "829fe3e1286b33ee0aabec6806f3fd15de2297bb37c5ecf546ebb2bba992a831",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The automatic tests in the TMC system are executed without running any of the code in the `if` block. So, in this latter example the function wouldn't even theoretically work, since it refers to the variable `name_list`, which doesn't exist at all when the tests are executed."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các thử nghiệm tự động trong hệ thống TMC được thực hiện mà không cần chạy bất kỳ mã nào trong khối `if`. Vì vậy, trong ví dụ sau này, hàm thậm chí sẽ không hoạt động về mặt lý thuyết, vì nó đề cập đến biến `name_list`, biến này hoàn toàn không tồn tại khi thực hiện kiểm tra."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0026",
+      "type": "exercise",
+      "order": 26,
+      "source_hash": "e58711b29ebcbc3285105321e3f9e5460bf54f00c026f20ad42d6aee0b4630a6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `everything_reversed`, which takes a list of strings as its argument. The function returns a new list with all of the items on the original list reversed. Also the order of items should be reversed on the new list.\n\nAn example of how the function should work:\n\n```python\nmy_list = [\"Hi\", \"there\", \"example\", \"one more\"]\nnew_list = everything_reversed(my_list)\nprint(new_list)\n```\n\n<sample-output>\n\n['erom eno', 'elpmaxe', 'ereht', 'iH']\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `everything_reversed`, hàm này lấy danh sách các chuỗi làm đối số. Hàm trả về một danh sách mới có tất cả các mục trong danh sách ban đầu bị đảo ngược. Ngoài ra, thứ tự của các mục nên được đảo ngược trong danh sách mới.\n\nMột ví dụ về cách hoạt động của hàm:\n\n```python\nmy_list = [\"Hi\", \"there\", \"example\", \"one more\"]\nnew_list = everything_reversed(my_list)\nprint(new_list)\n```\n\n<sample-output>\n\n['erom eno', 'elpmaxe', 'ereht', 'iH']\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-33_everything_reversed",
+        "exercise_type": "programming-exercise",
+        "name": "Everything reversed",
+        "tmc_name": "part04-33_everything_reversed",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0027",
+      "type": "heading",
+      "order": 27,
+      "source_hash": "147989e791003d041993c00ea4abaa58c674ca9a14d14575f4997916fb9c276e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Strings are immutable"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chuỗi là bất biến"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "dd54fc0268e9738152d0c00d013f33af44d6fd0a6dd6e7350fb163694a3082bb",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Strings and lists have a lot in common, especially in the way they behave with different operators. The main difference is that strings are _immutable_. That means they cannot be changed."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chuỗi và danh sách có nhiều điểm chung, đặc biệt là ở cách chúng hoạt động với các toán tử khác nhau. Sự khác biệt chính là các chuỗi đó là _immutable_. Điều đó có nghĩa là chúng không thể thay đổi được."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0029",
+      "type": "code",
+      "order": 29,
+      "source_hash": "1fb236c1d3f0ca70e257f82f547b10460cbca052213af9939029963451e0b7e3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_string = \"exemplary\"\nmy_string[0] = \"a\""
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_string = \"exemplary\"\nmy_string[0] = \"a\""
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "1fb236c1d3f0ca70e257f82f547b10460cbca052213af9939029963451e0b7e3",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "56f306efa64a8b9ada009fe06f7ded56157e09f24301a7f1d243da7b001e34bb",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Strings cannot be changed, so the execution of this program causes an error:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chuỗi không thể thay đổi được nên việc thực thi chương trình này sẽ gây ra lỗi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0031",
+      "type": "sample_output",
+      "order": 31,
+      "source_hash": "c5d90b151dba3989991d863ed2012b4cd60092757048c83c39dc6e71e40eef8b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "TypeError: 'str' object does not support item assignment"
+      },
+      "translation": {
+        "language": "text",
+        "content": "TypeError: 'str' object does not support item assignment"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nTypeError: 'str' object does not support item assignment\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "5e1ee1e47314d4139d5e69f96a33e4bbb30f876c78de942c21e094dbe6abf155",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A similar error follows if you try to sort a string with the `sort` method."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sẽ xảy ra lỗi tương tự nếu bạn cố gắng sắp xếp một chuỗi bằng phương thức `sort`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "3c684c1a4f12ca9a168e7fb2af2b2e697ca15c35c9221a9618b2b20c6f1f297f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Strings themselves are immutable, but the variables holding them are not. A string can be replaced by another string."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bản thân các chuỗi là bất biến, nhưng các biến chứa chúng thì không. Một chuỗi có thể được thay thế bằng một chuỗi khác."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "b8535bdfe0943fd459aafe6d11406be19c675974e3d963d91da5decee8bb0902",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following two examples are thus fundamentally different:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Do đó, hai ví dụ sau đây về cơ bản là khác nhau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0035",
+      "type": "code",
+      "order": 35,
+      "source_hash": "46b6c2deee6143b84ebc6046727acbee9a840799f7a347f127400dc8dbb23d7b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [1,2,3]\nmy_list[0] = 10"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [1,2,3]\nmy_list[0] = 10"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "46b6c2deee6143b84ebc6046727acbee9a840799f7a347f127400dc8dbb23d7b",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0036",
+      "type": "image",
+      "order": 36,
+      "source_hash": "45a8f41a1834fbb8405c72326252fd24c16798957641f1dd7914fb8256ee708d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "4_6_1.png",
+        "alt": "",
+        "attributes": {
+          "src": "4_6_1.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0037",
+      "type": "code",
+      "order": 37,
+      "source_hash": "15cc11b631be2bcbaec1ff648dd08f86011ff79ec41f36fe8128ec4834a55b77",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_string = \"Hey\"\nmy_string = my_string + \"!\""
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_string = \"Hey\"\nmy_string = my_string + \"!\""
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "15cc11b631be2bcbaec1ff648dd08f86011ff79ec41f36fe8128ec4834a55b77",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0038",
+      "type": "image",
+      "order": 38,
+      "source_hash": "c77359f6afad50ce63fa962fb2ce00f8ac1ce8620c34a2f83b9a1bdf7adcecd4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "4_6_2.png",
+        "alt": "",
+        "attributes": {
+          "src": "4_6_2.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "acbae41aeed90272b3ebd0c120faa1eecd8cc8fd95616f9f98fcea0c0498b285",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The first example changes the contents of the referenced list. The second example replaces the reference to the original string with a reference to another string. The original string is still somewhere in computer memory, but there is no reference to it, and it cannot be used in the program any longer."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ đầu tiên thay đổi nội dung của danh sách được tham chiếu. Ví dụ thứ hai thay thế tham chiếu đến chuỗi gốc bằng tham chiếu đến chuỗi khác. Chuỗi gốc vẫn còn ở đâu đó trong bộ nhớ máy tính, nhưng không có tham chiếu đến nó và nó không thể được sử dụng trong chương trình nữa."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "25ea41a2e354dcf880f43e12b51f47529d5155679a472aab2b604db930ca1d47",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We will return to this subject in the next part, where references to lists are explored in more detail."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta sẽ quay lại chủ đề này trong phần tiếp theo, trong đó các tham chiếu đến danh sách sẽ được khám phá chi tiết hơn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0041",
+      "type": "heading",
+      "order": 41,
+      "source_hash": "8155c7e2c9e34c0e0003e26f4d54c9b18e5efa3115044d8d79aafc711aa8ccfa",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "More methods for lists and strings"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các phương pháp khác cho danh sách và chuỗi"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "f8582a7dc21aa81202b3b1b121e681874f92c11afb99f011f318279e0bd511e8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The method `count` counts the number of times the specified item or substring occurs in the target. The method works similarly with both strings and lists:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương thức `count` đếm số lần mục hoặc chuỗi con được chỉ định xuất hiện trong mục tiêu. Phương thức này hoạt động tương tự với cả chuỗi và danh sách:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0043",
+      "type": "code",
+      "order": 43,
+      "source_hash": "e4582dad6ec0bedb8711210ecc5dca8eb6351456a06e495ae04ee4a6c6f7f5e9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_string = \"How much wood would a woodchuck chuck if a woodchuck could chuck wood\"\nprint(my_string.count(\"ch\"))\n\nmy_list = [1,2,3,1,4,5,1,6]\nprint(my_list.count(1))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_string = \"How much wood would a woodchuck chuck if a woodchuck could chuck wood\"\nprint(my_string.count(\"ch\"))\n\nmy_list = [1,2,3,1,4,5,1,6]\nprint(my_list.count(1))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e4582dad6ec0bedb8711210ecc5dca8eb6351456a06e495ae04ee4a6c6f7f5e9",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0044",
+      "type": "sample_output",
+      "order": 44,
+      "source_hash": "0e4f3afd00375d1ed6e73b556e8b0edff20412352386e4f6b75469f931f0c315",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "5\n3"
+      },
+      "translation": {
+        "language": "text",
+        "content": "5\n3"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n5\n3\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0045",
+      "type": "paragraph",
+      "order": 45,
+      "source_hash": "8a47aa6cfa569441c4d9d6d204afd8ea69e43c1f48365559ecb4c5d1213d8096",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The method will not count overlapping occurrences. For example, in the string `aaaa` the method counts only two occurrences of the substring `aa`, even though there would actually be three if overlapping occurrences were allowed."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương thức này sẽ không tính các lần xuất hiện chồng chéo. Ví dụ: trong chuỗi `aaaa`, phương thức chỉ tính hai lần xuất hiện của chuỗi con `aa`, mặc dù thực tế sẽ có ba lần xuất hiện nếu cho phép các lần xuất hiện chồng chéo."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0046",
+      "type": "paragraph",
+      "order": 46,
+      "source_hash": "4d57657dfb5de4b813a234584bfaa5b35791d62366a464dc2d2d343c3ec9fd47",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The method `replace` creates a new string, where a specified substring is replaced with another string:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương thức `replace` tạo một chuỗi mới, trong đó chuỗi con đã chỉ định được thay thế bằng một chuỗi khác:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0047",
+      "type": "code",
+      "order": 47,
+      "source_hash": "c16ba6ad3b1e6fc82b654086d56ca7cf299a7e50c5000a04c8d5d7251e2cfaa2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_string = \"Hi there\"\nnew_string = my_string.replace(\"Hi\", \"Hey\")\nprint(new_string)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_string = \"Hi there\"\nnew_string = my_string.replace(\"Hi\", \"Hey\")\nprint(new_string)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c16ba6ad3b1e6fc82b654086d56ca7cf299a7e50c5000a04c8d5d7251e2cfaa2",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0048",
+      "type": "sample_output",
+      "order": 48,
+      "source_hash": "08f81c0efb12aba092c0e212bd539fb636ded6502c51781b5e135da4f85a615d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hey there"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hey there"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHey there\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0049",
+      "type": "paragraph",
+      "order": 49,
+      "source_hash": "ec3140c722362c875652ef5ebd8768426e553ceb515575fd8ad43cef6b205747",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The method will replace all occurrences of the substring:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương thức này sẽ thay thế tất cả các lần xuất hiện của chuỗi con:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0050",
+      "type": "code",
+      "order": 50,
+      "source_hash": "0ce7b856f548ead66d4da76af65c441d0bff0d7ae6c3cc87846a1c04feda4a4a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "sentence = \"sheila sells seashells on the seashore\"\nprint(sentence.replace(\"she\", \"SHE\"))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "sentence = \"sheila sells seashells on the seashore\"\nprint(sentence.replace(\"she\", \"SHE\"))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "0ce7b856f548ead66d4da76af65c441d0bff0d7ae6c3cc87846a1c04feda4a4a",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0051",
+      "type": "sample_output",
+      "order": 51,
+      "source_hash": "90a8d94d48afc46fa63fd28d3ba52c21d3155f3e42c2c4f277d8b02ebc2d3624",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "SHEila sells seaSHElls on the seashore"
+      },
+      "translation": {
+        "language": "text",
+        "content": "SHEila sells seaSHElls on the seashore"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nSHEila sells seaSHElls on the seashore\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0052",
+      "type": "paragraph",
+      "order": 52,
+      "source_hash": "840ab1aa8b617e139ac5da506b7e0768e1a1664225e9a238cb99b63fee5177d9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "When using the `replace` method, a typical mistake is forgetting that strings are immutable:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khi sử dụng phương pháp `replace`, một lỗi điển hình là quên rằng các chuỗi là bất biến:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0053",
+      "type": "code",
+      "order": 53,
+      "source_hash": "55012a9d1fdd1d92e23b2e71bd13e8c0c05624e89630f38c2329ebede61f0a6b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_string = \"Python is fun\"\n\n# Replaces the substring but doesn't store the result...\nmy_string.replace(\"Python\", \"Java\")\nprint(my_string)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_string = \"Python is fun\"\n\n# Replaces the substring but doesn't store the result...\nmy_string.replace(\"Python\", \"Java\")\nprint(my_string)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "55012a9d1fdd1d92e23b2e71bd13e8c0c05624e89630f38c2329ebede61f0a6b",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0054",
+      "type": "sample_output",
+      "order": 54,
+      "source_hash": "bda38567f8d7730abfeb9fba5058d8742b5a312efe54b3c5f953cb83a36ed8e8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Python is fun"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Python is fun"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPython is fun\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0055",
+      "type": "paragraph",
+      "order": 55,
+      "source_hash": "69164bf917e4c603c5391e51ff2e251997abbcd767331f2baaa88f42546b24e6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If the old string is no longer needed, the new string can be assigned to the same variable:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu chuỗi cũ không còn cần thiết nữa thì chuỗi mới có thể được gán cho cùng một biến:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0056",
+      "type": "code",
+      "order": 56,
+      "source_hash": "9ead5449379565e72099a197f5fbc5036a71a028f71891495066d03f997e10ea",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_string = \"Python is fun\"\n\n# Replaces the substring and stores the result in the same variable\nmy_string = my_string.replace(\"Python\", \"Java\")\nprint(my_string)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_string = \"Python is fun\"\n\n# Replaces the substring and stores the result in the same variable\nmy_string = my_string.replace(\"Python\", \"Java\")\nprint(my_string)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "9ead5449379565e72099a197f5fbc5036a71a028f71891495066d03f997e10ea",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0057",
+      "type": "sample_output",
+      "order": 57,
+      "source_hash": "e62683a5d102419110713bcb3c1bd68e7223d22b01c3e2e3b10a37b7d1134bd3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Java is fun"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Java is fun"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nJava is fun\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0058",
+      "type": "exercise",
+      "order": 58,
+      "source_hash": "85fdfe6a575eca76183192c89247acdfaa5a29d46fa334b3846b4a1b01e40e52",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `most_common_character`, which takes a string argument. The function returns the character which has the most occurrences within the string. If there are many characters with equally many occurrences, the one which appears first in the string should be returned.\n\nAn example of expected behaviour:\n\n```python\nfirst_string = \"abcdbde\"\nprint(most_common_character(first_string))\n\nsecond_string = \"exemplaryelementary\"\nprint(most_common_character(second_string))\n```\n\n<sample-output>\n\nb\ne\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `most_common_character`, hàm này nhận đối số chuỗi. Hàm trả về ký tự xuất hiện nhiều nhất trong chuỗi. Nếu có nhiều ký tự có số lần xuất hiện bằng nhau thì ký tự xuất hiện đầu tiên trong chuỗi sẽ được trả về.\n\nMột ví dụ về hành vi dự kiến:\n\n```python\nfirst_string = \"abcdbde\"\nprint(most_common_character(first_string))\n\nsecond_string = \"exemplaryelementary\"\nprint(most_common_character(second_string))\n```\n\n<sample-output>\n\nb\ne\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-34_most_common_character",
+        "exercise_type": "programming-exercise",
+        "name": "Most common character",
+        "tmc_name": "part04-34_most_common_character",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0059",
+      "type": "exercise",
+      "order": 59,
+      "source_hash": "6139fd0ea9f4471adca14b30783104f488ba8480db61d327f285962ac5a5e10c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `no_vowels`, which takes a string argument. The function returns a new string, which should be the same as the original but with all vowels removed.\n\nYou can assume the string will contain only characters from the lowercase English alphabet a...z.\n\nAn example of expected behaviour:\n\n```python\nmy_string = \"this is an example\"\nprint(no_vowels(my_string))\n```\n\n<sample-output>\n\nths s n xmpl\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `no_vowels`, hàm này nhận đối số chuỗi. Hàm trả về một chuỗi mới, chuỗi này phải giống với chuỗi ban đầu nhưng đã loại bỏ tất cả các nguyên âm.\n\nBạn có thể giả sử chuỗi sẽ chỉ chứa các ký tự từ bảng chữ cái tiếng Anh viết thường a...z.\n\nMột ví dụ về hành vi dự kiến:\n\n```python\nmy_string = \"this is an example\"\nprint(no_vowels(my_string))\n```\n\n<sample-output>\n\nđó là xmpl\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-35_no_vowels_allowed",
+        "exercise_type": "programming-exercise",
+        "name": "No vowels allowed",
+        "tmc_name": "part04-35_no_vowels_allowed",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0060",
+      "type": "exercise",
+      "order": 60,
+      "source_hash": "9cededd1d3772e12e6fa3e2237506c345d8eaf3d8582e04c7c0b1c940988255c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The Python string method `isupper()` returns `True` if a string consists of _only_ uppercase characters.\n\nSome examples:\n\n```python\nprint(\"XYZ\".isupper())\n\nis_it_upper = \"Abc\".isupper()\nprint(is_it_upper)\n```\n\n<sample-output>\n\nTrue\nFalse\n\n</sample-output>\n\nPlease use the `isupper` method to write a function named `no_shouting`, which takes a list of strings as an argument. The function returns a new list, containing only those items from the original which do not consist of solely uppercase characters.\n\nAn example of expected behaviour:\n\n```python\nmy_list = [\"ABC\", \"def\", \"UPPER\", \"ANOTHERUPPER\", \"lower\", \"another lower\", \"Capitalized\"]\npruned_list = no_shouting(my_list)\nprint(pruned_list)\n```\n\n<sample-output>\n\n['def', 'lower', 'another lower', 'Capitalized']\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương thức chuỗi Python `isupper()` trả về `True` nếu một chuỗi bao gồm các ký tự _only_ viết hoa.\n\nMột số ví dụ:\n\n```python\nprint(\"XYZ\".isupper())\n\nis_it_upper = \"Abc\".isupper()\nprint(is_it_upper)\n```\n\n<sample-output>\n\nĐúng\nsai\n\n</sample-output>\n\nVui lòng sử dụng phương thức `isupper` để viết hàm có tên `no_shouting`, hàm này nhận danh sách các chuỗi làm đối số. Hàm trả về một danh sách mới, chỉ chứa những mục từ danh sách gốc không chỉ bao gồm các ký tự viết hoa.\n\nMột ví dụ về hành vi dự kiến:\n\n```python\nmy_list = [\"ABC\", \"def\", \"UPPER\", \"ANOTHERUPPER\", \"lower\", \"another lower\", \"Capitalized\"]\npruned_list = no_shouting(my_list)\nprint(pruned_list)\n```\n\n<sample-output>\n\n['def', 'thấp hơn', 'thấp hơn khác', 'viết hoa']\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-36_no_shouting_allowed",
+        "exercise_type": "programming-exercise",
+        "name": "No shouting allowed",
+        "tmc_name": "part04-36_no_shouting_allowed",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0061",
+      "type": "exercise",
+      "order": 61,
+      "source_hash": "611328a065803c48c226f0914fb56c5c2db9c1c8fed4d5021a59307969aa24e6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Given a list of integers, let's decide that two consecutive items in the list are neighbours if their difference is 1. So, items 1 and 2 would be neighbours, and so would items 56 and 55.\n\nPlease write a function named `longest_series_of_neighbours`, which looks for the longest series of neighbours within the list, and returns its length.\n\nFor example, in the list `[1, 2, 5, 4, 3, 4]` the longest list of neighbours would be  `[5, 4, 3, 4]`, with a length of 4.\n\nAn example function call:\n\n```python\nmy_list = [1, 2, 5, 7, 6, 5, 6, 3, 4, 1, 0]\nprint(longest_series_of_neighbours(my_list))\n```\n\n<sample-output>\n\n4\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cho một danh sách các số nguyên, hãy quyết định rằng hai mục liên tiếp trong danh sách là lân cận nếu hiệu của chúng là 1. Vì vậy, mục 1 và 2 sẽ là hàng xóm, và mục 56 và 55 cũng vậy.\n\nHãy viết một hàm có tên `longest_series_of_neighbours` để tìm chuỗi hàng xóm dài nhất trong danh sách và trả về độ dài của nó.\n\nVí dụ: trong danh sách `[1, 2, 5, 4, 3, 4]`, danh sách hàng xóm dài nhất sẽ là `[5, 4, 3, 4]`, với độ dài là 4.\n\nMột lệnh gọi hàm ví dụ:\n\n```python\nmy_list = [1, 2, 5, 7, 6, 5, 6, 3, 4, 1, 0]\nprint(longest_series_of_neighbours(my_list))\n```\n\n<sample-output>\n\n4\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-37_neighbours_in_list",
+        "exercise_type": "programming-exercise",
+        "name": "Neighbours in a list",
+        "tmc_name": "part04-37_neighbours_in_list",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0062",
+      "type": "heading",
+      "order": 62,
+      "source_hash": "11258e15d3512802a01c749419179aa9f2a72c1e58035c1910368d67f0c5fd6d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Developing a larger programming project"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phát triển một dự án lập trình lớn hơn"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0063",
+      "type": "paragraph",
+      "order": 63,
+      "source_hash": "342a17576e46883a145eb21755cad5bf116ca49815dc53594ac9691deee51e74",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This fourth part culminates in a slightly larger programming project, where you get to apply many of the techniques learnt so far."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phần thứ tư này lên đến đỉnh điểm trong một dự án lập trình lớn hơn một chút, nơi bạn có thể áp dụng nhiều kỹ thuật đã học cho đến nay."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0064",
+      "type": "paragraph",
+      "order": 64,
+      "source_hash": "ab7bf725383c79b94dd82a2b45716254214341ccde504b0bd1f9f0cfaeb89c2e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Rule No. 1 in tackling any programming project is not trying to solve everything at once. The program should be built out of smaller sections, such as helper functions. You should verify the operation of each part before moving on to the next. If you try to handle too much at once, most likely only chaos ensues."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Quy tắc số 1 khi giải quyết bất kỳ dự án lập trình nào là không cố gắng giải quyết mọi thứ cùng một lúc. Chương trình nên được xây dựng từ các phần nhỏ hơn, chẳng hạn như các hàm trợ giúp. Bạn nên xác minh hoạt động của từng bộ phận trước khi chuyển sang bộ phận tiếp theo. Nếu bạn cố gắng xử lý quá nhiều việc cùng một lúc, rất có thể chỉ xảy ra hỗn loạn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0065",
+      "type": "paragraph",
+      "order": 65,
+      "source_hash": "fe96b58a0e04c4ee3a2e1f47f8406515f8581ba62403234d5399d00ea37a49d6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "To do this you will need a way of testing your functions outside the main function. You can achieve this by defining a main function explicitly, and calling this function from outside any other function in the program. A single function call is then easy to comment out for testing. The first steps in building the following programming project could look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Để làm điều này, bạn sẽ cần một cách để kiểm tra các hàm của mình bên ngoài chức năng chính. Bạn có thể đạt được điều này bằng cách xác định rõ ràng một hàm chính và gọi hàm này từ bên ngoài bất kỳ hàm nào khác trong chương trình. Sau đó, một lệnh gọi hàm duy nhất có thể dễ dàng nhận xét để thử nghiệm. Các bước đầu tiên trong việc xây dựng dự án lập trình sau có thể trông như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0066",
+      "type": "code",
+      "order": 66,
+      "source_hash": "6c6d7d33f1e86aea17d019efcd1541e177dbe26ae3e211d892e6eba10741666b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def main():\n    points = []\n    # your program code goes here\n\nmain()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def main():\n    points = []\n    # your program code goes here\n\nmain()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6c6d7d33f1e86aea17d019efcd1541e177dbe26ae3e211d892e6eba10741666b",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0067",
+      "type": "paragraph",
+      "order": 67,
+      "source_hash": "c8ef795177443a1f8cd36f4b906ead3efa54da91d75590d6d089a3441a59d7de",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Now the helper functions can be tested without running the main function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bây giờ các hàm trợ giúp có thể được kiểm tra mà không cần chạy hàm chính:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0068",
+      "type": "code",
+      "order": 68,
+      "source_hash": "c2dfb02715a42c1ae665c1d7039847d9f0ddb639a4d04f6a98fa46500bd52482",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# helper function for determining the grade based on the amount of points\ndef grade(points):\n    # more code\n\ndef main():\n    all_points = []\n    # your program code goes here\n\n# comment out the main function\n#main()\n\n# test the helper function\nstudent_points = 35\nresult = grade(student_points)\nprint(result)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# helper function for determining the grade based on the amount of points\ndef grade(points):\n    # more code\n\ndef main():\n    all_points = []\n    # your program code goes here\n\n# comment out the main function\n#main()\n\n# test the helper function\nstudent_points = 35\nresult = grade(student_points)\nprint(result)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c2dfb02715a42c1ae665c1d7039847d9f0ddb639a4d04f6a98fa46500bd52482",
+        "length_lines": 15
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0069",
+      "type": "heading",
+      "order": 69,
+      "source_hash": "cba75876cb9ed63ae3c1bbdeafd8bd7253ad861a9f7ed0b99578ca9f0127a5d5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Passing data from one function to another"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Truyền dữ liệu từ hàm này sang hàm khác"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0070",
+      "type": "paragraph",
+      "order": 70,
+      "source_hash": "662497e4fa18af037c5aa3ed046c425f5d38c2931b8553ccfd74d0131e850610",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!--- see also section 6-4, some significant overlap-->\nWhen a program contains multiple functions, the question arises: how do you pass data from one function to another?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!--- xem thêm phần 6-4, một số điểm trùng lặp đáng kể-->\nKhi một chương trình chứa nhiều hàm, câu hỏi đặt ra là: làm cách nào để truyền dữ liệu từ hàm này sang hàm khác?"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0071",
+      "type": "paragraph",
+      "order": 71,
+      "source_hash": "8a3f622e2a4e89d4af264dcb0bc4fb2b4809462a9ef29f61790bbc31064a0b5c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following example asks the user for some integer values. The program then prints out these values and performs an \"analysis\" on them. The program is divided into three separate functions:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ sau hỏi người dùng một số giá trị nguyên. Sau đó, chương trình sẽ in ra các giá trị này và thực hiện \"phân tích\" về chúng. Chương trình được chia thành ba chức năng riêng biệt:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0072",
+      "type": "code",
+      "order": 72,
+      "source_hash": "e6fc707b5dfd7eccf87ec6d851c5a433568130b23590acf848942aec071f4639",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def input_from_user(how_many: int):\n    print(f\"Please type in {how_many} numbers:\")\n    numbers = []\n\n    for i in range(how_many):\n        number = int(input(f\"Number {i+1}: \"))\n        numbers.append(number)\n\n    return numbers\n\ndef print_result(numbers: list):\n    print(\"The numbers are: \")\n    for number in numbers:\n        print(number)\n\ndef analyze(numbers: list):\n    mean = sum(numbers) / len(numbers)\n    return f\"There are altogether {len(numbers)} numbers, the mean is {mean}, the smallest is {min(numbers)} and the greatest is {max(numbers)}\"\n\n# the \"main function\" using these functions\ninputs = input_from_user(5)\nprint_result(inputs)\nanalysis_result = analyze(inputs)\nprint(analysis_result)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def input_from_user(how_many: int):\n    print(f\"Please type in {how_many} numbers:\")\n    numbers = []\n\n    for i in range(how_many):\n        number = int(input(f\"Number {i+1}: \"))\n        numbers.append(number)\n\n    return numbers\n\ndef print_result(numbers: list):\n    print(\"The numbers are: \")\n    for number in numbers:\n        print(number)\n\ndef analyze(numbers: list):\n    mean = sum(numbers) / len(numbers)\n    return f\"There are altogether {len(numbers)} numbers, the mean is {mean}, the smallest is {min(numbers)} and the greatest is {max(numbers)}\"\n\n# the \"main function\" using these functions\ninputs = input_from_user(5)\nprint_result(inputs)\nanalysis_result = analyze(inputs)\nprint(analysis_result)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e6fc707b5dfd7eccf87ec6d851c5a433568130b23590acf848942aec071f4639",
+        "length_lines": 24
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0073",
+      "type": "paragraph",
+      "order": 73,
+      "source_hash": "023667ddd59ec74945318d1a2cda79e4ac379ce97828231620e464d4eb0d2716",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "When the program is executed, it could go like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khi chương trình được thực thi, nó có thể diễn ra như sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0074",
+      "type": "sample_output",
+      "order": 74,
+      "source_hash": "f9bea2cbb182a49ccfc5890cd68aaf534114562fac833d4288a74e9744fbc429",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in 5 numbers:\nNumber 1: **10**\nNumber 2: **34**\nNumber 3: **-32**\nNumber 4: **99**\nNumber 5: **-53**\nThe numbers are:\n10\n34\n-32\n99\n-53\nThere are altogether 5 numbers, the mean is 11.6, the smallest is -53 and the greatest is 99"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in 5 numbers:\nNumber 1: **10**\nNumber 2: **34**\nNumber 3: **-32**\nNumber 4: **99**\nNumber 5: **-53**\nThe numbers are:\n10\n34\n-32\n99\n-53\nThere are altogether 5 numbers, the mean is 11.6, the smallest is -53 and the greatest is 99"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in 5 numbers:\nNumber 1: **10**\nNumber 2: **34**\nNumber 3: **-32**\nNumber 4: **99**\nNumber 5: **-53**\nThe numbers are:\n10\n34\n-32\n99\n-53\nThere are altogether 5 numbers, the mean is 11.6, the smallest is -53 and the greatest is 99\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0075",
+      "type": "paragraph",
+      "order": 75,
+      "source_hash": "1205bccb49b50b1cecf9142509aac629851bdcb33d6f7b1cb4266038f94e0a54",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The idea here is that the main function \"saves\" all data processed by the program. In this case all that is needed is the input from the user in the variable `inputs`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ý tưởng ở đây là chức năng chính \"lưu\" tất cả dữ liệu được chương trình xử lý. Trong trường hợp này, tất cả những gì cần thiết là đầu vào từ người dùng trong biến `inputs`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0076",
+      "type": "paragraph",
+      "order": 76,
+      "source_hash": "d14b604e54b06fd02d6c1e23f3c70ef6edc16810e0f0da4af8e03527a0b33077",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If the input is needed in a function, it is passed as an argument. This happens with the functions `print_result` and `analyze`. If the function produces data that is needed elsewhere in the program, the function returns it with the `return` command, and it is stored in a variable in the main function. This happens with the functions `input_from_user` and `analyze`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu đầu vào là cần thiết trong một hàm, nó sẽ được chuyển dưới dạng đối số. Điều này xảy ra với các hàm `print_result` và `analyze`. Nếu hàm tạo ra dữ liệu cần thiết ở nơi khác trong chương trình, hàm sẽ trả về dữ liệu đó bằng lệnh `return` và dữ liệu đó được lưu trữ trong một biến trong hàm chính. Điều này xảy ra với các hàm `input_from_user` và `analyze`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0077",
+      "type": "paragraph",
+      "order": 77,
+      "source_hash": "4b61c2da10f91c3e9c1c15dfa7b752e8652debaafca815fce9129741da9f0a99",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You could use the global variable `inputs` from the main function directly in the helper functions. We have already covered why that is a bad idea, but [here is another explanation](https://softwareengineering.stackexchange.com/questions/148108/why-is-global-state-so-evil). If functions are able to change a global variable, unexpected things may start happening in the program, especially when the number of functions grows large."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn có thể sử dụng biến toàn cục `inputs` từ hàm chính trực tiếp trong các hàm trợ giúp. Chúng tôi đã giải thích lý do tại sao đó là một ý tưởng tồi, nhưng [đây là một lời giải thích khác](https://softwareengineering.stackexchange.com/questions/148108/why-is-global-state-so-evil). Nếu các hàm có thể thay đổi một biến toàn cục, những điều không mong muốn có thể bắt đầu xảy ra trong chương trình, đặc biệt khi số lượng hàm tăng lên nhiều."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0078",
+      "type": "paragraph",
+      "order": 78,
+      "source_hash": "7b6fc9a3bbc733b468e60c7e9895ec01cb09cfec66d03fa8b304feaa0ef27d11",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Passing data into and out of functions is best handled by arguments and return values."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Việc truyền dữ liệu vào và ra khỏi hàm được xử lý tốt nhất bằng các đối số và giá trị trả về."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0079",
+      "type": "paragraph",
+      "order": 79,
+      "source_hash": "fbfd054df551ebea7f85681431d040274523f2690f0f5424ebf1d72c10c6f940",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You could also separate the implicit main function in the example above into its own function. Then the variable `inputs` would no longer be a global variable, but instead a local variable within the `main` function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn cũng có thể tách hàm main tiềm ẩn trong ví dụ trên thành hàm riêng. Khi đó, biến `inputs` sẽ không còn là biến toàn cục nữa mà thay vào đó là biến cục bộ trong hàm `main`:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0080",
+      "type": "code",
+      "order": 80,
+      "source_hash": "9d579ec6f60ad8129b2587a06f0f62c35638c0a556301c85049a5b0a350bf5aa",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# your main function goes here\ndef main():\n    inputs = input_from_user(5)\n    print_result(inputs)\n    analysis_result = analyze(inputs)\n\n    print(analysis_result)\n\n# run the main function\nmain()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# your main function goes here\ndef main():\n    inputs = input_from_user(5)\n    print_result(inputs)\n    analysis_result = analyze(inputs)\n\n    print(analysis_result)\n\n# run the main function\nmain()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "9d579ec6f60ad8129b2587a06f0f62c35638c0a556301c85049a5b0a350bf5aa",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0081",
+      "type": "exercise",
+      "order": 81,
+      "source_hash": "97b136a272693211b2fd558f840c841b7da440471417bd4ac50c153fd2d99905",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In this exercise you will write a program for printing out grade statistics for a university course.\n\nThe program asks the user for results from different students on the course. These include exam points and numbers of exercises completed. The program then prints out statistics based on the results.\n\nExam points are integers between 0 and 20. The number of exercises completed is an integer between 0 and 100.\n\nThe program keeps asking for input until the user types in an empty line. You may assume all lines contain valid input, which means that there are two integers on each line, or the line is empty.\n\nAnd example of how the data is typed in:\n\n<sample-output>\n\nExam points and exercises completed: **15 87**\nExam points and exercises completed: **10 55**\nExam points and exercises completed: **11 40**\nExam points and exercises completed: **4 17**\nExam points and exercises completed:\nStatistics:\n\n</sample-output>\n\nWhen the user types in an empty line, the program prints out statistics. They are formulated as follows:\n\nThe exercises completed are converted into _exercise points_, so that completing at least 10% of the exercises grants one point, 20% grants two points, and so forth. Completing all 100 exercises grants 10 exercise points. The number of exercise points granted is an integer value, rounded down.\n\nThe grade for the course is determined based on the following table:\n\nexam points + exercise points   | grade\n:--:|:----:\n0–14 | 0 (i.e. fail)\n15–17 | 1\n18–20 | 2\n21–23 | 3\n24–27 | 4\n28–30 | 5\n\nThere is also an exam cutoff threshold. If a student received less than 10 points from the exam, they automatically fail the course, regardless of their total number of points.\n\nWith the example input from above the program would print out the following statistics:\n\n<sample-output>\n\n<pre>\nStatistics:\nPoints average: 14.5\nPass percentage: 75.0\nGrade distribution:\n  5:\n  4:\n  3: *\n  2:\n  1: **\n  0: *\n</pre>\n\n</sample-output>\n\nFloating point numbers should be printed out with one decimal precision.\n\n**NB:** this exercise doesn't ask you to write any specific functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block. If any functionality in your program is e.g. in the `main` function, you should include the code calling this function normally, and not contain it in an `if` block like in the exercises which specify certain functions.\n\n**Hint:**\n\nThe user input in this program consists of lines with two integer values:\n\n<sample-output>\n\nExam points and exercises completed: **15 87**\n\n</sample-output>\n\nYou have to first split the input line in two and then convert the sections into integers with the `int` function. Splitting the input can be achieved in the same way as in the exercise [First, second and last words](/part-4/2-more-functions#programming-exercise-first-second-and-last-words), but there is a simpler way as well. The string method `split` will chop the input up nicely. You will find more information by searching for *python string split* online.\n\n<!-- **Huomaa** että tällä hetkellä Windowsissa on ongelmia joidenkin tehtävien testien suorittamisessa. Jos törmäät seuraavaan virheilmoitukseen\n\n<img src=\"4_3_2.png\" alt=\"Listan iterointi\">\n\nvoit suorittaa testit lähettämällä ne palvelimelle valitsemalla testien suoritusnapin oikealla puolella olevasta symbolista avautuvasta TMC-valikosta _Submit solutions_.\n\nOngelman saa korjattua menemällä laajennuksen asennusvalikkoon ja muuttamalla \"TMC Data\" -kohdassa tehtävien sijainnin johonkin toiseen sijaintiin, jonka tiedostopolku on lyhempi, allaolevassa kuvassa nappi _change path_. Siirrossa saattaa kestää hetken, joten odotathan operaation päättymistä.\n\n<img src=\"4_3_3.png\" alt=\"Listan iterointi\">\n\nOngelmaan pyritään saamaan parempi ratkaisu lähipäivinä. -->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong bài tập này, bạn sẽ viết một chương trình in ra số liệu thống kê về điểm số của một khóa học đại học.\n\nChương trình sẽ hỏi người dùng kết quả của các học viên khác nhau trong khóa học. Chúng bao gồm điểm thi và số lượng bài tập đã hoàn thành. Chương trình sau đó in ra số liệu thống kê dựa trên kết quả.\n\nĐiểm thi là số nguyên từ 0 đến 20. Số bài tập hoàn thành là số nguyên từ 0 đến 100.\n\nChương trình tiếp tục yêu cầu nhập liệu cho đến khi người dùng gõ vào một dòng trống. Bạn có thể giả sử tất cả các dòng đều chứa dữ liệu đầu vào hợp lệ, có nghĩa là có hai số nguyên trên mỗi dòng hoặc dòng đó trống.\n\nVà ví dụ về cách nhập dữ liệu:\n\n<sample-output>\n\nĐiểm thi và bài tập đã hoàn thành: **15 87**\nĐiểm thi và bài tập đã hoàn thành: **10 55**\nĐiểm thi và bài tập đã hoàn thành: **11 40**\nĐiểm thi và bài tập đã hoàn thành: **4 17**\nĐiểm thi và bài tập đã hoàn thành:\nThống kê:\n\n</sample-output>\n\nKhi người dùng gõ vào một dòng trống, chương trình sẽ in ra số liệu thống kê. Chúng được xây dựng như sau:\n\nCác bài tập đã hoàn thành sẽ được chuyển đổi thành _điểm bài tập_, do đó, việc hoàn thành ít nhất 10% số bài tập sẽ được một điểm, 20% số bài tập được cấp hai điểm, v.v. Hoàn thành tất cả 100 bài tập sẽ nhận được 10 điểm tập thể dục. Số điểm bài tập được cấp là một giá trị nguyên, được làm tròn xuống.\n\nĐiểm của môn học được xác định dựa trên bảng sau:\n\nđiểm thi + điểm bài tập | lớp\n:--:|:----:\n0–14 | 0 (tức là thất bại)\n15–17 | 1\n18–20 | 2\n21–23 | 3\n24–27 | 4\n28–30 | 5\n\nNgoài ra còn có một ngưỡng cắt kỳ thi. Nếu một học sinh nhận được ít hơn 10 điểm từ bài kiểm tra, họ sẽ tự động trượt môn học, bất kể tổng số điểm của họ là bao nhiêu.\n\nVới ví dụ đầu vào ở trên, chương trình sẽ in ra các số liệu thống kê sau:\n\n<sample-output>\n\n<pre>\nThống kê:\nĐiểm trung bình: 14,5\nTỷ lệ đậu: 75,0\nPhân bổ lớp:\n  5:\n  4:\n  3: *\n  2:\n  1: **\n  0: *\n</pre>\n\n</sample-output>\n\nSố dấu phẩy động phải được in ra với độ chính xác một thập phân.\n\n**NB:** bài tập này không yêu cầu bạn viết bất kỳ hàm cụ thể nào, vì vậy bạn nên __không__ đặt bất kỳ mã nào trong khối `if __name__ == \"__main__\"`. Nếu bất kỳ chức năng nào trong chương trình của bạn là v.d. trong hàm `main`, bạn nên đưa mã gọi hàm này vào một cách bình thường và không chứa nó trong khối `if` như trong các bài tập chỉ định một số chức năng nhất định.\n\n**Gợi ý:**\n\nĐầu vào của người dùng trong chương trình này bao gồm các dòng có hai giá trị nguyên:\n\n<sample-output>\n\nĐiểm thi và bài tập đã hoàn thành: **15 87**\n\n</sample-output>\n\nTrước tiên, bạn phải chia dòng đầu vào thành hai rồi chuyển đổi các phần thành số nguyên bằng hàm `int`. Việc phân tách đầu vào có thể được thực hiện theo cách tương tự như trong bài tập [Từ đầu tiên, thứ hai và từ cuối](/part-4/2-more-functions#programming-exercise-first-second-and-last-words), nhưng cũng có một cách đơn giản hơn. Phương thức chuỗi `split` sẽ cắt nhỏ đầu vào một cách độc đáo. Bạn sẽ tìm thấy thêm thông tin bằng cách tìm kiếm *python string Split* trực tuyến.\n\n<!-- **Huomaa** että tällä hetkellä Windowsissa on ongelmia joidenkin tehtävien testien suorittamisessa. Jos törmäät seuraavaan virheilmoituksen\n\n<img src=\"4_3_2.png\" alt=\"Listan iterointi\">\n\nvoit suorittaa testit lähettämällä ne palvelimelle valitsemalla testien suoritusnapin oikealla puolella olevasta biểu tượng avautuvasta TMC-valikosta _Gửi giải pháp_.\n\nOngelman saa korjattua menemällä laajennuksen asennusvalikkoon ja muuttamalla \"TMC Data\" -kohdassa tehtävien sijainnin johonkin toiseen sijaintiin, jonka tieostopolku on lyhempi, allaolevassa kuvassa nappi _change path_. Siirrossa saattaa kestää hetken, joten odotathan operaation päättymistä.\n\n<img src=\"4_3_3.png\" alt=\"Listan iterointi\">\n\nOngelmaan pyritään saamaan parempi ratkaisu lähipäivinä. -->"
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-38_grade_statistics",
+        "exercise_type": "programming-exercise",
+        "name": "Grade statistics",
+        "tmc_name": "part04-38_grade_statistics",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0082",
+      "type": "paragraph",
+      "order": 82,
+      "source_hash": "b97eebcf5a0222c688482a2c1f8f4510ba0c7934c136e1f60999bbcc47c2ab75",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!---\nA quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!---\nMột bài kiểm tra để ôn lại nội dung của phần này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0083",
+      "type": "quiz",
+      "order": 83,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "925f1715-d762-5e44-a812-be13bff1aa44",
+        "attributes": {
+          "id": "925f1715-d762-5e44-a812-be13bff1aa44"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0084",
+      "type": "paragraph",
+      "order": 84,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "-->"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0085",
+      "type": "paragraph",
+      "order": 85,
+      "source_hash": "e7c1a46e91282cacd4221fc454f07d2669740016f75a092ce3959836e6ef0903",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please respond to a quick questionnaire on this week's materials."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng trả lời bảng câu hỏi nhanh về tài liệu của tuần này."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-6-strings-and-lists-0086",
+      "type": "quiz",
+      "order": 86,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "1658e788-b6ce-50b0-93ee-151e9cb6a495",
+        "attributes": {
+          "id": "1658e788-b6ce-50b0-93ee-151e9cb6a495"
+        }
+      }
+    }
+  ]
+}

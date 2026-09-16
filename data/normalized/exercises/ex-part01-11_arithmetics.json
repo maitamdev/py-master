@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-11_arithmetics",
+  "lesson_id": "part01-3-more-about-variables",
+  "part": 1,
+  "tmc_name": "part01-11_arithmetics",
+  "title_original": "Arithmetics",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "This program already contains two integer variables, `x` and `y`:\n\n```python\nx = 27\ny = 15\n```\n\nPlease complete the program so that it also prints out the following:\n\n<sample-output>\n\n27 + 15 = 42\n27 - 15 = 12\n27 * 15 = 405\n27 / 15 = 1.8\n\n</sample-output>\n\nThe program should work correctly even if the values of the variables are changed. That is, if the first two lines are replaced with this\n\n```python\nx = 4\ny = 9\n```\n\nthe program should print out the following:\n\n<sample-output>\n\n4 + 9 = 13\n4 - 9 = -5\n4 * 9 = 36\n4 / 9 = 0.4444444444444444\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "x = 27\ny = 15",
+  "grading_data_available": false,
+  "source_hash": "28821515c4626f1a9515fdaedc9f5a4eba25a7b767fb55c6a739fcf3e9c9b87c",
+  "order": 79
+}

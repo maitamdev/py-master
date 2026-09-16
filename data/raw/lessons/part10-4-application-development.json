@@ -1,0 +1,670 @@
+{
+  "id": "part10-4-application-development",
+  "part": 10,
+  "part_slug": "part-10",
+  "slug": "4-application-development",
+  "is_part_index": false,
+  "title_original": "Developing a larger application",
+  "path": "/part-10/4-application-development",
+  "source_path": "data/part-10/4-application-development.md",
+  "source_hash": "c184695682c7c73bbea6601be87fc82c1a545758269e51c0a2092757eb7e065d",
+  "frontmatter": {
+    "path": "/part-10/4-application-development",
+    "title": "Developing a larger application",
+    "hidden": false
+  },
+  "chunks_count": 117,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will be familiar with some basic principles of application development\n- You will be comfortable with differentiating between the different parts of an application (user interface, program logic and file handling)\n- You will have practiced writing your own somewhat larger application",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will be familiar with some basic principles of application development\n- You will be comfortable with differentiating between the different parts of an application (user interface, program logic and file handling)\n- You will have practiced writing your own somewhat larger application\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Thus far in this course material we have covered a large number of Python features.",
+      "raw_source": "Thus far in this course material we have covered a large number of Python features."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The Introduction to Programming course introduced control structures, such as while and for, functions, and basic data structures, such as lists, tuples and dictionaries. In principle, those tools are all that is needed to express anything a programmer may wish to express with Python.",
+      "raw_source": "The Introduction to Programming course introduced control structures, such as while and for, functions, and basic data structures, such as lists, tuples and dictionaries. In principle, those tools are all that is needed to express anything a programmer may wish to express with Python."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "On this Advanced Course in Programming, beginning in part 8 of the material, you have become familiar with classes and objects. Let's take a moment to consider when and _why_ they are necessary, if those basic tools from parts 1 to 7 should be enough.",
+      "raw_source": "On this Advanced Course in Programming, beginning in part 8 of the material, you have become familiar with classes and objects. Let's take a moment to consider when and _why_ they are necessary, if those basic tools from parts 1 to 7 should be enough."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Managing complexity",
+      "raw_source": "## Managing complexity"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Objects and classes are by no means necessary in every programming context. For example, if you are programming a smallish script for one-time use, objects are usually surplus to requirement. However, when you are programming something larger and more complicated, objects become very useful.",
+      "raw_source": "Objects and classes are by no means necessary in every programming context. For example, if you are programming a smallish script for one-time use, objects are usually surplus to requirement. However, when you are programming something larger and more complicated, objects become very useful."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When programs grow in complexity, the amount of details quickly becomes unmanageable, unless the program is organised in some systematic way. Even some of the more complicated exercises on this course so far would have benefited from the examples set in this part of the material.",
+      "raw_source": "When programs grow in complexity, the amount of details quickly becomes unmanageable, unless the program is organised in some systematic way. Even some of the more complicated exercises on this course so far would have benefited from the examples set in this part of the material."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Fo decades the concept of [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) has been one of the central principles in programming, and the larger field of computer science. Quoting from Wikipedia:",
+      "raw_source": "Fo decades the concept of [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) has been one of the central principles in programming, and the larger field of computer science. Quoting from Wikipedia:"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "_Separation of concerns is a design principle for separating a computer program into distinct sections such that each section addresses a separate concern. A concern is a set of information that affects the code of a computer program._",
+      "raw_source": "_Separation of concerns is a design principle for separating a computer program into distinct sections such that each section addresses a separate concern. A concern is a set of information that affects the code of a computer program._"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Separating the program into sections, so that each has its own concern to handle, helps in managing the inevitable complexity of a computer program.",
+      "raw_source": "Separating the program into sections, so that each has its own concern to handle, helps in managing the inevitable complexity of a computer program."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Functions are one way of organising a program into distinct, manageable wholes. Instead of writing a single script, the idea is to formulate small, separately verifiable functions which each solve some part of the larger problem.",
+      "raw_source": "Functions are one way of organising a program into distinct, manageable wholes. Instead of writing a single script, the idea is to formulate small, separately verifiable functions which each solve some part of the larger problem."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Another common approach to managing larger programs is objects, through object oriented programming principles. There are benefits and drawbacks to both approaches, and each programmer has their own favourite. As we have seen so far, objects and classes allow us to collect all the data _and_ the code processing that data within a single unit, in the attributes and methods of an object. Furthermore, objects provide a way of encapsulating the data they control, so that other parts of the program do not have to worry about the internal details of an object.",
+      "raw_source": "Another common approach to managing larger programs is objects, through object oriented programming principles. There are benefits and drawbacks to both approaches, and each programmer has their own favourite. As we have seen so far, objects and classes allow us to collect all the data _and_ the code processing that data within a single unit, in the attributes and methods of an object. Furthermore, objects provide a way of encapsulating the data they control, so that other parts of the program do not have to worry about the internal details of an object."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "A worked example: phone book",
+      "raw_source": "## A worked example: phone book"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "How should a program be divided into classes and objects? This is by no means an easy question with a single acceptable answer, so we will proceed with an example. In part five you completed [a phone book application](/part-5/3-dictionary#programming-exercise-phone-book-version-2), and now we will implement something similar using object oriented programming principles.",
+      "raw_source": "How should a program be divided into classes and objects? This is by no means an easy question with a single acceptable answer, so we will proceed with an example. In part five you completed [a phone book application](/part-5/3-dictionary#programming-exercise-phone-book-version-2), and now we will implement something similar using object oriented programming principles."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Following the separation of concerns principle, a program should be divided into sections which each have their own cause to take care of. In object oriented programming this translates to the [single-responsibility principle](https://en.wikipedia.org/wiki/Single-responsibility_principle). Without going into the finer details, its fundamental purpose is clear from the name: _a single class and objects created based on it should have a single responsibility in the program_.",
+      "raw_source": "Following the separation of concerns principle, a program should be divided into sections which each have their own cause to take care of. In object oriented programming this translates to the [single-responsibility principle](https://en.wikipedia.org/wiki/Single-responsibility_principle). Without going into the finer details, its fundamental purpose is clear from the name: _a single class and objects created based on it should have a single responsibility in the program_."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Object oriented programming is often used as a way of modelling real world objects and phenomena. A single object in the real world is modelled with a single class in program code. In the case of a phone book such objects might be\n- a person\n- a name\n- a phone number",
+      "raw_source": "Object oriented programming is often used as a way of modelling real world objects and phenomena. A single object in the real world is modelled with a single class in program code. In the case of a phone book such objects might be\n- a person\n- a name\n- a phone number"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A name and a phone number may be thought of as just bits of data which do not merit their own classes, but a _person_ is a distinct physical entity in the real world, and in the programming world it could work as a class. A Person object would be responsible for tying together a name and the phone numbers attached to it.",
+      "raw_source": "A name and a phone number may be thought of as just bits of data which do not merit their own classes, but a _person_ is a distinct physical entity in the real world, and in the programming world it could work as a class. A Person object would be responsible for tying together a name and the phone numbers attached to it."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A _phone book_ itself could be a good candidate for a class. Its responsibility would be to manage different person objects and the data they contain.",
+      "raw_source": "A _phone book_ itself could be a good candidate for a class. Its responsibility would be to manage different person objects and the data they contain."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Now we have outlined the core of our application: _phone book_ and _person_ constitute the programming logic of our application, or _application logic_ in short. Our application would need some other classes, too.",
+      "raw_source": "Now we have outlined the core of our application: _phone book_ and _person_ constitute the programming logic of our application, or _application logic_ in short. Our application would need some other classes, too."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It is usually a good idea to keep any interaction with a user separate from the application logic. It is, after all, a responsibility all on its own. In addition to the core application logic, our program should therefore contain a class which handles the user interface.",
+      "raw_source": "It is usually a good idea to keep any interaction with a user separate from the application logic. It is, after all, a responsibility all on its own. In addition to the core application logic, our program should therefore contain a class which handles the user interface."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Furthermore, our phone book should have some means of persistent storage between executions. File handling is, again, a clearly separate responsibility, so it deserves a class of its own.",
+      "raw_source": "Furthermore, our phone book should have some means of persistent storage between executions. File handling is, again, a clearly separate responsibility, so it deserves a class of its own."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Now that we have an outline of the basic components of our program, the question arises: where should we begin programming? Again, there is no right or wrong answer, but it is often a good idea to start with some part of the application logic.",
+      "raw_source": "Now that we have an outline of the basic components of our program, the question arises: where should we begin programming? Again, there is no right or wrong answer, but it is often a good idea to start with some part of the application logic."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Step 1: an outline for the application logic",
+      "raw_source": "## Step 1: an outline for the application logic"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's start with the class _PhoneBook_. A skeleton implementation could look like this:",
+      "raw_source": "Let's start with the class _PhoneBook_. A skeleton implementation could look like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class PhoneBook:\n    def __init__(self):\n        self.__persons = []\n\n    def add_number(self, name: str, number: str):\n        pass\n\n    def get_numbers(self, name: str):\n        pass\n",
+      "raw_source": "```python\nclass PhoneBook:\n    def __init__(self):\n        self.__persons = []\n\n    def add_number(self, name: str, number: str):\n        pass\n\n    def get_numbers(self, name: str):\n        pass\n\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This class consists of a list of persons along with methods for both adding and fetching data.",
+      "raw_source": "This class consists of a list of persons along with methods for both adding and fetching data."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Each person may be connected with multiple numbers, so let's implement the internal structure of `persons` with a dictionary. A dictionary allows us to search for keys by name, and the value attached to a dictionary key can be a list. So far it looks like we don't really need a separate class to represent a person - an entry in a dictionary will do.",
+      "raw_source": "Each person may be connected with multiple numbers, so let's implement the internal structure of `persons` with a dictionary. A dictionary allows us to search for keys by name, and the value attached to a dictionary key can be a list. So far it looks like we don't really need a separate class to represent a person - an entry in a dictionary will do."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's implement the methods listed above, and test our phone book:",
+      "raw_source": "Let's implement the methods listed above, and test our phone book:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class PhoneBook:\n    def __init__(self):\n        self.__persons = {}\n\n    def add_number(self, name: str, number: str):\n        if not name in self.__persons:\n            # add a new dictionary entry with an empty list for the numbers\n            self.__persons[name] = []\n\n        self.__persons[name].append(number)\n\n    def get_numbers(self, name: str):\n        if not name in self.__persons:\n            return None\n\n        return self.__persons[name]\n\n# code for testing\nphonebook = PhoneBook()\nphonebook.add_number(\"Eric\", \"02-123456\")\nprint(phonebook.get_numbers(\"Eric\"))\nprint(phonebook.get_numbers(\"Emily\"))",
+      "raw_source": "```python\nclass PhoneBook:\n    def __init__(self):\n        self.__persons = {}\n\n    def add_number(self, name: str, number: str):\n        if not name in self.__persons:\n            # add a new dictionary entry with an empty list for the numbers\n            self.__persons[name] = []\n\n        self.__persons[name].append(number)\n\n    def get_numbers(self, name: str):\n        if not name in self.__persons:\n            return None\n\n        return self.__persons[name]\n\n# code for testing\nphonebook = PhoneBook()\nphonebook.add_number(\"Eric\", \"02-123456\")\nprint(phonebook.get_numbers(\"Eric\"))\nprint(phonebook.get_numbers(\"Emily\"))\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This should print out the following:",
+      "raw_source": "This should print out the following:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "['02-123456']\nNone",
+      "raw_source": "<sample-output>\n\n['02-123456']\nNone\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The method `get_numbers` returns `None` if a name is not included in the phone book. If the name is found, it returns the list of numbers attached to the name.",
+      "raw_source": "The method `get_numbers` returns `None` if a name is not included in the phone book. If the name is found, it returns the list of numbers attached to the name."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Whenever you make changes to a program it is _always_ worth testing that the code works as expected, before moving on to any other changes. The code used for testing is usually something that is deleted soon after, and as such you might think it's not worth the trouble to write any tests in the first place. In most cases this is not true. Testing is essential to good programming results.",
+      "raw_source": "Whenever you make changes to a program it is _always_ worth testing that the code works as expected, before moving on to any other changes. The code used for testing is usually something that is deleted soon after, and as such you might think it's not worth the trouble to write any tests in the first place. In most cases this is not true. Testing is essential to good programming results."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A bug in the program should be caught and fixed as soon as possible. If you get into the habit of verifying the functionality of practically every new line of code, you will find that the bugs are usually easy to locate and fix, as you can be quite certain that the bug was caused by the most recent change. If you only test the program after adding dozens of lines of code, the potential sources for bugs also increase by dozens of times.",
+      "raw_source": "A bug in the program should be caught and fixed as soon as possible. If you get into the habit of verifying the functionality of practically every new line of code, you will find that the bugs are usually easy to locate and fix, as you can be quite certain that the bug was caused by the most recent change. If you only test the program after adding dozens of lines of code, the potential sources for bugs also increase by dozens of times."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Step 2: an outline for the user interface",
+      "raw_source": "## Step 2: an outline for the user interface"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "With the core application logic out of the way, it is time to implement a text-based user interface. We will need a new class, `PhoneBookApplication`, with the following initial functionality:",
+      "raw_source": "With the core application logic out of the way, it is time to implement a text-based user interface. We will need a new class, `PhoneBookApplication`, with the following initial functionality:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n\n    def help(self):\n        print(\"commands: \")\n        print(\"0 exit\")\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n                break\n\napplication = PhoneBookApplication()\napplication.execute()",
+      "raw_source": "```python\nclass PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n\n    def help(self):\n        print(\"commands: \")\n        print(\"0 exit\")\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n                break\n\napplication = PhoneBookApplication()\napplication.execute()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This program doesn't do very much yet, but let's go through the contents. The constructor method creates a new PhoneBook, which is stored in a private attribute. The method `execute(self)` starts the program's text-based user interface, the core of which is the `while` loop, which keeps asking the user for commands until they type in the command for exiting. There is also a method for intructions, `help(self)`, which is called before entering the loop, so that the instructions are printed out.",
+      "raw_source": "This program doesn't do very much yet, but let's go through the contents. The constructor method creates a new PhoneBook, which is stored in a private attribute. The method `execute(self)` starts the program's text-based user interface, the core of which is the `while` loop, which keeps asking the user for commands until they type in the command for exiting. There is also a method for intructions, `help(self)`, which is called before entering the loop, so that the instructions are printed out."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Now, let's add some actual functionality. First, we implement adding new data to the phone book:",
+      "raw_source": "Now, let's add some actual functionality. First, we implement adding new data to the phone book:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n\n    def help(self):\n        print(\"commands: \")\n        print(\"0 exit\")\n        print(\"1 add entry\")\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n                break\n            elif command == \"1\":\n                name = input(\"name: \")\n                number = input(\"number: \")\n                self.__phonebook.add_number(name, number)\n\napplication = PhoneBookApplication()\napplication.execute()",
+      "raw_source": "```python\nclass PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n\n    def help(self):\n        print(\"commands: \")\n        print(\"0 exit\")\n        print(\"1 add entry\")\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n                break\n            elif command == \"1\":\n                name = input(\"name: \")\n                number = input(\"number: \")\n                self.__phonebook.add_number(name, number)\n\napplication = PhoneBookApplication()\napplication.execute()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the user types in _1_ for adding a new number, the user interface asks for a name and a number, and adds these to the PhoneBook using the appropriate method defined in the class.",
+      "raw_source": "If the user types in _1_ for adding a new number, the user interface asks for a name and a number, and adds these to the PhoneBook using the appropriate method defined in the class."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The only responsibility of the user interface is to communicate with the user. Any other functionality, such as storing a new name-number pair, is the responsibility of the PhoneBook object.",
+      "raw_source": "The only responsibility of the user interface is to communicate with the user. Any other functionality, such as storing a new name-number pair, is the responsibility of the PhoneBook object."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "There is room for improvement in the structure of our user interface class. Let's create a method `add_entry(self)` which handles the command for adding a new entry:",
+      "raw_source": "There is room for improvement in the structure of our user interface class. Let's create a method `add_entry(self)` which handles the command for adding a new entry:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n\n    def help(self):\n        print(\"commands: \")\n        print(\"0 exit\")\n        print(\"1 add entry\")\n\n    # separation of concerns in action: a new method for adding an entry\n    def add_entry(self):\n        name = input(\"name: \")\n        number = input(\"number: \")\n        self.__phonebook.add_number(name, number)\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n                break\n            elif command == \"1\":\n                self.add_entry()\n\napplication = PhoneBookApplication()\napplication.execute()",
+      "raw_source": "```python\nclass PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n\n    def help(self):\n        print(\"commands: \")\n        print(\"0 exit\")\n        print(\"1 add entry\")\n\n    # separation of concerns in action: a new method for adding an entry\n    def add_entry(self):\n        name = input(\"name: \")\n        number = input(\"number: \")\n        self.__phonebook.add_number(name, number)\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n                break\n            elif command == \"1\":\n                self.add_entry()\n\napplication = PhoneBookApplication()\napplication.execute()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The _separation of concerns_ principle extends to the level of methods, too. We could have the entire functionality of the user interface in a single complicated `while` loop, but it is better to separate each functionality into its own method. The responsibility of the `execute()` method is just delegating the commands typed in by the user to the relevant methods. This helps with managing the growing complexity of our program. For example, if we want to later change the way adding entries works, it is immediately clear that we must then focus our efforts on the `add_entry()` method.",
+      "raw_source": "The _separation of concerns_ principle extends to the level of methods, too. We could have the entire functionality of the user interface in a single complicated `while` loop, but it is better to separate each functionality into its own method. The responsibility of the `execute()` method is just delegating the commands typed in by the user to the relevant methods. This helps with managing the growing complexity of our program. For example, if we want to later change the way adding entries works, it is immediately clear that we must then focus our efforts on the `add_entry()` method."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's include functionality for searching for entries in our user interface. This should have its own method, too:",
+      "raw_source": "Let's include functionality for searching for entries in our user interface. This should have its own method, too:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n\n    def help(self):\n        print(\"commands: \")\n        print(\"0 exit\")\n        print(\"1 add entry\")\n        print(\"2 search\")\n\n    def add_entry(self):\n        name = input(\"name: \")\n        number = input(\"number: \")\n        self.__phonebook.add_number(name, number)\n\n    def search(self):\n        name = input(\"name: \")\n        numbers = self.__phonebook.get_numbers(name)\n        if numbers == None:\n            print(\"number unknown\")\n            return\n        for number in numbers:\n            print(number)\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n                break\n            elif command == \"1\":\n                self.add_entry()\n            elif command == \"2\":\n                self.search()\n            else:\n                self.help()\n\napplication = PhoneBookApplication()\napplication.execute()",
+      "raw_source": "```python\nclass PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n\n    def help(self):\n        print(\"commands: \")\n        print(\"0 exit\")\n        print(\"1 add entry\")\n        print(\"2 search\")\n\n    def add_entry(self):\n        name = input(\"name: \")\n        number = input(\"number: \")\n        self.__phonebook.add_number(name, number)\n\n    def search(self):\n        name = input(\"name: \")\n        numbers = self.__phonebook.get_numbers(name)\n        if numbers == None:\n            print(\"number unknown\")\n            return\n        for number in numbers:\n            print(number)\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n                break\n            elif command == \"1\":\n                self.add_entry()\n            elif command == \"2\":\n                self.search()\n            else:\n                self.help()\n\napplication = PhoneBookApplication()\napplication.execute()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We now have a simple working phone book application ready for testing. The following is an example run:",
+      "raw_source": "We now have a simple working phone book application ready for testing. The following is an example run:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "commands:\n0 exit\n1 add entry\n2 search\n\ncommand: **1**\nname: **Eric**\nnumber: **02-123456**\n\ncommand: **1**\nname: **Eric**\nnumber: **045-4356713**\n\ncommand: **2**\nname: **Eric**\n02-123456\n045-4356713\n\ncommand: **2**\nname: Emily\nnumber unknown\n\ncommand: **0**",
+      "raw_source": "<sample-output>\n\ncommands:\n0 exit\n1 add entry\n2 search\n\ncommand: **1**\nname: **Eric**\nnumber: **02-123456**\n\ncommand: **1**\nname: **Eric**\nnumber: **045-4356713**\n\ncommand: **2**\nname: **Eric**\n02-123456\n045-4356713\n\ncommand: **2**\nname: Emily\nnumber unknown\n\ncommand: **0**\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "For such a simple application we have written quite a lot of code. If we'd written it all within the one `while` loop we could probably have gotten away with a lot less code. It is, however, quite easy to read the code, the structure is clear, and we should have no trouble adding new features.",
+      "raw_source": "For such a simple application we have written quite a lot of code. If we'd written it all within the one `while` loop we could probably have gotten away with a lot less code. It is, however, quite easy to read the code, the structure is clear, and we should have no trouble adding new features."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Step 3: importing data from a file",
+      "raw_source": "## Step 3: importing data from a file"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's assume we already have some phone numbers stored in a file, and we want to read this as the program starts up. The data file is in the following CSV format:",
+      "raw_source": "Let's assume we already have some phone numbers stored in a file, and we want to read this as the program starts up. The data file is in the following CSV format:"
+    },
+    {
+      "raw_type": "code",
+      "language": "csv",
+      "code": "Eric;02-1234567;045-4356713\nEmily;040-324344",
+      "raw_source": "```csv\nEric;02-1234567;045-4356713\nEmily;040-324344\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Handling files is clearly its own area of responsibility, so it merits a class of its own:",
+      "raw_source": "Handling files is clearly its own area of responsibility, so it merits a class of its own:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class FileHandler:\n    def __init__(self, filename):\n        self.__filename = filename\n\n    def load_file(self):\n        names = {}\n        with open(self.__filename) as f:\n            for line in f:\n                parts = line.strip().split(';')\n                name, *numbers = parts\n                names[name] = numbers\n\n        return names",
+      "raw_source": "```python\nclass FileHandler:\n    def __init__(self, filename):\n        self.__filename = filename\n\n    def load_file(self):\n        names = {}\n        with open(self.__filename) as f:\n            for line in f:\n                parts = line.strip().split(';')\n                name, *numbers = parts\n                names[name] = numbers\n\n        return names\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The constructor method takes the name of the file as its argument. The method `load_file(self)` reads the contents of the file. It splits each line into two parts: a name and a list of numbers. It then adds these to a dictionary, using the name as the key and the list as the value.",
+      "raw_source": "The constructor method takes the name of the file as its argument. The method `load_file(self)` reads the contents of the file. It splits each line into two parts: a name and a list of numbers. It then adds these to a dictionary, using the name as the key and the list as the value."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The method uses a nifty Python feature: it is possible to first select some items from a list separately, and then take the rest of the items in a new list. You can see an example of this below. You may remember from [part 6](/part-6/1-reading-files#reading-csv-files) that the string method `split` returns a list.",
+      "raw_source": "The method uses a nifty Python feature: it is possible to first select some items from a list separately, and then take the rest of the items in a new list. You can see an example of this below. You may remember from [part 6](/part-6/1-reading-files#reading-csv-files) that the string method `split` returns a list."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [1, 2, 3, 4, 5]\nfirst, second, *rest = my_list\nprint(first)\nprint(second)\nprint(rest)",
+      "raw_source": "```python\nmy_list = [1, 2, 3, 4, 5]\nfirst, second, *rest = my_list\nprint(first)\nprint(second)\nprint(rest)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "1\n2\n[3, 4, 5]",
+      "raw_source": "<sample-output>\n\n1\n2\n[3, 4, 5]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `*` in front of the variable name `rest` in the assignment statement means that this last variable should contain all the remaining items in the list, from the third one onwards.",
+      "raw_source": "The `*` in front of the variable name `rest` in the assignment statement means that this last variable should contain all the remaining items in the list, from the third one onwards."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We should absolutely test the file handler separately before including it in our application:",
+      "raw_source": "We should absolutely test the file handler separately before including it in our application:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "t = FileHandler(\"phonebook.txt\")\nprint(t.load_file())",
+      "raw_source": "```python\nt = FileHandler(\"phonebook.txt\")\nprint(t.load_file())\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "{'Eric': ['02-1234567', '045-4356713'], 'Emily': ['040-324344']}",
+      "raw_source": "<sample-output>\n\n{'Eric': ['02-1234567', '045-4356713'], 'Emily': ['040-324344']}\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As the file handler seems to work fine, we can add it to our application. Let's assume we want to read the file first thing every time the program is run. The logical place for reading the file would be the constructor of the `PhoneBookApplication` class:",
+      "raw_source": "As the file handler seems to work fine, we can add it to our application. Let's assume we want to read the file first thing every time the program is run. The logical place for reading the file would be the constructor of the `PhoneBookApplication` class:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n        self.__filehandler = FileHandler(\"phonebook.txt\")\n\n        # add the names and numbers from the file to the phone book\n        for name, numbers in self.__filehandler.load_file().items():\n            for number in numbers:\n                self.__phonebook.add_number(name, number)\n\n    # the rest of the program",
+      "raw_source": "```python\nclass PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n        self.__filehandler = FileHandler(\"phonebook.txt\")\n\n        # add the names and numbers from the file to the phone book\n        for name, numbers in self.__filehandler.load_file().items():\n            for number in numbers:\n                self.__phonebook.add_number(name, number)\n\n    # the rest of the program\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This functionality should also be tested. Once we've made certain the contents of the file are accessible through the user interface of our application, we can move on to the next stage.",
+      "raw_source": "This functionality should also be tested. Once we've made certain the contents of the file are accessible through the user interface of our application, we can move on to the next stage."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Step 4: export data to a file",
+      "raw_source": "## Step 4: export data to a file"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The final feature in our basic version of the application is saving the contents of the phone book back in the same file the data was read from.",
+      "raw_source": "The final feature in our basic version of the application is saving the contents of the phone book back in the same file the data was read from."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This involves a change to the `PhoneBook` class. We need to be able to export the contents of the phone book:",
+      "raw_source": "This involves a change to the `PhoneBook` class. We need to be able to export the contents of the phone book:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class PhoneBook:\n    def __init__(self):\n        self.__persons = {}\n\n    # ...\n\n    # return all entries (in dictionary format)\n    def all_entries(self):\n        return self.__persons",
+      "raw_source": "```python\nclass PhoneBook:\n    def __init__(self):\n        self.__persons = {}\n\n    # ...\n\n    # return all entries (in dictionary format)\n    def all_entries(self):\n        return self.__persons\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The actual saving to the file should be handled by the `FileHandler` class. Let's add the method `save_file` which takes a dictionary representation of the phone book as its argument:",
+      "raw_source": "The actual saving to the file should be handled by the `FileHandler` class. Let's add the method `save_file` which takes a dictionary representation of the phone book as its argument:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class FileHandler():\n    def __init__(self, filename):\n        self.__filename = filename\n\n    def load_file(self):\n        # ...\n\n    def save_file(self, phonebook: dict):\n        with open(self.__filename, \"w\") as f:\n            for name, numbers in phonebook.items():\n                line = [name] + numbers\n                f.write(\";\".join(line) + \"\\n\")",
+      "raw_source": "```python\nclass FileHandler():\n    def __init__(self, filename):\n        self.__filename = filename\n\n    def load_file(self):\n        # ...\n\n    def save_file(self, phonebook: dict):\n        with open(self.__filename, \"w\") as f:\n            for name, numbers in phonebook.items():\n                line = [name] + numbers\n                f.write(\";\".join(line) + \"\\n\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The saving should happen as the program exits. Let's add a method for this purpose to the user interface, and call it before breaking out of the `while` loop:",
+      "raw_source": "The saving should happen as the program exits. Let's add a method for this purpose to the user interface, and call it before breaking out of the `while` loop:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "\nclass PhoneBookApplication:\n    # the rest of the code for the user interface\n\n    # a method which gets executed as the program exits\n    def exit(self):\n        self.__filehandler.save_file(self.__phonebook.all_entries())\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n\n                self.exit()\n                break\n            elif command == \"1\":\n                self.add_entry()\n            elif command == \"2\":\n                self.search()\n            else:\n                self.help()",
+      "raw_source": "```python\n\nclass PhoneBookApplication:\n    # the rest of the code for the user interface\n\n    # a method which gets executed as the program exits\n    def exit(self):\n        self.__filehandler.save_file(self.__phonebook.all_entries())\n\n    def execute(self):\n        self.help()\n        while True:\n            print(\"\")\n            command = input(\"command: \")\n            if command == \"0\":\n\n                self.exit()\n                break\n            elif command == \"1\":\n                self.add_entry()\n            elif command == \"2\":\n                self.search()\n            else:\n                self.help()\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Phone book expansion, version 1",
+        "tmcname": "part10-10_phone_book_v1"
+      },
+      "inner_content": "In this exercise you will create a small expansion to the phone book application. The code from the above example is in the exercise template. Please add a command which lets the user search the phone book by number. After the addition the application should work as follows:\n\n<sample-output>\n\ncommands:\n0 exit\n1 add entry\n2 search\n3 search by number\n\ncommand: **1**\nname: **Eric**\nnumber: **02-123456**\n\ncommand: **1**\nname: **Eric**\nnumber: **045-4356713**\n\ncommand: **3**\nnumber: **02-123456**\nEric\n\ncommand: **3**\nnumber: **0100100**\nunknown number\n\ncommand: **0**\n\n</sample-output>\n\nPlease implement this addition with respect to the current structure of the program. This means that in the `PhoneBookApplication` class you should add an appropriate helper method to allow for the new functionality, and also add a new branch to the `while` loop. In the `PhoneBook` class you should add a method which allows for searching with a number.\n\n**NB:** as you test your program and end up with lots of different numbers stored in the `phonebook.txt` file, there is a chance the local tests will not be passed if conflicting data is read from the file as the app starts. You can try emptying the contents of any `phonebook.txt` files you find in the directory for the exercise _before_ running the local tests. Which one of the files is used by your program may depend on your Visual Studio Code settings. Please have a look at the explanation in [part 6](/part-6/1-reading-files#what-if-visual-studio-code-cannot-find-my-file). If your solution is correct, the tests on the server should still pass normally, regardless.",
+      "raw_source": "<programming-exercise name='Phone book expansion, version 1' tmcname='part10-10_phone_book_v1'>\n\nIn this exercise you will create a small expansion to the phone book application. The code from the above example is in the exercise template. Please add a command which lets the user search the phone book by number. After the addition the application should work as follows:\n\n<sample-output>\n\ncommands:\n0 exit\n1 add entry\n2 search\n3 search by number\n\ncommand: **1**\nname: **Eric**\nnumber: **02-123456**\n\ncommand: **1**\nname: **Eric**\nnumber: **045-4356713**\n\ncommand: **3**\nnumber: **02-123456**\nEric\n\ncommand: **3**\nnumber: **0100100**\nunknown number\n\ncommand: **0**\n\n</sample-output>\n\nPlease implement this addition with respect to the current structure of the program. This means that in the `PhoneBookApplication` class you should add an appropriate helper method to allow for the new functionality, and also add a new branch to the `while` loop. In the `PhoneBook` class you should add a method which allows for searching with a number.\n\n**NB:** as you test your program and end up with lots of different numbers stored in the `phonebook.txt` file, there is a chance the local tests will not be passed if conflicting data is read from the file as the app starts. You can try emptying the contents of any `phonebook.txt` files you find in the directory for the exercise _before_ running the local tests. Which one of the files is used by your program may depend on your Visual Studio Code settings. Please have a look at the explanation in [part 6](/part-6/1-reading-files#what-if-visual-studio-code-cannot-find-my-file). If your solution is correct, the tests on the server should still pass normally, regardless.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Objects in a dictionary",
+      "raw_source": "## Objects in a dictionary"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the next exercise you are asked to change your phone book so that the values in the dictionary are _objects_, not lists.",
+      "raw_source": "In the next exercise you are asked to change your phone book so that the values in the dictionary are _objects_, not lists."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "There is nothing intrinsically strange about this, but this is the first time on this course that something like this is suggested, so let's go through a simpler example before diving into the exercise.",
+      "raw_source": "There is nothing intrinsically strange about this, but this is the first time on this course that something like this is suggested, so let's go through a simpler example before diving into the exercise."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here we have an application which keeps track of how many exercises students have completed on a course. Each student's exercise count is stored in a simple object:",
+      "raw_source": "Here we have an application which keeps track of how many exercises students have completed on a course. Each student's exercise count is stored in a simple object:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class ExerciseCounter:\n    def __init__(self):\n        self.__exercises = 0\n\n    def done(self):\n        self.__exercises += 1\n\n    def how_many(self):\n        return self.__exercises",
+      "raw_source": "```python\nclass ExerciseCounter:\n    def __init__(self):\n        self.__exercises = 0\n\n    def done(self):\n        self.__exercises += 1\n\n    def how_many(self):\n        return self.__exercises\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following main function uses the above class:",
+      "raw_source": "The following main function uses the above class:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "students = {}\n\nprint(\"let's do some exercises\")\nwhile True:\n    name = input(\"student: \")\n    if len(name) == 0:\n        break\n\n    # create a new object if it doesn't exist yet\n    if not name in students:\n        students[name] = ExerciseCounter()\n\n    # add a new done exercise to the counter\n    students[name].done()\n\nprint()\nprint(\"exercises completed:\")\n\nfor student, exercises in students.items():\n    print(f\"{student}'s exercises: {exercises.how_many()}\")",
+      "raw_source": "```python\nstudents = {}\n\nprint(\"let's do some exercises\")\nwhile True:\n    name = input(\"student: \")\n    if len(name) == 0:\n        break\n\n    # create a new object if it doesn't exist yet\n    if not name in students:\n        students[name] = ExerciseCounter()\n\n    # add a new done exercise to the counter\n    students[name].done()\n\nprint()\nprint(\"exercises completed:\")\n\nfor student, exercises in students.items():\n    print(f\"{student}'s exercises: {exercises.how_many()}\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Running the above could look like this:",
+      "raw_source": "Running the above could look like this:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "let's do some exercises\nstudent: **peter**\nstudent: **sarah**\nstudent: **andy**\nstudent: **sarah**\nstudent: **charlotte**\nstudent: **charlotte**\nstudent: **andy**\nstudent: **sarah**\nstudent:\n\nexercises completed:\npeter's exercises: 1\nandy's exercises: 2\nsarah's exercises: 3\ncharlotte's exercises: 2",
+      "raw_source": "<sample-output>\n\nlet's do some exercises\nstudent: **peter**\nstudent: **sarah**\nstudent: **andy**\nstudent: **sarah**\nstudent: **charlotte**\nstudent: **charlotte**\nstudent: **andy**\nstudent: **sarah**\nstudent:\n\nexercises completed:\npeter's exercises: 1\nandy's exercises: 2\nsarah's exercises: 3\ncharlotte's exercises: 2\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "There are a couple of things to consider in the above example. When the user inputs a name, the program first checks if the name is already a key in the dictionary. If the name is not present, a new object is created and added as an entry in the dictionary:",
+      "raw_source": "There are a couple of things to consider in the above example. When the user inputs a name, the program first checks if the name is already a key in the dictionary. If the name is not present, a new object is created and added as an entry in the dictionary:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "if not name in students:\n    students[name] = ExerciseCounter()",
+      "raw_source": "```python\nif not name in students:\n    students[name] = ExerciseCounter()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "After this we can be _sure_ the object exists, attached to the name of the student which is used as the key. Either it was just created, or it already existed from a previous iteration of the loop. Either way, we can now retrieve the object with the key, and call the method `done`:",
+      "raw_source": "After this we can be _sure_ the object exists, attached to the name of the student which is used as the key. Either it was just created, or it already existed from a previous iteration of the loop. Either way, we can now retrieve the object with the key, and call the method `done`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "students[name].done()",
+      "raw_source": "```python\nstudents[name].done()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The above line actually contains two separate events. We could just as well use a helper variable and write it on two separate lines of code:",
+      "raw_source": "The above line actually contains two separate events. We could just as well use a helper variable and write it on two separate lines of code:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "students_counter = students[name]\nstudents_counter.done()",
+      "raw_source": "```python\nstudents_counter = students[name]\nstudents_counter.done()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "NB: Even though the object is here assigned to a helper variable, the object still exists in the dictionary just as before.  The helper variable contains a _reference_ to the object in the dictionary.",
+      "raw_source": "NB: Even though the object is here assigned to a helper variable, the object still exists in the dictionary just as before.  The helper variable contains a _reference_ to the object in the dictionary."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If you are not quite sure what actually happens in the code above, please do try it out with the [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit).",
+      "raw_source": "If you are not quite sure what actually happens in the code above, please do try it out with the [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit)."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Phone book expansion, version 2",
+        "tmcname": "part10-11_phone_book_v2"
+      },
+      "inner_content": "In this exercise you will create another version of the `PhoneBookApplication`. You will add addresses to the data which can be attached to a name. For simplicity's sake the functionality for saving to file has been removed, and some other methods have been renamed to better accommodate the change.\n\n## A separate class for a person's data\n\nPlease change the way the data of a person is handled. Implement a class named `Person`, which takes care of the phone numbers and addresses of persons. The class should work as follows:\n\n```python\nperson = Person(\"Eric\")\nprint(person.name())\nprint(person.numbers())\nprint(person.address())\nperson.add_number(\"040-123456\")\nperson.add_address(\"Mannerheimintie 10 Helsinki\")\nprint(person.numbers())\nprint(person.address())\n```\n\n<sample-output>\n\nEric\n[]\nNone\n['040-123456']\nMannerheimintie 10 Helsinki\n\n</sample-output>\n\n## PhoneBook uses the class Person\n\nPlease change the internal implementation of your application so that your `PhoneBook` class uses objects of class `Person` to store the data in the phone book. That is, the attribute `__persons` should still contain a dictionary, but the values should be Person-objects and not lists. The user of your application should notice no difference; the changes must not affect the user interface.\n\n**WARNING:** whenever you make structural changes to your code, as described in this exercise, always take baby steps and test at every possible stage. Do not try and make all the changes at once. That is a sure way of **running into serious problems with your code**.\n\nA suitable first step might be to write some code for checking the functionality of the `PhoneBook` class directly. For example, the following should at least not cause any errors:\n\n```python\nphonebook = PhoneBook()\nphonebook.add_number(\"Eric\", \"02-123456\")\nprint(phonebook.get_entry(\"Eric\"))\nprint(phonebook.get_entry(\"Emily\"))\n```\n\nNotice the new name for the method for fetching an entry from the phone book. The automatic tests do not check what the printout from your `get_entry` method is, but make sure no errors are raised by the above code, and that the result makes sense within your implementation.\n\nWhen you've made the necessary changes in your program and have absolutely verified the functionality within the `PhoneBook` class, you can move on to the user interface, and see if everything still works as expected.\n\n## Adding an address\n\nPlease implement the functionality for adding an address to an entry in your phone book. The program should work as follows:\n\n<sample-output>\n\ncommands:\n0 exit\n1 add number\n2 search\n3 add address\n\ncommand: **1**\nname: **Eric**\nnumber: **02-123456**\n\ncommand: **3**\nname: **Emily**\naddress: **Viherlaaksontie 7, Espoo**\n\ncommand: **2**\nname: **Eric**\n02-123456\naddress unknown\n\ncommand: **2**\nname: **Emily**\nnumber unknown\nViherlaaksontie 7, Espoo\n\ncommand: **3**\nname: **Eric**\naddress: **Linnankatu 75, Turku**\n\ncommand: 2\nname: **Eric**\n02-123456\nLinnankatu 75, Turku\n\ncommand: **2**\nname: **Wilhelm**\naddress unknown\nnumber unknown\n\ncommand: **0**\n\n</sample-output>\n\n**WARNING and hint:** as stated above in the previous exercise, do not try and make all the changes at once. That is a sure way of **running into serious problems with your code**.\n\nFirst make sure your can reliably add addresses using the `PhoneBook` class directly. Once you have verified this, you can move on to the necessary changes in the user interface.",
+      "raw_source": "<programming-exercise name='Phone book expansion, version 2' tmcname='part10-11_phone_book_v2'>\n\nIn this exercise you will create another version of the `PhoneBookApplication`. You will add addresses to the data which can be attached to a name. For simplicity's sake the functionality for saving to file has been removed, and some other methods have been renamed to better accommodate the change.\n\n## A separate class for a person's data\n\nPlease change the way the data of a person is handled. Implement a class named `Person`, which takes care of the phone numbers and addresses of persons. The class should work as follows:\n\n```python\nperson = Person(\"Eric\")\nprint(person.name())\nprint(person.numbers())\nprint(person.address())\nperson.add_number(\"040-123456\")\nperson.add_address(\"Mannerheimintie 10 Helsinki\")\nprint(person.numbers())\nprint(person.address())\n```\n\n<sample-output>\n\nEric\n[]\nNone\n['040-123456']\nMannerheimintie 10 Helsinki\n\n</sample-output>\n\n## PhoneBook uses the class Person\n\nPlease change the internal implementation of your application so that your `PhoneBook` class uses objects of class `Person` to store the data in the phone book. That is, the attribute `__persons` should still contain a dictionary, but the values should be Person-objects and not lists. The user of your application should notice no difference; the changes must not affect the user interface.\n\n**WARNING:** whenever you make structural changes to your code, as described in this exercise, always take baby steps and test at every possible stage. Do not try and make all the changes at once. That is a sure way of **running into serious problems with your code**.\n\nA suitable first step might be to write some code for checking the functionality of the `PhoneBook` class directly. For example, the following should at least not cause any errors:\n\n```python\nphonebook = PhoneBook()\nphonebook.add_number(\"Eric\", \"02-123456\")\nprint(phonebook.get_entry(\"Eric\"))\nprint(phonebook.get_entry(\"Emily\"))\n```\n\nNotice the new name for the method for fetching an entry from the phone book. The automatic tests do not check what the printout from your `get_entry` method is, but make sure no errors are raised by the above code, and that the result makes sense within your implementation.\n\nWhen you've made the necessary changes in your program and have absolutely verified the functionality within the `PhoneBook` class, you can move on to the user interface, and see if everything still works as expected.\n\n## Adding an address\n\nPlease implement the functionality for adding an address to an entry in your phone book. The program should work as follows:\n\n<sample-output>\n\ncommands:\n0 exit\n1 add number\n2 search\n3 add address\n\ncommand: **1**\nname: **Eric**\nnumber: **02-123456**\n\ncommand: **3**\nname: **Emily**\naddress: **Viherlaaksontie 7, Espoo**\n\ncommand: **2**\nname: **Eric**\n02-123456\naddress unknown\n\ncommand: **2**\nname: **Emily**\nnumber unknown\nViherlaaksontie 7, Espoo\n\ncommand: **3**\nname: **Eric**\naddress: **Linnankatu 75, Turku**\n\ncommand: 2\nname: **Eric**\n02-123456\nLinnankatu 75, Turku\n\ncommand: **2**\nname: **Wilhelm**\naddress unknown\nnumber unknown\n\ncommand: **0**\n\n</sample-output>\n\n**WARNING and hint:** as stated above in the previous exercise, do not try and make all the changes at once. That is a sure way of **running into serious problems with your code**.\n\nFirst make sure your can reliably add addresses using the `PhoneBook` class directly. Once you have verified this, you can move on to the necessary changes in the user interface.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Some concluding remarks",
+      "raw_source": "## Some concluding remarks"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The structure of the PhoneBook example above follows the fundamental principles of object oriented programming rather well. The central tenet is to identify the different responsibilities in the program and divide these logically among the different classes and methods. One of the main motivations for this division is managing complexity. Another important motive is that a logical division of responsibilities - modularity, in professional terminology - often makes the code easier to maintain and expand upon.",
+      "raw_source": "The structure of the PhoneBook example above follows the fundamental principles of object oriented programming rather well. The central tenet is to identify the different responsibilities in the program and divide these logically among the different classes and methods. One of the main motivations for this division is managing complexity. Another important motive is that a logical division of responsibilities - modularity, in professional terminology - often makes the code easier to maintain and expand upon."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the software packages being developed and used in the wider world, the overwhelmingly most expensive facet of development is maintenance and expansion, meaning debugging existing software and implementing new features. Correctly implemented modularity is financially a very important feature in software development.",
+      "raw_source": "In the software packages being developed and used in the wider world, the overwhelmingly most expensive facet of development is maintenance and expansion, meaning debugging existing software and implementing new features. Correctly implemented modularity is financially a very important feature in software development."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "There are some more object oriented programming principles worth highlighting here. The PhoneBook is a good example of how the core application logic can (and should) be separated from _both_ the user interface _and_ any data storage facilities. This is important for a couple of different reasons. First, this separation makes it possible to test the code in smaller units, one class and method at a time. Second, as the core logic is now independent of the interfaces to the outside world, it is possible to change, to an extent, the implementation of either the core logic or the interfaces, without breaking the entire application.",
+      "raw_source": "There are some more object oriented programming principles worth highlighting here. The PhoneBook is a good example of how the core application logic can (and should) be separated from _both_ the user interface _and_ any data storage facilities. This is important for a couple of different reasons. First, this separation makes it possible to test the code in smaller units, one class and method at a time. Second, as the core logic is now independent of the interfaces to the outside world, it is possible to change, to an extent, the implementation of either the core logic or the interfaces, without breaking the entire application."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The file handling process in the PhoneBook application proceeds as follows: the program reads the file just once, as it starts up. After this all data is stored in variables in the program. When the program exits, it again stores all data, in practice overwriting the file. In most cases this is the recommended way to deal with external files, as editing the data in situ is often much more complicated.",
+      "raw_source": "The file handling process in the PhoneBook application proceeds as follows: the program reads the file just once, as it starts up. After this all data is stored in variables in the program. When the program exits, it again stores all data, in practice overwriting the file. In most cases this is the recommended way to deal with external files, as editing the data in situ is often much more complicated."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "There are many good guidebooks for learning about good programming practices. One such is [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) by Robert Martin. The code examples in the book are implemented in Java, however, so working through the examples can be quite cumbersome at this point in your programming career, although the book itself is much recommended by the course staff. The themes of easily maintained, expandable, good quality code will be further explored on the courses\n[Software Development Methods](https://studies.helsinki.fi/courses/cu/hy-CU-118024742-2020-08-01) and [Software Engineering](https://studies.helsinki.fi/courses/cu/hy-CU-118024909-2020-08-01).",
+      "raw_source": "There are many good guidebooks for learning about good programming practices. One such is [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) by Robert Martin. The code examples in the book are implemented in Java, however, so working through the examples can be quite cumbersome at this point in your programming career, although the book itself is much recommended by the course staff. The themes of easily maintained, expandable, good quality code will be further explored on the courses\n[Software Development Methods](https://studies.helsinki.fi/courses/cu/hy-CU-118024742-2020-08-01) and [Software Engineering](https://studies.helsinki.fi/courses/cu/hy-CU-118024909-2020-08-01)."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Writing code according to established object oriented programming principles comes at a price. You will likely end up writing more code than you would, were you to write your implementation in one continuous bout of spaghetti code. One of the key skills of a porgrammer is to decide the best approach for each situation. Sometimes it is necessary to just hack something together quickly for immediate use. On the other hand, if in the foreseeable future it can be expected that the code will be reused, maintained or futher developed, either by you or, more critically, by someone else entirely, the readability and logical modularity of the program code become essential. More often than not, if it is worth doing, it is worth doing well, even in the very early stages of development.",
+      "raw_source": "Writing code according to established object oriented programming principles comes at a price. You will likely end up writing more code than you would, were you to write your implementation in one continuous bout of spaghetti code. One of the key skills of a porgrammer is to decide the best approach for each situation. Sometimes it is necessary to just hack something together quickly for immediate use. On the other hand, if in the foreseeable future it can be expected that the code will be reused, maintained or futher developed, either by you or, more critically, by someone else entirely, the readability and logical modularity of the program code become essential. More often than not, if it is worth doing, it is worth doing well, even in the very early stages of development."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "To finish off this part of the material you will implement one more larger application.",
+      "raw_source": "To finish off this part of the material you will implement one more larger application."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "CourseRecords",
+        "tmcname": "part10-12_course_records"
+      },
+      "inner_content": "Please write an interactive application for keeping track of your studies. The internal structure is up to you, but this would be a good opportunity to practice creating a similar structure as in the PhoneBook example above.\n\nYour program should work as follows:\n\n<sample-output>\n\n1 add course\n2 get course data\n3 statistics\n0 exit\n\ncommand: **1**\ncourse: **ItP**\ngrade: **3**\ncredits: **5**\n\ncommand: **2**\ncourse: **ItP**\nItP (5 cr) grade 3\n\ncommand: **1**\ncourse: **ItP**\ngrade: **5**\ncredits: **5**\n\ncommand: **2**\ncourse: **ItP**\nItP (5 cr) grade 5\n\ncommand: **1**\ncourse: **ItP**\ngrade: **1**\ncredits: **5**\n\ncommand: **2**\ncourse: **ItP**\nItP (5 cr) grade 5\n\ncommand: **2**\ncourse: **Introduction to Java**\nno entry for this course\n\ncommand: **1**\ncourse: **ACiP**\ngrade: **1**\ncredits: **10**\n\ncommand: **1**\ncourse: **ItAI**\ngrade: **2**\ncredits: **5**\n\ncommand: **1**\ncourse: **Algo101**\ngrade: **4**\ncredits: **1**\n\ncommand: **1**\ncourse: **CompModels**\ngrade: **5**\ncredits: **8**\n\ncommand: **3**\n5 completed courses, a total of 29 credits\nmean 3.4\ngrade distribution\n5: xx\n4: x\n3:\n2: x\n1: x\n\ncommand: **0**\n\n</sample-output>\n\nEach course name should result in a single entry in the records. A grade may be raised by re-entering the course details, but the grade should never be lowered.\n\nThis exercise is worth two exercise points. The first is granted after the commands 1, 2 and 0 work correctly in your program. The second is granted if command 3 also works as expected.",
+      "raw_source": "<programming-exercise name='CourseRecords' tmcname='part10-12_course_records'>\n\nPlease write an interactive application for keeping track of your studies. The internal structure is up to you, but this would be a good opportunity to practice creating a similar structure as in the PhoneBook example above.\n\nYour program should work as follows:\n\n<sample-output>\n\n1 add course\n2 get course data\n3 statistics\n0 exit\n\ncommand: **1**\ncourse: **ItP**\ngrade: **3**\ncredits: **5**\n\ncommand: **2**\ncourse: **ItP**\nItP (5 cr) grade 3\n\ncommand: **1**\ncourse: **ItP**\ngrade: **5**\ncredits: **5**\n\ncommand: **2**\ncourse: **ItP**\nItP (5 cr) grade 5\n\ncommand: **1**\ncourse: **ItP**\ngrade: **1**\ncredits: **5**\n\ncommand: **2**\ncourse: **ItP**\nItP (5 cr) grade 5\n\ncommand: **2**\ncourse: **Introduction to Java**\nno entry for this course\n\ncommand: **1**\ncourse: **ACiP**\ngrade: **1**\ncredits: **10**\n\ncommand: **1**\ncourse: **ItAI**\ngrade: **2**\ncredits: **5**\n\ncommand: **1**\ncourse: **Algo101**\ngrade: **4**\ncredits: **1**\n\ncommand: **1**\ncourse: **CompModels**\ngrade: **5**\ncredits: **8**\n\ncommand: **3**\n5 completed courses, a total of 29 credits\nmean 3.4\ngrade distribution\n5: xx\n4: x\n3:\n2: x\n1: x\n\ncommand: **0**\n\n</sample-output>\n\nEach course name should result in a single entry in the records. A grade may be raised by re-entering the course details, but the grade should never be lowered.\n\nThis exercise is worth two exercise points. The first is granted after the commands 1, 2 and 0 work correctly in your program. The second is granted if command 3 also works as expected.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Epilogue",
+      "raw_source": "## Epilogue"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "To finish off this part of the material, let's return to the user interface of the phone book example for a moment.",
+      "raw_source": "To finish off this part of the material, let's return to the user interface of the phone book example for a moment."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n        self.__filehandler = FileHandler(\"phonebook.txt\")\n\n    # the rest of the program\n\napplication = PhoneBookApplication()\napplication.execute()",
+      "raw_source": "```python\nclass PhoneBookApplication:\n    def __init__(self):\n        self.__phonebook = PhoneBook()\n        self.__filehandler = FileHandler(\"phonebook.txt\")\n\n    # the rest of the program\n\napplication = PhoneBookApplication()\napplication.execute()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A `PhoneBookApplication` object contains both a `PhoneBook` object and a `FileHandler` object. The name of the file passed to the FileHandler is, at the moment, hard-coded into the `PhoneBookApplication` class. This is a completely irrelevant detail when it comes to the _user interface_ of the application. In fact, it breaks the _separation of concerns_ principle: where a `PhoneBook` object saves its contents should be of no concern to a `PhoneBookApplication`, yet if we wanted to change the location, we'd have to change the code of `PhoneBookApplication`.",
+      "raw_source": "A `PhoneBookApplication` object contains both a `PhoneBook` object and a `FileHandler` object. The name of the file passed to the FileHandler is, at the moment, hard-coded into the `PhoneBookApplication` class. This is a completely irrelevant detail when it comes to the _user interface_ of the application. In fact, it breaks the _separation of concerns_ principle: where a `PhoneBook` object saves its contents should be of no concern to a `PhoneBookApplication`, yet if we wanted to change the location, we'd have to change the code of `PhoneBookApplication`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It would be a better idea to create a FileHandler object somewhere _outside_ the `PhoneBookApplication` class, and pass it as an argument to the application:",
+      "raw_source": "It would be a better idea to create a FileHandler object somewhere _outside_ the `PhoneBookApplication` class, and pass it as an argument to the application:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class PhoneBookApplication:\n    def __init__(self, storage_service):\n        self.__phonebook = PhoneBook()\n        self.__storage_service = storage_service\n\n    # the rest of the user interface\n\n# create a FileHandler\nstorage_service = FileHandler(\"phonebook.txt\")\n# pass it as an argument to PhoneBookApplication's constructor\napplication = PhoneBookApplication(storage_service)\napplication.execute()",
+      "raw_source": "```python\nclass PhoneBookApplication:\n    def __init__(self, storage_service):\n        self.__phonebook = PhoneBook()\n        self.__storage_service = storage_service\n\n    # the rest of the user interface\n\n# create a FileHandler\nstorage_service = FileHandler(\"phonebook.txt\")\n# pass it as an argument to PhoneBookApplication's constructor\napplication = PhoneBookApplication(storage_service)\napplication.execute()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This removes an _unnecessary dependency_ from the `PhoneBookApplication` class. If the name of the file changes, the user interface no longer needs to be changed. We just need to pass a different argument to the constructor:",
+      "raw_source": "This removes an _unnecessary dependency_ from the `PhoneBookApplication` class. If the name of the file changes, the user interface no longer needs to be changed. We just need to pass a different argument to the constructor:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class PhoneBookApplication:\n    def __init__(self, filename):\n        self.__phonebook = PhoneBook()\n        self.__filename = filename\n\n    # the rest of the user interface\n\n# use a different filename\nstorage_service = FileHandler(\"new_phonebook.txt\")\napplication = PhoneBookApplication(storage_service)\napplication.execute()",
+      "raw_source": "```python\nclass PhoneBookApplication:\n    def __init__(self, filename):\n        self.__phonebook = PhoneBook()\n        self.__filename = filename\n\n    # the rest of the user interface\n\n# use a different filename\nstorage_service = FileHandler(\"new_phonebook.txt\")\napplication = PhoneBookApplication(storage_service)\napplication.execute()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This change also allows us to consider more exotic storage locations, for instance, a cloud service on the internet. We just need to implement a class which uses the cloud service, and offers `PhoneBookApplication` the exact same methods as `FileHandler`.",
+      "raw_source": "This change also allows us to consider more exotic storage locations, for instance, a cloud service on the internet. We just need to implement a class which uses the cloud service, and offers `PhoneBookApplication` the exact same methods as `FileHandler`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "An instance of this new \"cloud handler\" class can be passed as an argument to the constructor, and not a single line of code has to be changed in the user interface:",
+      "raw_source": "An instance of this new \"cloud handler\" class can be passed as an argument to the constructor, and not a single line of code has to be changed in the user interface:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class CloudHandler:\n    # code for saving the contents of the phone book\n    # in a cloud service on the internet\n\nstorage_service = CloudHandler(\"amazon-cloud\", \"username\", \"passwrd\")\napplication = PhoneBookApplication(storage_service)\napplication.execute()",
+      "raw_source": "```python\nclass CloudHandler:\n    # code for saving the contents of the phone book\n    # in a cloud service on the internet\n\nstorage_service = CloudHandler(\"amazon-cloud\", \"username\", \"passwrd\")\napplication = PhoneBookApplication(storage_service)\napplication.execute()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As you have seen before, using techniques like this carries a price tag, as there is more code to write, so a programmer needs to consider whether that is an acceptable tradeoff.",
+      "raw_source": "As you have seen before, using techniques like this carries a price tag, as there is more code to write, so a programmer needs to consider whether that is an acceptable tradeoff."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The technique outlined above is called _dependency injection_. As the name implies, the idea is to provide any dependency required by an object from _outside_ the object. It is a very useful tool in a programmer's toolbox, as it makes it easier to implement new features in programs and facilitates automatic testing. This theme will be further explored on the aforementioned courses [Software Development Methods](https://studies.helsinki.fi/courses/cu/hy-CU-118024742-2020-08-01) and [Software Engineering](https://studies.helsinki.fi/courses/cu/hy-CU-118024909-2020-08-01).",
+      "raw_source": "The technique outlined above is called _dependency injection_. As the name implies, the idea is to provide any dependency required by an object from _outside_ the object. It is a very useful tool in a programmer's toolbox, as it makes it easier to implement new features in programs and facilitates automatic testing. This theme will be further explored on the aforementioned courses [Software Development Methods](https://studies.helsinki.fi/courses/cu/hy-CU-118024742-2020-08-01) and [Software Engineering](https://studies.helsinki.fi/courses/cu/hy-CU-118024909-2020-08-01)."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Please respond to a quick questionnaire on this part of the course.",
+      "raw_source": "Please respond to a quick questionnaire on this part of the course."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "0341ead5-6a31-5ce5-92e8-215b8c990c32"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"0341ead5-6a31-5ce5-92e8-215b8c990c32\"></quiz>"
+    }
+  ]
+}

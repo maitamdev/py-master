@@ -1,0 +1,48 @@
+{
+  "part": 5,
+  "slug": "part-5",
+  "title_original": "Part 5",
+  "title_vi": "Phần 5",
+  "lessons": [
+    {
+      "id": "part05-1-more-lists",
+      "slug": "1-more-lists",
+      "is_index": false,
+      "title_original": "More lists",
+      "path": "/part-5/1-more-lists",
+      "blocks_count": 106
+    },
+    {
+      "id": "part05-2-references",
+      "slug": "2-references",
+      "is_index": false,
+      "title_original": "References",
+      "path": "/part-5/2-references",
+      "blocks_count": 104
+    },
+    {
+      "id": "part05-3-dictionary",
+      "slug": "3-dictionary",
+      "is_index": false,
+      "title_original": "Dictionary",
+      "path": "/part-5/3-dictionary",
+      "blocks_count": 93
+    },
+    {
+      "id": "part05-4-tuple",
+      "slug": "4-tuple",
+      "is_index": false,
+      "title_original": "Tuple",
+      "path": "/part-5/4-tuple",
+      "blocks_count": 51
+    },
+    {
+      "id": "part05-index",
+      "slug": "index",
+      "is_index": true,
+      "title_original": "Part 5",
+      "path": "/part-5",
+      "blocks_count": 2
+    }
+  ]
+}

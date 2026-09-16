@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-27_sum_of_lists",
+  "lesson_id": "part04-4-definite-iteration",
+  "part": 4,
+  "tmc_name": "part04-27_sum_of_lists",
+  "title_original": "The sum of lists",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `list_sum` which takes two lists of integers as arguments. The function returns a new list which contains the sums of the items at each index in the two original lists. You may assume both lists have the same number of items. \n\nAn example of the function at work:\n\n```python\na = [1, 2, 3]\nb = [7, 8, 9]\nprint(list_sum(a, b)) # [8, 10, 12]\n```",
+  "description_vi": "",
+  "starter_code": "a = [1, 2, 3]\nb = [7, 8, 9]\nprint(list_sum(a, b)) # [8, 10, 12]",
+  "grading_data_available": false,
+  "source_hash": "2236bf6518b0a2ccd7d8d7876c7ff937180fc4861a1e5fcd3fa73e9c6bc1fb59",
+  "order": 54
+}

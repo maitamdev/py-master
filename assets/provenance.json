@@ -1,0 +1,2466 @@
+{
+  "img/ennustaja-1.png": {
+    "original_path": "data/img/ennustaja-1.png",
+    "local_path": "assets/images/img/ennustaja-1.png",
+    "sha256": "8146bdb04d96fe0736df7f740065a4616b2a0d1164d203b4fdbc9b62dcd5063c",
+    "size_bytes": 2022,
+    "media_type": "images"
+  },
+  "img/ennustaja-2.png": {
+    "original_path": "data/img/ennustaja-2.png",
+    "local_path": "assets/images/img/ennustaja-2.png",
+    "sha256": "468ad966de4a41c61e1141fb11d47c2f45e88587b0ce3cb92a32c0061de0405d",
+    "size_bytes": 10782,
+    "media_type": "images"
+  },
+  "img/ennustaja-3.gif": {
+    "original_path": "data/img/ennustaja-3.gif",
+    "local_path": "assets/images/img/ennustaja-3.gif",
+    "sha256": "b06e6c4c08dc212913fb1815a9a294ac67d96243f0b69b93e5ca1574820020d7",
+    "size_bytes": 24399,
+    "media_type": "images"
+  },
+  "img/et_phone_home.wav": {
+    "original_path": "data/img/et_phone_home.wav",
+    "local_path": "assets/other/img/et_phone_home.wav",
+    "sha256": "27ad4a8ea79492d0bd3b3d35b7f35e0a201bd60545d5b14f9d1d2e55330478eb",
+    "size_bytes": 41554,
+    "media_type": "other"
+  },
+  "img/front-desk-bells-daniel_simon.wav": {
+    "original_path": "data/img/front-desk-bells-daniel_simon.wav",
+    "local_path": "assets/other/img/front-desk-bells-daniel_simon.wav",
+    "sha256": "56cc6b4a59daa9aa72bd1df48c79e427bdbf5b33172e01430ee01ec1923b1584",
+    "size_bytes": 762392,
+    "media_type": "other"
+  },
+  "img/hiekkaranta-1.png": {
+    "original_path": "data/img/hiekkaranta-1.png",
+    "local_path": "assets/images/img/hiekkaranta-1.png",
+    "sha256": "782ada105d6939502eed4e56c9989a48533224ca654cfa3abf8aa8a0ffe78d54",
+    "size_bytes": 5898,
+    "media_type": "images"
+  },
+  "img/kollaasi-monalisa-kulma.png": {
+    "original_path": "data/img/kollaasi-monalisa-kulma.png",
+    "local_path": "assets/images/img/kollaasi-monalisa-kulma.png",
+    "sha256": "c59bf3912bf0b93e8260ac5c55c2faa9ac44abb1fafc69948461efe02779aa0f",
+    "size_bytes": 160762,
+    "media_type": "images"
+  },
+  "img/kollaasi-monalisa-neg.png": {
+    "original_path": "data/img/kollaasi-monalisa-neg.png",
+    "local_path": "assets/images/img/kollaasi-monalisa-neg.png",
+    "sha256": "3c5ba8875033d78abf88601188cc4b8adefeb522d1f06a2b1d989e94177be3c1",
+    "size_bytes": 172467,
+    "media_type": "images"
+  },
+  "img/kollaasi-monalisa-ruudut.png": {
+    "original_path": "data/img/kollaasi-monalisa-ruudut.png",
+    "local_path": "assets/images/img/kollaasi-monalisa-ruudut.png",
+    "sha256": "3783cbd9866388956ad34e406d504ae7264e9e1a5083832e3664417873f861b6",
+    "size_bytes": 172293,
+    "media_type": "images"
+  },
+  "img/kollaasi-monalisa.png": {
+    "original_path": "data/img/kollaasi-monalisa.png",
+    "local_path": "assets/images/img/kollaasi-monalisa.png",
+    "sha256": "281243e9f2d5137fba84e7100d6a73a5c8108a0a1ab08e7c1c42f3bca1f80f69",
+    "size_bytes": 160997,
+    "media_type": "images"
+  },
+  "img/lohkoesimerkki-1.png": {
+    "original_path": "data/img/lohkoesimerkki-1.png",
+    "local_path": "assets/images/img/lohkoesimerkki-1.png",
+    "sha256": "bed44658b6fb7fdc1ac0a3dc354de2e1597519ebc4383ac9f27b91f2de7ce903",
+    "size_bytes": 8586,
+    "media_type": "images"
+  },
+  "img/lohkoesimerkki-2.png": {
+    "original_path": "data/img/lohkoesimerkki-2.png",
+    "local_path": "assets/images/img/lohkoesimerkki-2.png",
+    "sha256": "41fcaa893263569304af7fbd59f522959980b0eb20f2ec52c04a2d9074468a63",
+    "size_bytes": 8667,
+    "media_type": "images"
+  },
+  "img/lohkoesimerkki.png": {
+    "original_path": "data/img/lohkoesimerkki.png",
+    "local_path": "assets/images/img/lohkoesimerkki.png",
+    "sha256": "b217f0d17ae85e7b257e8dd02b14519cb3921bd8174147462e1cbecd464781af",
+    "size_bytes": 7998,
+    "media_type": "images"
+  },
+  "img/lyrics.png": {
+    "original_path": "data/img/lyrics.png",
+    "local_path": "assets/images/img/lyrics.png",
+    "sha256": "cc712108cad2fef03421bde590dbebbe9ff1397004b379293538b402b28db75f",
+    "size_bytes": 31837,
+    "media_type": "images"
+  },
+  "img/matopeli.png": {
+    "original_path": "data/img/matopeli.png",
+    "local_path": "assets/images/img/matopeli.png",
+    "sha256": "831e71e999f189265e63272f2c18e7fde55fd31a1d155d228486cfbec5f70ec3",
+    "size_bytes": 8708,
+    "media_type": "images"
+  },
+  "img/maven-1.png": {
+    "original_path": "data/img/maven-1.png",
+    "local_path": "assets/images/img/maven-1.png",
+    "sha256": "7e86cffb55488a6c27e736b2558b8c6e57c6c5955d9fd06abbf50d70bceacefd",
+    "size_bytes": 14961,
+    "media_type": "images"
+  },
+  "img/metodivuokaavio.png": {
+    "original_path": "data/img/metodivuokaavio.png",
+    "local_path": "assets/images/img/metodivuokaavio.png",
+    "sha256": "62510ecf54fb718a8997fc39aa14a82abc8573b8302c4f0bd40083216b69aad4",
+    "size_bytes": 39162,
+    "media_type": "images"
+  },
+  "img/metodivuokaavio2.png": {
+    "original_path": "data/img/metodivuokaavio2.png",
+    "local_path": "assets/images/img/metodivuokaavio2.png",
+    "sha256": "8f09c5dae192851d289c09a0b21ff07773d3e6dc0d0bfefcfcb52c0308a62d37",
+    "size_bytes": 24476,
+    "media_type": "images"
+  },
+  "img/pong-screenshot.png": {
+    "original_path": "data/img/pong-screenshot.png",
+    "local_path": "assets/images/img/pong-screenshot.png",
+    "sha256": "bd22130dd8c154f5daab43a0f39d52d72397e5c865ac4a25691ab037d9e4cd6e",
+    "size_bytes": 4484,
+    "media_type": "images"
+  },
+  "img/rintamamiestalo-rakennuspiirrustus.jpg": {
+    "original_path": "data/img/rintamamiestalo-rakennuspiirrustus.jpg",
+    "local_path": "assets/images/img/rintamamiestalo-rakennuspiirrustus.jpg",
+    "sha256": "879aa4f1cd1f31e2c8faf7ba6396301fe1f6276e9b9e586411cbb44326658f95",
+    "size_bytes": 89371,
+    "media_type": "images"
+  },
+  "img/rintamamiestalo.jpg": {
+    "original_path": "data/img/rintamamiestalo.jpg",
+    "local_path": "assets/images/img/rintamamiestalo.jpg",
+    "sha256": "81773044b35526cd15cb28a702c4495d6caa33f21f1f6b2f413db74a5d42afbb",
+    "size_bytes": 117161,
+    "media_type": "images"
+  },
+  "img/saastolaskuri-1.png": {
+    "original_path": "data/img/saastolaskuri-1.png",
+    "local_path": "assets/images/img/saastolaskuri-1.png",
+    "sha256": "8c8cae479fdbbf691be941d8ec2bc838cdddab6b517fd7df99a05de2f85554ba",
+    "size_bytes": 38408,
+    "media_type": "images"
+  },
+  "img/saastolaskuri-2.png": {
+    "original_path": "data/img/saastolaskuri-2.png",
+    "local_path": "assets/images/img/saastolaskuri-2.png",
+    "sha256": "4000c6a50fd33ac5ebb88fe6938da924629ce69f57c0bb865b610d5e7d547aa6",
+    "size_bytes": 51548,
+    "media_type": "images"
+  },
+  "img/saastolaskuri-3.png": {
+    "original_path": "data/img/saastolaskuri-3.png",
+    "local_path": "assets/images/img/saastolaskuri-3.png",
+    "sha256": "d3a2983ed75df6130730083558dc29e3e049a06784fcafb061b6046a29f3475e",
+    "size_bytes": 50575,
+    "media_type": "images"
+  },
+  "img/saastolaskuri.png": {
+    "original_path": "data/img/saastolaskuri.png",
+    "local_path": "assets/images/img/saastolaskuri.png",
+    "sha256": "4471acbc6ba93bb73a50d43e5f121938f0eda30e9a8e3cdf61097a9170e48eb2",
+    "size_bytes": 65171,
+    "media_type": "images"
+  },
+  "img/satunnaiskavely.gif": {
+    "original_path": "data/img/satunnaiskavely.gif",
+    "local_path": "assets/images/img/satunnaiskavely.gif",
+    "sha256": "fd45488a448c59d2148f1fff7340549da52986d66df43fea5dc25e94a34f5eff",
+    "size_bytes": 126513,
+    "media_type": "images"
+  },
+  "img/shanghai.png": {
+    "original_path": "data/img/shanghai.png",
+    "local_path": "assets/images/img/shanghai.png",
+    "sha256": "b81f6f51fdf903d4d9f899b53a9d7678ec43027169ce1fe55008c9d5e0c1f0d6",
+    "size_bytes": 31276,
+    "media_type": "images"
+  },
+  "img/sout.gif": {
+    "original_path": "data/img/sout.gif",
+    "local_path": "assets/images/img/sout.gif",
+    "sha256": "ba9abe7e5622f26eed5e4a5f6d46aec836e4e163365df29f6743e68c3b7e1425",
+    "size_bytes": 17961,
+    "media_type": "images"
+  },
+  "img/stackywindows-1.png": {
+    "original_path": "data/img/stackywindows-1.png",
+    "local_path": "assets/images/img/stackywindows-1.png",
+    "sha256": "c6b3c338a280c6639c24ea0f365d09f4919ce0dd0f53c9a3d6f68d7081c88279",
+    "size_bytes": 7145,
+    "media_type": "images"
+  },
+  "img/stackywindows-2.png": {
+    "original_path": "data/img/stackywindows-2.png",
+    "local_path": "assets/images/img/stackywindows-2.png",
+    "sha256": "402aa5b038dc68e30ffe01ed2d60a0371bd97984d05531544b6fcaaf1582ea00",
+    "size_bytes": 7142,
+    "media_type": "images"
+  },
+  "img/taikaneliot-siamese.gif": {
+    "original_path": "data/img/taikaneliot-siamese.gif",
+    "local_path": "assets/images/img/taikaneliot-siamese.gif",
+    "sha256": "1f2002bd2e9e48e76d842f77461e9aba23d1e4f2a45f67d771af1f64b1a845dd",
+    "size_bytes": 318796,
+    "media_type": "images"
+  },
+  "img/tykinkuula.png": {
+    "original_path": "data/img/tykinkuula.png",
+    "local_path": "assets/images/img/tykinkuula.png",
+    "sha256": "e4611fe70fe1e228dccb041606fd4303665b62b5957aaaacaeafce03ed76d50e",
+    "size_bytes": 23094,
+    "media_type": "images"
+  },
+  "img/vuokaavio1.png": {
+    "original_path": "data/img/vuokaavio1.png",
+    "local_path": "assets/images/img/vuokaavio1.png",
+    "sha256": "6345784338261ece6c4c6209ab4cfa96340faad180761f3c28abfb043ebb7c9a",
+    "size_bytes": 56338,
+    "media_type": "images"
+  },
+  "img/vuokaavio2.png": {
+    "original_path": "data/img/vuokaavio2.png",
+    "local_path": "assets/images/img/vuokaavio2.png",
+    "sha256": "e8d9af815307583bf53a736d62993ceacc5d737e42e7a063e075442ee020bbb6",
+    "size_bytes": 73290,
+    "media_type": "images"
+  },
+  "img/vuokaavio3.png": {
+    "original_path": "data/img/vuokaavio3.png",
+    "local_path": "assets/images/img/vuokaavio3.png",
+    "sha256": "05003a3a36f4340a162568676d1b7ecb16fffe3da6e76e79073b39643cbd055e",
+    "size_bytes": 78372,
+    "media_type": "images"
+  },
+  "img/vuokaavio4.png": {
+    "original_path": "data/img/vuokaavio4.png",
+    "local_path": "assets/images/img/vuokaavio4.png",
+    "sha256": "a0676699dafee6551942d1f2869a95c5daf075d841cbe2f65a5df65b519d19f7",
+    "size_bytes": 63498,
+    "media_type": "images"
+  },
+  "img/vuokaaviojuupaseipas.png": {
+    "original_path": "data/img/vuokaaviojuupaseipas.png",
+    "local_path": "assets/images/img/vuokaaviojuupaseipas.png",
+    "sha256": "80af63dab19e1e2bf6f4f6d834a4a4aece5b2238e9e476a92a6163ef69c0e05b",
+    "size_bytes": 66716,
+    "media_type": "images"
+  },
+  "img/youtube.jpg": {
+    "original_path": "data/img/youtube.jpg",
+    "local_path": "assets/images/img/youtube.jpg",
+    "sha256": "b4b8eb20c2f76515a4cfe42ec4ddb9d99e6569f6c3c1ced40c87b0299915b9e6",
+    "size_bytes": 43224,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-abstraktit.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-abstraktit.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-abstraktit.png",
+    "sha256": "c77bbf01edb795e66b06611b640e1bd2e50bdd41d98010c3dc62fab5c0394801",
+    "size_bytes": 23313,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-henkilo-getterit.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-henkilo-getterit.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-henkilo-getterit.png",
+    "sha256": "f779827a5dd9342e9545db2e45e335081f1947852487785b4c3e9906efc6ce8a",
+    "size_bytes": 7583,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-getnimi.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-getnimi.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-getnimi.png",
+    "sha256": "54b5714ff22cdf3ced22055cf93d04ab41a26b0114a7f5a17b6898dfed54d3f3",
+    "size_bytes": 5222,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-vanhene-ja-palautaika.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-vanhene-ja-palautaika.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-vanhene-ja-palautaika.png",
+    "sha256": "b7ba968c5a277f74df5930be26ed7273d464792b581272219637bac84bf81a30",
+    "size_bytes": 5369,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-vanhene.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-vanhene.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-vanhene.png",
+    "sha256": "65dcc3ee249f14849d5be3be1a9109fa6fad94acef5cf947d9b22cc61fa63bf0",
+    "size_bytes": 4810,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta.png",
+    "sha256": "ddb7b312d775c8b3e06dc3dd723d2a569046081f47599ba51eaf962bbae43537",
+    "size_bytes": 4507,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori.png",
+    "sha256": "ab7bdd16b5048011f16792a3dcc1dcda2c61e537be6eecaf1ac612db99219800",
+    "size_bytes": 3566,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-henkilo-ika-ja-nimi.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi.png",
+    "sha256": "4283ebedc7b559d4bd319caea6f48292b457f840f2d53517f718bc9b0ad94d61",
+    "size_bytes": 2278,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-henkilo-ja-syntymapaiva.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-henkilo-ja-syntymapaiva.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-henkilo-ja-syntymapaiva.png",
+    "sha256": "35d527dc7d68dce76f4da28469fc2d50ea0f229a43c12d106c16a6a7f10c0597",
+    "size_bytes": 53736,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-henkilo.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-henkilo.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-henkilo.png",
+    "sha256": "5965ce24f17e3fcc115c8b14e7431e46cea0aa7af63d108ab949c928dab19f7c",
+    "size_bytes": 1018,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-kirja-henkilo-kaksisuuntainen-monesta-moneen.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-kirja-henkilo-kaksisuuntainen-monesta-moneen.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-kirja-henkilo-kaksisuuntainen-monesta-moneen.png",
+    "sha256": "e19bf66fbd1a3460455de0b99c8968e830d7908e85eaa3162e84a938fcf8967e",
+    "size_bytes": 12420,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-kirja-henkilo-kaksisuuntainen.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-kirja-henkilo-kaksisuuntainen.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-kirja-henkilo-kaksisuuntainen.png",
+    "sha256": "81e41f9e5a40d071f3628575cc613c6579286a896195a0921611218b4445a135",
+    "size_bytes": 12333,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja-ja-kirjoittaja.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja-ja-kirjoittaja.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja-ja-kirjoittaja.png",
+    "sha256": "814ea43d6113a5b095930f51b45a464d85c5afa9cf4237d785214fe0e0d3a2e9",
+    "size_bytes": 10588,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja-ja-kirjoittajat-ja-metodit.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja-ja-kirjoittajat-ja-metodit.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja-ja-kirjoittajat-ja-metodit.png",
+    "sha256": "c156bcab54686d3d33e364a105a1f827a4416323710231e32a76f789acf142b2",
+    "size_bytes": 12597,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja-ja-kirjoittajat.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja-ja-kirjoittajat.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja-ja-kirjoittajat.png",
+    "sha256": "5349bd8f5ef62a8cb7488656f1aeb479d878114c4aba6a90a8fbaf313e4748cb",
+    "size_bytes": 10218,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja.png",
+    "sha256": "b8e802b52bfa17b22c447eb1fc572fdb2d99940e311568bb2acd7ecc0f06bc4b",
+    "size_bytes": 2577,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-kirja-toteuttaa-luettavan.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-kirja-toteuttaa-luettavan.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-kirja-toteuttaa-luettavan.png",
+    "sha256": "1c606ae92018b60efdfcf29beffaf9c593903a9696854bf06bf600852853cd82",
+    "size_bytes": 3160,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-kirja.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-kirja.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-kirja.png",
+    "sha256": "62ff45ea6a17995b3b4a4c3681125cbbf13391f8013c02a5a1efcdbc701e2942",
+    "size_bytes": 28917,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-maatilasimulaattori.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-maatilasimulaattori.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-maatilasimulaattori.png",
+    "sha256": "68311ec19d12c95d44fbcbe4e8a1ea0615dde14e83d10d1079ff0cce28a98d04",
+    "size_bytes": 20220,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-moottori-perii-osan.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-moottori-perii-osan.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-moottori-perii-osan.png",
+    "sha256": "8f3616bad91ac3e143a2aad47200640522fb3f852a43f2010ae981081a803ff0",
+    "size_bytes": 6281,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-muistava-tuotevarasto.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-muistava-tuotevarasto.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-muistava-tuotevarasto.png",
+    "sha256": "05ad8628ae3d2d1c2cb8a9d9eb8f4a5a8abc96aef7c6ca93b29d4bcc0e1fa211",
+    "size_bytes": 50779,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-paita.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-paita.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-paita.png",
+    "sha256": "1b986dc4f0e3d31b264afd0e98027b360142c0b8b25f799d95ed5f76406e8886",
+    "size_bytes": 21516,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-rajapinta-luettava.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-rajapinta-luettava.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-rajapinta-luettava.png",
+    "sha256": "eaa0d87c28db708e5a37f0f297af37bf03d16ec38fe38afbd505b5ecfea0c68d",
+    "size_bytes": 2152,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-soittolista.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-soittolista.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-soittolista.png",
+    "sha256": "d8260076e7a8203bb9d85b1bf869dacb4df4386a86e86dd52047a8bc2eef8b99",
+    "size_bytes": 21810,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-teht-huone.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-teht-huone.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-teht-huone.png",
+    "sha256": "b5e51b1fbb7508ba1924ffd889de91c895b2729b49fb74f0e79475ca93d0ec31",
+    "size_bytes": 4152,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-teht-koira.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-teht-koira.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-teht-koira.png",
+    "sha256": "11e1d170908f884ef2bc009fd4e1a5c3ea7235171541bc0f84b467406dbf28af",
+    "size_bytes": 2664,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-teht-luokka.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-teht-luokka.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-teht-luokka.png",
+    "sha256": "5d70a6f6c734f5245c005de035870c5d7b1c49beba3b46c12e02c2cee0af70f2",
+    "size_bytes": 5132,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-teht-maksukortti.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-teht-maksukortti.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-teht-maksukortti.png",
+    "sha256": "989fdd50a1cf7b2e34df953bffc78659a78f57377a58ace2e8106a65598a660e",
+    "size_bytes": 7346,
+    "media_type": "images"
+  },
+  "img/diagrams/luokkakaavio-teht-ruokalista.png": {
+    "original_path": "data/img/diagrams/luokkakaavio-teht-ruokalista.png",
+    "local_path": "assets/images/img/diagrams/luokkakaavio-teht-ruokalista.png",
+    "sha256": "9845f6f0b54bd683b1d528c9028040e0c634af6980d15e96edb5f89d962117b8",
+    "size_bytes": 21223,
+    "media_type": "images"
+  },
+  "img/drawings/arraylist-add.png": {
+    "original_path": "data/img/drawings/arraylist-add.png",
+    "local_path": "assets/images/img/drawings/arraylist-add.png",
+    "sha256": "d311525b894d031e884f576274a38456559c434423106392fdf134ffa1d00124",
+    "size_bytes": 38807,
+    "media_type": "images"
+  },
+  "img/drawings/arraylist.png": {
+    "original_path": "data/img/drawings/arraylist.png",
+    "local_path": "assets/images/img/drawings/arraylist.png",
+    "sha256": "0cf325f5e8e338980b40e487b70c790c7c0b618ee4953ba9f1876e200b0d368f",
+    "size_bytes": 24398,
+    "media_type": "images"
+  },
+  "img/drawings/boolean-muuttuja.png": {
+    "original_path": "data/img/drawings/boolean-muuttuja.png",
+    "local_path": "assets/images/img/drawings/boolean-muuttuja.png",
+    "sha256": "85fe92450a36d24eb0db1bc6444848052da290742240a9937a8c338bd58ed66d",
+    "size_bytes": 34093,
+    "media_type": "images"
+  },
+  "img/drawings/eka-1 (copy).png": {
+    "original_path": "data/img/drawings/eka-1 (copy).png",
+    "local_path": "assets/images/img/drawings/eka-1 (copy).png",
+    "sha256": "d0e6685f33b1a9a121ff22feb67e6bf4d6f4c4e51961a090f1ea93370e599211",
+    "size_bytes": 30656,
+    "media_type": "images"
+  },
+  "img/drawings/eka-1.ora": {
+    "original_path": "data/img/drawings/eka-1.ora",
+    "local_path": "assets/diagrams/img/drawings/eka-1.ora",
+    "sha256": "49ff35897aac90f20775c619d1641b79f6a3afba63c100d8b863fb92ff3e57fe",
+    "size_bytes": 87238,
+    "media_type": "diagrams"
+  },
+  "img/drawings/eka-1.png": {
+    "original_path": "data/img/drawings/eka-1.png",
+    "local_path": "assets/images/img/drawings/eka-1.png",
+    "sha256": "93ed3b73567b7f989c2fee3632ef9e4296a3fffbb6eb5110da2a1819b570798d",
+    "size_bytes": 21761,
+    "media_type": "images"
+  },
+  "img/drawings/eka-2 (copy).png": {
+    "original_path": "data/img/drawings/eka-2 (copy).png",
+    "local_path": "assets/images/img/drawings/eka-2 (copy).png",
+    "sha256": "60ccbd08d368ea58aa3f603a139592e5e64b7783fd05afcda3b64c031e9a38bf",
+    "size_bytes": 47666,
+    "media_type": "images"
+  },
+  "img/drawings/eka-2.ora": {
+    "original_path": "data/img/drawings/eka-2.ora",
+    "local_path": "assets/diagrams/img/drawings/eka-2.ora",
+    "sha256": "3feea18511f009fb70f8224caac189e94ca61e864d9a833e9862693e4dbfa3bd",
+    "size_bytes": 129489,
+    "media_type": "diagrams"
+  },
+  "img/drawings/eka-2.png": {
+    "original_path": "data/img/drawings/eka-2.png",
+    "local_path": "assets/images/img/drawings/eka-2.png",
+    "sha256": "a5b622a2c78d71ffdde63abf967ee6cd83d5186d96661a712afec82565980b22",
+    "size_bytes": 32313,
+    "media_type": "images"
+  },
+  "img/drawings/eka-3 (copy).png": {
+    "original_path": "data/img/drawings/eka-3 (copy).png",
+    "local_path": "assets/images/img/drawings/eka-3 (copy).png",
+    "sha256": "be1ef250ebc7b63caa3c2861781686c4317b0a902777f2f512694b7a3f278a88",
+    "size_bytes": 54071,
+    "media_type": "images"
+  },
+  "img/drawings/eka-3.ora": {
+    "original_path": "data/img/drawings/eka-3.ora",
+    "local_path": "assets/diagrams/img/drawings/eka-3.ora",
+    "sha256": "9a96b8cbb027dd553720ff1eaf00666084f64aac69513477ca1c3af13a162f21",
+    "size_bytes": 145355,
+    "media_type": "diagrams"
+  },
+  "img/drawings/eka-3.png": {
+    "original_path": "data/img/drawings/eka-3.png",
+    "local_path": "assets/images/img/drawings/eka-3.png",
+    "sha256": "93abc7a0ca99716f0b238938f89338f3add64a09c83610a93679906bf4a04fb2",
+    "size_bytes": 36871,
+    "media_type": "images"
+  },
+  "img/drawings/eka-4 (copy).png": {
+    "original_path": "data/img/drawings/eka-4 (copy).png",
+    "local_path": "assets/images/img/drawings/eka-4 (copy).png",
+    "sha256": "14f42b1639557087cfcbde1a9ca698f57f2d4e880c7a019034c2667b63ad6445",
+    "size_bytes": 31015,
+    "media_type": "images"
+  },
+  "img/drawings/eka-4.ora": {
+    "original_path": "data/img/drawings/eka-4.ora",
+    "local_path": "assets/diagrams/img/drawings/eka-4.ora",
+    "sha256": "2a915c90fca3928ff616db312a5beee4bf919602a1d064cb00d5929f738d13bf",
+    "size_bytes": 147069,
+    "media_type": "diagrams"
+  },
+  "img/drawings/eka-4.png": {
+    "original_path": "data/img/drawings/eka-4.png",
+    "local_path": "assets/images/img/drawings/eka-4.png",
+    "sha256": "24fb0f9f89712b12209ed97a7162248ce782aaebea9f261c3cb2197fce47a52a",
+    "size_bytes": 26936,
+    "media_type": "images"
+  },
+  "img/drawings/eka-5 (copy).png": {
+    "original_path": "data/img/drawings/eka-5 (copy).png",
+    "local_path": "assets/images/img/drawings/eka-5 (copy).png",
+    "sha256": "3ec220201a0cbb941797eeeb3de6970dd167db9b309327bb552f4f0aee73dfc8",
+    "size_bytes": 54539,
+    "media_type": "images"
+  },
+  "img/drawings/eka-5.png": {
+    "original_path": "data/img/drawings/eka-5.png",
+    "local_path": "assets/images/img/drawings/eka-5.png",
+    "sha256": "9b6f51815aca168177cdb70b5dd97ca95c1f667cdc1be40a723c26f82ae9c1dc",
+    "size_bytes": 37386,
+    "media_type": "images"
+  },
+  "img/drawings/hashmap.png": {
+    "original_path": "data/img/drawings/hashmap.png",
+    "local_path": "assets/images/img/drawings/hashmap.png",
+    "sha256": "5aa07166dd49396e28f1795a86a40ba2b87eff3ba3ebdbc79ca52ac21204d8df",
+    "size_bytes": 45183,
+    "media_type": "images"
+  },
+  "img/drawings/henkilot-ja-juhana.ora": {
+    "original_path": "data/img/drawings/henkilot-ja-juhana.ora",
+    "local_path": "assets/diagrams/img/drawings/henkilot-ja-juhana.ora",
+    "sha256": "501a3030c19f384c74f58ac1faabd112422d968c7ac1e391936943b058337a55",
+    "size_bytes": 127664,
+    "media_type": "diagrams"
+  },
+  "img/drawings/henkilot-ja-juhana.png": {
+    "original_path": "data/img/drawings/henkilot-ja-juhana.png",
+    "local_path": "assets/images/img/drawings/henkilot-ja-juhana.png",
+    "sha256": "ebb1e7d02691d35c8576d1171cb724b3b2424a069a5cb1ac232814d948e6347b",
+    "size_bytes": 33700,
+    "media_type": "images"
+  },
+  "img/drawings/muhammad-ja-pascal.ora": {
+    "original_path": "data/img/drawings/muhammad-ja-pascal.ora",
+    "local_path": "assets/diagrams/img/drawings/muhammad-ja-pascal.ora",
+    "sha256": "a72cc017d10d8ed0b538112011bedd2a5639889128f0cd9d02e258b01a8fa798",
+    "size_bytes": 130983,
+    "media_type": "diagrams"
+  },
+  "img/drawings/muhammad-ja-pascal.png": {
+    "original_path": "data/img/drawings/muhammad-ja-pascal.png",
+    "local_path": "assets/images/img/drawings/muhammad-ja-pascal.png",
+    "sha256": "2a707aac365526cdd295a301c301e2d585168175b8b294d3fe17f114426152f8",
+    "size_bytes": 34726,
+    "media_type": "images"
+  },
+  "img/drawings/muuttujan-arvon-vaihto-0.png": {
+    "original_path": "data/img/drawings/muuttujan-arvon-vaihto-0.png",
+    "local_path": "assets/images/img/drawings/muuttujan-arvon-vaihto-0.png",
+    "sha256": "73c153920b6d06c7070e030d2c7596b41fb0ba31f1327bacff7fbf860d51e366",
+    "size_bytes": 16101,
+    "media_type": "images"
+  },
+  "img/drawings/muuttujan-arvon-vaihto-1.png": {
+    "original_path": "data/img/drawings/muuttujan-arvon-vaihto-1.png",
+    "local_path": "assets/images/img/drawings/muuttujan-arvon-vaihto-1.png",
+    "sha256": "202c25223a6fcc98d39a154b7c3630fcf2ed5fffb2cd680febbc2ab954f37207",
+    "size_bytes": 30898,
+    "media_type": "images"
+  },
+  "img/drawings/muuttujan-arvon-vaihto-2.png": {
+    "original_path": "data/img/drawings/muuttujan-arvon-vaihto-2.png",
+    "local_path": "assets/images/img/drawings/muuttujan-arvon-vaihto-2.png",
+    "sha256": "e6b09f1201d53e1e267236658212f136afbb26e49c28135a7e7227c437143406",
+    "size_bytes": 39328,
+    "media_type": "images"
+  },
+  "img/drawings/muuttujan-arvon-vaihto-3.png": {
+    "original_path": "data/img/drawings/muuttujan-arvon-vaihto-3.png",
+    "local_path": "assets/images/img/drawings/muuttujan-arvon-vaihto-3.png",
+    "sha256": "46774cdf7ea369b7ef4cf48a6fcd2549ca297d4c331491f699296ecc51c520d9",
+    "size_bytes": 30701,
+    "media_type": "images"
+  },
+  "img/drawings/muuttujan-arvon-vaihto-4.png": {
+    "original_path": "data/img/drawings/muuttujan-arvon-vaihto-4.png",
+    "local_path": "assets/images/img/drawings/muuttujan-arvon-vaihto-4.png",
+    "sha256": "1ebea76c40c15ea14c78e50014ef67c28e45959991d5728d768051e1362b44a6",
+    "size_bytes": 38924,
+    "media_type": "images"
+  },
+  "img/drawings/olio-joan-ja-ball-2.ora": {
+    "original_path": "data/img/drawings/olio-joan-ja-ball-2.ora",
+    "local_path": "assets/diagrams/img/drawings/olio-joan-ja-ball-2.ora",
+    "sha256": "382b19d21ca431906c28030a015527f8cb40edc614d0a034e78f206455258643",
+    "size_bytes": 116816,
+    "media_type": "diagrams"
+  },
+  "img/drawings/olio-joan-ja-ball-2.png": {
+    "original_path": "data/img/drawings/olio-joan-ja-ball-2.png",
+    "local_path": "assets/images/img/drawings/olio-joan-ja-ball-2.png",
+    "sha256": "e76c3c777e8640edb2316b400ddc09efb5fb766569772bdcac9584864173ba44",
+    "size_bytes": 28458,
+    "media_type": "images"
+  },
+  "img/drawings/olio-joan-ja-ball-3.ora": {
+    "original_path": "data/img/drawings/olio-joan-ja-ball-3.ora",
+    "local_path": "assets/diagrams/img/drawings/olio-joan-ja-ball-3.ora",
+    "sha256": "41efe7be7326c56b1a4aa94a96d67a8660952035f2da315c1de62f09b5eb59a6",
+    "size_bytes": 184288,
+    "media_type": "diagrams"
+  },
+  "img/drawings/olio-joan-ja-ball-3.png": {
+    "original_path": "data/img/drawings/olio-joan-ja-ball-3.png",
+    "local_path": "assets/images/img/drawings/olio-joan-ja-ball-3.png",
+    "sha256": "038397f4e63e834797f827a11bb2b6197772320cc0771c0d37c6a0d0f3c16602",
+    "size_bytes": 46917,
+    "media_type": "images"
+  },
+  "img/drawings/olio-joan-ja-ball-null.ora": {
+    "original_path": "data/img/drawings/olio-joan-ja-ball-null.ora",
+    "local_path": "assets/diagrams/img/drawings/olio-joan-ja-ball-null.ora",
+    "sha256": "8e74dca771e828011c33fe220f201472ad1b1003a22caa66652dab6aa7a1c0a1",
+    "size_bytes": 184951,
+    "media_type": "diagrams"
+  },
+  "img/drawings/olio-joan-ja-ball-null.png": {
+    "original_path": "data/img/drawings/olio-joan-ja-ball-null.png",
+    "local_path": "assets/images/img/drawings/olio-joan-ja-ball-null.png",
+    "sha256": "51a55ec107ee036ba13d809fd6a31978efb5c4fc4e1bf0d6091debdbf3eda705",
+    "size_bytes": 46745,
+    "media_type": "images"
+  },
+  "img/drawings/olio-joan-ja-ball.ora": {
+    "original_path": "data/img/drawings/olio-joan-ja-ball.ora",
+    "local_path": "assets/diagrams/img/drawings/olio-joan-ja-ball.ora",
+    "sha256": "f6959cce07347f255013770461f2c289821c577bb306e19c88818dac477ea4b9",
+    "size_bytes": 111538,
+    "media_type": "diagrams"
+  },
+  "img/drawings/olio-joan-ja-ball.png": {
+    "original_path": "data/img/drawings/olio-joan-ja-ball.png",
+    "local_path": "assets/images/img/drawings/olio-joan-ja-ball.png",
+    "sha256": "b56634f95ef5e98a45ebee09f41b548154fd9dcdc0c9879afae0222e5f629fa5",
+    "size_bytes": 28237,
+    "media_type": "images"
+  },
+  "img/drawings/olio-joan.png": {
+    "original_path": "data/img/drawings/olio-joan.png",
+    "local_path": "assets/images/img/drawings/olio-joan.png",
+    "sha256": "ff811d8cf31d447a0892bb9b2d9ac2e50d32ca61cab97e4dfcebb8685e989517",
+    "size_bytes": 23831,
+    "media_type": "images"
+  },
+  "img/drawings/stream-pre-edit.png": {
+    "original_path": "data/img/drawings/stream-pre-edit.png",
+    "local_path": "assets/images/img/drawings/stream-pre-edit.png",
+    "sha256": "db43f38898149076754dba4f4e288bc6a85e591e17e4d9decc67ed02177d5573",
+    "size_bytes": 217133,
+    "media_type": "images"
+  },
+  "img/drawings/stream.ora": {
+    "original_path": "data/img/drawings/stream.ora",
+    "local_path": "assets/diagrams/img/drawings/stream.ora",
+    "sha256": "12cc079e43353d478efb2b2ee8649fcf011b9b2db79634e5503984f9e008625e",
+    "size_bytes": 530637,
+    "media_type": "diagrams"
+  },
+  "img/drawings/stream.png": {
+    "original_path": "data/img/drawings/stream.png",
+    "local_path": "assets/images/img/drawings/stream.png",
+    "sha256": "a2598a9af52bd385bc975fc2e5138fef465903b2c641158e3f5446829289cc63",
+    "size_bytes": 95311,
+    "media_type": "images"
+  },
+  "img/drawings/while-true-break.png": {
+    "original_path": "data/img/drawings/while-true-break.png",
+    "local_path": "assets/images/img/drawings/while-true-break.png",
+    "sha256": "308315348f0519b304c8152e30a1e462cf5dcd336b5781bf897c5fecaea64bda",
+    "size_bytes": 35901,
+    "media_type": "images"
+  },
+  "img/exercises/01-10-jakolaskin.png": {
+    "original_path": "data/img/exercises/01-10-jakolaskin.png",
+    "local_path": "assets/images/img/exercises/01-10-jakolaskin.png",
+    "sha256": "e0ce037f8ee4758e10e99be9fa602d4a8497514a59d3e79765437f90b17260b3",
+    "size_bytes": 5507,
+    "media_type": "images"
+  },
+  "img/exercises/01-22-maara.png": {
+    "original_path": "data/img/exercises/01-22-maara.png",
+    "local_path": "assets/images/img/exercises/01-22-maara.png",
+    "sha256": "3bd071ed439270d990fa56c13ad10ab27951e281b67ec1c289bbd0090f4580f3",
+    "size_bytes": 5334,
+    "media_type": "images"
+  },
+  "img/exercises/01-30-jahtaus.png": {
+    "original_path": "data/img/exercises/01-30-jahtaus.png",
+    "local_path": "assets/images/img/exercises/01-30-jahtaus.png",
+    "sha256": "7870e03b675b407b635d03ccfb7b86c124960ccd53ed6650f6cf0f59767b07ed",
+    "size_bytes": 7179,
+    "media_type": "images"
+  },
+  "img/exercises/02-12-01.png": {
+    "original_path": "data/img/exercises/02-12-01.png",
+    "local_path": "assets/images/img/exercises/02-12-01.png",
+    "sha256": "a5d7359efd3fac51c49cef4d8946365321bb4017d879aa36bfe1701316e2b2b4",
+    "size_bytes": 10356,
+    "media_type": "images"
+  },
+  "img/exercises/02-12-02.png": {
+    "original_path": "data/img/exercises/02-12-02.png",
+    "local_path": "assets/images/img/exercises/02-12-02.png",
+    "sha256": "3a77ee8ff737dd418193f63040d1379bd3d4c0b36c2302df88566764eea49339",
+    "size_bytes": 12766,
+    "media_type": "images"
+  },
+  "img/exercises/03-12-rivit.png": {
+    "original_path": "data/img/exercises/03-12-rivit.png",
+    "local_path": "assets/images/img/exercises/03-12-rivit.png",
+    "sha256": "310fb1a4d6f084fd1ef557d5569ebd7520306cb310ad41e3fe1a0046bf758624",
+    "size_bytes": 18882,
+    "media_type": "images"
+  },
+  "img/exercises/06-14-piirturi-ok.png": {
+    "original_path": "data/img/exercises/06-14-piirturi-ok.png",
+    "local_path": "assets/images/img/exercises/06-14-piirturi-ok.png",
+    "sha256": "cbf4dafc0b3ffbfe19b5a9478b3a09908924ac0f43318040adfc03beb0f9a76c",
+    "size_bytes": 7746,
+    "media_type": "images"
+  },
+  "img/exercises/06-15-gameoflife.png": {
+    "original_path": "data/img/exercises/06-15-gameoflife.png",
+    "local_path": "assets/images/img/exercises/06-15-gameoflife.png",
+    "sha256": "196504f990f965a3fab96aff1be7d68a261eec0854e86890c5fefc1889cf6c42",
+    "size_bytes": 12430,
+    "media_type": "images"
+  },
+  "img/exercises/06-19-matkavalokuvat-1.png": {
+    "original_path": "data/img/exercises/06-19-matkavalokuvat-1.png",
+    "local_path": "assets/images/img/exercises/06-19-matkavalokuvat-1.png",
+    "sha256": "d5fedb67b3a9c0cf80ac043852d6fa6cd647d75cb70e35ab1ae0b83d74a3904c",
+    "size_bytes": 448873,
+    "media_type": "images"
+  },
+  "img/exercises/06-19-matkavalokuvat-2.png": {
+    "original_path": "data/img/exercises/06-19-matkavalokuvat-2.png",
+    "local_path": "assets/images/img/exercises/06-19-matkavalokuvat-2.png",
+    "sha256": "b643de50cf9b63794d4442d816ffcd16820b30f52c505477cb2f688b82a71b73",
+    "size_bytes": 446491,
+    "media_type": "images"
+  },
+  "img/exercises/06-19-matkavalokuvat-mediaani.png": {
+    "original_path": "data/img/exercises/06-19-matkavalokuvat-mediaani.png",
+    "local_path": "assets/images/img/exercises/06-19-matkavalokuvat-mediaani.png",
+    "sha256": "32217eeb8bbb8b09ba312b573ee40a8c9b50628b08f5c06a1159ff3de76f203d",
+    "size_bytes": 470249,
+    "media_type": "images"
+  },
+  "img/exercises/06-19-matkavalokuvat-tummin.png": {
+    "original_path": "data/img/exercises/06-19-matkavalokuvat-tummin.png",
+    "local_path": "assets/images/img/exercises/06-19-matkavalokuvat-tummin.png",
+    "sha256": "8a6f01816872021ae5d5319a7326cafa572a05f4cd008298e205bc43802340f6",
+    "size_bytes": 476599,
+    "media_type": "images"
+  },
+  "img/exercises/06-19-matkavalokuvat-vaalein.png": {
+    "original_path": "data/img/exercises/06-19-matkavalokuvat-vaalein.png",
+    "local_path": "assets/images/img/exercises/06-19-matkavalokuvat-vaalein.png",
+    "sha256": "0ca906b3603494ff2d65aed38027e970e84130e01dd1251656f1da887803c1d5",
+    "size_bytes": 480709,
+    "media_type": "images"
+  },
+  "img/exercises/10-08-asteroids.png": {
+    "original_path": "data/img/exercises/10-08-asteroids.png",
+    "local_path": "assets/images/img/exercises/10-08-asteroids.png",
+    "sha256": "39ba026f404c46b42e6f1d86c7d3599a4485b1b1bbd3fc74a7e48b05219ead48",
+    "size_bytes": 12345,
+    "media_type": "images"
+  },
+  "img/exercises/luokkakaavio-asiakas.png": {
+    "original_path": "data/img/exercises/luokkakaavio-asiakas.png",
+    "local_path": "assets/images/img/exercises/luokkakaavio-asiakas.png",
+    "sha256": "67a5ae9edc8ff52b7d4abeb8409cccb10af31a4a68593691a48b7ca5bc3b7305",
+    "size_bytes": 3240,
+    "media_type": "images"
+  },
+  "img/exercises/luokkakaavio-iso-abstrakti.png": {
+    "original_path": "data/img/exercises/luokkakaavio-iso-abstrakti.png",
+    "local_path": "assets/images/img/exercises/luokkakaavio-iso-abstrakti.png",
+    "sha256": "4ae4f019836f028302f9d2d8c7809193decf478b4db8b0bcc8626d95a388208d",
+    "size_bytes": 15944,
+    "media_type": "images"
+  },
+  "img/exercises/luokkakaavio-kirja-ja-lentokone.png": {
+    "original_path": "data/img/exercises/luokkakaavio-kirja-ja-lentokone.png",
+    "local_path": "assets/images/img/exercises/luokkakaavio-kirja-ja-lentokone.png",
+    "sha256": "56e2d4db38bbcc3d5dd384f8f5a01a5206b29097f22fcb882808edf0569bef34",
+    "size_bytes": 7282,
+    "media_type": "images"
+  },
+  "img/exercises/luokkakaavio-naytos-ja-lippu.png": {
+    "original_path": "data/img/exercises/luokkakaavio-naytos-ja-lippu.png",
+    "local_path": "assets/images/img/exercises/luokkakaavio-naytos-ja-lippu.png",
+    "sha256": "317634989b8b287b404e1e4fe1a15960e8f5afeeee217a1faeef11aa75d8db5b",
+    "size_bytes": 4463,
+    "media_type": "images"
+  },
+  "img/exercises/luokkakaavio-opiskelija-ja-korkeakoulu.png": {
+    "original_path": "data/img/exercises/luokkakaavio-opiskelija-ja-korkeakoulu.png",
+    "local_path": "assets/images/img/exercises/luokkakaavio-opiskelija-ja-korkeakoulu.png",
+    "sha256": "0056114538c5cc1266e83032f6f4c5171927b412dd1c1fa09f6b7dac3df068c3",
+    "size_bytes": 4887,
+    "media_type": "images"
+  },
+  "img/exercises/luokkakaavio-pelaaja-ja-tekoaly.png": {
+    "original_path": "data/img/exercises/luokkakaavio-pelaaja-ja-tekoaly.png",
+    "local_path": "assets/images/img/exercises/luokkakaavio-pelaaja-ja-tekoaly.png",
+    "sha256": "2825476c80cfbadeb8077fdb2f5e47a903644d0e9308bb6505f067b6de6b70d7",
+    "size_bytes": 7573,
+    "media_type": "images"
+  },
+  "img/exercises/luokkakaavio-tallennettava-henkilo.png": {
+    "original_path": "data/img/exercises/luokkakaavio-tallennettava-henkilo.png",
+    "local_path": "assets/images/img/exercises/luokkakaavio-tallennettava-henkilo.png",
+    "sha256": "1a0244a68366c15c1790f02dacba786a79a07fa93d6b8a4ded2b5225a3473f96",
+    "size_bytes": 9132,
+    "media_type": "images"
+  },
+  "img/exercises/schelling-alku.png": {
+    "original_path": "data/img/exercises/schelling-alku.png",
+    "local_path": "assets/images/img/exercises/schelling-alku.png",
+    "sha256": "8920039f05849080907bbb85ba33d0c87844f121db31a53da0c42ea8797c9761",
+    "size_bytes": 33063,
+    "media_type": "images"
+  },
+  "img/exercises/schelling-loppu.png": {
+    "original_path": "data/img/exercises/schelling-loppu.png",
+    "local_path": "assets/images/img/exercises/schelling-loppu.png",
+    "sha256": "441a3e9dedf43066691901def9b12c574e83ad342292d6d8756a86871ea16b09",
+    "size_bytes": 24919,
+    "media_type": "images"
+  },
+  "img/macos-guide/add_tmcbeans.png": {
+    "original_path": "data/img/macos-guide/add_tmcbeans.png",
+    "local_path": "assets/images/img/macos-guide/add_tmcbeans.png",
+    "sha256": "1be6b427705079be9a001b30dce9faddf0aab60fa341231fbecd5fca66fbe826",
+    "size_bytes": 4371667,
+    "media_type": "images"
+  },
+  "img/macos-guide/done.png": {
+    "original_path": "data/img/macos-guide/done.png",
+    "local_path": "assets/images/img/macos-guide/done.png",
+    "sha256": "bcee6a16ac975dae6b86c7cebf2a6ba5ab4a791b52359014c51ae74b53b74444",
+    "size_bytes": 4163381,
+    "media_type": "images"
+  },
+  "img/macos-guide/navigation.png": {
+    "original_path": "data/img/macos-guide/navigation.png",
+    "local_path": "assets/images/img/macos-guide/navigation.png",
+    "sha256": "45cd71f1d9074b80ae4901bb6d6a0e4b4d843d3422ab916327fe71b15064dfa7",
+    "size_bytes": 4142800,
+    "media_type": "images"
+  },
+  "img/macos-guide/open-lock.png": {
+    "original_path": "data/img/macos-guide/open-lock.png",
+    "local_path": "assets/images/img/macos-guide/open-lock.png",
+    "sha256": "0d911f1fdd4e2d8d2be14bcb6d9ad56dc922e15f0e7b4ad7e6e49922bb440824",
+    "size_bytes": 4428176,
+    "media_type": "images"
+  },
+  "img/macos-guide/search_system_preferences.png": {
+    "original_path": "data/img/macos-guide/search_system_preferences.png",
+    "local_path": "assets/images/img/macos-guide/search_system_preferences.png",
+    "sha256": "5f1aad0ce124a0782fcadd5bd58776a64f99595e675e542eaf1804c522569f80",
+    "size_bytes": 5981323,
+    "media_type": "images"
+  },
+  "img/macos-guide/system_preferences.png": {
+    "original_path": "data/img/macos-guide/system_preferences.png",
+    "local_path": "assets/images/img/macos-guide/system_preferences.png",
+    "sha256": "6e34c5e65f6aef52346f84be6a1dc095e215fe8c52f30b037737f0686aaf7732",
+    "size_bytes": 4169025,
+    "media_type": "images"
+  },
+  "img/macos-guide/tmcbeans_added.png": {
+    "original_path": "data/img/macos-guide/tmcbeans_added.png",
+    "local_path": "assets/images/img/macos-guide/tmcbeans_added.png",
+    "sha256": "8823bfd68d706317d021c7f222686732e6d42557fa4d638565fe98ba4b2e0212",
+    "size_bytes": 4161793,
+    "media_type": "images"
+  },
+  "img/material/alus-ampuu.gif": {
+    "original_path": "data/img/material/alus-ampuu.gif",
+    "local_path": "assets/images/img/material/alus-ampuu.gif",
+    "sha256": "23bcb5b81fad7280cebd0957a1ad7e77a195bb90b61e316c7d0d77f97777c412",
+    "size_bytes": 169284,
+    "media_type": "images"
+  },
+  "img/material/alus-kiihtyy-fiksummin.gif": {
+    "original_path": "data/img/material/alus-kiihtyy-fiksummin.gif",
+    "local_path": "assets/images/img/material/alus-kiihtyy-fiksummin.gif",
+    "sha256": "058e85abf63946966c92130fc6ffd6cbfc482ac2bc13ee17c1c224afbaca591a",
+    "size_bytes": 18768,
+    "media_type": "images"
+  },
+  "img/material/ammus-poistaa-asteroidin.gif": {
+    "original_path": "data/img/material/ammus-poistaa-asteroidin.gif",
+    "local_path": "assets/images/img/material/ammus-poistaa-asteroidin.gif",
+    "sha256": "86e06c4a6ef6ebd19d95c5c0ba5ecd40a08516e2a41966cee5feaf32e7e45886",
+    "size_bytes": 35617,
+    "media_type": "images"
+  },
+  "img/material/ammus-poistuu.gif": {
+    "original_path": "data/img/material/ammus-poistuu.gif",
+    "local_path": "assets/images/img/material/ammus-poistuu.gif",
+    "sha256": "144b3a6be6cf2518dab818524149fe1da8017d8f2029bd5b8efd04cb0a4ebfb0",
+    "size_bytes": 65352,
+    "media_type": "images"
+  },
+  "img/material/asteroidi-huti.gif": {
+    "original_path": "data/img/material/asteroidi-huti.gif",
+    "local_path": "assets/images/img/material/asteroidi-huti.gif",
+    "sha256": "a7a4e6d064beee8e68848b09aeba3f27fbcad7243e16042ef6067f0d64417ed8",
+    "size_bytes": 60467,
+    "media_type": "images"
+  },
+  "img/material/asteroidit-liikkuu.gif": {
+    "original_path": "data/img/material/asteroidit-liikkuu.gif",
+    "local_path": "assets/images/img/material/asteroidit-liikkuu.gif",
+    "sha256": "f6306c4812267e1037d30b59a25450cceba7b4844965d1764968669edcc268c4",
+    "size_bytes": 37444,
+    "media_type": "images"
+  },
+  "img/material/asteroids-ammuskelua.gif": {
+    "original_path": "data/img/material/asteroids-ammuskelua.gif",
+    "local_path": "assets/images/img/material/asteroids-ammuskelua.gif",
+    "sha256": "289a034ef4a1fd3eebb79eb32148f28317e613b783492473aa0842484535aba2",
+    "size_bytes": 94352,
+    "media_type": "images"
+  },
+  "img/material/asteroids-monta-asteroidia.png": {
+    "original_path": "data/img/material/asteroids-monta-asteroidia.png",
+    "local_path": "assets/images/img/material/asteroids-monta-asteroidia.png",
+    "sha256": "15b1f63381623a0dc713b231f748c227ff403385fcfe6507b58c9dcf7b6f6b7f",
+    "size_bytes": 3631,
+    "media_type": "images"
+  },
+  "img/material/asteroids-pisteet.png": {
+    "original_path": "data/img/material/asteroids-pisteet.png",
+    "local_path": "assets/images/img/material/asteroids-pisteet.png",
+    "sha256": "38eb6b0c7f3a040418e55d7ec0c31dcaad813271b54768ec59c854a05df1acc1",
+    "size_bytes": 4670,
+    "media_type": "images"
+  },
+  "img/material/asteroids-pysyy-ruudussa.gif": {
+    "original_path": "data/img/material/asteroids-pysyy-ruudussa.gif",
+    "local_path": "assets/images/img/material/asteroids-pysyy-ruudussa.gif",
+    "sha256": "4cc03068c18bf8058bcfd69d61419e50e78ccc38b12341d1e7d135b3255b76e1",
+    "size_bytes": 86427,
+    "media_type": "images"
+  },
+  "img/material/asteroids-ready.gif": {
+    "original_path": "data/img/material/asteroids-ready.gif",
+    "local_path": "assets/images/img/material/asteroids-ready.gif",
+    "sha256": "c609e104dcba30ba6d4ef14775d35ebd3df46f434a965d49a12f7b30ccfb34da",
+    "size_bytes": 535189,
+    "media_type": "images"
+  },
+  "img/material/asteroids-satunnaiset-monikulmiot.png": {
+    "original_path": "data/img/material/asteroids-satunnaiset-monikulmiot.png",
+    "local_path": "assets/images/img/material/asteroids-satunnaiset-monikulmiot.png",
+    "sha256": "5e0606232fa3531ea0ebfa183239f7bc989a0adfe1d553f9c8fdae06fd3a9117",
+    "size_bytes": 6138,
+    "media_type": "images"
+  },
+  "img/material/asteroids-tormays.gif": {
+    "original_path": "data/img/material/asteroids-tormays.gif",
+    "local_path": "assets/images/img/material/asteroids-tormays.gif",
+    "sha256": "f810d3d4a64ef56c843c5a2bb8eef4be6e015b72abdb512dc3799505a81a3b51",
+    "size_bytes": 20431,
+    "media_type": "images"
+  },
+  "img/material/autocomplete-2.png": {
+    "original_path": "data/img/material/autocomplete-2.png",
+    "local_path": "assets/images/img/material/autocomplete-2.png",
+    "sha256": "9dff4ebc51c00346d627dd5968696e9b856f64f8165bce448e2062f4e13394ca",
+    "size_bytes": 21017,
+    "media_type": "images"
+  },
+  "img/material/autocomplete-with-comment.png": {
+    "original_path": "data/img/material/autocomplete-with-comment.png",
+    "local_path": "assets/images/img/material/autocomplete-with-comment.png",
+    "sha256": "54fb4b7f1cbca0060fa07998e8f3a0883b78bb504f62b3ec9e380abd20478e1a",
+    "size_bytes": 19880,
+    "media_type": "images"
+  },
+  "img/material/autocomplete.png": {
+    "original_path": "data/img/material/autocomplete.png",
+    "local_path": "assets/images/img/material/autocomplete.png",
+    "sha256": "ff7077558877f69d10cf4a548bf7f90100b42a6d958fb34ab8886729e449f884",
+    "size_bytes": 18408,
+    "media_type": "images"
+  },
+  "img/material/gui-animaatio.gif": {
+    "original_path": "data/img/material/gui-animaatio.gif",
+    "local_path": "assets/images/img/material/gui-animaatio.gif",
+    "sha256": "41ec441832cee253f7484e77c5fec5cb631aa2b961f40c1edeed5ca5a09c949a",
+    "size_bytes": 40267,
+    "media_type": "images"
+  },
+  "img/material/gui-borderpane.png": {
+    "original_path": "data/img/material/gui-borderpane.png",
+    "local_path": "assets/images/img/material/gui-borderpane.png",
+    "sha256": "61013efaf2cc2aff36764042f50779688b362dc91dcd0955092d6ec2581e23fc",
+    "size_bytes": 7614,
+    "media_type": "images"
+  },
+  "img/material/gui-gridpane-3x3.png": {
+    "original_path": "data/img/material/gui-gridpane-3x3.png",
+    "local_path": "assets/images/img/material/gui-gridpane-3x3.png",
+    "sha256": "744c236d8d9428c175b593822bca3f5be3a62bdb3797ab3ea7880b82b3f95150",
+    "size_bytes": 4127,
+    "media_type": "images"
+  },
+  "img/material/gui-hbox-spacing.png": {
+    "original_path": "data/img/material/gui-hbox-spacing.png",
+    "local_path": "assets/images/img/material/gui-hbox-spacing.png",
+    "sha256": "24bdc0c3f0a14201c66250b51aa2154998c1c230b71a3e526b1c3dd0f24fafe8",
+    "size_bytes": 2690,
+    "media_type": "images"
+  },
+  "img/material/gui-hbox.png": {
+    "original_path": "data/img/material/gui-hbox.png",
+    "local_path": "assets/images/img/material/gui-hbox.png",
+    "sha256": "a7b5dcd3d2c456ca775dae9bb30b231a7b615e6cbc1f3f23081a9de6f60c121a",
+    "size_bytes": 2642,
+    "media_type": "images"
+  },
+  "img/material/gui-helloworld.png": {
+    "original_path": "data/img/material/gui-helloworld.png",
+    "local_path": "assets/images/img/material/gui-helloworld.png",
+    "sha256": "6e27cda047d715a29fec0905f8f9cf3af27debbba4abbf0c60826930250a068a",
+    "size_bytes": 3213,
+    "media_type": "images"
+  },
+  "img/material/gui-hymio.png": {
+    "original_path": "data/img/material/gui-hymio.png",
+    "local_path": "assets/images/img/material/gui-hymio.png",
+    "sha256": "27af94700f39c05cf4a19ed038aca1ec5cbb365ef9620bd03849b1c9d085ac52",
+    "size_bytes": 2572,
+    "media_type": "images"
+  },
+  "img/material/gui-ilmoitin-1.png": {
+    "original_path": "data/img/material/gui-ilmoitin-1.png",
+    "local_path": "assets/images/img/material/gui-ilmoitin-1.png",
+    "sha256": "6c75e2d5a0cfa5134f31fe5c486d8b07c0d0d5b001ef7aa8163bbcf1b0d4bcc7",
+    "size_bytes": 2828,
+    "media_type": "images"
+  },
+  "img/material/gui-ilmoitin-2.png": {
+    "original_path": "data/img/material/gui-ilmoitin-2.png",
+    "local_path": "assets/images/img/material/gui-ilmoitin-2.png",
+    "sha256": "3c49ce0bc32c1806b090929ff2984203b8928702647107dab44b15b9d7607d1d",
+    "size_bytes": 5577,
+    "media_type": "images"
+  },
+  "img/material/gui-kopioija-2.png": {
+    "original_path": "data/img/material/gui-kopioija-2.png",
+    "local_path": "assets/images/img/material/gui-kopioija-2.png",
+    "sha256": "7f6ea0eea3bebcc52720dc2a64f49376fba964b8feb500e201e6a4361f7e7b6d",
+    "size_bytes": 4457,
+    "media_type": "images"
+  },
+  "img/material/gui-kopioija.png": {
+    "original_path": "data/img/material/gui-kopioija.png",
+    "local_path": "assets/images/img/material/gui-kopioija.png",
+    "sha256": "68b5e3c894d82bd48c49d1c81d27cc2bfc645aacc6c1f29e27c238912c6711b9",
+    "size_bytes": 2981,
+    "media_type": "images"
+  },
+  "img/material/gui-lisaa-henkilo.png": {
+    "original_path": "data/img/material/gui-lisaa-henkilo.png",
+    "local_path": "assets/images/img/material/gui-lisaa-henkilo.png",
+    "sha256": "1b585bfa6424bf8e5b0502cf53931096efaca6239804ed3a096bb46574fc4ef2",
+    "size_bytes": 5511,
+    "media_type": "images"
+  },
+  "img/material/gui-nakyman-vaihto.gif": {
+    "original_path": "data/img/material/gui-nakyman-vaihto.gif",
+    "local_path": "assets/images/img/material/gui-nakyman-vaihto.gif",
+    "sha256": "9a42d52c0ef39d9fe89f92d9b09dd17be5b0a3126d0427e06b0a1dbd04e48854",
+    "size_bytes": 31126,
+    "media_type": "images"
+  },
+  "img/material/gui-nappi-ja-teksti-rivitetty.png": {
+    "original_path": "data/img/material/gui-nappi-ja-teksti-rivitetty.png",
+    "local_path": "assets/images/img/material/gui-nappi-ja-teksti-rivitetty.png",
+    "sha256": "d8a9131675d520fc52f368b772223ea0db289823f25990ea04d94f7237c6bba7",
+    "size_bytes": 5324,
+    "media_type": "images"
+  },
+  "img/material/gui-nappi-ja-teksti.png": {
+    "original_path": "data/img/material/gui-nappi-ja-teksti.png",
+    "local_path": "assets/images/img/material/gui-nappi-ja-teksti.png",
+    "sha256": "b3e1efec17360955c561ccc15e050efff6ce446fccccb3700c9b6845fb774d88",
+    "size_bytes": 5325,
+    "media_type": "images"
+  },
+  "img/material/gui-nappi.png": {
+    "original_path": "data/img/material/gui-nappi.png",
+    "local_path": "assets/images/img/material/gui-nappi.png",
+    "sha256": "8d924450ce61bb314876544961c7caa382b28806748a338547ca1a70c3864b09",
+    "size_bytes": 3523,
+    "media_type": "images"
+  },
+  "img/material/gui-paint.png": {
+    "original_path": "data/img/material/gui-paint.png",
+    "local_path": "assets/images/img/material/gui-paint.png",
+    "sha256": "3dc3ec2177cf98a6a93355ac6cbc03c140e88fd0752f6b493b2756693c4c3456",
+    "size_bytes": 14058,
+    "media_type": "images"
+  },
+  "img/material/gui-planeetat-painava-aurinko.gif": {
+    "original_path": "data/img/material/gui-planeetat-painava-aurinko.gif",
+    "local_path": "assets/images/img/material/gui-planeetat-painava-aurinko.gif",
+    "sha256": "92afceef43a55ead7adb1f8a2afe5ed0efbcee075d2e536aafdfb071638abb67",
+    "size_bytes": 80830,
+    "media_type": "images"
+  },
+  "img/material/gui-planeetat-painavampi-aurinko.gif": {
+    "original_path": "data/img/material/gui-planeetat-painavampi-aurinko.gif",
+    "local_path": "assets/images/img/material/gui-planeetat-painavampi-aurinko.gif",
+    "sha256": "4c205b9fed97b944e0bad05fa51640cb54da8a8a5564e269ae1b50f1dee49601",
+    "size_bytes": 76239,
+    "media_type": "images"
+  },
+  "img/material/gui-planeetat.gif": {
+    "original_path": "data/img/material/gui-planeetat.gif",
+    "local_path": "assets/images/img/material/gui-planeetat.gif",
+    "sha256": "622145146f39ae46e54a13c107b9dfd3d06f8344f9526bbbb0357fd69cea9b13",
+    "size_bytes": 34023,
+    "media_type": "images"
+  },
+  "img/material/gui-ristinolla.png": {
+    "original_path": "data/img/material/gui-ristinolla.png",
+    "local_path": "assets/images/img/material/gui-ristinolla.png",
+    "sha256": "560f72b8f2c529bd6fce012c662be3dea6b05a37f3d395cdb5df80aac9b48cc7",
+    "size_bytes": 13562,
+    "media_type": "images"
+  },
+  "img/material/gui-salasana.gif": {
+    "original_path": "data/img/material/gui-salasana.gif",
+    "local_path": "assets/images/img/material/gui-salasana.gif",
+    "sha256": "2f1d78c178e06a6b7f216b29b320e423077da1e2134bf6ddaab806e95d19cbfe",
+    "size_bytes": 34720,
+    "media_type": "images"
+  },
+  "img/material/gui-sanaharjoittelu.gif": {
+    "original_path": "data/img/material/gui-sanaharjoittelu.gif",
+    "local_path": "assets/images/img/material/gui-sanaharjoittelu.gif",
+    "sha256": "af7813665fb5a73ae195b85cc1746091d9d27af66fc94f938c24db2d390447ba",
+    "size_bytes": 124635,
+    "media_type": "images"
+  },
+  "img/material/gui-simulaatio-metalli-ja-hiekka.gif": {
+    "original_path": "data/img/material/gui-simulaatio-metalli-ja-hiekka.gif",
+    "local_path": "assets/images/img/material/gui-simulaatio-metalli-ja-hiekka.gif",
+    "sha256": "b9c83772e3f0d804c30224486209ab5533107db9aa4cf4357f0deb2f7f479c4f",
+    "size_bytes": 77562,
+    "media_type": "images"
+  },
+  "img/material/gui-simulaatio-metalli.gif": {
+    "original_path": "data/img/material/gui-simulaatio-metalli.gif",
+    "local_path": "assets/images/img/material/gui-simulaatio-metalli.gif",
+    "sha256": "9b120367a6b54f0c7bc9d0c9ee1426f7aa8e6ebb3d02791976e209719e04f7c3",
+    "size_bytes": 16396,
+    "media_type": "images"
+  },
+  "img/material/gui-simulaatio.gif": {
+    "original_path": "data/img/material/gui-simulaatio.gif",
+    "local_path": "assets/images/img/material/gui-simulaatio.gif",
+    "sha256": "f4742304adf6de8cbc1b08f60ea28414d6a236ba9420f8b1206bfb8bc4e04f71",
+    "size_bytes": 152412,
+    "media_type": "images"
+  },
+  "img/material/gui-tekstielementti.png": {
+    "original_path": "data/img/material/gui-tekstielementti.png",
+    "local_path": "assets/images/img/material/gui-tekstielementti.png",
+    "sha256": "e52d68697c4e2583749db4fab6590f3421ba7aa0c7700658f92a69516bb09fc5",
+    "size_bytes": 2933,
+    "media_type": "images"
+  },
+  "img/material/gui-tervehtija.gif": {
+    "original_path": "data/img/material/gui-tervehtija.gif",
+    "local_path": "assets/images/img/material/gui-tervehtija.gif",
+    "sha256": "fa15142d922f5a2df1dd5ac32ec1710e0d42c574ea46db25d7181333856ab8d0",
+    "size_bytes": 25059,
+    "media_type": "images"
+  },
+  "img/material/gui-tilastoja.gif": {
+    "original_path": "data/img/material/gui-tilastoja.gif",
+    "local_path": "assets/images/img/material/gui-tilastoja.gif",
+    "sha256": "272ad71cff77a74005db6dcf7b5b9ad92a324fc6bbdc7ff59d6aaeb9ee1f3af3",
+    "size_bytes": 38368,
+    "media_type": "images"
+  },
+  "img/material/gui-useampi.png": {
+    "original_path": "data/img/material/gui-useampi.png",
+    "local_path": "assets/images/img/material/gui-useampi.png",
+    "sha256": "2e9f1eb42efef7d68dbf5474d08a088ab9db8152a428adc8eb1e6c8b148710b5",
+    "size_bytes": 11766,
+    "media_type": "images"
+  },
+  "img/material/gui-vbox-spacing.png": {
+    "original_path": "data/img/material/gui-vbox-spacing.png",
+    "local_path": "assets/images/img/material/gui-vbox-spacing.png",
+    "sha256": "af08f79ab6ed1c2d5a5470d8dbb94f4c6d3022c0286932f1dab18aa0fd4826f4",
+    "size_bytes": 2834,
+    "media_type": "images"
+  },
+  "img/material/humming-kaannetty.png": {
+    "original_path": "data/img/material/humming-kaannetty.png",
+    "local_path": "assets/images/img/material/humming-kaannetty.png",
+    "sha256": "7002de45ba9bc4098409e13c9f052ce7b20db6ac2e4b968c078b3e09da3b969c",
+    "size_bytes": 22655,
+    "media_type": "images"
+  },
+  "img/material/hurraa-nappi.png": {
+    "original_path": "data/img/material/hurraa-nappi.png",
+    "local_path": "assets/images/img/material/hurraa-nappi.png",
+    "sha256": "77466c56b4a7096e6f2d5effe08fd94a8b080a23e185fb73b4f64e1e7068374e",
+    "size_bytes": 4668,
+    "media_type": "images"
+  },
+  "img/material/image-ja-imageview.png": {
+    "original_path": "data/img/material/image-ja-imageview.png",
+    "local_path": "assets/images/img/material/image-ja-imageview.png",
+    "sha256": "d51640ca12c9f7bc3630cc6555d66ef2066550d8d7ab8d7e5d059be619a02958",
+    "size_bytes": 61066,
+    "media_type": "images"
+  },
+  "img/material/junit-laskimentestailua.png": {
+    "original_path": "data/img/material/junit-laskimentestailua.png",
+    "local_path": "assets/images/img/material/junit-laskimentestailua.png",
+    "sha256": "34224a5c835d3d4c3e707d7f22765ec4b98c05762698f938dd97bb216ae86a9b",
+    "size_bytes": 10036,
+    "media_type": "images"
+  },
+  "img/material/junit-test-results.png": {
+    "original_path": "data/img/material/junit-test-results.png",
+    "local_path": "assets/images/img/material/junit-test-results.png",
+    "sha256": "fd19288c63e2ee10ac4d3ca70a70f3c013df208cdc4cf2e920c199dc63d068e3",
+    "size_bytes": 21088,
+    "media_type": "images"
+  },
+  "img/material/junit-test.png": {
+    "original_path": "data/img/material/junit-test.png",
+    "local_path": "assets/images/img/material/junit-test.png",
+    "sha256": "eff1454d249ce740900288d950da26f9bd74b5e5e42b4af24c48bc81e40f674b",
+    "size_bytes": 15749,
+    "media_type": "images"
+  },
+  "img/material/kaavio-kannatus-rkp-ja-vihr.png": {
+    "original_path": "data/img/material/kaavio-kannatus-rkp-ja-vihr.png",
+    "local_path": "assets/images/img/material/kaavio-kannatus-rkp-ja-vihr.png",
+    "sha256": "371d4fbaff38b7139152f6d19600c4ef3e06519ba9c2fde22380d39060b78824",
+    "size_bytes": 50555,
+    "media_type": "images"
+  },
+  "img/material/kaavio-pohjoismaiden-asukasluvut.png": {
+    "original_path": "data/img/material/kaavio-pohjoismaiden-asukasluvut.png",
+    "local_path": "assets/images/img/material/kaavio-pohjoismaiden-asukasluvut.png",
+    "sha256": "88f37c7fdb6d88dab444ab2b53834b08da7b60716ba092fe40f09a856bde3982",
+    "size_bytes": 24709,
+    "media_type": "images"
+  },
+  "img/material/kaavio-shanghai.png": {
+    "original_path": "data/img/material/kaavio-shanghai.png",
+    "local_path": "assets/images/img/material/kaavio-shanghai.png",
+    "sha256": "6b32b723daf5fe43f180262593c7c0cd4e939c274130fe1a2f9d9c257acac09f",
+    "size_bytes": 26175,
+    "media_type": "images"
+  },
+  "img/material/kaavio-suhteellinen-kannatus.png": {
+    "original_path": "data/img/material/kaavio-suhteellinen-kannatus.png",
+    "local_path": "assets/images/img/material/kaavio-suhteellinen-kannatus.png",
+    "sha256": "44e637229614f765f1cfeb6bdc2e10374db0eabbf888b46d43115f8802fb9a12",
+    "size_bytes": 53410,
+    "media_type": "images"
+  },
+  "img/material/kaavio-suurten-lukujen-laki.png": {
+    "original_path": "data/img/material/kaavio-suurten-lukujen-laki.png",
+    "local_path": "assets/images/img/material/kaavio-suurten-lukujen-laki.png",
+    "sha256": "48d78dce78aba88af0bdc68211b3a821093cd11a60b3c9e00901427c428b2455",
+    "size_bytes": 17830,
+    "media_type": "images"
+  },
+  "img/material/kirjoitusharjoittelu.png": {
+    "original_path": "data/img/material/kirjoitusharjoittelu.png",
+    "local_path": "assets/images/img/material/kirjoitusharjoittelu.png",
+    "sha256": "b3209c6e695d8861549b920d880a8590c613a640e3fe032aa75aeee8b5b2ef13",
+    "size_bytes": 38058,
+    "media_type": "images"
+  },
+  "img/material/kuva-mysteeri.png": {
+    "original_path": "data/img/material/kuva-mysteeri.png",
+    "local_path": "assets/images/img/material/kuva-mysteeri.png",
+    "sha256": "b4dd49d2dfbfc0c1d235582ad5ab3929e641338833a4471f6b2197be10be6f36",
+    "size_bytes": 152932,
+    "media_type": "images"
+  },
+  "img/material/kuvaaja-liittyman-nopeus.png": {
+    "original_path": "data/img/material/kuvaaja-liittyman-nopeus.png",
+    "local_path": "assets/images/img/material/kuvaaja-liittyman-nopeus.png",
+    "sha256": "9f7cbfebac99b68851bd589c20989f70039ac1770b13f6b1517412ec8ea82965",
+    "size_bytes": 14800,
+    "media_type": "images"
+  },
+  "img/material/luokka-luotuna.png": {
+    "original_path": "data/img/material/luokka-luotuna.png",
+    "local_path": "assets/images/img/material/luokka-luotuna.png",
+    "sha256": "344f8386e6baed24d958f6eaf9e11a76741f0198673bb1f8ca3527620c29e52e",
+    "size_bytes": 26743,
+    "media_type": "images"
+  },
+  "img/material/monalisa-kollaasi-alku.png": {
+    "original_path": "data/img/material/monalisa-kollaasi-alku.png",
+    "local_path": "assets/images/img/material/monalisa-kollaasi-alku.png",
+    "sha256": "cc77f11ba85207bd1e5ca60d0cb0a67dc994f3996ae5be4e73c8368ac96f2667",
+    "size_bytes": 80443,
+    "media_type": "images"
+  },
+  "img/material/monalisa-kollaasi.png": {
+    "original_path": "data/img/material/monalisa-kollaasi.png",
+    "local_path": "assets/images/img/material/monalisa-kollaasi.png",
+    "sha256": "5614387e198409785cbaca5825faadf964bccdd5c8b3b3a483d17a9d5b2b2c90",
+    "size_bytes": 85720,
+    "media_type": "images"
+  },
+  "img/material/monalisa-negatiivi.png": {
+    "original_path": "data/img/material/monalisa-negatiivi.png",
+    "local_path": "assets/images/img/material/monalisa-negatiivi.png",
+    "sha256": "be3f89bf637e92e74a85ef832230cc059e3425e341a3208e5b90160d0d29e3de",
+    "size_bytes": 79559,
+    "media_type": "images"
+  },
+  "img/material/netbeans-output-venla.png": {
+    "original_path": "data/img/material/netbeans-output-venla.png",
+    "local_path": "assets/images/img/material/netbeans-output-venla.png",
+    "sha256": "c0174aa1ab617510d4673f41cae4ebd3d61f59f66e9ee6afc6c0dcc26aa6f1d7",
+    "size_bytes": 28935,
+    "media_type": "images"
+  },
+  "img/material/non-compiling-2.png": {
+    "original_path": "data/img/material/non-compiling-2.png",
+    "local_path": "assets/images/img/material/non-compiling-2.png",
+    "sha256": "bde7673c2672db7bc4689d9f1a7f8c25974ef9f23e22bac98c41c6ac0b8fd942",
+    "size_bytes": 17071,
+    "media_type": "images"
+  },
+  "img/material/non-compiling-3.png": {
+    "original_path": "data/img/material/non-compiling-3.png",
+    "local_path": "assets/images/img/material/non-compiling-3.png",
+    "sha256": "37729b33be4968db28194c4d8ded4109897500191324a22d1906cb4ba5dc713b",
+    "size_bytes": 18244,
+    "media_type": "images"
+  },
+  "img/material/non-compiling-4.png": {
+    "original_path": "data/img/material/non-compiling-4.png",
+    "local_path": "assets/images/img/material/non-compiling-4.png",
+    "sha256": "df87c2fefe3df9736785bee8bf88854c8c2c8db42050e88af089385266a47a33",
+    "size_bytes": 18226,
+    "media_type": "images"
+  },
+  "img/material/non-compiling.png": {
+    "original_path": "data/img/material/non-compiling.png",
+    "local_path": "assets/images/img/material/non-compiling.png",
+    "sha256": "c4b4b84ab4355b30c440bc6af65bf6bf31cb3764eef4b127208d88f17e1b722d",
+    "size_bytes": 20214,
+    "media_type": "images"
+  },
+  "img/material/pane-alus-kiihtyy.gif": {
+    "original_path": "data/img/material/pane-alus-kiihtyy.gif",
+    "local_path": "assets/images/img/material/pane-alus-kiihtyy.gif",
+    "sha256": "bb076afafd30265b4da8e8660258df9c04c4179f7ba36b031aa2c6f7c85ce5e8",
+    "size_bytes": 5376,
+    "media_type": "images"
+  },
+  "img/material/pane-alus-liikkuu.gif": {
+    "original_path": "data/img/material/pane-alus-liikkuu.gif",
+    "local_path": "assets/images/img/material/pane-alus-liikkuu.gif",
+    "sha256": "3595066cb5e42dfb9c85baf7c1fc353f49825b08fb99e3543cac39521e6c2709",
+    "size_bytes": 6732,
+    "media_type": "images"
+  },
+  "img/material/pane-circle.png": {
+    "original_path": "data/img/material/pane-circle.png",
+    "local_path": "assets/images/img/material/pane-circle.png",
+    "sha256": "da71c33547acceb3d4b99b1f28e6b8111cae47ca574f4cb7e2e4fb20e160accd",
+    "size_bytes": 2062,
+    "media_type": "images"
+  },
+  "img/material/pane-polygon-move-rotate-better.gif": {
+    "original_path": "data/img/material/pane-polygon-move-rotate-better.gif",
+    "local_path": "assets/images/img/material/pane-polygon-move-rotate-better.gif",
+    "sha256": "ea2e345473c4f96ee915a2c3d41f4fb3d38841839129dc9a70c50da9a1886ae1",
+    "size_bytes": 30682,
+    "media_type": "images"
+  },
+  "img/material/pane-polygon-move-rotate.gif": {
+    "original_path": "data/img/material/pane-polygon-move-rotate.gif",
+    "local_path": "assets/images/img/material/pane-polygon-move-rotate.gif",
+    "sha256": "72ded16157059830b4b890d09963ee6adc78f78cb3f3c3d20915686c1df2bebd",
+    "size_bytes": 28932,
+    "media_type": "images"
+  },
+  "img/material/pane-polygon-move.gif": {
+    "original_path": "data/img/material/pane-polygon-move.gif",
+    "local_path": "assets/images/img/material/pane-polygon-move.gif",
+    "sha256": "d8862cdadd987e31ed15e90c4f54619bf2374f6bdda04c58931e4bf7e474b1a7",
+    "size_bytes": 7446,
+    "media_type": "images"
+  },
+  "img/material/pane-suunnikas-move-rotate.png": {
+    "original_path": "data/img/material/pane-suunnikas-move-rotate.png",
+    "local_path": "assets/images/img/material/pane-suunnikas-move-rotate.png",
+    "sha256": "fc46b15f817cb836fa231f01d61b8786fd5382f2c927eaeb90186e587e4aa856",
+    "size_bytes": 3856,
+    "media_type": "images"
+  },
+  "img/material/pane-suunnikas-siirretty.png": {
+    "original_path": "data/img/material/pane-suunnikas-siirretty.png",
+    "local_path": "assets/images/img/material/pane-suunnikas-siirretty.png",
+    "sha256": "9239d29a8cb10d821129246de5c8d1706cf4536421686f2f9508323d2f03e706",
+    "size_bytes": 1718,
+    "media_type": "images"
+  },
+  "img/material/pane-suunnikas.png": {
+    "original_path": "data/img/material/pane-suunnikas.png",
+    "local_path": "assets/images/img/material/pane-suunnikas.png",
+    "sha256": "d6d2cd79dfad8f0f181b989f542b08178c39990c222a82fbf2fd94c29a7f70a8",
+    "size_bytes": 1703,
+    "media_type": "images"
+  },
+  "img/material/perinta.gif": {
+    "original_path": "data/img/material/perinta.gif",
+    "local_path": "assets/images/img/material/perinta.gif",
+    "sha256": "0213f3dca0cb17d6dfc4449c62833d8ba7153dfed5532002b9690fdfba7d75e0",
+    "size_bytes": 57,
+    "media_type": "images"
+  },
+  "img/material/pisteet-kasvavat.gif": {
+    "original_path": "data/img/material/pisteet-kasvavat.gif",
+    "local_path": "assets/images/img/material/pisteet-kasvavat.gif",
+    "sha256": "8af680c616167a276881e56cfe6a81bd0c09b52ed22c162a3b2802643f20f9f9",
+    "size_bytes": 7664,
+    "media_type": "images"
+  },
+  "img/material/project-clean-and-build.png": {
+    "original_path": "data/img/material/project-clean-and-build.png",
+    "local_path": "assets/images/img/material/project-clean-and-build.png",
+    "sha256": "c93d178a06324cdbe734063df8109c774762449fbb146c240064415fc2423c0c",
+    "size_bytes": 13649,
+    "media_type": "images"
+  },
+  "img/material/project-properties.png": {
+    "original_path": "data/img/material/project-properties.png",
+    "local_path": "assets/images/img/material/project-properties.png",
+    "sha256": "891ad63272940ef1c324cb8616d777500bdd3781e7bec94c8a6bb43223ec730f",
+    "size_bytes": 40595,
+    "media_type": "images"
+  },
+  "img/material/puolitushaku-ide-kommentit.png": {
+    "original_path": "data/img/material/puolitushaku-ide-kommentit.png",
+    "local_path": "assets/images/img/material/puolitushaku-ide-kommentit.png",
+    "sha256": "724093e829b4ab68a13dd75d1bdfe53376bce2f0358bbd594bee10cc9a1c11fb",
+    "size_bytes": 21953,
+    "media_type": "images"
+  },
+  "img/material/string-api-perinta.png": {
+    "original_path": "data/img/material/string-api-perinta.png",
+    "local_path": "assets/images/img/material/string-api-perinta.png",
+    "sha256": "e3b132e87f8add6afcd1b40f90395c4a0faa0081b0ec72ff591e6f3d73ddff77",
+    "size_bytes": 40060,
+    "media_type": "images"
+  },
+  "img/material/tehtavienhallinta-luokat.png": {
+    "original_path": "data/img/material/tehtavienhallinta-luokat.png",
+    "local_path": "assets/images/img/material/tehtavienhallinta-luokat.png",
+    "sha256": "50bb40d82f38e881f24e7d214d5cf5517c653b9e2d7748468fcf0fa477f414cc",
+    "size_bytes": 9339,
+    "media_type": "images"
+  },
+  "img/material/tehtavienhallinta-testiluokka.png": {
+    "original_path": "data/img/material/tehtavienhallinta-testiluokka.png",
+    "local_path": "assets/images/img/material/tehtavienhallinta-testiluokka.png",
+    "sha256": "54ad9b15ff14ba4d73a5e05511c811e118ffc042ebea418c5de59a5e987be05d",
+    "size_bytes": 6766,
+    "media_type": "images"
+  },
+  "img/material/vapaarobotti-kahdeksantoistakulmio.png": {
+    "original_path": "data/img/material/vapaarobotti-kahdeksantoistakulmio.png",
+    "local_path": "assets/images/img/material/vapaarobotti-kahdeksantoistakulmio.png",
+    "sha256": "c3a2e1a73135636cffb03254eb517f07cc4cad0485668d14a786a320b17cb823",
+    "size_bytes": 844,
+    "media_type": "images"
+  },
+  "img/material/vapaarobotti-kolmio.png": {
+    "original_path": "data/img/material/vapaarobotti-kolmio.png",
+    "local_path": "assets/images/img/material/vapaarobotti-kolmio.png",
+    "sha256": "b43792f1af876f8ae00ea9ee2290d8dd21a55b4c8667289f7cdb359506fbca78",
+    "size_bytes": 631,
+    "media_type": "images"
+  },
+  "img/material/vapaarobotti-kuusikulmio.png": {
+    "original_path": "data/img/material/vapaarobotti-kuusikulmio.png",
+    "local_path": "assets/images/img/material/vapaarobotti-kuusikulmio.png",
+    "sha256": "7ceab9234563150c9e934541cf9bfe3aacd4637f54ca8baa581de04ae6db9f58",
+    "size_bytes": 1055,
+    "media_type": "images"
+  },
+  "img/material/vapaarobotti-nelio.png": {
+    "original_path": "data/img/material/vapaarobotti-nelio.png",
+    "local_path": "assets/images/img/material/vapaarobotti-nelio.png",
+    "sha256": "ffd42974a8276d24621f192e31874d444f12c8345f75a1aeaa1c5d952af61c12",
+    "size_bytes": 745,
+    "media_type": "images"
+  },
+  "img/material/visualisointi-pyorat.png": {
+    "original_path": "data/img/material/visualisointi-pyorat.png",
+    "local_path": "assets/images/img/material/visualisointi-pyorat.png",
+    "sha256": "17713acbaf84c72d663d03b754e2b1dc0e7d3b225ad8327494a594c7ac57bc7e",
+    "size_bytes": 87517,
+    "media_type": "images"
+  },
+  "img/puuta/ikkuna-ja-viiva.png": {
+    "original_path": "data/img/puuta/ikkuna-ja-viiva.png",
+    "local_path": "assets/images/img/puuta/ikkuna-ja-viiva.png",
+    "sha256": "0a0da30b6db8ef65f1be19413c23a243f1cf408f988e81320d0c9bb2ce19ed08",
+    "size_bytes": 6322,
+    "media_type": "images"
+  },
+  "img/puuta/komennot.png": {
+    "original_path": "data/img/puuta/komennot.png",
+    "local_path": "assets/images/img/puuta/komennot.png",
+    "sha256": "e5af081e59d161895df8e836af820dec4a44ac83844ec07089729e5c4d16966b",
+    "size_bytes": 17541,
+    "media_type": "images"
+  },
+  "img/puuta/puisevaa.png": {
+    "original_path": "data/img/puuta/puisevaa.png",
+    "local_path": "assets/images/img/puuta/puisevaa.png",
+    "sha256": "5d1c7bd8fe106ce4cd6f186db38db1312feb2a1a34aa17713f6e6364b92a45ef",
+    "size_bytes": 10105,
+    "media_type": "images"
+  },
+  "img/puuta/toisto.png": {
+    "original_path": "data/img/puuta/toisto.png",
+    "local_path": "assets/images/img/puuta/toisto.png",
+    "sha256": "f1b8f3dcb35acd86d42a6e80f29027a6991e423ce860b74b74d759bb26a92cf4",
+    "size_bytes": 20427,
+    "media_type": "images"
+  },
+  "part-1/1_4_1.png": {
+    "original_path": "data/part-1/1_4_1.png",
+    "local_path": "assets/images/part-1/1_4_1.png",
+    "sha256": "efab2bc2280d72726cd2b45a23f383b3f829ad6f84932de0cff525e0b1b2e183",
+    "size_bytes": 14409,
+    "media_type": "images"
+  },
+  "part-1/1_5_1.png": {
+    "original_path": "data/part-1/1_5_1.png",
+    "local_path": "assets/images/part-1/1_5_1.png",
+    "sha256": "0048c6cc2b1de9dcf391a8cccef1a86e1a69063b2365a96d6e6776c3596a879d",
+    "size_bytes": 28551,
+    "media_type": "images"
+  },
+  "part-1/1_5_keyboard.png": {
+    "original_path": "data/part-1/1_5_keyboard.png",
+    "local_path": "assets/images/part-1/1_5_keyboard.png",
+    "sha256": "9ffe6c2bd13d477c8cca3886379e1a62d3111ecac8f41e1134c2319d6c52f325",
+    "size_bytes": 60116,
+    "media_type": "images"
+  },
+  "part-1/1_5_keyboard2.png": {
+    "original_path": "data/part-1/1_5_keyboard2.png",
+    "local_path": "assets/images/part-1/1_5_keyboard2.png",
+    "sha256": "a7bf22dbaf1ebcb5a8f4b664533302c52af0d0161bfb1c01c0615c78597c4bf4",
+    "size_bytes": 29439,
+    "media_type": "images"
+  },
+  "part-1/margeret-action.jpg": {
+    "original_path": "data/part-1/margeret-action.jpg",
+    "local_path": "assets/images/part-1/margeret-action.jpg",
+    "sha256": "17bf6d349ab05fa2da495d92e749dabfd225fea2e806b10634d6a3dacfad092d",
+    "size_bytes": 181916,
+    "media_type": "images"
+  },
+  "part-1/sisennysvirhe.png": {
+    "original_path": "data/part-1/sisennysvirhe.png",
+    "local_path": "assets/images/part-1/sisennysvirhe.png",
+    "sha256": "8b7d594a864b80debfa3fdb922cb637056b72d32805e4b634cd68ebe6749b284",
+    "size_bytes": 4336,
+    "media_type": "images"
+  },
+  "part-1/testi.py": {
+    "original_path": "data/part-1/testi.py",
+    "local_path": "assets/other/part-1/testi.py",
+    "sha256": "e95a7fbd219987c7feeb6719a613e29a1897e9598a05651f4b0006e4d5fe73ad",
+    "size_bytes": 54,
+    "media_type": "other"
+  },
+  "part-11/11_1_1.png": {
+    "original_path": "data/part-11/11_1_1.png",
+    "local_path": "assets/images/part-11/11_1_1.png",
+    "sha256": "754f0b327343896b8792953ac04405d147e0362910a2781b285d5e8c60cd0f13",
+    "size_bytes": 61087,
+    "media_type": "images"
+  },
+  "part-11/11_1_2.png": {
+    "original_path": "data/part-11/11_1_2.png",
+    "local_path": "assets/images/part-11/11_1_2.png",
+    "sha256": "569eaf899b93bf054f1757b5584d71ade2b0d9de136c13471bccd6fbda247800",
+    "size_bytes": 15785,
+    "media_type": "images"
+  },
+  "part-11/11_3_1.png": {
+    "original_path": "data/part-11/11_3_1.png",
+    "local_path": "assets/images/part-11/11_3_1.png",
+    "sha256": "f70e75150e6202bcb01a4f4f99a08e5f3b7b1eec0c2032912f1ce6e6e2db1c1a",
+    "size_bytes": 6753,
+    "media_type": "images"
+  },
+  "part-11/11_4_1.png": {
+    "original_path": "data/part-11/11_4_1.png",
+    "local_path": "assets/images/part-11/11_4_1.png",
+    "sha256": "153a770704ef7bc59c95e8dfcd4b89304939b55c7c0b6ea142d9acca94e0156d",
+    "size_bytes": 9345,
+    "media_type": "images"
+  },
+  "part-11/11_4_1_2.png": {
+    "original_path": "data/part-11/11_4_1_2.png",
+    "local_path": "assets/images/part-11/11_4_1_2.png",
+    "sha256": "164f1d662887878151bc01f298a0395d8dd1dce6e1cc112c39d822503a8e0318",
+    "size_bytes": 31322,
+    "media_type": "images"
+  },
+  "part-11/11_4_2.png": {
+    "original_path": "data/part-11/11_4_2.png",
+    "local_path": "assets/images/part-11/11_4_2.png",
+    "sha256": "f50672b1dabfff0230cc1d1d94e308f261752c224051a0e48f6d395211e294a8",
+    "size_bytes": 12034,
+    "media_type": "images"
+  },
+  "part-11/11_4_2_2.png": {
+    "original_path": "data/part-11/11_4_2_2.png",
+    "local_path": "assets/images/part-11/11_4_2_2.png",
+    "sha256": "3561adbb5517f6bacd0b531632613d9d9590840b71df64f65d081822284862b7",
+    "size_bytes": 12209,
+    "media_type": "images"
+  },
+  "part-11/11_4_2_2e.png": {
+    "original_path": "data/part-11/11_4_2_2e.png",
+    "local_path": "assets/images/part-11/11_4_2_2e.png",
+    "sha256": "3561adbb5517f6bacd0b531632613d9d9590840b71df64f65d081822284862b7",
+    "size_bytes": 12209,
+    "media_type": "images"
+  },
+  "part-11/11_4_3.png": {
+    "original_path": "data/part-11/11_4_3.png",
+    "local_path": "assets/images/part-11/11_4_3.png",
+    "sha256": "cf7a9240b526d7ad194b58f2d0225a8523602fac85750ce6551c7a03af008eda",
+    "size_bytes": 6486,
+    "media_type": "images"
+  },
+  "part-13/13-1-2.png": {
+    "original_path": "data/part-13/13-1-2.png",
+    "local_path": "assets/images/part-13/13-1-2.png",
+    "sha256": "37af1783592eb4ed7f8fe5aa04c45a87671299fea02c3f03809c44cbe8b5d343",
+    "size_bytes": 150593,
+    "media_type": "images"
+  },
+  "part-13/13-1-3.png": {
+    "original_path": "data/part-13/13-1-3.png",
+    "local_path": "assets/images/part-13/13-1-3.png",
+    "sha256": "90da59b3c92b90484b26ca5d06ded3428688fc12453fc6a3e5cad74726a52c96",
+    "size_bytes": 1106644,
+    "media_type": "images"
+  },
+  "part-13/13-1-4.png": {
+    "original_path": "data/part-13/13-1-4.png",
+    "local_path": "assets/images/part-13/13-1-4.png",
+    "sha256": "7b52098a0fcee122d5c0e21a495595626db178e334e38503cfdbcaed13f62ad3",
+    "size_bytes": 74389,
+    "media_type": "images"
+  },
+  "part-13/13_1_1.png": {
+    "original_path": "data/part-13/13_1_1.png",
+    "local_path": "assets/images/part-13/13_1_1.png",
+    "sha256": "c8ff3f5d9ba7390a411f00eb4d08021531ad2e3b656bf864d935e4731ba5afbf",
+    "size_bytes": 29265,
+    "media_type": "images"
+  },
+  "part-13/pygame_animation.gif": {
+    "original_path": "data/part-13/pygame_animation.gif",
+    "local_path": "assets/images/part-13/pygame_animation.gif",
+    "sha256": "3260d996c6f5c2f2cedd93ca420687863af5810d5e331f5a615a27bb63170823",
+    "size_bytes": 126559,
+    "media_type": "images"
+  },
+  "part-13/pygame_animation2.gif": {
+    "original_path": "data/part-13/pygame_animation2.gif",
+    "local_path": "assets/images/part-13/pygame_animation2.gif",
+    "sha256": "8644dadfe8c87769db8f52ec2025feab9a9f34cfe86317e367f974713dae2ef0",
+    "size_bytes": 187982,
+    "media_type": "images"
+  },
+  "part-13/pygame_asteroids.gif": {
+    "original_path": "data/part-13/pygame_asteroids.gif",
+    "local_path": "assets/images/part-13/pygame_asteroids.gif",
+    "sha256": "50f404eac34a9e14ed8a0d9d594f03f22746aeedd0712d8b0a91ebf4092b83f3",
+    "size_bytes": 342212,
+    "media_type": "images"
+  },
+  "part-13/pygame_bounce.gif": {
+    "original_path": "data/part-13/pygame_bounce.gif",
+    "local_path": "assets/images/part-13/pygame_bounce.gif",
+    "sha256": "0fd9b62ee9b6f8261b6b6e6b4c5e7bb968c968d0b28227d90668a43500cb431f",
+    "size_bytes": 179547,
+    "media_type": "images"
+  },
+  "part-13/pygame_circle.gif": {
+    "original_path": "data/part-13/pygame_circle.gif",
+    "local_path": "assets/images/part-13/pygame_circle.gif",
+    "sha256": "80135e149a9283d1ae4c2715b99375ff63bbb6a5495bb18ae8a90d91d4420879",
+    "size_bytes": 943358,
+    "media_type": "images"
+  },
+  "part-13/pygame_clock.gif": {
+    "original_path": "data/part-13/pygame_clock.gif",
+    "local_path": "assets/images/part-13/pygame_clock.gif",
+    "sha256": "695d8a8ead360182966f2abffee57319e259237540b1b2dc5e877a051b70a7c7",
+    "size_bytes": 23325,
+    "media_type": "images"
+  },
+  "part-13/pygame_cursor.gif": {
+    "original_path": "data/part-13/pygame_cursor.gif",
+    "local_path": "assets/images/part-13/pygame_cursor.gif",
+    "sha256": "e035b9bb030843d1bcb5720c5bf515dea88d29f756a87dcac5e736f03100d5b5",
+    "size_bytes": 47239,
+    "media_type": "images"
+  },
+  "part-13/pygame_cursor2.gif": {
+    "original_path": "data/part-13/pygame_cursor2.gif",
+    "local_path": "assets/images/part-13/pygame_cursor2.gif",
+    "sha256": "be1b7ca36b0fbbc1bc56534d2b7d59b06d736cf211ab6bf1847851de73bbf7ec",
+    "size_bytes": 134826,
+    "media_type": "images"
+  },
+  "part-13/pygame_first.gif": {
+    "original_path": "data/part-13/pygame_first.gif",
+    "local_path": "assets/images/part-13/pygame_first.gif",
+    "sha256": "6aac34c6f6e98d808a9081331fc1ec7d9872a6350d54f835e3824243cbc1c7a2",
+    "size_bytes": 3977,
+    "media_type": "images"
+  },
+  "part-13/pygame_four.gif": {
+    "original_path": "data/part-13/pygame_four.gif",
+    "local_path": "assets/images/part-13/pygame_four.gif",
+    "sha256": "f4b1a77c248c1fac9e9b3ed43305183779b6bc375c565d13e9e428c6be20b4ca",
+    "size_bytes": 6208,
+    "media_type": "images"
+  },
+  "part-13/pygame_four_directions.gif": {
+    "original_path": "data/part-13/pygame_four_directions.gif",
+    "local_path": "assets/images/part-13/pygame_four_directions.gif",
+    "sha256": "8b578bccb3a0f695f970bcabecca7ac46242b8d9faa511083241b6bc7e48a82e",
+    "size_bytes": 145217,
+    "media_type": "images"
+  },
+  "part-13/pygame_four_walls.gif": {
+    "original_path": "data/part-13/pygame_four_walls.gif",
+    "local_path": "assets/images/part-13/pygame_four_walls.gif",
+    "sha256": "9d8efe771b2f5d90180408c0fde3d88b6c67399ad563bb97a68833f3de36c2df",
+    "size_bytes": 148440,
+    "media_type": "images"
+  },
+  "part-13/pygame_hundred.gif": {
+    "original_path": "data/part-13/pygame_hundred.gif",
+    "local_path": "assets/images/part-13/pygame_hundred.gif",
+    "sha256": "8e84af6bde3f348c6e82a421f4a68f566533056e9a5fac8656bb7871f8b5826e",
+    "size_bytes": 15007,
+    "media_type": "images"
+  },
+  "part-13/pygame_invasion.gif": {
+    "original_path": "data/part-13/pygame_invasion.gif",
+    "local_path": "assets/images/part-13/pygame_invasion.gif",
+    "sha256": "f34c316b12c8bc8889ff9fc89ac16d878c25d082adccc7ceb906a44f83472237",
+    "size_bytes": 899994,
+    "media_type": "images"
+  },
+  "part-13/pygame_linux.png": {
+    "original_path": "data/part-13/pygame_linux.png",
+    "local_path": "assets/images/part-13/pygame_linux.png",
+    "sha256": "37c76401f398f257920ccb9c0592b4647c4e5350bb28ec138eab9ff0a98b264f",
+    "size_bytes": 6011,
+    "media_type": "images"
+  },
+  "part-13/pygame_move2.gif": {
+    "original_path": "data/part-13/pygame_move2.gif",
+    "local_path": "assets/images/part-13/pygame_move2.gif",
+    "sha256": "ba4227fd33077b8d62d2f77e83379a4bf5eabbdfe637d2b6b36602f1d638ed6c",
+    "size_bytes": 462812,
+    "media_type": "images"
+  },
+  "part-13/pygame_move_robot.gif": {
+    "original_path": "data/part-13/pygame_move_robot.gif",
+    "local_path": "assets/images/part-13/pygame_move_robot.gif",
+    "sha256": "e050a3fa30b474ca86f2a3014699863dcc0843e4b3d28c3c4cfb4755ed92d4ae",
+    "size_bytes": 27270,
+    "media_type": "images"
+  },
+  "part-13/pygame_perimeter.gif": {
+    "original_path": "data/part-13/pygame_perimeter.gif",
+    "local_path": "assets/images/part-13/pygame_perimeter.gif",
+    "sha256": "efc341c3e6deac5a6029ace7dcfbb15f3d628552eec6c5080fddade3868f672d",
+    "size_bytes": 256195,
+    "media_type": "images"
+  },
+  "part-13/pygame_pic.gif": {
+    "original_path": "data/part-13/pygame_pic.gif",
+    "local_path": "assets/images/part-13/pygame_pic.gif",
+    "sha256": "03a1d98d502686c3e9efa3405910697a2d4ae514c98e7ee073977e1eba887004",
+    "size_bytes": 4395,
+    "media_type": "images"
+  },
+  "part-13/pygame_pic2.gif": {
+    "original_path": "data/part-13/pygame_pic2.gif",
+    "local_path": "assets/images/part-13/pygame_pic2.gif",
+    "sha256": "f57fb48f54c79b8c9b1bee8d396fb42b3c8b8904d5301908171fdbdd2b011d2e",
+    "size_bytes": 5046,
+    "media_type": "images"
+  },
+  "part-13/pygame_pic3.gif": {
+    "original_path": "data/part-13/pygame_pic3.gif",
+    "local_path": "assets/images/part-13/pygame_pic3.gif",
+    "sha256": "6fdd09d1c80da25b28c92866c255b12c38049397c40c42c9076709d24342e0cc",
+    "size_bytes": 4416,
+    "media_type": "images"
+  },
+  "part-13/pygame_robot_cursor.gif": {
+    "original_path": "data/part-13/pygame_robot_cursor.gif",
+    "local_path": "assets/images/part-13/pygame_robot_cursor.gif",
+    "sha256": "6eccf895ad2ff9806b3a0f4a5e09dfd664ccea5552593fe3255e0ca4703ea181",
+    "size_bytes": 172150,
+    "media_type": "images"
+  },
+  "part-13/pygame_robot_location.gif": {
+    "original_path": "data/part-13/pygame_robot_location.gif",
+    "local_path": "assets/images/part-13/pygame_robot_location.gif",
+    "sha256": "d01ea8cf1e98d76dbddca2daf6533261f3df18a4ef8dccade9866371ed8d9ff4",
+    "size_bytes": 40992,
+    "media_type": "images"
+  },
+  "part-13/pygame_rotation.gif": {
+    "original_path": "data/part-13/pygame_rotation.gif",
+    "local_path": "assets/images/part-13/pygame_rotation.gif",
+    "sha256": "e78c45ebf307db6aded6d754895774964be6d295ec0e679088f292fc73583428",
+    "size_bytes": 99934,
+    "media_type": "images"
+  },
+  "part-13/pygame_row.gif": {
+    "original_path": "data/part-13/pygame_row.gif",
+    "local_path": "assets/images/part-13/pygame_row.gif",
+    "sha256": "6ceab6a55b7fc7bdbfb790a31f6393b25c909695f8f2a7207b2ac7ee4fec15b2",
+    "size_bytes": 7998,
+    "media_type": "images"
+  },
+  "part-13/pygame_shapes.gif": {
+    "original_path": "data/part-13/pygame_shapes.gif",
+    "local_path": "assets/images/part-13/pygame_shapes.gif",
+    "sha256": "727b2bd812f44cca5246e9ff7ce85e588054e96fb90e3f00b906bfd18bc10593",
+    "size_bytes": 6118,
+    "media_type": "images"
+  },
+  "part-13/pygame_text.gif": {
+    "original_path": "data/part-13/pygame_text.gif",
+    "local_path": "assets/images/part-13/pygame_text.gif",
+    "sha256": "2f1980e14e3ce1f67ff17ce3f6dcb5ec1fcde4d4bfca53689fc0d1beeca0ff48",
+    "size_bytes": 5600,
+    "media_type": "images"
+  },
+  "part-13/pygame_thousand.gif": {
+    "original_path": "data/part-13/pygame_thousand.gif",
+    "local_path": "assets/images/part-13/pygame_thousand.gif",
+    "sha256": "999ba919019df5d68b5925890591d1fb10933d2275da8c6d87bfe66bc97bda35",
+    "size_bytes": 36742,
+    "media_type": "images"
+  },
+  "part-13/pygame_two_players.gif": {
+    "original_path": "data/part-13/pygame_two_players.gif",
+    "local_path": "assets/images/part-13/pygame_two_players.gif",
+    "sha256": "14f613ab38ad7964e0c90693398b89501f30b025bb706ab4505a99b359c86813",
+    "size_bytes": 342874,
+    "media_type": "images"
+  },
+  "part-13/pygame_vertical.gif": {
+    "original_path": "data/part-13/pygame_vertical.gif",
+    "local_path": "assets/images/part-13/pygame_vertical.gif",
+    "sha256": "c210e879f9fbd293b2db063ee90480e9daefa71d781cff2acdbf533643be9cc1",
+    "size_bytes": 169578,
+    "media_type": "images"
+  },
+  "part-13/robot.png": {
+    "original_path": "data/part-13/robot.png",
+    "local_path": "assets/images/part-13/robot.png",
+    "sha256": "122633f234844eca65ace9c7172c6f5ffa967b85493548350ef9f1559fffe599",
+    "size_bytes": 465,
+    "media_type": "images"
+  },
+  "part-14/box.png": {
+    "original_path": "data/part-14/box.png",
+    "local_path": "assets/images/part-14/box.png",
+    "sha256": "5657a11aa7b70e74c563ca781a86bf87b1b142891cf1bcba340ec01368245a25",
+    "size_bytes": 253,
+    "media_type": "images"
+  },
+  "part-14/done.png": {
+    "original_path": "data/part-14/done.png",
+    "local_path": "assets/images/part-14/done.png",
+    "sha256": "7e029b1531e3b1175e19f51a86964448bf762aee91930b6d131bd4763c892b90",
+    "size_bytes": 635,
+    "media_type": "images"
+  },
+  "part-14/floor.png": {
+    "original_path": "data/part-14/floor.png",
+    "local_path": "assets/images/part-14/floor.png",
+    "sha256": "06297d7421d18ccd93c103ec8d96a82207339a28d26f628a3b4e29d5cfd731d7",
+    "size_bytes": 210,
+    "media_type": "images"
+  },
+  "part-14/game.png": {
+    "original_path": "data/part-14/game.png",
+    "local_path": "assets/images/part-14/game.png",
+    "sha256": "44200f7acc4877eac59533fb814c1ab3b4cacdb612bfb8f7aa8d97a770697ea1",
+    "size_bytes": 20199,
+    "media_type": "images"
+  },
+  "part-14/robot.png": {
+    "original_path": "data/part-14/robot.png",
+    "local_path": "assets/images/part-14/robot.png",
+    "sha256": "31102371eef12b2ead997bee31b1e0e1161c1758275d43ff3daa3d3e0de81c37",
+    "size_bytes": 1099,
+    "media_type": "images"
+  },
+  "part-14/target.png": {
+    "original_path": "data/part-14/target.png",
+    "local_path": "assets/images/part-14/target.png",
+    "sha256": "affef642ae875a3ca4514a9470a500af5a312ff24b4a5db4cd2ec1be111b23a7",
+    "size_bytes": 395,
+    "media_type": "images"
+  },
+  "part-14/target_robot.png": {
+    "original_path": "data/part-14/target_robot.png",
+    "local_path": "assets/images/part-14/target_robot.png",
+    "sha256": "cf2600bc7ac2e430b32a1f92bd72805c70c2ef16ebc1cdfafb2d3b6d383e2a98",
+    "size_bytes": 1237,
+    "media_type": "images"
+  },
+  "part-14/tmc_paste_1.png": {
+    "original_path": "data/part-14/tmc_paste_1.png",
+    "local_path": "assets/images/part-14/tmc_paste_1.png",
+    "sha256": "89aaeb41f5da4ae84630465044933f2799875ebbcddfdff8ba9edc2d364e2bcb",
+    "size_bytes": 2815,
+    "media_type": "images"
+  },
+  "part-14/tmc_paste_2.png": {
+    "original_path": "data/part-14/tmc_paste_2.png",
+    "local_path": "assets/images/part-14/tmc_paste_2.png",
+    "sha256": "e1da5e6baddaf093bd3dfecb3843aa2c9e4b660a8e83938812bfe7578f2d5dc0",
+    "size_bytes": 7491,
+    "media_type": "images"
+  },
+  "part-14/tmc_paste_3.png": {
+    "original_path": "data/part-14/tmc_paste_3.png",
+    "local_path": "assets/images/part-14/tmc_paste_3.png",
+    "sha256": "b09208f3709395874b3c100ed8a4fa34240cf47b4cef9219340677463b5a67b2",
+    "size_bytes": 4495,
+    "media_type": "images"
+  },
+  "part-14/wall.png": {
+    "original_path": "data/part-14/wall.png",
+    "local_path": "assets/images/part-14/wall.png",
+    "sha256": "9aa46102a81857a11ffaa5ee8b940fd1f3e71dcc73f937c37dfefb876ad2157e",
+    "size_bytes": 202,
+    "media_type": "images"
+  },
+  "part-2/2_2_1.png": {
+    "original_path": "data/part-2/2_2_1.png",
+    "local_path": "assets/images/part-2/2_2_1.png",
+    "sha256": "10d34ab37cb370c1adaaf98f296463f81e0da2466da31459debdffb9e4eb7172",
+    "size_bytes": 34932,
+    "media_type": "images"
+  },
+  "part-2/2_2_2.png": {
+    "original_path": "data/part-2/2_2_2.png",
+    "local_path": "assets/images/part-2/2_2_2.png",
+    "sha256": "ec78c7d1eac96c49a9ecc4778efed32e920a7aa92d5c9acf06d777fbfa162130",
+    "size_bytes": 56407,
+    "media_type": "images"
+  },
+  "part-3/3_1_1.png": {
+    "original_path": "data/part-3/3_1_1.png",
+    "local_path": "assets/images/part-3/3_1_1.png",
+    "sha256": "bd25402943f3973578e089df3f55e0451cf4420bd461d54137f069b18f6340c6",
+    "size_bytes": 29096,
+    "media_type": "images"
+  },
+  "part-3/3_1_2.png": {
+    "original_path": "data/part-3/3_1_2.png",
+    "local_path": "assets/images/part-3/3_1_2.png",
+    "sha256": "3efb2607b5d4e2a165ed5973e05439708c0f9335812f172a13c4a15b670025cb",
+    "size_bytes": 44776,
+    "media_type": "images"
+  },
+  "part-3/3_1_3.png": {
+    "original_path": "data/part-3/3_1_3.png",
+    "local_path": "assets/images/part-3/3_1_3.png",
+    "sha256": "2dcb71aca7164b2992712eb1ec2e51df8853cb2cf70af02382895baeb7fbf87e",
+    "size_bytes": 72372,
+    "media_type": "images"
+  },
+  "part-3/3_2_1.png": {
+    "original_path": "data/part-3/3_2_1.png",
+    "local_path": "assets/images/part-3/3_2_1.png",
+    "sha256": "8cc4176d0b544fb2c1a5d2822890e72e4abfc4d1b02c7e17caa5824a8f218ae3",
+    "size_bytes": 14387,
+    "media_type": "images"
+  },
+  "part-3/3_2_2.png": {
+    "original_path": "data/part-3/3_2_2.png",
+    "local_path": "assets/images/part-3/3_2_2.png",
+    "sha256": "6e2fe77e90ba9201244da8b1a1a0d71d89a607ae1555078924c4b66610463904",
+    "size_bytes": 13930,
+    "media_type": "images"
+  },
+  "part-3/3_2_3.png": {
+    "original_path": "data/part-3/3_2_3.png",
+    "local_path": "assets/images/part-3/3_2_3.png",
+    "sha256": "2f0ce2321f70b449f257eb2181ed4761853ab89fa1d74b229e794148bb5d5ef7",
+    "size_bytes": 22182,
+    "media_type": "images"
+  },
+  "part-3/3_2_4.png": {
+    "original_path": "data/part-3/3_2_4.png",
+    "local_path": "assets/images/part-3/3_2_4.png",
+    "sha256": "0e358b3bd1ee93dd2a8d8bc0936b74c433e03a284d9bde742d8850f74b3fdb5d",
+    "size_bytes": 17229,
+    "media_type": "images"
+  },
+  "part-3/3_3_1.png": {
+    "original_path": "data/part-3/3_3_1.png",
+    "local_path": "assets/images/part-3/3_3_1.png",
+    "sha256": "55b2372769a9f0bb61683fe9615dd985ed7845e3e8d8cf96d53026859b98e222",
+    "size_bytes": 34212,
+    "media_type": "images"
+  },
+  "part-3/3_4_1.png": {
+    "original_path": "data/part-3/3_4_1.png",
+    "local_path": "assets/images/part-3/3_4_1.png",
+    "sha256": "3e5d7254ad104a855dc586d99690f1c7c37e630d5e1986d48b0d1af1554e0939",
+    "size_bytes": 48806,
+    "media_type": "images"
+  },
+  "part-4/4_1_1.png": {
+    "original_path": "data/part-4/4_1_1.png",
+    "local_path": "assets/images/part-4/4_1_1.png",
+    "sha256": "9ab28b440225333cb4756c6cc2bd107b0b376786c9f4f99df7eeaa58668f62fa",
+    "size_bytes": 88014,
+    "media_type": "images"
+  },
+  "part-4/4_1_2.png": {
+    "original_path": "data/part-4/4_1_2.png",
+    "local_path": "assets/images/part-4/4_1_2.png",
+    "sha256": "899a3c2dc1dc79c59d5e1c387820df45884155b0f491be29c505ba143e3375ed",
+    "size_bytes": 132591,
+    "media_type": "images"
+  },
+  "part-4/4_1_3.png": {
+    "original_path": "data/part-4/4_1_3.png",
+    "local_path": "assets/images/part-4/4_1_3.png",
+    "sha256": "a1567bd866e1e6bb4c592fd08f4f7b7a5881d2d2d36ae704dd7c092d67ed3935",
+    "size_bytes": 90377,
+    "media_type": "images"
+  },
+  "part-4/4_1_4.png": {
+    "original_path": "data/part-4/4_1_4.png",
+    "local_path": "assets/images/part-4/4_1_4.png",
+    "sha256": "5360a7f5b7d72f0921556392e05d87e57cbbcb2277069a19b57432a1c1817aeb",
+    "size_bytes": 121370,
+    "media_type": "images"
+  },
+  "part-4/4_1_5.png": {
+    "original_path": "data/part-4/4_1_5.png",
+    "local_path": "assets/images/part-4/4_1_5.png",
+    "sha256": "b5eeda2b7e4f9d9eaf38024ab8f26a022f3a8422d94d423496395dc314d0f462",
+    "size_bytes": 41414,
+    "media_type": "images"
+  },
+  "part-4/4_1_6.png": {
+    "original_path": "data/part-4/4_1_6.png",
+    "local_path": "assets/images/part-4/4_1_6.png",
+    "sha256": "b20a2ec9c8309cae1120a4c6c9f4d4e924d4facf1a896249a5c3911d8522993f",
+    "size_bytes": 59095,
+    "media_type": "images"
+  },
+  "part-4/4_1_7.png": {
+    "original_path": "data/part-4/4_1_7.png",
+    "local_path": "assets/images/part-4/4_1_7.png",
+    "sha256": "771dac330671424cef50c4c5cc602ba86b845672d7779f9f22fec72d5fd7b551",
+    "size_bytes": 109997,
+    "media_type": "images"
+  },
+  "part-4/4_1_8.png": {
+    "original_path": "data/part-4/4_1_8.png",
+    "local_path": "assets/images/part-4/4_1_8.png",
+    "sha256": "bf9b5cd518e63f2bb973a15b611ec0284bc4dfdbab2ca125aaa1ae9e753fd226",
+    "size_bytes": 110231,
+    "media_type": "images"
+  },
+  "part-4/4_1_9.png": {
+    "original_path": "data/part-4/4_1_9.png",
+    "local_path": "assets/images/part-4/4_1_9.png",
+    "sha256": "6fd4c03bedfaa2256782fe051ebdd28e734f11cdf4466e385a48313e2ea06a4e",
+    "size_bytes": 80902,
+    "media_type": "images"
+  },
+  "part-4/4_2_1.png": {
+    "original_path": "data/part-4/4_2_1.png",
+    "local_path": "assets/images/part-4/4_2_1.png",
+    "sha256": "6647af9213fc96412d794b2d2ae8d9677e233baa33a6e4cb22855582535d92ef",
+    "size_bytes": 27145,
+    "media_type": "images"
+  },
+  "part-4/4_2_2.png": {
+    "original_path": "data/part-4/4_2_2.png",
+    "local_path": "assets/images/part-4/4_2_2.png",
+    "sha256": "180d490e55ae5c8b81e8e0016f623f4c2fed3fec66e9347ab706584a1e6fd6a8",
+    "size_bytes": 79336,
+    "media_type": "images"
+  },
+  "part-4/4_3_1.png": {
+    "original_path": "data/part-4/4_3_1.png",
+    "local_path": "assets/images/part-4/4_3_1.png",
+    "sha256": "a0de6659295b94e7d70f42548281f5f238e912ef533603fb366e747f7e2ab0b7",
+    "size_bytes": 10552,
+    "media_type": "images"
+  },
+  "part-4/4_3_2.png": {
+    "original_path": "data/part-4/4_3_2.png",
+    "local_path": "assets/images/part-4/4_3_2.png",
+    "sha256": "ab5dc3474518fe9b6ec44f548951a518e59ae437c96b9e9170ed0cc1a844936c",
+    "size_bytes": 24284,
+    "media_type": "images"
+  },
+  "part-4/4_4_1.png": {
+    "original_path": "data/part-4/4_4_1.png",
+    "local_path": "assets/images/part-4/4_4_1.png",
+    "sha256": "474ca8f03b72515fb2420eb06e4dec37eab9fe71891ef39c206a5e126ff643f2",
+    "size_bytes": 26123,
+    "media_type": "images"
+  },
+  "part-4/4_6_1.png": {
+    "original_path": "data/part-4/4_6_1.png",
+    "local_path": "assets/images/part-4/4_6_1.png",
+    "sha256": "9945c6e09631fc28e44aca5d0fc472d69dd3a00255b486f3774abfa76325dadf",
+    "size_bytes": 8584,
+    "media_type": "images"
+  },
+  "part-4/4_6_2.png": {
+    "original_path": "data/part-4/4_6_2.png",
+    "local_path": "assets/images/part-4/4_6_2.png",
+    "sha256": "8541a045e0da1d9022ef9e79dbd57321342906465f19e5669ba6448eec225d9f",
+    "size_bytes": 12221,
+    "media_type": "images"
+  },
+  "part-5/5_1_1.png": {
+    "original_path": "data/part-5/5_1_1.png",
+    "local_path": "assets/images/part-5/5_1_1.png",
+    "sha256": "75fd42638bad6156b666af08c124d9859bb21ffb9fe89838f37a43de64938176",
+    "size_bytes": 2209,
+    "media_type": "images"
+  },
+  "part-5/5_1_2.png": {
+    "original_path": "data/part-5/5_1_2.png",
+    "local_path": "assets/images/part-5/5_1_2.png",
+    "sha256": "54ac6ccd68ed225328ebcff5f200d93edc3856a65d25a62f57a55d0326427be6",
+    "size_bytes": 56865,
+    "media_type": "images"
+  },
+  "part-5/5_1_3.png": {
+    "original_path": "data/part-5/5_1_3.png",
+    "local_path": "assets/images/part-5/5_1_3.png",
+    "sha256": "04dd7645b553ce99f16955baef2f15e3ae80af3e5b68977aef8fb43746c582c5",
+    "size_bytes": 10684,
+    "media_type": "images"
+  },
+  "part-5/5_2_1.png": {
+    "original_path": "data/part-5/5_2_1.png",
+    "local_path": "assets/images/part-5/5_2_1.png",
+    "sha256": "817982230e96fc00ac5f9f30824247bc0e269deb3784ef9ec923d4038836490b",
+    "size_bytes": 2792,
+    "media_type": "images"
+  },
+  "part-5/5_2_10.png": {
+    "original_path": "data/part-5/5_2_10.png",
+    "local_path": "assets/images/part-5/5_2_10.png",
+    "sha256": "a085029504bbfe406e00250e1efa48c50c0f85fd0c1fa9c649237783fe3f56a9",
+    "size_bytes": 72731,
+    "media_type": "images"
+  },
+  "part-5/5_2_2.png": {
+    "original_path": "data/part-5/5_2_2.png",
+    "local_path": "assets/images/part-5/5_2_2.png",
+    "sha256": "23e67ba213ec772ed54470ce732d8a1fb934014c6f56dacfa308c1c694927c1b",
+    "size_bytes": 37280,
+    "media_type": "images"
+  },
+  "part-5/5_2_3.png": {
+    "original_path": "data/part-5/5_2_3.png",
+    "local_path": "assets/images/part-5/5_2_3.png",
+    "sha256": "8541a045e0da1d9022ef9e79dbd57321342906465f19e5669ba6448eec225d9f",
+    "size_bytes": 12221,
+    "media_type": "images"
+  },
+  "part-5/5_2_4.png": {
+    "original_path": "data/part-5/5_2_4.png",
+    "local_path": "assets/images/part-5/5_2_4.png",
+    "sha256": "9945c6e09631fc28e44aca5d0fc472d69dd3a00255b486f3774abfa76325dadf",
+    "size_bytes": 8584,
+    "media_type": "images"
+  },
+  "part-5/5_2_5.png": {
+    "original_path": "data/part-5/5_2_5.png",
+    "local_path": "assets/images/part-5/5_2_5.png",
+    "sha256": "452687e62a76702a54f8cbac6b1ed5528f9764f7f76af3093ba3ef413ed26b45",
+    "size_bytes": 8521,
+    "media_type": "images"
+  },
+  "part-5/5_2_6.png": {
+    "original_path": "data/part-5/5_2_6.png",
+    "local_path": "assets/images/part-5/5_2_6.png",
+    "sha256": "e802f6eb39b90d5d3f59058a9bdc6f1869ebfac0ed3247eadf28834f435fa493",
+    "size_bytes": 36927,
+    "media_type": "images"
+  },
+  "part-5/5_2_7.png": {
+    "original_path": "data/part-5/5_2_7.png",
+    "local_path": "assets/images/part-5/5_2_7.png",
+    "sha256": "897c96b9c09976078a64d905cebfdf29020bd4cd31816fc311f388562b5b8b96",
+    "size_bytes": 50956,
+    "media_type": "images"
+  },
+  "part-5/5_2_8.png": {
+    "original_path": "data/part-5/5_2_8.png",
+    "local_path": "assets/images/part-5/5_2_8.png",
+    "sha256": "3294644b060ea084a2ee5666eb59dd997ea6c9683f225709242347b07f746323",
+    "size_bytes": 47899,
+    "media_type": "images"
+  },
+  "part-5/5_2_9.png": {
+    "original_path": "data/part-5/5_2_9.png",
+    "local_path": "assets/images/part-5/5_2_9.png",
+    "sha256": "d7215cfa5f88fa68ab1a7a6fbbbde031e83f32ce490175950fc853093d7ffd89",
+    "size_bytes": 34364,
+    "media_type": "images"
+  },
+  "part-5/5_4_1.png": {
+    "original_path": "data/part-5/5_4_1.png",
+    "local_path": "assets/images/part-5/5_4_1.png",
+    "sha256": "d0e1d575e4d89e87e009086bbfffb1fa40842807eb6666324c4380e2937f6e4c",
+    "size_bytes": 13714,
+    "media_type": "images"
+  },
+  "part-6/6_1_1.png": {
+    "original_path": "data/part-6/6_1_1.png",
+    "local_path": "assets/images/part-6/6_1_1.png",
+    "sha256": "f88f3f46e1958578a4dc0ee94404f2dbf77829fb800ab83a5b81f545b1f49c19",
+    "size_bytes": 23298,
+    "media_type": "images"
+  },
+  "part-6/6_1_2.png": {
+    "original_path": "data/part-6/6_1_2.png",
+    "local_path": "assets/images/part-6/6_1_2.png",
+    "sha256": "f9bb65420ceb4b31460db38f362f8502bc9d9b68e6d1165fafd157c7b96489b5",
+    "size_bytes": 66514,
+    "media_type": "images"
+  },
+  "part-6/6_1_3.png": {
+    "original_path": "data/part-6/6_1_3.png",
+    "local_path": "assets/images/part-6/6_1_3.png",
+    "sha256": "91899099f5a7b91cf84482eeffa97decb262b15680db1e207f7a11f901dfd997",
+    "size_bytes": 119924,
+    "media_type": "images"
+  },
+  "part-6/6_1_4.png": {
+    "original_path": "data/part-6/6_1_4.png",
+    "local_path": "assets/images/part-6/6_1_4.png",
+    "sha256": "0403649921a4dc776797eaf9a40350a9a569a2647314cd2c326c1eb4a5522fea",
+    "size_bytes": 199871,
+    "media_type": "images"
+  },
+  "part-7/7_1_1.png": {
+    "original_path": "data/part-7/7_1_1.png",
+    "local_path": "assets/images/part-7/7_1_1.png",
+    "sha256": "81d9e7842bd8694b0ba1dafddb07f5086344da5fe8f7f673e7b4fe0ba63ce862",
+    "size_bytes": 223691,
+    "media_type": "images"
+  },
+  "part-7/7_1_2.png": {
+    "original_path": "data/part-7/7_1_2.png",
+    "local_path": "assets/images/part-7/7_1_2.png",
+    "sha256": "de33dd7d3b0b554a40bdc67ac9cd0922752f82199674cb524880e7ca5ed9c906",
+    "size_bytes": 150715,
+    "media_type": "images"
+  },
+  "part-7/7_1_3.png": {
+    "original_path": "data/part-7/7_1_3.png",
+    "local_path": "assets/images/part-7/7_1_3.png",
+    "sha256": "3084f25e057e7d403bcfbdafc94cc5f2814cc4ee3795d22eb640f9d7c10488f4",
+    "size_bytes": 126492,
+    "media_type": "images"
+  },
+  "part-7/7_3_1.png": {
+    "original_path": "data/part-7/7_3_1.png",
+    "local_path": "assets/images/part-7/7_3_1.png",
+    "sha256": "74c7554b9d1c117e4e6c70ab4a3a3267e9ad7c7fc997196715952aee74920ae2",
+    "size_bytes": 38134,
+    "media_type": "images"
+  },
+  "part-7/7_3_2.png": {
+    "original_path": "data/part-7/7_3_2.png",
+    "local_path": "assets/images/part-7/7_3_2.png",
+    "sha256": "0898f4fec8eec0e73158cc7b3ff9e057a9977fb86c776965b6f635baa0e96ba5",
+    "size_bytes": 6723,
+    "media_type": "images"
+  },
+  "part-7/7_vihje.png": {
+    "original_path": "data/part-7/7_vihje.png",
+    "local_path": "assets/images/part-7/7_vihje.png",
+    "sha256": "2e1a5fd0df4b76da1d1d21f4fd7ed0f52ad2455693809092992bb98e39262e55",
+    "size_bytes": 9560,
+    "media_type": "images"
+  },
+  "part-8/7_3_1.png": {
+    "original_path": "data/part-8/7_3_1.png",
+    "local_path": "assets/images/part-8/7_3_1.png",
+    "sha256": "74c7554b9d1c117e4e6c70ab4a3a3267e9ad7c7fc997196715952aee74920ae2",
+    "size_bytes": 38134,
+    "media_type": "images"
+  },
+  "part-8/7_3_2.png": {
+    "original_path": "data/part-8/7_3_2.png",
+    "local_path": "assets/images/part-8/7_3_2.png",
+    "sha256": "0898f4fec8eec0e73158cc7b3ff9e057a9977fb86c776965b6f635baa0e96ba5",
+    "size_bytes": 6723,
+    "media_type": "images"
+  },
+  "part-8/7_vihje.png": {
+    "original_path": "data/part-8/7_vihje.png",
+    "local_path": "assets/images/part-8/7_vihje.png",
+    "sha256": "2e1a5fd0df4b76da1d1d21f4fd7ed0f52ad2455693809092992bb98e39262e55",
+    "size_bytes": 9560,
+    "media_type": "images"
+  },
+  "part-8/8_1_1.png": {
+    "original_path": "data/part-8/8_1_1.png",
+    "local_path": "assets/images/part-8/8_1_1.png",
+    "sha256": "4c783ebc030429284a9b078ad4e72f00918e21571e4f306a2e14defd6f91a319",
+    "size_bytes": 10400,
+    "media_type": "images"
+  },
+  "part-9/9_1_1.png": {
+    "original_path": "data/part-9/9_1_1.png",
+    "local_path": "assets/images/part-9/9_1_1.png",
+    "sha256": "6c55315e1bf6b8be237bfa6dc327db6ea3ea41dbaf814204c637880f0e17ee66",
+    "size_bytes": 9725,
+    "media_type": "images"
+  },
+  "part-9/9_1_2.png": {
+    "original_path": "data/part-9/9_1_2.png",
+    "local_path": "assets/images/part-9/9_1_2.png",
+    "sha256": "6597919198dd6dd612a1d26a1d299622fa2d50490e20e516b0cfb8c90d29104b",
+    "size_bytes": 81490,
+    "media_type": "images"
+  }
+}

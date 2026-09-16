@@ -1,0 +1,729 @@
+{
+  "id": "part11-4-more-recursion-examples",
+  "part": 11,
+  "part_slug": "part-11",
+  "slug": "4-more-recursion-examples",
+  "is_part_index": false,
+  "title_original": "More recursion examples",
+  "title_vi": "Thêm ví dụ đệ quy",
+  "path": "/part-11/4-more-recursion-examples",
+  "source_path": "data/part-11/4-more-recursion-examples.md",
+  "source_hash": "94d381be79a5698ff10233cd0b4f71e499ceae184abdcd4e2aaca52edd79377c",
+  "order": 1,
+  "blocks_count": 39,
+  "blocks": [
+    {
+      "id": "blk-part11-4-more-recursion-examples-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "97ebb160862b8b1b1d75beca2543e2aec7e5b25c825dc0a12b7f20d41c668d38",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be familiar with binary trees and some recursive algorithms used to process them"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ làm quen với cây nhị phân và một số thuật toán đệ quy dùng để xử lý chúng"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "2e1b64adff58f7973978b11e6d3a47b047a7903792abfe45b3bdb9d3c9bd7ff4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The real advantages of recursion become evident when we come across problems where iterative solutions are difficult to write. Let's take a look at _binary trees_, for instance. A binary tree is a branched structure where we have nodes, and at each node the structure branches, at most, into two child branches with nodes of their own. A binary tree could then look like this (computer science is often considered a branch of the natural sciences, but our understanding of trees is a little topsy-turvy, as you'll notice):"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ưu điểm thực sự của đệ quy trở nên rõ ràng khi chúng ta gặp những vấn đề mà khó viết được giải pháp lặp lại. Ví dụ: chúng ta hãy xem _cây nhị phân_. Cây nhị phân là một cấu trúc phân nhánh trong đó chúng ta có các nút và tại mỗi nút, cấu trúc đó phân nhánh nhiều nhất thành hai nhánh con với các nút của riêng chúng. Khi đó, cây nhị phân có thể trông như thế này (khoa học máy tính thường được coi là một nhánh của khoa học tự nhiên, nhưng sự hiểu biết của chúng ta về cây cối có chút lộn xộn, như bạn sẽ nhận thấy):"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0003",
+      "type": "image",
+      "order": 3,
+      "source_hash": "5278b53c809fdef7d815e9e4e12f3313034a8f1f8fb61e6db29b9637f8e0f4a2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "11_4_1_2.png",
+        "alt": "",
+        "attributes": {
+          "src": "11_4_1_2.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "cafb9db2a9f097d1c57ff0a5593890e9630ad6aa1dfb952b83bc4f767db85ec3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Binary trees should at least theoretically be easy to handle recursively: if we want to perform some operation on every node in the tree, our algorithm simply needs to"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Về mặt lý thuyết, cây nhị phân ít nhất phải dễ xử lý đệ quy: nếu chúng ta muốn thực hiện một số thao tác trên mọi nút trong cây, thuật toán của chúng ta chỉ cần"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0005",
+      "type": "list",
+      "order": 5,
+      "source_hash": "89aedfc9674935a14dcd237293d272cac829a60ca1c9349005339ac2b2316530",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "1. Process the current node\n2. Call itself on the child node on the left \n3. Call itself on the child node on the right"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "1. Xử lý nút hiện tại\n2. Gọi chính nó trên nút con bên trái \n3. Gọi chính nó trên nút con bên phải"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0006",
+      "type": "image",
+      "order": 6,
+      "source_hash": "39648bfcc98ac345766b4801541a358bd5088fa993b852f3fac1d9ec2a83665f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "11_4_2_2e.png",
+        "alt": "",
+        "attributes": {
+          "src": "11_4_2_2e.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "bbcbbe0ea9e6753eb3e4483bc21ec9401552aeeb8bba1eb75c2c3a5d63c09bcc",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "As you can see from the image above, both the left and right \"subtrees\" are fully fledged binary trees themselves, and the only node left outside the recursive calls is the parent node, which is processed in step 1, before calling the function recursively. So, we can be sure that when the execution of the function finishes, each node has been visited exactly once."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Như bạn có thể thấy trong hình trên, cả \"cây con\" bên trái và bên phải đều là cây nhị phân chính thức và nút duy nhất còn lại bên ngoài lệnh gọi đệ quy là nút cha, được xử lý ở bước 1, trước khi gọi hàm đệ quy. Vì vậy, chúng ta có thể chắc chắn rằng khi quá trình thực thi hàm kết thúc, mỗi nút đã được truy cập đúng một lần."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "81c2d3469f872869ddad91502d1dda496d072037aa50799c0b15a2d3bf154fb6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "An iterative version of a binary tree traversal would be much more complicated, as we would have to somehow keep track of all the nodes we have already visited. The same principles are true for all computational tree structures, not just binary ones."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phiên bản lặp lại của việc duyệt cây nhị phân sẽ phức tạp hơn nhiều vì bằng cách nào đó chúng ta phải theo dõi tất cả các nút mà chúng ta đã truy cập. Các nguyên tắc tương tự cũng đúng cho tất cả các cấu trúc cây tính toán, không chỉ các cấu trúc nhị phân."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "cc6e8fef2a013d2a02e28cfc5977d4c6364063e794617d688254215750e31416",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A binary tree is easily modelled in Python code as well. We only need to write a class definition for a single node. It has a value attribute and attributes for the left and right child nodes:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cây nhị phân cũng có thể dễ dàng được mô hình hóa bằng mã Python. Chúng ta chỉ cần viết định nghĩa lớp cho một nút duy nhất. Nó có một thuộc tính giá trị và các thuộc tính cho các nút con trái và phải:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0010",
+      "type": "code",
+      "order": 10,
+      "source_hash": "82944eb617b236d59c2448b263ef4e8f081e07d684c0c7860cc0fe64e3eedf7b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\nclass Node:\n    \"\"\" The class represents a single node in a binary tree \"\"\"\n    def __init__(self, value, left_child:'Node' = None, right_child:'Node' = None):\n        self.value = value\n        self.left_child = left_child\n        self.right_child = right_child"
+      },
+      "translation": {
+        "language": "code",
+        "content": "\nclass Node:\n    \"\"\" The class represents a single node in a binary tree \"\"\"\n    def __init__(self, value, left_child:'Node' = None, right_child:'Node' = None):\n        self.value = value\n        self.left_child = left_child\n        self.right_child = right_child"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "82944eb617b236d59c2448b263ef4e8f081e07d684c0c7860cc0fe64e3eedf7b",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "02b39d780c4277985f1bc32b418199bcaac902c3763e2d24b2a5347514511f31",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Now let's assume we want to model the following tree:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bây giờ giả sử chúng ta muốn lập mô hình cây sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0012",
+      "type": "image",
+      "order": 12,
+      "source_hash": "8821ddb58ea1a25c1cbf2d1e1950e8f6d1025482ff7d60489de756cb635468d7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "11_4_3.png",
+        "alt": "",
+        "attributes": {
+          "src": "11_4_3.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "dd3278863304f2196508ab2f43c6f516d61ef7e9330cd0c5bb6bf745a986cad4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We could achieve this with the following code:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng tôi có thể đạt được điều này với đoạn mã sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "7af1d8f584221da482f48266408a0be4aebb4b5f836e9bb5b91060fc23f049c0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    tree = Node(2)\n\n    tree.left_child = Node(3)\n    tree.left_child.left_child = Node(5)\n    tree.left_child.right_child = Node(8)\n\n    tree.right_child = Node(4)\n    tree.right_child.right_child = Node(11)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    tree = Node(2)\n\n    tree.left_child = Node(3)\n    tree.left_child.left_child = Node(5)\n    tree.left_child.right_child = Node(8)\n\n    tree.right_child = Node(4)\n    tree.right_child.right_child = Node(11)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "7af1d8f584221da482f48266408a0be4aebb4b5f836e9bb5b91060fc23f049c0",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0015",
+      "type": "heading",
+      "order": 15,
+      "source_hash": "1634d024c5ea8f227d4c44b4a1659ecf37c257d0e24d5a6416480eb426d62468",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Recursive binary tree algorithms"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thuật toán cây nhị phân đệ quy"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "60f1a070ab6bd3c187044cb93d1b014ab879f446259f4dd6653d6ee3d7307bbf",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "First, let's take a look at an algorithm which prints out all the nodes in a binary tree one by one. In these following examples we will be working with the binary tree defined above."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trước tiên, chúng ta hãy xem một thuật toán in ra từng nút trong cây nhị phân. Trong các ví dụ sau đây, chúng ta sẽ làm việc với cây nhị phân được xác định ở trên."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "66ec885d40a4217e8967695a344c9d85b91a55a101f5d1b5c03812d0ba5b63de",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The argument to the printing function is the root node of the binary tree. This is the node at the very top in our illustration above. All other nodes are _children_ to this node:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đối số của hàm in là nút gốc của cây nhị phân. Đây là nút ở trên cùng trong hình minh họa của chúng tôi ở trên. Tất cả các nút khác đều là _children_ đối với nút này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0018",
+      "type": "code",
+      "order": 18,
+      "source_hash": "3fedc4f6b4c4175f09146bc7297cd4f0a74e1b16bb2b9bfcfd371f5775f20cd7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\ndef print_nodes(root: Node):\n    print(root.value)\n\n    if root.left_child is not None:\n        print_nodes(root.left_child)\n\n    if root.right_child is not None:\n        print_nodes(root.right_child)\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "\ndef print_nodes(root: Node):\n    print(root.value)\n\n    if root.left_child is not None:\n        print_nodes(root.left_child)\n\n    if root.right_child is not None:\n        print_nodes(root.right_child)\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3fedc4f6b4c4175f09146bc7297cd4f0a74e1b16bb2b9bfcfd371f5775f20cd7",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "9ef8b75e6b04430c3680d4458639467d3e80377b6552d21d6fc85458ee786cfe",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The function prints the value of the node passed as an argument, and then calls itself on the left and right child nodes, assuming the nodes are defined. This is a very simple algorithm, but it efficiently and reliably traverses all nodes in the tree, no matter the size of the tree. Crucially, no node is visited twice. Each value is printed only once."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm in giá trị của nút được truyền dưới dạng đối số, sau đó gọi chính nó trên các nút con bên trái và bên phải, giả sử các nút được xác định. Đây là một thuật toán rất đơn giản nhưng nó duyệt qua tất cả các nút trong cây một cách hiệu quả và đáng tin cậy, bất kể kích thước của cây. Điều quan trọng là không có nút nào được truy cập hai lần. Mỗi giá trị chỉ được in một lần."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "7a12f4bfd7697ad315d85a01254f9997237f22de1658f17c8ec91e45d3718768",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If we pass the root node `tree` of the binary tree illustrated above as an argument to the function, it prints out"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu chúng ta chuyển nút gốc `tree` của cây nhị phân được minh họa ở trên làm đối số cho hàm, nó sẽ in ra"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0021",
+      "type": "sample_output",
+      "order": 21,
+      "source_hash": "10a8a89d9e05e8bd4c35a29f673c8c26c4417f37f9dbcefa8861712a79853d51",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "2\n3\n5\n8\n4\n11"
+      },
+      "translation": {
+        "language": "text",
+        "content": "2\n3\n5\n8\n4\n11"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n2\n3\n5\n8\n4\n11\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "f2addfee3fd2a9b0a8c84e456ea2893911998fe1298bfbfa6f1477402110e2e8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "As you can see from the order of the nodesin the printout, the algorithm first moves down the \"left leg\" of the tree down to the very bottom, and from there traverses the other nodes in order."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Như bạn có thể thấy từ thứ tự của các nút trong bản in, trước tiên thuật toán sẽ di chuyển từ \"chân trái\" của cây xuống tận cùng và từ đó đi qua các nút khác theo thứ tự."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "89cd7409662cbb188859c784745d5c8204eff000a83f59c8489815d99f4bc140",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Similarly, we can write an algorithm for calculating the sum of all the values stored in the nodes of the tree:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tương tự, chúng ta có thể viết một thuật toán tính tổng của tất cả các giá trị được lưu trữ trong các nút của cây:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0024",
+      "type": "code",
+      "order": 24,
+      "source_hash": "f360a9035f310055aab1b05b10031bd8c5199dcbba63918915f0953c00c00a77",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def sum_of_nodes(root: Node):\n    node_sum = root.value\n\n    if root.left_child is not None:\n        node_sum += sum_of_nodes(root.left_child)\n\n    if root.right_child is not None:\n        node_sum += sum_of_nodes(root.right_child)\n\n    return node_sum"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def sum_of_nodes(root: Node):\n    node_sum = root.value\n\n    if root.left_child is not None:\n        node_sum += sum_of_nodes(root.left_child)\n\n    if root.right_child is not None:\n        node_sum += sum_of_nodes(root.right_child)\n\n    return node_sum"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f360a9035f310055aab1b05b10031bd8c5199dcbba63918915f0953c00c00a77",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "4026adde8725c86f319ee712609c0a0334623684b6ad99b3dfaa1ed0b67c23b4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The variable `node_sum` is initialised to equal the value of the current node. The value in the variable is then augmented by recursive calls to the node sums of the left and right child trees (first making sure they exist, of course). This result is then returned"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Biến `node_sum` được khởi tạo bằng giá trị của nút hiện tại. Sau đó, giá trị trong biến được tăng lên bằng các lệnh gọi đệ quy tới tổng nút của cây con bên trái và bên phải (tất nhiên trước tiên hãy đảm bảo rằng chúng tồn tại). Kết quả này sau đó được trả về"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0026",
+      "type": "exercise",
+      "order": 26,
+      "source_hash": "c9ff2d447a723390d9412af2760761330a1deb8a2367257ba897afb9178fe674",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `greatest_node(root: Node)` which takes the root node of a binary tree as its argument.\n\nThe function should return the value of the node with the greatest value within the tree. The tree should be traversed recursively.\n\nHint: the function `sum_of_nodes` in the example above may come in handy.\n\nAn example of how the function should work:\n\n```python\nif __name__ == \"__main__\":\n    tree = Node(2)\n\n    tree.left_child = Node(3)\n    tree.left_child.left_child = Node(5)\n    tree.left_child.right_child = Node(8)\n\n    tree.right_child = Node(4)\n    tree.right_child.right_child = Node(11)\n\n    print(greatest_node(tree))\n```\n\n<sample-output>\n\n11\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `greatest_node(root: Node)` lấy nút gốc của cây nhị phân làm đối số.\n\nHàm sẽ trả về giá trị của nút có giá trị lớn nhất trong cây. Cây nên được duyệt theo cách đệ quy.\n\nGợi ý: hàm `sum_of_nodes` trong ví dụ trên có thể hữu ích.\n\nMột ví dụ về cách hoạt động của hàm:\n\n```python\nif __name__ == \"__main__\":\n    tree = Node(2)\n\n    tree.left_child = Node(3)\n    tree.left_child.left_child = Node(5)\n    tree.left_child.right_child = Node(8)\n\n    tree.right_child = Node(4)\n    tree.right_child.right_child = Node(11)\n\n    print(greatest_node(tree))\n```\n\n<sample-output>\n\n11\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-16_greatest_node",
+        "exercise_type": "programming-exercise",
+        "name": "Greatest node",
+        "tmc_name": "part11-16_greatest_node",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0027",
+      "type": "heading",
+      "order": 27,
+      "source_hash": "9ac537227c8026053bfd869c6e4684c14d557e970069d4b3dc5cf500ba55a82c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A sorted binary tree"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cây nhị phân được sắp xếp"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "a1e3be80df41a1fe122f181670911cbdb3fbaffc20b41fdb7d395f65e35f459a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A binary tree is especially useful when the nodes are sorted in a certain way. This makes finding nodes in the tree fast and efficient."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cây nhị phân đặc biệt hữu ích khi các nút được sắp xếp theo một cách nhất định. Điều này làm cho việc tìm kiếm các nút trong cây nhanh chóng và hiệu quả."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "01a5fa885b84fff76c3c07c59219099a85b7f7cc802f47c38c70437bdf782bce",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's take a look a tree which is sorted as follows: the left child of each node is smaller than the node itself, and the right child is correspondingly greater."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy xem một cây được sắp xếp như sau: con bên trái của mỗi nút nhỏ hơn chính nút đó và con bên phải tương ứng lớn hơn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0030",
+      "type": "image",
+      "order": 30,
+      "source_hash": "5278b53c809fdef7d815e9e4e12f3313034a8f1f8fb61e6db29b9637f8e0f4a2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "11_4_1_2.png",
+        "alt": "",
+        "attributes": {
+          "src": "11_4_1_2.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "72c1e125c8582ea6ca33f565723b11478df9a61c2edc7feb96bcc0281151b36c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Now we can write a recursive algorithm for searching for nodes. The idea is very similar to the binary search from the previous section: if the current node is the node we are looking for, return `True`. Else, continue recursively with either the left or the right child tree. If the node is not defined, return `False`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bây giờ chúng ta có thể viết một thuật toán đệ quy để tìm kiếm các nút. Ý tưởng này rất giống với tìm kiếm nhị phân ở phần trước: nếu nút hiện tại là nút chúng ta đang tìm kiếm, hãy trả về `True`. Ngược lại, tiếp tục đệ quy với cây con bên trái hoặc bên phải. Nếu nút không được xác định, hãy trả về `False`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0032",
+      "type": "code",
+      "order": 32,
+      "source_hash": "bd655e874ba507499b1b8e1457e862a5e3f3ad0a59e1afa9d4572aea1237de83",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def find_node(root: Node, value):\n    if root is None:\n        return False\n\n    if value == root.value:\n        return True\n\n    if value > root.value:\n        return find_node(root.right_child, value)\n\n    return find_node(root.left_child, value)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def find_node(root: Node, value):\n    if root is None:\n        return False\n\n    if value == root.value:\n        return True\n\n    if value > root.value:\n        return find_node(root.right_child, value)\n\n    return find_node(root.left_child, value)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "bd655e874ba507499b1b8e1457e862a5e3f3ad0a59e1afa9d4572aea1237de83",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0033",
+      "type": "exercise",
+      "order": 33,
+      "source_hash": "dfe9206e5046e2817a0b3528c1abbba42a0c6cd38bb831790db9a98fbba4e525",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The class `Employee` models an employee of a company:\n\n```python\nclass Employee:\n    def __init__(self, name: str):\n        self.name = name\n        self.subordinates = []\n\n    def add_subordinate(self, employee: 'Employee'):\n        self.subordinates.append(employee)\n```\n\nPlease write a function named `count_subordinates(employee: Employee)` which recursively counts the number of subordinates each employee has.\n\nAn example of the function in action:\n\n```python\nif __name__ == \"__main__\":\n    t1 = Employee(\"Sally\")\n    t2 = Employee(\"Eric\")\n    t3 = Employee(\"Matthew\")\n    t4 = Employee(\"Emily\")\n    t5 = Employee(\"Adele\")\n    t6 = Employee(\"Claire\")\n    t1.add_subordinate(t4)\n    t1.add_subordinate(t6)\n    t4.add_subordinate(t2)\n    t4.add_subordinate(t3)\n    t4.add_subordinate(t5)\n    print(count_subordinates(t1))\n    print(count_subordinates(t4))\n    print(count_subordinates(t5))\n```\n\n<sample-output>\n\n5\n3\n0\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lớp `Employee` mô hình một nhân viên của một công ty:\n\n```python\nclass Employee:\n    def __init__(self, name: str):\n        self.name = name\n        self.subordinates = []\n\n    def add_subordinate(self, employee: 'Employee'):\n        self.subordinates.append(employee)\n```\n\nHãy viết một hàm có tên `count_subordinates(employee: Employee)` để đếm đệ quy số lượng cấp dưới mà mỗi nhân viên có.\n\nMột ví dụ về chức năng đang hoạt động:\n\n```python\nif __name__ == \"__main__\":\n    t1 = Employee(\"Sally\")\n    t2 = Employee(\"Eric\")\n    t3 = Employee(\"Matthew\")\n    t4 = Employee(\"Emily\")\n    t5 = Employee(\"Adele\")\n    t6 = Employee(\"Claire\")\n    t1.add_subordinate(t4)\n    t1.add_subordinate(t6)\n    t4.add_subordinate(t2)\n    t4.add_subordinate(t3)\n    t4.add_subordinate(t5)\n    print(count_subordinates(t1))\n    print(count_subordinates(t4))\n    print(count_subordinates(t5))\n```\n\n<sample-output>\n\n5\n3\n0\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-17_bosses_and_subordinates",
+        "exercise_type": "programming-exercise",
+        "name": "Bosses and subordinates",
+        "tmc_name": "part11-17_bosses_and_subordinates",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0034",
+      "type": "heading",
+      "order": 34,
+      "source_hash": "be3a9b8170b3d68cc3e9c8a3e111934c585c18b2bcea3047ab68f2ab842b9e2a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Revisiting the times before recursion"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Xem lại thời gian trước khi đệ quy"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "dac89ee132189866e36bde02ac6bb9cf35985680565003e817af901a2254cb66",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's finish off this part of the material with a slightly larger exercise concentrating on object oriented programming principles. We do not recommend using recursion in this series of tasks, but list comprehension techniques will come in useful."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy kết thúc phần tài liệu này bằng một bài tập lớn hơn một chút, tập trung vào các nguyên tắc lập trình hướng đối tượng. Chúng tôi khuyên bạn không nên sử dụng đệ quy trong loạt nhiệm vụ này, nhưng các kỹ thuật hiểu danh sách sẽ rất hữu ích."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0036",
+      "type": "exercise",
+      "order": 36,
+      "source_hash": "2517510e42ae51d6cfea739bc4bc5e07998758105b4b7cc55f0f67b242128b2f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In this exercise you will write two different classes, which will in turn form the backbone of the programming exercise which follows this one, where you will write an interactive application.\n\n## Task\n\nPlease write a class named `Task` which models a single task in a software company's list of tasks. Tasks have\n- a description\n- an estimate of the hours required for completing the task\n- the name of the programmer assigned to the task\n- a field for keeping track of whether the task is finished\n- a unique identifier\n\nThe class is used as follows:\n\n```python\nt1 = Task(\"program hello world\", \"Eric\", 3)\nprint(t1.id, t1.description, t1.programmer, t1.workload)\nprint(t1)\nprint(t1.is_finished())\nt1.mark_finished()\nprint(t1)\nprint(t1.is_finished())\nt2 = Task(\"program webstore\", \"Adele\", 10)\nt3 = Task(\"program mobile app for workload accounting\", \"Eric\", 25)\nprint(t2)\nprint(t3)\n```\n\n<sample-output>\n\n1 program hello world Eric 3\n1: program hello world (3 hours), programmer Eric NOT FINISHED\nFalse\n1: program hello world (3 hours), programmer Eric FINISHED\nTrue\n2: program webstore (10 hours), programmer Adele NOT FINISHED\n3: program mobile app for workload accounting (25 hours), programmer Eric NOT FINISHED\n\n</sample-output>\n\nSome clarifications:\n- the state of the task (finished or not yet finished) can be checked with the function `is_finished(self)` which returns a Boolean value\n- a task is not finished when it is created\n- a task is marked as finished by calling the method `mark_finished(self)`\n- the id of a task is a running number which starts with 1. The id of the first task is 1, the id of the second is 2, and so forth.\n\n**Hint**: `id` can be implemented as a [class variable](/part-9/5-class-attributes#class-variables).\n\n## OrderBook\n\nPlease write a class named `OrderBook` which collects all the tasks ordered from the software company. The tasks should be modelled with the class `Task` you just wrote.\n\nThe basic version of an OrderBook is used as follows:\n\n```python\norders = OrderBook()\norders.add_order(\"program webstore\", \"Adele\", 10)\norders.add_order(\"program mobile app for workload accounting\", \"Eric\", 25)\norders.add_order(\"program app for practising mathematics\", \"Adele\", 100)\n\nfor order in orders.all_orders():\n    print(order)\n\nprint()\n\nfor programmer in orders.programmers():\n    print(programmer)\n```\n\n<sample-output>\n\n1: program webstore (10 hours), programmer Adele NOT FINISHED\n2: program mobile app for workload accounting (25 hours), programmer Eric NOT FINISHED\n3: program app for practising mathematics (100 hours), programmer Adele NOT FINISHED\n\nAdele\nEric\n\n</sample-output>\n\nAt this stage your `OrderBook` should provide three methods:\n- `add_order(self, description, programmer, workload)` which adds a new order to the OrderBook. An OrderBook stores the orders internally as `Task` objects. NB: the method should take exactly the arguments mentioned, or else the automated tests will not work correctly.\n- `all_orders(self)` returns a list of all the tasks stored in the OrderBook\n- `programmers(self)` returns a list of the names of all the programmers with tasks stored in the OrderBook. The list should contain each programmer only once\n\n**Hint:** an easy method for removing duplicates is handling the list initially as a [set](https://docs.python.org/3.8/library/stdtypes.html#set). A set is a collection of items where each unique item appears only once. A `set` can be then converted back into a list, and we can then be sure each item is now unique:\n\n```python\nmy_list = [1,1,3,6,4,1,3]\nmy_list2 = list(set(my_list))\nprint(my_list)\nprint(my_list2)\n```\n\n<sample-output>\n\n[1, 1, 3, 6, 4, 1, 3]\n[1, 3, 4, 6]\n\n</sample-output>\n\n## Some more features for OrderBook\n\nPlease write three more methods in your `OrderBook` class.\n\nThe method `mark_finished(self, id: int)` takes the id of the task as its argument and marks the relevant task as finished:\n\n```python\norders = OrderBook()\norders.add_order(\"program webstore\", \"Adele\", 10)\norders.add_order(\"program mobile app for workload accounting\", \"Eric\", 25)\norders.add_order(\"program app for practising mathematics\", \"Adele\", 100)\n\norders.mark_finished(1)\norders.mark_finished(2)\n\nfor order in orders.all_orders():\n    print(order)\n```\n\n<sample-output>\n\n1: program webstore (10 hours), programmer Adele FINISHED\n2: program mobile app for workload accounting (25 hours), programmer Eric FINISHED\n3: program app for practising mathematics (100 hours), programmer Adele NOT FINISHED\n\n</sample-output>\n\nIf there is no task with the given id, the method should raise a `ValueError` exception. If you need a refresher on raising exceptions, please have a look at [part 6](/part-6/3-errors#raising-exceptions).\n\nThe methods `finished_orders(self)` and `unfinished_orders(self)` work as expected: both return a list containing the relevant tasks from the OrderBook.\n\n## Finishing touches to OrderBook\n\nPlease write one last method in your `OrderBook` class: `status_of_programmer(self, programmer: str)` which returns a _tuple_. The tuple should contain the number of finished and unfinished tasks the programmer has assigned to them, along with the estimated hours in both categories.\n\n```python\norders = OrderBook()\norders.add_order(\"program webstore\", \"Adele\", 10)\norders.add_order(\"program mobile app for workload accounting\", \"Adele\", 25)\norders.add_order(\"program app for practising mathematics\", \"Adele\", 100)\norders.add_order(\"program the next facebook\", \"Eric\", 1000)\n\norders.mark_finished(1)\norders.mark_finished(2)\n\nstatus = orders.status_of_programmer(\"Adele\")\nprint(status)\n```\n\n<sample-output>\n\n(2, 1, 35, 100)\n\n</sample-output>\n\nThe first item in the tuple is the number of _finished_ tasks, while the second item is the number of _unfinished_ tasks. The third and fourth items are the sums of workload estimates for the finished and unfinished tasks, respectively.\n\nIf there is no programmer with the given name, the method should raise a `ValueError` exception."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong bài tập này, bạn sẽ viết hai lớp khác nhau, lớp này sẽ tạo thành xương sống của bài tập lập trình tiếp theo bài tập này, nơi bạn sẽ viết một ứng dụng tương tác.\n\n## Nhiệm vụ\n\nVui lòng viết một lớp có tên `Task` mô hình hóa một nhiệm vụ duy nhất trong danh sách nhiệm vụ của công ty phần mềm. Nhiệm vụ có\n- một mô tả\n- ước tính số giờ cần thiết để hoàn thành nhiệm vụ\n- tên của lập trình viên được giao nhiệm vụ\n- một trường để theo dõi xem nhiệm vụ đã hoàn thành chưa\n- một mã định danh duy nhất\n\nLớp được sử dụng như sau:\n\n```python\nt1 = Task(\"program hello world\", \"Eric\", 3)\nprint(t1.id, t1.description, t1.programmer, t1.workload)\nprint(t1)\nprint(t1.is_finished())\nt1.mark_finished()\nprint(t1)\nprint(t1.is_finished())\nt2 = Task(\"program webstore\", \"Adele\", 10)\nt3 = Task(\"program mobile app for workload accounting\", \"Eric\", 25)\nprint(t2)\nprint(t3)\n```\n\n<sample-output>\n\n1 chương trình xin chào thế giới Eric 3\n1: chương trình hello world (3 tiếng), lập trình viên Eric CHƯA HOÀN THÀNH\nsai\n1: chương trình hello world (3 tiếng), lập trình viên Eric FINISHED\nĐúng\n2: chương trình webstore (10 giờ), lập trình viên Adele CHƯA HOÀN THÀNH\n3: lập trình mobile app tính toán khối lượng công việc (25 giờ), lập trình viên Eric CHƯA HOÀN THÀNH\n\n</sample-output>\n\nMột số làm rõ:\n- có thể kiểm tra trạng thái của tác vụ (đã hoàn thành hoặc chưa hoàn thành) bằng hàm `is_finished(self)` trả về giá trị Boolean\n- một nhiệm vụ chưa hoàn thành khi nó được tạo\n- một tác vụ được đánh dấu là đã hoàn thành bằng cách gọi phương thức `mark_finished(self)`\n- id của tác vụ là một số bắt đầu bằng 1. ID của tác vụ đầu tiên là 1, id của tác vụ thứ hai là 2, v.v.\n\n**Gợi ý**: `id` có thể được triển khai dưới dạng [biến lớp](/part-9/5-class-attributes#class-variables).\n\n## Sổ đặt hàng\n\nVui lòng viết một lớp có tên `OrderBook` để thu thập tất cả các nhiệm vụ được đặt hàng từ công ty phần mềm. Các tác vụ phải được mô hình hóa bằng lớp `Task` bạn vừa viết.\n\nPhiên bản cơ bản của OrderBook được sử dụng như sau:\n\n```python\norders = OrderBook()\norders.add_order(\"program webstore\", \"Adele\", 10)\norders.add_order(\"program mobile app for workload accounting\", \"Eric\", 25)\norders.add_order(\"program app for practising mathematics\", \"Adele\", 100)\n\nfor order in orders.all_orders():\n    print(order)\n\nprint()\n\nfor programmer in orders.programmers():\n    print(programmer)\n```\n\n<sample-output>\n\n1: chương trình webstore (10 giờ), lập trình viên Adele CHƯA HOÀN THÀNH\n2: lập trình ứng dụng di động để tính toán khối lượng công việc (25 giờ), lập trình viên Eric CHƯA HOÀN THÀNH\n3: ứng dụng chương trình thực hành toán học (100 giờ), lập trình viên Adele CHƯA HOÀN THÀNH\n\nAdele\nEric\n\n</sample-output>\n\nỞ giai đoạn này `OrderBook` của bạn sẽ cung cấp ba phương pháp:\n- `add_order(self, description, programmer, workload)` thêm đơn hàng mới vào OrderBook. OrderBook lưu trữ các đơn hàng nội bộ dưới dạng đối tượng `Task`. Lưu ý: phương pháp phải lấy chính xác các đối số được đề cập, nếu không các thử nghiệm tự động sẽ không hoạt động chính xác.\n- `all_orders(self)` trả về danh sách tất cả các tác vụ được lưu trong OrderBook\n- `programmers(self)` trả về danh sách tên của tất cả các lập trình viên có nhiệm vụ được lưu trong OrderBook. Danh sách chỉ nên chứa mỗi lập trình viên một lần\n\n**Gợi ý:** một phương thức dễ dàng để loại bỏ trùng lặp là xử lý danh sách ban đầu dưới dạng một [bộ](https://docs.python.org/3.8/library/stdtypes.html#set). Bộ là tập hợp các vật phẩm trong đó mỗi vật phẩm duy nhất chỉ xuất hiện một lần. Sau đó, `set` có thể được chuyển đổi lại thành danh sách và sau đó chúng tôi có thể chắc chắn rằng mỗi mục hiện là duy nhất:\n\n```python\nmy_list = [1,1,3,6,4,1,3]\nmy_list2 = list(set(my_list))\nprint(my_list)\nprint(my_list2)\n```\n\n<sample-output>\n\n[1, 1, 3, 6, 4, 1, 3]\n[1, 3, 4, 6]\n\n</sample-output>\n\n## Một số tính năng khác cho OrderBook\n\nVui lòng viết thêm ba phương thức trong lớp `OrderBook` của bạn.\n\nPhương thức `mark_finished(self, id: int)` lấy id của tác vụ làm đối số và đánh dấu tác vụ liên quan là đã hoàn thành:\n\n```python\norders = OrderBook()\norders.add_order(\"program webstore\", \"Adele\", 10)\norders.add_order(\"program mobile app for workload accounting\", \"Eric\", 25)\norders.add_order(\"program app for practising mathematics\", \"Adele\", 100)\n\norders.mark_finished(1)\norders.mark_finished(2)\n\nfor order in orders.all_orders():\n    print(order)\n```\n\n<sample-output>\n\n1: chương trình webstore (10 giờ), lập trình viên Adele HOÀN THÀNH\n2: lập trình mobile app tính toán khối lượng công việc (25 giờ), lập trình viên Eric FINISHED\n3: ứng dụng chương trình thực hành toán học (100 giờ), lập trình viên Adele CHƯA HOÀN THÀNH\n\n</sample-output>\n\nNếu không có tác vụ nào với id đã cho, phương thức sẽ đưa ra ngoại lệ `ValueError`. Nếu bạn cần xem lại cách nêu ngoại lệ, vui lòng xem [phần 6](/part-6/3-errors#raising-exceptions).\n\nCác phương thức `finished_orders(self)` và `unfinished_orders(self)` hoạt động như mong đợi: cả hai đều trả về một danh sách chứa các tác vụ liên quan từ Sổ đặt hàng.\n\n## Hoàn tất các thao tác đối với Sổ đặt hàng\n\nVui lòng viết một phương thức cuối cùng trong lớp `OrderBook` của bạn: `status_of_programmer(self, programmer: str)` để trả về _tuple_. Bộ dữ liệu phải chứa số lượng nhiệm vụ đã hoàn thành và chưa hoàn thành mà lập trình viên đã giao cho chúng, cùng với số giờ ước tính trong cả hai loại.\n\n```python\norders = OrderBook()\norders.add_order(\"program webstore\", \"Adele\", 10)\norders.add_order(\"program mobile app for workload accounting\", \"Adele\", 25)\norders.add_order(\"program app for practising mathematics\", \"Adele\", 100)\norders.add_order(\"program the next facebook\", \"Eric\", 1000)\n\norders.mark_finished(1)\norders.mark_finished(2)\n\nstatus = orders.status_of_programmer(\"Adele\")\nprint(status)\n```\n\n<sample-output>\n\n(2, 1, 35, 100)\n\n</sample-output>\n\nMục đầu tiên trong bộ dữ liệu là số lượng nhiệm vụ _đã hoàn thành_, trong khi mục thứ hai là số lượng nhiệm vụ _chưa hoàn thành_. Mục thứ ba và thứ tư lần lượt là tổng khối lượng công việc ước tính cho các nhiệm vụ đã hoàn thành và chưa hoàn thành.\n\nNếu không có lập trình viên có tên đã cho, phương thức sẽ đưa ra ngoại lệ `ValueError`."
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-18_order_book",
+        "exercise_type": "programming-exercise",
+        "name": "OrderBook",
+        "tmc_name": "part11-18_order_book",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0037",
+      "type": "exercise",
+      "order": 37,
+      "source_hash": "8dbfeb6caddf3ff4b65b6ad88f03994fb8411448dec03c3d10543d3d797e3395",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In this exercise you will create an interactive application for administering the tasks ordered from a software company. The implementation is completely up to you, but you may use the building blocks from the previous exercise in your application. The examples in the [last section of part 10](/part-10/4-application-development) can also prove useful.\n\n## Without error handling\n\nThe application should work _exactly_ as follows:\n\n<sample-output>\n\ncommands:\n0 exit\n1 add order\n2 list finished tasks\n3 list unfinished tasks\n4 mark task as finished\n5 programmers\n6 status of programmer\n\ncommand: **1**\ndescription: **program the next facebook**\nprogrammer and workload estimate: **jonah 1000**\nadded!\n\ncommand: **1**\ndescription: **program mobile app for workload accounting**\nprogrammer and workload estimate: **eric 25**\nadded!\n\ncommand: **1**\ndescription: **program an app for music theory revision**\nprogrammer and workload estimate: **nina 12**\nadded!\n\ncommand: **1**\ndescription: **program the next twitter**\nprogrammer and workload estimate: **jonah 55**\nadded!\n\ncommand: **2**\nno finished tasks\n\ncommand: **3**\n1: program the next facebook (1000 hours), programmer jonah NOT FINISHED\n2: program mobile app for workload accounting (25 hours), programmer eric NOT FINISHED\n3: program an app for music theory revision (12 hours), programmer nina NOT FINISHED\n4: program the next twitter (55 hours), programmer jonah NOT FINISHED\n\ncommand: **4**\nid: **2**\nmarked as finished\n\ncommand: **4**\nid: **4**\nmarked as finished\n\ncommand: **2**\n2: program mobile app for workload accounting (25 hours), programmer eric FINISHED\n4: program the next twitter (55 hours), programmer jonah FINISHED\n\ncommand: **3**\n1: program the next facebook (1000 hours), programmer jonah NOT FINISHED\n3: program an app for music theory revision (12 hours), programmer nina NOT FINISHED\n\ncommand: **5**\njonah\neric\nnina\n\ncommand: **6**\nprogrammer: **jonah**\ntasks: finished 1 not finished 1, hours: done 55 scheduled 1000\n\n</sample-output>\n\nThe first exercise point is granted for a working application when all user input is flawless.\n\n## Handling errors in user input\n\nTo gain the second exercise point for this exercise your application is expected to recover from erroneus user input. Any input which does not follow the specified format should produce an error message _erroneous input_, and result in yet another repeat of the loop asking for a new command:\n\n<sample-output>\n\ncommand: **1**\ndescription: **program mobile app for workload accounting**\nprogrammer and workload estimate: **eric xxx**\nerroneous input\n\ncommand: **1**\ndescription: **program mobile app for workload accounting**\nprogrammer and workload estimate: **eric**\nerroneous input\n\ncommand: **4**\nid: **1000000**\nerroneous input\n\ncommand: **4**\nid: **XXXX**\nerroneous input\n\ncommand: **6**\nprogrammer: **unknownprogrammer**\nerroneous input\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong bài tập này, bạn sẽ tạo một ứng dụng tương tác để quản lý các nhiệm vụ được đặt hàng từ một công ty phần mềm. Việc triển khai hoàn toàn tùy thuộc vào bạn, nhưng bạn có thể sử dụng các khối xây dựng từ bài tập trước trong ứng dụng của mình. Các ví dụ trong [phần cuối của phần 10](/part-10/4-application-development) cũng có thể hữu ích.\n\n## Không xử lý lỗi\n\nỨng dụng sẽ hoạt động _chính xác_ như sau:\n\n<sample-output>\n\nlệnh:\n0 lối ra\nthêm 1 đơn hàng\n2 danh sách nhiệm vụ đã hoàn thành\n3 danh sách nhiệm vụ chưa hoàn thành\n4 đánh dấu nhiệm vụ là đã hoàn thành\n5 lập trình viên\n6 trạng thái của lập trình viên\n\nlệnh: **1**\nDescription: **lập trình facebook tiếp theo**\nước tính khối lượng công việc và lập trình viên: **jonah 1000**\nđã thêm!\n\nlệnh: **1**\nMô tả: **Chương trình ứng dụng di động để tính toán khối lượng công việc**\nước tính khối lượng công việc và lập trình viên: **eric 25**\nđã thêm!\n\nlệnh: **1**\nMô tả: **Lập trình ứng dụng ôn tập lý thuyết âm nhạc**\nước tính khối lượng công việc và lập trình viên: **nina 12**\nđã thêm!\n\nlệnh: **1**\nmô tả: **lập trình twitter tiếp theo**\nước tính khối lượng công việc và lập trình viên: **jonah 55**\nđã thêm!\n\nlệnh: **2**\nkhông có nhiệm vụ hoàn thành\n\nlệnh: **3**\n1: lập trình facebook tiếp theo (1000 giờ), lập trình viên jonah CHƯA HOÀN THÀNH\n2: lập trình mobile app tính toán khối lượng công việc (25 giờ), lập trình viên eric CHƯA HOÀN THÀNH\n3: lập trình app ôn tập nhạc lý (12 tiếng), lập trình viên Nina CHƯA HOÀN THÀNH\n4: lập trình twitter tiếp theo (55 giờ), lập trình viên jonah CHƯA HOÀN THÀNH\n\nlệnh: **4**\nmã số: **2**\nđánh dấu là đã hoàn thành\n\nlệnh: **4**\nmã số: **4**\nđánh dấu là đã hoàn thành\n\nlệnh: **2**\n2: lập trình mobile app tính toán khối lượng công việc (25 giờ), lập trình viên eric FINISHED\n4: lập trình twitter tiếp theo (55 giờ), lập trình viên jonah HOÀN THÀNH\n\nlệnh: **3**\n1: lập trình facebook tiếp theo (1000 giờ), lập trình viên jonah CHƯA HOÀN THÀNH\n3: lập trình app ôn tập nhạc lý (12 tiếng), lập trình viên Nina CHƯA HOÀN THÀNH\n\nlệnh: **5**\njonah\nEric\nNina\n\nlệnh: **6**\nlập trình viên: **jonah**\nnhiệm vụ: đã hoàn thành 1 chưa hoàn thành 1, giờ: hoàn thành 55 đã lên lịch 1000\n\n</sample-output>\n\nĐiểm thực hiện đầu tiên được cấp cho một ứng dụng đang hoạt động khi tất cả thông tin đầu vào của người dùng đều hoàn hảo.\n\n## Xử lý lỗi khi nhập liệu của người dùng\n\nĐể đạt được điểm bài tập thứ hai cho bài tập này, ứng dụng của bạn phải phục hồi sau khi người dùng nhập sai. Bất kỳ đầu vào nào không tuân theo định dạng đã chỉ định sẽ tạo ra thông báo lỗi _đầu vào sai_ và dẫn đến việc lặp lại vòng lặp yêu cầu lệnh mới:\n\n<sample-output>\n\nlệnh: **1**\nMô tả: **Chương trình ứng dụng di động để tính toán khối lượng công việc**\nước tính khối lượng công việc và lập trình viên: **eric xxx**\nđầu vào sai\n\nlệnh: **1**\nMô tả: **Chương trình ứng dụng di động để tính toán khối lượng công việc**\nước tính khối lượng công việc và lập trình viên: **eric**\nđầu vào sai\n\nlệnh: **4**\nmã số: **1000000**\nđầu vào sai\n\nlệnh: **4**\nmã số: **XXXX**\nđầu vào sai\n\nlệnh: **6**\nlập trình viên: **lập trình viên không rõ**\nđầu vào sai\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-19_order_book_application",
+        "exercise_type": "programming-exercise",
+        "name": "Order book application",
+        "tmc_name": "part11-19_order_book_application",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "ff05298c0973d60be8b75d25f01bfd9ecc9887b5ea6cf58dd19bc993cf013650",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please respond to a quick questionnaire on this part of the course."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng trả lời bảng câu hỏi nhanh về phần này của khóa học."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-4-more-recursion-examples-0039",
+      "type": "quiz",
+      "order": 39,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "6f999303-e9b3-5aa1-b91f-72283853834b",
+        "attributes": {
+          "id": "6f999303-e9b3-5aa1-b91f-72283853834b"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part13-05_vertical_movement",
+  "lesson_id": "part13-2-animation",
+  "part": 13,
+  "tmc_name": "part13-05_vertical_movement",
+  "title_original": "Vertical movement",
+  "title_vi": "Chuyển động dọc",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please create an animation where the robot moves up and down in an endless loop. The end result should look like this:\n\n<img src=\"pygame_vertical.gif\">",
+  "description_vi": "Vui lòng tạo hoạt ảnh trong đó robot di chuyển lên xuống theo vòng lặp vô tận. Kết quả cuối cùng sẽ trông như thế này:\n\n<img src=\"pygame_vertical.gif\">",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "748a2dccd05b6341d0a4c4c082667244a1c97d3b54f76eeb1fba91065c13fccd",
+  "order": 41
+}

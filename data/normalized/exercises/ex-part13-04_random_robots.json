@@ -1,0 +1,16 @@
+{
+  "id": "ex-part13-04_random_robots",
+  "lesson_id": "part13-1-pygame",
+  "part": 13,
+  "tmc_name": "part13-04_random_robots",
+  "title_original": "Random robots",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which draws _a thousand_ robots in random places. The end result should look like this:\n\n<img src=\"pygame_thousand.gif\">",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "16bc4c7a106c439ba1365ff5962d76c63b2e6ee4b05b56eb783254ebb1a91036",
+  "order": 64
+}

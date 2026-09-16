@@ -1,0 +1,58 @@
+{
+  "id": "part04-index",
+  "part": 4,
+  "part_slug": "part-4",
+  "slug": "index",
+  "is_part_index": true,
+  "title_original": "Part 4",
+  "title_vi": "Hàm nâng cao, Danh sách (List) và Định dạng",
+  "path": "/part-4",
+  "source_path": "data/part-4/index.md",
+  "source_hash": "cd5f8a4a1e9defc27d3aec290d7f9ff57f2e72514cf9ed8ce953530a20a83aca",
+  "order": 1,
+  "blocks_count": 2,
+  "blocks": [
+    {
+      "id": "blk-part04-index-0001",
+      "type": "custom_component",
+      "order": 1,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "component_name": "pages-in-this-section",
+        "attributes": {},
+        "raw_source": "<pages-in-this-section></pages-in-this-section>",
+        "parsed": true
+      }
+    },
+    {
+      "id": "blk-part04-index-0002",
+      "type": "custom_component",
+      "order": 2,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "component_name": "exercises-in-this-section",
+        "attributes": {},
+        "raw_source": "<exercises-in-this-section></exercises-in-this-section>",
+        "parsed": true
+      }
+    }
+  ]
+}

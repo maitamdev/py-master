@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-37_neighbours_in_list",
+  "lesson_id": "part04-6-strings-and-lists",
+  "part": 4,
+  "tmc_name": "part04-37_neighbours_in_list",
+  "title_original": "Neighbours in a list",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Given a list of integers, let's decide that two consecutive items in the list are neighbours if their difference is 1. So, items 1 and 2 would be neighbours, and so would items 56 and 55.\n\nPlease write a function named `longest_series_of_neighbours`, which looks for the longest series of neighbours within the list, and returns its length.\n\nFor example, in the list `[1, 2, 5, 4, 3, 4]` the longest list of neighbours would be  `[5, 4, 3, 4]`, with a length of 4.\n\nAn example function call:\n\n```python\nmy_list = [1, 2, 5, 7, 6, 5, 6, 3, 4, 1, 0]\nprint(longest_series_of_neighbours(my_list))\n```\n\n<sample-output>\n\n4\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "my_list = [1, 2, 5, 7, 6, 5, 6, 3, 4, 1, 0]\nprint(longest_series_of_neighbours(my_list))",
+  "grading_data_available": false,
+  "source_hash": "611328a065803c48c226f0914fb56c5c2db9c1c8fed4d5021a59307969aa24e6",
+  "order": 61
+}

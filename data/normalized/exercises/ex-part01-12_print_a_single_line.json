@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-12_print_a_single_line",
+  "lesson_id": "part01-3-more-about-variables",
+  "part": 1,
+  "tmc_name": "part01-12_print_a_single_line",
+  "title_original": "Fix the code: Print a single line",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Each `print` command usually prints out a line of its own, complete with a change of line at the end. However, if the `print` command is given an additional argument `end = \"\"`, it will not print a line change.\n\nFor example:\n\n```python\nprint(\"Hi \", end=\"\")\nprint(\"there!\")\n```\n\n<sample-output>\n\nHi there!\n\n</sample-output>\n\nPlease fix this program so that the entire calculation, complete with result, is printed out on a single line. Do not change the number of `print` commands used.\n\n```python\n\nprint(5)\nprint(\" + \")\nprint(8)\nprint(\" - \")\nprint(4)\nprint(\" = \")\nprint(5 + 8 - 4)\n```",
+  "description_vi": "",
+  "starter_code": "print(\"Hi \", end=\"\")\nprint(\"there!\")",
+  "grading_data_available": false,
+  "source_hash": "4056c2bb7f7b0b993512113246fd30dfede2c6ac4095a9639e6cadb3118b5866",
+  "order": 80
+}

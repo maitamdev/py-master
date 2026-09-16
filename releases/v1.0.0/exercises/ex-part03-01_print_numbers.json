@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-01_print_numbers",
+  "lesson_id": "part03-1-loops-with-conditions",
+  "part": 3,
+  "tmc_name": "part03-01_print_numbers",
+  "title_original": "Print numbers",
+  "title_vi": "In số",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which prints out all the even numbers between two and thirty, using a loop. Print each number on a separate line.\n\nThe beginning of your output should look like this:\n\n<sample-output>\n2\n4\n6\n8\netc...\n</sample-output>",
+  "description_vi": "Hãy viết một chương trình in ra tất cả các số chẵn từ 2 đến 30 bằng cách sử dụng vòng lặp. In mỗi số trên một dòng riêng biệt.\n\nPhần đầu của đầu ra của bạn sẽ trông như thế này:\n\n<sample-output>\n2\n4\n6\n8\nv.v...\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "5fda589bff64dfcf1d782b88370616de2ca8c1590b87368714899eec6b8a753b",
+  "order": 29
+}

@@ -1,0 +1,514 @@
+{
+  "id": "part03-1-loops-with-conditions",
+  "part": 3,
+  "part_slug": "part-3",
+  "slug": "1-loops-with-conditions",
+  "is_part_index": false,
+  "title_original": "Loops with conditions",
+  "path": "/part-3/1-loops-with-conditions",
+  "source_path": "data/part-3/1-loops-with-conditions.md",
+  "source_hash": "21c67c8c0d2cd0fb832a6c73d0f61336bd411b7b18db4b2f443bb057313108f4",
+  "frontmatter": {
+    "path": "/part-3/1-loops-with-conditions",
+    "title": "Loops with conditions",
+    "hidden": false
+  },
+  "chunks_count": 81,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know how to create a while loop with a condition\n- You will know what roles initialisation, formulating a condition and updating variables perform in a loop\n- You will be able to create loops with different kinds of conditions",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know how to create a while loop with a condition\n- You will know what roles initialisation, formulating a condition and updating variables perform in a loop\n- You will be able to create loops with different kinds of conditions\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!--the same text is in sections 3-1, 5-1 and 6-1, check them all if you're changing this-->",
+      "raw_source": "<!--the same text is in sections 3-1, 5-1 and 6-1, check them all if you're changing this-->"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "hint",
+        "name": "About the exercises on this course"
+      },
+      "inner_content": "Becoming a proficient programmer requires a lot of practice, sometimes even quite mechanical practice. It also involves developing problem solving skills and applying intuition. This is why there are a lot of exercises of different kinds on this course. Some of them ask you to quite straightforwardly apply what you have learnt in the material, but some of them are intentionally more challenging and open-ended.\n\nSome of the exercises might at first seem overwhelming, but this is nothing to worry about. None of the exercises is strictly mandatory, and in fact _you need only 25 % of the points from each part to pass the course._ You can find more details about passing the course on the [page on grading](/grading-and-exams).\n\n**The exercises are not in any specific order of difficulty.** Each section usually introduces some new programming concepts, and these are then practised with both simpler and more complicated exercises. **If you come across an exercise that feels too difficult, move on to the next one.** You can always come back to the more difficult exercises if you have time later.\n\nWhen the going inevitably gets tough, a word of consolation: a task that seems impossibly difficult this week will likely feel rather easy in about four weeks' time.",
+      "raw_source": "<text-box variant='hint' name=\"About the exercises on this course\">\n\nBecoming a proficient programmer requires a lot of practice, sometimes even quite mechanical practice. It also involves developing problem solving skills and applying intuition. This is why there are a lot of exercises of different kinds on this course. Some of them ask you to quite straightforwardly apply what you have learnt in the material, but some of them are intentionally more challenging and open-ended.\n\nSome of the exercises might at first seem overwhelming, but this is nothing to worry about. None of the exercises is strictly mandatory, and in fact _you need only 25 % of the points from each part to pass the course._ You can find more details about passing the course on the [page on grading](/grading-and-exams).\n\n**The exercises are not in any specific order of difficulty.** Each section usually introduces some new programming concepts, and these are then practised with both simpler and more complicated exercises. **If you come across an exercise that feels too difficult, move on to the next one.** You can always come back to the more difficult exercises if you have time later.\n\nWhen the going inevitably gets tough, a word of consolation: a task that seems impossibly difficult this week will likely feel rather easy in about four weeks' time.\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the previous section we learnt to use the `while True` loop to repeat sections of code. In that construction the condition of the loop is `True`, so the condition is fulfilled every time. We needed to explicitly break out from the loop each time to avoid an infinite loop. For example:",
+      "raw_source": "In the previous section we learnt to use the `while True` loop to repeat sections of code. In that construction the condition of the loop is `True`, so the condition is fulfilled every time. We needed to explicitly break out from the loop each time to avoid an infinite loop. For example:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# Print numbers until the variable a equals 5\na = 1\nwhile True:\n    print(a)\n    a += 1\n    if a == 5:\n        break",
+      "raw_source": "```python\n# Print numbers until the variable a equals 5\na = 1\nwhile True:\n    print(a)\n    a += 1\n    if a == 5:\n        break\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "1\n2\n3\n4",
+      "raw_source": "<sample-output>\n\n1\n2\n3\n4\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Of course, the condition doesn't always have to be `True`, but instead any Boolean expression can be used as the condition. The general structure of the `while` statement is as follows:",
+      "raw_source": "Of course, the condition doesn't always have to be `True`, but instead any Boolean expression can be used as the condition. The general structure of the `while` statement is as follows:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "while <condition>:\n    <block>",
+      "raw_source": "```python\nwhile <condition>:\n    <block>\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The idea here is that the execution goes back and forth, checking if the condition is true and executing the code within the block, over and over again. If the condition at any point is false, execution of the program continues from the line after the `while` block.",
+      "raw_source": "The idea here is that the execution goes back and forth, checking if the condition is true and executing the code within the block, over and over again. If the condition at any point is false, execution of the program continues from the line after the `while` block."
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "3_1_1.png"
+      },
+      "raw_source": "<img src=\"3_1_1.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the following loop we have the condition `number < 10`. The block within the loop is executed only if the variable number is less than 10.",
+      "raw_source": "In the following loop we have the condition `number < 10`. The block within the loop is executed only if the variable number is less than 10."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number = int(input(\"Please type in a number: \"))\n\nwhile number < 10:\n    print(number)\n    number += 1\n\nprint(\"Execution finished.\")",
+      "raw_source": "```python\nnumber = int(input(\"Please type in a number: \"))\n\nwhile number < 10:\n    print(number)\n    number += 1\n\nprint(\"Execution finished.\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This could print out:",
+      "raw_source": "This could print out:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in a number: **4**\n4\n5\n6\n7\n8\n9\nExecution finished.",
+      "raw_source": "<sample-output>\n\nPlease type in a number: **4**\n4\n5\n6\n7\n8\n9\nExecution finished.\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In this structure the condition is always checked before the block within the loop is executed. It may happen that the block never gets executed, like so:",
+      "raw_source": "In this structure the condition is always checked before the block within the loop is executed. It may happen that the block never gets executed, like so:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in a number: **12**\nExecution finished.",
+      "raw_source": "<sample-output>\n\nPlease type in a number: **12**\nExecution finished.\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "12 is not less than 10, so the program doesn't print out a single number.",
+      "raw_source": "12 is not less than 10, so the program doesn't print out a single number."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Initialisation, condition and update",
+      "raw_source": "## Initialisation, condition and update"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "To create a loop you'll often need to include three distinct steps: initialisation, condition, and updating the iteration variables.",
+      "raw_source": "To create a loop you'll often need to include three distinct steps: initialisation, condition, and updating the iteration variables."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "_Initialisation_ refers to setting the initial value(s) of the variable(s) used within the condition of the loop. These are often called the iteration or iterator variables. This is performed before the loop is first entered. The _condition_ defines for how long the loop is to be executed. It is set out at the very beginning of the loop. Finally, within each repetition of the loop the variables involved in the condition are _updated_, so that each iteration brings the loop one step closer to its conclusion. The following image illustrates these steps:",
+      "raw_source": "_Initialisation_ refers to setting the initial value(s) of the variable(s) used within the condition of the loop. These are often called the iteration or iterator variables. This is performed before the loop is first entered. The _condition_ defines for how long the loop is to be executed. It is set out at the very beginning of the loop. Finally, within each repetition of the loop the variables involved in the condition are _updated_, so that each iteration brings the loop one step closer to its conclusion. The following image illustrates these steps:"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!--- this is here in case the following image needs to be updated",
+      "raw_source": "<!--- this is here in case the following image needs to be updated"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# Ask the user for a number\nnumber = int(input(\"Please type in a number: \"))\n\n# Repeat while the number is less than 10\nwhile number < 10:\n\n    # Print out and increment\n    print(number)\n    number += 1\n\nprint(\"Execution finished.\")",
+      "raw_source": "```python\n# Ask the user for a number\nnumber = int(input(\"Please type in a number: \"))\n\n# Repeat while the number is less than 10\nwhile number < 10:\n\n    # Print out and increment\n    print(number)\n    number += 1\n\nprint(\"Execution finished.\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "3_1_2.png"
+      },
+      "raw_source": "<img src=\"3_1_2.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If any one of these three components is missing, the loop will likely not function correctly. A typical error is omitting the update step:",
+      "raw_source": "If any one of these three components is missing, the loop will likely not function correctly. A typical error is omitting the update step:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number = 1\n\nwhile number < 10:\n    print(number)\n\nprint(\"Execution finished.\")",
+      "raw_source": "```python\nnumber = 1\n\nwhile number < 10:\n    print(number)\n\nprint(\"Execution finished.\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here, the value of the variable `number` never changes. The program is stuck in an infinite loop, and the exact same bit of code is repeated over and over again until the user stops the execution, for example by pressing `Control` + `C`:",
+      "raw_source": "Here, the value of the variable `number` never changes. The program is stuck in an infinite loop, and the exact same bit of code is repeated over and over again until the user stops the execution, for example by pressing `Control` + `C`:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "1\n1\n1\n1\n1\n(continued ad infinitum...)",
+      "raw_source": "<sample-output>\n\n1\n1\n1\n1\n1\n(continued ad infinitum...)\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Print numbers",
+        "tmcname": "part03-01_print_numbers"
+      },
+      "inner_content": "Please write a program which prints out all the even numbers between two and thirty, using a loop. Print each number on a separate line.\n\nThe beginning of your output should look like this:\n\n<sample-output>\n2\n4\n6\n8\netc...\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Print numbers\" tmcname=\"part03-01_print_numbers\">\n\nPlease write a program which prints out all the even numbers between two and thirty, using a loop. Print each number on a separate line.\n\nThe beginning of your output should look like this:\n\n<sample-output>\n2\n4\n6\n8\netc...\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Fix the code: Countdown",
+        "tmcname": "part03-02_countdown"
+      },
+      "inner_content": "The program below has some syntactic issues:\n\n```python\nprint(\"Are you ready?\")\nnumber = int(input(\"Please type in a number: \"))\nwhile number = 0:\nprint(number)\nprint(\"Now!\")\n```\n\nPlease fix it so that it prints out the following:\n\n<sample-output>\n\nAre you ready?\nPlease type in a number: **5**\n5\n4\n3\n2\n1\nNow!\n\n</sample-output>\n\nThis exercise is similar to the countdown exercise in the last section, but please don't use a `while True` loop this time round!",
+      "raw_source": "<in-browser-programming-exercise name=\"Fix the code: Countdown\" tmcname=\"part03-02_countdown\">\n\nThe program below has some syntactic issues:\n\n```python\nprint(\"Are you ready?\")\nnumber = int(input(\"Please type in a number: \"))\nwhile number = 0:\nprint(number)\nprint(\"Now!\")\n```\n\nPlease fix it so that it prints out the following:\n\n<sample-output>\n\nAre you ready?\nPlease type in a number: **5**\n5\n4\n3\n2\n1\nNow!\n\n</sample-output>\n\nThis exercise is similar to the countdown exercise in the last section, but please don't use a `while True` loop this time round!\n\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Writing conditions",
+      "raw_source": "## Writing conditions"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Any Boolean expression or combination thereof is a valid condition in a loop. For example, the following program prints out every third number, but only as long as the number is less than 100 and not divisible by 5:",
+      "raw_source": "Any Boolean expression or combination thereof is a valid condition in a loop. For example, the following program prints out every third number, but only as long as the number is less than 100 and not divisible by 5:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number = int(input(\"Please type in a number: \"))\n\nwhile number < 100 and number % 5 != 0:\n    print(number)\n    number += 3",
+      "raw_source": "```python\nnumber = int(input(\"Please type in a number: \"))\n\nwhile number < 100 and number % 5 != 0:\n    print(number)\n    number += 3\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Two examples of the program's execution with different inputs:",
+      "raw_source": "Two examples of the program's execution with different inputs:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in a number: **28**\n28\n31\n34\n37",
+      "raw_source": "<sample-output>\n\nPlease type in a number: **28**\n28\n31\n34\n37\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in a number: **96**\n96\n99",
+      "raw_source": "<sample-output>\n\nPlease type in a number: **96**\n96\n99\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When the input is 28, the loop ends with the number 37, because the next number is 40, which is divisible by 5. When the input is 96, the loop ends with the number 99, because the next number is 102, which is not less than 100.",
+      "raw_source": "When the input is 28, the loop ends with the number 37, because the next number is 40, which is divisible by 5. When the input is 96, the loop ends with the number 99, because the next number is 102, which is not less than 100."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Whenever you write a loop you should make sure that the execution of the loop will always end at some point. The following program either finishes or doesn't, depending on the input:",
+      "raw_source": "Whenever you write a loop you should make sure that the execution of the loop will always end at some point. The following program either finishes or doesn't, depending on the input:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number = int(input(\"Please type in a number: \"))\n\nwhile number != 10:\n    print(number)\n    number += 2",
+      "raw_source": "```python\nnumber = int(input(\"Please type in a number: \"))\n\nwhile number != 10:\n    print(number)\n    number += 2\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the input is an even number and equals 10 or less, the loop will terminate:",
+      "raw_source": "If the input is an even number and equals 10 or less, the loop will terminate:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in a number: **4**\n4\n6\n8",
+      "raw_source": "<sample-output>\n\nPlease type in a number: **4**\n4\n6\n8\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In any other case the loop gets executed endlessly, as there is no way the variable could then ever equal 10. For example 3 or 12 are inputs that would end in an infinite loop.",
+      "raw_source": "In any other case the loop gets executed endlessly, as there is no way the variable could then ever equal 10. For example 3 or 12 are inputs that would end in an infinite loop."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Numbers",
+        "tmcname": "part03-03_numbers"
+      },
+      "inner_content": "Please write a program which asks the user for a number. The program then prints out all integer numbers greater than zero but smaller than the input.\n\n<sample-output>\n\nUpper limit: **5**\n1\n2\n3\n4\n\n</sample-output>\n\nPlease don't use the value `True` as the condition of your `while` loop in this exercise!",
+      "raw_source": "<in-browser-programming-exercise name=\"Numbers\" tmcname=\"part03-03_numbers\">\n\nPlease write a program which asks the user for a number. The program then prints out all integer numbers greater than zero but smaller than the input.\n\n<sample-output>\n\nUpper limit: **5**\n1\n2\n3\n4\n\n</sample-output>\n\nPlease don't use the value `True` as the condition of your `while` loop in this exercise!\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Debugging tips",
+      "raw_source": "## Debugging tips"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Imagine you are writing some slightly more complicated program, such as the one in the next exercise, _Powers of two_. The first efforts could look like this:",
+      "raw_source": "Imagine you are writing some slightly more complicated program, such as the one in the next exercise, _Powers of two_. The first efforts could look like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "limit = int(input(\"Upper limit:\"))\nnumber = 1\nwhile number == limit:\n   # more code",
+      "raw_source": "```python\nlimit = int(input(\"Upper limit:\"))\nnumber = 1\nwhile number == limit:\n   # more code\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here the program starts with reading the input, and continues with the outline of the loop and some attempt at a condition.",
+      "raw_source": "Here the program starts with reading the input, and continues with the outline of the loop and some attempt at a condition."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It is likely the code will not work as desired on the first try. It might have to be tested dozens or even hundreds of times before it works correctly.",
+      "raw_source": "It is likely the code will not work as desired on the first try. It might have to be tested dozens or even hundreds of times before it works correctly."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This bit of code always asks for input from the user, which makes testing it slow and cumbersome. Each time the program is tested, input must be typed in.",
+      "raw_source": "This bit of code always asks for input from the user, which makes testing it slow and cumbersome. Each time the program is tested, input must be typed in."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "One way around this is \"hard-coding\" the input while testing:",
+      "raw_source": "One way around this is \"hard-coding\" the input while testing:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# let's hard-code the input value for testing\nlimit = 8 # int(input(\"Upper limit\"))\nnumber = 1\nwhile number == limit:\n   # more code ",
+      "raw_source": "```python\n# let's hard-code the input value for testing\nlimit = 8 # int(input(\"Upper limit\"))\nnumber = 1\nwhile number == limit:\n   # more code \n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When the program works with the one hard-coded input, it is easy to test it with other hard-coded inputs as well. When it seems to work correctly all round, it can be tested with input from the user.",
+      "raw_source": "When the program works with the one hard-coded input, it is easy to test it with other hard-coded inputs as well. When it seems to work correctly all round, it can be tested with input from the user."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This trick works with many of the tests that the exercises on this course are graded with. If the test tells you that the program works incorrectly when the input is, say, 42, that input can be hard-coded into the program while you look for the source of the bug:",
+      "raw_source": "This trick works with many of the tests that the exercises on this course are graded with. If the test tells you that the program works incorrectly when the input is, say, 42, that input can be hard-coded into the program while you look for the source of the bug:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# the test said the program works incorrectly when the input is 42\nlimit = 42 # int(input(\"Upper limit\"))\nnumber = 1\nwhile number == limit:\n   # more code",
+      "raw_source": "```python\n# the test said the program works incorrectly when the input is 42\nlimit = 42 # int(input(\"Upper limit\"))\nnumber = 1\nwhile number == limit:\n   # more code\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Print statement debugging was mentioned a few times in the [previous part](/part-2) of the course. The programs you are asked to write will become more and more complex as the course advances. The amount of debugging you will have to do will likely increase accordingly. Common causes for bugs lie in the conditions that terminate loops; they may work correctly for some inputs and fail for others, and it is not always obvious why that is.",
+      "raw_source": "Print statement debugging was mentioned a few times in the [previous part](/part-2) of the course. The programs you are asked to write will become more and more complex as the course advances. The amount of debugging you will have to do will likely increase accordingly. Common causes for bugs lie in the conditions that terminate loops; they may work correctly for some inputs and fail for others, and it is not always obvious why that is."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "That is why it is high time you included print statement debugging in your programming practices, if you haven't done so already. You can find debugging instructions in the [first](/part-2/1-programming-terminology) and the [fourth](/part-2/4-simple-loops) section of the previous part.",
+      "raw_source": "That is why it is high time you included print statement debugging in your programming practices, if you haven't done so already. You can find debugging instructions in the [first](/part-2/1-programming-terminology) and the [fourth](/part-2/4-simple-loops) section of the previous part."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Besides print statements, there are many other tools that can be used for debugging. One of these is the [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit) on the [Python Tutor](http://www.pythontutor.com/) website. The tool allows you to execute your code line by line, and also shows you the values stored in variables at each step.",
+      "raw_source": "Besides print statements, there are many other tools that can be used for debugging. One of these is the [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit) on the [Python Tutor](http://www.pythontutor.com/) website. The tool allows you to execute your code line by line, and also shows you the values stored in variables at each step."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The slightly broken code from the debugging example in the [previous section](/part-2/4-simple-loops) is visualised with Python Tutor in the following image:",
+      "raw_source": "The slightly broken code from the debugging example in the [previous section](/part-2/4-simple-loops) is visualised with Python Tutor in the following image:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "3_1_3.png"
+      },
+      "raw_source": "<img src=\"3_1_3.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The red arrow points to where the execution of the program is at the moment. The tool displays what has been printed out so far, and also shows the value each variable has at each step. The execution moves forward line by line as you press _Next_.",
+      "raw_source": "The red arrow points to where the execution of the program is at the moment. The tool displays what has been printed out so far, and also shows the value each variable has at each step. The execution moves forward line by line as you press _Next_."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "All you need to do to use the visualisation tool is to copy your code and paste it into the [code window](http://www.pythontutor.com/visualize.html#mode=edit) of the tool. The tool does have some limitations compared to the version of Python used on this course. If you come across any cryptic error messages, it may be better to try some other debugging method.",
+      "raw_source": "All you need to do to use the visualisation tool is to copy your code and paste it into the [code window](http://www.pythontutor.com/visualize.html#mode=edit) of the tool. The tool does have some limitations compared to the version of Python used on this course. If you come across any cryptic error messages, it may be better to try some other debugging method."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "More experienced programmers are rarely heavy users of the visualisation tool, but for a beginner it can be a valuable aid. Programming as a discipline has little room for luck or chance. It is essential that a programmer understands what values are created by their code at any given moment in the execution. If the values stored in variables are not as expected, there is most likely a bug in the program.",
+      "raw_source": "More experienced programmers are rarely heavy users of the visualisation tool, but for a beginner it can be a valuable aid. Programming as a discipline has little room for luck or chance. It is essential that a programmer understands what values are created by their code at any given moment in the execution. If the values stored in variables are not as expected, there is most likely a bug in the program."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The visualisation tool and debugging print statements are both great ways for a programmer to see with their own eyes that a program does exactly what was expected of it.",
+      "raw_source": "The visualisation tool and debugging print statements are both great ways for a programmer to see with their own eyes that a program does exactly what was expected of it."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Powers of two",
+        "tmcname": "part03-04_powers_of_two"
+      },
+      "inner_content": "Please write a program which asks the user to type in an upper limit. The program then prints out numbers so that each subsequent number is the previous one doubled, starting from the number 1. That is, the program prints out powers of two in order.\n\nThe execution of the program finishes when the next number to be printed would be greater than the limit set by the user. No numbers greater than the limit should be printed.\n\n<sample-output>\n\nUpper limit: **8**\n1\n2\n4\n8\n\n</sample-output>\n\n<sample-output>\n\nUpper limit: **20**\n1\n2\n4\n8\n16\n\n</sample-output>\n\n<sample-output>\n\nUpper limit: **100**\n1\n2\n4\n8\n16\n32\n64\n\n</sample-output>\n\nPlease don't use the value `True` as the condition of your `while` loop in this exercise!\n\n**What are powers of two?** The first power of two is the number 1. The next one is 1 times 2, which is 2. The next is 2 times 2, which is 4. The next is 4 times 2, which is 8, and so forth. Each power in the sequence is multiplied by two to produce the next one.",
+      "raw_source": "<in-browser-programming-exercise name=\"Powers of two\" tmcname=\"part03-04_powers_of_two\">\n\nPlease write a program which asks the user to type in an upper limit. The program then prints out numbers so that each subsequent number is the previous one doubled, starting from the number 1. That is, the program prints out powers of two in order.\n\nThe execution of the program finishes when the next number to be printed would be greater than the limit set by the user. No numbers greater than the limit should be printed.\n\n<sample-output>\n\nUpper limit: **8**\n1\n2\n4\n8\n\n</sample-output>\n\n<sample-output>\n\nUpper limit: **20**\n1\n2\n4\n8\n16\n\n</sample-output>\n\n<sample-output>\n\nUpper limit: **100**\n1\n2\n4\n8\n16\n32\n64\n\n</sample-output>\n\nPlease don't use the value `True` as the condition of your `while` loop in this exercise!\n\n**What are powers of two?** The first power of two is the number 1. The next one is 1 times 2, which is 2. The next is 2 times 2, which is 4. The next is 4 times 2, which is 8, and so forth. Each power in the sequence is multiplied by two to produce the next one.\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Powers of base n",
+        "tmcname": "part03-05_powers_of_base_n"
+      },
+      "inner_content": "Please change the program from the previous exercise so that the user gets to input also the base which is multiplied (in the previous program the base was always 2). \n\n<sample-output>\n\nUpper limit: **27**\nBase: **3**\n1\n3\n9\n27\n\n</sample-output>\n\n<sample-output>\n\nUpper limit: **1234567**\nBase: **10**\n1\n10\n100\n1000\n10000\n100000\n1000000\n\n</sample-output>\n\nPlease don't use the value `True` as the condition of your `while` loop in this exercise!",
+      "raw_source": "<in-browser-programming-exercise name=\"Powers of base n\" tmcname=\"part03-05_powers_of_base_n\">\n\nPlease change the program from the previous exercise so that the user gets to input also the base which is multiplied (in the previous program the base was always 2). \n\n<sample-output>\n\nUpper limit: **27**\nBase: **3**\n1\n3\n9\n27\n\n</sample-output>\n\n<sample-output>\n\nUpper limit: **1234567**\nBase: **10**\n1\n10\n100\n1000\n10000\n100000\n1000000\n\n</sample-output>\n\nPlease don't use the value `True` as the condition of your `while` loop in this exercise!\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "The sum of consecutive numbers, version 1",
+        "tmcname": "part03-06_consecutive_sum_v1"
+      },
+      "inner_content": "Please write a program which asks the user to type in a limit. The program then calculates the sum of consecutive numbers (1 + 2 + 3 + ...) until the sum is at least equal to the limit set by the user. The program should function as follows:\n\n<sample-output>\n\nLimit: **2**\n3\n\n</sample-output>\n\n<sample-output>\n\nLimit: **10**\n10\n\n</sample-output>\n\n<sample-output>\n\nLimit: **18**\n21\n\n</sample-output>\n\nIf you have trouble understanding how the desired output is calculated, the sample outputs in the next exercise may help. You may assume the number typed in by the user is always equal to 2 or higher.",
+      "raw_source": "<in-browser-programming-exercise name=\"The sum of consecutive numbers, version 1\" tmcname=\"part03-06_consecutive_sum_v1\">\n\nPlease write a program which asks the user to type in a limit. The program then calculates the sum of consecutive numbers (1 + 2 + 3 + ...) until the sum is at least equal to the limit set by the user. The program should function as follows:\n\n<sample-output>\n\nLimit: **2**\n3\n\n</sample-output>\n\n<sample-output>\n\nLimit: **10**\n10\n\n</sample-output>\n\n<sample-output>\n\nLimit: **18**\n21\n\n</sample-output>\n\nIf you have trouble understanding how the desired output is calculated, the sample outputs in the next exercise may help. You may assume the number typed in by the user is always equal to 2 or higher.\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Building strings",
+      "raw_source": "## Building strings"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the very [first week of the course](/part-1/2-information-from-the-user) we learnt that it is possible to \"build\" strings out of shorter strings with the `+` operator. For example, this is valid Python code:",
+      "raw_source": "In the very [first week of the course](/part-1/2-information-from-the-user) we learnt that it is possible to \"build\" strings out of shorter strings with the `+` operator. For example, this is valid Python code:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "words = \"pride\"\nwords = words + \", prejudice\"\nwords = words + \" and python\"\n\nprint(words)",
+      "raw_source": "```python\nwords = \"pride\"\nwords = words + \", prejudice\"\nwords = words + \" and python\"\n\nprint(words)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "pride, prejudice and python",
+      "raw_source": "<sample-output>\n\npride, prejudice and python\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `+=` operator allows us to write this a little more compactly:",
+      "raw_source": "The `+=` operator allows us to write this a little more compactly:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "words = \"pride\"\nwords += \", prejudice\"\nwords += \" and python\"\n\nprint(words)",
+      "raw_source": "```python\nwords = \"pride\"\nwords += \", prejudice\"\nwords += \" and python\"\n\nprint(words)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This also applies to f-strings, which may come in handy if values stored in variables are needed as parts of the resulting string. For example this would work:",
+      "raw_source": "This also applies to f-strings, which may come in handy if values stored in variables are needed as parts of the resulting string. For example this would work:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "course = \"Introduction to Programming\"\ngrade = 4\n\nverdict = \"You have received \"\nverdict += f\"the grade {grade} \"\nverdict += f\"from the course {course}\"\n\nprint(verdict)",
+      "raw_source": "```python\ncourse = \"Introduction to Programming\"\ngrade = 4\n\nverdict = \"You have received \"\nverdict += f\"the grade {grade} \"\nverdict += f\"from the course {course}\"\n\nprint(verdict)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "You have received the grade 4 from the course Introduction to Programming",
+      "raw_source": "<sample-output>\n\nYou have received the grade 4 from the course Introduction to Programming\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the previous exercise you calculated the sum of consecutive numbers by always adding a new value inside a loop.",
+      "raw_source": "In the previous exercise you calculated the sum of consecutive numbers by always adding a new value inside a loop."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The exact same idea applies to strings as well: you can add new parts to a string within a loop. This technique should be useful in the following exercise.",
+      "raw_source": "The exact same idea applies to strings as well: you can add new parts to a string within a loop. This technique should be useful in the following exercise."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "The sum of consecutive numbers, version 2",
+        "tmcname": "part03-07_consecutive_sum_v2"
+      },
+      "inner_content": "Please write a new version of the program in the previous exercise. In addition to the result it should also print out the calculation performed:\n\n<sample-output>\n\nLimit: **2**\nThe consecutive sum: 1 + 2 = 3\n\n</sample-output>\n\n<sample-output>\n\nLimit: **10**\nThe consecutive sum: 1 + 2 + 3 + 4 = 10\n\n</sample-output>\n\n<sample-output>\n\nLimit: **18**\nThe consecutive sum: 1 + 2 + 3 + 4 + 5 + 6 = 21\n\n</sample-output>\n\nYou may assume the number typed in by the user is always equal to 2 or higher.",
+      "raw_source": "<in-browser-programming-exercise name=\"The sum of consecutive numbers, version 2\" tmcname=\"part03-07_consecutive_sum_v2\">\n\nPlease write a new version of the program in the previous exercise. In addition to the result it should also print out the calculation performed:\n\n<sample-output>\n\nLimit: **2**\nThe consecutive sum: 1 + 2 = 3\n\n</sample-output>\n\n<sample-output>\n\nLimit: **10**\nThe consecutive sum: 1 + 2 + 3 + 4 = 10\n\n</sample-output>\n\n<sample-output>\n\nLimit: **18**\nThe consecutive sum: 1 + 2 + 3 + 4 + 5 + 6 = 21\n\n</sample-output>\n\nYou may assume the number typed in by the user is always equal to 2 or higher.\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!---\nA quiz to review the contents of this section:",
+      "raw_source": "<!---\nA quiz to review the contents of this section:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "900c0293-b14c-5736-b1a3-68d4fa01ac43"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"900c0293-b14c-5736-b1a3-68d4fa01ac43\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    }
+  ]
+}

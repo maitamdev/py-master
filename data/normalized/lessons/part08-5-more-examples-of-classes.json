@@ -1,0 +1,725 @@
+{
+  "id": "part08-5-more-examples-of-classes",
+  "part": 8,
+  "part_slug": "part-8",
+  "slug": "5-more-examples-of-classes",
+  "is_part_index": false,
+  "title_original": "More examples of classes",
+  "title_vi": "",
+  "path": "/part-8/5-more-examples-of-classes",
+  "source_path": "data/part-8/5-more-examples-of-classes.md",
+  "source_hash": "cc6f8ec741c7d98cf3549a31496bdd69cffc4f79f6dfbd882741ef9132f797bb",
+  "order": 1,
+  "blocks_count": 39,
+  "blocks": [
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "561da925f8257040ff577564669df2ea05d580a71180e9569701204da8a71a78",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be able to create more versatile classes\n- You will know how to add a `__str__` method to your class definitions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0002",
+      "type": "heading",
+      "order": 2,
+      "source_hash": "94a58869404690e599f19e8573064d0996b4896b84c2ebbfa1c82d59d7a0a280",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Example 1: the Rectangle class"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "2e1ab85af1b94d880d85ce34a90909a99ab1f512b074ff286919d6b33bfee937",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at a class which models a rectangle in two-dimensional space:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0004",
+      "type": "code",
+      "order": 4,
+      "source_hash": "44f56063f1f5fca6dd88b735e3ad132f83882546288d9a3fdfaa848a4ad80514",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Rectangle:\n    def __init__(self, left_upper: tuple, right_lower: tuple):\n        self.left_upper = left_upper\n        self.right_lower = right_lower\n        self.width = right_lower[0]-left_upper[0]\n        self.height = right_lower[1]-left_upper[1]\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return self.width * 2 + self.height * 2\n\n    def move(self, x_change: int, y_change: int):\n        corner = self.left_upper\n        self.left_upper = (corner[0]+x_change, corner[1]+y_change)\n        corner = self.right_lower\n        self.right_lower = (corner[0]+x_change, corner[1]+y_change)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Rectangle:\n    def __init__(self, left_upper: tuple, right_lower: tuple):\n        self.left_upper = left_upper\n        self.right_lower = right_lower\n        self.width = right_lower[0]-left_upper[0]\n        self.height = right_lower[1]-left_upper[1]\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return self.width * 2 + self.height * 2\n\n    def move(self, x_change: int, y_change: int):\n        corner = self.left_upper\n        self.left_upper = (corner[0]+x_change, corner[1]+y_change)\n        corner = self.right_lower\n        self.right_lower = (corner[0]+x_change, corner[1]+y_change)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "44f56063f1f5fca6dd88b735e3ad132f83882546288d9a3fdfaa848a4ad80514",
+        "length_lines": 18
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "6c9fe4b7995e146129efe47b4dd24e0958863c19def10bd147b5120f3cad1b06",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A new `Rectangle` is created with two tuples as arguments. These tuples contain the x and y coordinates of the upper left corner and the lower right corner. The constructor calculates the height and width of the rectangle based on these values."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "c65efabd0093fa23eceb6fd194d3551563bcf751f97bed12cf3f0be67d0c2832",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The methods `area` and `perimeter` calculate the area and perimeter of the rectangle based on the height and width. The method `move` moves the rectangle by the x and y values given as arguments."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "d33db77476e3511e37e2fa444a0d985b03768e02744185149b481ebdaf5fda06",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The rectanlge is represented in a coordinate system where the x coordinates increase from left to right, and the y coordinates increase from top to bottom. This is a common way of handling coordinates in programming because it is often easier and more natural to consider the top left corner of the computer screen as the point where x and y equal zero."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "f03d22a5b26d8459a61c03bb8a51fffc32088e8b4a0486a036b4c8b733deaf14",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The following program tests the `Rectangle` class:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0009",
+      "type": "code",
+      "order": 9,
+      "source_hash": "fb5fe85095e893247f647a193dc5548a1635d35815ac7eb8b992a272f58721c9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "rectangle = Rectangle((1, 1), (4, 3))\nprint(rectangle.left_upper)\nprint(rectangle.right_lower)\nprint(rectangle.width)\nprint(rectangle.height)\nprint(rectangle.perimeter())\nprint(rectangle.area())\n\nrectangle.move(3, 3)\nprint(rectangle.left_upper)\nprint(rectangle.right_lower)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "rectangle = Rectangle((1, 1), (4, 3))\nprint(rectangle.left_upper)\nprint(rectangle.right_lower)\nprint(rectangle.width)\nprint(rectangle.height)\nprint(rectangle.perimeter())\nprint(rectangle.area())\n\nrectangle.move(3, 3)\nprint(rectangle.left_upper)\nprint(rectangle.right_lower)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "fb5fe85095e893247f647a193dc5548a1635d35815ac7eb8b992a272f58721c9",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0010",
+      "type": "sample_output",
+      "order": 10,
+      "source_hash": "0d86984b19c4dde24605bc4baaae4e536fefa6a0fa4ecc67a91bf422fe508898",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "(1, 1)\n(4, 3)\n3\n2\n10\n6\n(4, 4)\n(7, 6)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "(1, 1)\n(4, 3)\n3\n2\n10\n6\n(4, 4)\n(7, 6)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n(1, 1)\n(4, 3)\n3\n2\n10\n6\n(4, 4)\n(7, 6)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0011",
+      "type": "heading",
+      "order": 11,
+      "source_hash": "0989c8dcc9b9bdc6117668d1ad5da9c33ac1e754dfe52af47ea4fe854003906e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Printing an object"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "58a1c59503457fbd20017e22744abbd37c0d039a5326c6170f0dc46c04e5b9e2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When you have an object created from a class defined by yourself, the default reaction to calling the `print` command with that object as its argument is not very informative:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0013",
+      "type": "code",
+      "order": 13,
+      "source_hash": "6402f5dafffe61fb4d7d0655b8e99b8980c7e5a4ac465e176db8c0fe085711f2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "rectangle = Rectangle((1, 1), (4, 3))\nprint(rectangle)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "rectangle = Rectangle((1, 1), (4, 3))\nprint(rectangle)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6402f5dafffe61fb4d7d0655b8e99b8980c7e5a4ac465e176db8c0fe085711f2",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "d1bedb80c398bf6ab08e12ecec795725461728b2a1279bfe441a3ae1779b1305",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The printout should look a bit like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0015",
+      "type": "sample_output",
+      "order": 15,
+      "source_hash": "e9f7d72d9a673955f2e16dff50c51e9350d95001ad23ef2a5ee7a58289a53afb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "<__main__.Rectangle object at 0x000002D7BF148A90>"
+      },
+      "translation": {
+        "language": "text",
+        "content": "<__main__.Rectangle object at 0x000002D7BF148A90>"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n<__main__.Rectangle object at 0x000002D7BF148A90>\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "7568056389d22c13ff0851d4d8c7a18a559c1b0a4f7fbcd3856612d73528bc23",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Obviously, we want more control over what is printed out. The easiest way to do this is to add a special `__str__` method to the class definition. Its purpose is to return a snapshot of the state of the object in string format. If the class definition contains a `__str__` method, the value returned by the method is the one printed out when the `print` command is executed."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "f1778fe439464fe45f18f69e51bae8501532a42c31ef150b66a60cfdf326e5a4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "So, let's add a `__str__` method definition to our `Rectangle` class:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0018",
+      "type": "code",
+      "order": 18,
+      "source_hash": "b29975d6a4d5c6e1b188bff6f826e7fcf7b36dcf1e8774de98e0c5fac5a6d57e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Rectangle:\n\n    # ...the rest of the class goes here the same as above...\n\n    # This method returns the state of the object in string format\n    def __str__(self):\n        return f\"rectangle {self.left_upper} ... {self.right_lower}\""
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Rectangle:\n\n    # ...the rest of the class goes here the same as above...\n\n    # This method returns the state of the object in string format\n    def __str__(self):\n        return f\"rectangle {self.left_upper} ... {self.right_lower}\""
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b29975d6a4d5c6e1b188bff6f826e7fcf7b36dcf1e8774de98e0c5fac5a6d57e",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "12da4305a1e941f246cf247bc4d9aa02a83d450b443ed7ce249c49635e176ac3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Now the `print` command produces something more user-friendly:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0020",
+      "type": "code",
+      "order": 20,
+      "source_hash": "6402f5dafffe61fb4d7d0655b8e99b8980c7e5a4ac465e176db8c0fe085711f2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "rectangle = Rectangle((1, 1), (4, 3))\nprint(rectangle)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "rectangle = Rectangle((1, 1), (4, 3))\nprint(rectangle)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6402f5dafffe61fb4d7d0655b8e99b8980c7e5a4ac465e176db8c0fe085711f2",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0021",
+      "type": "sample_output",
+      "order": 21,
+      "source_hash": "10a2fdf8394a7c9263a0d5380620ed15c21fea0c0336c199e95a18f8089e46df",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "rectangle (1, 1) ... (4, 3)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "rectangle (1, 1) ... (4, 3)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nrectangle (1, 1) ... (4, 3)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "43238e21b00934f280ac093b58c8dd0574ade3b44a854022d0c841283ef63797",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `__str__` method is perhaps more often used for formulating a string representation of the object with the `str` function, as seen in the following program:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0023",
+      "type": "code",
+      "order": 23,
+      "source_hash": "13e40e0433ee7e8642f6e82bfac663faadc49b98efa08d770b063beb145bdd5c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "rectangle = Rectangle((1, 1), (4, 3))\nstr_rep = str(rectangle)\nprint(str_rep)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "rectangle = Rectangle((1, 1), (4, 3))\nstr_rep = str(rectangle)\nprint(str_rep)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "13e40e0433ee7e8642f6e82bfac663faadc49b98efa08d770b063beb145bdd5c",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0024",
+      "type": "sample_output",
+      "order": 24,
+      "source_hash": "10a2fdf8394a7c9263a0d5380620ed15c21fea0c0336c199e95a18f8089e46df",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "rectangle (1, 1) ... (4, 3)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "rectangle (1, 1) ... (4, 3)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nrectangle (1, 1) ... (4, 3)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "d56758f79b9fe0c58adf10e0971230941010065810a863c6cd1f87107b4c8caf",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "There are many more special underscored methods which can be defined for classes. One rather similar to the `__str__` method is the `__repr__` method. Its purpose is to provide a technical representation of the state of the object. We will come across this method later."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0026",
+      "type": "exercise",
+      "order": 26,
+      "source_hash": "7130788a44877b4cd8385224ebe69cf9c41a3d12da14d87eaf01e9c4fff2d00e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains the following skeleton for the `Stopwatch` class:\n\n```python\nclass Stopwatch:\n    def __init__(self):\n        self.seconds = 0\n        self.minutes = 0\n```\n\nPlease add to the class definition so that it works as follows:\n\n```python\nwatch = Stopwatch()\nfor i in range(3600):\n    print(watch)\n    watch.tick()\n```\n\n<sample-output>\n\n00:00\n00:01\n00:02\n... many more lines printed out\n00:59\n01:00\n01:01\n... many, many more lines printed out\n59:58\n59:59\n00:00\n00:01\n\n</sample-output>\n\nSo, the method `tick` adds one second to the stopwatch. The maximum value for both seconds and minutes is 59. Your class definition should also contain a `__str__` method, which returns a string representation of the state of the stopwatch, as shown in the example above.\n\n**Hint:** it might make it easier to test the `tick` method if you temporarily set the initial values of the seconds and minutes to some value closer to 59 in the constructor. If you do change the initial values, remember to change them back before submitting."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part08-13_stopwatch",
+        "exercise_type": "programming-exercise",
+        "name": "Stopwatch",
+        "tmc_name": "part08-13_stopwatch",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0027",
+      "type": "exercise",
+      "order": 27,
+      "source_hash": "32f2fe540a5067836ad0ad55f6157966480ce5736fb5617cd6433c306a9dd0ab",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please define a new class named `Clock` which expands on the capabilities of your `Stopwatch` class. It should work as follows:\n\n```python\nclock = Clock(23, 59, 55)\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\nclock.tick()\nprint(clock)\n\nclock.set(12, 5)\nprint(clock)\n```\n\n<sample-output>\n23:59:55\n23:59:56\n23:59:57\n23:59:58\n23:59:59\n00:00:00\n00:00:01\n12:05:00\n</sample-output>\n\nAs you can see above, the constructor should take initial values for the hours, minutes and seconds as arguments, and set these appropriately. The `tick` method adds one second to the clock. The `set` method sets new values for the hours and the minutes, and _sets the seconds to zero_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part08-14_clock",
+        "exercise_type": "programming-exercise",
+        "name": "Clock",
+        "tmc_name": "part08-14_clock",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0028",
+      "type": "exercise",
+      "order": 28,
+      "source_hash": "c3ae8e7bb82b794a05e10c6826a7f2edca54162cceb9d4b661da4ea0da8bed07",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "At Unicafe, the student cafeteria at the University of Helsinki, students can pay for their lunch with a special debit card.\n\nIn this exercise you will write a class called `LunchCard`, with the purpose of emulating the functions provided by the cafeteria's debit card.\n\n### The structure of the new class\n\nPlease create a new class named `LunchCard`.\n\nFirst write the constructor for the class. It should take the initial balance available on the card as an argument, and save it as an attribute. This is provided for you in the skeleton below.\n\nNext, write a `__str__` method, which returns a string containing the balance: \"The balance is X euros\". The available balance should be printed out with one decimal place precision. Please see the example below for usage.\n\nHere is a skeleton implementation for the class:\n\n```python\nclass LunchCard:\n    def __init__(self, balance: float):\n        self.balance = balance\n\n    def __str__(self):\n        pass\n```\n\nA usage example:\n\n```python\ncard = LunchCard(50)\nprint(card)\n```\n\nExecuting the above should produce the following printout:\n\n<sample-output>\n\nThe balance is 50.0 euros\n\n</sample-output>\n\n### Paying for lunch\n\nPlease implement the following methods in your LunchCard class:\n\n- `eat_lunch` subtracts 2.60 euros from the balance on the card\n- `eat_special` subtracts 4.60 euros from the balance on the card\n\nYou can use the following main function to test your class:\n\n```python\ncard = LunchCard(50)\nprint(card)\n\ncard.eat_lunch()\nprint(card)\n\ncard.eat_special()\ncard.eat_lunch()\nprint(card)\n```\n\nThis should produce the following printout:\n\n<sample-output>\n\nThe balance is 50.0 euros\nThe balance is 47.4 euros\nThe balance is 40.2 euros\n\n</sample-output>\n\nMake sure the balance is never allowed to reach numbers below zero:\n\n```python\ncard = LunchCard(4)\nprint(card)\n\ncard.eat_lunch()\nprint(card)\n\ncard.eat_lunch()\nprint(card)\n```\n\n<sample-output>\n\nThe balance is 4.0 euros\nThe balance is 1.4 euros\nThe balance is 1.4 euros\n\n</sample-output>\n\nIf there is not enough money on the card to pay for the lunch, the price of the lunch should not be subtracted from the balance.\n\n### Depositing money on the card\n\nImplement the `deposit_money` method in your `LunchCard` class.\n\nThe method increases the balance on the card by the amount given as an argument.\n\n```python\ncard = LunchCard(10)\nprint(card)\ncard.deposit_money(15)\nprint(card)\ncard.deposit_money(10)\nprint(card)\ncard.deposit_money(200)\nprint(card)\n```\n\n<sample-output>\n\nThe balance is 10.0 euros\nThe balance is 25.0 euros\nThe balance is 35.0 euros\nThe balance is 235.0 euros\n\n</sample-output>\n\nThe method should account for arguments below zero by [raising an exception](/part-6/3-errors#raising-exceptions) of type `ValueError`:\n\n```python\ncard = LunchCard(10)\ncard.deposit_money(-10)\n```\n\n<sample-output>\n\nFile \"testi.py\", line 3, in lunchcard\nValueError: You cannot deposit an amount of money less than zero\n\n</sample-output>\n\n**NB:** this method should _raise_ an exception. Please see the instructions for raising exceptions in [part 6](/part-6/3-errors#raising-exceptions). Under no circumstances should the method itself print out anything - the example above is a printout from the Python interpreter coming across the exception.\n\n### Multiple cards\n\nPlease write a main function which contains the following sequence of events:\n\n- Create a lunch card for Peter. The initial balance on the card is 20 euros.\n- Create a lunch card for Grace. The initial balance on the card is 30 euros.\n- Peter eats a special\n- Grace eats a regular lunch\n- _Print out the balance on each card (on separate lines, with the name of the owner at the beginning of the line)_\n- Peter deposits 20 euros\n- Grace eats the special\n- _Print out the balance on each card (on separate lines, with the name of the owner at the beginning of the line)_\n- Peter eats a regular lunch\n- Peter eats a regular lunch\n- Grace deposits 50 euros\n- _Print out the balance on each card (on separate lines, with the name of the owner at the beginning of the line)_\n\nBody of the main program\n\n```python\npeters_card = LunchCard(20)\ngraces_card = LunchCard(30)\n# the rest of your main function\n```\n\nYour main function should print out exactly the following:\n\n<sample-output>\n\nPeter: The balance is 15.4 euros\nGrace: The balance is 27.4 euros\nPeter: The balance is 35.4 euros\nGrace: The balance is 22.8 euros\nPeter: The balance is 30.2 euros\nGrace: The balance is 72.8 euros\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part08-15_lunchcard",
+        "exercise_type": "programming-exercise",
+        "name": "LunchCard",
+        "tmc_name": "part08-15_lunchcard",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0029",
+      "type": "heading",
+      "order": 29,
+      "source_hash": "16f50c839082393f6816d6158de3efd6c841ff01f4ea40dcff787dc45488162f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Example 2: Task list"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "aeaf1cc34f50d95ff142ab90a0ea6b620f47930e62f408d3799554350c9ad13d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The following class `TaskList` models a list of tasks:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0031",
+      "type": "code",
+      "order": 31,
+      "source_hash": "f71b0204a9bb7ee42fe59be74ee5bebbeccab0b37c35076329a95589783fb24f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class TaskList:\n    def __init__(self):\n        self.tasks = []\n\n    def add_task(self, name: str, priority: int):\n        self.tasks.append((priority, name))\n\n    def get_next(self):\n        self.tasks.sort()\n        # The list method pop removes and returns the last item in a list\n        task = self.tasks.pop()\n        # Return the name of the task (the second item in the tuple)\n        return task[1]\n\n    def number_of_tasks(self):\n        return len(self.tasks)\n\n    def clear_tasks(self):\n        self.tasks = []"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class TaskList:\n    def __init__(self):\n        self.tasks = []\n\n    def add_task(self, name: str, priority: int):\n        self.tasks.append((priority, name))\n\n    def get_next(self):\n        self.tasks.sort()\n        # The list method pop removes and returns the last item in a list\n        task = self.tasks.pop()\n        # Return the name of the task (the second item in the tuple)\n        return task[1]\n\n    def number_of_tasks(self):\n        return len(self.tasks)\n\n    def clear_tasks(self):\n        self.tasks = []"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f71b0204a9bb7ee42fe59be74ee5bebbeccab0b37c35076329a95589783fb24f",
+        "length_lines": 19
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "da3469e966b86acc7dbb14adcb9512a5689db61c7df14bde027faa50f3c61e77",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The method `add_task` adds a new task to the list. Each task also has a priority attached, which is used for sorting the tasks. The method `get_next` removes and returns the task with the highest priority on the list. There is also the `number_of_tasks` method, which returns the number of tasks on the list, and finally the method `clear_tasks`, which clears the task list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "34dc5df30bbdc85b10de4fe6a4023e4cdea7508fe0ddcd1fbda289397f36d312",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Within the object, the tasks are stored in a list. Each task is of a tuple containing the priority of the task and its name. The priority value is stored first, so that when the list is sorted, the task with the highest priority is the last item on the list. This is why we can then simply use the `pop` method to retrieve and remove the highest priority item."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "edd15b2afabe6f264301d4db8c2827257794dc2e0cbb0e2f5b8af3cd2a61416f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please have a look at the following program with the task list in action:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0035",
+      "type": "code",
+      "order": 35,
+      "source_hash": "423e8f8b83ea869348b506d3e2d99dd571925601ec08ebd062c115ba46076bb5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "tasks = TaskList()\ntasks.add_task(\"studying\", 50)\ntasks.add_task(\"exercise\", 60)\ntasks.add_task(\"cleaning\", 10)\nprint(tasks.number_of_tasks())\nprint(tasks.get_next())\nprint(tasks.number_of_tasks())\ntasks.add_task(\"date\", 100)\nprint(tasks.number_of_tasks())\nprint(tasks.get_next())\nprint(tasks.get_next())\nprint(tasks.number_of_tasks())\ntasks.clear_tasks()\nprint(tasks.number_of_tasks())"
+      },
+      "translation": {
+        "language": "code",
+        "content": "tasks = TaskList()\ntasks.add_task(\"studying\", 50)\ntasks.add_task(\"exercise\", 60)\ntasks.add_task(\"cleaning\", 10)\nprint(tasks.number_of_tasks())\nprint(tasks.get_next())\nprint(tasks.number_of_tasks())\ntasks.add_task(\"date\", 100)\nprint(tasks.number_of_tasks())\nprint(tasks.get_next())\nprint(tasks.get_next())\nprint(tasks.number_of_tasks())\ntasks.clear_tasks()\nprint(tasks.number_of_tasks())"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "423e8f8b83ea869348b506d3e2d99dd571925601ec08ebd062c115ba46076bb5",
+        "length_lines": 14
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0036",
+      "type": "sample_output",
+      "order": 36,
+      "source_hash": "01ec5367d215dfbaeb157c118db206ea9e73d6169fbc2e4c84d31ee60d0f5d7a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "3\nexercise\n2\n3\ndate\nstudying\n1\n0"
+      },
+      "translation": {
+        "language": "text",
+        "content": "3\nexercise\n2\n3\ndate\nstudying\n1\n0"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n3\nexercise\n2\n3\ndate\nstudying\n1\n0\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0037",
+      "type": "exercise",
+      "order": 37,
+      "source_hash": "071f2c1bc7e678bf5959de6fb491b6ad370c4df88dcfe24947ad7ac7a3e52f2c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "### A class named Series\n\nPlease write a class named `Series` with the following functionality:\n\n```python\ndexter = Series(\"Dexter\", 8, [\"Crime\", \"Drama\", \"Mystery\", \"Thriller\"])\nprint(dexter)\n```\n\n<sample-output>\n\nDexter (8 seasons)\ngenres: Crime, Drama, Mystery, Thriller\nno ratings\n\n</sample-output>\n\nThe constructor should take the title, the number of seasons and a list of genres for the series as its arguments.\n\n**Hint:** whenever you need to produce a string from a list containing strings, with a separating character of your choice in between the entries, you can use the `join` method as follows:\n\n```python\ngenre_list = [\"Crime\", \"Drama\", \"Mystery\", \"Thriller\"]\ngenre_string = \", \".join(genre_list)\nprint(genre_string)\n```\n\n<sample-output>\n\nCrime, Drama, Mystery, Thriller\n\n</sample-output>\n\n### Adding reviews\n\nPlease implement the method `rate(rating: int)` which lets you add a rating between 0 and 5 to any series object. You will also need to adjust the `__str__` method so that in case there are ratings, the method prints out the number of ratings added, and their average rounded to one decimal point.\n\n```python\ndexter = Series(\"Dexter\", 8, [\"Crime\", \"Drama\", \"Mystery\", \"Thriller\"])\ndexter.rate(4)\ndexter.rate(5)\ndexter.rate(5)\ndexter.rate(3)\ndexter.rate(0)\nprint(dexter)\n```\n\n<sample-output>\n\nDexter (8 seasons)\ngenres: Crime, Drama, Mystery, Thriller\n5 ratings, average 3.4 points\n\n</sample-output>\n\n### Searching for series\n\nPlease implement these two functions which allow you to search through a list of series: `minimum_grade(rating: float, series_list: list)` and `includes_genre(genre: str, series_list: list)`.\n\nHere is an example of how the new methods are used:\n\n```python\ns1 = Series(\"Dexter\", 8, [\"Crime\", \"Drama\", \"Mystery\", \"Thriller\"])\ns1.rate(5)\n\ns2 = Series(\"South Park\", 24, [\"Animation\", \"Comedy\"])\ns2.rate(3)\n\ns3 = Series(\"Friends\", 10, [\"Romance\", \"Comedy\"])\ns3.rate(2)\n\nseries_list = [s1, s2, s3]\n\nprint(\"a minimum grade of 4.5:\")\nfor series in minimum_grade(4.5, series_list):\n    print(series.title)\n\nprint(\"genre Comedy:\")\nfor series in includes_genre(\"Comedy\", series_list):\n    print(series.title)\n```\n\n<sample-output>\n\na minimum rating of 4.5:\nDexter\ngenre Comedy:\nSouth Park\nFriends\n\n</sample-output>\n\nThe code above and the automatic tests for this exercise assume your class contains an attribute `title`. If you used some other attribute name to refer to the name of the series, please change it before submitting."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part08-16_series",
+        "exercise_type": "programming-exercise",
+        "name": "Series",
+        "tmc_name": "part08-16_series",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "e7c1a46e91282cacd4221fc454f07d2669740016f75a092ce3959836e6ef0903",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please respond to a quick questionnaire on this week's materials."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-5-more-examples-of-classes-0039",
+      "type": "quiz",
+      "order": 39,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "e56e0522-daf3-5ab3-922a-0b23870a6e97",
+        "attributes": {
+          "id": "e56e0522-daf3-5ab3-922a-0b23870a6e97"
+        }
+      }
+    }
+  ]
+}

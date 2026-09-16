@@ -1,0 +1,16 @@
+{
+  "id": "ex-part11-02_rows_of_stars",
+  "lesson_id": "part11-1-list-comprehensions",
+  "part": 11,
+  "tmc_name": "part11-02_rows_of_stars",
+  "title_original": "Rows of stars",
+  "title_vi": "Hàng sao",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `rows_of_stars(numbers: list)` which takes a list of integers as its argument. The function should return a new list containing rows of stars. The length of each row should correspond to the integer at the same index in the original list. The function should use a list comprehension to achieve this.\n\nThe maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nrows = rows_of_stars([1,2,3,4])\nfor row in rows:\n    print(row)\n\nprint()\n\nrows = rows_of_stars([4, 3, 2, 1, 10])\nfor row in rows:\n    print(row)\n```\n\n<sample-output>\n\n<pre>\n*\n**\n***\n****\n\n****\n***\n**\n*\n**********\n</pre>\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `rows_of_stars(numbers: list)` lấy danh sách các số nguyên làm đối số. Hàm sẽ trả về một danh sách mới chứa các hàng sao. Độ dài của mỗi hàng phải tương ứng với số nguyên có cùng chỉ mục trong danh sách ban đầu. Hàm nên sử dụng khả năng hiểu danh sách để đạt được điều này.\n\nĐộ dài tối đa của hàm là hai dòng mã, bao gồm dòng tiêu đề bắt đầu bằng từ khóa `def`.\n\nChức năng này sẽ hoạt động như sau:\n\n```python\nrows = rows_of_stars([1,2,3,4])\nfor row in rows:\n    print(row)\n\nprint()\n\nrows = rows_of_stars([4, 3, 2, 1, 10])\nfor row in rows:\n    print(row)\n```\n\n<sample-output>\n\n<pre>\n*\n**\n***\n****\n\n****\n***\n**\n*\n**********\n</pre>\n\n</sample-output>",
+  "starter_code": "rows = rows_of_stars([1,2,3,4])\nfor row in rows:\n    print(row)\n\nprint()\n\nrows = rows_of_stars([4, 3, 2, 1, 10])\nfor row in rows:\n    print(row)",
+  "grading_data_available": false,
+  "source_hash": "41d13fed4f939ebdeb9f55ed72319ed8573610d1c9aa8833b479508be0b97a41",
+  "order": 27
+}

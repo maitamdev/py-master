@@ -1,0 +1,16 @@
+{
+  "id": "ex-part09-06_pets",
+  "lesson_id": "part09-2-objects-as-attributes",
+  "part": 9,
+  "tmc_name": "part09-06_pets",
+  "title_original": "Pets",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The exercise template contains the outlines of two classes: `Person` and `Pet`. Each person has one pet. Please change the `__str__` method in the class `Person` so that it also prints out information about the person's pet as shown in the example below.\n\nThe string returned by the method _must follow the format specified below exactly_.\n\n```python\nhulda = Pet(\"Hulda\", \"mixed-breed dog\")\nlevi = Person(\"Levi\", hulda)\n\nprint(levi)\n```\n\n<sample-output>\n\nLevi, whose pal is Hulda, a mixed-breed dog\n\n</sample-output>\n\n**NB:** all class definitions are in the same text file. You should not need to `import` anything.",
+  "description_vi": "",
+  "starter_code": "hulda = Pet(\"Hulda\", \"mixed-breed dog\")\nlevi = Person(\"Levi\", hulda)\n\nprint(levi)",
+  "grading_data_available": false,
+  "source_hash": "19b8154e2c57dfd8503494c5a0692dfa6d0fb58d7b7ae3d0a5768f131c083657",
+  "order": 25
+}

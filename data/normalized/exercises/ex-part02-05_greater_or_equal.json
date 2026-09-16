@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-05_greater_or_equal",
+  "lesson_id": "part02-2-else-elif",
+  "part": 2,
+  "tmc_name": "part02-05_greater_or_equal",
+  "title_original": "Greater than or equal to",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": "400px",
+  "description_original": "Please write a program which asks for two integer numbers. The program should then print out whichever is greater. If the numbers are equal, the program should print a different message.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nPlease type in the first number: **5**\nPlease type in another number: **3**\nThe greater number was: 5\n\n</sample-output>\n\n<sample-output>\n\nPlease type in the first number: **5**\nPlease type in another number: **8**\nThe greater number was: 8\n\n</sample-output>\n\n<sample-output>\n\nPlease type in the first number: **5**\nPlease type in another number: **5**\nThe numbers are equal!\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "f09adf45ed7d4b1125c780c23d295f7cf745d1e3b1ab399622e3ba302d144cfd",
+  "order": 36
+}

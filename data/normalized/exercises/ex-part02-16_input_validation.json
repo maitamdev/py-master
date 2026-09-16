@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-16_input_validation",
+  "lesson_id": "part02-4-simple-loops",
+  "part": 2,
+  "tmc_name": "part02-16_input_validation",
+  "title_original": "Input validation",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for integer numbers.\n\nIf the number is below zero, the program should print out the message \"Invalid number\".\n\nIf the number is above zero, the program should print out the square root of the number using the Python `sqrt` function.\n\nIn either case, the program should then ask for another number.\n\nIf the user inputs the number zero, the program should stop asking for numbers and exit the loop.\n\nBelow you'll find a reminder of how the `sqrt` function is used. Remember to `import` it in the beginning of the program.\n\n```python\n# sqrt function will not work without this line in the beginning of the program\nfrom math import sqrt\n\nprint(sqrt(9))\n```\n\n<sample-output>\n\n3.0\n\n</sample-output>\n\nAn example of expected behaviour of your program:\n\n<sample-output>\n\nPlease type in a number: **16**\n4.0\nPlease type in a number: **4**\n2.0\nPlease type in a number: **-3**\nInvalid number\nPlease type in a number: **1**\n1.0\nPlease type in a number: **0**\nExiting...\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "# sqrt function will not work without this line in the beginning of the program\nfrom math import sqrt\n\nprint(sqrt(9))",
+  "grading_data_available": false,
+  "source_hash": "d919bab78033b5568b66a37ceca2f2ffdb96f9008d109535da55d23063ab117c",
+  "order": 17
+}

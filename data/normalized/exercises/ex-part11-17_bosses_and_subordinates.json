@@ -1,0 +1,16 @@
+{
+  "id": "ex-part11-17_bosses_and_subordinates",
+  "lesson_id": "part11-4-more-recursion-examples",
+  "part": 11,
+  "tmc_name": "part11-17_bosses_and_subordinates",
+  "title_original": "Bosses and subordinates",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The class `Employee` models an employee of a company:\n\n```python\nclass Employee:\n    def __init__(self, name: str):\n        self.name = name\n        self.subordinates = []\n\n    def add_subordinate(self, employee: 'Employee'):\n        self.subordinates.append(employee)\n```\n\nPlease write a function named `count_subordinates(employee: Employee)` which recursively counts the number of subordinates each employee has.\n\nAn example of the function in action:\n\n```python\nif __name__ == \"__main__\":\n    t1 = Employee(\"Sally\")\n    t2 = Employee(\"Eric\")\n    t3 = Employee(\"Matthew\")\n    t4 = Employee(\"Emily\")\n    t5 = Employee(\"Adele\")\n    t6 = Employee(\"Claire\")\n    t1.add_subordinate(t4)\n    t1.add_subordinate(t6)\n    t4.add_subordinate(t2)\n    t4.add_subordinate(t3)\n    t4.add_subordinate(t5)\n    print(count_subordinates(t1))\n    print(count_subordinates(t4))\n    print(count_subordinates(t5))\n```\n\n<sample-output>\n\n5\n3\n0\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "class Employee:\n    def __init__(self, name: str):\n        self.name = name\n        self.subordinates = []\n\n    def add_subordinate(self, employee: 'Employee'):\n        self.subordinates.append(employee)",
+  "grading_data_available": false,
+  "source_hash": "dfe9206e5046e2817a0b3528c1abbba42a0c6cd38bb831790db9a98fbba4e525",
+  "order": 33
+}

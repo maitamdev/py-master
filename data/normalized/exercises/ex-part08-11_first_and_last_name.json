@@ -1,0 +1,16 @@
+{
+  "id": "ex-part08-11_first_and_last_name",
+  "lesson_id": "part08-4-defining-methods",
+  "part": 8,
+  "tmc_name": "part08-11_first_and_last_name",
+  "title_original": "First and last name",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a class named `Person` with a _single attribute_ `name`, which is set with an argument given to the constructor.\n\nPlease also add two methods:\n\nThe method `return_first_name` should return the first name of the person, while the method `return_last_name` should return the last name of the person.\n\nYou may assume that the name passed to the constructor will contain exactly two name elements separated with a space character.\n\nAn example use case:\n\n```python\nif __name__ == \"__main__\":\n    peter = Person(\"Peter Pythons\")\n    print(peter.return_first_name())\n    print(peter.return_last_name())\n\n    paula = Person(\"Paula Pythonnen\")\n    print(paula.return_first_name())\n    print(paula.return_last_name())\n```\n\n<sample-output>\n\nPeter\nPythons\nPaula\nPythonnen\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "if __name__ == \"__main__\":\n    peter = Person(\"Peter Pythons\")\n    print(peter.return_first_name())\n    print(peter.return_last_name())\n\n    paula = Person(\"Paula Pythonnen\")\n    print(paula.return_first_name())\n    print(paula.return_last_name())",
+  "grading_data_available": false,
+  "source_hash": "7e40154130afae1a4b677b7e7806ec48f6beaeaf988c7c81848304ebd49a91be",
+  "order": 36
+}

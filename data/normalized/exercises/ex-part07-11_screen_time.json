@@ -1,0 +1,16 @@
+{
+  "id": "ex-part07-11_screen_time",
+  "lesson_id": "part07-3-times-and-dates",
+  "part": 7,
+  "tmc_name": "part07-11_screen_time",
+  "title_original": "Screen time",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program for recording the amount of time the user has spent in front of a television, computer or mobile device screen over a specific period of time. \n\nThe program should work as follows:\n\n<sample-output>\n\nFilename: **late_june.txt**\nStarting date: **24.6.2020**\nHow many days: **5**\nPlease type in screen time in minutes on each day (TV computer mobile):\nScreen time 24.06.2020: **60 120 0**\nScreen time 25.06.2020: **0 0 0**\nScreen time 26.06.2020: **180 0 0**\nScreen time 27.06.2020: **25 240 15**\nScreen time 28.06.2020: **45 90 5**\nData stored in file late_june.txt\n\n</sample-output>\n\nThe user will input each day on a separate line, and the entries will contain three numbers separated by spaces, representing minutes.\n\nWith the above input, the program should store the data in a file named `late_june.txt`. The contents should look like this:\n\n<sample-data>\n\nTime period: 24.06.2020-28.06.2020\nTotal minutes: 780\nAverage minutes: 156.0\n24.06.2020: 60/120/0\n25.06.2020: 0/0/0\n26.06.2020: 180/0/0\n27.06.2020: 25/240/15\n28.06.2020: 45/90/5\n\n</sample-data>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "ff82e771ee6593d468095bfe19904f423bffd384748e73ce17840eb538f9648a",
+  "order": 41
+}

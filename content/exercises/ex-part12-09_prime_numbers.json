@@ -1,0 +1,16 @@
+{
+  "id": "ex-part12-09_prime_numbers",
+  "lesson_id": "part12-2-generators",
+  "part": 12,
+  "tmc_name": "part12-09_prime_numbers",
+  "title_original": "Prime numbers",
+  "title_vi": "số nguyên tố",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "A prime number is a number which is divisible only by itself and the number 1. By convention prime numbers are defined as positive integers from the number 2 upwards. The first six prime numbers are 2, 3, 5, 7, 11 and 13.\n\nPlease write a generator function `prime_numbers()` which creates a new generator. The generator should return new prime numbers, one by one in sequence, from 2 onwards. NB: this generator never terminates. It will generate numbers for as long as they are needed.\n\nFor example:\n\n```python\nnumbers = prime_numbers()\nfor i in range(8):\n    print(next(numbers))\n```\n\n<sample-output>\n\n2\n3\n5\n7\n11\n13\n17\n19\n\n</sample-output>\n\n**Hint:** you can use a loop to check if a number is a prime number. If we are checking the number `x`, the loop would go through the numbers `2` to `x-1`. If `x` is divisible by any one of these, it is not a prime number.",
+  "description_vi": "Số nguyên tố là số chỉ chia hết cho chính nó và số 1. Theo quy ước, số nguyên tố được định nghĩa là số nguyên dương từ số 2 trở lên. Sáu số nguyên tố đầu tiên là 2, 3, 5, 7, 11 và 13.\n\nVui lòng viết hàm tạo `prime_numbers()` để tạo một trình tạo mới. Trình tạo sẽ trả về các số nguyên tố mới, từng số một theo thứ tự, từ 2 trở đi. NB: trình tạo này không bao giờ chấm dứt. Nó sẽ tạo ra các con số miễn là chúng cần thiết.\n\nVí dụ:\n\n```python\nnumbers = prime_numbers()\nfor i in range(8):\n    print(next(numbers))\n```\n\n<sample-output>\n\n2\n3\n5\n7\n11\n13\n17\n19\n\n</sample-output>\n\n**Gợi ý:** bạn có thể sử dụng vòng lặp để kiểm tra xem một số có phải là số nguyên tố hay không. Nếu chúng ta đang kiểm tra số `x`, vòng lặp sẽ đi từ các số `2` đến `x-1`. Nếu `x` chia hết cho bất kỳ số nào trong số này thì đó không phải là số nguyên tố.",
+  "starter_code": "numbers = prime_numbers()\nfor i in range(8):\n    print(next(numbers))",
+  "grading_data_available": false,
+  "source_hash": "b5d2dd35db9452c8c4609239ab66691b69f7e5aad022b906057018c93574bf3f",
+  "order": 24
+}

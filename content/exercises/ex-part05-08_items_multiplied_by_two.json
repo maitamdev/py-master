@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-08_items_multiplied_by_two",
+  "lesson_id": "part05-2-references",
+  "part": 5,
+  "tmc_name": "part05-08_items_multiplied_by_two",
+  "title_original": "Items multiplied by two",
+  "title_vi": "Mục nhân với hai",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `double_items(numbers: list)`, which takes a list of integers as its argument.\n\nThe function should return a new list, which contains all values from the original list doubled. The function should _not_ change the original list.\n\nAn example of the function at work:\n\n```python\nif __name__ == \"__main__\":\n    numbers = [2, 4, 5, 3, 11, -4]\n    numbers_doubled = double_items(numbers)\n    print(\"original:\", numbers)\n    print(\"doubled:\", numbers_doubled)\n```\n<sample-output>\n\noriginal: [2, 4, 5, 3, 11, -4]\ndoubled: [4, 8, 10, 6, 22, -8]\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `double_items(numbers: list)`, hàm này lấy danh sách các số nguyên làm đối số.\n\nHàm sẽ trả về một danh sách mới, chứa tất cả các giá trị từ danh sách ban đầu được nhân đôi. Hàm này sẽ _not_ thay đổi danh sách ban đầu.\n\nMột ví dụ về chức năng tại nơi làm việc:\n\n```python\nif __name__ == \"__main__\":\n    numbers = [2, 4, 5, 3, 11, -4]\n    numbers_doubled = double_items(numbers)\n    print(\"original:\", numbers)\n    print(\"doubled:\", numbers_doubled)\n```\n<sample-output>\n\nbản gốc: [2, 4, 5, 3, 11, -4]\nnhân đôi: [4, 8, 10, 6, 22, -8]\n\n</sample-output>",
+  "starter_code": "if __name__ == \"__main__\":\n    numbers = [2, 4, 5, 3, 11, -4]\n    numbers_doubled = double_items(numbers)\n    print(\"original:\", numbers)\n    print(\"doubled:\", numbers_doubled)",
+  "grading_data_available": false,
+  "source_hash": "7de51ba95eeb4c65d4ffd1fb64334ec0f51b6ef21a0555043b1e16cb70ecb01b",
+  "order": 84
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part11-16_greatest_node",
+  "lesson_id": "part11-4-more-recursion-examples",
+  "part": 11,
+  "tmc_name": "part11-16_greatest_node",
+  "title_original": "Greatest node",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `greatest_node(root: Node)` which takes the root node of a binary tree as its argument.\n\nThe function should return the value of the node with the greatest value within the tree. The tree should be traversed recursively.\n\nHint: the function `sum_of_nodes` in the example above may come in handy.\n\nAn example of how the function should work:\n\n```python\nif __name__ == \"__main__\":\n    tree = Node(2)\n\n    tree.left_child = Node(3)\n    tree.left_child.left_child = Node(5)\n    tree.left_child.right_child = Node(8)\n\n    tree.right_child = Node(4)\n    tree.right_child.right_child = Node(11)\n\n    print(greatest_node(tree))\n```\n\n<sample-output>\n\n11\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "if __name__ == \"__main__\":\n    tree = Node(2)\n\n    tree.left_child = Node(3)\n    tree.left_child.left_child = Node(5)\n    tree.left_child.right_child = Node(8)\n\n    tree.right_child = Node(4)\n    tree.right_child.right_child = Node(11)\n\n    print(greatest_node(tree))",
+  "grading_data_available": false,
+  "source_hash": "c9ff2d447a723390d9412af2760761330a1deb8a2367257ba897afb9178fe674",
+  "order": 26
+}

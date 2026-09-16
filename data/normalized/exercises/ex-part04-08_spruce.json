@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-08_spruce",
+  "lesson_id": "part04-2-more-functions",
+  "part": 4,
+  "tmc_name": "part04-08_spruce",
+  "title_original": "A spruce",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `spruce`, which takes one argument. The function prints out the text `a spruce!`, and the a spruce tree, the size of which is specified by the argument.\n\nCalling `spruce(3)` should print out\n\n<sample-output>\n\n<pre>\na spruce!\n  *\n ***\n*****\n  *\n</pre>\n\n</sample-output>\n\nCalling `spruce(5)` should print out\n\n<sample-output>\n\n<pre>\na spruce!\n    *\n   ***\n  *****\n *******\n*********\n    *\n</pre>\n\n</sample-output>\n\n**NB: to the left of the spruce there should be exactly the right amount of whitespace**. If the shape of the spruce looks correct, but the left edge of the tree is not touching the left edge of the text area in the terminal, the tests will not accept the solution.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "d818be0a8ba7349e370584f93f289ae063ae0c739cdabb4fc3de1d944d6184ee",
+  "order": 34
+}

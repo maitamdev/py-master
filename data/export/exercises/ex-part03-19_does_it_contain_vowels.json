@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-19_does_it_contain_vowels",
+  "lesson_id": "part03-2-working-with-strings",
+  "part": 3,
+  "tmc_name": "part03-19_does_it_contain_vowels",
+  "title_original": "Does it contain vowels",
+  "title_vi": "Nó có chứa nguyên âm không",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user to input a string. The program then prints out different messages if the string contains any of the vowels a, e or o.\n\nYou may assume the input will be in lowercase entirely. Have a look at the examples below.\n\n<sample-output>\n\nPlease type in a string: **hello there**\na not found\ne found\no found\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a string: **hiya**\na found\ne not found\no not found\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình yêu cầu người dùng nhập một chuỗi. Sau đó, chương trình sẽ in ra các thông báo khác nhau nếu chuỗi chứa bất kỳ nguyên âm a, e hoặc o nào.\n\nBạn có thể cho rằng đầu vào sẽ hoàn toàn ở dạng chữ thường. Hãy xem các ví dụ dưới đây.\n\n<sample-output>\n\nVui lòng nhập một chuỗi: **xin chào**\nkhông tìm thấy\ntôi đã tìm thấy\nồ đã tìm thấy\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập một chuỗi: **hiya**\nmột cái được tìm thấy\ne không tìm thấy\nồ không tìm thấy\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "367112ad092ffffa6635ea312fd0ccc4f1edd01d2d14470c040bc6ba0ad72d1f",
+  "order": 77
+}

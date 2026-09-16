@@ -1,0 +1,16 @@
+{
+  "id": "ex-part11-07_lottery_numbers",
+  "lesson_id": "part11-1-list-comprehensions",
+  "part": 11,
+  "tmc_name": "part11-07_lottery_numbers",
+  "title_original": "Lottery numbers",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "## LotteryNumbers matched\n\nPlease write a class named `LotteryNumbers` which takes the week number (an integer value) and a list of seven integers as its constructor arguments. The list should contain the correct lottery numbers for the given week. \n\nPlease also write a method named `number_of_hits(numbers: list)` which takes a list of integers as its argument. The method returns the number of correct entries in the parameter list.\n\nThe method should use a list comprehension to achieve this. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nAn example of how the class and function are used:\n\n```python\nweek5 = LotteryNumbers(5, [1,2,3,4,5,6,7])\nmy_numbers = [1,4,7,11,13,19,24]\n\nprint(week5.number_of_hits(my_numbers))\n```\n\n<sample-output>\n\n3\n\n</sample-output>\n\n## LotteryNumbers matched in place\n\nPlease write a method named `hits_in_place(numbers)` which takes a list of seven integers as its argument, and returns a new list of seven integers. The new list contains only those items from the original list which match the week's correct numbers. These must remain at the same indexes as they were in the original list. The rest of the indexes should be filled with values `-1`.\n\nThe method should use a list comprehension to achieve this. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nPlease take a look at the example below:\n\n```python\nweek8 = LotteryNumbers(8, [1,2,3,10,20,30,33])\nmy_numbers = [1,4,7,10,11,20,30]\n\nprint(week8.hits_in_place(my_numbers))\n```\n\n<sample-output>\n\n[1, -1, -1, 10, -1, 20, 30]\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "week5 = LotteryNumbers(5, [1,2,3,4,5,6,7])\nmy_numbers = [1,4,7,11,13,19,24]\n\nprint(week5.number_of_hits(my_numbers))",
+  "grading_data_available": false,
+  "source_hash": "c54fb8ceb2aec723d84253d5b0f230fa1392b481bd973fc1f29c5ea86130e85c",
+  "order": 69
+}

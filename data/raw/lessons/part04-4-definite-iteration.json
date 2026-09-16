@@ -1,0 +1,461 @@
+{
+  "id": "part04-4-definite-iteration",
+  "part": 4,
+  "part_slug": "part-4",
+  "slug": "4-definite-iteration",
+  "is_part_index": false,
+  "title_original": "Definite iteration",
+  "path": "/part-4/4-definite-iteration",
+  "source_path": "data/part-4/4-definite-iteration.md",
+  "source_hash": "dd66acb714681137b1777c3ea81c347f498d959110a587d74fc218586dd3c709",
+  "frontmatter": {
+    "path": "/part-4/4-definite-iteration",
+    "title": "Definite iteration",
+    "hidden": false
+  },
+  "chunks_count": 67,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know the difference between definite and indefinite iteration \n- You will know how a Python `for` loop works\n- You will be able to use a `for` loop to iterate through lists and strings",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know the difference between definite and indefinite iteration \n- You will know how a Python `for` loop works\n- You will be able to use a `for` loop to iterate through lists and strings\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You can use a `while` loop to go through the items in a list, just like we used while loops to go through strings. The following program prints out the items in the list, each on a separate line:",
+      "raw_source": "You can use a `while` loop to go through the items in a list, just like we used while loops to go through strings. The following program prints out the items in the list, each on a separate line:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [3, 2, 4, 5, 2]\n\nindex = 0\nwhile index < len(my_list):\n    print(my_list[index])\n    index += 1",
+      "raw_source": "```python\nmy_list = [3, 2, 4, 5, 2]\n\nindex = 0\nwhile index < len(my_list):\n    print(my_list[index])\n    index += 1\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "3\n2\n4\n5\n2",
+      "raw_source": "<sample-output>\n\n3\n2\n4\n5\n2\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This obviously works, but it is a rather complicated way of going through a list, as you have to use a helper variable `index` to remember which item in the list you're at. Fortunately, Python offers a more intuitive way of traversing through lists, strings and other similar structures.",
+      "raw_source": "This obviously works, but it is a rather complicated way of going through a list, as you have to use a helper variable `index` to remember which item in the list you're at. Fortunately, Python offers a more intuitive way of traversing through lists, strings and other similar structures."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "The for loop",
+      "raw_source": "## The for loop"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When you want to go through some ready collection of items, the Python `for` loop will do this for you. For instance, the loop can go through all items in a list from first to last.",
+      "raw_source": "When you want to go through some ready collection of items, the Python `for` loop will do this for you. For instance, the loop can go through all items in a list from first to last."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When using a `while` loop the program doesn't \"know\" beforehand how many iterations the loop will perform. It will repeat until the condition becomes false, or the loop is otherwise broken out of. That is why it falls under _indefinite iteration_. With a for loop the number of iterations is determined when the loop is set up, and so it falls under _definite iteration_.",
+      "raw_source": "When using a `while` loop the program doesn't \"know\" beforehand how many iterations the loop will perform. It will repeat until the condition becomes false, or the loop is otherwise broken out of. That is why it falls under _indefinite iteration_. With a for loop the number of iterations is determined when the loop is set up, and so it falls under _definite iteration_."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The idea is that the `for` loop takes the items in the collection one by one and performs the same actions on each. The programmer does not have to worry about which item is being handled when. The syntax of the for loop is as follows:",
+      "raw_source": "The idea is that the `for` loop takes the items in the collection one by one and performs the same actions on each. The programmer does not have to worry about which item is being handled when. The syntax of the for loop is as follows:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "for <variable> in <collection>:\n    <block>",
+      "raw_source": "```python\nfor <variable> in <collection>:\n    <block>\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `for` loop takes an item in the collection, assigns it to the variable, processes the block of code, and moves on to the next item. When all items in the collection have been processed, execution of the program continues from the line after the loop.",
+      "raw_source": "The `for` loop takes an item in the collection, assigns it to the variable, processes the block of code, and moves on to the next item. When all items in the collection have been processed, execution of the program continues from the line after the loop."
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "4_4_1.png",
+        "alt": "Iterating through a list"
+      },
+      "raw_source": "<img src=\"4_4_1.png\" alt=\"Iterating through a list\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following program prints out all the items in a list using a `for` loop:",
+      "raw_source": "The following program prints out all the items in a list using a `for` loop:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [3, 2, 4, 5, 2]\n\nfor item in my_list:\n    print(item)",
+      "raw_source": "```python\nmy_list = [3, 2, 4, 5, 2]\n\nfor item in my_list:\n    print(item)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "3\n2\n4\n5\n2",
+      "raw_source": "<sample-output>\n\n3\n2\n4\n5\n2\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Compared to the example at the beginning of this section, the structure is much easier to understand. A `for` loop makes straightforward traversal through a collection of items very simple.",
+      "raw_source": "Compared to the example at the beginning of this section, the structure is much easier to understand. A `for` loop makes straightforward traversal through a collection of items very simple."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The same principle applies to characters in a string:",
+      "raw_source": "The same principle applies to characters in a string:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "name = input(\"Please type in your name: \")\n\nfor character in name:\n    print(character)",
+      "raw_source": "```python\nname = input(\"Please type in your name: \")\n\nfor character in name:\n    print(character)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in your name: **Grace**\nG\nr\na\nc\ne",
+      "raw_source": "<sample-output>\n\nPlease type in your name: **Grace**\nG\nr\na\nc\ne\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Star-studded",
+        "tmcname": "part04-20_star_studded"
+      },
+      "inner_content": "Please write a program which asks the user to type in a string. The program then prints each input character on a separate line. After each character there should be a star (*) printed on its own line.\n\nThis is how it should work:\n\n<sample-output>\n\nPlease type in a string: **Python**\nP\n*\ny\n*\nt\n*\nh\n*\no\n*\nn\n*\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+      "raw_source": "<programming-exercise name='Star-studded' tmcname='part04-20_star_studded'>\n\nPlease write a program which asks the user to type in a string. The program then prints each input character on a separate line. After each character there should be a star (*) printed on its own line.\n\nThis is how it should work:\n\n<sample-output>\n\nPlease type in a string: **Python**\nP\n*\ny\n*\nt\n*\nh\n*\no\n*\nn\n*\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "The function `range`",
+      "raw_source": "## The function `range`"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Often you know how many times you want to repeat a certain bit of code. You might, for example, wish to go through all the numbers between 1 and 100. The `range` function plugged into a `for` loop will do this for you.",
+      "raw_source": "Often you know how many times you want to repeat a certain bit of code. You might, for example, wish to go through all the numbers between 1 and 100. The `range` function plugged into a `for` loop will do this for you."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "There are a few different ways to call the range function. The simplest way is to give the function just one argument, which signifies the end-point of the range. The end-point itself is excluded, just like with string slices. In other words, the function call `range(n)` provides a loop with a range from 0 to `n-1`:",
+      "raw_source": "There are a few different ways to call the range function. The simplest way is to give the function just one argument, which signifies the end-point of the range. The end-point itself is excluded, just like with string slices. In other words, the function call `range(n)` provides a loop with a range from 0 to `n-1`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "for i in range(5):\n    print(i)",
+      "raw_source": "```python\nfor i in range(5):\n    print(i)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "0\n1\n2\n3\n4",
+      "raw_source": "<sample-output>\n\n0\n1\n2\n3\n4\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "With two arguments, the function will return a range between the two numbers. The function `range(a,b)` provides a range starting from `a` and ending at `b-1`:",
+      "raw_source": "With two arguments, the function will return a range between the two numbers. The function `range(a,b)` provides a range starting from `a` and ending at `b-1`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "for i in range(3, 7):\n    print(i)",
+      "raw_source": "```python\nfor i in range(3, 7):\n    print(i)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "3\n4\n5\n6",
+      "raw_source": "<sample-output>\n\n3\n4\n5\n6\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Finally, with a third argument you can also specify the size of the _step_ the range takes between each value. The function call `range(a, b, c)` provides a range starting from `a`, ending at `b-1`, and changing by `c` with every step:",
+      "raw_source": "Finally, with a third argument you can also specify the size of the _step_ the range takes between each value. The function call `range(a, b, c)` provides a range starting from `a`, ending at `b-1`, and changing by `c` with every step:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "for i in range(1, 9, 2):\n    print(i)",
+      "raw_source": "```python\nfor i in range(1, 9, 2):\n    print(i)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "1\n3\n5\n7",
+      "raw_source": "<sample-output>\n\n1\n3\n5\n7\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A step can also be negative. Then the range will be in reversed orded. Notice the first two arguments are also flipped here:",
+      "raw_source": "A step can also be negative. Then the range will be in reversed orded. Notice the first two arguments are also flipped here:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "for i in range(6, 2, -1):\n    print(i)",
+      "raw_source": "```python\nfor i in range(6, 2, -1):\n    print(i)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "6\n5\n4\n3",
+      "raw_source": "<sample-output>\n\n6\n5\n4\n3\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "From negative to positive",
+        "tmcname": "part04-21_negative_to_positive"
+      },
+      "inner_content": "Please write a program which asks the user for a positive integer N. The program then prints out all numbers between -N and N inclusive, but _leaves out the number 0_. Each number should be printed on a separate line.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nPlease type in a positive integer: **4**\n-4\n-3\n-2\n-1\n1\n2\n3\n4\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+      "raw_source": "<programming-exercise name='From negative to positive' tmcname='part04-21_negative_to_positive'>\n\nPlease write a program which asks the user for a positive integer N. The program then prints out all numbers between -N and N inclusive, but _leaves out the number 0_. Each number should be printed on a separate line.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nPlease type in a positive integer: **4**\n-4\n-3\n-2\n-1\n1\n2\n3\n4\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "From a range to a list",
+      "raw_source": "## From a range to a list"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The function `range` returns a range object, which in many ways behaves like a list, but isn't actually one. If you try printing out the value the function returns, you will only see a description of a range object:",
+      "raw_source": "The function `range` returns a range object, which in many ways behaves like a list, but isn't actually one. If you try printing out the value the function returns, you will only see a description of a range object:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "numbers = range(2, 7)\nprint(numbers)",
+      "raw_source": "```python\nnumbers = range(2, 7)\nprint(numbers)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "range(2, 7)",
+      "raw_source": "<sample-output>\n\nrange(2, 7)\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The function `list` will convert a range into a list. The list will contain all the values that are in the range. The Advanced Course in Programming course, which follows this one, will shed more light on this subject.",
+      "raw_source": "The function `list` will convert a range into a list. The list will contain all the values that are in the range. The Advanced Course in Programming course, which follows this one, will shed more light on this subject."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "numbers = list(range(2, 7))\nprint(numbers)",
+      "raw_source": "```python\nnumbers = list(range(2, 7))\nprint(numbers)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[2, 3, 4, 5, 6]",
+      "raw_source": "<sample-output>\n\n[2, 3, 4, 5, 6]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "A reminder of the demands of the automatic tests",
+      "raw_source": "## A reminder of the demands of the automatic tests"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "So far, when the exercises have asked you to write functions, the templates have looked like this:",
+      "raw_source": "So far, when the exercises have asked you to write functions, the templates have looked like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# Write your solution here\n# You can test your function by calling it within the following block\nif __name__ == \"__main__\":\n    sentence = \"it was a dark and stormy python\"\n    print(first_word(sentence))\n    print(second_word(sentence))\n    print(last_word(sentence))",
+      "raw_source": "```python\n# Write your solution here\n# You can test your function by calling it within the following block\nif __name__ == \"__main__\":\n    sentence = \"it was a dark and stormy python\"\n    print(first_word(sentence))\n    print(second_word(sentence))\n    print(last_word(sentence))\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "From now on there will be no more reminders in the templates to use the `if __name__ == \"__main__\"` block. However, the automatic tests will still demand its use, so you will have to add the block yourself when you test your function within the main function of your program.",
+      "raw_source": "From now on there will be no more reminders in the templates to use the `if __name__ == \"__main__\"` block. However, the automatic tests will still demand its use, so you will have to add the block yourself when you test your function within the main function of your program."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "**NB:** some exercises, like the _Palindromes_ exercise coming up in this section, expect you to also write code which calls the function you wrote. This code should _not_ be placed within an `if __name__ == \"__main__\"` block. The automatic tests will not execute any code within that block, so your solution will not be complete if you place your function calls there.",
+      "raw_source": "**NB:** some exercises, like the _Palindromes_ exercise coming up in this section, expect you to also write code which calls the function you wrote. This code should _not_ be placed within an `if __name__ == \"__main__\"` block. The automatic tests will not execute any code within that block, so your solution will not be complete if you place your function calls there."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "List of stars",
+        "tmcname": "part04-22_list_of_stars"
+      },
+      "inner_content": "Please write a function named `list_of_stars`, which takes a list of integers as its argument. The function should print out lines of star characters. The numbers in the list specify how many stars each line should contain.\n\nFor example, with the function call `list_of_stars([3, 7, 1, 1, 2])` the following should be printed out:\n\n<sample-output>\n\n<pre>\n***\n*******\n*\n*\n**\n</pre>\n\n</sample-output>\n\n<!-- **Huomaa** että tällä hetkellä Windowsissa on ongelmia joidenkin tehtävien testien suorittamisessa. Jos törmäät seuraavaan virheilmoitukseen\n\n<img src=\"4_3_2.png\" alt=\"Listan iterointi\">\n\nvoit suorittaa testit lähettämällä ne palvelimelle valitsemalla testien suoritusnapin oikealla puolella olevasta symbolista avautuvasta TMC-valikosta _Submit solutions_.\n\nOngelman saa korjattua menemällä laajennuksen asennusvalikkoon ja muuttamalla \"TMC Data\" -kohdassa tehtävien sijainnin johonkin toiseen sijaintiin, jonka tiedostopolku on lyhempi, allaolevassa kuvassa nappi _change path_. Siirrossa saattaa kestää hetken, joten odotathan operaation päättymistä.\n\n<img src=\"4_3_3.png\" alt=\"Listan iterointi\">\n\nOngelmaan pyritään saamaan parempi ratkaisu lähipäivinä. -->",
+      "raw_source": "<programming-exercise name='List of stars' tmcname='part04-22_list_of_stars'>\n\nPlease write a function named `list_of_stars`, which takes a list of integers as its argument. The function should print out lines of star characters. The numbers in the list specify how many stars each line should contain.\n\nFor example, with the function call `list_of_stars([3, 7, 1, 1, 2])` the following should be printed out:\n\n<sample-output>\n\n<pre>\n***\n*******\n*\n*\n**\n</pre>\n\n</sample-output>\n\n<!-- **Huomaa** että tällä hetkellä Windowsissa on ongelmia joidenkin tehtävien testien suorittamisessa. Jos törmäät seuraavaan virheilmoitukseen\n\n<img src=\"4_3_2.png\" alt=\"Listan iterointi\">\n\nvoit suorittaa testit lähettämällä ne palvelimelle valitsemalla testien suoritusnapin oikealla puolella olevasta symbolista avautuvasta TMC-valikosta _Submit solutions_.\n\nOngelman saa korjattua menemällä laajennuksen asennusvalikkoon ja muuttamalla \"TMC Data\" -kohdassa tehtävien sijainnin johonkin toiseen sijaintiin, jonka tiedostopolku on lyhempi, allaolevassa kuvassa nappi _change path_. Siirrossa saattaa kestää hetken, joten odotathan operaation päättymistä.\n\n<img src=\"4_3_3.png\" alt=\"Listan iterointi\">\n\nOngelmaan pyritään saamaan parempi ratkaisu lähipäivinä. -->\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Anagrams",
+        "tmcname": "part04-23_anagrams"
+      },
+      "inner_content": "Please write a function named `anagrams`, which takes two strings as arguments. The function returns `True` if the strings are anagrams of each other. Two words are anagrams if they contain exactly the same characters.\n\nSome examples of how the function should work:\n\n```python\nprint(anagrams(\"tame\", \"meta\")) # True\nprint(anagrams(\"tame\", \"mate\")) # True\nprint(anagrams(\"tame\", \"team\")) # True\nprint(anagrams(\"tabby\", \"batty\")) # False\nprint(anagrams(\"python\", \"java\")) # False\n```\n\nHint: the function `sorted` can be used on strings as well.",
+      "raw_source": "<programming-exercise name='Anagrams' tmcname='part04-23_anagrams'>\n\nPlease write a function named `anagrams`, which takes two strings as arguments. The function returns `True` if the strings are anagrams of each other. Two words are anagrams if they contain exactly the same characters.\n\nSome examples of how the function should work:\n\n```python\nprint(anagrams(\"tame\", \"meta\")) # True\nprint(anagrams(\"tame\", \"mate\")) # True\nprint(anagrams(\"tame\", \"team\")) # True\nprint(anagrams(\"tabby\", \"batty\")) # False\nprint(anagrams(\"python\", \"java\")) # False\n```\n\nHint: the function `sorted` can be used on strings as well.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Palindromes",
+        "tmcname": "part04-24_palindromes"
+      },
+      "inner_content": "Please write a function named `palindromes`, which takes a string argument and returns `True` if the string is a palindrome. Palindromes are words which are spelled exactly the same backwards and forwards.\n\nPlease also write a main program which asks the user to type in words until they type in a palindrome:\n\n<sample-output>\n\nPlease type in a palindrome: **python**\nthat wasn't a palindrome\nPlease type in a palindrome: **java**\nthat wasn't a palindrome\nPlease type in a palindrome: **oddoreven**\nthat wasn't a palindrome\nPlease type in a palindrome: **neveroddoreven**\nneveroddoreven is a palindrome!\n\n</sample-output>\n\n**NB:**, the main program **should not be** within an `if __name__ == \"__main__\":` block",
+      "raw_source": "<programming-exercise name='Palindromes' tmcname='part04-24_palindromes'>\n\nPlease write a function named `palindromes`, which takes a string argument and returns `True` if the string is a palindrome. Palindromes are words which are spelled exactly the same backwards and forwards.\n\nPlease also write a main program which asks the user to type in words until they type in a palindrome:\n\n<sample-output>\n\nPlease type in a palindrome: **python**\nthat wasn't a palindrome\nPlease type in a palindrome: **java**\nthat wasn't a palindrome\nPlease type in a palindrome: **oddoreven**\nthat wasn't a palindrome\nPlease type in a palindrome: **neveroddoreven**\nneveroddoreven is a palindrome!\n\n</sample-output>\n\n**NB:**, the main program **should not be** within an `if __name__ == \"__main__\":` block\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "The sum of positive numbers",
+        "tmcname": "part04-25_sum_of_positives"
+      },
+      "inner_content": "Please write a function named `sum_of_positives`, which takes a list of integers as its argument. The function returns the sum of the positive values in the list.\n\n```python\nmy_list = [1, -2, 3, -4, 5]\nresult = sum_of_positives(my_list)\nprint(\"The result is\", result)\n```\n\n<sample-output>\n\nThe result is 9\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='The sum of positive numbers' tmcname='part04-25_sum_of_positives'>\n\nPlease write a function named `sum_of_positives`, which takes a list of integers as its argument. The function returns the sum of the positive values in the list.\n\n```python\nmy_list = [1, -2, 3, -4, 5]\nresult = sum_of_positives(my_list)\nprint(\"The result is\", result)\n```\n\n<sample-output>\n\nThe result is 9\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In these exercises we will be using lists as arguments and return values. This was covered in the [previous section](/part-4/3-lists#a-list-as-an-argument-or-a-return-value), if you need a refresher.",
+      "raw_source": "In these exercises we will be using lists as arguments and return values. This was covered in the [previous section](/part-4/3-lists#a-list-as-an-argument-or-a-return-value), if you need a refresher."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Even numbers",
+        "tmcname": "part04-26_even_numbers"
+      },
+      "inner_content": "Please write a function named `even_numbers`, which takes a list of integers as an argument. The function returns a new list containing the even numbers from the original list.\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nnew_list = even_numbers(my_list)\nprint(\"original\", my_list)\nprint(\"new\", new_list)\n```\n\n<sample-output>\n\noriginal [1, 2, 3, 4, 5]\nnew [2, 4]\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Even numbers' tmcname='part04-26_even_numbers'>\n\nPlease write a function named `even_numbers`, which takes a list of integers as an argument. The function returns a new list containing the even numbers from the original list.\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nnew_list = even_numbers(my_list)\nprint(\"original\", my_list)\nprint(\"new\", new_list)\n```\n\n<sample-output>\n\noriginal [1, 2, 3, 4, 5]\nnew [2, 4]\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "The sum of lists",
+        "tmcname": "part04-27_sum_of_lists"
+      },
+      "inner_content": "Please write a function named `list_sum` which takes two lists of integers as arguments. The function returns a new list which contains the sums of the items at each index in the two original lists. You may assume both lists have the same number of items. \n\nAn example of the function at work:\n\n```python\na = [1, 2, 3]\nb = [7, 8, 9]\nprint(list_sum(a, b)) # [8, 10, 12]\n```",
+      "raw_source": "<programming-exercise name='The sum of lists' tmcname='part04-27_sum_of_lists'>\n\nPlease write a function named `list_sum` which takes two lists of integers as arguments. The function returns a new list which contains the sums of the items at each index in the two original lists. You may assume both lists have the same number of items. \n\nAn example of the function at work:\n\n```python\na = [1, 2, 3]\nb = [7, 8, 9]\nprint(list_sum(a, b)) # [8, 10, 12]\n```\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Distinct numbers",
+        "tmcname": "part04-28_distinct_numbers"
+      },
+      "inner_content": "Please write a function named `distinct_numbers`, which takes a list of integers as its argument. The function returns a new list containing the numbers from the original list in order of magnitude, and so that each distinct number is present only once.\n\n```python\nmy_list = [3, 2, 2, 1, 3, 3, 1]\nprint(distinct_numbers(my_list)) # [1, 2, 3]\n```",
+      "raw_source": "<programming-exercise name='Distinct numbers' tmcname='part04-28_distinct_numbers'>\n\nPlease write a function named `distinct_numbers`, which takes a list of integers as its argument. The function returns a new list containing the numbers from the original list in order of magnitude, and so that each distinct number is present only once.\n\n```python\nmy_list = [3, 2, 2, 1, 3, 3, 1]\nprint(distinct_numbers(my_list)) # [1, 2, 3]\n```\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Finding the best or the worst item in a list",
+      "raw_source": "## Finding the best or the worst item in a list"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A very common programming task is finding the best or worst item in a list, according to some criteria. A simple solution is using a helper variable to \"remember\" which of the items processed so far was the most suitable. This temporary best choice is then compared to each item in turn, and at the end of the iteration the variable contains the best of the bunch.",
+      "raw_source": "A very common programming task is finding the best or worst item in a list, according to some criteria. A simple solution is using a helper variable to \"remember\" which of the items processed so far was the most suitable. This temporary best choice is then compared to each item in turn, and at the end of the iteration the variable contains the best of the bunch."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A rough draft which doesn't quite compile yet:",
+      "raw_source": "A rough draft which doesn't quite compile yet:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "best = initial_value # The initial value depends on the situation\nfor item in my_list:\n    if item is better than best:\n        best = item\n\n# We now have the best one figured out!",
+      "raw_source": "```python\nbest = initial_value # The initial value depends on the situation\nfor item in my_list:\n    if item is better than best:\n        best = item\n\n# We now have the best one figured out!\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The details of the final program code depend on the type of the items in the list, and also on the criteria for choosing the best (or worst) item. Sometimes you may need more than one helper variable.",
+      "raw_source": "The details of the final program code depend on the type of the items in the list, and also on the criteria for choosing the best (or worst) item. Sometimes you may need more than one helper variable."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's practice this method a little.",
+      "raw_source": "Let's practice this method a little."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "The length of the longest in the list",
+        "tmcname": "part04-29_length_of_longest"
+      },
+      "inner_content": "Please write a function named `length_of_longest`, which takes a list of strings as its argument. The function returns the length of the longest string.\n\n```python\nmy_list = [\"first\", \"second\", \"fourth\", \"eleventh\"]\n\nresult = length_of_longest(my_list)\nprint(result)\n```\n\n```python\nmy_list = [\"adele\", \"mark\", \"dorothy\", \"tim\", \"hedy\", \"richard\"]\n\nresult = length_of_longest(my_list)\nprint(result)\n```\n\n<sample-output>\n\n8\n7\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='The length of the longest in the list' tmcname='part04-29_length_of_longest'>\n\nPlease write a function named `length_of_longest`, which takes a list of strings as its argument. The function returns the length of the longest string.\n\n```python\nmy_list = [\"first\", \"second\", \"fourth\", \"eleventh\"]\n\nresult = length_of_longest(my_list)\nprint(result)\n```\n\n```python\nmy_list = [\"adele\", \"mark\", \"dorothy\", \"tim\", \"hedy\", \"richard\"]\n\nresult = length_of_longest(my_list)\nprint(result)\n```\n\n<sample-output>\n\n8\n7\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "The shortest in the list",
+        "tmcname": "part04-30_shortest_in_list"
+      },
+      "inner_content": "Please write a function named `shortest`, which takes a list of strings as its argument. The function returns whichever of the strings is the shortest. If more than one are equally short, the function can return any of the shortest strings (there will be no such situation in the tests). You may assume there will be no empty strings in the list.\n\n\n```python\nmy_list = [\"first\", \"second\", \"fourth\", \"eleventh\"]\n\nresult = shortest(my_list)\nprint(result)\n```\n\n```python\nmy_list = [\"adele\", \"mark\", \"dorothy\", \"tim\", \"hedy\", \"richard\"]\n\nresult = shortest(my_list)\nprint(result)\n```\n\n<sample-output>\n\nfirst\ntim\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='The shortest in the list' tmcname='part04-30_shortest_in_list'>\n\nPlease write a function named `shortest`, which takes a list of strings as its argument. The function returns whichever of the strings is the shortest. If more than one are equally short, the function can return any of the shortest strings (there will be no such situation in the tests). You may assume there will be no empty strings in the list.\n\n\n```python\nmy_list = [\"first\", \"second\", \"fourth\", \"eleventh\"]\n\nresult = shortest(my_list)\nprint(result)\n```\n\n```python\nmy_list = [\"adele\", \"mark\", \"dorothy\", \"tim\", \"hedy\", \"richard\"]\n\nresult = shortest(my_list)\nprint(result)\n```\n\n<sample-output>\n\nfirst\ntim\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "All the longest in the list",
+        "tmcname": "part04-31_all_longest_in_list"
+      },
+      "inner_content": "Please write a function named `all_the_longest`, which takes a list of strings as its argument. The function should return a new list containing the longest string in the original list. If more than one are equally long, the function should return all of the longest strings.\n\nThe order of the strings in the returned list should be the same as in the original.\n\n```python\nmy_list = [\"first\", \"second\", \"fourth\", \"eleventh\"]\n\nresult = all_the_longest(my_list)\nprint(result) # ['eleventh']\n```\n\n```python\nmy_list = [\"adele\", \"mark\", \"dorothy\", \"tim\", \"hedy\", \"richard\"]\n\nresult = all_the_longest(my_list)\nprint(result) # ['dorothy', 'richard']\n```",
+      "raw_source": "<programming-exercise name='All the longest in the list' tmcname='part04-31_all_longest_in_list'>\n\nPlease write a function named `all_the_longest`, which takes a list of strings as its argument. The function should return a new list containing the longest string in the original list. If more than one are equally long, the function should return all of the longest strings.\n\nThe order of the strings in the returned list should be the same as in the original.\n\n```python\nmy_list = [\"first\", \"second\", \"fourth\", \"eleventh\"]\n\nresult = all_the_longest(my_list)\nprint(result) # ['eleventh']\n```\n\n```python\nmy_list = [\"adele\", \"mark\", \"dorothy\", \"tim\", \"hedy\", \"richard\"]\n\nresult = all_the_longest(my_list)\nprint(result) # ['dorothy', 'richard']\n```\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!---\nA quiz to review the contents of this section:",
+      "raw_source": "<!---\nA quiz to review the contents of this section:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "b1a91143-3137-5833-a771-6801f541a43b"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"b1a91143-3137-5833-a771-6801f541a43b\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    }
+  ]
+}

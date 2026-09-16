@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-03_box_of_hashes",
+  "lesson_id": "part04-2-more-functions",
+  "part": 4,
+  "tmc_name": "part04-03_box_of_hashes",
+  "title_original": "A box of hashes",
+  "title_vi": "Một hộp băm",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `box_of_hashes`, which prints out a rectangle of hash characters. The function takes one argument, which specifies the height of the rectangle. The rectangle should be ten characters wide.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in your `line` function.\n\nSome examples of how the function should work:\n\n```python\nbox_of_hashes(5)\nprint()\nbox_of_hashes(2)\n```\n\n<sample-output>\n\n<pre>\n##########\n##########\n##########\n##########\n##########\n\n##########\n##########\n</pre>\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `box_of_hashes` để in ra một hình chữ nhật gồm các ký tự băm. Hàm này nhận một đối số xác định chiều cao của hình chữ nhật. Hình chữ nhật phải rộng mười ký tự.\n\nHàm sẽ gọi hàm `line` từ bài tập trên để in ra thực tế. Sao chép lời giải của bạn cho bài tập đó ở phía trên mã của bài tập này. Vui lòng không thay đổi bất cứ điều gì trong chức năng `line` của bạn.\n\nMột số ví dụ về cách hoạt động của hàm:\n\n```python\nbox_of_hashes(5)\nprint()\nbox_of_hashes(2)\n```\n\n<sample-output>\n\n<pre>\n##########\n##########\n##########\n##########\n##########\n\n##########\n##########\n</pre>\n\n</sample-output>",
+  "starter_code": "box_of_hashes(5)\nprint()\nbox_of_hashes(2)",
+  "grading_data_available": false,
+  "source_hash": "3bab8c22c7f0c90fd239ae2812c8f80522a5f7bc26f7a05f4e47ae4bca729caf",
+  "order": 29
+}

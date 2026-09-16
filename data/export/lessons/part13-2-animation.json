@@ -1,0 +1,860 @@
+{
+  "id": "part13-2-animation",
+  "part": 13,
+  "part_slug": "part-13",
+  "slug": "2-animation",
+  "is_part_index": false,
+  "title_original": "Animation",
+  "title_vi": "Hoạt hình",
+  "path": "/part-13/2-animation",
+  "source_path": "data/part-13/2-animation.md",
+  "source_hash": "c2ad89dcccacd4bbee0ddc8e0a6a3565938d5ff926e4394858bea079c8c53c8c",
+  "order": 1,
+  "blocks_count": 46,
+  "blocks": [
+    {
+      "id": "blk-part13-2-animation-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "22c376ef9e1528e475fcdbe2a8d96bff581c0c60c42eb7b17bc1d4916f2339b4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know how to create an animation with pygame\n- You will be able to use a clock to set the speed of your program\n- You will be able to use basic trigonometric functions in your animations"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ biết cách tạo ảnh động bằng pygame\n- Bạn sẽ có thể sử dụng đồng hồ để đặt tốc độ cho chương trình của mình\n- Bạn sẽ có thể sử dụng các hàm lượng giác cơ bản trong hoạt ảnh của mình"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "698e6b38391b523330886d846cab12c91564dced13b7722c5d8a90440be10a9e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Many games have moving characters, so a logical next step is creating animations. We can create the illusion of movement by drawing the same image in different locations on the screen and timing the changes appropriately."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nhiều trò chơi có nhân vật chuyển động nên bước hợp lý tiếp theo là tạo hoạt ảnh. Chúng ta có thể tạo ảo giác về chuyển động bằng cách vẽ cùng một hình ảnh ở các vị trí khác nhau trên màn hình và căn thời gian thay đổi một cách thích hợp."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0003",
+      "type": "heading",
+      "order": 3,
+      "source_hash": "f71886c77518146daf08b40c124c93252a54d585e6fe5241d64024abe3fd6f7b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Creating an animation"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tạo hoạt ảnh"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "b8e22903b6baf2981c51f57cbd38dcd1bb6b817912d05147da81430ce26bd1ac",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following code creates an animation where a robot moves from left to right in a pygame window:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đoạn mã sau tạo hoạt ảnh trong đó robot di chuyển từ trái sang phải trong cửa sổ pygame:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "d267a273b01fd7369843201c10dfb3cda7a27294657c5ac6bd97c865c58ca455",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nx = 0\ny = 0\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()\n\n    x += 1\n    clock.tick(60)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nx = 0\ny = 0\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()\n\n    x += 1\n    clock.tick(60)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d267a273b01fd7369843201c10dfb3cda7a27294657c5ac6bd97c865c58ca455",
+        "length_lines": 22
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "9858d9cbfd7f5cad43a4ec107384014cd0ca260391625a8167709e1e2f9fa961",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "When this is executed, the result should look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khi điều này được thực thi, kết quả sẽ như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0007",
+      "type": "image",
+      "order": 7,
+      "source_hash": "a724c0828d34b7af3d644c184b347e3b61b5349ac67d9e9dcd3177050e03cf0a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "pygame_animation.gif",
+        "alt": "",
+        "attributes": {
+          "src": "pygame_animation.gif"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "3ded55eb87ba7fa10a8e78f538159c0d46209a24843c63198117e2981dbe21f9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's take a closer look at the commands involved. If we want to trace the movement of the image on the screen, we need to know its location, which is why we have two variables for the coordinates of the top left corner of the image:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy xem xét kỹ hơn các lệnh liên quan. Nếu muốn theo dõi chuyển động của hình ảnh trên màn hình, chúng ta cần biết vị trí của nó, đó là lý do tại sao chúng ta có hai biến cho tọa độ góc trên cùng bên trái của hình ảnh:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0009",
+      "type": "code",
+      "order": 9,
+      "source_hash": "63114aa813cfce0054be116fe90852945a74491bdf4e5a23ce16d8ccb888307d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "x = 0\ny = 0"
+      },
+      "translation": {
+        "language": "code",
+        "content": "x = 0\ny = 0"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "63114aa813cfce0054be116fe90852945a74491bdf4e5a23ce16d8ccb888307d",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "bbda2a9bc2271aebcb6085801b9df24836a9d398d3079312fe6c1886bd74d46a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We also have a clock, which we use to make sure the speed of the animation is just right:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng tôi cũng có một chiếc đồng hồ mà chúng tôi sử dụng để đảm bảo tốc độ của hoạt ảnh ở mức vừa phải:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0011",
+      "type": "code",
+      "order": 11,
+      "source_hash": "6c94c9601a4350636b76d035caac98a5b8f3a4a4555a33ba7dd454dee12c578b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "clock = pygame.time.Clock()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "clock = pygame.time.Clock()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6c94c9601a4350636b76d035caac98a5b8f3a4a4555a33ba7dd454dee12c578b",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "0f01f9b6c1b53e94a936eeda95d66d8db91e0d298e1571c9fc78db5c85874f86",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The main loop draws the image at its current location with each iteration:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vòng lặp chính sẽ vẽ hình ảnh ở vị trí hiện tại của nó sau mỗi lần lặp:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0013",
+      "type": "code",
+      "order": 13,
+      "source_hash": "8f4af56859b9174cfb8a2d12f40b522c8b4db1a669d34304bf2b426fd6f9a0bf",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8f4af56859b9174cfb8a2d12f40b522c8b4db1a669d34304bf2b426fd6f9a0bf",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "2a90f30c502b2203d1053299d402f91a1b936b522439d157aef86b8d5705585c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "First the method `fill` fills the window with black, as before. The colour is passed as a tuple containing the RGB values for the colour. In this case the argument is `(0, 0, 0)`, which means that all three components - red, green and blue - have value 0. Each component can have a value between 0 and 255. So, if we passed `(255, 255, 255)` as the argument, we'd get a white window, and with `(255, 0, 0)` we'd get a red window. RGB colour codes form the backbone of digital colouring, and there are many tools online for working with them, for example [RGB Color Codes Chart](https://www.rapidtables.com/web/color/RGB_Color.html)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đầu tiên, phương thức `fill` tô màu đen cho cửa sổ như trước. Màu được truyền dưới dạng một bộ chứa các giá trị RGB cho màu đó. Trong trường hợp này, đối số là `(0, 0, 0)`, có nghĩa là cả ba thành phần - đỏ, lục và lam - đều có giá trị 0. Mỗi thành phần có thể có giá trị từ 0 đến 255. Vì vậy, nếu chúng ta chuyển `(255, 255, 255)` làm đối số, chúng ta sẽ có một cửa sổ màu trắng và với `(255, 0, 0)`, chúng ta sẽ có một cửa sổ màu đỏ. Mã màu RGB tạo thành xương sống của màu kỹ thuật số và có nhiều công cụ trực tuyến để làm việc với chúng, chẳng hạn như [Biểu đồ mã màu RGB](https://www.rapidtables.com/web/color/RGB_Color.html)."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "301c81f865ed89e1131969bdefd514e00952b08c909f25879b02925b3628a488",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After the window is filled with colour the image is drawn at the given location with the `blit` method. Then the contents of the window are updated with the function `pygame.display.flip`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau khi cửa sổ được tô màu, hình ảnh sẽ được vẽ tại vị trí nhất định bằng phương pháp `blit`. Sau đó nội dung của cửa sổ được cập nhật với chức năng `pygame.display.flip`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "f3a1c56b4a03a44125f75dd89e47ca59ee8992e9217b74336c631dd2e0bd1187",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Finally, the value stored in `x` is incremented, which makes the image move one pixel to the right with each iteration:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cuối cùng, giá trị được lưu trữ trong `x` được tăng lên, làm cho hình ảnh di chuyển một pixel sang phải sau mỗi lần lặp:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0017",
+      "type": "code",
+      "order": 17,
+      "source_hash": "ab19485660431c1ed368e476dcd9a3bc6aa6d7988aea71e0b9cf65dcde60620a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    x += 1"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    x += 1"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ab19485660431c1ed368e476dcd9a3bc6aa6d7988aea71e0b9cf65dcde60620a",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "84fa510e82c7763c3de50d6dc2a927ead64088f60195b35dacae3ac4f6dc600f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The clock method `tick` is called at the end:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương thức đồng hồ `tick` được gọi ở cuối:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0019",
+      "type": "code",
+      "order": 19,
+      "source_hash": "5d8571bbb950c838b7a80c2ce70374dca9bfad7bdbf3fd2cc1785eae59dbc4c9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    clock.tick(60)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    clock.tick(60)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5d8571bbb950c838b7a80c2ce70374dca9bfad7bdbf3fd2cc1785eae59dbc4c9",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "4f7590ca0f67e7e5a9e0cdc8079b0a85124230131bcd453cfa17654b3f5c4a5f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The method `tick` takes care of the speed of the animation. The argument `60` dictates that the loop should be executed 60 times a second, which means that the image moves 60 pixels to the right each second. This approximately matches the _FPS_ or _frames per second_ value used with games."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương pháp `tick` quan tâm đến tốc độ của hoạt ảnh. Đối số `60` chỉ ra rằng vòng lặp phải được thực hiện 60 lần một giây, có nghĩa là hình ảnh sẽ di chuyển 60 pixel sang phải mỗi giây. Giá trị này gần khớp với giá trị _FPS_ hoặc _khung hình trên giây_ được sử dụng với trò chơi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "ae53291ba638740780486c11a7d1293afa2889ad6a86f41094c4c4dc226db9f3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In principle, the `tick` method makes sure that the animation runs at the same speed on every computer. If there was no such timing involved, the speed of the animation would depend on the speed of the computer."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Về nguyên tắc, phương pháp `tick` đảm bảo rằng hoạt ảnh chạy ở cùng tốc độ trên mọi máy tính. Nếu không có thời gian như vậy, tốc độ của hoạt ảnh sẽ phụ thuộc vào tốc độ của máy tính."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0022",
+      "type": "heading",
+      "order": 22,
+      "source_hash": "7b5e02c4b05ac119158afdd3bb871b7d8465b482afd60580f471fff55c546a07",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Bouncing off a wall"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bật ra khỏi một bức tường"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "88fe6c49c1506d6cbe9c2ede69392c645aa2965aaa8b3d8ebdbc560584e07654",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The previous animation was otherwise excellent, but as the robot reached a wall, it just kept going out of sight. Let's make the robot bounce off the wall."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hoạt hình trước đó rất xuất sắc, nhưng khi robot chạm tới bức tường, nó cứ khuất tầm nhìn. Hãy làm cho robot bật ra khỏi tường."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0024",
+      "type": "code",
+      "order": 24,
+      "source_hash": "86d50508e3a3b6afb24fafbf08831128a61cbe0401905cd9011321283738490f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nx = 0\ny = 0\nvelocity = 1\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()\n    \n    x += velocity\n    if velocity > 0 and x+robot.get_width() >= 640:\n        velocity = -velocity\n    if velocity < 0 and x <= 0:\n        velocity = -velocity\n\n    clock.tick(60)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nx = 0\ny = 0\nvelocity = 1\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()\n    \n    x += velocity\n    if velocity > 0 and x+robot.get_width() >= 640:\n        velocity = -velocity\n    if velocity < 0 and x <= 0:\n        velocity = -velocity\n\n    clock.tick(60)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "86d50508e3a3b6afb24fafbf08831128a61cbe0401905cd9011321283738490f",
+        "length_lines": 28
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "016621b5191613e327e0640ab8af6ed84e746c54d529cb071634329eb94fa745",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Running the above code should look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chạy đoạn mã trên sẽ trông như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0026",
+      "type": "image",
+      "order": 26,
+      "source_hash": "3c70f5e73547bcb9aa400b2ea21873bd43f3aa0dac96c0a2304e031720428509",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "pygame_animation2.gif",
+        "alt": "",
+        "attributes": {
+          "src": "pygame_animation2.gif"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "4b26d7c16b1e137e5cc1d28b8416934a0efb784b6bc7550dd16f5974298e028b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "There is a new variable `velocity` which determines the direction of the movement. If the value is above zero, movement is to the right, and if it is below zero, movement is to the left. More precisely in this case, if the value is `1`, the robot moves to the right, and if it is `-1`, the robot moves to the left."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Có một biến mới `velocity` xác định hướng chuyển động. Nếu giá trị trên 0 thì chuyển động ở bên phải và nếu giá trị dưới 0 thì chuyển động ở bên trái. Chính xác hơn trong trường hợp này, nếu giá trị là `1`, robot sẽ di chuyển sang phải và nếu là `-1`, robot sẽ di chuyển sang trái."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "e25c3a5ce9a280cf7d2d94347ed5c29c32b0299d77640b38e73ed7464e760550",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following lines make the robot bounce off the side walls:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các dòng sau đây làm cho robot bật ra khỏi các bức tường bên:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0029",
+      "type": "code",
+      "order": 29,
+      "source_hash": "3c3d8556f8c73569dca63d4133786b164ffccf2dad4235427ffa9131fe1358a7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    if velocity > 0 and x+robot.get_width() >= 640:\n        velocity = -velocity\n    if velocity < 0 and x <= 0:\n        velocity = -velocity"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    if velocity > 0 and x+robot.get_width() >= 640:\n        velocity = -velocity\n    if velocity < 0 and x <= 0:\n        velocity = -velocity"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3c3d8556f8c73569dca63d4133786b164ffccf2dad4235427ffa9131fe1358a7",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "95d128730f5a05dbfc438aadd9db958ef2e4508c9000925037a86749396e2c78",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If the velocity is above zero so that the robot is moving to the right, and the right edge if the image goes beyond the right edge of the window, the direction is reversed and the robot starts moving to the left. Similarly, if the velocity is below zero so that the robot is moving to the left, and the left edge of the image reaches the left edge of the window, the direction is again reversed and the robot starts moving to the right again."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu vận tốc lớn hơn 0 để rô-bốt di chuyển sang phải và cạnh phải nếu hình ảnh vượt ra ngoài cạnh phải của cửa sổ, hướng sẽ bị đảo ngược và rô-bốt bắt đầu di chuyển sang trái. Tương tự, nếu vận tốc dưới 0 để rô-bốt di chuyển sang trái và cạnh trái của hình ảnh chạm đến cạnh trái của cửa sổ, hướng lại bị đảo ngược và rô-bốt lại bắt đầu di chuyển sang phải."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "69a95ed1a9ceae857c7efa8d8ab87fb8886e683c08732c26b1728deda22b0319",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This makes the robot move on a path from the left edge of the window to the right edge, and back to the left, and then to the right again, repeated ad infinitum."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điều này làm cho robot di chuyển trên một con đường từ mép trái của cửa sổ sang mép phải, rồi quay lại bên trái, rồi lại sang phải, lặp đi lặp lại đến vô tận."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0032",
+      "type": "heading",
+      "order": 32,
+      "source_hash": "57b5e2fc1bba18bb4f54084af57ffe86b3bb3d925c281043e84a05eb4b19317c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Rotation"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Xoay"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "7ca5537e49f535f562b75c27ea93a2fad48d7da64153277b05749276138bb9e9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's create one more animation. This time the robot should _rotate_ in a circle around the centre of the window:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy tạo thêm một hình ảnh động nữa. Lần này robot sẽ _xoay_ theo vòng tròn quanh tâm cửa sổ:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0034",
+      "type": "code",
+      "order": 34,
+      "source_hash": "c7f118dc8708ba7f2199b6f259a4ba0979a54e7665dcf4d50a90c2877fa6dce1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import pygame\nimport math\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nangle = 0\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()\n\n    x = 320+math.cos(angle)*100-robot.get_width()/2\n    y = 240+math.sin(angle)*100-robot.get_height()/2\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()\n\n    angle += 0.01\n    clock.tick(60)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import pygame\nimport math\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nangle = 0\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()\n\n    x = 320+math.cos(angle)*100-robot.get_width()/2\n    y = 240+math.sin(angle)*100-robot.get_height()/2\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()\n\n    angle += 0.01\n    clock.tick(60)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c7f118dc8708ba7f2199b6f259a4ba0979a54e7665dcf4d50a90c2877fa6dce1",
+        "length_lines": 25
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "016621b5191613e327e0640ab8af6ed84e746c54d529cb071634329eb94fa745",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Running the above code should look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chạy đoạn mã trên sẽ trông như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0036",
+      "type": "image",
+      "order": 36,
+      "source_hash": "b2d7c7cc259b0f21f647439dada67f397f3f9bfb02c946e3bff23f4be982e14b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "pygame_rotation.gif",
+        "alt": "",
+        "attributes": {
+          "src": "pygame_rotation.gif"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "f428c1b26e8d6a96c732eb4a88c00d0aad850384ed66088c1e1431e87f858ead",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Rotation in a relatively precise circle is achieved with the help of some basic trigonometric functions. The varible `angle` contains the angle of the robots location in relation to the centre of the window and the horizontal line running through it. The sine and cosine functions from the Python math library are used to calculate the coordinates of the robot's location:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Việc quay trong một vòng tròn tương đối chính xác đạt được nhờ sự trợ giúp của một số hàm lượng giác cơ bản. Biến `angle` chứa góc của vị trí robot so với tâm cửa sổ và đường ngang chạy qua nó. Các hàm sin và cosin từ thư viện toán Python được sử dụng để tính tọa độ vị trí của robot:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0038",
+      "type": "code",
+      "order": 38,
+      "source_hash": "e1d6e37b5df5147818045883efb07b84320de4267be482ae8f35a937201367db",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "        x = 320+math.cos(angle)*100-robot.get_width()/2\n        y = 240+math.sin(angle)*100-robot.get_height()/2"
+      },
+      "translation": {
+        "language": "code",
+        "content": "        x = 320+math.cos(angle)*100-robot.get_width()/2\n        y = 240+math.sin(angle)*100-robot.get_height()/2"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e1d6e37b5df5147818045883efb07b84320de4267be482ae8f35a937201367db",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "e02f467cba1ff02ce59c73d9b892eca10cc2b0ba5026826d89e9ed7b213ae4ca",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The robot rotates around a circle of radius 100 around the centre of the window. The hypotenuse in this scenario is the radius of the circle. The cosine function gives the length of the _adjacent_ side of a right triangle in relation to the hypotenuse, which means that it gives us the `x` coordinate of the location. The sine function gives the length of the _opposite_ side, i.e. the `y` coordinate. The location is then adjusted for the size of the image, so that the centre of the circle is at the centre of the window."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Robot quay quanh một vòng tròn bán kính 100 quanh tâm cửa sổ. Cạnh huyền trong kịch bản này là bán kính của hình tròn. Hàm cosine cho biết độ dài cạnh _liền_ của một tam giác vuông so với cạnh huyền, có nghĩa là nó cho chúng ta tọa độ `x` của vị trí. Hàm sin cho biết độ dài của cạnh _opposite_, tức là tọa độ `y`. Sau đó, vị trí sẽ được điều chỉnh theo kích thước của hình ảnh sao cho tâm của vòng tròn nằm ở giữa cửa sổ."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "54b94b004acda9e45b7c95a6edf6a6049057e53eaea410eecb66468a3ed12d99",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "With each iteration the size of the `angle` is incremented by 0.01:llä. As we are using radians, a full circle is 2π, which equals about 6.28. It takes about 628 iterations for the robot to go a full circle, and at 60 iterations per second this takes just over 10 seconds."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Với mỗi lần lặp, kích thước của `angle` được tăng thêm 0,01:llä. Vì chúng ta đang sử dụng radian nên một vòng tròn đầy đủ là 2π, bằng khoảng 6,28. Robot phải mất khoảng 628 lần lặp để đi hết một vòng tròn và với tốc độ 60 lần lặp mỗi giây, quá trình này chỉ mất hơn 10 giây."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-2-animation-0041",
+      "type": "exercise",
+      "order": 41,
+      "source_hash": "748a2dccd05b6341d0a4c4c082667244a1c97d3b54f76eeb1fba91065c13fccd",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please create an animation where the robot moves up and down in an endless loop. The end result should look like this:\n\n<img src=\"pygame_vertical.gif\">"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng tạo hoạt ảnh trong đó robot di chuyển lên xuống theo vòng lặp vô tận. Kết quả cuối cùng sẽ trông như thế này:\n\n<img src=\"pygame_vertical.gif\">"
+      },
+      "metadata": {
+        "exercise_id": "ex-part13-05_vertical_movement",
+        "exercise_type": "programming-exercise",
+        "name": "Vertical movement",
+        "tmc_name": "part13-05_vertical_movement",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0042",
+      "type": "exercise",
+      "order": 42,
+      "source_hash": "626dee1b1512544fa6d77f7fe1d0c7c5ddf57c68a4dd2049b353934758c2690e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please create an animation where the robot traces the perimeter of the window. The end result should look like this:\n\n<img src=\"pygame_perimeter.gif\">"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng tạo hoạt ảnh trong đó rô-bốt theo dõi chu vi của cửa sổ. Kết quả cuối cùng sẽ trông như thế này:\n\n<img src=\"pygame_perimeter.gif\">"
+      },
+      "metadata": {
+        "exercise_id": "ex-part13-06_round_the_perimeter",
+        "exercise_type": "programming-exercise",
+        "name": "Round the perimeter",
+        "tmc_name": "part13-06_round_the_perimeter",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0043",
+      "type": "exercise",
+      "order": 43,
+      "source_hash": "3ff167b28493f1efb14c564447672436ffffbf1a40d782fd6ec34ec405c6f7cb",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please create an animation where two robots move back and forth to the left and right. The lower robot should move at double the speed of the upper one. The end result should look like this:\n\n<img src=\"pygame_move2.gif\">"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng tạo hoạt ảnh trong đó hai robot di chuyển qua lại sang trái và phải. Robot phía dưới phải di chuyển với tốc độ gấp đôi tốc độ của robot phía trên. Kết quả cuối cùng sẽ trông như thế này:\n\n<img src=\"pygame_move2.gif\">"
+      },
+      "metadata": {
+        "exercise_id": "ex-part13-07_two_robots",
+        "exercise_type": "programming-exercise",
+        "name": "Two robots",
+        "tmc_name": "part13-07_two_robots",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0044",
+      "type": "exercise",
+      "order": 44,
+      "source_hash": "cc73f6cc9f6f28c81c396a02221dc7e766f825bb689dbae89cbf69e18421c93d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please create an animation where ten robots go round in a circle. The end result should look like this:\n\n<img src=\"pygame_circle.gif\">"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng tạo hoạt ảnh trong đó mười robot đi vòng tròn. Kết quả cuối cùng sẽ trông như thế này:\n\n<img src=\"pygame_circle.gif\">"
+      },
+      "metadata": {
+        "exercise_id": "ex-part13-08_robot_circle",
+        "exercise_type": "programming-exercise",
+        "name": "Robots in a circle",
+        "tmc_name": "part13-08_robot_circle",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0045",
+      "type": "exercise",
+      "order": 45,
+      "source_hash": "9eb14abd75a0c7138a7fa1adc2ab5b7f57f4d5d442f3a461f4fb0ae7b89e0b93",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please create an animation where a ball bounces from the edges of the window. The end result should look like this:\n\n<img src=\"pygame_bounce.gif\">\n\nThe exercise template contains the image `ball.png`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng tạo hoạt ảnh trong đó quả bóng nảy ra từ các cạnh của cửa sổ. Kết quả cuối cùng sẽ trông như thế này:\n\n<img src=\"pygame_bounce.gif\">\n\nMẫu bài tập chứa hình ảnh `ball.png`."
+      },
+      "metadata": {
+        "exercise_id": "ex-part13-09_bouncing_ball",
+        "exercise_type": "programming-exercise",
+        "name": "Bouncing ball",
+        "tmc_name": "part13-09_bouncing_ball",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part13-2-animation-0046",
+      "type": "exercise",
+      "order": 46,
+      "source_hash": "3d6201cf5311f2555d613c78206d7c6b41b87bb32a89ebd8044284b55b20de3d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please create an animation where robots fall from the sky randomly. When a robot reaches the ground, it starts moving to the left or to the right, and finaly disappears off the screen. The end result should look like this:\n\n<img src=\"pygame_invasion.gif\">"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng tạo hoạt ảnh trong đó robot từ trên trời rơi xuống một cách ngẫu nhiên. Khi robot chạm đất, nó bắt đầu di chuyển sang trái hoặc phải và cuối cùng biến mất khỏi màn hình. Kết quả cuối cùng sẽ trông như thế này:\n\n<img src=\"pygame_invasion.gif\">"
+      },
+      "metadata": {
+        "exercise_id": "ex-part13-10_robot_invasion",
+        "exercise_type": "programming-exercise",
+        "name": "Robot invasion",
+        "tmc_name": "part13-10_robot_invasion",
+        "height": null
+      }
+    }
+  ]
+}

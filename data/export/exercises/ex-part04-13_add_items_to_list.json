@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-13_add_items_to_list",
+  "lesson_id": "part04-3-lists",
+  "part": 4,
+  "tmc_name": "part04-13_add_items_to_list",
+  "title_original": "Add items to a list",
+  "title_vi": "Thêm các mục vào danh sách",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which first asks the user for the number of items to be added. Then the program should ask for the given number of values, one by one, and add them to a list in the order they were typed in. Finally, the list is printed out.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nHow many items: **3**\nItem 1: **10**\nItem 2: **250**\nItem 3: **34**\n[10, 250, 34]\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+  "description_vi": "Hãy viết một chương trình đầu tiên hỏi người dùng số lượng phần tử cần thêm vào. Sau đó, chương trình sẽ yêu cầu từng số giá trị nhất định và thêm chúng vào danh sách theo thứ tự chúng được nhập vào. Cuối cùng, danh sách được in ra.\n\nMột ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nSố lượng sản phẩm: **3**\nMục 1: **10**\nMục 2: **250**\nMục 3: **34**\n[10, 250, 34]\n\n</sample-output>\n\n**NB:** bài tập này không yêu cầu bạn viết bất kỳ hàm nào, vì vậy bạn nên __không__ đặt bất kỳ mã nào trong khối `if __name__ == \"__main__\"`.",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "67db5ff886ff5fa6b1d6aa83ea96463a77ba678f7ee170782e06ee4484fae692",
+  "order": 32
+}

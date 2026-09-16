@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-20_next_leap_year",
+  "lesson_id": "part02-4-simple-loops",
+  "part": 2,
+  "tmc_name": "part02-20_next_leap_year",
+  "title_original": "The next leap year",
+  "title_vi": "Năm nhuận tiếp theo",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for a year, and prints out the next leap year.\n\n<sample-output>\n\nYear: **2023**\nThe next leap year after 2023 is 2024\n\n</sample-output>\n\nIf the user inputs a year which is a leap year (such as 2024), the program should print out the following leap year:\n\n<sample-output>\n\nYear: **2024**\nThe next leap year after 2024 is 2028\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình hỏi người dùng về một năm và in ra năm nhuận tiếp theo.\n\n<sample-output>\n\nNăm: **2023**\nNăm nhuận tiếp theo sau năm 2023 là năm 2024\n\n</sample-output>\n\nNếu người dùng nhập năm nhuận (chẳng hạn như 2024), chương trình sẽ in ra năm nhuận sau:\n\n<sample-output>\n\nNăm: **2024**\nNăm nhuận tiếp theo sau năm 2024 là năm 2028\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "6b5eb18a415087f6f454d2974fbc62acfd94e272c15aeda1d4a140d977f9c5fe",
+  "order": 40
+}

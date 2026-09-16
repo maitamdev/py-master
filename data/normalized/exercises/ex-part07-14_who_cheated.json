@@ -1,0 +1,16 @@
+{
+  "id": "ex-part07-14_who_cheated",
+  "lesson_id": "part07-4-data-processing",
+  "part": 7,
+  "tmc_name": "part07-14_who_cheated",
+  "title_original": "Who cheated",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The file `start_times.csv` contains individual start times for a programming exam, in the format `name;hh:mm`. An example:\n\n```csv\njarmo;09:00\ntimo;18:42\nkalle;13:23\n```\n\nAdditionally, the file `submissions.csv` contains points and handin times for individual exercises. The format here is `name;task;points;hh:mm`. An example:\n\n```csv\njarmo;1;8;16:05\ntimo;2;10;21:22\njarmo;2;10;19:15\njne...\n```\n\nYour task is to find the students who spent over 3 hours on the exam tasks. That is, any student whose _any_ task was handed in over 3 hours later than their exam start time is labelled a cheater. There may be more than one submission for the same task for each student. You may assume all times are within the same day.\n\nPlease write a function named `cheaters()`, which returns a list containing the names of the students who cheated",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "15d8ec14def2bc61b2dc44558f8f9b4bb7be5e10d7948bff11c867dcc2d15383",
+  "order": 33
+}

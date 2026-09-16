@@ -1,0 +1,16 @@
+{
+  "id": "ex-part08-01_smallest_average",
+  "lesson_id": "part08-1-objects-and-methods",
+  "part": 8,
+  "tmc_name": "part08-01_smallest_average",
+  "title_original": "The smallest average result",
+  "title_vi": "Kết quả trung bình nhỏ nhất",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `smallest_average(person1: dict, person2: dict, person3: dict)`, which takes three dictionary objects as its arguments.\n\nEach dictionary object contains values mapped to the following keys:\n\n* `\"name\"`: The name of the contestant\n* `\"result1\"`: the first result of the contestant (an integer between 1 and 10)\n* `\"result2\"`: the second result of the contestant (as above)\n* `\"result3\"`: the third result of the contestant (as above)\n\nThe function should calculate the average of the three results for each contestant, and then return the contestant whose average result was the smallest. The return value should be the entire dictionary object containing the contestant's information.\n\nYou may assume there will be no ties, i.e. a single contestant will have the smallest average result.\n\nAn example of the function in action:\n\n```python\nperson1 = {\"name\": \"Mary\", \"result1\": 2, \"result2\": 3, \"result3\": 3}\nperson2 = {\"name\": \"Gary\", \"result1\": 5, \"result2\": 1, \"result3\": 8}\nperson3 = {\"name\": \"Larry\", \"result1\": 3, \"result2\": 1, \"result3\": 1}\n\nprint(smallest_average(person1, person2, person3))\n```\n\n<sample-output>\n\n{'name': 'Larry', 'result1': 3, 'result2': 1, 'result3': 1}\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `smallest_average(person1: dict, person2: dict, person3: dict)`, hàm này lấy ba đối tượng từ điển làm đối số.\n\nMỗi đối tượng từ điển chứa các giá trị được ánh xạ tới các khóa sau:\n\n* `\"name\"`: Tên thí sinh\n* `\"result1\"`: kết quả đầu tiên của thí sinh (số nguyên từ 1 đến 10)\n* `\"result2\"`: kết quả thứ 2 của thí sinh (như trên)\n* `\"result3\"`: kết quả thứ 3 của thí sinh (như trên)\n\nHàm sẽ tính trung bình của ba kết quả cho mỗi thí sinh, sau đó trả về thí sinh có kết quả trung bình nhỏ nhất. Giá trị trả về phải là toàn bộ đối tượng từ điển chứa thông tin của thí sinh.\n\nBạn có thể cho rằng sẽ không có sự ràng buộc nào, tức là một thí sinh duy nhất sẽ có kết quả trung bình nhỏ nhất.\n\nMột ví dụ về chức năng đang hoạt động:\n\n```python\nperson1 = {\"name\": \"Mary\", \"result1\": 2, \"result2\": 3, \"result3\": 3}\nperson2 = {\"name\": \"Gary\", \"result1\": 5, \"result2\": 1, \"result3\": 8}\nperson3 = {\"name\": \"Larry\", \"result1\": 3, \"result2\": 1, \"result3\": 1}\n\nprint(smallest_average(person1, person2, person3))\n```\n\n<sample-output>\n\n{'name': 'Larry', 'result1': 3, 'result2': 1, 'result3': 1}\n\n</sample-output>",
+  "starter_code": "person1 = {\"name\": \"Mary\", \"result1\": 2, \"result2\": 3, \"result3\": 3}\nperson2 = {\"name\": \"Gary\", \"result1\": 5, \"result2\": 1, \"result3\": 8}\nperson3 = {\"name\": \"Larry\", \"result1\": 3, \"result2\": 1, \"result3\": 1}\n\nprint(smallest_average(person1, person2, person3))",
+  "grading_data_available": false,
+  "source_hash": "68f9a37b76451035abdde45a0a083e8774c2fe6cb808ec8b71dadd2a6eb22c79",
+  "order": 24
+}

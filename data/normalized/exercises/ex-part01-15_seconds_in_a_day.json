@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-15_seconds_in_a_day",
+  "lesson_id": "part01-4-arithmetic-operations",
+  "part": 1,
+  "tmc_name": "part01-15_seconds_in_a_day",
+  "title_original": "Seconds in a day",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for a number of days. The program then prints out the number of seconds in the amount of days given.\n\nThe program should function as follows:\n\n<sample-output>\n\nHow many days? **1**\nSeconds in that many days: 86400\n\n</sample-output>\n\nAnother example:\n\n<sample-output>\n\nHow many days? **7**\nSeconds in that many days: 604800\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "772d0366009efe013910cd617bafd824ffac07e2d38df96c96d5871221105be9",
+  "order": 61
+}

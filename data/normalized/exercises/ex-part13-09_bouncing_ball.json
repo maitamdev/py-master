@@ -1,0 +1,16 @@
+{
+  "id": "ex-part13-09_bouncing_ball",
+  "lesson_id": "part13-2-animation",
+  "part": 13,
+  "tmc_name": "part13-09_bouncing_ball",
+  "title_original": "Bouncing ball",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please create an animation where a ball bounces from the edges of the window. The end result should look like this:\n\n<img src=\"pygame_bounce.gif\">\n\nThe exercise template contains the image `ball.png`.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "9eb14abd75a0c7138a7fa1adc2ab5b7f57f4d5d442f3a461f4fb0ae7b89e0b93",
+  "order": 45
+}

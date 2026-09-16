@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-14_underlining",
+  "lesson_id": "part03-2-working-with-strings",
+  "part": 3,
+  "tmc_name": "part03-14_underlining",
+  "title_original": "Underlining",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for strings using a loop. The program prints out each string underlined as shown in the examples below. The execution ends when the user inputs an empty string - that is, just presses Enter at the prompt.\n\n<sample-output>\n\nPlease type in a string: **Hi there!**\n<pre>\nHi there!\n---------\n</pre>\nPlease type in a string: **This is a test**\n<pre>\nThis is a test\n--------------\n</pre>\nPlease type in a string: **a**\n<pre>\na\n-\n</pre>\nPlease type in a string:\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "9b2d8a000e951b04bee47e3ce899db3b02b3adff80e14605bc6508433e46a458",
+  "order": 55
+}

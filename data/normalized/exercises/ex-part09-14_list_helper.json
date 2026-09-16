@@ -1,0 +1,16 @@
+{
+  "id": "ex-part09-14_list_helper",
+  "lesson_id": "part09-5-class-attributes",
+  "part": 9,
+  "tmc_name": "part09-14_list_helper",
+  "title_original": "List helper",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please create a class named `ListHelper` which contains the following two class methods.\n\n* `greatest_frequency(my_list: list)` returns the most common item on the list\n* `doubles(my_list: list)` returns the number of unique items which appear at least twice on the list\n\nIt should be possible to use these methods without creating an instance of the class. An example of how the methods could be used:\n\n```python\nnumbers = [1, 1, 2, 1, 3, 3, 4, 5, 5, 5, 6, 5, 5, 5]\nprint(ListHelper.greatest_frequency(numbers))\nprint(ListHelper.doubles(numbers))\n```\n\n<sample-output>\n\n5\n3\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "numbers = [1, 1, 2, 1, 3, 3, 4, 5, 5, 5, 6, 5, 5, 5]\nprint(ListHelper.greatest_frequency(numbers))\nprint(ListHelper.doubles(numbers))",
+  "grading_data_available": false,
+  "source_hash": "526d6a12dff001c4e9b73192249662965fe71c56c485ce20d6064d6926014c5b",
+  "order": 37
+}

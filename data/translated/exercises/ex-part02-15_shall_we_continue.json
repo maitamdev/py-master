@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-15_shall_we_continue",
+  "lesson_id": "part02-4-simple-loops",
+  "part": 2,
+  "tmc_name": "part02-15_shall_we_continue",
+  "title_original": "Shall we continue?",
+  "title_vi": "Chúng ta tiếp tục nhé?",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Let's create a program along the lines of the example above. This program should print out the message \"hi\" and then ask \"Shall we continue?\" until the user inputs \"no\". Then the program should print out \"okay then\" and finish. Please have a look at the example below.\n\n<sample-output>\n\nhi\nShall we continue? **yes**\nhi\nShall we continue? **oui**\nhi\nShall we continue? **jawohl**\nhi\nShall we continue? **no**\nokay then\n\n</sample-output>",
+  "description_vi": "Hãy tạo một chương trình tương tự như ví dụ trên. Chương trình này sẽ in ra thông báo \"xin chào\" và sau đó hỏi \"Chúng ta tiếp tục nhé?\" cho đến khi người dùng nhập \"không\". Sau đó chương trình sẽ in ra \"Được rồi\" và kết thúc. Xin vui lòng xem ví dụ dưới đây.\n\n<sample-output>\n\nxin chào\nChúng ta tiếp tục nhé? **có**\nxin chào\nChúng ta tiếp tục nhé? ** ôi**\nxin chào\nChúng ta tiếp tục nhé? ** hàm **\nxin chào\nChúng ta tiếp tục nhé? **không**\nđược rồi\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "f706e276b55589ceb71f8bd4c56cf41e8938b6396a8c61f16286acd9c0485b3c",
+  "order": 16
+}

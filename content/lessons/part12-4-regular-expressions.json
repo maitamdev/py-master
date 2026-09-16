@@ -1,0 +1,803 @@
+{
+  "id": "part12-4-regular-expressions",
+  "part": 12,
+  "part_slug": "part-12",
+  "slug": "4-regular-expressions",
+  "is_part_index": false,
+  "title_original": "Regular expressions",
+  "title_vi": "Biểu thức chính quy",
+  "path": "/part-12/4-regular-expressions",
+  "source_path": "data/part-12/4-regular-expressions.md",
+  "source_hash": "6b7aff35d6b24e19c664d718a453f18785fc72ad0b726db7a6654ee2d8ff9fbe",
+  "order": 1,
+  "blocks_count": 45,
+  "blocks": [
+    {
+      "id": "blk-part12-4-regular-expressions-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "9f0a4b3bdda0cdd49cdb2724292a932cff5f5635fe28891e7d88d3d74891386a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know what regular expressions are\n- You will be able to use regular expressions in your own programs"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ biết biểu thức chính quy là gì\n- Bạn sẽ có thể sử dụng các biểu thức chính quy trong các chương trình của riêng mình"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "e486d9bedbe1850cd36dfad4bfdec21a31cff7209ef85d314685065fa21edb6e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We have already established that Python is an excellent environment for processing text. One additional powerful tool for text processing is _regular expressions_, often shortened as _regex_ or _regexp_. They are a way of selecting and searching for strings which follow a certain pattern. This section introduces you to the basics of regular expression, but you will find much more information online, including in the Python [tutorial](https://docs.python.org/3/howto/regex.html)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng tôi đã chứng minh rằng Python là một môi trường tuyệt vời để xử lý văn bản. Một công cụ mạnh mẽ bổ sung để xử lý văn bản là _biểu thức chính quy_, thường được rút ngắn thành _regex_ hoặc _regexp_. Chúng là một cách lựa chọn và tìm kiếm các chuỗi theo một mẫu nhất định. Phần này giới thiệu cho bạn những kiến ​​thức cơ bản về biểu thức chính quy, nhưng bạn sẽ tìm thấy nhiều thông tin trực tuyến hơn, kể cả trong [hướng dẫn] Python(https://docs.python.org/3/howto/regex.html)."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0003",
+      "type": "heading",
+      "order": 3,
+      "source_hash": "58e698de2e631c5f7f1f1f3bb1f27527ec58ed71b0f086a46dcfff6eec6dcb87",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "What are regular expressions?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Biểu thức chính quy là gì?"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "666e571bd38c1dc9972961a38f26f3210b6c9f17ea2c13d46b9ff5300876e904",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Regular expressions are not just a Python feature. They represent, in a way, a programming language within a programming language. They are, to an extent, compatible across many different programming languages. Regular expressions have their own specific syntax. The idea is to define a collection of strings which follow certain rules."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Biểu thức chính quy không chỉ là một tính năng của Python. Theo một cách nào đó, chúng đại diện cho một ngôn ngữ lập trình trong một ngôn ngữ lập trình. Ở một mức độ nào đó, chúng tương thích với nhiều ngôn ngữ lập trình khác nhau. Biểu thức chính quy có cú pháp cụ thể của riêng chúng. Ý tưởng là xác định một tập hợp các chuỗi tuân theo các quy tắc nhất định."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "9f5cf26644123355a1b13ce2596031aedf8b111b9e7f2b37020cd28cdcb34310",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's begin with a simple example, before diving deeper into the syntax:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy bắt đầu với một ví dụ đơn giản, trước khi đi sâu hơn vào cú pháp:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0006",
+      "type": "code",
+      "order": 6,
+      "source_hash": "aa9d5f3c9335a0b4f9ad8738f88eda87bdc6d9a4d33d4c63a685007d1d7686a0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import re\n\nwords = [\"Python\", \"Pantone\", \"Pontoon\", \"Pollute\", \"Pantheon\"]\n\nfor word in words:\n    # the string should begin with \"P\" and end with \"on\"\n    if re.search(\"^P.*on$\", word):\n        print(word, \"found!\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import re\n\nwords = [\"Python\", \"Pantone\", \"Pontoon\", \"Pollute\", \"Pantheon\"]\n\nfor word in words:\n    # the string should begin with \"P\" and end with \"on\"\n    if re.search(\"^P.*on$\", word):\n        print(word, \"found!\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "aa9d5f3c9335a0b4f9ad8738f88eda87bdc6d9a4d33d4c63a685007d1d7686a0",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0007",
+      "type": "sample_output",
+      "order": 7,
+      "source_hash": "f0da1dc7db68f05248796c3d2ea7220307d1ff235c36976b6d1c0f37fcabc814",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Python found!\nPontoon found!\nPantheon found!"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Python found!\nPontoon found!\nPantheon found!"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPython found!\nPontoon found!\nPantheon found!\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "705fb7f889c8b56845ce7a5dc4703839df6c3e75810d913d1203ee505315a77b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We need to `import` the `re` module in order to use regular expressions in Python. The `re` module contains many functions for working with regular expressions. In the example above, the `search` function takes two string arguments: the pattern string, and the target string where the pattern is looked for."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta cần `import` mô-đun `re` để sử dụng các biểu thức thông thường trong Python. Mô-đun `re` chứa nhiều chức năng để làm việc với các biểu thức thông thường. Trong ví dụ trên, hàm `search` nhận hai đối số chuỗi: chuỗi mẫu và chuỗi đích nơi mẫu được tìm kiếm."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "22fc0d222a821fc597c39a4d5a0b7d7b9dc967014e7866c508bfcb29530d920d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This second example looks for any numbers in a string. The `findall` function returns a list of all the instances which match the pattern:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ thứ hai này tìm kiếm bất kỳ số nào trong một chuỗi. Hàm `findall` trả về danh sách tất cả các phiên bản khớp với mẫu:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0010",
+      "type": "code",
+      "order": 10,
+      "source_hash": "3f7b921d8b3acb13b66206bf0f8c72aa2190c65006ebb3dce6a2ad3d2af4d854",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import re\n\nsentence = \"First, 2 !#third 44 five 678xyz962\"\n\nnumbers = re.findall(\"\\d+\", sentence)\n\nfor number in numbers:\n    print(number)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import re\n\nsentence = \"First, 2 !#third 44 five 678xyz962\"\n\nnumbers = re.findall(\"\\d+\", sentence)\n\nfor number in numbers:\n    print(number)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3f7b921d8b3acb13b66206bf0f8c72aa2190c65006ebb3dce6a2ad3d2af4d854",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0011",
+      "type": "sample_output",
+      "order": 11,
+      "source_hash": "1b23459a08a83ae1ed183b30378eda25db2dca9a6f5965188d2fd9b821314dc7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "2\n44\n678\n962"
+      },
+      "translation": {
+        "language": "text",
+        "content": "2\n44\n678\n962"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n2\n44\n678\n962\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0012",
+      "type": "heading",
+      "order": 12,
+      "source_hash": "46e79163dae289cab7efb5467658d85326c2cf60264a0a6e5ac69c4b873b41b3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The syntax of regular expressions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cú pháp của biểu thức chính quy"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "0d2e1428b4c51b856b7a29fc0babd1b533660fe0bfa0f7bf375f7e768b8ff947",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's get familiar with the basic syntax of regular expressions. Most of the following examples make use of this testing program:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy làm quen với cú pháp cơ bản của biểu thức chính quy. Hầu hết các ví dụ sau đây đều sử dụng chương trình thử nghiệm này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "b82de07780fb7bab6d38ede2167387a5ec2e8ff2cf85f9fae135bb3bee0651ca",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import re\n\nexpression = input(\"Please type in an expression: \")\n\nwhile True:\n    input_string = input(\"Please type in a string: \")\n    if input_string == \"\":\n        break\n    if re.search(expression, input_string):\n        print(\"Found!\")\n    else:\n        print(\"Not found.\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import re\n\nexpression = input(\"Please type in an expression: \")\n\nwhile True:\n    input_string = input(\"Please type in a string: \")\n    if input_string == \"\":\n        break\n    if re.search(expression, input_string):\n        print(\"Found!\")\n    else:\n        print(\"Not found.\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b82de07780fb7bab6d38ede2167387a5ec2e8ff2cf85f9fae135bb3bee0651ca",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0015",
+      "type": "heading",
+      "order": 15,
+      "source_hash": "83102b3a73abc8d352c8aaf1f6bb4512c396bae467da60bd3b4b1507f5d3dbea",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Alternate substrings"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chuỗi con thay thế"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "a3a077999cbd44b99bcbc75fffb7448008e8f970d9b47c1fb35bdd1f5f6b21a6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The vertical bar `|`, also called the pipe character, allows you to match alternate substrings. Its significance is thus _or_. For example, the expression `911|112` matches strings which include either the substring `911` or the substring `112`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thanh dọc `|`, còn được gọi là ký tự ống, cho phép bạn khớp các chuỗi con thay thế. Ý nghĩa của nó là _hoặc_. Ví dụ: biểu thức `911|112` khớp với các chuỗi bao gồm chuỗi con `911` hoặc chuỗi con `112`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "2e19d8e8597d2b55e7d07987619be4fc412002f9702064dde19d91e132c902f0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "An example with the testing program:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một ví dụ với chương trình thử nghiệm:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0018",
+      "type": "sample_output",
+      "order": 18,
+      "source_hash": "ae5f0122fabfbcd327c419e41d1ce9470ab7480298bc58b80db72836d4ea3e8e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in an expression: **aa|ee|ii**\nPlease type in a string: **aardvark**\nFound!\nPlease type in a string: **feelings**\nFound!\nPlease type in a string: **radii**\nFound!\nPlease type in a string: **smooch**\nNot found.\nPlease type in a string: **continuum**\nNot found."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in an expression: **aa|ee|ii**\nPlease type in a string: **aardvark**\nFound!\nPlease type in a string: **feelings**\nFound!\nPlease type in a string: **radii**\nFound!\nPlease type in a string: **smooch**\nNot found.\nPlease type in a string: **continuum**\nNot found."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in an expression: **aa|ee|ii**\nPlease type in a string: **aardvark**\nFound!\nPlease type in a string: **feelings**\nFound!\nPlease type in a string: **radii**\nFound!\nPlease type in a string: **smooch**\nNot found.\nPlease type in a string: **continuum**\nNot found.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0019",
+      "type": "heading",
+      "order": 19,
+      "source_hash": "abf219f6d455a804206be1184cd0cb07330048951d0aa195141108ea14bcf505",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Groups of characters"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nhóm ký tự"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "f6220f1a56f4d4346ab5ebf5dd3881d67ab285d2d0a20fad47137c369509b1ce",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Square brackets are used to signify groups of accepted characters. For example, the expression `[aeio]` would match all strings which contain any of the characters a, e, i, or o."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Dấu ngoặc vuông được sử dụng để biểu thị các nhóm ký tự được chấp nhận. Ví dụ: biểu thức `[aeio]` sẽ khớp với tất cả các chuỗi chứa bất kỳ ký tự nào a, e, i hoặc o."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "c3dfd345feddacaff80161dc07b8b5ebe4e435a39b41efb2570add52ab073cd7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A dash is also allowed for matching ranges of characters. For example, the expression `[0-68a-d]` would match all strings which contain a digit between 0 and 6, or an eight, or a character between a and d. In this notation all ranges are _inclusive_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một dấu gạch ngang cũng được phép để khớp với phạm vi ký tự. Ví dụ: biểu thức `[0-68a-d]` sẽ khớp với tất cả các chuỗi chứa chữ số từ 0 đến 6 hoặc số 8 hoặc ký tự từ a đến d. Trong ký hiệu này, tất cả các phạm vi đều là _inclusive_."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "603316d1e6e1b55a920b0e3bd20efd662b9994b99a668f8e0cfbf0a0c98b578a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Combining two sets of brackets lets you match two consecutive characters. For example, the expression `[1-3][0-9]` would match any two digit number between 10 and 39, inclusive."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Việc kết hợp hai bộ dấu ngoặc cho phép bạn khớp hai ký tự liên tiếp. Ví dụ: biểu thức `[1-3][0-9]` sẽ khớp với bất kỳ số có hai chữ số nào trong khoảng từ 10 đến 39."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "2e19d8e8597d2b55e7d07987619be4fc412002f9702064dde19d91e132c902f0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "An example with the testing program:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một ví dụ với chương trình thử nghiệm:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0024",
+      "type": "sample_output",
+      "order": 24,
+      "source_hash": "67c59bc2a547de0c1ce6b62ec513a84f3fbccb0671af2cbc4b7d82c8ebeeb382",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in an expression: **[C-FRSO]**\nPlease type in a string: **C**\nFound!\nPlease type in a string: **E**\nFound!\nPlease type in a string: **G**\nNot found.\nPlease type in a string: **R**\nFound!\nPlease type in a string: **O**\nFound!\nPlease type in a string: **T**\nNot found."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in an expression: **[C-FRSO]**\nPlease type in a string: **C**\nFound!\nPlease type in a string: **E**\nFound!\nPlease type in a string: **G**\nNot found.\nPlease type in a string: **R**\nFound!\nPlease type in a string: **O**\nFound!\nPlease type in a string: **T**\nNot found."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in an expression: **[C-FRSO]**\nPlease type in a string: **C**\nFound!\nPlease type in a string: **E**\nFound!\nPlease type in a string: **G**\nNot found.\nPlease type in a string: **R**\nFound!\nPlease type in a string: **O**\nFound!\nPlease type in a string: **T**\nNot found.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0025",
+      "type": "heading",
+      "order": 25,
+      "source_hash": "dbd9ac7d996c6f052f2a4dcaf4fc2b67b3c02949410305e1daf46f9629826739",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Repeated matches"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trận đấu lặp đi lặp lại"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "468b61a343ccfafd4434622d044de5663e5908c0166071fd5ed526b7126b4e8a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Any part of an expression can be repeated with the following operators:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bất kỳ phần nào của biểu thức đều có thể được lặp lại bằng các toán tử sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0027",
+      "type": "list",
+      "order": 27,
+      "source_hash": "e4589c74507fdc09781a2489745568224b9945e2c8797c1c3e187b58ebe63640",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* `*` repeats for any number of times, including zero\n* `+` repeats for any number of times, but at least once\n* `{m}` repeats for exactly `m` times"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* `*` lặp lại với số lần bất kỳ, kể cả số 0\n* `+` lặp lại bao nhiêu lần cũng được, nhưng ít nhất một lần\n* `{m}` lặp lại chính xác `m` lần"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "a806cc0e85916e1b90829ba8a5dcfb6ec466dca0bf1af5078453b74634401cdf",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "These operators work on the part of the expression immediately preceding the operator. For example, the expression `ba+b` would match the substrings `bab`, `baab` and `baaaaaaaaaaab`, among others. The expression `A[BCDE]*Z` would match the substrings `AZ`, `ADZ` or `ABCDEBCDEBCDEZ`, among others."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các toán tử này hoạt động trên phần biểu thức ngay trước toán tử. Ví dụ: biểu thức `ba+b` sẽ khớp với các chuỗi con `bab`, `baab` và `baaaaaaaaaaab`, cùng với các chuỗi con khác. Biểu thức `A[BCDE]*Z` sẽ khớp với các chuỗi con `AZ`, `ADZ` hoặc `ABCDEBCDEBCDEZ`, cùng với các chuỗi con khác."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "2e19d8e8597d2b55e7d07987619be4fc412002f9702064dde19d91e132c902f0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "An example with the testing program:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một ví dụ với chương trình thử nghiệm:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0030",
+      "type": "sample_output",
+      "order": 30,
+      "source_hash": "5de8a0bf52da7ffb64090a7dd20a195f8ea70e5611de925789e75df9687b2de6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in an expression: **1[234]\\*5**\nPlease type in a string: **15**\nFound!\nPlease type in a string: **125**\nFound!\nPlease type in a string: **145**\nFound!\nPlease type in a string: **12342345**\nFound!\nPlease type in a string: **126**\nNot found.\nPlease type in a string: **165**\nNot found."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in an expression: **1[234]\\*5**\nPlease type in a string: **15**\nFound!\nPlease type in a string: **125**\nFound!\nPlease type in a string: **145**\nFound!\nPlease type in a string: **12342345**\nFound!\nPlease type in a string: **126**\nNot found.\nPlease type in a string: **165**\nNot found."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in an expression: **1[234]\\*5**\nPlease type in a string: **15**\nFound!\nPlease type in a string: **125**\nFound!\nPlease type in a string: **145**\nFound!\nPlease type in a string: **12342345**\nFound!\nPlease type in a string: **126**\nNot found.\nPlease type in a string: **165**\nNot found.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0031",
+      "type": "heading",
+      "order": 31,
+      "source_hash": "51ef205b3a98e9434f86b8a8fdd8e5f720c9384bcdd898acee29fa8004622021",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Other special characters"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các ký tự đặc biệt khác"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "f270bff1bc1c6122549a6f1ad0002525f3155221c1d1f22e16823aa1cb9f7c93",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A dot is a wildcard character which can match any single character. For example, the expression `c...o` would match any five character substring beginning with a `c` and ending with an `o`, such as `c-3po` or `cello`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Dấu chấm là ký tự đại diện có thể khớp với bất kỳ ký tự đơn nào. Ví dụ: biểu thức `c...o` sẽ khớp với bất kỳ chuỗi con năm ký tự nào bắt đầu bằng `c` và kết thúc bằng `o`, chẳng hạn như `c-3po` hoặc `cello`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "1f7dfc4449209fb0b27239ccd372c8ce3cfee86dbc2c53842dec654f6be9aa76",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The `^` character specifies that the match must be at the beginning of the string, and `$` specifies that the match must be at the end of the string. These can also be used to exclude from the matches any other characters than those specified:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ký tự `^` chỉ định rằng kết quả khớp phải ở đầu chuỗi và `$` chỉ định rằng kết quả khớp phải ở cuối chuỗi. Chúng cũng có thể được sử dụng để loại trừ khỏi các kết quả trùng khớp bất kỳ ký tự nào khác ngoài những ký tự được chỉ định:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0034",
+      "type": "sample_output",
+      "order": 34,
+      "source_hash": "edbd08d9aac8131425fa6f183e903d609dc44ec5c7287b358e4eb092d1b49aba",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in an expression: **\\^[123]\\*$**\nPlease type in a string: **4**\nNot found.\nPlease type in a string: **1221**\nFound!\nPlease type in a string: **333333333**\nFound!"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in an expression: **\\^[123]\\*$**\nPlease type in a string: **4**\nNot found.\nPlease type in a string: **1221**\nFound!\nPlease type in a string: **333333333**\nFound!"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in an expression: **\\^[123]\\*$**\nPlease type in a string: **4**\nNot found.\nPlease type in a string: **1221**\nFound!\nPlease type in a string: **333333333**\nFound!\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "1e04427a2f417f0fc8fa68a50f9e209782cf170b2d68fbb52fc86dcb697981c0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Sometimes you need to match for the special characters reserved for regular expression syntax. The backslash `\\` can be used to _escape_ special characters. So, the expression `1+` matches one or more numbers `1`, but the expression `1\\+` matches the string `1+`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đôi khi bạn cần khớp các ký tự đặc biệt dành riêng cho cú pháp biểu thức chính quy. Dấu gạch chéo ngược `\\` có thể được sử dụng để _escape_ ký tự đặc biệt. Vì vậy, biểu thức `1+` khớp với một hoặc nhiều số `1`, nhưng biểu thức `1\\+` khớp với chuỗi `1+`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0036",
+      "type": "sample_output",
+      "order": 36,
+      "source_hash": "736ea323ef1861b3857d50a34763888a1e72ccaa3f1e2a6033d050a028246b74",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in an expression: **^\\\\\\***\nPlease type in a string: **moi\\***\nNot found.\nPlease type in a string: **m\\*o\\*i**\nNot found.\nPlease type in a string: **\\*moi**\nFound!"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in an expression: **^\\\\\\***\nPlease type in a string: **moi\\***\nNot found.\nPlease type in a string: **m\\*o\\*i**\nNot found.\nPlease type in a string: **\\*moi**\nFound!"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in an expression: **^\\\\\\***\nPlease type in a string: **moi\\***\nNot found.\nPlease type in a string: **m\\*o\\*i**\nNot found.\nPlease type in a string: **\\*moi**\nFound!\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "f7c41edeac9cb5a9268541637fd21042fd3b31d84189089f6170a1282e72c8cf",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Round brackets can be used to group together different parts of the expression. For example, the expression `(ab)+c` would match the substrings `abc`, `ababc` and `ababababababc`, but not the strings `ac` or `bc`, as the entire substring `ab` would have to appear at least once."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Dấu ngoặc tròn có thể được sử dụng để nhóm các phần khác nhau của biểu thức lại với nhau. Ví dụ: biểu thức `(ab)+c` sẽ khớp với các chuỗi con `abc`, `ababc` và `ababababababc` nhưng không khớp với các chuỗi con `ac` hoặc `bc` vì toàn bộ chuỗi con `ab` sẽ phải xuất hiện ít nhất một lần."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0038",
+      "type": "sample_output",
+      "order": 38,
+      "source_hash": "cd625145073ecba7a4fe31844d94fdf80d6942958860c2c0cd8bd2019caa8c0f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in an expression: **^(jabba).\\*(hut)$**\nPlease type in a string: **jabba the hut**\nFound!\nPlease type in a string: **jabba a hut**\nFound!\nPlease type in a string: **jarjar the hut**\nNot found.\nPlease type in a string: **jabba the smut**\nNot found."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in an expression: **^(jabba).\\*(hut)$**\nPlease type in a string: **jabba the hut**\nFound!\nPlease type in a string: **jabba a hut**\nFound!\nPlease type in a string: **jarjar the hut**\nNot found.\nPlease type in a string: **jabba the smut**\nNot found."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in an expression: **^(jabba).\\*(hut)$**\nPlease type in a string: **jabba the hut**\nFound!\nPlease type in a string: **jabba a hut**\nFound!\nPlease type in a string: **jarjar the hut**\nNot found.\nPlease type in a string: **jabba the smut**\nNot found.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0039",
+      "type": "exercise",
+      "order": 39,
+      "source_hash": "cd3ccc3fe27a33e849a988db28ddfc11ae4db362d76df8cf462057547ab3dec5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Here are some exercises for familiarizing yourself with regular expression syntax.\n\n## Days of the week\n\nUsing a regular expression, please write a function named `is_dotw(my_string: str)`. The function should return `True` if the string passed as an argument contains an abbreviation for a day of the week (Mon, Tue, Wed, Thu, Fri, Sat, Sun).\n\nSome examples of how the function should work:\n\n```python\nprint(is_dotw(\"Mon\"))\nprint(is_dotw(\"Fri\"))\nprint(is_dotw(\"Tui\"))\n```\n\n<sample-output>\n\nTrue\nTrue\nFalse\n\n</sample-output>\n\n## Check for vowels\n\nPlease write a function named `all_vowels(my_string: str)` which uses a regular expression to check whether all characters in the given string are vowels.\n\nSome examples of how the function should work:\n\n```python\nprint(all_vowels(\"eioueioieoieou\"))\nprint(all_vowels(\"autoooo\"))\n```\n\n<sample-output>\n\nTrue\nFalse\n\n</sample-output>\n\n## Time of day\n\nPlease write a function named `time_of_day(my_string: str)` which uses a regular expression to check whether a string in the format `XX:YY:ZZ` is a valid time in the 24-hour format, with two digits each for hours, minutes and seconds.\n\nSome examples of how the function should work:\n\n```python\nprint(time_of_day(\"12:43:01\"))\nprint(time_of_day(\"AB:01:CD\"))\nprint(time_of_day(\"17:59:59\"))\nprint(time_of_day(\"33:66:77\"))\n```\n\n<sample-output>\n\nTrue\nFalse\nTrue\nFalse\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Dưới đây là một số bài tập để bạn làm quen với cú pháp biểu thức chính quy.\n\n## Các ngày trong tuần\n\nSử dụng biểu thức chính quy, vui lòng viết hàm có tên `is_dotw(my_string: str)`. Hàm sẽ trả về `True` nếu chuỗi được truyền dưới dạng đối số chứa chữ viết tắt cho một ngày trong tuần (Thứ Hai, Thứ Ba, Thứ Tư, Thứ Năm, Thứ Sáu, Thứ Bảy, Chủ Nhật).\n\nMột số ví dụ về cách hoạt động của hàm:\n\n```python\nprint(is_dotw(\"Mon\"))\nprint(is_dotw(\"Fri\"))\nprint(is_dotw(\"Tui\"))\n```\n\n<sample-output>\n\nĐúng\nĐúng\nsai\n\n</sample-output>\n\n## Kiểm tra nguyên âm\n\nVui lòng viết một hàm có tên `all_vowels(my_string: str)` sử dụng biểu thức chính quy để kiểm tra xem tất cả các ký tự trong chuỗi đã cho có phải là nguyên âm hay không.\n\nMột số ví dụ về cách hoạt động của hàm:\n\n```python\nprint(all_vowels(\"eioueioieoieou\"))\nprint(all_vowels(\"autoooo\"))\n```\n\n<sample-output>\n\nĐúng\nsai\n\n</sample-output>\n\n## Thời gian trong ngày\n\nVui lòng viết một hàm có tên `time_of_day(my_string: str)` sử dụng biểu thức chính quy để kiểm tra xem một chuỗi ở định dạng `XX:YY:ZZ` có phải là thời gian hợp lệ ở định dạng 24 giờ hay không, với mỗi chữ số có hai chữ số là giờ, phút và giây.\n\nMột số ví dụ về cách hoạt động của hàm:\n\n```python\nprint(time_of_day(\"12:43:01\"))\nprint(time_of_day(\"AB:01:CD\"))\nprint(time_of_day(\"17:59:59\"))\nprint(time_of_day(\"33:66:77\"))\n```\n\n<sample-output>\n\nĐúng\nsai\nĐúng\nsai\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part12-14_regular_expressions",
+        "exercise_type": "programming-exercise",
+        "name": "Regular expressions",
+        "tmc_name": "part12-14_regular_expressions",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0040",
+      "type": "heading",
+      "order": 40,
+      "source_hash": "d93090aa2e7c70ff309ebb454b8dd4a06102a095f08573d603c6a94fb6c3ddbf",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Grand finale"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đêm chung kết"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "63aa15bf8071bedcdb2cb7e9134472cba7f146732f10ba5eb118a77752f8a1c4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "To finish off this part of the material, let's work some more on objects and classes by building a slightly more extensive program. This exercise does not necessarily involve regular expressions, but the sections on [functions as arguments](/part-12/1-functions-as-arguments) and [list comprehensions](/part-11/1-list-comprehensions) will likely be useful."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Để hoàn thành phần tài liệu này, chúng ta hãy nghiên cứu thêm về các đối tượng và lớp bằng cách xây dựng một chương trình mở rộng hơn một chút. Bài tập này không nhất thiết liên quan đến biểu thức chính quy, nhưng các phần về [hàm làm đối số](/part-12/1-functions-as-arguments) và [hiểu danh sách](/part-11/1-list-comprehensions) có thể sẽ hữu ích."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "a823caa4d16efb96caa16bd8b12c9bbeb165299d9fe3671a4b4a5c2e7444a8c5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You may also find the example set in [part 10](/part-10/4-application-development) helpful."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn cũng có thể thấy ví dụ nêu trong [phần 10](/part-10/4-application-development) hữu ích."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0043",
+      "type": "exercise",
+      "order": 43,
+      "source_hash": "a92b80ba3c1b31d39de9e995987065bfb60e3d79b2e374d15ff27aae48c3b649",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In this exercise you will build an application for examining hockey league statistics from the NHL in a couple of different ways.\n\nThe exercise template contains two JSON files: `partial.json` and `all.json`. The first of these is mostly meant for testing. The latter contains a lot of data, as all the NHL player stats for the 2019-20 season are included in the file.\n\nThe entry for a single player is in the following format:\n\n```json\n{\n    \"name\": \"Patrik Laine\",\n    \"nationality\": \"FIN\",\n    \"assists\": 35,\n    \"goals\": 28,\n    \"penalties\": 22,\n    \"team\": \"WPG\",\n    \"games\": 68\n}\n```\n\nBoth files contain a list of entries in the above format.\n\nIf you need a refresher on handling JSON files, please take a look at [part 7 of this course material](/part-7/4-data-processing#reading-json-files).\n\n## Search and list\n\nPlease write an interactive application which first asks for the name of the file, and then offers the following functions:\n\n- search by name for a single player's stats\n- list all the abbreviations for team names in alphabetical order\n- list all the abbreviations for countries in alphabetical order\n\nThese functionalities grant you one exercise point. Your application should now work as follows:\n\n<sample-output>\n\nfile name: **partial.json**\nread the data of 14 players\n\ncommands:\n0 quit\n1 search for player\n2 teams\n3 countries\n4 players in team\n5 players from country\n6 most points\n7 most goals\n\ncommand: **1**\nname: **Travis Zajac**\n<pre>\nTravis Zajac         NJD   9 + 16 =  25\n</pre>\n\ncommand: **2**\nBUF\nCGY\nDAL\nNJD\nNYI\nOTT\nPIT\nWPG\nWSH\n\ncommand: **3**\nCAN\nCHE\nCZE\nSWE\nUSA\n\ncommand: **0**\n\n</sample-output>\n\nNB: the printout format for a player must be exactly as follows:\n\n<sample-output>\n\n<pre>\nLeon Draisaitl       EDM  43 + 67 = 110\nConnor McDavid       EDM  34 + 63 =  97\nTravis Zajac         NJD   9 + 16 =  25\nMike Green           EDM   3 +  8 =  11\nMarkus Granlund      EDM   3 +  1 =   4\n123456789012345678901234567890123456789\n</pre>\n\n</sample-output>\n\nThe last line in the sample above is there to help you calculate the widths of the different fields in the output; you should not print the numbers line yourself in your final submission. \n\nThe abbreviation for the team is printed from the 22nd character onwards. The `+` sign is the 30th character and the `=` sign is the 35th character. All the fields should be justified to the right edge. All whitespace is space characters.\n\nF-strings are probably the easiest way to achieve the required printout. The process is similar to [this exercise](/part-6/1-reading-files#programming-exercise-course-grading-part-3) from part 6.\n\n## List players by points\n\nThese two functionalities will grant you a second exercise point:\n\n- list players in a specific team in the order of points scored, from highest to lowest. Points equals _goals_ + _assists_\n- list players from a specific country in the order of points scored, from highest to lowest\n\nYour application should now work as follows:\n\n<sample-output>\n\nfile name: **partial.json**\nread the data of 14 players\n\ncommands:\n0 quit\n1 search for player\n2 teams\n3 countries\n4 players in team\n5 players from country\n6 most points\n7 most goals\n\ncommand: **4**\nteam: **OTT**\n<pre>\nDrake Batherson      OTT   3 +  7 =  10\nJonathan Davidsson   OTT   0 +  1 =   1\n</pre>\n\ncommand: **5**\ncountry: **CAN**\n<pre>\nJared McCann         PIT  14 + 21 =  35\nTravis Zajac         NJD   9 + 16 =  25\nTaylor Fedun         DAL   2 +  7 =   9\nMark Jankowski       CGY   5 +  2 =   7\nLogan Shaw           WPG   3 +  2 =   5\n</pre>\n\ncommand: **0**\n\n</sample-output>\n\n## Most successful players\n\nThese two functionalities will grant you a third exercise point:\n\n- list of `n` players who've scored the most points\n  - if two players have the same score, whoever has scored the higher number of goals comes first\n- list of `n` players who've scored the most goals\n  - if two players have the same number of goals, whoever has played the lower number of games comes first\n\nYour application should now work as follows:\n\n<sample-output>\n\nfile name: **partial.json**\nread the data of 14 players\n\ncommands:\n0 quit\n1 search for player\n2 teams\n3 countries\n4 players in team\n5 players from country\n6 most points\n7 most goals\n\ncommand: **6**\nhow many: **2**\n<pre>\nJakub Vrana          WSH  25 + 27 =  52\nJared McCann         PIT  14 + 21 =  35\n</pre>\n\ncommand: **6**\nhow many: **5**\n\n<pre>\nJakub Vrana          WSH  25 + 27 =  52\nJared McCann         PIT  14 + 21 =  35\nJohn Klingberg       DAL   6 + 26 =  32\nTravis Zajac         NJD   9 + 16 =  25\nConor Sheary         BUF  10 + 13 =  23\n</pre>\n\ncommand: **7**\nhow many: **6**\n\n<pre>\nJakub Vrana          WSH  25 + 27 =  52\nJared McCann         PIT  14 + 21 =  35\nConor Sheary         BUF  10 + 13 =  23\nTravis Zajac         NJD   9 + 16 =  25\nJohn Klingberg       DAL   6 + 26 =  32\nMark Jankowski       CGY   5 +  2 =   7\n</pre>\n\ncommand: **0**\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong bài tập này, bạn sẽ xây dựng một ứng dụng để kiểm tra số liệu thống kê của giải đấu khúc côn cầu từ NHL theo một số cách khác nhau.\n\nMẫu bài tập chứa hai tệp JSON: `partial.json` và `all.json`. Việc đầu tiên trong số này chủ yếu là dành cho thử nghiệm. Phần sau chứa rất nhiều dữ liệu, vì tất cả số liệu thống kê về cầu thủ NHL cho mùa giải 2019-20 đều được đưa vào tệp.\n\nMục nhập cho một người chơi có định dạng sau:\n\n```json\n{\n    \"name\": \"Patrik Laine\",\n    \"nationality\": \"FIN\",\n    \"assists\": 35,\n    \"goals\": 28,\n    \"penalties\": 22,\n    \"team\": \"WPG\",\n    \"games\": 68\n}\n```\n\nCả hai tệp đều chứa danh sách các mục ở định dạng trên.\n\nNếu bạn cần ôn lại cách xử lý tệp JSON, vui lòng xem [phần 7 của tài liệu khóa học này](/part-7/4-data-processing#reading-json-files).\n\n## Tìm kiếm và liệt kê\n\nVui lòng viết một ứng dụng tương tác trước tiên hỏi tên tệp và sau đó cung cấp các hàm sau:\n\n- tìm kiếm theo tên cho số liệu thống kê của một người chơi\n- liệt kê tất cả các chữ viết tắt cho tên đội theo thứ tự bảng chữ cái\n- liệt kê tất cả các chữ viết tắt cho các quốc gia theo thứ tự bảng chữ cái\n\nNhững hàm này cấp cho bạn một điểm tập thể dục. Ứng dụng của bạn bây giờ sẽ hoạt động như sau:\n\n<sample-output>\n\ntên tệp: **partial.json**\nđọc dữ liệu của 14 người chơi\n\nlệnh:\n0 bỏ cuộc\n1 tìm kiếm người chơi\n2 đội\n3 nước\n4 người trong đội\n5 cầu thủ từ đất nước\n6 điểm nhiều nhất\n7 bàn thắng nhiều nhất\n\nlệnh: **1**\ntên: **Travis Zajac**\n<pre>\nTravis Zajac NJD  9 + 16 = 25\n</pre>\n\nlệnh: **2**\nBUF\nCGY\nDAL\nNJD\nNYI\nOTT\nthuế TNCN\nWPG\nWSH\n\nlệnh: **3**\nCÓ THỂ\nCHE\nSÉC\nSWE\nHoa Kỳ\n\nlệnh: **0**\n\n</sample-output>\n\nLưu ý: định dạng in ra của người chơi phải chính xác như sau:\n\n<sample-output>\n\n<pre>\nLeon Draisaitl EDM 43 + 67 = 110\nConnor McDavid EDM 34 + 63 = 97\nTravis Zajac NJD  9 + 16 = 25\nMike Xanh EDM 3 + 8 = 11\nMarkus Granlund EDM 3 + 1 = 4\n123456789012345678901234567890123456789\n</pre>\n\n</sample-output>\n\nDòng cuối cùng trong mẫu ở trên giúp bạn tính toán độ rộng của các trường khác nhau trong kết quả đầu ra; bạn không nên tự mình in dòng số trong bài nộp cuối cùng của mình.\n\nChữ viết tắt của đội được in từ ký tự thứ 22 trở đi. Ký hiệu `+` là ký tự thứ 30 và ký hiệu `=` là ký tự thứ 35. Tất cả các trường phải được căn đều về cạnh phải. Tất cả khoảng trắng đều là ký tự khoảng trắng.\n\nChuỗi F có lẽ là cách dễ nhất để đạt được bản in cần thiết. Quá trình này tương tự như [bài tập này](/part-6/1-reading-files#programming-exercise-course-grading-part-3) ở phần 6.\n\n## Liệt kê người chơi theo điểm\n\nHai hàm này sẽ cấp cho bạn điểm tập luyện thứ hai:\n\n- liệt kê các cầu thủ trong một đội cụ thể theo thứ tự số điểm ghi được, từ cao nhất đến thấp nhất. Điểm bằng _bàn thắng_ + _hỗ trợ_\n- liệt kê người chơi từ một quốc gia cụ thể theo thứ tự điểm ghi được, từ cao nhất đến thấp nhất\n\nỨng dụng của bạn bây giờ sẽ hoạt động như sau:\n\n<sample-output>\n\ntên tệp: **partial.json**\nđọc dữ liệu của 14 người chơi\n\nlệnh:\n0 bỏ cuộc\n1 tìm kiếm người chơi\n2 đội\n3 nước\n4 người trong đội\n5 cầu thủ từ đất nước\n6 điểm nhiều nhất\n7 bàn thắng nhiều nhất\n\nlệnh: **4**\nđội: **OTT**\n<pre>\nDrake Batherson OTT 3 + 7 = 10\nJonathan Davidsson OTT 0 + 1 = 1\n</pre>\n\nlệnh: **5**\nquốc gia: ** CÓ THỂ**\n<pre>\nJared McCann PIT 14 + 21 = 35\nTravis Zajac NJD 9 + 16 = 25\nTaylor Fedun DAL 2 + 7 = 9\nMark Jankowski CGY 5 + 2 = 7\nLogan Shaw WPG 3 + 2 = 5\n</pre>\n\nlệnh: **0**\n\n</sample-output>\n\n## Người chơi thành công nhất\n\nHai hàm này sẽ cấp cho bạn điểm tập thể dục thứ ba:\n\n- danh sách người chơi `n` ghi được nhiều điểm nhất\n  - nếu 2 cầu thủ có cùng số điểm, ai ghi được số bàn thắng cao hơn sẽ được xếp trước\n- danh sách cầu thủ `n` ghi nhiều bàn thắng nhất\n  - nếu 2 cầu thủ có số bàn thắng bằng nhau thì ai chơi ít trận hơn sẽ được xếp trước\n\nỨng dụng của bạn bây giờ sẽ hoạt động như sau:\n\n<sample-output>\n\ntên tệp: **partial.json**\nđọc dữ liệu của 14 người chơi\n\nlệnh:\n0 bỏ cuộc\n1 tìm kiếm người chơi\n2 đội\n3 nước\n4 người trong đội\n5 cầu thủ từ đất nước\n6 điểm nhiều nhất\n7 bàn thắng nhiều nhất\n\nlệnh: **6**\nbao nhiêu: **2**\n<pre>\nJakub Vrana WSH 25 + 27 = 52\nJared McCann PIT 14 + 21 = 35\n</pre>\n\nlệnh: **6**\nbao nhiêu: **5**\n\n<pre>\nJakub Vrana WSH 25 + 27 = 52\nJared McCann PIT 14 + 21 = 35\nJohn Klingberg DAL 6 + 26 = 32\nTravis Zajac NJD 9 + 16 = 25\nConor Sheary BUF 10 + 13 = 23\n</pre>\n\nlệnh: **7**\nbao nhiêu: **6**\n\n<pre>\nJakub Vrana WSH 25 + 27 = 52\nJared McCann PIT 14 + 21 = 35\nConor Sheary BUF 10 + 13 = 23\nTravis Zajac NJD 9 + 16 = 25\nJohn Klingberg DAL 6 + 26 = 32\nMark Jankowski CGY 5 + 2 = 7\n</pre>\n\nlệnh: **0**\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part12-15_hockey_statistics",
+        "exercise_type": "programming-exercise",
+        "name": "Hockey statistics",
+        "tmc_name": "part12-15_hockey_statistics",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "ff05298c0973d60be8b75d25f01bfd9ecc9887b5ea6cf58dd19bc993cf013650",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please respond to a quick questionnaire on this part of the course."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng trả lời bảng câu hỏi nhanh về phần này của khóa học."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-4-regular-expressions-0045",
+      "type": "quiz",
+      "order": 45,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "a03c9f5a-33a9-5aff-8d93-a89625034903",
+        "attributes": {
+          "id": "a03c9f5a-33a9-5aff-8d93-a89625034903"
+        }
+      }
+    }
+  ]
+}

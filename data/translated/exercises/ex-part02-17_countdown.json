@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-17_countdown",
+  "lesson_id": "part02-4-simple-loops",
+  "part": 2,
+  "tmc_name": "part02-17_countdown",
+  "title_original": "Fix the code: Countdown",
+  "title_vi": "Sửa mã: Đếm ngược",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "This program should print out a countdown. The code is as follows:\n\n```python\nnumber = 5\nprint(\"Countdown!\")\nwhile True:\n  print(number)\n  number = number - 1\n  if number > 0:\n    break\n\nprint(\"Now!\")\n```\n\nThis should print out\n\n<sample-output>\n\nCountdown!\n5\n4\n3\n2\n1\nNow!\n\n</sample-output>\n\nHowever, the program doesn't quite work. Please fix it.",
+  "description_vi": "Chương trình này sẽ in ra một bộ đếm ngược. Mã này như sau:\n\n```python\nnumber = 5\nprint(\"Countdown!\")\nwhile True:\n  print(number)\n  number = number - 1\n  if number > 0:\n    break\n\nprint(\"Now!\")\n```\n\nĐiều này sẽ in ra\n\n<sample-output>\n\nĐếm ngược!\n5\n4\n3\n2\n1\nBây giờ!\n\n</sample-output>\n\nTuy nhiên, chương trình không hoạt động tốt. Hãy sửa nó.",
+  "starter_code": "number = 5\nprint(\"Countdown!\")\nwhile True:\n  print(number)\n  number = number - 1\n  if number > 0:\n    break\n\nprint(\"Now!\")",
+  "grading_data_available": false,
+  "source_hash": "8a862f26096d0ba514389b5ff6a77d4a82cdf8d9b67a94dada6fdb0d3c35e59a",
+  "order": 18
+}

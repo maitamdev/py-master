@@ -1,0 +1,48 @@
+{
+  "part": 11,
+  "slug": "part-11",
+  "title_original": "Part 11",
+  "title_vi": "Phần 11",
+  "lessons": [
+    {
+      "id": "part11-1-list-comprehensions",
+      "slug": "1-list-comprehensions",
+      "is_index": false,
+      "title_original": "List comprehensions",
+      "path": "/part-11/1-list-comprehensions",
+      "blocks_count": 69
+    },
+    {
+      "id": "part11-2-more-comprehensions",
+      "slug": "2-more-comprehensions",
+      "is_index": false,
+      "title_original": "More comprehensions",
+      "path": "/part-11/2-more-comprehensions",
+      "blocks_count": 48
+    },
+    {
+      "id": "part11-3-recursion",
+      "slug": "3-recursion",
+      "is_index": false,
+      "title_original": "Recursion",
+      "path": "/part-11/3-recursion",
+      "blocks_count": 56
+    },
+    {
+      "id": "part11-4-more-recursion-examples",
+      "slug": "4-more-recursion-examples",
+      "is_index": false,
+      "title_original": "More recursion examples",
+      "path": "/part-11/4-more-recursion-examples",
+      "blocks_count": 39
+    },
+    {
+      "id": "part11-index",
+      "slug": "index",
+      "is_index": true,
+      "title_original": "Part 11",
+      "path": "/part-11",
+      "blocks_count": 2
+    }
+  ]
+}

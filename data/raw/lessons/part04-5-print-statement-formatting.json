@@ -1,0 +1,251 @@
+{
+  "id": "part04-5-print-statement-formatting",
+  "part": 4,
+  "part_slug": "part-4",
+  "slug": "5-print-statement-formatting",
+  "is_part_index": false,
+  "title_original": "Print statement formatting",
+  "path": "/part-4/5-print-statement-formatting",
+  "source_path": "data/part-4/5-print-statement-formatting.md",
+  "source_hash": "2aa516246687ccb8dd8c993830640da9b5a51d5f842cd1acdeb4addf8e8a66f9",
+  "frontmatter": {
+    "path": "/part-4/5-print-statement-formatting",
+    "title": "Print statement formatting",
+    "hidden": false
+  },
+  "chunks_count": 39,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know how to use arguments to format the result of the `print` command\n- You will be able to use f-strings to format printouts",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know how to use arguments to format the result of the `print` command\n- You will be able to use f-strings to format printouts\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "So far we have learnt three methods for formulating the argument given to the `print` command.",
+      "raw_source": "So far we have learnt three methods for formulating the argument given to the `print` command."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The first is the `+` operator for strings. It allows simple concatenation of string segments:",
+      "raw_source": "The first is the `+` operator for strings. It allows simple concatenation of string segments:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "name = \"Mark\"\nage = 37\nprint(\"Hi \" + name + \" your age is \" + str(age) + \" years\" )",
+      "raw_source": "```python\nname = \"Mark\"\nage = 37\nprint(\"Hi \" + name + \" your age is \" + str(age) + \" years\" )\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This method will not work if any of the segments are not strings. In the example above, the variable `age` has been converted into a string with the `str` function, since it is an integer and cannot be concatenated as is.",
+      "raw_source": "This method will not work if any of the segments are not strings. In the example above, the variable `age` has been converted into a string with the `str` function, since it is an integer and cannot be concatenated as is."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The second method is considering each segment of the argument as a separate argument, and splitting them up with commas:",
+      "raw_source": "The second method is considering each segment of the argument as a separate argument, and splitting them up with commas:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "print(\"Hi\", name, \"your age is\", age, \"years\" )",
+      "raw_source": "```python\nprint(\"Hi\", name, \"your age is\", age, \"years\" )\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This code produces the exact same result as the previous version. The `print` command normally adds a space character between each argument.The advantage here is that the segments can be of different types, so there is no need to convert anything into a string.",
+      "raw_source": "This code produces the exact same result as the previous version. The `print` command normally adds a space character between each argument.The advantage here is that the segments can be of different types, so there is no need to convert anything into a string."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If you want to remove the automatically added spaces, you can add a special named argument `sep`:",
+      "raw_source": "If you want to remove the automatically added spaces, you can add a special named argument `sep`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "print(\"Hi\", name, \"your age is\", age, \"years\", sep=\"\")",
+      "raw_source": "```python\nprint(\"Hi\", name, \"your age is\", age, \"years\", sep=\"\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This prints out",
+      "raw_source": "This prints out"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "HiMarkyour age is37years",
+      "raw_source": "<sample-output>\n\nHiMarkyour age is37years\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The argument `sep=\"\"` is a _keyword argument_, and its name is short for _separator_. It specifies that the other arguments should now be separated by an empty string. You can set the separator to any string you like. For example, if you wanted each argument on a separate line, you could set the separator to `\"\\n\"`, which is the newline character:",
+      "raw_source": "The argument `sep=\"\"` is a _keyword argument_, and its name is short for _separator_. It specifies that the other arguments should now be separated by an empty string. You can set the separator to any string you like. For example, if you wanted each argument on a separate line, you could set the separator to `\"\\n\"`, which is the newline character:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "print(\"Hi\", name, \"your age is\", age, \"years\", sep=\"\\n\")",
+      "raw_source": "```python\nprint(\"Hi\", name, \"your age is\", age, \"years\", sep=\"\\n\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Hi\nMark\nyour age is\n37\nyears",
+      "raw_source": "<sample-output>\n\nHi\nMark\nyour age is\n37\nyears\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "By default, the print command always ends in a newline character, but you can change this as well. The keyword argument `end` specifies what is put at the end of a line. Setting `end` to an empty string means that there is no newline character at the end of the printout:",
+      "raw_source": "By default, the print command always ends in a newline character, but you can change this as well. The keyword argument `end` specifies what is put at the end of a line. Setting `end` to an empty string means that there is no newline character at the end of the printout:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "print(\"Hi \", end=\"\")\nprint(\"there!\")",
+      "raw_source": "```python\nprint(\"Hi \", end=\"\")\nprint(\"there!\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Hi there!",
+      "raw_source": "<sample-output>\n\nHi there!\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "f-strings",
+      "raw_source": "## f-strings"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The third method to prepare strings is f-strings. The previous example with the name and the age would look like this formulated with f-strings:",
+      "raw_source": "The third method to prepare strings is f-strings. The previous example with the name and the age would look like this formulated with f-strings:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "name = \"Erkki\"\nage = 39\nprint(f\"Hi {name} your age is {age} years\")",
+      "raw_source": "```python\nname = \"Erkki\"\nage = 39\nprint(f\"Hi {name} your age is {age} years\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Thus far we have only used very simple f-strings, but they can be very versatile in formatting string type content. One very common use case is setting the number of decimals that are printed out with a floating point number. By default the number is quite high:",
+      "raw_source": "Thus far we have only used very simple f-strings, but they can be very versatile in formatting string type content. One very common use case is setting the number of decimals that are printed out with a floating point number. By default the number is quite high:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number = 1/3\nprint(f\"The number is {number}\")",
+      "raw_source": "```python\nnumber = 1/3\nprint(f\"The number is {number}\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The number is 0.333333333333333",
+      "raw_source": "<sample-output>\n\nThe number is 0.333333333333333\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The specific format we want the number to be displayed in can be set within the curly brackets of the variable expression. Let's add a colon character and a _format specifier_ after the variable name:",
+      "raw_source": "The specific format we want the number to be displayed in can be set within the curly brackets of the variable expression. Let's add a colon character and a _format specifier_ after the variable name:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number = 1/3\nprint(f\"The number is {number:.2f}\")",
+      "raw_source": "```python\nnumber = 1/3\nprint(f\"The number is {number:.2f}\")\n```"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "The number is 0.33",
+      "raw_source": "```python\nThe number is 0.33\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The format specifier `.2f` states that we want to display 2 decimals. The letter _f_ at the end means that we want the variable to be displayed as a `float`, i.e. a floating point number.",
+      "raw_source": "The format specifier `.2f` states that we want to display 2 decimals. The letter _f_ at the end means that we want the variable to be displayed as a `float`, i.e. a floating point number."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here's another example, where we specify the amount of whitespace reserved for the variable in the printout. Both times the variable `name` is included in the resulting string, it has a space of 15 characters reserved. First the names are justified to the left, and then they are justified to the right:",
+      "raw_source": "Here's another example, where we specify the amount of whitespace reserved for the variable in the printout. Both times the variable `name` is included in the resulting string, it has a space of 15 characters reserved. First the names are justified to the left, and then they are justified to the right:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "names =  [ \"Steve\", \"Jean\", \"Katherine\", \"Paul\" ]\nfor name in names:\n  print(f\"{name:15} centre {name:>15}\")",
+      "raw_source": "```python\nnames =  [ \"Steve\", \"Jean\", \"Katherine\", \"Paul\" ]\nfor name in names:\n  print(f\"{name:15} centre {name:>15}\")\n```"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "Steve           centre           Steve\nJean            centre            Jean\nKatherine       centre       Katherine\nPaul            centre            Paul",
+      "raw_source": "```python\nSteve           centre           Steve\nJean            centre            Jean\nKatherine       centre       Katherine\nPaul            centre            Paul\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The uses of f-strings are not restricted to `print` commands. They can be assigned to variables and combined with other strings:",
+      "raw_source": "The uses of f-strings are not restricted to `print` commands. They can be assigned to variables and combined with other strings:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "name = \"Larry\"\nage = 48\ncity = \"Palo Alto\"\ngreeting = f\"Hi {name}, you are {age} years of age\"\nprint(greeting + f\", and you live in {city}\")",
+      "raw_source": "```python\nname = \"Larry\"\nage = 48\ncity = \"Palo Alto\"\ngreeting = f\"Hi {name}, you are {age} years of age\"\nprint(greeting + f\", and you live in {city}\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Hi Larry, you are 48 years of age, and you live in Palo Alto",
+      "raw_source": "<sample-output>\n\nHi Larry, you are 48 years of age, and you live in Palo Alto\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You can think of an f-string as a sort of function, which creates a normal string based on the \"arguments\" within the curly brackets.",
+      "raw_source": "You can think of an f-string as a sort of function, which creates a normal string based on the \"arguments\" within the curly brackets."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Integers to strings",
+        "tmcname": "part04-32_integers_to_strings"
+      },
+      "inner_content": "Please write a function named `formatted`, which takes a list of floating point numbers as its argument. The function returns a new list, which contains each element of the original list in string format, rounded to two decimal points. The order of the items in the list should remain unchanged.\n\n_Hint: use f-strings to format the floating point numbers into suitable strings._\n\nAn example of expected beahviour:\n\n```python\nmy_list = [1.234, 0.3333, 0.11111, 3.446]\nnew_list = formatted(my_list)\nprint(new_list)\n```\n\n<sample-output>\n\n['1.23', '0.33', '0.11', '3.45']\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Integers to strings' tmcname='part04-32_integers_to_strings'>\n\nPlease write a function named `formatted`, which takes a list of floating point numbers as its argument. The function returns a new list, which contains each element of the original list in string format, rounded to two decimal points. The order of the items in the list should remain unchanged.\n\n_Hint: use f-strings to format the floating point numbers into suitable strings._\n\nAn example of expected beahviour:\n\n```python\nmy_list = [1.234, 0.3333, 0.11111, 3.446]\nnew_list = formatted(my_list)\nprint(new_list)\n```\n\n<sample-output>\n\n['1.23', '0.33', '0.11', '3.45']\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!---\nA quiz to review the contents of this section:",
+      "raw_source": "<!---\nA quiz to review the contents of this section:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "90d650f3-fde1-5132-ade9-73f3b4bf6189"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"90d650f3-fde1-5132-ade9-73f3b4bf6189\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    }
+  ]
+}

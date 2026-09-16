@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-14_underlining",
+  "lesson_id": "part03-2-working-with-strings",
+  "part": 3,
+  "tmc_name": "part03-14_underlining",
+  "title_original": "Underlining",
+  "title_vi": "gạch chân",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for strings using a loop. The program prints out each string underlined as shown in the examples below. The execution ends when the user inputs an empty string - that is, just presses Enter at the prompt.\n\n<sample-output>\n\nPlease type in a string: **Hi there!**\n<pre>\nHi there!\n---------\n</pre>\nPlease type in a string: **This is a test**\n<pre>\nThis is a test\n--------------\n</pre>\nPlease type in a string: **a**\n<pre>\na\n-\n</pre>\nPlease type in a string:\n\n</sample-output>",
+  "description_vi": "Hãy viết một chương trình yêu cầu người dùng nhập chuỗi bằng vòng lặp. Chương trình in ra từng chuỗi được gạch chân như ví dụ bên dưới. Quá trình thực thi kết thúc khi người dùng nhập một chuỗi trống - nghĩa là chỉ cần nhấn Enter tại dấu nhắc.\n\n<sample-output>\n\nVui lòng nhập một chuỗi: **Xin chào!**\n<pre>\nXin chào!\n---------\n</pre>\nVui lòng nhập một chuỗi: **Đây là bản thử nghiệm**\n<pre>\nĐây là một bài kiểm tra\n--------------\n</pre>\nVui lòng nhập một chuỗi: **a**\n<pre>\nmột\n-\n</pre>\nHãy gõ vào một chuỗi:\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "9b2d8a000e951b04bee47e3ce899db3b02b3adff80e14605bc6508433e46a458",
+  "order": 55
+}

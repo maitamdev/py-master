@@ -1,0 +1,16 @@
+{
+  "id": "ex-part13-11_four_directions",
+  "lesson_id": "part13-3-events",
+  "part": 13,
+  "tmc_name": "part13-11_four_directions",
+  "title_original": "Four directions",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program where the player can move a robot in four directions with the arrow keys on the keyboard. The end result should look like this:\n\n<img src=\"pygame_four_directions.gif\">",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "7f1f8816d9c51ec335604f3f62e47aa45cd62afd6ca033bae5fd9d524ab89102",
+  "order": 25
+}

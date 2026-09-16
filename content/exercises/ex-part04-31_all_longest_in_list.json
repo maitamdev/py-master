@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-31_all_longest_in_list",
+  "lesson_id": "part04-4-definite-iteration",
+  "part": 4,
+  "tmc_name": "part04-31_all_longest_in_list",
+  "title_original": "All the longest in the list",
+  "title_vi": "Tất cả dài nhất trong danh sách",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `all_the_longest`, which takes a list of strings as its argument. The function should return a new list containing the longest string in the original list. If more than one are equally long, the function should return all of the longest strings.\n\nThe order of the strings in the returned list should be the same as in the original.\n\n```python\nmy_list = [\"first\", \"second\", \"fourth\", \"eleventh\"]\n\nresult = all_the_longest(my_list)\nprint(result) # ['eleventh']\n```\n\n```python\nmy_list = [\"adele\", \"mark\", \"dorothy\", \"tim\", \"hedy\", \"richard\"]\n\nresult = all_the_longest(my_list)\nprint(result) # ['dorothy', 'richard']\n```",
+  "description_vi": "Hãy viết một hàm có tên `all_the_longest`, hàm này lấy danh sách các chuỗi làm đối số. Hàm sẽ trả về một danh sách mới chứa chuỗi dài nhất trong danh sách ban đầu. Nếu có nhiều hơn một chuỗi có độ dài bằng nhau thì hàm sẽ trả về tất cả các chuỗi dài nhất.\n\nThứ tự của các chuỗi trong danh sách trả về phải giống như trong danh sách gốc.\n\n```python\nmy_list = [\"first\", \"second\", \"fourth\", \"eleventh\"]\n\nresult = all_the_longest(my_list)\nprint(result) # ['eleventh']\n```\n\n```python\nmy_list = [\"adele\", \"mark\", \"dorothy\", \"tim\", \"hedy\", \"richard\"]\n\nresult = all_the_longest(my_list)\nprint(result) # ['dorothy', 'richard']\n```",
+  "starter_code": "my_list = [\"first\", \"second\", \"fourth\", \"eleventh\"]\n\nresult = all_the_longest(my_list)\nprint(result) # ['eleventh']",
+  "grading_data_available": false,
+  "source_hash": "a749a2b618951c4201bf371760edae3bbd05203009ddafe645d5907c0439b78b",
+  "order": 64
+}

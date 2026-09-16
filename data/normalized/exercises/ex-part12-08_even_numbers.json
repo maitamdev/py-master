@@ -1,0 +1,16 @@
+{
+  "id": "ex-part12-08_even_numbers",
+  "lesson_id": "part12-2-generators",
+  "part": 12,
+  "tmc_name": "part12-08_even_numbers",
+  "title_original": "Even numbers",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a generator function named `even_numbers(beginning: int, maximum: int)` which takes two integers as its arguments. The function should produce even numbers starting from `beginning` and ending with, at most, `maximum`.\n\nTwo examples of how the function works:\n\n```python\nnumbers = even_numbers(2, 10)\nfor number in numbers:\n    print(number)\n```\n\n<sample-output>\n\n2\n4\n6\n8\n10\n\n</sample-output>\n\n```python\nnumbers = even_numbers(11, 21)\nfor number in numbers:\n    print(number)\n```\n\n<sample-output>\n\n12\n14\n16\n18\n20\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "numbers = even_numbers(2, 10)\nfor number in numbers:\n    print(number)",
+  "grading_data_available": false,
+  "source_hash": "495c47999cd0793de48b0ffebed775b03311a486e2b4f94f1276fae9c77c028f",
+  "order": 23
+}

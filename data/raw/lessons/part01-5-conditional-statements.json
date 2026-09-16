@@ -1,0 +1,423 @@
+{
+  "id": "part01-5-conditional-statements",
+  "part": 1,
+  "part_slug": "part-1",
+  "slug": "5-conditional-statements",
+  "is_part_index": false,
+  "title_original": "Conditional statements",
+  "path": "/part-1/5-conditional-statements",
+  "source_path": "data/part-1/5-conditional-statements.md",
+  "source_hash": "6e3b5df56734958d39a4db638407003e8926ae85bef23cccfe5d6516d35e3abb",
+  "frontmatter": {
+    "path": "/part-1/5-conditional-statements",
+    "title": "Conditional statements",
+    "hidden": false
+  },
+  "chunks_count": 62,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will be able to use a simple conditional statement in programming\n- You will know what a Boolean value is\n- You will be able to express conditionals with comparison operators",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will be able to use a simple conditional statement in programming\n- You will know what a Boolean value is\n- You will be able to express conditionals with comparison operators\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Thus far, every program we have written has been executed line by line in order. Instead of executing every line of code every single time a program is run, it is often useful to create sections of the program which are only executed in certain situations.",
+      "raw_source": "Thus far, every program we have written has been executed line by line in order. Instead of executing every line of code every single time a program is run, it is often useful to create sections of the program which are only executed in certain situations."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "For example, the following code checks whether the user is of age:",
+      "raw_source": "For example, the following code checks whether the user is of age:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "age = int(input(\"How old are you? \"))\n\nif age > 17:\n    print(\"You are of age!\")\n    print(\"Here's a copy of GTA6 for you.\")\n\nprint(\"Next customer, please!\")",
+      "raw_source": "```python\nage = int(input(\"How old are you? \"))\n\nif age > 17:\n    print(\"You are of age!\")\n    print(\"Here's a copy of GTA6 for you.\")\n\nprint(\"Next customer, please!\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When the user is over the age of 17, the execution of the program should look like this:",
+      "raw_source": "When the user is over the age of 17, the execution of the program should look like this:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "How old are you? **18**\nYou are of age!\nHere's a copy of GTA6 for you.\nNext customer, please!",
+      "raw_source": "<sample-output>\n\nHow old are you? **18**\nYou are of age!\nHere's a copy of GTA6 for you.\nNext customer, please!\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the user is 17 or under, only this is printed out:",
+      "raw_source": "If the user is 17 or under, only this is printed out:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "How old are you? **16**\nNext customer, please!",
+      "raw_source": "<sample-output>\n\nHow old are you? **16**\nNext customer, please!\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "These examples show us that the value given as input affects which parts of the program are executed. The program contains a _conditional statement_ with a block of code which is executed only if the condition in the statement is true.",
+      "raw_source": "These examples show us that the value given as input affects which parts of the program are executed. The program contains a _conditional statement_ with a block of code which is executed only if the condition in the statement is true."
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "1_5_1.png"
+      },
+      "raw_source": "<img src=\"1_5_1.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In a conditional statement the keyword `if` is followed by a _condition_, such as a comparison of two values. The code block following this header line is only executed if the condition is true.",
+      "raw_source": "In a conditional statement the keyword `if` is followed by a _condition_, such as a comparison of two values. The code block following this header line is only executed if the condition is true."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Notice the colon character following the `if` header. In the following code there is no colon:",
+      "raw_source": "Notice the colon character following the `if` header. In the following code there is no colon:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "age = 10\n\n# no colon at the end of the following line\nif age > 17\n    print(\"You are of age.\")",
+      "raw_source": "```python\nage = 10\n\n# no colon at the end of the following line\nif age > 17\n    print(\"You are of age.\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Upon execution this causes an error:",
+      "raw_source": "Upon execution this causes an error:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "<pre>\nFile \"program.py\", line 3\n  if age > 17\n            ^\nSyntaxError: invalid syntax\n</pre>",
+      "raw_source": "<sample-output>\n<pre>\nFile \"program.py\", line 3\n  if age > 17\n            ^\nSyntaxError: invalid syntax\n</pre>\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Comparison operators",
+      "raw_source": "## Comparison operators"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Very typically conditions consist of comparing two values. Here is a table with the most common comparison operators used in Python:",
+      "raw_source": "Very typically conditions consist of comparing two values. Here is a table with the most common comparison operators used in Python:"
+    },
+    {
+      "raw_type": "table",
+      "content": "| Operator | Purpose        | Example  |\n|:--------:|----------------|----------|\n| `==`     | Equal to       | `a == b` |\n| `!=`     | Not equal to   | `a != b` |\n| `>`      | Greater than   | `a > b`  |\n| `>=`     | Greater than or equal to | `a >= b` |\n| `<`      | Less than      | `a < b`  |\n| `<=`     | Less than or equal to    | `a <= b` |",
+      "raw_source": "| Operator | Purpose        | Example  |\n|:--------:|----------------|----------|\n| `==`     | Equal to       | `a == b` |\n| `!=`     | Not equal to   | `a != b` |\n| `>`      | Greater than   | `a > b`  |\n| `>=`     | Greater than or equal to | `a >= b` |\n| `<`      | Less than      | `a < b`  |\n| `<=`     | Less than or equal to    | `a <= b` |"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's have a look at a program which prints out different things based on whether the number the user inputs is negative, positive, or equal to zero:",
+      "raw_source": "Let's have a look at a program which prints out different things based on whether the number the user inputs is negative, positive, or equal to zero:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number = int(input(\"Please type in a number: \"))\n\nif number < 0:\n    print(\"The number is negative.\")\n\nif number > 0:\n    print(\"The number is positive.\")\n\nif number == 0:\n    print(\"The number is zero.\")",
+      "raw_source": "```python\nnumber = int(input(\"Please type in a number: \"))\n\nif number < 0:\n    print(\"The number is negative.\")\n\nif number > 0:\n    print(\"The number is positive.\")\n\nif number == 0:\n    print(\"The number is zero.\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Examples of how the program functions with three different inputs:",
+      "raw_source": "Examples of how the program functions with three different inputs:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in a number: **15**\nThe number is positive.",
+      "raw_source": "<sample-output>\n\nPlease type in a number: **15**\nThe number is positive.\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in a number: **-18**\nThe number is negative.",
+      "raw_source": "<sample-output>\n\nPlease type in a number: **-18**\nThe number is negative.\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in a number: **0**\nThe number is zero.",
+      "raw_source": "<sample-output>\n\nPlease type in a number: **0**\nThe number is zero.\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Indentation",
+      "raw_source": "## Indentation"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Python recognises that a block of code is part of a conditional statement if each line of code in the block is _indented_ the same. That is, there should be a bit of whitespace at the beginning of every line of code within the code block. Each line should have the same amount of whitespace.",
+      "raw_source": "Python recognises that a block of code is part of a conditional statement if each line of code in the block is _indented_ the same. That is, there should be a bit of whitespace at the beginning of every line of code within the code block. Each line should have the same amount of whitespace."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "For example:",
+      "raw_source": "For example:"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "`",
+      "raw_source": "`"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "password = input(\"Please type in a password: \")\n\nif password == \"kittycat\":\n    print(\"You knew the password!\")\n    print(\"You must be either the intended user...\")\n    print(\"...or quite an accomplished hacker.\")\n\nprint(\"The program has finished its execution. Thanks and bye!\")",
+      "raw_source": "```python\npassword = input(\"Please type in a password: \")\n\nif password == \"kittycat\":\n    print(\"You knew the password!\")\n    print(\"You must be either the intended user...\")\n    print(\"...or quite an accomplished hacker.\")\n\nprint(\"The program has finished its execution. Thanks and bye!\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "`",
+      "raw_source": "`"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You can use the Tab key, short for _tabulator_ key, to insert a set amount of whitespace.",
+      "raw_source": "You can use the Tab key, short for _tabulator_ key, to insert a set amount of whitespace."
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "1_5_keyboard.png"
+      },
+      "raw_source": "<img src=\"1_5_keyboard.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Many text editors will automatically indent the following line when the Enter key is pressed after a colon character. When you want to end an indented code block you can use the `Backspace` key to return to the beginning of the line.",
+      "raw_source": "Many text editors will automatically indent the following line when the Enter key is pressed after a colon character. When you want to end an indented code block you can use the `Backspace` key to return to the beginning of the line."
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "1_5_keyboard2.png"
+      },
+      "raw_source": "<img src=\"1_5_keyboard2.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<small><center>\nThe source of the keyboard pictures:\n <a href=\"https://pixabay.com/users/Clker-Free-Vector-Images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=311803\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=311803\">Pixabay</a>\n</center></small>",
+      "raw_source": "<small><center>\nThe source of the keyboard pictures:\n <a href=\"https://pixabay.com/users/Clker-Free-Vector-Images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=311803\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=311803\">Pixabay</a>\n</center></small>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Orwell",
+        "tmcname": "part01-21_orwell"
+      },
+      "inner_content": "Please write a program which asks the user for an integer number. The program should print out \"Orwell\" if the number is exactly 1984, and otherwise do nothing.\n\n<sample-output>\n\nPlease type in a number: **2020**\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **1984**\nOrwell\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Orwell\" tmcname=\"part01-21_orwell\">\n\nPlease write a program which asks the user for an integer number. The program should print out \"Orwell\" if the number is exactly 1984, and otherwise do nothing.\n\n<sample-output>\n\nPlease type in a number: **2020**\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **1984**\nOrwell\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Absolute value",
+        "tmcname": "part01-22_absolute_value"
+      },
+      "inner_content": "Please write a program which asks the user for an integer number. If the number is less than zero, the program should print out the number multiplied by -1. Otherwise the program prints out the number as is. Please have a look at the examples of expected behaviour below.\n\n<sample-output>\n\nPlease type in a number: **-7**\nThe absolute value of this number is 7\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **1**\nThe absolute value of this number is 1\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **-99**\nThe absolute value of this number is 99\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Absolute value\" tmcname=\"part01-22_absolute_value\">\n\nPlease write a program which asks the user for an integer number. If the number is less than zero, the program should print out the number multiplied by -1. Otherwise the program prints out the number as is. Please have a look at the examples of expected behaviour below.\n\n<sample-output>\n\nPlease type in a number: **-7**\nThe absolute value of this number is 7\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **1**\nThe absolute value of this number is 1\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **-99**\nThe absolute value of this number is 99\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Soup or no soup",
+        "tmcname": "part01-23_soup_or_no_soup"
+      },
+      "inner_content": "Please write a program which asks for the user's name. If the name is anything but \"Jerry\", the program then asks for the number of portions and prints out the total cost. The price of a single portion is 5.90.\n\nTwo examples of the program's execution:\n\n<sample-output>\n\nPlease tell me your name: **Kramer**\nHow many portions of soup? **2**\nThe total cost is 11.8\nNext please!\n\n</sample-output>\n\n<sample-output>\n\nPlease tell me your name: **Jerry**\nNext please!\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Soup or no soup\" tmcname=\"part01-23_soup_or_no_soup\">\n\nPlease write a program which asks for the user's name. If the name is anything but \"Jerry\", the program then asks for the number of portions and prints out the total cost. The price of a single portion is 5.90.\n\nTwo examples of the program's execution:\n\n<sample-output>\n\nPlease tell me your name: **Kramer**\nHow many portions of soup? **2**\nThe total cost is 11.8\nNext please!\n\n</sample-output>\n\n<sample-output>\n\nPlease tell me your name: **Jerry**\nNext please!\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Order of magnitude",
+        "tmcname": "part01-24_order_of_magnitude"
+      },
+      "inner_content": "Please write a program which asks the user for an integer number. The program should then print out the magnitude of the number according to the following examples.\n\n<sample-output>\n\nPlease type in a number: **950**\nThis number is smaller than 1000\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **59**\nThis number is smaller than 1000\nThis number is smaller than 100\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **2**\nThis number is smaller than 1000\nThis number is smaller than 100\nThis number is smaller than 10\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **1123**\nThank you!\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Order of magnitude\" tmcname=\"part01-24_order_of_magnitude\">\n\nPlease write a program which asks the user for an integer number. The program should then print out the magnitude of the number according to the following examples.\n\n<sample-output>\n\nPlease type in a number: **950**\nThis number is smaller than 1000\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **59**\nThis number is smaller than 1000\nThis number is smaller than 100\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **2**\nThis number is smaller than 1000\nThis number is smaller than 100\nThis number is smaller than 10\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **1123**\nThank you!\n\n</sample-output>\n\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Boolean values and Boolean expressions",
+      "raw_source": "## Boolean values and Boolean expressions"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Any condition used in a conditional statement will result in a truth value, that is, either true or false. For example, the condition `a < 5` is true if `a` is less than 5, and false if `a` is equal to or greater than 5.",
+      "raw_source": "Any condition used in a conditional statement will result in a truth value, that is, either true or false. For example, the condition `a < 5` is true if `a` is less than 5, and false if `a` is equal to or greater than 5."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "These types of values are often called _Boolean_ values, named after the English mathematician George Boole. In Python they are handled by the `bool` data type. Variables of type `bool` can only have two values: `True` or `False`.",
+      "raw_source": "These types of values are often called _Boolean_ values, named after the English mathematician George Boole. In Python they are handled by the `bool` data type. Variables of type `bool` can only have two values: `True` or `False`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Any bit of code that results in a Boolean value is called a _Boolean expression_. For example, the condition in a conditional statement is always a Boolean expression, and the words _condition_ and _Boolean expression_ can often be used interchangeably.",
+      "raw_source": "Any bit of code that results in a Boolean value is called a _Boolean expression_. For example, the condition in a conditional statement is always a Boolean expression, and the words _condition_ and _Boolean expression_ can often be used interchangeably."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The result of a Boolean expression can be stored in a variable just like the result of any numerical calculation:",
+      "raw_source": "The result of a Boolean expression can be stored in a variable just like the result of any numerical calculation:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "a = 3\ncondition = a < 5\nprint(condition)\nif condition:\n    print(\"a is less than 5\")",
+      "raw_source": "```python\na = 3\ncondition = a < 5\nprint(condition)\nif condition:\n    print(\"a is less than 5\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "True\na is less than 5",
+      "raw_source": "<sample-output>\n\nTrue\na is less than 5\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The Python keywords `True` and `False` can also be used directly. In the following example the `print` command is executed every time, because the value of the condition is `True`:",
+      "raw_source": "The Python keywords `True` and `False` can also be used directly. In the following example the `print` command is executed every time, because the value of the condition is `True`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "condition = True\nif condition:\n    print(\"This is printed every time.\")",
+      "raw_source": "```python\ncondition = True\nif condition:\n    print(\"This is printed every time.\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "This is printed every time.",
+      "raw_source": "<sample-output>\n\nThis is printed every time.\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A program like this is not very useful, but later on during the course you will see examples of Boolean variables coming in very handy.",
+      "raw_source": "A program like this is not very useful, but later on during the course you will see examples of Boolean variables coming in very handy."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Calculator",
+        "tmcname": "part01-25_calculator"
+      },
+      "inner_content": "Please write a program which asks the user for two numbers and an operation. If the operation is _add_, _multiply_ or _subtract_, the program should calculate and print out the result of the operation with the given numbers. If the user types in anything else, the program should print out nothing.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nNumber 1: **10**\nNumber 2: **17**\nOperation: **add**\n\n10 + 17 = 27\n\n</sample-output>\n\n<sample-output>\n\nNumber 1: **4**\nNumber 2: **6**\nOperation: **multiply**\n\n4 * 6 = 24\n\n</sample-output>\n\n<sample-output>\n\nNumber 1: **4**\nNumber 2: **6**\nOperation: **subtract**\n\n4 - 6 = -2\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Calculator\" tmcname=\"part01-25_calculator\">\n\nPlease write a program which asks the user for two numbers and an operation. If the operation is _add_, _multiply_ or _subtract_, the program should calculate and print out the result of the operation with the given numbers. If the user types in anything else, the program should print out nothing.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nNumber 1: **10**\nNumber 2: **17**\nOperation: **add**\n\n10 + 17 = 27\n\n</sample-output>\n\n<sample-output>\n\nNumber 1: **4**\nNumber 2: **6**\nOperation: **multiply**\n\n4 * 6 = 24\n\n</sample-output>\n\n<sample-output>\n\nNumber 1: **4**\nNumber 2: **6**\nOperation: **subtract**\n\n4 - 6 = -2\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Temperatures",
+        "tmcname": "part01-26_temperatures"
+      },
+      "inner_content": "Please write a program which asks the user for a temperature in degrees Fahrenheit, and then prints out the same in degrees Celsius. If the converted temperature falls below zero degrees Celsius, the program should also print out \"Brr! It's cold in here!\".\n\nThe formula for converting degrees Fahrenheit to degrees Celsius can be found easily by any search engine of your choice.\n\nTwo examples of expected behaviour:\n\n<sample-output>\n\nPlease type in a temperature (F): **101**\n101 degrees Fahrenheit equals 38.333333333333336 degrees Celsius\n\nPlease type in a temperature (F): **21**\n21 degrees Fahrenheit equals -6.111111111111111 degrees Celsius\nBrr! It's cold in here!\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Temperatures\" tmcname=\"part01-26_temperatures\">\n\nPlease write a program which asks the user for a temperature in degrees Fahrenheit, and then prints out the same in degrees Celsius. If the converted temperature falls below zero degrees Celsius, the program should also print out \"Brr! It's cold in here!\".\n\nThe formula for converting degrees Fahrenheit to degrees Celsius can be found easily by any search engine of your choice.\n\nTwo examples of expected behaviour:\n\n<sample-output>\n\nPlease type in a temperature (F): **101**\n101 degrees Fahrenheit equals 38.333333333333336 degrees Celsius\n\nPlease type in a temperature (F): **21**\n21 degrees Fahrenheit equals -6.111111111111111 degrees Celsius\nBrr! It's cold in here!\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Daily wages",
+        "tmcname": "part01-27_daily_wages"
+      },
+      "inner_content": "Please write a program which asks for the hourly wage, hours worked, and the day of the week. The program should then print out the daily wages, which equal hourly wage multiplied by hours worked, except on Sundays when the hourly wage is doubled.\n\n<sample-output>\n\nHourly wage: **8.5**\nHours worked: **3**\nDay of the week: **Monday**\nDaily wages: 25.5 euros\n\n</sample-output>\n\n<sample-output>\n\nHourly wage: **12.5**\nHours worked: **10**\nDay of the week: **Sunday**\nDaily wages: 250.0 euros\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Daily wages\" tmcname=\"part01-27_daily_wages\">\n\nPlease write a program which asks for the hourly wage, hours worked, and the day of the week. The program should then print out the daily wages, which equal hourly wage multiplied by hours worked, except on Sundays when the hourly wage is doubled.\n\n<sample-output>\n\nHourly wage: **8.5**\nHours worked: **3**\nDay of the week: **Monday**\nDaily wages: 25.5 euros\n\n</sample-output>\n\n<sample-output>\n\nHourly wage: **12.5**\nHours worked: **10**\nDay of the week: **Sunday**\nDaily wages: 250.0 euros\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Loyalty bonus",
+        "tmcname": "part01-28_loyalty_bonus"
+      },
+      "inner_content": "This program calculates the end of year bonus a customer receives on their loyalty card. The bonus is calculated with the following formula:\n\n* If there are less than a hundred points on the card, the bonus is 10 %\n* In any other case the bonus is 15 %\n\nThe program should work like this:\n\n<sample-output>\n\nHow many points are on your card? **55**\nYour bonus is 10 %\nYou now have 60.5 points\n\n</sample-output>\n\nBut there is a problem with the program, so with some inputs it doesn't work quite right:\n\n<sample-output>\n\nHow many points are on your card? **95**\nYour bonus is 10 %\nYour bonus is 15 %\nYou now have 120.175 points\n\n</sample-output>\n\nPlease fix the program so that there is always either a 10 % or a 15 % bonus, but never both.",
+      "raw_source": "<in-browser-programming-exercise name=\"Loyalty bonus\" tmcname=\"part01-28_loyalty_bonus\">\n\nThis program calculates the end of year bonus a customer receives on their loyalty card. The bonus is calculated with the following formula:\n\n* If there are less than a hundred points on the card, the bonus is 10 %\n* In any other case the bonus is 15 %\n\nThe program should work like this:\n\n<sample-output>\n\nHow many points are on your card? **55**\nYour bonus is 10 %\nYou now have 60.5 points\n\n</sample-output>\n\nBut there is a problem with the program, so with some inputs it doesn't work quite right:\n\n<sample-output>\n\nHow many points are on your card? **95**\nYour bonus is 10 %\nYour bonus is 15 %\nYou now have 120.175 points\n\n</sample-output>\n\nPlease fix the program so that there is always either a 10 % or a 15 % bonus, but never both.\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "What to wear tomorrow",
+        "tmcname": "part01-29_what_to_wear_tomorrow"
+      },
+      "inner_content": "Please write a program which asks for tomorrow's weather forecast and then suggests weather-appropriate clothing.\n\nThe suggestion should change if the temperature (measured in degrees Celsius) is over 20, 10 or 5 degrees, and also if there is rain on the radar.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nWhat is the weather forecast for tomorrow?\nTemperature: **21**\nWill it rain (yes/no): **no**\nWear jeans and a T-shirt\n\n</sample-output>\n\n<sample-output>\n\nWhat is the weather forecast for tomorrow?\nTemperature: **11**\nWill it rain (yes/no): **no**\nWear jeans and a T-shirt\nI recommend a jumper as well\n\n</sample-output>\n\n<sample-output>\n\nWhat is the weather forecast for tomorrow?\nTemperature: **7**\nWill it rain (yes/no): **no**\nWear jeans and a T-shirt\nI recommend a jumper as well\nTake a jacket with you\n\n</sample-output>\n\n<sample-output>\n\nWhat is the weather forecast for tomorrow?\nTemperature: **3**\nWill it rain (yes/no): **yes**\nWear jeans and a T-shirt\nI recommend a jumper as well\nTake a jacket with you\nMake it a warm coat, actually\nI think gloves are in order\nDon't forget your umbrella!\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"What to wear tomorrow\" tmcname=\"part01-29_what_to_wear_tomorrow\">\n\nPlease write a program which asks for tomorrow's weather forecast and then suggests weather-appropriate clothing.\n\nThe suggestion should change if the temperature (measured in degrees Celsius) is over 20, 10 or 5 degrees, and also if there is rain on the radar.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nWhat is the weather forecast for tomorrow?\nTemperature: **21**\nWill it rain (yes/no): **no**\nWear jeans and a T-shirt\n\n</sample-output>\n\n<sample-output>\n\nWhat is the weather forecast for tomorrow?\nTemperature: **11**\nWill it rain (yes/no): **no**\nWear jeans and a T-shirt\nI recommend a jumper as well\n\n</sample-output>\n\n<sample-output>\n\nWhat is the weather forecast for tomorrow?\nTemperature: **7**\nWill it rain (yes/no): **no**\nWear jeans and a T-shirt\nI recommend a jumper as well\nTake a jacket with you\n\n</sample-output>\n\n<sample-output>\n\nWhat is the weather forecast for tomorrow?\nTemperature: **3**\nWill it rain (yes/no): **yes**\nWear jeans and a T-shirt\nI recommend a jumper as well\nTake a jacket with you\nMake it a warm coat, actually\nI think gloves are in order\nDon't forget your umbrella!\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Solving a quadratic equation",
+        "tmcname": "part01-30_quadratic_formula"
+      },
+      "inner_content": "In the Python `math` module there is the function `sqrt`, which calculates the square root of a number. You can use it like so:\n\n```python\nfrom math import sqrt\n\nprint(sqrt(9))\n```\n\nThis should print out\n\n<sample-output>\n\n3.0\n\n</sample-output>\n\nWe will return to the concept of a _module_ and the `import` statement later. For now, it is sufficient to understand that the line `from math import sqrt` allows us to use the `sqrt` function in our program.\n\nPlease write a program for solving a quadratic equation of the form ax²+bx+c. The program asks for values a, b and c. It should then use the quadratic formula to solve the equation. The quadratic formula expressed with the Python `sqrt` function is as follows:\n\nx = (-b ± sqrt(b²-4ac))/(2a).\n\nYou can assume the equation will always have two real roots, so the above formula will always work.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nValue of a: **1**\nValue of b: **2**\nValue of c: **-8**\n\nThe roots are 2.0 and -4.0\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Solving a quadratic equation\" tmcname=\"part01-30_quadratic_formula\">\n\nIn the Python `math` module there is the function `sqrt`, which calculates the square root of a number. You can use it like so:\n\n```python\nfrom math import sqrt\n\nprint(sqrt(9))\n```\n\nThis should print out\n\n<sample-output>\n\n3.0\n\n</sample-output>\n\nWe will return to the concept of a _module_ and the `import` statement later. For now, it is sufficient to understand that the line `from math import sqrt` allows us to use the `sqrt` function in our program.\n\nPlease write a program for solving a quadratic equation of the form ax²+bx+c. The program asks for values a, b and c. It should then use the quadratic formula to solve the equation. The quadratic formula expressed with the Python `sqrt` function is as follows:\n\nx = (-b ± sqrt(b²-4ac))/(2a).\n\nYou can assume the equation will always have two real roots, so the above formula will always work.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nValue of a: **1**\nValue of b: **2**\nValue of c: **-8**\n\nThe roots are 2.0 and -4.0\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!--",
+      "raw_source": "<!--"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A quiz to review the contents of this section:",
+      "raw_source": "A quiz to review the contents of this section:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "bc7e500f-a91e-5709-8ae6-34637ff01737"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"bc7e500f-a91e-5709-8ae6-34637ff01737\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Please respond to a quick questionnaire on this week's materials. The questionnaire is worth one exercise point.",
+      "raw_source": "Please respond to a quick questionnaire on this week's materials. The questionnaire is worth one exercise point."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "9d55d599-eaf4-58c9-933f-7fc1b1f6962b"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"9d55d599-eaf4-58c9-933f-7fc1b1f6962b\"></quiz>"
+    }
+  ]
+}

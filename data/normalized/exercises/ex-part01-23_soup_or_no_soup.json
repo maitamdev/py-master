@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-23_soup_or_no_soup",
+  "lesson_id": "part01-5-conditional-statements",
+  "part": 1,
+  "tmc_name": "part01-23_soup_or_no_soup",
+  "title_original": "Soup or no soup",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks for the user's name. If the name is anything but \"Jerry\", the program then asks for the number of portions and prints out the total cost. The price of a single portion is 5.90.\n\nTwo examples of the program's execution:\n\n<sample-output>\n\nPlease tell me your name: **Kramer**\nHow many portions of soup? **2**\nThe total cost is 11.8\nNext please!\n\n</sample-output>\n\n<sample-output>\n\nPlease tell me your name: **Jerry**\nNext please!\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "1fcfb73463aefae0dd7dd504e655bf9b47570c4a22fafb1504d8fe099885601c",
+  "order": 38
+}

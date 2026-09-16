@@ -1,0 +1,53 @@
+{
+  "part": 2,
+  "slug": "part-2",
+  "title_original": "Part 2",
+  "title_vi": "Cấu trúc Điều kiện và Vòng lặp đơn giản",
+  "lessons": [
+    {
+      "id": "part02-1-programming_terminology",
+      "slug": "1-programming_terminology",
+      "is_index": false,
+      "title_original": "Programming terminology",
+      "path": "/part-2/1-programming-terminology",
+      "blocks_count": 87,
+      "title_vi": "Thuật ngữ lập trình"
+    },
+    {
+      "id": "part02-2-else-elif",
+      "slug": "2-else-elif",
+      "is_index": false,
+      "title_original": "More conditionals",
+      "path": "/part-2/2-else-elif",
+      "blocks_count": 42,
+      "title_vi": "Thêm điều kiện"
+    },
+    {
+      "id": "part02-3-combining-conditions",
+      "slug": "3-combining-conditions",
+      "is_index": false,
+      "title_original": "Combining conditions",
+      "path": "/part-2/3-combining-conditions",
+      "blocks_count": 40,
+      "title_vi": "Điều kiện kết hợp"
+    },
+    {
+      "id": "part02-4-simple-loops",
+      "slug": "4-simple-loops",
+      "is_index": false,
+      "title_original": "Simple loops",
+      "path": "/part-2/4-simple-loops",
+      "blocks_count": 60,
+      "title_vi": "Vòng lặp đơn giản"
+    },
+    {
+      "id": "part02-index",
+      "slug": "index",
+      "is_index": true,
+      "title_original": "Part 2",
+      "path": "/part-2",
+      "blocks_count": 2,
+      "title_vi": "Cấu trúc Điều kiện và Vòng lặp đơn giản"
+    }
+  ]
+}

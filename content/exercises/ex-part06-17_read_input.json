@@ -1,0 +1,16 @@
+{
+  "id": "ex-part06-17_read_input",
+  "lesson_id": "part06-3-errors",
+  "part": 6,
+  "tmc_name": "part06-17_read_input",
+  "title_original": "Reading input",
+  "title_vi": "Đọc đầu vào",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `read_input`, which asks the user for input until the user types in an integer which falls within the bounds given as arguments to the function. The function should return the final valid integer value typed in by the user.\n\nAn example of the function in action:\n\n```python\nnumber = read_input(\"Please type in a number: \", 5, 10)\nprint(\"You typed in:\", number)\n```\n\n<sample-output>\n\nPlease type in a number: **seven**\nYou must type in an integer between 5 and 10\nPlease type in a number: **-3**\nYou must type in an integer between 5 and 10\nPlease type in a number: **8**\nYou typed in: 8\n\n</sample-output>",
+  "description_vi": "Vui lòng viết một hàm có tên `read_input`, hàm này yêu cầu người dùng nhập dữ liệu cho đến khi người dùng nhập một số nguyên nằm trong giới hạn được đưa ra làm đối số cho hàm. Hàm sẽ trả về giá trị số nguyên hợp lệ cuối cùng được người dùng nhập vào.\n\nMột ví dụ về chức năng đang hoạt động:\n\n```python\nnumber = read_input(\"Please type in a number: \", 5, 10)\nprint(\"You typed in:\", number)\n```\n\n<sample-output>\n\nVui lòng nhập một số: **bảy**\nBạn phải nhập số nguyên từ 5 đến 10\nVui lòng nhập một số: **-3**\nBạn phải nhập số nguyên từ 5 đến 10\nVui lòng nhập một số: **8**\nBạn đã gõ vào: 8\n\n</sample-output>",
+  "starter_code": "number = read_input(\"Please type in a number: \", 5, 10)\nprint(\"You typed in:\", number)",
+  "grading_data_available": false,
+  "source_hash": "bc994a6b1f33f9826311d3dac9f06002c917ff01c806c19eea7a551b5e1b217a",
+  "order": 32
+}

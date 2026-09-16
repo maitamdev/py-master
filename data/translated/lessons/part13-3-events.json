@@ -1,0 +1,806 @@
+{
+  "id": "part13-3-events",
+  "part": 13,
+  "part_slug": "part-13",
+  "slug": "3-events",
+  "is_part_index": false,
+  "title_original": "Events",
+  "title_vi": "Sự kiện",
+  "path": "/part-13/3-events",
+  "source_path": "data/part-13/3-events.md",
+  "source_hash": "c10e79dd2d634aaa895f930b366099b19233180b8f080c99620aad0ed0fdd3c6",
+  "order": 1,
+  "blocks_count": 43,
+  "blocks": [
+    {
+      "id": "blk-part13-3-events-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "3e1652a6eb67a30dc085f323eebc040a8c1afd68fd1a06578c6410578571c70a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be familiar with pygame events\n- You will be able to write a program which reacts to key presses\n- You will be able to write a program which reacts to mouse events"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ quen thuộc với các sự kiện pygame\n- Bạn sẽ có thể viết chương trình phản ứng với các lần nhấn phím\n- Bạn sẽ có thể viết chương trình phản ứng với các sự kiện chuột"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "f42dcd41c0d95eb7de23c2475201f454c826114da3987252d203a24ddec3a7ad",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Thus far our main loops have only executed predetermined animations and reacted to only `pygame.QUIT` type events, even though the loop gets a list of all events from the operating system. Let's get to grips with some other types of events, then."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cho đến nay, các vòng lặp chính của chúng tôi chỉ thực thi các hoạt ảnh được xác định trước và chỉ phản ứng với các sự kiện loại `pygame.QUIT`, mặc dù vòng lặp có danh sách tất cả các sự kiện từ hệ điều hành. Sau đó, chúng ta hãy nắm bắt một số loại sự kiện khác."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0003",
+      "type": "heading",
+      "order": 3,
+      "source_hash": "c441acb8e087539867bc690c1a89d1a57eb60a88dcf5c9027d10894b2e99a251",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Handling events"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Xử lý sự kiện"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "bcda801825bf9c5e93c6570d397a4e64135b4572c2a49de498c6da2e2d29f67a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This program prints out information about all the events passed by the operating system to the pygame program, while it is running:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình này in ra thông tin về tất cả các sự kiện được hệ điều hành chuyển tới chương trình pygame trong khi nó đang chạy:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "380ff2d9fb34c21fe1c9ad79c5492710db018600317bc7530e7f8ec00cdb6bac",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nwhile True:\n    for event in pygame.event.get():\n        print(event)\n        if event.type == pygame.QUIT:\n            exit()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nwhile True:\n    for event in pygame.event.get():\n        print(event)\n        if event.type == pygame.QUIT:\n            exit()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "380ff2d9fb34c21fe1c9ad79c5492710db018600317bc7530e7f8ec00cdb6bac",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "549d2a555b6cbde47b0525aee6e7520cb63d239cfe45dd953f323f0c0329144f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's assume the program was left running for a while, and then the exit button was clicked. The program prints out the following info:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Giả sử chương trình đã chạy được một lúc và sau đó nhấp vào nút thoát. Chương trình in ra thông tin sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0007",
+      "type": "code",
+      "order": 7,
+      "source_hash": "2b691556c72fdfd373bc205d7395e995316deda1014b1357604090fe4e2d6b58",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "<Event(4-MouseMotion {'pos': (495, 274), 'rel': (495, 274), 'buttons': (0, 0, 0), 'window': None})>\n<Event(4-MouseMotion {'pos': (494, 274), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'window': None})>\n<Event(4-MouseMotion {'pos': (492, 274), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'window': None})>\n<Event(4-MouseMotion {'pos': (491, 274), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'window': None})>\n<Event(5-MouseButtonDown {'pos': (491, 274), 'button': 1, 'window': None})>\n<Event(6-MouseButtonUp {'pos': (491, 274), 'button': 1, 'window': None})>\n<Event(2-KeyDown {'unicode': 'a', 'key': 97, 'mod': 0, 'scancode': 38, 'window': None})>\n<Event(3-KeyUp {'key': 97, 'mod': 0, 'scancode': 38, 'window': None})>\n<Event(2-KeyDown {'unicode': 'b', 'key': 98, 'mod': 0, 'scancode': 56, 'window': None})>\n<Event(3-KeyUp {'key': 98, 'mod': 0, 'scancode': 56, 'window': None})>\n<Event(2-KeyDown {'unicode': 'c', 'key': 99, 'mod': 0, 'scancode': 54, 'window': None})>\n<Event(3-KeyUp {'key': 99, 'mod': 0, 'scancode': 54, 'window': None})>\n<Event(12-Quit {})>"
+      },
+      "translation": {
+        "language": "code",
+        "content": "<Event(4-MouseMotion {'pos': (495, 274), 'rel': (495, 274), 'buttons': (0, 0, 0), 'window': None})>\n<Event(4-MouseMotion {'pos': (494, 274), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'window': None})>\n<Event(4-MouseMotion {'pos': (492, 274), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'window': None})>\n<Event(4-MouseMotion {'pos': (491, 274), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'window': None})>\n<Event(5-MouseButtonDown {'pos': (491, 274), 'button': 1, 'window': None})>\n<Event(6-MouseButtonUp {'pos': (491, 274), 'button': 1, 'window': None})>\n<Event(2-KeyDown {'unicode': 'a', 'key': 97, 'mod': 0, 'scancode': 38, 'window': None})>\n<Event(3-KeyUp {'key': 97, 'mod': 0, 'scancode': 38, 'window': None})>\n<Event(2-KeyDown {'unicode': 'b', 'key': 98, 'mod': 0, 'scancode': 56, 'window': None})>\n<Event(3-KeyUp {'key': 98, 'mod': 0, 'scancode': 56, 'window': None})>\n<Event(2-KeyDown {'unicode': 'c', 'key': 99, 'mod': 0, 'scancode': 54, 'window': None})>\n<Event(3-KeyUp {'key': 99, 'mod': 0, 'scancode': 54, 'window': None})>\n<Event(12-Quit {})>"
+      },
+      "metadata": {
+        "language": "x",
+        "code_hash": "2b691556c72fdfd373bc205d7395e995316deda1014b1357604090fe4e2d6b58",
+        "length_lines": 13
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "dbd8a6b585ada8cf14c008ae8c1291e73429c1f9a62b34ebc2e13c85f7700f47",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The first few events concern mouse usage, ten there are some events from the keyboard, and finally the last event closes the program. Each event has at least a type, but they may also offer some other identifying info, such as the location of the mouse cursor or the key that was pressed."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một số sự kiện đầu tiên liên quan đến việc sử dụng chuột, mười sự kiện liên quan đến bàn phím và cuối cùng là sự kiện cuối cùng sẽ đóng chương trình. Mỗi sự kiện có ít nhất một loại nhưng chúng cũng có thể cung cấp một số thông tin nhận dạng khác, chẳng hạn như vị trí của con trỏ chuột hoặc phím được nhấn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "993038666f1d6b5650c64de2810427ec065cfaca35719c102272ba130eddd12f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You can look for event descriptions in the [pygame documentation](https://www.pygame.org/docs/ref/event.html), but it can sometimes be easier to print out events with the code above, and look for the event that occurs when something you want to react to happens."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn có thể tìm mô tả sự kiện trong [tài liệu pygame](https://www.pygame.org/docs/ref/event.html), nhưng đôi khi việc in ra các sự kiện với mã ở trên có thể dễ dàng hơn và tìm sự kiện xảy ra khi có điều gì đó bạn muốn phản ứng xảy ra."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0010",
+      "type": "heading",
+      "order": 10,
+      "source_hash": "99fe6c723ddf9e8328626b37640369ff3d02f21e00c812ba62ec4e632e582fc1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Keyboard events"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sự kiện bàn phím"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "dc89c115536c1df2ff79bd143a90908244847c08026dfea34613eea22abacb07",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This program can process events where the user presses the arrow key either to the right or to the left on their keyboard. The program prints out which key was pressed."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình này có thể xử lý các sự kiện trong đó người dùng nhấn phím mũi tên sang phải hoặc sang trái trên bàn phím của họ. Chương trình in ra phím nào được nhấn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0012",
+      "type": "code",
+      "order": 12,
+      "source_hash": "2412d01f30b28506aa53f0e14e4bc1f09da6c21b19dd3a1306602635f5bb3ce0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_LEFT:\n                print(\"left\")\n            if event.key == pygame.K_RIGHT:\n                print(\"right\")\n\n        if event.type == pygame.QUIT:\n            exit()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_LEFT:\n                print(\"left\")\n            if event.key == pygame.K_RIGHT:\n                print(\"right\")\n\n        if event.type == pygame.QUIT:\n            exit()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2412d01f30b28506aa53f0e14e4bc1f09da6c21b19dd3a1306602635f5bb3ce0",
+        "length_lines": 15
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "a8897dfad9053fbbae6237f8fce7a8cf3358fd54c21d6d5b01add6fdfb3d8bd6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The constants `pygame.K_LEFT` and `pygame.K_RIGHT` refer to the arrow keys to the left and right. The pgyame key constants for the different keys on a keyboard are listed in the [pygame documentation](https://www.pygame.org/docs/ref/key.html#key-constants-label)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các hằng số `pygame.K_LEFT` và `pygame.K_RIGHT` đề cập đến các phím mũi tên sang trái và phải. Các hằng số phím pgyame cho các phím khác nhau trên bàn phím được liệt kê trong [tài liệu pygame](https://www.pygame.org/docs/ref/key.html#key-constants-label)."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "15a1bb654d6344adde2ab146e7e11903ab4891d7ee900915a36279ca026d58ed",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "For example, if the user presses the arrow key to the right twice, then the left one once, and then the right one once more, the program prints out"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ: nếu người dùng nhấn phím mũi tên sang phải hai lần, sau đó nhấn phím mũi tên sang trái một lần, rồi nhấn phím mũi tên phải một lần nữa, chương trình sẽ in ra"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0015",
+      "type": "code",
+      "order": 15,
+      "source_hash": "ae786e773729afdfcb14b047647042ffe0fa53f8896b5de1ca0e8125c0d4355e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "right\nright\nleft\nright"
+      },
+      "translation": {
+        "language": "code",
+        "content": "right\nright\nleft\nright"
+      },
+      "metadata": {
+        "language": "x",
+        "code_hash": "ae786e773729afdfcb14b047647042ffe0fa53f8896b5de1ca0e8125c0d4355e",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "e5d4fa4aa52bc4190cee0c065a433495731dd18de68d6d135c7ba371ad8f8fad",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We now have all the tools needed to move a character, or _sprite_, on the screen to the right and left with the arrow keys. The following code will achieve this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bây giờ chúng ta có tất cả các công cụ cần thiết để di chuyển một ký tự, hoặc _sprite_, trên màn hình sang phải và trái bằng các phím mũi tên. Đoạn mã sau sẽ đạt được điều này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0017",
+      "type": "code",
+      "order": 17,
+      "source_hash": "19a75c0c6c9a842715f51a3f0c6d98fdee0516eca19ae124118c823c1a182e73",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\nx = 0\ny = 480-robot.get_height()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_LEFT:\n                x -= 10\n            if event.key == pygame.K_RIGHT:\n                x += 10\n\n        if event.type == pygame.QUIT:\n            exit()\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\nx = 0\ny = 480-robot.get_height()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_LEFT:\n                x -= 10\n            if event.key == pygame.K_RIGHT:\n                x += 10\n\n        if event.type == pygame.QUIT:\n            exit()\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "19a75c0c6c9a842715f51a3f0c6d98fdee0516eca19ae124118c823c1a182e73",
+        "length_lines": 23
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "04ffaec99b37ba4c3d839bde076bcf18e3881924fede1c0b0bded596cb921069",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Depending on how you use your arrow keys, running the program could look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tùy thuộc vào cách bạn sử dụng các phím mũi tên, việc chạy chương trình có thể trông như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0019",
+      "type": "image",
+      "order": 19,
+      "source_hash": "c5cd0c864a0efc0a4d6d0e736e9927b2ca960870e56f5e48a2796de054ff6324",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "pygame_move_robot.gif",
+        "alt": "",
+        "attributes": {
+          "src": "pygame_move_robot.gif"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "bda97bd93906ff4f4b9ab45d806f0cf4f55360b49c2d4fedb3caabae5d80f27c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the code above we have the variables `x` and `y` which contain the coordinate location for the sprite. The variable `y` is set so that the sprite appears at the bottom of the window. The `y` value does not change throughout the execution of the program. The `x` value, however, increases by 10 whenever the user presses the arrow key to the right, and decreases by 10 whenever the left arrow key is pressed."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong đoạn mã trên, chúng ta có các biến `x` và `y` chứa vị trí tọa độ của sprite. Biến `y` được đặt sao cho sprite xuất hiện ở cuối cửa sổ. Giá trị `y` không thay đổi trong suốt quá trình thực hiện chương trình. Tuy nhiên, giá trị `x` tăng thêm 10 bất cứ khi nào người dùng nhấn phím mũi tên sang phải và giảm 10 bất cứ khi nào nhấn phím mũi tên trái."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "c9458b16ffc6f6f2d1f7558fb5ca32be3529b68061a3a6501e815ccb407e5c8b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The program works otherwise quite well, but the key needs to be pressed again each time we want to move again. It would be better if the movement was continuous as the key was held down. The following program offfers this functionality:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mặt khác, chương trình hoạt động khá tốt, nhưng phím này cần được nhấn lại mỗi lần chúng ta muốn di chuyển lại. Sẽ tốt hơn nếu chuyển động được liên tục khi phím được giữ. Chương trình sau đây cung cấp hàm này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0022",
+      "type": "code",
+      "order": 22,
+      "source_hash": "12d173453682d64c2e7ea35f57a541d0994d18d259c1407a860c68b74d313390",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\nx = 0\ny = 480-robot.get_height()\n\nto_right = False\nto_left = False\n\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_LEFT:\n                to_left = True\n            if event.key == pygame.K_RIGHT:\n                to_right = True\n\n        if event.type == pygame.KEYUP:\n            if event.key == pygame.K_LEFT:\n                to_left = False\n            if event.key == pygame.K_RIGHT:\n                to_right = False\n\n        if event.type == pygame.QUIT:\n            exit()\n\n    if to_right:\n        x += 2\n    if to_left:\n        x -= 2\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()\n\n    clock.tick(60)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\nx = 0\ny = 480-robot.get_height()\n\nto_right = False\nto_left = False\n\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_LEFT:\n                to_left = True\n            if event.key == pygame.K_RIGHT:\n                to_right = True\n\n        if event.type == pygame.KEYUP:\n            if event.key == pygame.K_LEFT:\n                to_left = False\n            if event.key == pygame.K_RIGHT:\n                to_right = False\n\n        if event.type == pygame.QUIT:\n            exit()\n\n    if to_right:\n        x += 2\n    if to_left:\n        x -= 2\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (x, y))\n    pygame.display.flip()\n\n    clock.tick(60)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "12d173453682d64c2e7ea35f57a541d0994d18d259c1407a860c68b74d313390",
+        "length_lines": 41
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "ce0de9db1ffae53355910e98ae7f5a561155025c45231cfe8bf5bcc471d4c9e6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The code now contains the variables `to_right` and `to_left`. These contain knowledge of whether the sprite should be moving to the right or to the left at any given moment. When the user presses down an arrow key, the value stored in the relevant variable become `True`. When the key is released, the value changes to `False`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mã hiện chứa các biến `to_right` và `to_left`. Chúng chứa đựng kiến ​​thức về việc sprite nên di chuyển sang phải hay sang trái tại bất kỳ thời điểm nào. Khi người dùng nhấn phím mũi tên, giá trị được lưu trong biến liên quan sẽ trở thành `True`. Khi phím được nhả ra, giá trị sẽ thay đổi thành `False`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "63bebcbc3b11d3f2da22ce5cc5b7de28785e46a0b4b2477f842b6215fecdd727",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The clock is used to time the movements of the sprite, so that they potentially happen 60 times each second. If an arrow key is pressed, the sprite moves two pixels to the right or to the left. This means the sprite moves 120 pixels per second if the key is kept pressed down."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đồng hồ được sử dụng để tính thời gian cho các chuyển động của sprite, sao cho chúng có khả năng xảy ra 60 lần mỗi giây. Nếu nhấn phím mũi tên, sprite sẽ di chuyển hai pixel sang phải hoặc sang trái. Điều này có nghĩa là sprite sẽ di chuyển 120 pixel mỗi giây nếu nhấn giữ phím."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0025",
+      "type": "exercise",
+      "order": 25,
+      "source_hash": "7f1f8816d9c51ec335604f3f62e47aa45cd62afd6ca033bae5fd9d524ab89102",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program where the player can move a robot in four directions with the arrow keys on the keyboard. The end result should look like this:\n\n<img src=\"pygame_four_directions.gif\">"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình trong đó người chơi có thể di chuyển robot theo bốn hướng bằng các phím mũi tên trên bàn phím. Kết quả cuối cùng sẽ trông như thế này:\n\n<img src=\"pygame_four_directions.gif\">"
+      },
+      "metadata": {
+        "exercise_id": "ex-part13-11_four_directions",
+        "exercise_type": "programming-exercise",
+        "name": "Four directions",
+        "tmc_name": "part13-11_four_directions",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0026",
+      "type": "exercise",
+      "order": 26,
+      "source_hash": "4e6a41590e09bb3a0c9a298b37d44c278ff8141df8b933d52aa6ea6c122290d3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please improve the program in the previous exercise so that the robot cannot pass outside the window in any of the four directions. The end result should look like this:\n\n<img src=\"pygame_four_walls.gif\">"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy cải tiến chương trình ở bài tập trước để robot không thể đi ra ngoài cửa sổ theo bất kỳ hướng nào trong bốn hướng. Kết quả cuối cùng sẽ trông như thế này:\n\n<img src=\"pygame_four_walls.gif\">"
+      },
+      "metadata": {
+        "exercise_id": "ex-part13-12_four_walls",
+        "exercise_type": "programming-exercise",
+        "name": "Four walls",
+        "tmc_name": "part13-12_four_walls",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0027",
+      "type": "exercise",
+      "order": 27,
+      "source_hash": "ff2b307eb8a0273c16ff043f308799afc6ab6efe17ba59700c9f2fb7714ee0e2",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program where two players each direct their own robot. One of the players should use the arrow keys while the other could use, for example, the w-s-a-d keys. The end result should look like this:\n\n<img src=\"pygame_two_players.gif\">"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một chương trình trong đó hai người chơi điều khiển robot của mình. Một trong những người chơi nên sử dụng các phím mũi tên trong khi người còn lại có thể sử dụng, chẳng hạn như các phím w-s-a-d. Kết quả cuối cùng sẽ trông như thế này:\n\n<img src=\"pygame_two_players.gif\">"
+      },
+      "metadata": {
+        "exercise_id": "ex-part13-13_two_players",
+        "exercise_type": "programming-exercise",
+        "name": "Two players",
+        "tmc_name": "part13-13_two_players",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0028",
+      "type": "heading",
+      "order": 28,
+      "source_hash": "0fe38dd31c0f506fad41c8f6ecd4253b600fb1bab932662fbf8cc14c44c4f0d6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Mouse events"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sự kiện chuột"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "f59bc77b37c2d559bfe33d760eb084e20a328d546ba4a42add4fa008277e6544",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following code reacts to events where a mouse button is pressed down while the cursor is within the window area:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đoạn mã sau phản ứng với các sự kiện trong đó nút chuột được nhấn xuống trong khi con trỏ ở trong khu vực cửa sổ:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0030",
+      "type": "code",
+      "order": 30,
+      "source_hash": "7a94052e1f7a6cc91b1307dd8bc21b6f94432f2961dd00580642ccbeec3b6f63",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.MOUSEBUTTONDOWN:\n            print(\"you pressed the button number\", event.button, \"at location\", event.pos)\n\n        if event.type == pygame.QUIT:\n            exit()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.MOUSEBUTTONDOWN:\n            print(\"you pressed the button number\", event.button, \"at location\", event.pos)\n\n        if event.type == pygame.QUIT:\n            exit()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "7a94052e1f7a6cc91b1307dd8bc21b6f94432f2961dd00580642ccbeec3b6f63",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "3745c954da8fc21a9a3fe0bc185f913355960449710235b2ae4847fb48e31d10",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The execution of this program should look more or less like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Việc thực thi chương trình này sẽ giống như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0032",
+      "type": "code",
+      "order": 32,
+      "source_hash": "ca7a6c6f24f28c4d20159d5bdbdccfea7df54518f1cd57400ce89240f6298376",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "you pressed the button number 1 at location (82, 135)\nyou pressed the button number 1 at location (369, 135)\nyou pressed the button number 1 at location (269, 297)\nyou pressed the button number 3 at location (515, 324)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "you pressed the button number 1 at location (82, 135)\nyou pressed the button number 1 at location (369, 135)\nyou pressed the button number 1 at location (269, 297)\nyou pressed the button number 3 at location (515, 324)"
+      },
+      "metadata": {
+        "language": "x",
+        "code_hash": "ca7a6c6f24f28c4d20159d5bdbdccfea7df54518f1cd57400ce89240f6298376",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "2ab60000381709cfe63d2d5fcb3cc46bc4b861a99a054c6f0320b7b8d100f564",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Button number 1 refers to the left mouse button and button number 3 refers to the right mouse button."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nút số 1 dùng để chỉ nút chuột trái và nút số 3 dùng để chỉ nút chuột phải."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "38798ef430a275d04d0ca1ba60f2080d2a35a6744484c4e21fee07efc7ea143f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This next program combines mouse event handling and drawing an image on the screen. When the user presses a mouse button while the mouse cursor is within the bounds of the window, an image of a robot is drawn at that location."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình tiếp theo này kết hợp xử lý sự kiện chuột và vẽ hình ảnh trên màn hình. Khi người dùng nhấn nút chuột trong khi con trỏ chuột nằm trong giới hạn của cửa sổ, hình ảnh robot sẽ được vẽ tại vị trí đó."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0035",
+      "type": "code",
+      "order": 35,
+      "source_hash": "5d0abc1a748b0edac0ceb3ad4f30ecd6d4e75dd37078bc938bb4b81329616a7e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.MOUSEBUTTONDOWN:\n            x = event.pos[0]-robot.get_width()/2\n            y = event.pos[1]-robot.get_height()/2\n\n            window.fill((0, 0, 0))\n            window.blit(robot, (x, y))\n            pygame.display.flip()\n\n        if event.type == pygame.QUIT:\n            exit()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.MOUSEBUTTONDOWN:\n            x = event.pos[0]-robot.get_width()/2\n            y = event.pos[1]-robot.get_height()/2\n\n            window.fill((0, 0, 0))\n            window.blit(robot, (x, y))\n            pygame.display.flip()\n\n        if event.type == pygame.QUIT:\n            exit()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5d0abc1a748b0edac0ceb3ad4f30ecd6d4e75dd37078bc938bb4b81329616a7e",
+        "length_lines": 19
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "ccd0c86289adc7742fe2936bd614d7e91a69ebf123c65a1d5208225a1f19066a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The execution of the program could look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Việc thực hiện chương trình có thể trông như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0037",
+      "type": "image",
+      "order": 37,
+      "source_hash": "116808faaada2a34f71bb1126a56e14656ec5f94062e5d850b932767c15590ca",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "pygame_cursor.gif",
+        "alt": "",
+        "attributes": {
+          "src": "pygame_cursor.gif"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "119e4c05a502b3051b127642cf83256fbeb5d2fe23bb37d9597e6adb34f47316",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following program contains an animation where the robot sprite follows the mouse cursor.The location of the sprite is stored in the variables `robot_x` and `robot_y`. When the mouse moves, its location is stored in the variables `target_x` ja `target_y`. If the robot is not at this location, it moves to the approproate direction."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình sau đây chứa hoạt ảnh trong đó hình người máy di chuyển theo con trỏ chuột. Vị trí của hình người máy được lưu trữ trong các biến `robot_x` và `robot_y`. Khi chuột di chuyển, vị trí của nó được lưu trong các biến `target_x` và `target_y`. Nếu robot không ở vị trí này, nó sẽ di chuyển đến hướng thích hợp."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0039",
+      "type": "code",
+      "order": 39,
+      "source_hash": "0c60c3f79225baedaee7c6b611f746a4f01e36c446b607c1a64897cca1caf5ea",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nrobot_x = 0\nrobot_y = 0\ntarget_x = 0\ntarget_y = 0\n\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.MOUSEMOTION:\n            target_x = event.pos[0]-robot.get_width()/2\n            target_y = event.pos[1]-robot.get_height()/2\n\n        if event.type == pygame.QUIT:\n            exit(0)\n\n    if robot_x > target_x:\n        robot_x -= 1\n    if robot_x < target_x:\n        robot_x += 1\n    if robot_y > target_y:\n        robot_y -= 1\n    if robot_y < target_y:\n        robot_y += 1\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (robot_x, robot_y))\n    pygame.display.flip()\n\n    clock.tick(60)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nrobot_x = 0\nrobot_y = 0\ntarget_x = 0\ntarget_y = 0\n\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.MOUSEMOTION:\n            target_x = event.pos[0]-robot.get_width()/2\n            target_y = event.pos[1]-robot.get_height()/2\n\n        if event.type == pygame.QUIT:\n            exit(0)\n\n    if robot_x > target_x:\n        robot_x -= 1\n    if robot_x < target_x:\n        robot_x += 1\n    if robot_y > target_y:\n        robot_y -= 1\n    if robot_y < target_y:\n        robot_y += 1\n\n    window.fill((0, 0, 0))\n    window.blit(robot, (robot_x, robot_y))\n    pygame.display.flip()\n\n    clock.tick(60)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "0c60c3f79225baedaee7c6b611f746a4f01e36c446b607c1a64897cca1caf5ea",
+        "length_lines": 37
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "d028cb1f316c5b1aa8201eb937717f6f89a00ae8673d2882bb9ad49ced775036",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The program's execution should look more or less like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Quá trình thực thi chương trình sẽ giống như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-3-events-0041",
+      "type": "image",
+      "order": 41,
+      "source_hash": "e961e9cf03bb63c8e293cb6f123206faf9fa3c0b5c7f8623febabf06c725bf84",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "pygame_cursor2.gif",
+        "alt": "",
+        "attributes": {
+          "src": "pygame_cursor2.gif"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0042",
+      "type": "exercise",
+      "order": 42,
+      "source_hash": "519990415dadccabb30197775b88ad2cd30a99988ed5dffab486113fab4f9b0e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program where the robot follows the mouse cursor so that the centre of the robot is always directly at the mouse cursor. The end result should look like this:\n\n<img src=\"pygame_robot_cursor.gif\">"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình robot di chuyển theo con trỏ chuột sao cho tâm của robot luôn nằm ngay tại con trỏ chuột. Kết quả cuối cùng sẽ trông như thế này:\n\n<img src=\"pygame_robot_cursor.gif\">"
+      },
+      "metadata": {
+        "exercise_id": "ex-part13-14_robot_and_mouse",
+        "exercise_type": "programming-exercise",
+        "name": "Robot and mouse",
+        "tmc_name": "part13-14_robot_and_mouse",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part13-3-events-0043",
+      "type": "exercise",
+      "order": 43,
+      "source_hash": "92cf3bfb78b0568705d4f17b72ace895b6ddfe952e2349bc0758efe32c4892f4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program where the robot appears at a random location within the window. When the player clicks on the robot with the mouse, the robot moves to a new location. The end result should look like this:\n\n<img src=\"pygame_robot_location.gif\">"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình robot xuất hiện ở một vị trí ngẫu nhiên trong cửa sổ. Khi người chơi nhấp chuột vào robot, robot sẽ di chuyển đến vị trí mới. Kết quả cuối cùng sẽ trông như thế này:\n\n<img src=\"pygame_robot_location.gif\">"
+      },
+      "metadata": {
+        "exercise_id": "ex-part13-15_robot_location",
+        "exercise_type": "programming-exercise",
+        "name": "The location of the robot",
+        "tmc_name": "part13-15_robot_location",
+        "height": null
+      }
+    }
+  ]
+}

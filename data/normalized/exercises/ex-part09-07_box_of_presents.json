@@ -1,0 +1,16 @@
+{
+  "id": "ex-part09-07_box_of_presents",
+  "lesson_id": "part09-2-objects-as-attributes",
+  "part": 9,
+  "tmc_name": "part09-07_box_of_presents",
+  "title_original": "A box of presents",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "In this exercise you will practice wrapping presents. You will write two classes: `Present` and `Box`. A present has a name and a weight, and a box contains presents.\n\n## The Present class\n\nPlease define the class `Present` which can be used to represent different kinds of presents. The class definition should contain attributes for the name and the weight (in kg) of the present. Instances of the class should work as follows:\n\n```python\nbook = Present(\"ABC Book\", 2)\n\nprint(\"The name of the present:\", book.name)\nprint(\"The weight of the present:\", book.weight)\nprint(\"Present:\", book)\n```\n\nThis should print out\n\n<sample-output>\n\nThe name of the present: ABC Book\nThe weight of the present: 2\nPresent: ABC Book (2 kg)\n\n</sample-output>\n\n## The Box class\n\nPlease define the class `Box`. You should be able to add presents to the box, and the box should keep track of the combined weight of the presents within. The class definition should contain these methods:\n\n- `add_present(self, present: Present)` which adds the present given as an argument to the box. The method has no return value.\n- `total_weight(self)` which returns the combined weight of the presents in the box.\n\nYou may use the following code to test your class:\n\n```python\nbook = Present(\"ABC Book\", 2)\n\nbox = Box()\nbox.add_present(book)\nprint(box.total_weight())\n\ncd = Present(\"Pink Floyd: Dark Side of the Moon\", 1)\nbox.add_present(cd)\nprint(box.total_weight())\n```\n\n<sample-output>\n\n2\n3\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "book = Present(\"ABC Book\", 2)\n\nprint(\"The name of the present:\", book.name)\nprint(\"The weight of the present:\", book.weight)\nprint(\"Present:\", book)",
+  "grading_data_available": false,
+  "source_hash": "fef961e8cbc243069dcd7b897e24c0e1c53268b340c3e035e000346743bdb9fd",
+  "order": 33
+}

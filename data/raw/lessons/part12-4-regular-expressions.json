@@ -1,0 +1,289 @@
+{
+  "id": "part12-4-regular-expressions",
+  "part": 12,
+  "part_slug": "part-12",
+  "slug": "4-regular-expressions",
+  "is_part_index": false,
+  "title_original": "Regular expressions",
+  "path": "/part-12/4-regular-expressions",
+  "source_path": "data/part-12/4-regular-expressions.md",
+  "source_hash": "6b7aff35d6b24e19c664d718a453f18785fc72ad0b726db7a6654ee2d8ff9fbe",
+  "frontmatter": {
+    "path": "/part-12/4-regular-expressions",
+    "title": "Regular expressions",
+    "hidden": false
+  },
+  "chunks_count": 45,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know what regular expressions are\n- You will be able to use regular expressions in your own programs",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know what regular expressions are\n- You will be able to use regular expressions in your own programs\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We have already established that Python is an excellent environment for processing text. One additional powerful tool for text processing is _regular expressions_, often shortened as _regex_ or _regexp_. They are a way of selecting and searching for strings which follow a certain pattern. This section introduces you to the basics of regular expression, but you will find much more information online, including in the Python [tutorial](https://docs.python.org/3/howto/regex.html).",
+      "raw_source": "We have already established that Python is an excellent environment for processing text. One additional powerful tool for text processing is _regular expressions_, often shortened as _regex_ or _regexp_. They are a way of selecting and searching for strings which follow a certain pattern. This section introduces you to the basics of regular expression, but you will find much more information online, including in the Python [tutorial](https://docs.python.org/3/howto/regex.html)."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "What are regular expressions?",
+      "raw_source": "## What are regular expressions?"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Regular expressions are not just a Python feature. They represent, in a way, a programming language within a programming language. They are, to an extent, compatible across many different programming languages. Regular expressions have their own specific syntax. The idea is to define a collection of strings which follow certain rules.",
+      "raw_source": "Regular expressions are not just a Python feature. They represent, in a way, a programming language within a programming language. They are, to an extent, compatible across many different programming languages. Regular expressions have their own specific syntax. The idea is to define a collection of strings which follow certain rules."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's begin with a simple example, before diving deeper into the syntax:",
+      "raw_source": "Let's begin with a simple example, before diving deeper into the syntax:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import re\n\nwords = [\"Python\", \"Pantone\", \"Pontoon\", \"Pollute\", \"Pantheon\"]\n\nfor word in words:\n    # the string should begin with \"P\" and end with \"on\"\n    if re.search(\"^P.*on$\", word):\n        print(word, \"found!\")",
+      "raw_source": "```python\nimport re\n\nwords = [\"Python\", \"Pantone\", \"Pontoon\", \"Pollute\", \"Pantheon\"]\n\nfor word in words:\n    # the string should begin with \"P\" and end with \"on\"\n    if re.search(\"^P.*on$\", word):\n        print(word, \"found!\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Python found!\nPontoon found!\nPantheon found!",
+      "raw_source": "<sample-output>\n\nPython found!\nPontoon found!\nPantheon found!\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We need to `import` the `re` module in order to use regular expressions in Python. The `re` module contains many functions for working with regular expressions. In the example above, the `search` function takes two string arguments: the pattern string, and the target string where the pattern is looked for.",
+      "raw_source": "We need to `import` the `re` module in order to use regular expressions in Python. The `re` module contains many functions for working with regular expressions. In the example above, the `search` function takes two string arguments: the pattern string, and the target string where the pattern is looked for."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This second example looks for any numbers in a string. The `findall` function returns a list of all the instances which match the pattern:",
+      "raw_source": "This second example looks for any numbers in a string. The `findall` function returns a list of all the instances which match the pattern:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import re\n\nsentence = \"First, 2 !#third 44 five 678xyz962\"\n\nnumbers = re.findall(\"\\d+\", sentence)\n\nfor number in numbers:\n    print(number)",
+      "raw_source": "```python\nimport re\n\nsentence = \"First, 2 !#third 44 five 678xyz962\"\n\nnumbers = re.findall(\"\\d+\", sentence)\n\nfor number in numbers:\n    print(number)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "2\n44\n678\n962",
+      "raw_source": "<sample-output>\n\n2\n44\n678\n962\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "The syntax of regular expressions",
+      "raw_source": "## The syntax of regular expressions"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's get familiar with the basic syntax of regular expressions. Most of the following examples make use of this testing program:",
+      "raw_source": "Let's get familiar with the basic syntax of regular expressions. Most of the following examples make use of this testing program:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import re\n\nexpression = input(\"Please type in an expression: \")\n\nwhile True:\n    input_string = input(\"Please type in a string: \")\n    if input_string == \"\":\n        break\n    if re.search(expression, input_string):\n        print(\"Found!\")\n    else:\n        print(\"Not found.\")",
+      "raw_source": "```python\nimport re\n\nexpression = input(\"Please type in an expression: \")\n\nwhile True:\n    input_string = input(\"Please type in a string: \")\n    if input_string == \"\":\n        break\n    if re.search(expression, input_string):\n        print(\"Found!\")\n    else:\n        print(\"Not found.\")\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 3,
+      "content": "Alternate substrings",
+      "raw_source": "### Alternate substrings"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The vertical bar `|`, also called the pipe character, allows you to match alternate substrings. Its significance is thus _or_. For example, the expression `911|112` matches strings which include either the substring `911` or the substring `112`.",
+      "raw_source": "The vertical bar `|`, also called the pipe character, allows you to match alternate substrings. Its significance is thus _or_. For example, the expression `911|112` matches strings which include either the substring `911` or the substring `112`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "An example with the testing program:",
+      "raw_source": "An example with the testing program:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in an expression: **aa|ee|ii**\nPlease type in a string: **aardvark**\nFound!\nPlease type in a string: **feelings**\nFound!\nPlease type in a string: **radii**\nFound!\nPlease type in a string: **smooch**\nNot found.\nPlease type in a string: **continuum**\nNot found.",
+      "raw_source": "<sample-output>\n\nPlease type in an expression: **aa|ee|ii**\nPlease type in a string: **aardvark**\nFound!\nPlease type in a string: **feelings**\nFound!\nPlease type in a string: **radii**\nFound!\nPlease type in a string: **smooch**\nNot found.\nPlease type in a string: **continuum**\nNot found.\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 3,
+      "content": "Groups of characters",
+      "raw_source": "### Groups of characters"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Square brackets are used to signify groups of accepted characters. For example, the expression `[aeio]` would match all strings which contain any of the characters a, e, i, or o.",
+      "raw_source": "Square brackets are used to signify groups of accepted characters. For example, the expression `[aeio]` would match all strings which contain any of the characters a, e, i, or o."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A dash is also allowed for matching ranges of characters. For example, the expression `[0-68a-d]` would match all strings which contain a digit between 0 and 6, or an eight, or a character between a and d. In this notation all ranges are _inclusive_.",
+      "raw_source": "A dash is also allowed for matching ranges of characters. For example, the expression `[0-68a-d]` would match all strings which contain a digit between 0 and 6, or an eight, or a character between a and d. In this notation all ranges are _inclusive_."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Combining two sets of brackets lets you match two consecutive characters. For example, the expression `[1-3][0-9]` would match any two digit number between 10 and 39, inclusive.",
+      "raw_source": "Combining two sets of brackets lets you match two consecutive characters. For example, the expression `[1-3][0-9]` would match any two digit number between 10 and 39, inclusive."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "An example with the testing program:",
+      "raw_source": "An example with the testing program:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in an expression: **[C-FRSO]**\nPlease type in a string: **C**\nFound!\nPlease type in a string: **E**\nFound!\nPlease type in a string: **G**\nNot found.\nPlease type in a string: **R**\nFound!\nPlease type in a string: **O**\nFound!\nPlease type in a string: **T**\nNot found.",
+      "raw_source": "<sample-output>\n\nPlease type in an expression: **[C-FRSO]**\nPlease type in a string: **C**\nFound!\nPlease type in a string: **E**\nFound!\nPlease type in a string: **G**\nNot found.\nPlease type in a string: **R**\nFound!\nPlease type in a string: **O**\nFound!\nPlease type in a string: **T**\nNot found.\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 3,
+      "content": "Repeated matches",
+      "raw_source": "### Repeated matches"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Any part of an expression can be repeated with the following operators:",
+      "raw_source": "Any part of an expression can be repeated with the following operators:"
+    },
+    {
+      "raw_type": "list",
+      "content": "* `*` repeats for any number of times, including zero\n* `+` repeats for any number of times, but at least once\n* `{m}` repeats for exactly `m` times",
+      "raw_source": "* `*` repeats for any number of times, including zero\n* `+` repeats for any number of times, but at least once\n* `{m}` repeats for exactly `m` times"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "These operators work on the part of the expression immediately preceding the operator. For example, the expression `ba+b` would match the substrings `bab`, `baab` and `baaaaaaaaaaab`, among others. The expression `A[BCDE]*Z` would match the substrings `AZ`, `ADZ` or `ABCDEBCDEBCDEZ`, among others.",
+      "raw_source": "These operators work on the part of the expression immediately preceding the operator. For example, the expression `ba+b` would match the substrings `bab`, `baab` and `baaaaaaaaaaab`, among others. The expression `A[BCDE]*Z` would match the substrings `AZ`, `ADZ` or `ABCDEBCDEBCDEZ`, among others."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "An example with the testing program:",
+      "raw_source": "An example with the testing program:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in an expression: **1[234]\\*5**\nPlease type in a string: **15**\nFound!\nPlease type in a string: **125**\nFound!\nPlease type in a string: **145**\nFound!\nPlease type in a string: **12342345**\nFound!\nPlease type in a string: **126**\nNot found.\nPlease type in a string: **165**\nNot found.",
+      "raw_source": "<sample-output>\n\nPlease type in an expression: **1[234]\\*5**\nPlease type in a string: **15**\nFound!\nPlease type in a string: **125**\nFound!\nPlease type in a string: **145**\nFound!\nPlease type in a string: **12342345**\nFound!\nPlease type in a string: **126**\nNot found.\nPlease type in a string: **165**\nNot found.\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 3,
+      "content": "Other special characters",
+      "raw_source": "### Other special characters"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A dot is a wildcard character which can match any single character. For example, the expression `c...o` would match any five character substring beginning with a `c` and ending with an `o`, such as `c-3po` or `cello`.",
+      "raw_source": "A dot is a wildcard character which can match any single character. For example, the expression `c...o` would match any five character substring beginning with a `c` and ending with an `o`, such as `c-3po` or `cello`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `^` character specifies that the match must be at the beginning of the string, and `$` specifies that the match must be at the end of the string. These can also be used to exclude from the matches any other characters than those specified:",
+      "raw_source": "The `^` character specifies that the match must be at the beginning of the string, and `$` specifies that the match must be at the end of the string. These can also be used to exclude from the matches any other characters than those specified:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in an expression: **\\^[123]\\*$**\nPlease type in a string: **4**\nNot found.\nPlease type in a string: **1221**\nFound!\nPlease type in a string: **333333333**\nFound!",
+      "raw_source": "<sample-output>\n\nPlease type in an expression: **\\^[123]\\*$**\nPlease type in a string: **4**\nNot found.\nPlease type in a string: **1221**\nFound!\nPlease type in a string: **333333333**\nFound!\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Sometimes you need to match for the special characters reserved for regular expression syntax. The backslash `\\` can be used to _escape_ special characters. So, the expression `1+` matches one or more numbers `1`, but the expression `1\\+` matches the string `1+`.",
+      "raw_source": "Sometimes you need to match for the special characters reserved for regular expression syntax. The backslash `\\` can be used to _escape_ special characters. So, the expression `1+` matches one or more numbers `1`, but the expression `1\\+` matches the string `1+`."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in an expression: **^\\\\\\***\nPlease type in a string: **moi\\***\nNot found.\nPlease type in a string: **m\\*o\\*i**\nNot found.\nPlease type in a string: **\\*moi**\nFound!",
+      "raw_source": "<sample-output>\n\nPlease type in an expression: **^\\\\\\***\nPlease type in a string: **moi\\***\nNot found.\nPlease type in a string: **m\\*o\\*i**\nNot found.\nPlease type in a string: **\\*moi**\nFound!\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Round brackets can be used to group together different parts of the expression. For example, the expression `(ab)+c` would match the substrings `abc`, `ababc` and `ababababababc`, but not the strings `ac` or `bc`, as the entire substring `ab` would have to appear at least once.",
+      "raw_source": "Round brackets can be used to group together different parts of the expression. For example, the expression `(ab)+c` would match the substrings `abc`, `ababc` and `ababababababc`, but not the strings `ac` or `bc`, as the entire substring `ab` would have to appear at least once."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in an expression: **^(jabba).\\*(hut)$**\nPlease type in a string: **jabba the hut**\nFound!\nPlease type in a string: **jabba a hut**\nFound!\nPlease type in a string: **jarjar the hut**\nNot found.\nPlease type in a string: **jabba the smut**\nNot found.",
+      "raw_source": "<sample-output>\n\nPlease type in an expression: **^(jabba).\\*(hut)$**\nPlease type in a string: **jabba the hut**\nFound!\nPlease type in a string: **jabba a hut**\nFound!\nPlease type in a string: **jarjar the hut**\nNot found.\nPlease type in a string: **jabba the smut**\nNot found.\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Regular expressions",
+        "tmcname": "part12-14_regular_expressions"
+      },
+      "inner_content": "Here are some exercises for familiarizing yourself with regular expression syntax.\n\n## Days of the week\n\nUsing a regular expression, please write a function named `is_dotw(my_string: str)`. The function should return `True` if the string passed as an argument contains an abbreviation for a day of the week (Mon, Tue, Wed, Thu, Fri, Sat, Sun).\n\nSome examples of how the function should work:\n\n```python\nprint(is_dotw(\"Mon\"))\nprint(is_dotw(\"Fri\"))\nprint(is_dotw(\"Tui\"))\n```\n\n<sample-output>\n\nTrue\nTrue\nFalse\n\n</sample-output>\n\n## Check for vowels\n\nPlease write a function named `all_vowels(my_string: str)` which uses a regular expression to check whether all characters in the given string are vowels.\n\nSome examples of how the function should work:\n\n```python\nprint(all_vowels(\"eioueioieoieou\"))\nprint(all_vowels(\"autoooo\"))\n```\n\n<sample-output>\n\nTrue\nFalse\n\n</sample-output>\n\n## Time of day\n\nPlease write a function named `time_of_day(my_string: str)` which uses a regular expression to check whether a string in the format `XX:YY:ZZ` is a valid time in the 24-hour format, with two digits each for hours, minutes and seconds.\n\nSome examples of how the function should work:\n\n```python\nprint(time_of_day(\"12:43:01\"))\nprint(time_of_day(\"AB:01:CD\"))\nprint(time_of_day(\"17:59:59\"))\nprint(time_of_day(\"33:66:77\"))\n```\n\n<sample-output>\n\nTrue\nFalse\nTrue\nFalse\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Regular expressions' tmcname='part12-14_regular_expressions'>\n\nHere are some exercises for familiarizing yourself with regular expression syntax.\n\n## Days of the week\n\nUsing a regular expression, please write a function named `is_dotw(my_string: str)`. The function should return `True` if the string passed as an argument contains an abbreviation for a day of the week (Mon, Tue, Wed, Thu, Fri, Sat, Sun).\n\nSome examples of how the function should work:\n\n```python\nprint(is_dotw(\"Mon\"))\nprint(is_dotw(\"Fri\"))\nprint(is_dotw(\"Tui\"))\n```\n\n<sample-output>\n\nTrue\nTrue\nFalse\n\n</sample-output>\n\n## Check for vowels\n\nPlease write a function named `all_vowels(my_string: str)` which uses a regular expression to check whether all characters in the given string are vowels.\n\nSome examples of how the function should work:\n\n```python\nprint(all_vowels(\"eioueioieoieou\"))\nprint(all_vowels(\"autoooo\"))\n```\n\n<sample-output>\n\nTrue\nFalse\n\n</sample-output>\n\n## Time of day\n\nPlease write a function named `time_of_day(my_string: str)` which uses a regular expression to check whether a string in the format `XX:YY:ZZ` is a valid time in the 24-hour format, with two digits each for hours, minutes and seconds.\n\nSome examples of how the function should work:\n\n```python\nprint(time_of_day(\"12:43:01\"))\nprint(time_of_day(\"AB:01:CD\"))\nprint(time_of_day(\"17:59:59\"))\nprint(time_of_day(\"33:66:77\"))\n```\n\n<sample-output>\n\nTrue\nFalse\nTrue\nFalse\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Grand finale",
+      "raw_source": "## Grand finale"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "To finish off this part of the material, let's work some more on objects and classes by building a slightly more extensive program. This exercise does not necessarily involve regular expressions, but the sections on [functions as arguments](/part-12/1-functions-as-arguments) and [list comprehensions](/part-11/1-list-comprehensions) will likely be useful.",
+      "raw_source": "To finish off this part of the material, let's work some more on objects and classes by building a slightly more extensive program. This exercise does not necessarily involve regular expressions, but the sections on [functions as arguments](/part-12/1-functions-as-arguments) and [list comprehensions](/part-11/1-list-comprehensions) will likely be useful."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You may also find the example set in [part 10](/part-10/4-application-development) helpful.",
+      "raw_source": "You may also find the example set in [part 10](/part-10/4-application-development) helpful."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Hockey statistics",
+        "tmcname": "part12-15_hockey_statistics"
+      },
+      "inner_content": "In this exercise you will build an application for examining hockey league statistics from the NHL in a couple of different ways.\n\nThe exercise template contains two JSON files: `partial.json` and `all.json`. The first of these is mostly meant for testing. The latter contains a lot of data, as all the NHL player stats for the 2019-20 season are included in the file.\n\nThe entry for a single player is in the following format:\n\n```json\n{\n    \"name\": \"Patrik Laine\",\n    \"nationality\": \"FIN\",\n    \"assists\": 35,\n    \"goals\": 28,\n    \"penalties\": 22,\n    \"team\": \"WPG\",\n    \"games\": 68\n}\n```\n\nBoth files contain a list of entries in the above format.\n\nIf you need a refresher on handling JSON files, please take a look at [part 7 of this course material](/part-7/4-data-processing#reading-json-files).\n\n## Search and list\n\nPlease write an interactive application which first asks for the name of the file, and then offers the following functions:\n\n- search by name for a single player's stats\n- list all the abbreviations for team names in alphabetical order\n- list all the abbreviations for countries in alphabetical order\n\nThese functionalities grant you one exercise point. Your application should now work as follows:\n\n<sample-output>\n\nfile name: **partial.json**\nread the data of 14 players\n\ncommands:\n0 quit\n1 search for player\n2 teams\n3 countries\n4 players in team\n5 players from country\n6 most points\n7 most goals\n\ncommand: **1**\nname: **Travis Zajac**\n<pre>\nTravis Zajac         NJD   9 + 16 =  25\n</pre>\n\ncommand: **2**\nBUF\nCGY\nDAL\nNJD\nNYI\nOTT\nPIT\nWPG\nWSH\n\ncommand: **3**\nCAN\nCHE\nCZE\nSWE\nUSA\n\ncommand: **0**\n\n</sample-output>\n\nNB: the printout format for a player must be exactly as follows:\n\n<sample-output>\n\n<pre>\nLeon Draisaitl       EDM  43 + 67 = 110\nConnor McDavid       EDM  34 + 63 =  97\nTravis Zajac         NJD   9 + 16 =  25\nMike Green           EDM   3 +  8 =  11\nMarkus Granlund      EDM   3 +  1 =   4\n123456789012345678901234567890123456789\n</pre>\n\n</sample-output>\n\nThe last line in the sample above is there to help you calculate the widths of the different fields in the output; you should not print the numbers line yourself in your final submission. \n\nThe abbreviation for the team is printed from the 22nd character onwards. The `+` sign is the 30th character and the `=` sign is the 35th character. All the fields should be justified to the right edge. All whitespace is space characters.\n\nF-strings are probably the easiest way to achieve the required printout. The process is similar to [this exercise](/part-6/1-reading-files#programming-exercise-course-grading-part-3) from part 6.\n\n## List players by points\n\nThese two functionalities will grant you a second exercise point:\n\n- list players in a specific team in the order of points scored, from highest to lowest. Points equals _goals_ + _assists_\n- list players from a specific country in the order of points scored, from highest to lowest\n\nYour application should now work as follows:\n\n<sample-output>\n\nfile name: **partial.json**\nread the data of 14 players\n\ncommands:\n0 quit\n1 search for player\n2 teams\n3 countries\n4 players in team\n5 players from country\n6 most points\n7 most goals\n\ncommand: **4**\nteam: **OTT**\n<pre>\nDrake Batherson      OTT   3 +  7 =  10\nJonathan Davidsson   OTT   0 +  1 =   1\n</pre>\n\ncommand: **5**\ncountry: **CAN**\n<pre>\nJared McCann         PIT  14 + 21 =  35\nTravis Zajac         NJD   9 + 16 =  25\nTaylor Fedun         DAL   2 +  7 =   9\nMark Jankowski       CGY   5 +  2 =   7\nLogan Shaw           WPG   3 +  2 =   5\n</pre>\n\ncommand: **0**\n\n</sample-output>\n\n## Most successful players\n\nThese two functionalities will grant you a third exercise point:\n\n- list of `n` players who've scored the most points\n  - if two players have the same score, whoever has scored the higher number of goals comes first\n- list of `n` players who've scored the most goals\n  - if two players have the same number of goals, whoever has played the lower number of games comes first\n\nYour application should now work as follows:\n\n<sample-output>\n\nfile name: **partial.json**\nread the data of 14 players\n\ncommands:\n0 quit\n1 search for player\n2 teams\n3 countries\n4 players in team\n5 players from country\n6 most points\n7 most goals\n\ncommand: **6**\nhow many: **2**\n<pre>\nJakub Vrana          WSH  25 + 27 =  52\nJared McCann         PIT  14 + 21 =  35\n</pre>\n\ncommand: **6**\nhow many: **5**\n\n<pre>\nJakub Vrana          WSH  25 + 27 =  52\nJared McCann         PIT  14 + 21 =  35\nJohn Klingberg       DAL   6 + 26 =  32\nTravis Zajac         NJD   9 + 16 =  25\nConor Sheary         BUF  10 + 13 =  23\n</pre>\n\ncommand: **7**\nhow many: **6**\n\n<pre>\nJakub Vrana          WSH  25 + 27 =  52\nJared McCann         PIT  14 + 21 =  35\nConor Sheary         BUF  10 + 13 =  23\nTravis Zajac         NJD   9 + 16 =  25\nJohn Klingberg       DAL   6 + 26 =  32\nMark Jankowski       CGY   5 +  2 =   7\n</pre>\n\ncommand: **0**\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Hockey statistics' tmcname='part12-15_hockey_statistics'>\n\nIn this exercise you will build an application for examining hockey league statistics from the NHL in a couple of different ways.\n\nThe exercise template contains two JSON files: `partial.json` and `all.json`. The first of these is mostly meant for testing. The latter contains a lot of data, as all the NHL player stats for the 2019-20 season are included in the file.\n\nThe entry for a single player is in the following format:\n\n```json\n{\n    \"name\": \"Patrik Laine\",\n    \"nationality\": \"FIN\",\n    \"assists\": 35,\n    \"goals\": 28,\n    \"penalties\": 22,\n    \"team\": \"WPG\",\n    \"games\": 68\n}\n```\n\nBoth files contain a list of entries in the above format.\n\nIf you need a refresher on handling JSON files, please take a look at [part 7 of this course material](/part-7/4-data-processing#reading-json-files).\n\n## Search and list\n\nPlease write an interactive application which first asks for the name of the file, and then offers the following functions:\n\n- search by name for a single player's stats\n- list all the abbreviations for team names in alphabetical order\n- list all the abbreviations for countries in alphabetical order\n\nThese functionalities grant you one exercise point. Your application should now work as follows:\n\n<sample-output>\n\nfile name: **partial.json**\nread the data of 14 players\n\ncommands:\n0 quit\n1 search for player\n2 teams\n3 countries\n4 players in team\n5 players from country\n6 most points\n7 most goals\n\ncommand: **1**\nname: **Travis Zajac**\n<pre>\nTravis Zajac         NJD   9 + 16 =  25\n</pre>\n\ncommand: **2**\nBUF\nCGY\nDAL\nNJD\nNYI\nOTT\nPIT\nWPG\nWSH\n\ncommand: **3**\nCAN\nCHE\nCZE\nSWE\nUSA\n\ncommand: **0**\n\n</sample-output>\n\nNB: the printout format for a player must be exactly as follows:\n\n<sample-output>\n\n<pre>\nLeon Draisaitl       EDM  43 + 67 = 110\nConnor McDavid       EDM  34 + 63 =  97\nTravis Zajac         NJD   9 + 16 =  25\nMike Green           EDM   3 +  8 =  11\nMarkus Granlund      EDM   3 +  1 =   4\n123456789012345678901234567890123456789\n</pre>\n\n</sample-output>\n\nThe last line in the sample above is there to help you calculate the widths of the different fields in the output; you should not print the numbers line yourself in your final submission. \n\nThe abbreviation for the team is printed from the 22nd character onwards. The `+` sign is the 30th character and the `=` sign is the 35th character. All the fields should be justified to the right edge. All whitespace is space characters.\n\nF-strings are probably the easiest way to achieve the required printout. The process is similar to [this exercise](/part-6/1-reading-files#programming-exercise-course-grading-part-3) from part 6.\n\n## List players by points\n\nThese two functionalities will grant you a second exercise point:\n\n- list players in a specific team in the order of points scored, from highest to lowest. Points equals _goals_ + _assists_\n- list players from a specific country in the order of points scored, from highest to lowest\n\nYour application should now work as follows:\n\n<sample-output>\n\nfile name: **partial.json**\nread the data of 14 players\n\ncommands:\n0 quit\n1 search for player\n2 teams\n3 countries\n4 players in team\n5 players from country\n6 most points\n7 most goals\n\ncommand: **4**\nteam: **OTT**\n<pre>\nDrake Batherson      OTT   3 +  7 =  10\nJonathan Davidsson   OTT   0 +  1 =   1\n</pre>\n\ncommand: **5**\ncountry: **CAN**\n<pre>\nJared McCann         PIT  14 + 21 =  35\nTravis Zajac         NJD   9 + 16 =  25\nTaylor Fedun         DAL   2 +  7 =   9\nMark Jankowski       CGY   5 +  2 =   7\nLogan Shaw           WPG   3 +  2 =   5\n</pre>\n\ncommand: **0**\n\n</sample-output>\n\n## Most successful players\n\nThese two functionalities will grant you a third exercise point:\n\n- list of `n` players who've scored the most points\n  - if two players have the same score, whoever has scored the higher number of goals comes first\n- list of `n` players who've scored the most goals\n  - if two players have the same number of goals, whoever has played the lower number of games comes first\n\nYour application should now work as follows:\n\n<sample-output>\n\nfile name: **partial.json**\nread the data of 14 players\n\ncommands:\n0 quit\n1 search for player\n2 teams\n3 countries\n4 players in team\n5 players from country\n6 most points\n7 most goals\n\ncommand: **6**\nhow many: **2**\n<pre>\nJakub Vrana          WSH  25 + 27 =  52\nJared McCann         PIT  14 + 21 =  35\n</pre>\n\ncommand: **6**\nhow many: **5**\n\n<pre>\nJakub Vrana          WSH  25 + 27 =  52\nJared McCann         PIT  14 + 21 =  35\nJohn Klingberg       DAL   6 + 26 =  32\nTravis Zajac         NJD   9 + 16 =  25\nConor Sheary         BUF  10 + 13 =  23\n</pre>\n\ncommand: **7**\nhow many: **6**\n\n<pre>\nJakub Vrana          WSH  25 + 27 =  52\nJared McCann         PIT  14 + 21 =  35\nConor Sheary         BUF  10 + 13 =  23\nTravis Zajac         NJD   9 + 16 =  25\nJohn Klingberg       DAL   6 + 26 =  32\nMark Jankowski       CGY   5 +  2 =   7\n</pre>\n\ncommand: **0**\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Please respond to a quick questionnaire on this part of the course.",
+      "raw_source": "Please respond to a quick questionnaire on this part of the course."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "a03c9f5a-33a9-5aff-8d93-a89625034903"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"a03c9f5a-33a9-5aff-8d93-a89625034903\"></quiz>"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-16_framed_word",
+  "lesson_id": "part03-2-working-with-strings",
+  "part": 3,
+  "tmc_name": "part03-16_framed_word",
+  "title_original": "A framed word",
+  "title_vi": "Một từ đóng khung",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for a string and then prints out a frame of `*` characters with the word in the centre. The width of the frame should be 30 characters. You may assume the input string will always fit inside the frame.\n\nIf the length of the input string is an odd number, you may print out the word in either of the two possible centre locations.\n\n<sample-output>\n\nWord: **testing**\n<pre>\n******************************\n*          testing           *\n******************************\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nWord: **python**\n<pre>\n******************************\n*           python           *\n******************************\n</pre>\n\n</sample-output>",
+  "description_vi": "Hãy viết một chương trình yêu cầu người dùng nhập một chuỗi rồi in ra một khung gồm các ký tự `*` với từ ở giữa. Chiều rộng của khung phải là 30 ký tự. Bạn có thể cho rằng chuỗi đầu vào sẽ luôn nằm gọn trong khung.\n\nNếu độ dài của chuỗi đầu vào là số lẻ, bạn có thể in từ đó ở một trong hai vị trí ở giữa.\n\n<sample-output>\n\nTừ: **kiểm tra**\n<pre>\n*******************************\n*kiểm tra*\n*******************************\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nTừ: **trăn**\n<pre>\n*******************************\n*trăn*\n*******************************\n</pre>\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "e60eafefc20d75e725ad8a8aa421e8a2603ad9712203aa4a206e276508b65f57",
+  "order": 57
+}

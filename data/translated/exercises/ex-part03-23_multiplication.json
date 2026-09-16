@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-23_multiplication",
+  "lesson_id": "part03-3-more-loops",
+  "part": 3,
+  "tmc_name": "part03-23_multiplication",
+  "title_original": "Multiplication",
+  "title_vi": "Phép nhân",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for a positive integer number. The program then prints out a list of multiplication operations until both operands reach the number given by the user. See the examples below for details:\n\n<sample-output>\n\nPlease type in a number: 2\n1 x 1 = 1\n1 x 2 = 2\n2 x 1 = 2\n2 x 2 = 4\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: 3\n1 x 1 = 1\n1 x 2 = 2\n1 x 3 = 3\n2 x 1 = 2\n2 x 2 = 4\n2 x 3 = 6\n3 x 1 = 3\n3 x 2 = 6\n3 x 3 = 9\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình yêu cầu người dùng nhập một số nguyên dương. Sau đó, chương trình in ra danh sách các phép nhân cho đến khi cả hai toán hạng đều đạt đến số do người dùng đưa ra. Xem các ví dụ dưới đây để biết chi tiết:\n\n<sample-output>\n\nHãy gõ vào một số: 2\n1 x 1 = 1\n1 x 2 = 2\n2 x 1 = 2\n2 x 2 = 4\n\n</sample-output>\n\n<sample-output>\n\nHãy gõ vào một số: 3\n1 x 1 = 1\n1 x 2 = 2\n1 x 3 = 3\n2 x 1 = 2\n2 x 2 = 4\n2 x 3 = 6\n3 x 1 = 3\n3 x 2 = 6\n3 x 3 = 9\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "a48f64323c7290e371205bd4557d060f9774e73d46688803090364e73ee5b207",
+  "order": 43
+}

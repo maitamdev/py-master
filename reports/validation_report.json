@@ -1,0 +1,95 @@
+{
+  "overall_status": "PASSED",
+  "passed_checks_count": 12,
+  "total_checks": 12,
+  "checks": {
+    "file_and_lesson_counts": {
+      "passed": true,
+      "details": {
+        "normalized_lessons": 78,
+        "translated_lessons": 78,
+        "normalized_pages": 11,
+        "translated_pages": 11,
+        "normalized_parts": 14,
+        "translated_parts": 14
+      }
+    },
+    "exercise_count_and_integrity": {
+      "passed": true,
+      "details": {
+        "normalized_exercises": 283,
+        "translated_exercises": 283
+      }
+    },
+    "code_block_count_and_hashes": {
+      "passed": true,
+      "details": {
+        "total_code_blocks_checked": 737,
+        "mismatched_hashes_count": 0,
+        "code_preservation_accuracy": "100.0%"
+      }
+    },
+    "python_syntax_verification": {
+      "passed": true,
+      "details": {
+        "valid_executable_code_blocks": 658,
+        "pedagogical_snippets_and_intentional_error_demonstrations": 66,
+        "syntax_verification_status": "PASSED (all executable blocks verified; pedagogical error snippets cataloged)"
+      }
+    },
+    "asset_and_image_references": {
+      "passed": true,
+      "details": {
+        "total_assets_cataloged": 352,
+        "missing_local_assets": 0
+      }
+    },
+    "link_preservation": {
+      "passed": true,
+      "details": {
+        "links_preserved_count": 129
+      }
+    },
+    "heading_structure_preservation": {
+      "passed": true,
+      "details": {
+        "heading_levels_matched": 331,
+        "mismatches": 0
+      }
+    },
+    "custom_components_preservation": {
+      "passed": true,
+      "details": {
+        "custom_components_preserved": 566,
+        "component_mismatches": 0
+      }
+    },
+    "id_uniqueness": {
+      "passed": true,
+      "details": {
+        "total_unique_ids": 4007,
+        "duplicates_found": 0
+      }
+    },
+    "json_and_utf8_validity": {
+      "passed": true,
+      "details": {
+        "total_json_files_tested": 386,
+        "invalid_json_files": 0
+      }
+    },
+    "vietnamese_mojibake_check": {
+      "passed": true,
+      "details": {
+        "mojibake_instances_found": 0
+      }
+    },
+    "learner_facing_translation_coverage": {
+      "passed": true,
+      "details": {
+        "untranslated_blocks_count": 0,
+        "coverage_percentage": "100.0%"
+      }
+    }
+  }
+}

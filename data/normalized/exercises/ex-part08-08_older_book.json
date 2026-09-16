@@ -1,0 +1,16 @@
+{
+  "id": "ex-part08-08_older_book",
+  "lesson_id": "part08-3-defining-classes",
+  "part": 8,
+  "tmc_name": "part08-08_older_book",
+  "title_original": "The older book",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `older_book(book1: Book, book2: Book)` which takes two objects of type `Book` as its arguments. The function should print out a message with the details of whichever is the older. It should print out a different message if the two books were written in the same year. Please see the examples below.\n\n```python\npython = Book(\"Fluent Python\", \"Luciano Ramalho\", \"programming\", 2015)\neverest = Book(\"High Adventure\", \"Edmund Hillary\", \"autobiography\", 1956)\nnorma = Book(\"Norma\", \"Sofi Oksanen\", \"crime\", 2015)\n\nolder_book(python, everest)\nolder_book(python, norma)\n```\n\n<sample-output>\n\nHigh Adventure is older, it was published in 1956\nFluent Python and Norma were published in 2015\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "python = Book(\"Fluent Python\", \"Luciano Ramalho\", \"programming\", 2015)\neverest = Book(\"High Adventure\", \"Edmund Hillary\", \"autobiography\", 1956)\nnorma = Book(\"Norma\", \"Sofi Oksanen\", \"crime\", 2015)\n\nolder_book(python, everest)\nolder_book(python, norma)",
+  "grading_data_available": false,
+  "source_hash": "3da29dcda939f1f4ad8f8cdce1eae2a81584f44606df1f2180829daa25ebee80",
+  "order": 48
+}

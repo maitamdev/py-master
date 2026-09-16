@@ -1,0 +1,1349 @@
+{
+  "id": "part06-2-writing-files",
+  "part": 6,
+  "part_slug": "part-6",
+  "slug": "2-writing-files",
+  "is_part_index": false,
+  "title_original": "Writing files",
+  "title_vi": "",
+  "path": "/part-6/2-writing-files",
+  "source_path": "data/part-6/2-writing-files.md",
+  "source_hash": "4f808b6d518516955aaabd8e009b549aa92f45ed1a487f4b64e7cb23da181a93",
+  "order": 1,
+  "blocks_count": 74,
+  "blocks": [
+    {
+      "id": "blk-part06-2-writing-files-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "3c6369f3b2e9ff1a1d6679f9bde9f21c1b95f166f5e2faeb04bf1493b9035715",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know how to create files with Python code\n- You will be able to write text based data to a file\n- You will know how to create a CSV file"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "9b880b882c18ef10bbf163653f585c9d50f9296f506ea6800f9fc39c004381ce",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "So far we have read data from files, but it is naturally also possible to write data to files. Typically a program processes data and stores the results in a file, so they can be used later or processed further by some other program."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "b975f5b7196e7cc5faa0d598e8bd8ae659bffe52ac6f6d3d7edd83beb8fa1a3d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We can create a new file every time we want to write data to a file, but we can also append new data to the end of an existing file. In both cases we use the `open` function from the previous section. For writing files the function requires a second argument."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0004",
+      "type": "heading",
+      "order": 4,
+      "source_hash": "144165b2d83c884fefc493bc85bc7bba37ccfbce4bdb3b2dbe2d9a75478ede6a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Creating a new file"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "8de375997a62ca1d30af20a6f9dd567a6bb50a44e1fcbe04bbccc2af29cd3623",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If you want to create a new file, you would call the `open` function with the additional argument `w`, to signify that the file should be opened in write mode. So, the function call could look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0006",
+      "type": "code",
+      "order": 6,
+      "source_hash": "ae06636ffdcc27fea366d1c7f541987b672d4c6f416972dcc1a6cf10ad1ae134",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "with open(\"new_file.txt\", \"w\") as my_file:\n    # code to write something to the file"
+      },
+      "translation": {
+        "language": "code",
+        "content": "with open(\"new_file.txt\", \"w\") as my_file:\n    # code to write something to the file"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ae06636ffdcc27fea366d1c7f541987b672d4c6f416972dcc1a6cf10ad1ae134",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "f460ce2e87276d244382d49491b1f0e616ef5e902bc2e1f1c96c736a93c25ce6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "**NB: if the file already exists, all the contents will be overwritten**. It pays to be very careful when creating new files."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "355f83c7d81f8858375489d33d4e4fb011a14a39089e2c3ae8b9fef6d40e7df3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "With the file open you can write data to it. You can use the method `write`, which takes the string that is to be written as its argument."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0009",
+      "type": "code",
+      "order": 9,
+      "source_hash": "7ceb43c18366741f7ee8aaced451166acec80f578f5b033be6ce928b1931f107",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "with open(\"new_file.txt\", \"w\") as my_file:\n    my_file.write(\"Hello there!\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "with open(\"new_file.txt\", \"w\") as my_file:\n    my_file.write(\"Hello there!\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "7ceb43c18366741f7ee8aaced451166acec80f578f5b033be6ce928b1931f107",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "d93c8efb997622ecbe41517833ab7df23a794b5aa1275672dbe43de8bbb66a89",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When you execute the program, a new file named `new_file.txt` appears in the directory. The contents would look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0011",
+      "type": "sample_data",
+      "order": 11,
+      "source_hash": "89b8b8e486421463d7e0f5caf60fb9cb35ce169b76e657ab21fc4d1d6b093603",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hello there!"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hello there!"
+      },
+      "metadata": {
+        "raw_source": "<sample-data>\n\nHello there!\n\n</sample-data>"
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "ab217529a39a273a0eb6b8875aa3bd4daab3ad491b47c88a586078aa99771266",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If you want line breaks in the file, you will have to add them by hand - the `write` function doesn't work exactly like the more familiar `print` function, though they are similar. So, the following program"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0013",
+      "type": "code",
+      "order": 13,
+      "source_hash": "eedb6cf8e770f08c3965ddf76b17e3ef3d23715f18e598dc456512af2742a880",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "with open(\"new_file.txt\", \"w\") as my_file:\n    my_file.write(\"Hello there!\")\n    my_file.write(\"This is the second line\")\n    my_file.write(\"This is the last line\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "with open(\"new_file.txt\", \"w\") as my_file:\n    my_file.write(\"Hello there!\")\n    my_file.write(\"This is the second line\")\n    my_file.write(\"This is the last line\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "eedb6cf8e770f08c3965ddf76b17e3ef3d23715f18e598dc456512af2742a880",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "ae11fb841335980614aaaf548b833c8875ec1e76c1c85b39a9097a4dd73ab988",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "would result in a file with these contents:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0015",
+      "type": "sample_data",
+      "order": 15,
+      "source_hash": "fc8cbc0784940f5b626147beb3cd322e506e7c581380625a797a5f0c7e2642cf",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hello there!This is the second lineThis is the last line"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hello there!This is the second lineThis is the last line"
+      },
+      "metadata": {
+        "raw_source": "<sample-data>\n\nHello there!This is the second lineThis is the last line\n\n</sample-data>"
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "b9f64151e297d11c0ffa8582b732c55dbe6f80d8fd4c9e19a991d57a98b6a332",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Line breaks are achieved by adding new line characters `\\n` to the argument strings:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0017",
+      "type": "code",
+      "order": 17,
+      "source_hash": "ea2d0181804e57fe18f480e6e089c744215582a52e83a4455aaf0ff22824c6b4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "with open(\"new_file.txt\", \"w\") as my_file:\n    my_file.write(\"Hello there!\\n\")\n    my_file.write(\"This is the second line\\n\")\n    my_file.write(\"This is the last line\\n\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "with open(\"new_file.txt\", \"w\") as my_file:\n    my_file.write(\"Hello there!\\n\")\n    my_file.write(\"This is the second line\\n\")\n    my_file.write(\"This is the last line\\n\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ea2d0181804e57fe18f480e6e089c744215582a52e83a4455aaf0ff22824c6b4",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "45182bbd95d3ad49d2140d6580ce7d4b011f1aeb9d1c80cbe8bc49d950b45699",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Now the contents of `new_file.txt` would look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0019",
+      "type": "sample_data",
+      "order": 19,
+      "source_hash": "f8900d3af8d76b7741ead1bf1d0b3ba0b1b6474c687b983c6d1953b0d3bd5817",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hello there!\nThis is the second line\nThis is the last line"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hello there!\nThis is the second line\nThis is the last line"
+      },
+      "metadata": {
+        "raw_source": "<sample-data>\n\nHello there!\nThis is the second line\nThis is the last line\n\n</sample-data>"
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0020",
+      "type": "exercise",
+      "order": 20,
+      "source_hash": "54e39ffa52458281e6aad817c5de74476a31c3b888a38eeb574b96d56ab79b9a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks for the name of the user and then creates an \"inscription\" in a file specified by the user. Please see the example below.\n\n<sample-output>\n\nWhom should I sign this to: **Ada**\nWhere shall I save it: **inscribed.txt**\n\n</sample-output>\n\nThe contents of the file `inscribed.txt` would be\n\n<sample-data>\n\nHi Ada, we hope you enjoy learning Python with us! Best, Mooc.fi Team\n\n</sample-data>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-10_inscription",
+        "exercise_type": "programming-exercise",
+        "name": "Inscription",
+        "tmc_name": "part06-10_inscription",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0021",
+      "type": "heading",
+      "order": 21,
+      "source_hash": "6a137189c6c248b471d254f6b0265323a641d60ae499fcb0669579f1ba69d808",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Appending data to an existing file"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "69d4311f865c2a4fca3cec7be6c13b41650ff5de26ab3a5d733e5c87baebcfc2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If you want to append data to the end of a file, instead of overwriting the entire file, you should open the file in append mode with the argument `a`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "3f873c1bf90cf387a61460fa33b1927a197076e1928a1b022011601f3cf16a72",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If the file doesn't yet exist, append mode works exatly like write mode."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "1f8e979460a85548a5fd0d6a4eb93f76326fc34f877f311583527d81c00a029b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The following program opens the file `new_file.txt` and appends a couple of lines of text to the end:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0025",
+      "type": "code",
+      "order": 25,
+      "source_hash": "e4cdb3a7cd2f26c58b2023bf6d71ff6944d28fcb4d3a38a3679dba75d6111740",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "with open(\"new_file.txt\", \"a\") as my_file:\n    my_file.write(\"This is the 4th line\\n\")\n    my_file.write(\"And yet another line.\\n\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "with open(\"new_file.txt\", \"a\") as my_file:\n    my_file.write(\"This is the 4th line\\n\")\n    my_file.write(\"And yet another line.\\n\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e4cdb3a7cd2f26c58b2023bf6d71ff6944d28fcb4d3a38a3679dba75d6111740",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "03f8ec179825409468d0110bf47047db09da27797c5022dc02dd8c798af9c3aa",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this program is executed the contents of the file would look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0027",
+      "type": "sample_output",
+      "order": 27,
+      "source_hash": "370ec99129aa3df648aa251d0e079f3a8fb5778f39740f7ea6b48786434a8e8a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hello there!\nThis is the second line\nThis is the last line\nThis is the 4th line\nAnd yet another line."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hello there!\nThis is the second line\nThis is the last line\nThis is the 4th line\nAnd yet another line."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHello there!\nThis is the second line\nThis is the last line\nThis is the 4th line\nAnd yet another line.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "48f1d1b1b200cc609c1da0c0d8673971239b3d62650b0d43d982a469021eb30c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In programming practice, appending data to files is not a very common task."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "6904852f87430bbc1cfec8ce58d293664421bfbdcc8692bdaca0ae2099f01dfa",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "More often a file is read, processed and overwritten in its entirety. For example, when the contents should change in the _middle_ of the file, it is usually easiest to overwrite the entire file."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0030",
+      "type": "exercise",
+      "order": 30,
+      "source_hash": "52fde365a850e4c3442db29e01061614798cf9a2d132051d08a0bf0c48d1bb00",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which works as a simply diary. The diary entries should be saved in the file `diary.txt`. When the program is executed, it should first read any entries already in the file.\n\nNB: the automatic tests for this exercise will change the contents of the file. If you want to keep its contents, first make a copy of the file under a different name.\n\nThe program should work as follows:\n\n<sample-output>\n\n1 - add an entry, 2 - read entries, 0 - quit\nFunction: **1**\nDiary entry: **Today I ate porridge**\nDiary saved\n\n1 - add an entry, 2 - read entries, 0 - quit\nFunction: **2**\nEntries:\nToday I ate porridge\n1 - add an entry, 2 - read entries, 0 - quit\nFunction: **1**\nDiary entry: **I went to the sauna in the evening**\nDiary saved\n\n1 - add an entry, 2 - read entries, 0 - quit\nFunction: **2**\nEntries:\nToday I ate porridge\nI went to the sauna in the evening\n1 - add an entry, 2 - read entries, 0 - quit\nFunction: **0**\nBye now!\n\n</sample-output>\n\nWhen the program is executed for the second time, this should happen:\n\n<sample-output>\n\n1 - add an entry, 2 - read entries, 0 - quit\nFunction: **2**\nEntries:\nToday I ate porridge\nI went to the sauna in the evening\n1 - add an entry, 2 - read entries, 0 - quit\nFunction: **0**\nBye now!\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-11_diary",
+        "exercise_type": "programming-exercise",
+        "name": "Diary",
+        "tmc_name": "part06-11_diary",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0031",
+      "type": "heading",
+      "order": 31,
+      "source_hash": "0427ef0ae2a7808806698b58f829895f4528180bef88111396564de7ad23486e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Writing CSV files"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "6cef182c8ddda57ec96b622b0050a089d9ffcf2dd911a9fd1f9382cb0ae7e419",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "CSV files can be written line by line with the `write` method just like any other file. The following example creates the file `coders.csv`, with each line containing the name, working environment, favourite language and years of experience of a single programmer. The fields are separated by a semicolon."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0033",
+      "type": "code",
+      "order": 33,
+      "source_hash": "8d5dce8d26c3ed892a48930c2d01e095cb924d6269c92918c437d04aca764d3d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "with open(\"coders.csv\", \"w\") as my_file:\n    my_file.write(\"Eric;Windows;Pascal;10\\n\")\n    my_file.write(\"Matt;Linux;PHP;2\\n\")\n    my_file.write(\"Alan;Linux;Java;17\\n\")\n    my_file.write(\"Emily;Mac;Cobol;9\\n\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "with open(\"coders.csv\", \"w\") as my_file:\n    my_file.write(\"Eric;Windows;Pascal;10\\n\")\n    my_file.write(\"Matt;Linux;PHP;2\\n\")\n    my_file.write(\"Alan;Linux;Java;17\\n\")\n    my_file.write(\"Emily;Mac;Cobol;9\\n\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8d5dce8d26c3ed892a48930c2d01e095cb924d6269c92918c437d04aca764d3d",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "722055d6085934d205dc0a604e9f8fe877368f8ca900332b66c24cf1df8f7fee",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Executing this program would result in the following file:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0035",
+      "type": "sample_output",
+      "order": 35,
+      "source_hash": "25c787cdc3028036c8289cb0f61c5afc0793c347b3ed3aa74d78eca453cfd8d4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Eric;Windows;Pascal;10\nMatt;Linux;PHP;2\nAlan;Linux;Java;17\nEmily;Mac;Cobol;9"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Eric;Windows;Pascal;10\nMatt;Linux;PHP;2\nAlan;Linux;Java;17\nEmily;Mac;Cobol;9"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nEric;Windows;Pascal;10\nMatt;Linux;PHP;2\nAlan;Linux;Java;17\nEmily;Mac;Cobol;9\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "8ca191adc05cbc109889ec114062bf1d2ca30644a83ead47fcec667c1ac0ffdd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "What if the data to be written is stored in computer memory in a list?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0037",
+      "type": "code",
+      "order": 37,
+      "source_hash": "819c8a0dd09f75c3a3b284416c4283e390177897ca5785b74b14a02004c840f1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "coders = []\ncoders.append([\"Eric\", \"Windows\", \"Pascal\", 10])\ncoders.append([\"Matt\", \"Linux\", \"PHP\", 2])\ncoders.append([\"Alan\", \"Linux\", \"Java\", 17])\ncoders.append([\"Emily\", \"Mac\", \"Cobol\", 9])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "coders = []\ncoders.append([\"Eric\", \"Windows\", \"Pascal\", 10])\ncoders.append([\"Matt\", \"Linux\", \"PHP\", 2])\ncoders.append([\"Alan\", \"Linux\", \"Java\", 17])\ncoders.append([\"Emily\", \"Mac\", \"Cobol\", 9])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "819c8a0dd09f75c3a3b284416c4283e390177897ca5785b74b14a02004c840f1",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "215a49281438e4792baf7dc20282d1c25db68935d6924d92cf1f77fac2ca3c35",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We can build the string we want to write as an f-string, and write the ready line to the file like so:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0039",
+      "type": "code",
+      "order": 39,
+      "source_hash": "e0b8ea1ef1169407b8620fb762e8f9e7a3a5f2852cc987007a431b2acb6ca873",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "with open(\"coders.csv\", \"w\") as my_file:\n    for coder in coders:\n        line = f\"{coder[0]};{coder[1]};{coder[2]};{coder[3]}\"\n        my_file.write(line+\"\\n\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "with open(\"coders.csv\", \"w\") as my_file:\n    for coder in coders:\n        line = f\"{coder[0]};{coder[1]};{coder[2]};{coder[3]}\"\n        my_file.write(line+\"\\n\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e0b8ea1ef1169407b8620fb762e8f9e7a3a5f2852cc987007a431b2acb6ca873",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "64d3857fa4eafa450a63ab96df2e6f0969184845a937f591432305f50f2fc591",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If each list of coder data was very long, with many more items, building the string by hand would be quite cumbersome. We can use a `for` loop to build the string instead:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0041",
+      "type": "code",
+      "order": 41,
+      "source_hash": "6596d001937815986bda197e72132411c9f98480969b998b50f1629013e564ef",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "with open(\"coders.csv\", \"w\") as my_file:\n    for coder in coders:\n        line = \"\"\n        for value in coder:\n            line += f\"{value};\"\n        line = line[:-1]\n        my_file.write(line+\"\\n\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "with open(\"coders.csv\", \"w\") as my_file:\n    for coder in coders:\n        line = \"\"\n        for value in coder:\n            line += f\"{value};\"\n        line = line[:-1]\n        my_file.write(line+\"\\n\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6596d001937815986bda197e72132411c9f98480969b998b50f1629013e564ef",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0042",
+      "type": "heading",
+      "order": 42,
+      "source_hash": "d03e1930e1ad3d73ca5ba681de7aad15869c05bc1ee9979473f34fd85f9315dc",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Clearing file contents and deleting files"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0043",
+      "type": "paragraph",
+      "order": 43,
+      "source_hash": "ac453c229b617385e2e42d28778678f51e1ae3394ebfb3e8869b2c4b23fd621a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Sometimes it is necessary to clear the contents of an existing file. Opening the file in write mode and closing the file immediately will achieve just this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0044",
+      "type": "code",
+      "order": 44,
+      "source_hash": "a682c4434e8767891fc1d0dac23269b59102c944d8b22d69c969320260c4c8f9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "with open(\"file_to_be_cleared.txt\", \"w\") as my_file:\n    pass"
+      },
+      "translation": {
+        "language": "code",
+        "content": "with open(\"file_to_be_cleared.txt\", \"w\") as my_file:\n    pass"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a682c4434e8767891fc1d0dac23269b59102c944d8b22d69c969320260c4c8f9",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0045",
+      "type": "paragraph",
+      "order": 45,
+      "source_hash": "e0261bbaa4383674a3136233d08d512fa34bd237da44b1a0e693966a02c904c4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Now the `with` block only contains the command `pass`, which doesn't actually do anything. Python does not allow empty blocks, so the command is necessary here."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0046",
+      "type": "paragraph",
+      "order": 46,
+      "source_hash": "8d929f915709ca5c41de8feee60958544dfa76302449d004caff20ca4d66ed97",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "It is possible to also bypass the `with` block by using the following oneliner:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0047",
+      "type": "code",
+      "order": 47,
+      "source_hash": "76be6638ac7e4ac0f25373eea9c500a84bdf5c185be8529a94d9107bd0d1363f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "open('file_to_be_cleared.txt', 'w').close()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "open('file_to_be_cleared.txt', 'w').close()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "76be6638ac7e4ac0f25373eea9c500a84bdf5c185be8529a94d9107bd0d1363f",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0048",
+      "type": "text_box",
+      "order": 48,
+      "source_hash": "4575c0f1952645cf0383ebe8592ff0430a582187ba181d2327a934a76fe384c8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You can also delete a file entirely. We will have to ask for help from the operating system to achieve this:\n\n```python\n# the command to delete files is in the os module\nimport os\n\nos.remove(\"unnecessary_file.csv\")\n```\n\nNB: this will not work when running the automatic tests on the course servers due to technical limitations in the testing environment. If you are asked to clear the contents of a file, use the methods described above."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "hint",
+        "name_original": "Deleting files",
+        "name_vi": "",
+        "attributes": {
+          "variant": "hint",
+          "name": "Deleting files"
+        }
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0049",
+      "type": "exercise",
+      "order": 49,
+      "source_hash": "452d536460eda597318b58c305c74f09a63351472a6d1a3028379e7341deaf68",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The file `solutions.csv` contains some solutions to mathematics problems:\n\n```csv\nArto;2+5;7\nPekka;3-2;1\nErkki;9+3;11\nArto;8-3;4\nPekka;5+5;10\n...jne...\n```\n\nAs you can see above, on each line the format is `name_of_student;problem;result`. All the operations are either addition or subtraction, and each has exactly two operands.\n\nPlease write a function named `filter_solutions()` which\n\n* Reads the contents of the file `solutions.csv`\n* writes those lines which have a _correct_ result into the file `correct.csv`\n* writes those lines which have an _incorrect_ result into the file `incorrect.csv`\n\nUsing the example above, the file `correct.csv` would contain the lines \n\n```sh\nArto;2+5;7\nPekka;3-2;1\nPekka;5+5;10\n```\n\nThe other two would be in the file `incorrect.csv`.\n\nPlease write the lines in the same order as they appear in the original file. Do not change the original file.\n\nNB: the function should have the exact same result, no matter how many times it is called. That is, it shouldn't matter if the function is called once\n\n```python\nfilter_solutions()\n```\n\nor multiple times in a row\n\n```python\nfilter_solutions()\nfilter_solutions()\nfilter_solutions()\nfilter_solutions()\n```\n\nAfter the execution, the contents of the files `correct.csv` and `incorrect.csv` should be exactly the same in either case."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-12_filtering_file_contents",
+        "exercise_type": "programming-exercise",
+        "name": "Filtering the contents of a file",
+        "tmc_name": "part06-12_filtering_file_contents",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0050",
+      "type": "exercise",
+      "order": 50,
+      "source_hash": "7b350a38dea16928bac3621bae46aea79a968b7e0412b3de375720f69c266d1c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `store_personal_data(person: tuple)`, which takes a tuple containing some identifying information as its argument.\n\nThe tuple contains the following elements:\n\n* Name (string)\n* Age (integer)\n* Height (float)\n\nThis should be processed and written into the file `people.csv`. The file may already contain some data; the new entry goes to the end of the file. The data should be written in the format\n\nname;age;height\n\nEach entry should be on a separate line. If we call the function with the argument `(\"Paul Paulson\", 37, 175.5)`, the function should write this line to the end of the file:\n\n`Paul Paulson;37;175.5`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-13_store_personal_data",
+        "exercise_type": "programming-exercise",
+        "name": "Store personal data",
+        "tmc_name": "part06-13_store_personal_data",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0051",
+      "type": "heading",
+      "order": 51,
+      "source_hash": "8e36b8ed0adc16babbbc1fa036b4cc1cc31d2bb25f2ec0bb67f5e3fb2c08c48c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Handling data in a CSV format"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0052",
+      "type": "paragraph",
+      "order": 52,
+      "source_hash": "ee490da7438ea95f2d3fe9b51ac137c350a618dbf71e54544f09e7753aea7ac0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's write a program which assesses students' performance on a course. The program reads a CSV file, which contains weekly exercise points received by the students. The program then calculates the points total and determines the grade attained by each student. Finally, the program creates a CSV file containing the points total and grade for each student."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0053",
+      "type": "paragraph",
+      "order": 53,
+      "source_hash": "55891690cb57ff1593be7d2b1f9458c851fd2efa91407cca3fbc569d8448c171",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The CSV file given as input to the program looks like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0054",
+      "type": "sample_data",
+      "order": 54,
+      "source_hash": "24f50f9b18f8dcc0e3e803720585e4be75fc4959ad4c2ec6050b4072bef55627",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Peter;4;2;3;5;4;0;0\nPaula;7;2;8;3;5;4;5\nSusan;3;4;3;5;3;4;4\nEmily;6;6;5;5;0;4;8"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Peter;4;2;3;5;4;0;0\nPaula;7;2;8;3;5;4;5\nSusan;3;4;3;5;3;4;4\nEmily;6;6;5;5;0;4;8"
+      },
+      "metadata": {
+        "raw_source": "<sample-data>\n\nPeter;4;2;3;5;4;0;0\nPaula;7;2;8;3;5;4;5\nSusan;3;4;3;5;3;4;4\nEmily;6;6;5;5;0;4;8\n\n</sample-data>"
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0055",
+      "type": "paragraph",
+      "order": 55,
+      "source_hash": "0ed3464dfc9fb2738a686253aaa3cfb173358a89b3d40a7fd8f812e6ddab26ce",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The program logic is divided into three functions: reading the file and processing the contents into an accessible format, determining the grade, and writing the file."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0056",
+      "type": "paragraph",
+      "order": 56,
+      "source_hash": "cb987d89bceed5af32fa7f35e8d2c8e4e3684363d7855dfeed54d8c549260339",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The file is read following the principles covered in the previous section. The data is stored in a dictionary, where the key is the student's name, and the value is a list of the points received by the student, in integer format:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0057",
+      "type": "code",
+      "order": 57,
+      "source_hash": "1f6a53d47031703d3f501ad142fe86af52018146a63b57b344295cbdb0f710d9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def read_weekly_points(filename):\n    weekly_points = {}\n    with open(filename) as my_file:\n        for line in my_file:\n            parts = line.split(\";\")\n            point_list = []\n            for points in parts[1:]:\n                point_list.append(int(points))\n            weekly_points[parts[0]] = point_list\n\n    return weekly_points"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def read_weekly_points(filename):\n    weekly_points = {}\n    with open(filename) as my_file:\n        for line in my_file:\n            parts = line.split(\";\")\n            point_list = []\n            for points in parts[1:]:\n                point_list.append(int(points))\n            weekly_points[parts[0]] = point_list\n\n    return weekly_points"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "1f6a53d47031703d3f501ad142fe86af52018146a63b57b344295cbdb0f710d9",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0058",
+      "type": "paragraph",
+      "order": 58,
+      "source_hash": "529c7f0242807eafba32c69cb42f41c00bb93fa6ab02dab3a4feb2aa48416e39",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The second function is for determining the grade based on the points received. This function is in turn used by the third function, which writes the results to the file."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0059",
+      "type": "code",
+      "order": 59,
+      "source_hash": "9ddae39c2c8c2da711c37841b7492ead9afc723555cf41371356f5249916a7b6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def grade(points):\n    if points < 20:\n        return 0\n    elif points < 25:\n        return 1\n    elif points < 30:\n        return 2\n    elif points < 35:\n        return 3\n    elif points < 40:\n        return 4\n    else:\n        return 5\n\ndef save_results(filename, weekly_points):\n    with open(filename, \"w\") as my_file:\n        for name, point_list in weekly_points.items():\n            point_sum = sum(point_list)\n            my_file.write(f\"{name};{point_sum};{grade(point_sum)}\\n\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def grade(points):\n    if points < 20:\n        return 0\n    elif points < 25:\n        return 1\n    elif points < 30:\n        return 2\n    elif points < 35:\n        return 3\n    elif points < 40:\n        return 4\n    else:\n        return 5\n\ndef save_results(filename, weekly_points):\n    with open(filename, \"w\") as my_file:\n        for name, point_list in weekly_points.items():\n            point_sum = sum(point_list)\n            my_file.write(f\"{name};{point_sum};{grade(point_sum)}\\n\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "9ddae39c2c8c2da711c37841b7492ead9afc723555cf41371356f5249916a7b6",
+        "length_lines": 19
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0060",
+      "type": "paragraph",
+      "order": 60,
+      "source_hash": "b5c963099083940591b315d7710cb50a03a2ff6cd78b1a91c7db5eaa46fba6a7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This structure lets us write a very simple main function. Notice how the filenames for the files whch are read and written are given as arguments in the main function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0061",
+      "type": "code",
+      "order": 61,
+      "source_hash": "96a716d91ee8003079f096b48d4a03d01e19e4a414efce9e5d59a494aa69fc73",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "weekly_points = read_weekly_points(\"weekly_points.csv\")\nsave_results(\"results.csv\", weekly_points)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "weekly_points = read_weekly_points(\"weekly_points.csv\")\nsave_results(\"results.csv\", weekly_points)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "96a716d91ee8003079f096b48d4a03d01e19e4a414efce9e5d59a494aa69fc73",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0062",
+      "type": "paragraph",
+      "order": 62,
+      "source_hash": "b5b1cf6422b4dd35495cc6602b88e8b072cfe9c914a8e3a5ecfa7c71ad0022e4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When the main function is executed, the contents of the file `results.csv` created as a result looks like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0063",
+      "type": "sample_data",
+      "order": 63,
+      "source_hash": "34891bb866d0f30b8e76c40dc33f901f6552fe0d5634180fa145f9201ce2e44f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Peter;18;0\nPaula;34;3\nSusan;26;2\nEmily;41;5"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Peter;18;0\nPaula;34;3\nSusan;26;2\nEmily;41;5"
+      },
+      "metadata": {
+        "raw_source": "<sample-data>\n\nPeter;18;0\nPaula;34;3\nSusan;26;2\nEmily;41;5\n\n</sample-data>"
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0064",
+      "type": "paragraph",
+      "order": 64,
+      "source_hash": "e419bbe6f5f14d888353aceb0edfb1203ca6112f70c9a8648d3c2f87d8fe3485",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Notice how each function defined above is relatively simple, and they all have a single responsibility. This is a common and advisable approach when programming larger wholes. The single reponsibility principle makes verifying functionality easier. It also makes it easier to make changes to the program later, and to add new features."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0065",
+      "type": "paragraph",
+      "order": 65,
+      "source_hash": "e95d2fffde16f40395ceec57a082b721991db379e3a9eb42928ecc9da3606427",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Say we wanted to add a function for printing out the grade for a single student. We already have a function which determines the student's grade, so we can use this in our new function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0066",
+      "type": "code",
+      "order": 66,
+      "source_hash": "98aab2cc505fbe60a0546d94b252c239a040ed49ab5f24aa54b9f656dffdb022",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def get_grade(student_name, weekly_points):\n    for name, point_list in weekly_points.items():\n        if name == student_name:\n            return grade(sum(point_list))\n\n\nweekly_points = read_weekly_points(\"weekly_points.csv\")\nprint(get_grade(\"Paula\", weekly_points))\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def get_grade(student_name, weekly_points):\n    for name, point_list in weekly_points.items():\n        if name == student_name:\n            return grade(sum(point_list))\n\n\nweekly_points = read_weekly_points(\"weekly_points.csv\")\nprint(get_grade(\"Paula\", weekly_points))\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "98aab2cc505fbe60a0546d94b252c239a040ed49ab5f24aa54b9f656dffdb022",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0067",
+      "type": "sample_data",
+      "order": 67,
+      "source_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "3"
+      },
+      "translation": {
+        "language": "text",
+        "content": "3"
+      },
+      "metadata": {
+        "raw_source": "<sample-data>\n\n3\n\n</sample-data>"
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0068",
+      "type": "paragraph",
+      "order": 68,
+      "source_hash": "bf5df35c3bd7cf21e14846500e58067e6d7122f1c6b25094cae3219cb4da64b7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If we determine a certain functionality in the program needs fixing, in a well designed program the change will affect only some select sections of code, and it will be easier to determine where the changes should be made. For example, if we wanted to change the grade boundaries, we'd only need to implement the change in the function for determining the grade, and it would work also in all the other functions utilizing this function. If the code for this single functionality was implemented in multiple places, there would be a definite risk that we would not remember to change all the instances when changing the functionality."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0069",
+      "type": "exercise",
+      "order": 69,
+      "source_hash": "9075df1eed3458f9596e24b9cd157c9233015dfa4decd13a387bb0c2f22ce964",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's revisit the course grading project from the previous section. \n\nAs we left if last time, the program read and processed files containing student information, completed exercises and exam results. We'll add a file containing information about the course. An example of the format of the file:\n\n<sample-data>\n\n<pre>\n\nname: Introduction to Programming\nstudy credits: 5\n</pre>\n\n</sample-data>\n\nThe program should then create two files. There should be a file called `results.txt` with the following contents:\n\n<sample-data>\n\n<pre>\nIntroduction to Programming, 5 credits\n======================================\nname                          exec_nbr  exec_pts. exm_pts.  tot_pts.  grade\npekka peloton                 21        5         9         14        0\njaana javanainen              27        6         11        17        1\nliisa virtanen                35        8         14        22        3\n</pre>\n\n</sample-data>\n\nThe statistics section is identical to the results printed out in part 3 of the project. The only addition here is the header section. \n\nAdditionally, there should be a file called `results.csv` with the following format:\n\n<sample-data>\n\n<pre>\n12345678;pekka peloton;0\n12345687;jaana javanainen;1\n12345699;liisa virtanen;3\n</pre>\n\n</sample-data>\n\nWhen the program is executed, it should look like this:\n\n<sample-output>\n\nStudent information: **students1.csv**\nExercises completed: **exercises1.csv**\nExam points: **exam_points1.csv**\nCourse information: **course1.txt**\nResults written to files results.txt and results.csv\n\n</sample-output>\n\nThat is, the program only asks for the names of the input files. All output should be written to the files. The user will only see a message confirming this.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-14_course_grading_part_4",
+        "exercise_type": "programming-exercise",
+        "name": "Course grading, part 4",
+        "tmc_name": "part06-14_course_grading_part_4",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0070",
+      "type": "exercise",
+      "order": 70,
+      "source_hash": "8cb409cee71a03251b1d3e7564cf860c246a8f965d7e25d36a753d5ab24b327f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template includes the file `words.txt`, which contains words in English.\n\nPlease write a function named `find_words(search_term: str)`. It should return a list containing all the words in the file which match the search term.\n\nThe search term may include lowercase letters and the following wildcard characters:\n\n* A dot `.` means that any single character is acceptable in its place. For example, `ca.` would yield words like _cat_ and _car_, `p.ng` would yield words like _ping_ and _pong_, and `.a.e` would yield words like _sane_, _care_ and _late_.\n* An asterisk `*` at the _end_ of the search term means that any word which _begins_ with the search term is acceptable. An asterisk at the _beginning_ of the search term means that any word which _ends_ with the search term is acceptable. For example, `ca*` would yield words like _california_, _cat_, _caring_ and _catapult_, while `*ane` would yield words like _crane_, _insane_ and _aeroplane_. There can only ever be a single asterisk in the search term.\n* If there are no wildcard characters in the search term, only words which match the search term exactly are returned. \n\nYou may assume both wildcards are never used in the same search term.\n\nThe words in the file are all written in lowercase. You may also assume the argument to the function will be in lowercase entirely.\n\nIf no matching words are found, the function should return an empty list.\n\nHint: the Pythons string methods `startswith()` and `endswith()` may be useful here. You can search for more information about them online.\n\nAn example of the function in action:\n\n```python\nprint(find_words(\"*vokes\"))\n```\n\n<sample-output>\n\n['convokes', 'equivokes', 'evokes', 'invokes', 'provokes', 'reinvokes', 'revokes']\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-15_word_search",
+        "exercise_type": "programming-exercise",
+        "name": "Word search",
+        "tmc_name": "part06-15_word_search",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0071",
+      "type": "exercise",
+      "order": 71,
+      "source_hash": "004131ae84735180c6d8730997aab4a665a824817c4858960c51d09d6d876b06",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which functions as a dictionary. The user can type in new entries or look for existing entries.\n\nThe program should work as follows:\n\n<sample-output>\n\n1 - Add word, 2 - Search, 3 - Quit\nFunction: **1**\nThe word in Finnish: **auto**\nThe word in English: **car**\nDictionary entry added\n1 - Add word, 2 - Search, 3 - Quit\nFunction: **1**\nThe word in Finnish: **roska**\nThe word in English: **garbage**\nDictionary entry added\n1 - Add word, 2 - Search, 3 - Quit\nFunction: **1**\nThe word in Finnish: **laukku**\nThe word in English: **bag**\nDictionary entry added\n1 - Add word, 2 - Search, 3 - Quit\nFunction: **2**\nSearch term: **bag**\nroska - garbage\nlaukku - bag\n1 - Add word, 2 - Search, 3 - Quit\nFunction: **2**\nSearch term: **car**\nauto - car\n1 - Add word, 2 - Search, 3 - Quit\nFunction: **2**\nSearch term: **laukku**\nlaukku - bag\n1 - Add word, 2 - Search, 3 - Quit\nFunction: **3**\nBye!\n\n</sample-output>\n\nThe dictionary entries should be written to a file called `dictionary.txt`. The program should first read the contents of the file. New entries are written to the end of the file whenever they are added to the dictionary.\n\nThe format of the data stored in the dictionary is up to you.\n\n**NB:** the automatic tests for this exercise may change the contents of the file. If you want to keep its contents, first make a copy of the file under a different name.\n\n**NB2:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-16_dictionary_file",
+        "exercise_type": "programming-exercise",
+        "name": "Dictionary stored in a file",
+        "tmc_name": "part06-16_dictionary_file",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0072",
+      "type": "paragraph",
+      "order": 72,
+      "source_hash": "b97eebcf5a0222c688482a2c1f8f4510ba0c7934c136e1f60999bbcc47c2ab75",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!---\nA quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-2-writing-files-0073",
+      "type": "quiz",
+      "order": 73,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "69694e01-4c47-5b9d-8a00-b0d96a477dc7",
+        "attributes": {
+          "id": "69694e01-4c47-5b9d-8a00-b0d96a477dc7"
+        }
+      }
+    },
+    {
+      "id": "blk-part06-2-writing-files-0074",
+      "type": "paragraph",
+      "order": 74,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    }
+  ]
+}

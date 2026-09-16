@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-08_age_check",
+  "lesson_id": "part02-3-combining-conditions",
+  "part": 2,
+  "tmc_name": "part02-08_age_check",
+  "title_original": "Age check",
+  "title_vi": "Kiểm tra độ tuổi",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks for the user's age. If the age is not plausible, that is, it is under 5 or something that can't be an actual human age, the program should print out a comment.\n\nHave a look at the examples of expected behaviour below to figure out which comment is applicable in each case.\n\n<sample-output>\n\nWhat is your age? **13**\nOk, you're 13 years old\n\n</sample-output>\n\n<sample-output>\n\nWhat is your age? **2**\nI suspect you can't write quite yet...\n\n</sample-output>\n\n<sample-output>\n\nWhat is your age? **-4**\nThat must be a mistake\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình hỏi tuổi của người dùng. Nếu độ tuổi không hợp lý, tức là dưới 5 tuổi hoặc độ tuổi nào đó không thể là tuổi thực tế của con người, thì chương trình sẽ in ra một nhận xét.\n\nHãy xem các ví dụ về hành vi dự kiến ​​bên dưới để tìm ra nhận xét nào có thể áp dụng trong từng trường hợp.\n\n<sample-output>\n\nTuổi của bạn là bao nhiêu? **13**\nĐược rồi, bạn 13 tuổi\n\n</sample-output>\n\n<sample-output>\n\nTuổi của bạn là bao nhiêu? **2**\nTôi nghi ngờ bạn chưa thể viết được...\n\n</sample-output>\n\n<sample-output>\n\nTuổi của bạn là bao nhiêu? **-4**\nĐó chắc chắn là một sai lầm\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "29a6c410fd989f12458fa44cbc7c6edd34dc70807138259dc923ccb1e0eaf274",
+  "order": 21
+}

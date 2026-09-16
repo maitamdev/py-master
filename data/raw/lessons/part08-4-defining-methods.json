@@ -1,0 +1,244 @@
+{
+  "id": "part08-4-defining-methods",
+  "part": 8,
+  "part_slug": "part-8",
+  "slug": "4-defining-methods",
+  "is_part_index": false,
+  "title_original": "Defining methods",
+  "path": "/part-8/4-defining-methods",
+  "source_path": "data/part-8/4-defining-methods.md",
+  "source_hash": "0f8d14c63181e252d2c4117f26bb272f1847882c33d58df018a63cd13de35d80",
+  "frontmatter": {
+    "path": "/part-8/4-defining-methods",
+    "title": "Defining methods",
+    "hidden": false
+  },
+  "chunks_count": 37,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know how class methods work\n- You will be able to write new methods in your own classes\n- You will understand the concepts of encapsulation and client in object oriented programming",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know how class methods work\n- You will be able to write new methods in your own classes\n- You will understand the concepts of encapsulation and client in object oriented programming\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Classes which contain only data attributes are not very different from dictionaries. Below you will find two ways to model a bank account, first with a class definition, and then using a dictionary.",
+      "raw_source": "Classes which contain only data attributes are not very different from dictionaries. Below you will find two ways to model a bank account, first with a class definition, and then using a dictionary."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# Example 1: bank account with class definition\nclass BankAccount:\n\n    def __init__(self, account_number: str, owner: str, balance: float, annual_interest: float):\n        self.account_number = account_number\n        self.owner = owner\n        self.balance = balance\n        self.annual_interest = annual_interest\n\npeters_account = BankAccount(\"12345-678\", \"Peter Python\", 1500.0, 0.015)",
+      "raw_source": "```python\n# Example 1: bank account with class definition\nclass BankAccount:\n\n    def __init__(self, account_number: str, owner: str, balance: float, annual_interest: float):\n        self.account_number = account_number\n        self.owner = owner\n        self.balance = balance\n        self.annual_interest = annual_interest\n\npeters_account = BankAccount(\"12345-678\", \"Peter Python\", 1500.0, 0.015)\n```"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# Example 2: bank account with dictionary\npeters_account = {\"account_number\": \"12345-678\", \"owner\": \"Peter Python\", \"balance\": 1500.0, \"annual_interest\": 0.015}",
+      "raw_source": "```python\n# Example 2: bank account with dictionary\npeters_account = {\"account_number\": \"12345-678\", \"owner\": \"Peter Python\", \"balance\": 1500.0, \"annual_interest\": 0.015}\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "With a dictionary the implementation is much shorter and more straightforward. With a class, however, the structure is more \"tightly bound\", so that we can expect all `BankAccount` objects to be structurally alike. A class is also named. The `BankAccount` class is referenced when creating a new bank account, and the type of the object is `BankAccount`, not `dict`.",
+      "raw_source": "With a dictionary the implementation is much shorter and more straightforward. With a class, however, the structure is more \"tightly bound\", so that we can expect all `BankAccount` objects to be structurally alike. A class is also named. The `BankAccount` class is referenced when creating a new bank account, and the type of the object is `BankAccount`, not `dict`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Another significant advantage of classes is that in addition to data, they can contain functionality. One of the guiding principles of object oriented programming is that an object is used to access both the data attached to an object and the functionality to process that data.",
+      "raw_source": "Another significant advantage of classes is that in addition to data, they can contain functionality. One of the guiding principles of object oriented programming is that an object is used to access both the data attached to an object and the functionality to process that data."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Methods in classes",
+      "raw_source": "## Methods in classes"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A method is a subprogram or function that is bound to a specific class. Usually a method only affects a single object. A method is defined within the class definition, and it can access the data attributes of the class just like any other variable.",
+      "raw_source": "A method is a subprogram or function that is bound to a specific class. Usually a method only affects a single object. A method is defined within the class definition, and it can access the data attributes of the class just like any other variable."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's continue with the `BankAccount` class introduced above. Below we have a new method which adds interest to the account:",
+      "raw_source": "Let's continue with the `BankAccount` class introduced above. Below we have a new method which adds interest to the account:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class BankAccount:\n\n    def __init__(self, account_number: str, owner: str, balance: float, annual_interest: float):\n        self.account_number = account_number\n        self.owner = owner\n        self.balance = balance\n        self.annual_interest = annual_interest\n\n    # This method adds the annual interest to the balance of the account\n    def add_interest(self):\n        self.balance += self.balance * self.annual_interest\n\n\npeters_account = BankAccount(\"12345-678\", \"Peter Python\", 1500.0, 0.015)\npeters_account.add_interest()\nprint(peters_account.balance)",
+      "raw_source": "```python\nclass BankAccount:\n\n    def __init__(self, account_number: str, owner: str, balance: float, annual_interest: float):\n        self.account_number = account_number\n        self.owner = owner\n        self.balance = balance\n        self.annual_interest = annual_interest\n\n    # This method adds the annual interest to the balance of the account\n    def add_interest(self):\n        self.balance += self.balance * self.annual_interest\n\n\npeters_account = BankAccount(\"12345-678\", \"Peter Python\", 1500.0, 0.015)\npeters_account.add_interest()\nprint(peters_account.balance)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "1522.5",
+      "raw_source": "<sample-output>\n\n1522.5\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `add_interest` method multiplies the balance of the account by the annual interest percentage, and then adds the result to the current balance. The method acts only on the object which it is called on.",
+      "raw_source": "The `add_interest` method multiplies the balance of the account by the annual interest percentage, and then adds the result to the current balance. The method acts only on the object which it is called on."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's see how this works when we have created multiple instances of the class:",
+      "raw_source": "Let's see how this works when we have created multiple instances of the class:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# The class BankAccount is defined in the previous example\n\npeters_account = BankAccount(\"12345-678\", \"Peter Python\", 1500.0, 0.015)\npaulas_account = BankAccount(\"99999-999\", \"Paula Pythonen\", 1500.0, 0.05)\npippas_account = BankAccount(\"1111-222\", \"Pippa Programmer\", 1500.0, 0.001)\n\n# Add interest on Peter's and Paula's accounts, but not on Pippa's\npeters_account.add_interest()\npaulas_account.add_interest()\n\n# Print all account balances\nprint(peters_account.balance)\nprint(paulas_account.balance)\nprint(pippas_account.balance)",
+      "raw_source": "```python\n# The class BankAccount is defined in the previous example\n\npeters_account = BankAccount(\"12345-678\", \"Peter Python\", 1500.0, 0.015)\npaulas_account = BankAccount(\"99999-999\", \"Paula Pythonen\", 1500.0, 0.05)\npippas_account = BankAccount(\"1111-222\", \"Pippa Programmer\", 1500.0, 0.001)\n\n# Add interest on Peter's and Paula's accounts, but not on Pippa's\npeters_account.add_interest()\npaulas_account.add_interest()\n\n# Print all account balances\nprint(peters_account.balance)\nprint(paulas_account.balance)\nprint(pippas_account.balance)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "1522.5\n1575.0\n1500.0",
+      "raw_source": "<sample-output>\n\n1522.5\n1575.0\n1500.0\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As you can see above, the annual interest is added only to those accounts which the method is called on. As the annual interest rates are different for Peter's and Paula's accounts, the results are different for these two accounts. The balance on Pippa's account does not change, because the `add_interest` method is not called on the object `pippas_account`.",
+      "raw_source": "As you can see above, the annual interest is added only to those accounts which the method is called on. As the annual interest rates are different for Peter's and Paula's accounts, the results are different for these two accounts. The balance on Pippa's account does not change, because the `add_interest` method is not called on the object `pippas_account`."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Encapsulation",
+      "raw_source": "## Encapsulation"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In object oriented programming the word _client_ comes up from time to time. This is used to refer to a section of code which creates an object and uses the service provided by its methods. When the data contained in an object is used only through the methods it provides, the _internal integrity_ of the object is guaranteed. In practice this means that, for example, a `BankAccount` class offers methods to handle the `balance` attribute, so the balance is never accessed directly by the client. These methods can then verify that the balance is not allowed to go below zero, for instance.",
+      "raw_source": "In object oriented programming the word _client_ comes up from time to time. This is used to refer to a section of code which creates an object and uses the service provided by its methods. When the data contained in an object is used only through the methods it provides, the _internal integrity_ of the object is guaranteed. In practice this means that, for example, a `BankAccount` class offers methods to handle the `balance` attribute, so the balance is never accessed directly by the client. These methods can then verify that the balance is not allowed to go below zero, for instance."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "An example of how this would work:",
+      "raw_source": "An example of how this would work:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class BankAccount:\n\n    def __init__(self, account_number: str, owner: str, balance: float, annual_interest: float):\n        self.account_number = account_number\n        self.owner = owner\n        self.balance = balance\n        self.annual_interest = annual_interest\n\n    # This method adds the annual interest to the balance of the account\n    def add_interest(self):\n        self.balance += self.balance * self.annual_interest\n\n    # This method \"withdraws\" money from the account\n    # If the withdrawal is successful the method returns True, and False otherwise\n    def withdraw(self, amount: float):\n        if amount <= self.balance:\n            self.balance -= amount\n            return True\n\n        return False\n\npeters_account = BankAccount(\"12345-678\", \"Peter Python\", 1500.0, 0.015)\n\nif peters_account.withdraw(1000):\n    print(\"The withdrawal was successful, the balance is now\", peters_account.balance)\nelse:\n    print(\"The withdrawal was unsuccessful, the balance is insufficient\")\n\n# Yritetään uudestaan\nif peters_account.withdraw(1000):\n    print(\"The withdrawal was successful, the balance is now\", peters_account.balance)\nelse:\n    print(\"The withdrawal was unsuccessful, the balance is insufficient\")",
+      "raw_source": "```python\nclass BankAccount:\n\n    def __init__(self, account_number: str, owner: str, balance: float, annual_interest: float):\n        self.account_number = account_number\n        self.owner = owner\n        self.balance = balance\n        self.annual_interest = annual_interest\n\n    # This method adds the annual interest to the balance of the account\n    def add_interest(self):\n        self.balance += self.balance * self.annual_interest\n\n    # This method \"withdraws\" money from the account\n    # If the withdrawal is successful the method returns True, and False otherwise\n    def withdraw(self, amount: float):\n        if amount <= self.balance:\n            self.balance -= amount\n            return True\n\n        return False\n\npeters_account = BankAccount(\"12345-678\", \"Peter Python\", 1500.0, 0.015)\n\nif peters_account.withdraw(1000):\n    print(\"The withdrawal was successful, the balance is now\", peters_account.balance)\nelse:\n    print(\"The withdrawal was unsuccessful, the balance is insufficient\")\n\n# Yritetään uudestaan\nif peters_account.withdraw(1000):\n    print(\"The withdrawal was successful, the balance is now\", peters_account.balance)\nelse:\n    print(\"The withdrawal was unsuccessful, the balance is insufficient\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The withdrawal was successful, the balance is now 500.0\nThe withdrawal was unsuccessful, the balance is insufficient",
+      "raw_source": "<sample-output>\n\nThe withdrawal was successful, the balance is now 500.0\nThe withdrawal was unsuccessful, the balance is insufficient\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Maintaining the internal integrity of the object and offering suitable methods to ensure this is called _encapsulation_. The idea is that the inner workings of the object are hidden from the client, but the object offers methods which can be used to access the data stored in the object.",
+      "raw_source": "Maintaining the internal integrity of the object and offering suitable methods to ensure this is called _encapsulation_. The idea is that the inner workings of the object are hidden from the client, but the object offers methods which can be used to access the data stored in the object."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Adding a method does not automatically hide the attribute. Even though the `BankAccount` class definition contains the `withdraw` method for withdrawing money, the client code can still access and change the `balance` attribute directly:",
+      "raw_source": "Adding a method does not automatically hide the attribute. Even though the `BankAccount` class definition contains the `withdraw` method for withdrawing money, the client code can still access and change the `balance` attribute directly:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "peters_account = BankAccount(\"12345-678\", \"Peter Python\", 1500.0, 0.015)\n\n# Attempt to withdraw 2000\nif peters_account.withdraw(2000):\n    print(\"The withdrawal was successful, the balance is now\", peters_account.balance)\nelse:\n    print(\"The withdrawal was unsuccessful, the balance is insufficient\")\n\n    # \"Force\" the withdrawal of 2000\n    peters_account.balance -= 2000\n\nprint(\"The balance is now:\", peters_account.balance)",
+      "raw_source": "```python\npeters_account = BankAccount(\"12345-678\", \"Peter Python\", 1500.0, 0.015)\n\n# Attempt to withdraw 2000\nif peters_account.withdraw(2000):\n    print(\"The withdrawal was successful, the balance is now\", peters_account.balance)\nelse:\n    print(\"The withdrawal was unsuccessful, the balance is insufficient\")\n\n    # \"Force\" the withdrawal of 2000\n    peters_account.balance -= 2000\n\nprint(\"The balance is now:\", peters_account.balance)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The withdrawal was unsuccessful, the balance is insufficient\nThe balance is now: -500.0",
+      "raw_source": "<sample-output>\n\nThe withdrawal was unsuccessful, the balance is insufficient\nThe balance is now: -500.0\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It is possible to hide the data attributes from the client code, which can help in solving this problem. We will return to this topic in the next part.",
+      "raw_source": "It is possible to hide the data attributes from the client code, which can help in solving this problem. We will return to this topic in the next part."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Decreasing counter",
+        "tmcname": "part08-10_decreasing_counter"
+      },
+      "inner_content": "This exercise has multiple parts. You can submit the parts separately. Each part is worth one exercise point.\n\nThe exercise template contains a partially completed class `DecreasingCounter`:\n\n```python\nclass DecreasingCounter:\n    def __init__(self, initial_value: int):\n        self.value = initial_value\n\n    def print_value(self):\n        print(\"value:\", self.value)\n\n    def decrease(self):\n        pass\n\n    # define the rest of your methods here\n```\n\nThe class can now be used as shown below, and should produce the following printout after completing the first part of the exercise:\n\n```python\ncounter = DecreasingCounter(10)\ncounter.print_value()\ncounter.decrease()\ncounter.print_value()\ncounter.decrease()\ncounter.print_value()\n```\n\n<sample-output>\n\nvalue: 10\nvalue: 9\nvalue: 8\n\n</sample-output>\n\n\n### Decreasing the value of the counter\n\nPlease complete the method `decrease` defined in the template, so that it decreases the value stored in the counter by one. See the example above for expected behaviour.\n\n### The counter must not have a negative value\n\nPlease add functionality to your `decrease` method, so that the value of the counter will never reach negative values. If the value of the counter is 0, it will not be further decreased.\n\n```python\ncounter = DecreasingCounter(2)\ncounter.print_value()\ncounter.decrease()\ncounter.print_value()\ncounter.decrease()\ncounter.print_value()\ncounter.decrease()\ncounter.print_value()\n```\n\n<sample-output>\n\nvalue: 2\nvalue: 1\nvalue: 0\nvalue: 0\n\n</sample-output>\n\n### Setting the value to zero\n\nPlease add a method `set_to_zero` which sets the value of the counter to 0:\n\n```python\ncounter = DecreasingCounter(100)\ncounter.print_value()\ncounter.set_to_zero()\ncounter.print_value()\n```\n\n<sample-output>\n\nvalue: 100\nvalue: 0\n\n</sample-output>\n\n### Resetting the counter\n\nPlease add a method `reset_original_value()` which resets the counter to its initial state:\n\n```python\ncounter = DecreasingCounter(55)\ncounter.decrease()\ncounter.decrease()\ncounter.decrease()\ncounter.decrease()\ncounter.print_value()\ncounter.reset_original_value()\ncounter.print_value()\n```\n\n<sample-output>\n\nvalue: 51\nvalue: 55\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Decreasing counter' tmcname='part08-10_decreasing_counter'>\n\nThis exercise has multiple parts. You can submit the parts separately. Each part is worth one exercise point.\n\nThe exercise template contains a partially completed class `DecreasingCounter`:\n\n```python\nclass DecreasingCounter:\n    def __init__(self, initial_value: int):\n        self.value = initial_value\n\n    def print_value(self):\n        print(\"value:\", self.value)\n\n    def decrease(self):\n        pass\n\n    # define the rest of your methods here\n```\n\nThe class can now be used as shown below, and should produce the following printout after completing the first part of the exercise:\n\n```python\ncounter = DecreasingCounter(10)\ncounter.print_value()\ncounter.decrease()\ncounter.print_value()\ncounter.decrease()\ncounter.print_value()\n```\n\n<sample-output>\n\nvalue: 10\nvalue: 9\nvalue: 8\n\n</sample-output>\n\n\n### Decreasing the value of the counter\n\nPlease complete the method `decrease` defined in the template, so that it decreases the value stored in the counter by one. See the example above for expected behaviour.\n\n### The counter must not have a negative value\n\nPlease add functionality to your `decrease` method, so that the value of the counter will never reach negative values. If the value of the counter is 0, it will not be further decreased.\n\n```python\ncounter = DecreasingCounter(2)\ncounter.print_value()\ncounter.decrease()\ncounter.print_value()\ncounter.decrease()\ncounter.print_value()\ncounter.decrease()\ncounter.print_value()\n```\n\n<sample-output>\n\nvalue: 2\nvalue: 1\nvalue: 0\nvalue: 0\n\n</sample-output>\n\n### Setting the value to zero\n\nPlease add a method `set_to_zero` which sets the value of the counter to 0:\n\n```python\ncounter = DecreasingCounter(100)\ncounter.print_value()\ncounter.set_to_zero()\ncounter.print_value()\n```\n\n<sample-output>\n\nvalue: 100\nvalue: 0\n\n</sample-output>\n\n### Resetting the counter\n\nPlease add a method `reset_original_value()` which resets the counter to its initial state:\n\n```python\ncounter = DecreasingCounter(55)\ncounter.decrease()\ncounter.decrease()\ncounter.decrease()\ncounter.decrease()\ncounter.print_value()\ncounter.reset_original_value()\ncounter.print_value()\n```\n\n<sample-output>\n\nvalue: 51\nvalue: 55\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "To finish off this section, lets have a look at a class which models the personal best of a player. The class definition contains separate validator methods which ascertain that the arguments passed are valid. The methods are called already within the constructor. This ensures the object created is internally sound.",
+      "raw_source": "To finish off this section, lets have a look at a class which models the personal best of a player. The class definition contains separate validator methods which ascertain that the arguments passed are valid. The methods are called already within the constructor. This ensures the object created is internally sound."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from datetime import date\n\nclass PersonalBest:\n\n    def __init__(self, player: str, day: int, month: int, year: int, points: int):\n        # Default values\n        self.player = \"\"\n        self.date_of_pb = date(1900, 1, 1)\n        self.points = 0\n\n        if self.name_ok(player):\n            self.player = player\n\n        if self.date_ok(day, month, year):\n            self.date_of_pb = date(year, month, day)\n\n        if self.points_ok(points):\n            self.points = points\n\n    # Helper methods to check the arguments are valid\n    def name_ok(self, name: str):\n        return len(name) >= 2 # Name should be at least two characters long\n\n    def date_ok(self, day, month, year):\n        try:\n            date(year, month, day)\n            return True\n        except:\n            # an exception is raised if the arguments are not valid\n            return False\n\n    def points_ok(self, points):\n        return points >= 0\n\nif __name__ == \"__main__\":\n    result1 = PersonalBest(\"Peter\", 1, 11, 2020, 235)\n    print(result1.points)\n    print(result1.player)\n    print(result1.date_of_pb)\n\n    # The date was not valid\n    result2 = PersonalBest(\"Paula\", 4, 13, 2019, 4555)\n    print(result2.points)\n    print(result2.player)\n    print(result2.date_of_pb) # Tulostaa oletusarvon 1900-01-01",
+      "raw_source": "```python\nfrom datetime import date\n\nclass PersonalBest:\n\n    def __init__(self, player: str, day: int, month: int, year: int, points: int):\n        # Default values\n        self.player = \"\"\n        self.date_of_pb = date(1900, 1, 1)\n        self.points = 0\n\n        if self.name_ok(player):\n            self.player = player\n\n        if self.date_ok(day, month, year):\n            self.date_of_pb = date(year, month, day)\n\n        if self.points_ok(points):\n            self.points = points\n\n    # Helper methods to check the arguments are valid\n    def name_ok(self, name: str):\n        return len(name) >= 2 # Name should be at least two characters long\n\n    def date_ok(self, day, month, year):\n        try:\n            date(year, month, day)\n            return True\n        except:\n            # an exception is raised if the arguments are not valid\n            return False\n\n    def points_ok(self, points):\n        return points >= 0\n\nif __name__ == \"__main__\":\n    result1 = PersonalBest(\"Peter\", 1, 11, 2020, 235)\n    print(result1.points)\n    print(result1.player)\n    print(result1.date_of_pb)\n\n    # The date was not valid\n    result2 = PersonalBest(\"Paula\", 4, 13, 2019, 4555)\n    print(result2.points)\n    print(result2.player)\n    print(result2.date_of_pb) # Tulostaa oletusarvon 1900-01-01\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "235\nPeter\n2020-11-01\n4555\nPaula\n1900-01-01",
+      "raw_source": "<sample-output>\n\n235\nPeter\n2020-11-01\n4555\nPaula\n1900-01-01\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the example above also the helper methods were called via the `self` parameter name when they were used in the constructor. It is possible to also include _static_ method definitions in class definitions. These are methods which can be called without ever creating an instance of the class. We will return to this subject in the next part.",
+      "raw_source": "In the example above also the helper methods were called via the `self` parameter name when they were used in the constructor. It is possible to also include _static_ method definitions in class definitions. These are methods which can be called without ever creating an instance of the class. We will return to this subject in the next part."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The parameter name `self` is only used when referring to the features of the _object as an instance of the class_. These include both the data attributes and the methods attached to an object. To make the terminology more confusing, the data attributes and methods are together sometimes referred to simply as the _attributes_ of the object, which is why in this material we have often specified _data attributes_ when we mean the variables defined within the class. This is where the terminology of some Python programmers slightly differs from the terminology used in object oriented programming more widely, where _attributes_ usually refers to just the data attributes of an object.",
+      "raw_source": "The parameter name `self` is only used when referring to the features of the _object as an instance of the class_. These include both the data attributes and the methods attached to an object. To make the terminology more confusing, the data attributes and methods are together sometimes referred to simply as the _attributes_ of the object, which is why in this material we have often specified _data attributes_ when we mean the variables defined within the class. This is where the terminology of some Python programmers slightly differs from the terminology used in object oriented programming more widely, where _attributes_ usually refers to just the data attributes of an object."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It is also possible to create local variables within method definitions without referring to `self`. You should do so if there is no need to access the variables outside the method. Local variables within methods have no special keywords; they are used just like any normal variables you have come across thus far.",
+      "raw_source": "It is also possible to create local variables within method definitions without referring to `self`. You should do so if there is no need to access the variables outside the method. Local variables within methods have no special keywords; they are used just like any normal variables you have come across thus far."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "So, for example this would work:",
+      "raw_source": "So, for example this would work:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class BonusCard:\n    def __init__(self, name: str, balance: float):\n        self.name = name\n        self.balance = balance\n\n    def add_bonus(self):\n        # The variable bonus below is a local variable.\n        # It is not a data attribute of the object.\n        # It can not be accessed directly through the object.\n        bonus = self.balance * 0.25\n        self.balance += bonus\n\n    def add_superbonus(self):\n        # The superbonus variable is also a local variable.\n        # Usually helper variables are local variables because\n        # there is no need to access them from the other\n        # methods in the class or directly through an object.\n        superbonus = self.balance * 0.5\n        self.balance += superbonus\n\n    def __str__(self):\n        return f\"BonusCard(name={self.name}, balance={self.balance})\"",
+      "raw_source": "```python\nclass BonusCard:\n    def __init__(self, name: str, balance: float):\n        self.name = name\n        self.balance = balance\n\n    def add_bonus(self):\n        # The variable bonus below is a local variable.\n        # It is not a data attribute of the object.\n        # It can not be accessed directly through the object.\n        bonus = self.balance * 0.25\n        self.balance += bonus\n\n    def add_superbonus(self):\n        # The superbonus variable is also a local variable.\n        # Usually helper variables are local variables because\n        # there is no need to access them from the other\n        # methods in the class or directly through an object.\n        superbonus = self.balance * 0.5\n        self.balance += superbonus\n\n    def __str__(self):\n        return f\"BonusCard(name={self.name}, balance={self.balance})\"\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "First and last name",
+        "tmcname": "part08-11_first_and_last_name"
+      },
+      "inner_content": "Please write a class named `Person` with a _single attribute_ `name`, which is set with an argument given to the constructor.\n\nPlease also add two methods:\n\nThe method `return_first_name` should return the first name of the person, while the method `return_last_name` should return the last name of the person.\n\nYou may assume that the name passed to the constructor will contain exactly two name elements separated with a space character.\n\nAn example use case:\n\n```python\nif __name__ == \"__main__\":\n    peter = Person(\"Peter Pythons\")\n    print(peter.return_first_name())\n    print(peter.return_last_name())\n\n    paula = Person(\"Paula Pythonnen\")\n    print(paula.return_first_name())\n    print(paula.return_last_name())\n```\n\n<sample-output>\n\nPeter\nPythons\nPaula\nPythonnen\n\n</sample-output>",
+      "raw_source": "<programming-exercise name=\"First and last name\" tmcname='part08-11_first_and_last_name'>\n\nPlease write a class named `Person` with a _single attribute_ `name`, which is set with an argument given to the constructor.\n\nPlease also add two methods:\n\nThe method `return_first_name` should return the first name of the person, while the method `return_last_name` should return the last name of the person.\n\nYou may assume that the name passed to the constructor will contain exactly two name elements separated with a space character.\n\nAn example use case:\n\n```python\nif __name__ == \"__main__\":\n    peter = Person(\"Peter Pythons\")\n    print(peter.return_first_name())\n    print(peter.return_last_name())\n\n    paula = Person(\"Paula Pythonnen\")\n    print(paula.return_first_name())\n    print(paula.return_last_name())\n```\n\n<sample-output>\n\nPeter\nPythons\nPaula\nPythonnen\n\n</sample-output>\n\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Statistics on numbers",
+        "tmcname": "part08-12_number_stats"
+      },
+      "inner_content": "In this exercise you are asked to create a program for working with numbers, similarly to the exercise completed at the [end of part 2](/part-2/4-simple-loops#programming-exercise-working-with-numbers) in the Introduction to Programming course. This time you will define a class for the purpose.\n\n### Count the numbers\n\nPlease write a class named `NumberStats` with the following methods:\n\n- the method `add_number` adds a new number to the statistical record\n- the method `count_numbers` returns the count of how many numbers have been added\n\nAt this point there is no need to store the numbers themselves in any data structure. It is enough to simply remember how many have been added. The `add_number` method does take an argument, but there is no need to process the actual value in any way just yet.\n\nThe exercise template contains the following skeleton for the class definition:\n\n```python\nclass  NumberStats:\n    def __init__(self):\n        self.numbers = 0\n\n    def add_number(self, number:int):\n        pass\n\n    def count_numbers(self):\n        pass\n```\n\n```python\nstats = NumberStats()\nstats.add_number(3)\nstats.add_number(5)\nstats.add_number(1)\nstats.add_number(2)\nprint(\"Numbers added:\", stats.count_numbers())\n```\n\n<sample-output>\n\nNumbers added: 4\n\n</sample-output>\n\n### The sum and the mean\n\nPlease add the following methods to your class definition:\n\n- the method `get_sum` should return the sum of the numbers added (if no numbers have been added, the method should return 0)\n- the method `average` should return the mean of the numbers added (if no numbers have been added, the method should return 0)\n\n```python\nstats = NumberStats()\nstats.add_number(3)\nstats.add_number(5)\nstats.add_number(1)\nstats.add_number(2)\nprint(\"Numbers added:\", stats.count_numbers())\nprint(\"Sum of numbers:\", stats.get_sum())\nprint(\"Mean of numbers:\", stats.average())\n```\n\n<sample-output>\n\nNumbers added: 4\nSum of numbers: 11\nMean of numbers: 2.75\n\n</sample-output>\n\n### User input\n\nPlease write a main program which keeps asking the user for integer numbers until the user types in -1. The program should then print out the sum and the mean of the numbers typed in.\n\nYour program should use a `NumberStats` object to keep a record of the numbers added.\n\nNB: you do not need to change the `NumberStats` class in this part of the exercise, provided it passed the tests for the previous part of the exercise. Use an instance of the class to complete this part.\n\nNB2: your main program should not be contained in a `if __name__ == \"__main__\"` block, or the tests will not work.\n\n<sample-output>\n\nPlease type in integer numbers:\n**4**\n**2**\n**5**\n**2**\n**-1**\nSum of numbers: 13\nMean of numbers: 3.25\n\n</sample-output>\n\n### Multiple sums\n\nPlease add to your main program so that it also counts separately the sum of the even and the odd numbers added.\n\nNB: do not change your `NumberStats` class definition in this part of exercise, either. Instead, define three `NumberStats` objects. One of them should keep track of all the numbers, another should track the even numbers, and the third should track the odd numbers typed in.\n\nNB2: your main program should not be contained in a `if __name__ == \"__main__\"` block, or the tests will not work.\n\nPlease have look at this example of how your main function should work:\n\n<sample-output>\n\nPlease type in integer numbers:\n**4**\n**2**\n**5**\n**2**\n**-1**\nSum of numbers: 13\nMean of numbers: 3.25\nSum of even numbers: 8\nSum of odd numbers: 5\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Statistics on numbers' tmcname='part08-12_number_stats'>\n\nIn this exercise you are asked to create a program for working with numbers, similarly to the exercise completed at the [end of part 2](/part-2/4-simple-loops#programming-exercise-working-with-numbers) in the Introduction to Programming course. This time you will define a class for the purpose.\n\n### Count the numbers\n\nPlease write a class named `NumberStats` with the following methods:\n\n- the method `add_number` adds a new number to the statistical record\n- the method `count_numbers` returns the count of how many numbers have been added\n\nAt this point there is no need to store the numbers themselves in any data structure. It is enough to simply remember how many have been added. The `add_number` method does take an argument, but there is no need to process the actual value in any way just yet.\n\nThe exercise template contains the following skeleton for the class definition:\n\n```python\nclass  NumberStats:\n    def __init__(self):\n        self.numbers = 0\n\n    def add_number(self, number:int):\n        pass\n\n    def count_numbers(self):\n        pass\n```\n\n```python\nstats = NumberStats()\nstats.add_number(3)\nstats.add_number(5)\nstats.add_number(1)\nstats.add_number(2)\nprint(\"Numbers added:\", stats.count_numbers())\n```\n\n<sample-output>\n\nNumbers added: 4\n\n</sample-output>\n\n### The sum and the mean\n\nPlease add the following methods to your class definition:\n\n- the method `get_sum` should return the sum of the numbers added (if no numbers have been added, the method should return 0)\n- the method `average` should return the mean of the numbers added (if no numbers have been added, the method should return 0)\n\n```python\nstats = NumberStats()\nstats.add_number(3)\nstats.add_number(5)\nstats.add_number(1)\nstats.add_number(2)\nprint(\"Numbers added:\", stats.count_numbers())\nprint(\"Sum of numbers:\", stats.get_sum())\nprint(\"Mean of numbers:\", stats.average())\n```\n\n<sample-output>\n\nNumbers added: 4\nSum of numbers: 11\nMean of numbers: 2.75\n\n</sample-output>\n\n### User input\n\nPlease write a main program which keeps asking the user for integer numbers until the user types in -1. The program should then print out the sum and the mean of the numbers typed in.\n\nYour program should use a `NumberStats` object to keep a record of the numbers added.\n\nNB: you do not need to change the `NumberStats` class in this part of the exercise, provided it passed the tests for the previous part of the exercise. Use an instance of the class to complete this part.\n\nNB2: your main program should not be contained in a `if __name__ == \"__main__\"` block, or the tests will not work.\n\n<sample-output>\n\nPlease type in integer numbers:\n**4**\n**2**\n**5**\n**2**\n**-1**\nSum of numbers: 13\nMean of numbers: 3.25\n\n</sample-output>\n\n### Multiple sums\n\nPlease add to your main program so that it also counts separately the sum of the even and the odd numbers added.\n\nNB: do not change your `NumberStats` class definition in this part of exercise, either. Instead, define three `NumberStats` objects. One of them should keep track of all the numbers, another should track the even numbers, and the third should track the odd numbers typed in.\n\nNB2: your main program should not be contained in a `if __name__ == \"__main__\"` block, or the tests will not work.\n\nPlease have look at this example of how your main function should work:\n\n<sample-output>\n\nPlease type in integer numbers:\n**4**\n**2**\n**5**\n**2**\n**-1**\nSum of numbers: 13\nMean of numbers: 3.25\nSum of even numbers: 8\nSum of odd numbers: 5\n\n</sample-output>\n\n\n\n</programming-exercise>"
+    }
+  ]
+}

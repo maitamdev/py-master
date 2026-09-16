@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-04_minutes_in_a_year",
+  "lesson_id": "part01-1-getting-started",
+  "part": 1,
+  "tmc_name": "part01-04_minutes_in_a_year",
+  "title_original": "Minutes in a year",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which prints out the number of minutes in a year. Use Python code to perform the calculation, as in the previous code example.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "1a49064d58ad19badf5ecbad6a06bded466bdb706a4b5c263db1132b1c58dc04",
+  "order": 39
+}

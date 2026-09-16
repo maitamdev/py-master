@@ -1,0 +1,658 @@
+{
+  "id": "part04-2-more-functions",
+  "part": 4,
+  "part_slug": "part-4",
+  "slug": "2-more-functions",
+  "is_part_index": false,
+  "title_original": "More functions",
+  "path": "/part-4/2-more-functions",
+  "source_path": "data/part-4/2-more-functions.md",
+  "source_hash": "e6cf02c95d6549082bc3b2ad0ede944efaefb73301dd04f84d2b692926d9e455",
+  "frontmatter": {
+    "path": "/part-4/2-more-functions",
+    "title": "More functions",
+    "hidden": false
+  },
+  "chunks_count": 103,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know more about the arguments and parameters of functions\n- You will know how to return values from functions, and how to use the values in your code\n- You will be able to add type hints for parameters and return values",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know more about the arguments and parameters of functions\n- You will know how to return values from functions, and how to use the values in your code\n- You will be able to add type hints for parameters and return values\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's quickly recap Python functions. Functions are defined with the keyword `def`:",
+      "raw_source": "Let's quickly recap Python functions. Functions are defined with the keyword `def`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def message():\n    print(\"This message was brought to you by a function\")",
+      "raw_source": "```python\ndef message():\n    print(\"This message was brought to you by a function\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This function can be called in your program code like this:",
+      "raw_source": "This function can be called in your program code like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "message()",
+      "raw_source": "```python\nmessage()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Your program would then print out",
+      "raw_source": "Your program would then print out"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "This message was brought to you by a function",
+      "raw_source": "<sample-output>\n\nThis message was brought to you by a function\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "The parameters and arguments of a function",
+      "raw_source": "## The parameters and arguments of a function"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A function can take one or more arguments. When the function is called, the arguments are assigned to variables, which are defined in the function definition. These variables are called parameters, and they are listed inside the parentheses after the function name.",
+      "raw_source": "A function can take one or more arguments. When the function is called, the arguments are assigned to variables, which are defined in the function definition. These variables are called parameters, and they are listed inside the parentheses after the function name."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the following code the function `greet` has one parameter defined, while the function `sum` has two.",
+      "raw_source": "In the following code the function `greet` has one parameter defined, while the function `sum` has two."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def greet(name):\n    print(\"Hello there,\", name)\n\ndef sum(a, b):\n    print(\"The sum of the arguments is\", a + b)",
+      "raw_source": "```python\ndef greet(name):\n    print(\"Hello there,\", name)\n\ndef sum(a, b):\n    print(\"The sum of the arguments is\", a + b)\n```"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "greet(\"Emily\")\nsum(2, 3)",
+      "raw_source": "```python\ngreet(\"Emily\")\nsum(2, 3)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Hello there, Emily\nThe sum of the arguments is 5",
+      "raw_source": "<sample-output>\n\nHello there, Emily\nThe sum of the arguments is 5\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "hint",
+        "name": "Formal vs actual, parameter vs argument"
+      },
+      "inner_content": "The terminology around data passed to functions can feel confusing. To make matters worse, some sources refer to what we have called parameters and arguments as _formal_ and _actual parameters_. Other sources call them _formal_ and _actual arguments_. [The Python documentation](https://docs.python.org/3/glossary.html#term-argument) specifies only the terms _argument_ and _parameter_, so that is what we will use as well.\n\nWhat actually happens when the function call `greet(\"Emily\")` is executed?\n\nIn the function definition `greet(name)` the parameter `name` behaves for all intents and purposes just like a normal variable. We can use it within the function just like we have used variables in the many main functions in our programs thus far.\n\nIn the function call `greet(\"Emily\")` the argument `\"Emily\"` is just like any other string we have come across before. For example, we can assign it to a variable.\n\nSo, when the function call is executed, the value of the argument, `\"Emily\"`, is assigned to the parameter variable `name`. For the duration of _this execution_ of the function, `name = \"Emily\"`. When the function is called with a different argument, the value of `name` will be different.\n\nThis terminology may all seem a bit superfluous, but computer science as a discipline does aim to be as exact a science as possible. Using well defined terminology helps.",
+      "raw_source": "<text-box variant='hint' name='Formal vs actual, parameter vs argument'>\n\nThe terminology around data passed to functions can feel confusing. To make matters worse, some sources refer to what we have called parameters and arguments as _formal_ and _actual parameters_. Other sources call them _formal_ and _actual arguments_. [The Python documentation](https://docs.python.org/3/glossary.html#term-argument) specifies only the terms _argument_ and _parameter_, so that is what we will use as well.\n\nWhat actually happens when the function call `greet(\"Emily\")` is executed?\n\nIn the function definition `greet(name)` the parameter `name` behaves for all intents and purposes just like a normal variable. We can use it within the function just like we have used variables in the many main functions in our programs thus far.\n\nIn the function call `greet(\"Emily\")` the argument `\"Emily\"` is just like any other string we have come across before. For example, we can assign it to a variable.\n\nSo, when the function call is executed, the value of the argument, `\"Emily\"`, is assigned to the parameter variable `name`. For the duration of _this execution_ of the function, `name = \"Emily\"`. When the function is called with a different argument, the value of `name` will be different.\n\nThis terminology may all seem a bit superfluous, but computer science as a discipline does aim to be as exact a science as possible. Using well defined terminology helps.\n\n</text-box>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Error messages when running tests",
+      "raw_source": "## Error messages when running tests"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Most exercises on this course have automatic tests attached to them. If your program doesn't work as specified in the task, the tests will show an error message, which may or may not be helpful. It is usually worth the trouble to read the error message carefully.",
+      "raw_source": "Most exercises on this course have automatic tests attached to them. If your program doesn't work as specified in the task, the tests will show an error message, which may or may not be helpful. It is usually worth the trouble to read the error message carefully."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In some situations the error message might not tell you very much at all. In the next exercise below you may come across this error message:",
+      "raw_source": "In some situations the error message might not tell you very much at all. In the next exercise below you may come across this error message:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "4_2_1.png"
+      },
+      "raw_source": "<img src=\"4_2_1.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The message just states that you should be able to call the function `line` with the specified arguments:",
+      "raw_source": "The message just states that you should be able to call the function `line` with the specified arguments:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "line(5, \"\")",
+      "raw_source": "```python\nline(5, \"\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The actual issue becomes clear when we try executing the function call specified in the error message. You can do this by copying the function call into your program and clicking on the triangle:",
+      "raw_source": "The actual issue becomes clear when we try executing the function call specified in the error message. You can do this by copying the function call into your program and clicking on the triangle:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "4_2_2.png"
+      },
+      "raw_source": "<img src=\"4_2_2.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The last lines produced by the execution, highlighted in the above image, tell us that line 4 of our code causes the error _IndexError: string index out of range_. In the [previous part](/part-3/2-working-with-strings) there was a similar example, where we tried to use an index that fell outside the scope of the string. This time the error appears because we are trying to access the first character of an empty string, that is, a string of length 0.",
+      "raw_source": "The last lines produced by the execution, highlighted in the above image, tell us that line 4 of our code causes the error _IndexError: string index out of range_. In the [previous part](/part-3/2-working-with-strings) there was a similar example, where we tried to use an index that fell outside the scope of the string. This time the error appears because we are trying to access the first character of an empty string, that is, a string of length 0."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Line",
+        "tmcname": "part04-02_line"
+      },
+      "inner_content": "Please write a function named `line`, which takes two arguments: an integer and a string. The function prints out a line of text, the length of which is specified by the first argument. The character used to draw the line should be the first character in the second argument. If the second argument is an empty string, the line should consist of stars.\n\nAn example of expected behaviour:\n\n```python\nline(7, \"%\")\nline(10, \"LOL\")\nline(3, \"\")\n```\n\n<sample-output>\n\n<pre>\n%%%%%%%\nLLLLLLLLLL\n***\n</pre>\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Line' tmcname='part04-02_line'>\n\nPlease write a function named `line`, which takes two arguments: an integer and a string. The function prints out a line of text, the length of which is specified by the first argument. The character used to draw the line should be the first character in the second argument. If the second argument is an empty string, the line should consist of stars.\n\nAn example of expected behaviour:\n\n```python\nline(7, \"%\")\nline(10, \"LOL\")\nline(3, \"\")\n```\n\n<sample-output>\n\n<pre>\n%%%%%%%\nLLLLLLLLLL\n***\n</pre>\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Function calls within function calls",
+      "raw_source": "## Function calls within function calls"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You can call a function from within another function. In fact, we have done so many times before, when we called the `print` function within our own functions in the previous part. Our own functions are functionally no different. In the following example the function `greet_many_times` calls the function `greet` as many times as specified by the argument `times`:",
+      "raw_source": "You can call a function from within another function. In fact, we have done so many times before, when we called the `print` function within our own functions in the previous part. Our own functions are functionally no different. In the following example the function `greet_many_times` calls the function `greet` as many times as specified by the argument `times`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def greet(name):\n    print(\"Hello there,\", name)\n\ndef greet_many_times(name, times):\n    while times > 0:\n        greet(name)\n        times -= 1\n\ngreet_many_times(\"Emily\", 3)",
+      "raw_source": "```python\ndef greet(name):\n    print(\"Hello there,\", name)\n\ndef greet_many_times(name, times):\n    while times > 0:\n        greet(name)\n        times -= 1\n\ngreet_many_times(\"Emily\", 3)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Hello there, Emily\nHello there, Emily\nHello there, Emily",
+      "raw_source": "<sample-output>\n\nHello there, Emily\nHello there, Emily\nHello there, Emily\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "A box of hashes",
+        "tmcname": "part04-03_box_of_hashes"
+      },
+      "inner_content": "Please write a function named `box_of_hashes`, which prints out a rectangle of hash characters. The function takes one argument, which specifies the height of the rectangle. The rectangle should be ten characters wide.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in your `line` function.\n\nSome examples of how the function should work:\n\n```python\nbox_of_hashes(5)\nprint()\nbox_of_hashes(2)\n```\n\n<sample-output>\n\n<pre>\n##########\n##########\n##########\n##########\n##########\n\n##########\n##########\n</pre>\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='A box of hashes' tmcname='part04-03_box_of_hashes'>\n\nPlease write a function named `box_of_hashes`, which prints out a rectangle of hash characters. The function takes one argument, which specifies the height of the rectangle. The rectangle should be ten characters wide.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in your `line` function.\n\nSome examples of how the function should work:\n\n```python\nbox_of_hashes(5)\nprint()\nbox_of_hashes(2)\n```\n\n<sample-output>\n\n<pre>\n##########\n##########\n##########\n##########\n##########\n\n##########\n##########\n</pre>\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "A square of hashes",
+        "tmcname": "part04-04_square_of_hashes"
+      },
+      "inner_content": "Please write a function named `square_of_hashes`, which draws a square of hash characters. The function takes one argument, which determines the length of the side of the square.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in the `line` function.\n\nSome examples:\n\n```python\nsquare_of_hashes(5)\nprint()\nsquare_of_hashes(3)\n```\n\n<sample-output>\n\n<pre>\n#####\n#####\n#####\n#####\n#####\n\n###\n###\n###\n</pre>\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='A square of hashes' tmcname='part04-04_square_of_hashes'>\n\nPlease write a function named `square_of_hashes`, which draws a square of hash characters. The function takes one argument, which determines the length of the side of the square.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in the `line` function.\n\nSome examples:\n\n```python\nsquare_of_hashes(5)\nprint()\nsquare_of_hashes(3)\n```\n\n<sample-output>\n\n<pre>\n#####\n#####\n#####\n#####\n#####\n\n###\n###\n###\n</pre>\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "A square",
+        "tmcname": "part04-05_square"
+      },
+      "inner_content": "Please write a function named `square`, which prints out a square of characters, and takes two arguments. The first parameter specifies the length of the side of the square. The second parameter specifies the character used to draw the square.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in the `line` function.\n\nSome examples:\n\n```python\nsquare(5, \"*\")\nprint()\nsquare(3, \"o\")\n```\n\n<sample-output>\n\n<pre>\n*****\n*****\n*****\n*****\n*****\n\nooo\nooo\nooo\n</pre>\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='A square' tmcname='part04-05_square'>\n\nPlease write a function named `square`, which prints out a square of characters, and takes two arguments. The first parameter specifies the length of the side of the square. The second parameter specifies the character used to draw the square.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in the `line` function.\n\nSome examples:\n\n```python\nsquare(5, \"*\")\nprint()\nsquare(3, \"o\")\n```\n\n<sample-output>\n\n<pre>\n*****\n*****\n*****\n*****\n*****\n\nooo\nooo\nooo\n</pre>\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "A triangle",
+        "tmcname": "part04-06_triangle"
+      },
+      "inner_content": "Please write a function named `triangle`, which draws a triangle of hashes, and takes one argument. The triangle should be as tall and as wide as the value of the argument.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in the `line` function.\n\nSome examples:\n\n```python\ntriangle(6)\nprint()\ntriangle(3)\n```\n\n<sample-output>\n\n<pre>\n#\n##\n###\n####\n#####\n######\n\n#\n##\n###\n</pre>\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='A triangle' tmcname='part04-06_triangle'>\n\nPlease write a function named `triangle`, which draws a triangle of hashes, and takes one argument. The triangle should be as tall and as wide as the value of the argument.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in the `line` function.\n\nSome examples:\n\n```python\ntriangle(6)\nprint()\ntriangle(3)\n```\n\n<sample-output>\n\n<pre>\n#\n##\n###\n####\n#####\n######\n\n#\n##\n###\n</pre>\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "A shape",
+        "tmcname": "part04-07_shape"
+      },
+      "inner_content": "Please write a function named `shape`, which takes four arguments. The first two parameters specify a triangle, as above, and the character used to draw it. The first parameter also specifies the width of a rectangle, while the third parameter specifies its height. The fourth parameter specifies the filler character of the rectangle. The function prints first the triangle, and then the rectangle below it.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in the `line` function.\n\nSome examples:\n\n```python\nshape(5, \"X\", 3, \"*\")\nprint()\nshape(2, \"o\", 4, \"+\")\nprint()\nshape(3, \".\", 0, \",\")\n```\n\n<sample-output>\n\n<pre>\nX\nXX\nXXX\nXXXX\nXXXXX\n*****\n*****\n*****\n\no\noo\n++\n++\n++\n++\n\n.\n..\n...\n</pre>\n\n</sample-output>\n\n**Hint**\n\nDon't try and solve this exercise \"all at once\". A good first step would be to make sure you can print the triangle reliably. Then you can try adding the rectangle.\n\nThis is one of the most important skills of a programmer: **concentrate on small, tangible sections of the problem at a time**. Solve and verify partial solutions, and use them to build towards a complete solution.",
+      "raw_source": "<programming-exercise name='A shape' tmcname='part04-07_shape'>\n\nPlease write a function named `shape`, which takes four arguments. The first two parameters specify a triangle, as above, and the character used to draw it. The first parameter also specifies the width of a rectangle, while the third parameter specifies its height. The fourth parameter specifies the filler character of the rectangle. The function prints first the triangle, and then the rectangle below it.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in the `line` function.\n\nSome examples:\n\n```python\nshape(5, \"X\", 3, \"*\")\nprint()\nshape(2, \"o\", 4, \"+\")\nprint()\nshape(3, \".\", 0, \",\")\n```\n\n<sample-output>\n\n<pre>\nX\nXX\nXXX\nXXXX\nXXXXX\n*****\n*****\n*****\n\no\noo\n++\n++\n++\n++\n\n.\n..\n...\n</pre>\n\n</sample-output>\n\n**Hint**\n\nDon't try and solve this exercise \"all at once\". A good first step would be to make sure you can print the triangle reliably. Then you can try adding the rectangle.\n\nThis is one of the most important skills of a programmer: **concentrate on small, tangible sections of the problem at a time**. Solve and verify partial solutions, and use them to build towards a complete solution.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "A spruce",
+        "tmcname": "part04-08_spruce"
+      },
+      "inner_content": "Please write a function named `spruce`, which takes one argument. The function prints out the text `a spruce!`, and the a spruce tree, the size of which is specified by the argument.\n\nCalling `spruce(3)` should print out\n\n<sample-output>\n\n<pre>\na spruce!\n  *\n ***\n*****\n  *\n</pre>\n\n</sample-output>\n\nCalling `spruce(5)` should print out\n\n<sample-output>\n\n<pre>\na spruce!\n    *\n   ***\n  *****\n *******\n*********\n    *\n</pre>\n\n</sample-output>\n\n**NB: to the left of the spruce there should be exactly the right amount of whitespace**. If the shape of the spruce looks correct, but the left edge of the tree is not touching the left edge of the text area in the terminal, the tests will not accept the solution.",
+      "raw_source": "<programming-exercise name='A spruce' tmcname='part04-08_spruce'>\n\nPlease write a function named `spruce`, which takes one argument. The function prints out the text `a spruce!`, and the a spruce tree, the size of which is specified by the argument.\n\nCalling `spruce(3)` should print out\n\n<sample-output>\n\n<pre>\na spruce!\n  *\n ***\n*****\n  *\n</pre>\n\n</sample-output>\n\nCalling `spruce(5)` should print out\n\n<sample-output>\n\n<pre>\na spruce!\n    *\n   ***\n  *****\n *******\n*********\n    *\n</pre>\n\n</sample-output>\n\n**NB: to the left of the spruce there should be exactly the right amount of whitespace**. If the shape of the spruce looks correct, but the left edge of the tree is not touching the left edge of the text area in the terminal, the tests will not accept the solution.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "The return value of a function",
+      "raw_source": "## The return value of a function"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Functions can also return values. For instance, the built-in Python function `input` _returns_ an input string typed in by the user. The value returned by a function can be stored in a variable:",
+      "raw_source": "Functions can also return values. For instance, the built-in Python function `input` _returns_ an input string typed in by the user. The value returned by a function can be stored in a variable:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "word = input(\"Please type in a word: \")",
+      "raw_source": "```python\nword = input(\"Please type in a word: \")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When you want an integer value from the user, the input from the user has to be converted into an integer. The function we've used for this purpose is `int`, and it also returns a value:",
+      "raw_source": "When you want an integer value from the user, the input from the user has to be converted into an integer. The function we've used for this purpose is `int`, and it also returns a value:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number = int(input(\"Please type in an integer: \"))",
+      "raw_source": "```python\nnumber = int(input(\"Please type in an integer: \"))\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The function `int` takes the string returned by `input` as its argument, and returns an integer type value, if an integer can be parsed from the string.",
+      "raw_source": "The function `int` takes the string returned by `input` as its argument, and returns an integer type value, if an integer can be parsed from the string."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "The return statement",
+      "raw_source": "## The return statement"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The functions you define yourself can also return values. To do this you need the `return` statement. For example, the following function `my_sum` returns the sum of its parameters:",
+      "raw_source": "The functions you define yourself can also return values. To do this you need the `return` statement. For example, the following function `my_sum` returns the sum of its parameters:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def my_sum(a, b):\n    return a + b\n\nresult = my_sum(2, 3)\n\nprint(\"Sum:\", result)",
+      "raw_source": "```python\ndef my_sum(a, b):\n    return a + b\n\nresult = my_sum(2, 3)\n\nprint(\"Sum:\", result)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Sum: 5",
+      "raw_source": "<sample-output>\n\nSum: 5\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here's another example of a return value. This function asks for the user's name and returns the string the user types in:",
+      "raw_source": "Here's another example of a return value. This function asks for the user's name and returns the string the user types in:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def ask_for_name():\n    name = input(\"What is your name? \")\n    return name\n\nname = ask_for_name()\nprint(\"Hello there,\", name)",
+      "raw_source": "```python\ndef ask_for_name():\n    name = input(\"What is your name? \")\n    return name\n\nname = ask_for_name()\nprint(\"Hello there,\", name)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "What is your name? **Anna**\nHello there, Anna",
+      "raw_source": "<sample-output>\n\nWhat is your name? **Anna**\nHello there, Anna\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `return` statement ends the execution of the function immediately. The following is a nifty way to create a comparison function:",
+      "raw_source": "The `return` statement ends the execution of the function immediately. The following is a nifty way to create a comparison function:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def smallest(a,b):\n    if a < b:\n        return a\n    return b\n\nprint(smallest(3, 7))\nprint(smallest(5, 2))",
+      "raw_source": "```python\ndef smallest(a,b):\n    if a < b:\n        return a\n    return b\n\nprint(smallest(3, 7))\nprint(smallest(5, 2))\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The idea here is that if `a` is smaller than `b`, the function returns `a` and exits immediately. If not, the execution continues to the next line, where the value `b` is returned. A function can never execute two separate `return` statements with a single function call.",
+      "raw_source": "The idea here is that if `a` is smaller than `b`, the function returns `a` and exits immediately. If not, the execution continues to the next line, where the value `b` is returned. A function can never execute two separate `return` statements with a single function call."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "3\n2",
+      "raw_source": "<sample-output>\n\n3\n2\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You can make use of the `return` statement even if the function doesn't return a value. Its purpose then is to end the execution of the function:",
+      "raw_source": "You can make use of the `return` statement even if the function doesn't return a value. Its purpose then is to end the execution of the function:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def greet(name):\n    if name == \"\":\n        print(\"???\")\n        return\n    print(\"Hello there,\", name)\n\ngreet(\"Emily\")\ngreet(\"\")\ngreet(\"Mark\")",
+      "raw_source": "```python\ndef greet(name):\n    if name == \"\":\n        print(\"???\")\n        return\n    print(\"Hello there,\", name)\n\ngreet(\"Emily\")\ngreet(\"\")\ngreet(\"Mark\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the argument (which gets stored in the variable `name`) is an empty string, the function prints out `???` and exits.",
+      "raw_source": "If the argument (which gets stored in the variable `name`) is an empty string, the function prints out `???` and exits."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Hello there, Emily\n???\nHello there, Mark",
+      "raw_source": "<sample-output>\n\nHello there, Emily\n???\nHello there, Mark\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Using return values from functions",
+      "raw_source": "## Using return values from functions"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We already know that the return values of functions can be stored in variables:",
+      "raw_source": "We already know that the return values of functions can be stored in variables:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def my_sum(a, b):\n    return a + b\n\nresult = my_sum(4, 6)\nprint(\"The sum is\", result)",
+      "raw_source": "```python\ndef my_sum(a, b):\n    return a + b\n\nresult = my_sum(4, 6)\nprint(\"The sum is\", result)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The sum is 10",
+      "raw_source": "<sample-output>\n\nThe sum is 10\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The return value of a function is a value just like any other. It is not necessary to store it in a variable in order to give it as an argument to the `print` command:",
+      "raw_source": "The return value of a function is a value just like any other. It is not necessary to store it in a variable in order to give it as an argument to the `print` command:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "print(\"The sum is\", my_sum(4, 6))",
+      "raw_source": "```python\nprint(\"The sum is\", my_sum(4, 6))\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The return value of a function can become the argument of another function:",
+      "raw_source": "The return value of a function can become the argument of another function:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def my_sum(a, b):\n    return a+b\n\ndef difference(a, b):\n    return a-b\n\nresult = difference(my_sum(5, 2), my_sum(2, 3))\nprint(\"The result is\", result)",
+      "raw_source": "```python\ndef my_sum(a, b):\n    return a+b\n\ndef difference(a, b):\n    return a-b\n\nresult = difference(my_sum(5, 2), my_sum(2, 3))\nprint(\"The result is\", result)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The result is 2",
+      "raw_source": "<sample-output>\n\nThe result is 2\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In this case the inner function calls `my_sum(5, 2)` and `my_sum(2, 3)` are executed first. The values they return (7 and 5) are used as the arguments of the outer function call.",
+      "raw_source": "In this case the inner function calls `my_sum(5, 2)` and `my_sum(2, 3)` are executed first. The values they return (7 and 5) are used as the arguments of the outer function call."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The outer function call `difference(7, 5)` returns the value 2, which is stored in the variable `result` and printed out.",
+      "raw_source": "The outer function call `difference(7, 5)` returns the value 2, which is stored in the variable `result` and printed out."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In summary, values returned by functions work exactly like any other value in Python. They can be printed out, stored in variables, used in expressions and used as arguments in other function calls.",
+      "raw_source": "In summary, values returned by functions work exactly like any other value in Python. They can be printed out, stored in variables, used in expressions and used as arguments in other function calls."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "The difference between return and print",
+      "raw_source": "## The difference between return and print"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Sometimes the difference between a function _returning_ a value and a _print statement_ within a function can be confusing. Let's have a look at two different ways of implementing a function for working out which of two values is greater:",
+      "raw_source": "Sometimes the difference between a function _returning_ a value and a _print statement_ within a function can be confusing. Let's have a look at two different ways of implementing a function for working out which of two values is greater:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def max1(a, b):\n    if a > b:\n        return a\n    else:\n        return b\n\ndef max2(a, b):\n    if a > b:\n        print(a)\n    else:\n        print(b)\n\nresult = max1(3, 5)\nprint(result)\n\nmax2(7, 2)",
+      "raw_source": "```python\ndef max1(a, b):\n    if a > b:\n        return a\n    else:\n        return b\n\ndef max2(a, b):\n    if a > b:\n        print(a)\n    else:\n        print(b)\n\nresult = max1(3, 5)\nprint(result)\n\nmax2(7, 2)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "5\n7",
+      "raw_source": "<sample-output>\n\n5\n7\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Both versions seem to be working just fine, as the maximum values are printed correctly. There is a fundamental difference between the two, however. The first of the two functions, `max1`, does not print out anything on its own, but instead it _returns_ the value which is greater. If we execute the following line",
+      "raw_source": "Both versions seem to be working just fine, as the maximum values are printed correctly. There is a fundamental difference between the two, however. The first of the two functions, `max1`, does not print out anything on its own, but instead it _returns_ the value which is greater. If we execute the following line"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "max1(3, 5)",
+      "raw_source": "```python\nmax1(3, 5)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "nothing seems to happen. The return value of the function has to be _used_ in some way in the code which called the function. For instance, it can be stored in a variable and printed out:",
+      "raw_source": "nothing seems to happen. The return value of the function has to be _used_ in some way in the code which called the function. For instance, it can be stored in a variable and printed out:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "result = max1(3, 5)\nprint(result)",
+      "raw_source": "```python\nresult = max1(3, 5)\nprint(result)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The second version, `max2`, uses the `print` command _within the function_ to print out the greater value. If we want to see the value, it is enough to call the function",
+      "raw_source": "The second version, `max2`, uses the `print` command _within the function_ to print out the greater value. If we want to see the value, it is enough to call the function"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "max2(7, 5)",
+      "raw_source": "```python\nmax2(7, 5)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "and the greater value is printed out. The downside of this handy function is that the value worked out by the function is not available for use in the program which called it. That is why functions which return values are often the better option.",
+      "raw_source": "and the greater value is printed out. The downside of this handy function is that the value worked out by the function is not available for use in the program which called it. That is why functions which return values are often the better option."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "The greatest number",
+        "tmcname": "part04-09_greatest_number"
+      },
+      "inner_content": "Please write a function named  `greatest_number`, which takes three arguments. The function returns the greatest in value of the three.\n\nAn example of how the function is used:\n\n```python\nprint(greatest_number(3, 4, 1)) # 4\nprint(greatest_number(99, -4, 7)) # 99\nprint(greatest_number(0, 0, 0)) # 0\n```",
+      "raw_source": "<programming-exercise name='The greatest number' tmcname='part04-09_greatest_number'>\n\nPlease write a function named  `greatest_number`, which takes three arguments. The function returns the greatest in value of the three.\n\nAn example of how the function is used:\n\n```python\nprint(greatest_number(3, 4, 1)) # 4\nprint(greatest_number(99, -4, 7)) # 99\nprint(greatest_number(0, 0, 0)) # 0\n```\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Same characters",
+        "tmcname": "part04-10_same_characters"
+      },
+      "inner_content": "Please write a function named `same_chars`, which takes one string and two integers as arguments. The integers refer to indexes within the string. The function should return `True` if the two characters at the indexes specified are the same. Otherwise, and especially if either of the indexes falls outside the scope of the string, the function returns `False`.\n\nSome examples of how the function is used:\n\n```python\n# same characters m and m\nprint(same_chars(\"programmer\", 6, 7)) # True\n\n# different characters p and r\nprint(same_chars(\"programmer\", 0, 4)) # False\n\n# the second index is not within the string\nprint(same_chars(\"programmer\", 0, 12)) # False\n```",
+      "raw_source": "<programming-exercise name='Same characters' tmcname='part04-10_same_characters'>\n\nPlease write a function named `same_chars`, which takes one string and two integers as arguments. The integers refer to indexes within the string. The function should return `True` if the two characters at the indexes specified are the same. Otherwise, and especially if either of the indexes falls outside the scope of the string, the function returns `False`.\n\nSome examples of how the function is used:\n\n```python\n# same characters m and m\nprint(same_chars(\"programmer\", 6, 7)) # True\n\n# different characters p and r\nprint(same_chars(\"programmer\", 0, 4)) # False\n\n# the second index is not within the string\nprint(same_chars(\"programmer\", 0, 12)) # False\n```\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "First, second and last words",
+        "tmcname": "part04-11_first_second_last"
+      },
+      "inner_content": "Please write three functions: `first_word`, `second_word` and `last_word`. Each function takes a string argument.\n\nAs their names imply, the functions return either the first, the second or the last word in the sentence they receive as their string argument.\n\nIn each case you may assume the argument string contains at least two separate words, and all words are separated by exactly one space character. There will be no spaces in the beginning or at the end of the argument strings.\n\n```python\nsentence = \"it was a dark and stormy python\"\n\nprint(first_word(sentence)) # it\nprint(second_word(sentence)) # was\nprint(last_word(sentence)) # python\n```\n\n<sample-output>\n\nit\nwas\npython\n\n</sample-output>\n\n```python\nsentence = \"it was\"\n\nprint(second_word(sentence)) # was\nprint(last_word(sentence)) # was\n```",
+      "raw_source": "<programming-exercise name='First, second and last words' tmcname='part04-11_first_second_last'>\n\nPlease write three functions: `first_word`, `second_word` and `last_word`. Each function takes a string argument.\n\nAs their names imply, the functions return either the first, the second or the last word in the sentence they receive as their string argument.\n\nIn each case you may assume the argument string contains at least two separate words, and all words are separated by exactly one space character. There will be no spaces in the beginning or at the end of the argument strings.\n\n```python\nsentence = \"it was a dark and stormy python\"\n\nprint(first_word(sentence)) # it\nprint(second_word(sentence)) # was\nprint(last_word(sentence)) # python\n```\n\n<sample-output>\n\nit\nwas\npython\n\n</sample-output>\n\n```python\nsentence = \"it was\"\n\nprint(second_word(sentence)) # was\nprint(last_word(sentence)) # was\n```\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "The type of the argument",
+      "raw_source": "## The type of the argument"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A quick recap of the data types we've come across so far:",
+      "raw_source": "A quick recap of the data types we've come across so far:"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Type          | Python data type | Example\n:-------------|:----------------:|------\ninteger       | `int`            | `23`\nfloating point number | `float`  | `-0.45`\nstring        | `str`            | `\"Peter Python\"`\nBoolean value | `bool`           | `True`",
+      "raw_source": "Type          | Python data type | Example\n:-------------|:----------------:|------\ninteger       | `int`            | `23`\nfloating point number | `float`  | `-0.45`\nstring        | `str`            | `\"Peter Python\"`\nBoolean value | `bool`           | `True`"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When you call a function, it will only work correctly if the arguments you give it are of the right type. Let's have a look at an example:",
+      "raw_source": "When you call a function, it will only work correctly if the arguments you give it are of the right type. Let's have a look at an example:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def print_many_times(message, times):\n    while times > 0:\n        print(message)\n        times -= 1",
+      "raw_source": "```python\ndef print_many_times(message, times):\n    while times > 0:\n        print(message)\n        times -= 1\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The function works as expected if we call it like this:",
+      "raw_source": "The function works as expected if we call it like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "print_many_times(\"Hello there\", 5)",
+      "raw_source": "```python\nprint_many_times(\"Hello there\", 5)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Hello there\nHello there\nHello there\nHello there\nHello there",
+      "raw_source": "<sample-output>\n\nHello there\nHello there\nHello there\nHello there\nHello there\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "However, if we give the function an argument of the wrong type, it will not work:",
+      "raw_source": "However, if we give the function an argument of the wrong type, it will not work:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "print_many_times(\"Hello there\", \"Emily\")",
+      "raw_source": "```python\nprint_many_times(\"Hello there\", \"Emily\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "TypeError: '>' not supported between instances of 'str' and 'int'",
+      "raw_source": "<sample-output>\n\nTypeError: '>' not supported between instances of 'str' and 'int'\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The problem here is that the second parameter `times` is compared to an integer, `0`, on line 2 of the function definition. The argument given was `\"Emily\"`, which is a string, not an integer. Strings and integers cannot be compared so simply, so an error ensues.",
+      "raw_source": "The problem here is that the second parameter `times` is compared to an integer, `0`, on line 2 of the function definition. The argument given was `\"Emily\"`, which is a string, not an integer. Strings and integers cannot be compared so simply, so an error ensues."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "To avoid issues like this you can include _type hints_ in your function definitions. The type hint specifies the type of the argument intended for the function:",
+      "raw_source": "To avoid issues like this you can include _type hints_ in your function definitions. The type hint specifies the type of the argument intended for the function:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def print_many_times(message : str, times : int):\n    while times > 0:\n        print(message)\n        times -= 1",
+      "raw_source": "```python\ndef print_many_times(message : str, times : int):\n    while times > 0:\n        print(message)\n        times -= 1\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This tells anyone using the function that the argument stored in `message` is supposed to be a string, and the argument stored in `times` is supposed to be an integer.",
+      "raw_source": "This tells anyone using the function that the argument stored in `message` is supposed to be a string, and the argument stored in `times` is supposed to be an integer."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Similarly, the return value of a function can be hinted at in the function definition:",
+      "raw_source": "Similarly, the return value of a function can be hinted at in the function definition:"
+    },
+    {
+      "raw_type": "code",
+      "language": "",
+      "code": "",
+      "raw_source": "```python\ndef ask_for_name() -> str:\n    name = input(\"Mikä on nimesi? \")\n    return name\n ```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This tells the user of the function that the function is supposed to return a string.",
+      "raw_source": "This tells the user of the function that the function is supposed to return a string."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "**NB:** Type hinting is literally just hinting about the type of the argument or the return value. It is not a guarantee of type, and definitely not a safeguard against type errors. If a function receives an argument or returns a value of the wrong type, the function is still executed, but it might not work correctly.",
+      "raw_source": "**NB:** Type hinting is literally just hinting about the type of the argument or the return value. It is not a guarantee of type, and definitely not a safeguard against type errors. If a function receives an argument or returns a value of the wrong type, the function is still executed, but it might not work correctly."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!---\nA quiz to review the contents of this section:",
+      "raw_source": "<!---\nA quiz to review the contents of this section:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "fb289a3b-288a-5a9f-b3d2-07ceae5866ea"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"fb289a3b-288a-5a9f-b3d2-07ceae5866ea\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    }
+  ]
+}

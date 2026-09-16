@@ -1,0 +1,438 @@
+{
+  "id": "part11-1-list-comprehensions",
+  "part": 11,
+  "part_slug": "part-11",
+  "slug": "1-list-comprehensions",
+  "is_part_index": false,
+  "title_original": "List comprehensions",
+  "path": "/part-11/1-list-comprehensions",
+  "source_path": "data/part-11/1-list-comprehensions.md",
+  "source_hash": "806b30b71da061cb3c2c1de14d7d59b9b32bee3fa663caf049ff3af04e1e4c8e",
+  "frontmatter": {
+    "path": "/part-11/1-list-comprehensions",
+    "title": "List comprehensions",
+    "hidden": false
+  },
+  "chunks_count": 69,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know what list comprehensions are\n- You will be able to use list comprehensions to create new lists",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know what list comprehensions are\n- You will be able to use list comprehensions to create new lists\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "One of the situations where programming is at its most powerful is processing sequences of items and events. Computers are good at repeating things. For example, in the previous parts of this material we have been iterating over strings, lists and dictionaries in various ways.",
+      "raw_source": "One of the situations where programming is at its most powerful is processing sequences of items and events. Computers are good at repeating things. For example, in the previous parts of this material we have been iterating over strings, lists and dictionaries in various ways."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's assume we have a list of integers, and we would need the same list of items in string format. A traditional way of completing the task could look like this:",
+      "raw_source": "Let's assume we have a list of integers, and we would need the same list of items in string format. A traditional way of completing the task could look like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "numbers = [1, 2, 3, 6, 5, 4, 7]\n\nstrings = []\nfor number in numbers:\n    strings.append(str(number))",
+      "raw_source": "```python\nnumbers = [1, 2, 3, 6, 5, 4, 7]\n\nstrings = []\nfor number in numbers:\n    strings.append(str(number))\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "List comprehensions",
+      "raw_source": "## List comprehensions"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "There is also a more \"pythonic\" way of generating lists from existing lists. These are called _list comprehensions_.",
+      "raw_source": "There is also a more \"pythonic\" way of generating lists from existing lists. These are called _list comprehensions_."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The idea is to fit on a single line both the description of what should be done to each item on the list, and the assignment of the result to a new list.",
+      "raw_source": "The idea is to fit on a single line both the description of what should be done to each item on the list, and the assignment of the result to a new list."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the above example, the operation performed on each item on the list was very simple: each integer was converted into a string. Let's see what this would look like implemented with a list comprehension:",
+      "raw_source": "In the above example, the operation performed on each item on the list was very simple: each integer was converted into a string. Let's see what this would look like implemented with a list comprehension:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "numbers = [1, 2, 3, 6, 5, 4, 7]\nstrings = [str(number) for number in numbers]",
+      "raw_source": "```python\nnumbers = [1, 2, 3, 6, 5, 4, 7]\nstrings = [str(number) for number in numbers]\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The second line above contains many of the same elements as the more traditional iterative apporach, but the syntax is different. One way of generalising a list comprehension statement would be",
+      "raw_source": "The second line above contains many of the same elements as the more traditional iterative apporach, but the syntax is different. One way of generalising a list comprehension statement would be"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "`[<expression> for <item> in <series>]`",
+      "raw_source": "`[<expression> for <item> in <series>]`"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The square brackets around the list comprehension statement signal to Python that the result should be a new list. One by one, each item in the original list is processed, and the result is stored in the new list, just like in the iterative approach above. As a result we have a new list with exactly as many items as were in the original, and all items have been processed in an identical fashion.",
+      "raw_source": "The square brackets around the list comprehension statement signal to Python that the result should be a new list. One by one, each item in the original list is processed, and the result is stored in the new list, just like in the iterative approach above. As a result we have a new list with exactly as many items as were in the original, and all items have been processed in an identical fashion."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "(NB: the originals for the images in this part are temporarily missing, which is why there is some Finnish vocabulary in the illustrations in this part. We are working on fixing this.)",
+      "raw_source": "(NB: the originals for the images in this part are temporarily missing, which is why there is some Finnish vocabulary in the illustrations in this part. We are working on fixing this.)"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "11_1_2.png"
+      },
+      "raw_source": "<img src=\"11_1_2.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "List comprehensions can handle much more complicated operations as well. We can perform calculations, such as multiplying the original items by ten:",
+      "raw_source": "List comprehensions can handle much more complicated operations as well. We can perform calculations, such as multiplying the original items by ten:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "numbers = list(range(1,10))\nprint(numbers)\n\nnumbers_multiplied = [number * 10 for number in numbers]\nprint(numbers_multiplied)",
+      "raw_source": "```python\nnumbers = list(range(1,10))\nprint(numbers)\n\nnumbers_multiplied = [number * 10 for number in numbers]\nprint(numbers_multiplied)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[1, 2, 3, 4, 5, 6, 7, 8, 9]\n[10, 20, 30, 40, 50, 60, 70, 80, 90]",
+      "raw_source": "<sample-output>\n\n[1, 2, 3, 4, 5, 6, 7, 8, 9]\n[10, 20, 30, 40, 50, 60, 70, 80, 90]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In fact, the expression within the list comprehension statement can be any Python expression. You can even call functions you've defined yourself:",
+      "raw_source": "In fact, the expression within the list comprehension statement can be any Python expression. You can even call functions you've defined yourself:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def factorial(n: int):\n    \"\"\" The function calculates the factorial n! for integers above zero \"\"\"\n    k = 1\n    while n >= 2:\n        k *= n\n        n -= 1\n    return k\n\nif __name__ == \"__main__\":\n    numbers = [5, 2, 4, 3, 0]\n    factorials = [factorial(number) for number in numbers]\n    print(factorials)",
+      "raw_source": "```python\ndef factorial(n: int):\n    \"\"\" The function calculates the factorial n! for integers above zero \"\"\"\n    k = 1\n    while n >= 2:\n        k *= n\n        n -= 1\n    return k\n\nif __name__ == \"__main__\":\n    numbers = [5, 2, 4, 3, 0]\n    factorials = [factorial(number) for number in numbers]\n    print(factorials)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[120, 2, 24, 6, 1]",
+      "raw_source": "<sample-output>\n\n[120, 2, 24, 6, 1]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "With the more familiar `for` loop the same process could be expressed like this:",
+      "raw_source": "With the more familiar `for` loop the same process could be expressed like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def factorial(n: int):\n    \"\"\" The function calculates the factorial n! for integers above zero \"\"\"\n    k = 1\n    while n >= 2:\n        k *= n\n        n -= 1\n    return k\n\nif __name__ == \"__main__\":\n    numbers = [5, 2, 4, 3, 0]\n    factorials = []\n    for number in numbers:\n        factorials.append(factorial(number))\n    print(factorials)",
+      "raw_source": "```python\ndef factorial(n: int):\n    \"\"\" The function calculates the factorial n! for integers above zero \"\"\"\n    k = 1\n    while n >= 2:\n        k *= n\n        n -= 1\n    return k\n\nif __name__ == \"__main__\":\n    numbers = [5, 2, 4, 3, 0]\n    factorials = []\n    for number in numbers:\n        factorials.append(factorial(number))\n    print(factorials)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "List comprehensions allow us to express the same functionality more consisely, usually without losing any of the readability.",
+      "raw_source": "List comprehensions allow us to express the same functionality more consisely, usually without losing any of the readability."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We can also return a list comprehension statement from a function directly. If we needed a function for producing factorials for lists of numbers, we could achieve it very concisely:",
+      "raw_source": "We can also return a list comprehension statement from a function directly. If we needed a function for producing factorials for lists of numbers, we could achieve it very concisely:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def factorials(numbers: list):\n    return [factorial(number) for number in numbers]",
+      "raw_source": "```python\ndef factorials(numbers: list):\n    return [factorial(number) for number in numbers]\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Square roots",
+        "tmcname": "part11-01_square_roots"
+      },
+      "inner_content": "Please write a function named `square_roots(numbers: list)` which takes a list of integers as its argument. The function should return a new list containing the square roots of the original integers. \n\nThe [math](https://docs.python.org/3/library/math.html) module from the Python standard library contains a suitable function for calculating the square root.\n\nThe function should use a list comprehension. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nlines = square_roots([1,2,3,4])\nfor line in lines:\n    print(line)\n```\n\n<sample-output>\n\n1.0\n1.4142135623730951\n1.7320508075688772\n2.0\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Square roots' tmcname='part11-01_square_roots'>\n\nPlease write a function named `square_roots(numbers: list)` which takes a list of integers as its argument. The function should return a new list containing the square roots of the original integers. \n\nThe [math](https://docs.python.org/3/library/math.html) module from the Python standard library contains a suitable function for calculating the square root.\n\nThe function should use a list comprehension. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nlines = square_roots([1,2,3,4])\nfor line in lines:\n    print(line)\n```\n\n<sample-output>\n\n1.0\n1.4142135623730951\n1.7320508075688772\n2.0\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Rows of stars",
+        "tmcname": "part11-02_rows_of_stars"
+      },
+      "inner_content": "Please write a function named `rows_of_stars(numbers: list)` which takes a list of integers as its argument. The function should return a new list containing rows of stars. The length of each row should correspond to the integer at the same index in the original list. The function should use a list comprehension to achieve this.\n\nThe maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nrows = rows_of_stars([1,2,3,4])\nfor row in rows:\n    print(row)\n\nprint()\n\nrows = rows_of_stars([4, 3, 2, 1, 10])\nfor row in rows:\n    print(row)\n```\n\n<sample-output>\n\n<pre>\n*\n**\n***\n****\n\n****\n***\n**\n*\n**********\n</pre>\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Rows of stars' tmcname='part11-02_rows_of_stars'>\n\nPlease write a function named `rows_of_stars(numbers: list)` which takes a list of integers as its argument. The function should return a new list containing rows of stars. The length of each row should correspond to the integer at the same index in the original list. The function should use a list comprehension to achieve this.\n\nThe maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nrows = rows_of_stars([1,2,3,4])\nfor row in rows:\n    print(row)\n\nprint()\n\nrows = rows_of_stars([4, 3, 2, 1, 10])\nfor row in rows:\n    print(row)\n```\n\n<sample-output>\n\n<pre>\n*\n**\n***\n****\n\n****\n***\n**\n*\n**********\n</pre>\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Best exam result",
+        "tmcname": "part11-03_best_exam_result"
+      },
+      "inner_content": "The exercise template contains the class definition `ExamResult`. The class has the following public attributes:\n\n* name\n* grade1\n* grade2\n* grade3\n\nPlease write a function named `best_results(results: list)` which takes a list of ExamResult objects as its argument.\n\nThe function should return a new list containing only the best result from each ExamResult object. The function should use a list comprehension to achieve this.\n\nThe maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nresult1 = ExamResult(\"Peter\",5,3,4)\nresult2 = ExamResult(\"Pippa\",3,4,1)\nresult3 = ExamResult(\"Paul\",2,1,3)\nresults = [result1, result2, result3]\nprint(best_results(results))\n```\n\n<sample-output>\n\n[5, 4, 3]\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Best exam result' tmcname='part11-03_best_exam_result'>\n\nThe exercise template contains the class definition `ExamResult`. The class has the following public attributes:\n\n* name\n* grade1\n* grade2\n* grade3\n\nPlease write a function named `best_results(results: list)` which takes a list of ExamResult objects as its argument.\n\nThe function should return a new list containing only the best result from each ExamResult object. The function should use a list comprehension to achieve this.\n\nThe maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nresult1 = ExamResult(\"Peter\",5,3,4)\nresult2 = ExamResult(\"Pippa\",3,4,1)\nresult3 = ExamResult(\"Paul\",2,1,3)\nresults = [result1, result2, result3]\nprint(best_results(results))\n```\n\n<sample-output>\n\n[5, 4, 3]\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Lengths",
+        "tmcname": "part11-04_lengths"
+      },
+      "inner_content": "Please write a function named `lengths(lists: list)` which takes a list containing lists of integers as its argument. The function should return a new list, containing the lengths of the lists within the argument list.\n\nThe function should use a list comprehension to achieve this. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nlists = [[1,2,3,4,5], [324, -1, 31, 7],[]]\nprint(lengths(lists))\n```\n\n<sample-output>\n\n[5, 4, 0]\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Lengths' tmcname='part11-04_lengths'>\n\nPlease write a function named `lengths(lists: list)` which takes a list containing lists of integers as its argument. The function should return a new list, containing the lengths of the lists within the argument list.\n\nThe function should use a list comprehension to achieve this. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nlists = [[1,2,3,4,5], [324, -1, 31, 7],[]]\nprint(lengths(lists))\n```\n\n<sample-output>\n\n[5, 4, 0]\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Filtering items",
+      "raw_source": "## Filtering items"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the examples above all of our lists remained the same length before and after a list comprehension operation. In each case, all the items in the original list were used as the basis of the new list. But sometimes we only need _some_ of the original items. How can this be achieved?",
+      "raw_source": "In the examples above all of our lists remained the same length before and after a list comprehension operation. In each case, all the items in the original list were used as the basis of the new list. But sometimes we only need _some_ of the original items. How can this be achieved?"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A list comprehension statement also allows for a condition, so that we can check the items against the condition and select only those which match. The general syntax is as follows:",
+      "raw_source": "A list comprehension statement also allows for a condition, so that we can check the items against the condition and select only those which match. The general syntax is as follows:"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "`[<expression> for <item> in <series> if <Boolean expression>]`",
+      "raw_source": "`[<expression> for <item> in <series> if <Boolean expression>]`"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The statement above is otherwise identical to the general form introduced in the beginning of this section, but now there is an if statement at the end. Only those items from the original list for which the Boolean expression is true are used as the basis of the new list.",
+      "raw_source": "The statement above is otherwise identical to the general form introduced in the beginning of this section, but now there is an if statement at the end. Only those items from the original list for which the Boolean expression is true are used as the basis of the new list."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the example below we select all the even items from the original list as the basis of the new list. In fact, these items are not further processed in any way; they are assigned to the new list as is:",
+      "raw_source": "In the example below we select all the even items from the original list as the basis of the new list. In fact, these items are not further processed in any way; they are assigned to the new list as is:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "numbers = [1, 1, 2, 3, 4, 6, 4, 5, 7, 10, 12, 3]\n\neven_items = [item for item in numbers if item % 2 == 0]\nprint(even_items)",
+      "raw_source": "```python\nnumbers = [1, 1, 2, 3, 4, 6, 4, 5, 7, 10, 12, 3]\n\neven_items = [item for item in numbers if item % 2 == 0]\nprint(even_items)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[2, 4, 6, 4, 10, 12]",
+      "raw_source": "<sample-output>\n\n[2, 4, 6, 4, 10, 12]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The expression in the list comprehension statement above is just a simple `item`, which means that no operations are to be performed on the items in the list. The expression could be any Python expression, just like in the previous examples. For example, the following list comprehension statement takes all the even items in a list, multiplies each by ten, and stores the result in a new list:",
+      "raw_source": "The expression in the list comprehension statement above is just a simple `item`, which means that no operations are to be performed on the items in the list. The expression could be any Python expression, just like in the previous examples. For example, the following list comprehension statement takes all the even items in a list, multiplies each by ten, and stores the result in a new list:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "numbers = [1, 1, 2, 3, 4, 6, 4, 5, 7, 10, 12, 3]\n\neven_items = [item * 10 for item in numbers if item % 2 == 0]\nprint(even_items)",
+      "raw_source": "```python\nnumbers = [1, 1, 2, 3, 4, 6, 4, 5, 7, 10, 12, 3]\n\neven_items = [item * 10 for item in numbers if item % 2 == 0]\nprint(even_items)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[20, 40, 60, 40, 100, 120]",
+      "raw_source": "<sample-output>\n\n[20, 40, 60, 40, 100, 120]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As you come across more and more complicated list comprehensions, you may find it useful to try reading the condition first. After all, the items are processed only if they pass the test, so it often makes sense to first figure out which items pass the filtering stage. Sometimes the expression in a list comprehension statement would not even be possible for all the items in the original list.",
+      "raw_source": "As you come across more and more complicated list comprehensions, you may find it useful to try reading the condition first. After all, the items are processed only if they pass the test, so it often makes sense to first figure out which items pass the filtering stage. Sometimes the expression in a list comprehension statement would not even be possible for all the items in the original list."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "For example, the factorial operation is only defined for non-negative integers. If we can't be sure a list only contains values of zero or above, the contents have to be filtered before passing them on to the factorial function we made before:",
+      "raw_source": "For example, the factorial operation is only defined for non-negative integers. If we can't be sure a list only contains values of zero or above, the contents have to be filtered before passing them on to the factorial function we made before:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def factorial(n: int):\n    \"\"\" The function calculates the factorial n! for integers above zero \"\"\"\n    k = 1\n    while n >= 2:\n        k *= n\n        n -= 1\n    return k\n\nif __name__ == \"__main__\":\n    numbers = [-2, 3, -1, 4, -10, 5, 1]\n    factorials = [factorial(number) for number in numbers if number >= 0]\n    print(factorials)",
+      "raw_source": "```python\ndef factorial(n: int):\n    \"\"\" The function calculates the factorial n! for integers above zero \"\"\"\n    k = 1\n    while n >= 2:\n        k *= n\n        n -= 1\n    return k\n\nif __name__ == \"__main__\":\n    numbers = [-2, 3, -1, 4, -10, 5, 1]\n    factorials = [factorial(number) for number in numbers if number >= 0]\n    print(factorials)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[6, 24, 120, 1]",
+      "raw_source": "<sample-output>\n\n[6, 24, 120, 1]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As we saw in our very first list comprehension example, where integers were converted into strings, the items in the new list do not have to be of the same type as the items in the original list. Continuing from the factorial example above, we can create a tuple from each original item and its processed counterpart, and store these in a list, combining everything we've learned so far in a single list comprehension statement:",
+      "raw_source": "As we saw in our very first list comprehension example, where integers were converted into strings, the items in the new list do not have to be of the same type as the items in the original list. Continuing from the factorial example above, we can create a tuple from each original item and its processed counterpart, and store these in a list, combining everything we've learned so far in a single list comprehension statement:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def factorial(n: int):\n    \"\"\" The function calculates the factorial n! for integers above zero \"\"\"\n    k = 1\n    while n >= 2:\n        k *= n\n        n -= 1\n    return k\n\nif __name__ == \"__main__\":\n    numbers = [-2, 3, 2, 1, 4, -10, 5, 1, 6]\n    # the variable name abbreviated here so that this would be easier to read\n    factorials = [(n, factorial(n)) for n in numbers if n > 0 and n % 2 == 0]\n    print(factorials)",
+      "raw_source": "```python\ndef factorial(n: int):\n    \"\"\" The function calculates the factorial n! for integers above zero \"\"\"\n    k = 1\n    while n >= 2:\n        k *= n\n        n -= 1\n    return k\n\nif __name__ == \"__main__\":\n    numbers = [-2, 3, 2, 1, 4, -10, 5, 1, 6]\n    # the variable name abbreviated here so that this would be easier to read\n    factorials = [(n, factorial(n)) for n in numbers if n > 0 and n % 2 == 0]\n    print(factorials)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[(2, 2), (4, 24), (6, 720)]",
+      "raw_source": "<sample-output>\n\n[(2, 2), (4, 24), (6, 720)]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Picking the above example apart, we have the Boolean expression `n > 0 and n % 2 == 0`. This means that only items which are both positive and divisible by two are accepted for further processing from the original list.",
+      "raw_source": "Picking the above example apart, we have the Boolean expression `n > 0 and n % 2 == 0`. This means that only items which are both positive and divisible by two are accepted for further processing from the original list."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "These positive, even numbers are then each in turn processed into the format `(n, factorial(n))`. This is a tuple, where the first item is the number itself, and the second item is the result returned by the factorial function.",
+      "raw_source": "These positive, even numbers are then each in turn processed into the format `(n, factorial(n))`. This is a tuple, where the first item is the number itself, and the second item is the result returned by the factorial function."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Remove smaller than",
+        "tmcname": "part11-05_remove_smaller_than"
+      },
+      "inner_content": "Please write a function named `remove_smaller_than(numbers: list, limit: int)` which takes a list of integers and a limit value (also in integer format) as its arguments.\n\nThe function should use a list comprehension to produce a new list without the values which are smaller than the limit value.\n\nThe maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nAn example of the function in use:\n\n```python\nnumbers = [1,65, 32, -6, 9, 11]\nprint(remove_smaller_than(numbers, 10))\n\nprint(remove_smaller_than([-4, 7, 8, -100], 0))\n```\n\n<sample-output>\n\n[65, 32, 11]\n[7, 8]\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Remove smaller than' tmcname='part11-05_remove_smaller_than'>\n\nPlease write a function named `remove_smaller_than(numbers: list, limit: int)` which takes a list of integers and a limit value (also in integer format) as its arguments.\n\nThe function should use a list comprehension to produce a new list without the values which are smaller than the limit value.\n\nThe maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nAn example of the function in use:\n\n```python\nnumbers = [1,65, 32, -6, 9, 11]\nprint(remove_smaller_than(numbers, 10))\n\nprint(remove_smaller_than([-4, 7, 8, -100], 0))\n```\n\n<sample-output>\n\n[65, 32, 11]\n[7, 8]\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Begin with a vowel",
+        "tmcname": "part11-06_begin_with_vowel"
+      },
+      "inner_content": "Please write a function named `begin_with_vowel(words: list)` which takes a list of strings as its argument.\n\nThe function should use a list comprehension technique to create and return a new list, containing only those words from the original list which begin with a vowel (a, e, i, o, u). Both lowercase and uppercase letters should be accepted.\n\nThe maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nAn example of the function in use:\n\n```python\nword_list = [\"automobile\",\"motorbike\",\"Animal\",\"cat\",\"Dog\",\"APPLE\",\"orange\"]\nfor vowelled in begin_with_vowel(word_list):\n    print(vowelled)\n```\n\n<sample-output>\n\nautomobile\nAnimal\nAPPLE\norange\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Begin with a vowel' tmcname='part11-06_begin_with_vowel'>\n\nPlease write a function named `begin_with_vowel(words: list)` which takes a list of strings as its argument.\n\nThe function should use a list comprehension technique to create and return a new list, containing only those words from the original list which begin with a vowel (a, e, i, o, u). Both lowercase and uppercase letters should be accepted.\n\nThe maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nAn example of the function in use:\n\n```python\nword_list = [\"automobile\",\"motorbike\",\"Animal\",\"cat\",\"Dog\",\"APPLE\",\"orange\"]\nfor vowelled in begin_with_vowel(word_list):\n    print(vowelled)\n```\n\n<sample-output>\n\nautomobile\nAnimal\nAPPLE\norange\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Alternative execution with list comprehensions",
+      "raw_source": "## Alternative execution with list comprehensions"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Often when we have a conditional statement, we also include an `else` branch. As we can use conditions in list comprehensions, the else branch is also available with list comprehensions. The general syntax of the conditional used with list comprehensions looks like this:",
+      "raw_source": "Often when we have a conditional statement, we also include an `else` branch. As we can use conditions in list comprehensions, the else branch is also available with list comprehensions. The general syntax of the conditional used with list comprehensions looks like this:"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "`<expression 1> if <condition> else <expression 2>`",
+      "raw_source": "`<expression 1> if <condition> else <expression 2>`"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We came across these single line conditionals, or ternary operators, already in [part 7](/part-7/6-more-features). The expression above evaluates to either `expression 1` or `expression 2`, depending on whether the condition is true or false.",
+      "raw_source": "We came across these single line conditionals, or ternary operators, already in [part 7](/part-7/6-more-features). The expression above evaluates to either `expression 1` or `expression 2`, depending on whether the condition is true or false."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As a refresher on the subject, if we needed to print out the larger of two numbers, and we wanted to use just a single print statement, we could fit it all on a single line:",
+      "raw_source": "As a refresher on the subject, if we needed to print out the larger of two numbers, and we wanted to use just a single print statement, we could fit it all on a single line:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number1 = int(input(\"Type in number 1:\"))\nnumber2 = int(input(\"Type in number 2:\"))\nprint (number1 if number1 > number2 else number2)",
+      "raw_source": "```python\nnumber1 = int(input(\"Type in number 1:\"))\nnumber2 = int(input(\"Type in number 2:\"))\nprint (number1 if number1 > number2 else number2)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Combining the ternary operator syntax with a list comprehension statement yields the following general structure:",
+      "raw_source": "Combining the ternary operator syntax with a list comprehension statement yields the following general structure:"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "`[<expression 1> if <condition> else <expression 2> for <item> in <series>]`",
+      "raw_source": "`[<expression 1> if <condition> else <expression 2> for <item> in <series>]`"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This may look a little confusing, as the conditional structure now comes before the actual list comprehension part. This is just the way the syntax has been defined, at least at the moment. If there is also an `else` branch, the conditional comes first. If there is just an `if`, it goes to the end. You can try swapping them around and see what happens.",
+      "raw_source": "This may look a little confusing, as the conditional structure now comes before the actual list comprehension part. This is just the way the syntax has been defined, at least at the moment. If there is also an `else` branch, the conditional comes first. If there is just an `if`, it goes to the end. You can try swapping them around and see what happens."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Including an else operator means that we will again process every item from the original list. Depending on whether the condition is true or false, either `expression 1` or `expression 2` is performed on each item on the list.",
+      "raw_source": "Including an else operator means that we will again process every item from the original list. Depending on whether the condition is true or false, either `expression 1` or `expression 2` is performed on each item on the list."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following example checks if the items on a list are zero or above. Any such item is accepted as is, but all negative items are negated, so that the sign is changed from negative to positive. The result is a list containing the absolute values of the items in the original list.",
+      "raw_source": "The following example checks if the items on a list are zero or above. Any such item is accepted as is, but all negative items are negated, so that the sign is changed from negative to positive. The result is a list containing the absolute values of the items in the original list."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "numbers = [1, -3, 45, -110, 2, 9, -11]\nabs_vals = [number if number >= 0 else -number for number in numbers]\nprint(abs_vals)",
+      "raw_source": "```python\nnumbers = [1, -3, 45, -110, 2, 9, -11]\nabs_vals = [number if number >= 0 else -number for number in numbers]\nprint(abs_vals)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[1, 3, 45, 110, 2, 9, 11]",
+      "raw_source": "<sample-output>\n\n[1, 3, 45, 110, 2, 9, 11]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Reiterating what happens above: if the condition `number >= 0` is true, the item undergoes expression `number`, and the result is the item itself. If the condition is false, the item undergoes expression `-number`, so that it becomes positive in value.",
+      "raw_source": "Reiterating what happens above: if the condition `number >= 0` is true, the item undergoes expression `number`, and the result is the item itself. If the condition is false, the item undergoes expression `-number`, so that it becomes positive in value."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the following example we have the function `string_lengths` which takes a list as its argument, and returns another list with the lengths of any strings in the original list. This function is okay with list items of any type, however. If the item is a string, it calculates its length. If the item is anything else, it inserts -1 in the list it returns.",
+      "raw_source": "In the following example we have the function `string_lengths` which takes a list as its argument, and returns another list with the lengths of any strings in the original list. This function is okay with list items of any type, however. If the item is a string, it calculates its length. If the item is anything else, it inserts -1 in the list it returns."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def string_lengths(my_list: list):\n    \"\"\" The function returns the lengths of strings in a new list \"\"\"\n    return [len(item) if type(item) == str else -1 for item in my_list]\n\nif __name__ == \"__main__\":\n    test_list = [\"hi\", 3, True, \"there\", -123.344, \"toodlepip\", 2, False]\n    lengths = string_lengths(test_list)\n    print(lengths)",
+      "raw_source": "```python\ndef string_lengths(my_list: list):\n    \"\"\" The function returns the lengths of strings in a new list \"\"\"\n    return [len(item) if type(item) == str else -1 for item in my_list]\n\nif __name__ == \"__main__\":\n    test_list = [\"hi\", 3, True, \"there\", -123.344, \"toodlepip\", 2, False]\n    lengths = string_lengths(test_list)\n    print(lengths)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[2, -1, -1, 5, -1, 9, -1, -1]",
+      "raw_source": "<sample-output>\n\n[2, -1, -1, 5, -1, 9, -1, -1]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Lottery numbers",
+        "tmcname": "part11-07_lottery_numbers"
+      },
+      "inner_content": "## LotteryNumbers matched\n\nPlease write a class named `LotteryNumbers` which takes the week number (an integer value) and a list of seven integers as its constructor arguments. The list should contain the correct lottery numbers for the given week. \n\nPlease also write a method named `number_of_hits(numbers: list)` which takes a list of integers as its argument. The method returns the number of correct entries in the parameter list.\n\nThe method should use a list comprehension to achieve this. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nAn example of how the class and function are used:\n\n```python\nweek5 = LotteryNumbers(5, [1,2,3,4,5,6,7])\nmy_numbers = [1,4,7,11,13,19,24]\n\nprint(week5.number_of_hits(my_numbers))\n```\n\n<sample-output>\n\n3\n\n</sample-output>\n\n## LotteryNumbers matched in place\n\nPlease write a method named `hits_in_place(numbers)` which takes a list of seven integers as its argument, and returns a new list of seven integers. The new list contains only those items from the original list which match the week's correct numbers. These must remain at the same indexes as they were in the original list. The rest of the indexes should be filled with values `-1`.\n\nThe method should use a list comprehension to achieve this. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nPlease take a look at the example below:\n\n```python\nweek8 = LotteryNumbers(8, [1,2,3,10,20,30,33])\nmy_numbers = [1,4,7,10,11,20,30]\n\nprint(week8.hits_in_place(my_numbers))\n```\n\n<sample-output>\n\n[1, -1, -1, 10, -1, 20, 30]\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Lottery numbers' tmcname='part11-07_lottery_numbers'>\n\n## LotteryNumbers matched\n\nPlease write a class named `LotteryNumbers` which takes the week number (an integer value) and a list of seven integers as its constructor arguments. The list should contain the correct lottery numbers for the given week. \n\nPlease also write a method named `number_of_hits(numbers: list)` which takes a list of integers as its argument. The method returns the number of correct entries in the parameter list.\n\nThe method should use a list comprehension to achieve this. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nAn example of how the class and function are used:\n\n```python\nweek5 = LotteryNumbers(5, [1,2,3,4,5,6,7])\nmy_numbers = [1,4,7,11,13,19,24]\n\nprint(week5.number_of_hits(my_numbers))\n```\n\n<sample-output>\n\n3\n\n</sample-output>\n\n## LotteryNumbers matched in place\n\nPlease write a method named `hits_in_place(numbers)` which takes a list of seven integers as its argument, and returns a new list of seven integers. The new list contains only those items from the original list which match the week's correct numbers. These must remain at the same indexes as they were in the original list. The rest of the indexes should be filled with values `-1`.\n\nThe method should use a list comprehension to achieve this. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nPlease take a look at the example below:\n\n```python\nweek8 = LotteryNumbers(8, [1,2,3,10,20,30,33])\nmy_numbers = [1,4,7,10,11,20,30]\n\nprint(week8.hits_in_place(my_numbers))\n```\n\n<sample-output>\n\n[1, -1, -1, 10, -1, 20, 30]\n\n</sample-output>\n\n</programming-exercises>"
+    }
+  ]
+}

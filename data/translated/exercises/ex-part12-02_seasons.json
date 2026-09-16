@@ -1,0 +1,16 @@
+{
+  "id": "ex-part12-02_seasons",
+  "lesson_id": "part12-1-functions-as-arguments",
+  "part": 12,
+  "tmc_name": "part12-02_seasons",
+  "title_original": "Sort by number of seasons",
+  "title_vi": "Sắp xếp theo số mùa",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `sort_by_seasons(items: list)` which takes a list of dictionaries as its argument. Each dictionary contains the information of a single TV show. The function should sort this list by the number of seasons each show has, in ascending order. The function should not change the original list, but return a new list instead.\n\nThe function should work as follows:\n\n```python\nshows = [{ \"name\": \"Dexter\", \"rating\" : 8.6, \"seasons\":9 }, { \"name\": \"Friends\", \"rating\" : 8.9, \"seasons\":10 },  { \"name\": \"Simpsons\", \"rating\" : 8.7, \"seasons\":32 }  ]\n\nfor show in sort_by_seasons(shows):\n    print(f\"{show['name']} {show['seasons']} seasons\")\n```\n\n<sample-output>\nDexter 9 seasons\nFriends 10 seasons\nSimpsons 32 seasons\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `sort_by_seasons(items: list)` lấy danh sách các từ điển làm đối số. Mỗi từ điển chứa thông tin của một chương trình truyền hình. Hàm sẽ sắp xếp danh sách này theo số mùa mà mỗi chương trình có, theo thứ tự tăng dần. Hàm không được thay đổi danh sách ban đầu mà thay vào đó sẽ trả về một danh sách mới.\n\nChức năng này sẽ hoạt động như sau:\n\n```python\nshows = [{ \"name\": \"Dexter\", \"rating\" : 8.6, \"seasons\":9 }, { \"name\": \"Friends\", \"rating\" : 8.9, \"seasons\":10 },  { \"name\": \"Simpsons\", \"rating\" : 8.7, \"seasons\":32 }  ]\n\nfor show in sort_by_seasons(shows):\n    print(f\"{show['name']} {show['seasons']} seasons\")\n```\n\n<sample-output>\nDexter 9 mùa\nBạn bè 10 mùa\nGia đình Simpson 32 mùa\n</sample-output>",
+  "starter_code": "shows = [{ \"name\": \"Dexter\", \"rating\" : 8.6, \"seasons\":9 }, { \"name\": \"Friends\", \"rating\" : 8.9, \"seasons\":10 },  { \"name\": \"Simpsons\", \"rating\" : 8.7, \"seasons\":32 }  ]\n\nfor show in sort_by_seasons(shows):\n    print(f\"{show['name']} {show['seasons']} seasons\")",
+  "grading_data_available": false,
+  "source_hash": "b52b0c6b42d58f841c23d82f265010cf4d204497a23641fc99137ec4f99c359f",
+  "order": 27
+}

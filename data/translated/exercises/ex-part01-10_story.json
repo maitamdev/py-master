@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-10_story",
+  "lesson_id": "part01-2-information-from-the-user",
+  "part": 1,
+  "tmc_name": "part01-10_story",
+  "title_original": "Story",
+  "title_vi": "Câu chuyện",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which prints out the following story. The user gives a name and a year, which should be inserted into the printout.\n\n<sample-output>\n\nPlease type in a name: **Mary**\nPlease type in a year: **1572**\n\nMary is a valiant knight, born in the year 1572. One morning Mary woke up to an awful racket: a dragon was approaching the village. Only Mary could save the village's residents.\n\n</sample-output>\n\nThe story should change according to the input given by the user.",
+  "description_vi": "Hãy viết chương trình in ra câu chuyện sau đây. Người dùng cung cấp tên và năm sẽ được chèn vào bản in.\n\n<sample-output>\n\nVui lòng nhập tên: **Mary**\nVui lòng nhập năm: **1572**\n\nMary là một hiệp sĩ dũng cảm, sinh năm 1572. Một buổi sáng Mary thức dậy với một tiếng ồn ào khủng khiếp: một con rồng đang tiến đến gần ngôi làng. Chỉ có Mary mới có thể cứu được cư dân trong làng.\n\n</sample-output>\n\nCâu chuyện sẽ thay đổi theo thông tin đầu vào do người dùng đưa ra.",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "91cc8462d527f7d577dfe2997c06a01dc9efc45f051ab83a3afa6466aecf4a27",
+  "order": 38
+}

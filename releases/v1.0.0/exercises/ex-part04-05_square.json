@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-05_square",
+  "lesson_id": "part04-2-more-functions",
+  "part": 4,
+  "tmc_name": "part04-05_square",
+  "title_original": "A square",
+  "title_vi": "một hình vuông",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `square`, which prints out a square of characters, and takes two arguments. The first parameter specifies the length of the side of the square. The second parameter specifies the character used to draw the square.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in the `line` function.\n\nSome examples:\n\n```python\nsquare(5, \"*\")\nprint()\nsquare(3, \"o\")\n```\n\n<sample-output>\n\n<pre>\n*****\n*****\n*****\n*****\n*****\n\nooo\nooo\nooo\n</pre>\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `square` để in ra một hình vuông gồm các ký tự và nhận hai đối số. Tham số đầu tiên chỉ định độ dài cạnh của hình vuông. Tham số thứ hai chỉ định ký tự được sử dụng để vẽ hình vuông.\n\nHàm sẽ gọi hàm `line` từ bài tập trên để in ra thực tế. Sao chép lời giải của bạn cho bài tập đó phía trên mã của bài tập này. Vui lòng không thay đổi bất cứ điều gì trong chức năng `line`.\n\nMột số ví dụ:\n\n```python\nsquare(5, \"*\")\nprint()\nsquare(3, \"o\")\n```\n\n<sample-output>\n\n<pre>\n*****\n*****\n*****\n*****\n*****\n\nôi\nôi\nôi\n</pre>\n\n</sample-output>",
+  "starter_code": "square(5, \"*\")\nprint()\nsquare(3, \"o\")",
+  "grading_data_available": false,
+  "source_hash": "9c4b17c1d9475391c7d8190938f51f9107d7001a5ce17593d961b49a84ae7323",
+  "order": 31
+}

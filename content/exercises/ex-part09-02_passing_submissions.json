@@ -1,0 +1,16 @@
+{
+  "id": "ex-part09-02_passing_submissions",
+  "lesson_id": "part09-1-objects-and-references",
+  "part": 9,
+  "tmc_name": "part09-02_passing_submissions",
+  "title_original": "Passing submissions",
+  "title_vi": "Vượt qua bài nộp",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The exercise template contains a class named `ExamSubmission` which, as the name implies, models an examinee's submission in an exam. The class has two attributes defined: `examinee (str)` and `points (int)`.\n\nPlease write a function named `passed(submissions: list, lowest_passing: int)` which takes a list of exam submissions and an integer number representing the lowest passing grade as its arguments.\n\nThe function should create and return a new list, which contains only the passed submissions from the original list. Please do not change the list given as an argument, or make any changes to the `ExamSubmission` class definition.\n\nYou may use the following code to test your function:\n\n```python\nif __name__ == \"__main__\":\n    s1 = ExamSubmission(\"Peter\", 12)\n    s2 = ExamSubmission(\"Pippa\", 19)\n    s3 = ExamSubmission(\"Paul\", 15)\n    s4 = ExamSubmission(\"Phoebe\", 9)\n    s5 = ExamSubmission(\"Persephone\", 17)\n\n    passes = passed([s1, s2, s3, s4, s5], 15)\n    for passing in passes:\n        print(passing)\n```\n\n<sample-output>\n\nExamSubmission (examinee: Pippa, points: 19)\nExamSubmission (examinee: Paul, points: 15)\nExamSubmission (examinee: Persephone, points: 17)",
+  "description_vi": "Mẫu bài tập chứa một lớp có tên `ExamSubmission`, đúng như tên gọi của nó, mô hình hóa bài nộp của thí sinh trong một bài kiểm tra. Lớp này có hai thuộc tính được xác định: `examinee (str)` và `points (int)`.\n\nVui lòng viết một hàm có tên `passed(submissions: list, lowest_passing: int)` để lấy danh sách các bài thi đã nộp và một số nguyên biểu thị điểm đậu thấp nhất làm đối số.\n\nHàm sẽ tạo và trả về một danh sách mới, danh sách này chỉ chứa các bài gửi đã được chuyển từ danh sách ban đầu. Vui lòng không thay đổi danh sách được đưa ra làm đối số hoặc thực hiện bất kỳ thay đổi nào đối với định nghĩa lớp `ExamSubmission`.\n\nBạn có thể sử dụng đoạn mã sau để kiểm tra chức năng của mình:\n\n```python\nif __name__ == \"__main__\":\n    s1 = ExamSubmission(\"Peter\", 12)\n    s2 = ExamSubmission(\"Pippa\", 19)\n    s3 = ExamSubmission(\"Paul\", 15)\n    s4 = ExamSubmission(\"Phoebe\", 9)\n    s5 = ExamSubmission(\"Persephone\", 17)\n\n    passes = passed([s1, s2, s3, s4, s5], 15)\n    for passing in passes:\n        print(passing)\n```\n\n<sample-output>\n\nBài thi nộp (người thi: Pippa, điểm: 19)\nBài thi nộp (người kiểm tra: Paul, điểm: 15)\nBài thi (người thi: Persephone, điểm: 17)",
+  "starter_code": "if __name__ == \"__main__\":\n    s1 = ExamSubmission(\"Peter\", 12)\n    s2 = ExamSubmission(\"Pippa\", 19)\n    s3 = ExamSubmission(\"Paul\", 15)\n    s4 = ExamSubmission(\"Phoebe\", 9)\n    s5 = ExamSubmission(\"Persephone\", 17)\n\n    passes = passed([s1, s2, s3, s4, s5], 15)\n    for passing in passes:\n        print(passing)",
+  "grading_data_available": false,
+  "source_hash": "0e5a4b2e97858fe8258656b3a5e4c38ca728b64b2251ed35b4d2657447bb4ae7",
+  "order": 6
+}

@@ -1,0 +1,1150 @@
+{
+  "id": "part01-5-conditional-statements",
+  "part": 1,
+  "part_slug": "part-1",
+  "slug": "5-conditional-statements",
+  "is_part_index": false,
+  "title_original": "Conditional statements",
+  "title_vi": "",
+  "path": "/part-1/5-conditional-statements",
+  "source_path": "data/part-1/5-conditional-statements.md",
+  "source_hash": "6e3b5df56734958d39a4db638407003e8926ae85bef23cccfe5d6516d35e3abb",
+  "order": 1,
+  "blocks_count": 62,
+  "blocks": [
+    {
+      "id": "blk-part01-5-conditional-statements-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "69a6535fbccb4085a6bf3f15343779086c57495b5d1604c6828fb8832fc9e994",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be able to use a simple conditional statement in programming\n- You will know what a Boolean value is\n- You will be able to express conditionals with comparison operators"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "18e486bc57119d8f35d857c52498e9029bd7d1c1cc8c216ef7601f460565398e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Thus far, every program we have written has been executed line by line in order. Instead of executing every line of code every single time a program is run, it is often useful to create sections of the program which are only executed in certain situations."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "be9f774a826d57f0fd5f434c33723af9bf70e867e03d8499d1e97a6f16f03409",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "For example, the following code checks whether the user is of age:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0004",
+      "type": "code",
+      "order": 4,
+      "source_hash": "d35bcc174e06ed96210f37e87fe37290ec242e48a60968f6c64a11dbd2c6fd5f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "age = int(input(\"How old are you? \"))\n\nif age > 17:\n    print(\"You are of age!\")\n    print(\"Here's a copy of GTA6 for you.\")\n\nprint(\"Next customer, please!\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "age = int(input(\"How old are you? \"))\n\nif age > 17:\n    print(\"You are of age!\")\n    print(\"Here's a copy of GTA6 for you.\")\n\nprint(\"Next customer, please!\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d35bcc174e06ed96210f37e87fe37290ec242e48a60968f6c64a11dbd2c6fd5f",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "ce7e064fa90edc8e4239203de79a17adf23450053e0f39575bb0b7a5aaa43def",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When the user is over the age of 17, the execution of the program should look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0006",
+      "type": "sample_output",
+      "order": 6,
+      "source_hash": "8a450e41fe78047296efec58268a49fc6917e2a4764af7d90f10cfeba9042d9d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "How old are you? **18**\nYou are of age!\nHere's a copy of GTA6 for you.\nNext customer, please!"
+      },
+      "translation": {
+        "language": "text",
+        "content": "How old are you? **18**\nYou are of age!\nHere's a copy of GTA6 for you.\nNext customer, please!"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHow old are you? **18**\nYou are of age!\nHere's a copy of GTA6 for you.\nNext customer, please!\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "06bfa2f052918f6505a0bddc926ceb0c9f1701133c7addead86363ed39dc6b53",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If the user is 17 or under, only this is printed out:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0008",
+      "type": "sample_output",
+      "order": 8,
+      "source_hash": "67edebff5ae8d4d2f9f4fb523c88aebcb9b1bbf94974c7d4da0a35570c594069",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "How old are you? **16**\nNext customer, please!"
+      },
+      "translation": {
+        "language": "text",
+        "content": "How old are you? **16**\nNext customer, please!"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHow old are you? **16**\nNext customer, please!\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "28c432ae09aea4aa2acd0149060eab0de13b638c7922b93c6899a03f7fd92117",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "These examples show us that the value given as input affects which parts of the program are executed. The program contains a _conditional statement_ with a block of code which is executed only if the condition in the statement is true."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0010",
+      "type": "image",
+      "order": 10,
+      "source_hash": "440082567af09497ca1a03cc625b1664df7dd83639d37a70b0fcc14eca29b045",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "1_5_1.png",
+        "alt": "",
+        "attributes": {
+          "src": "1_5_1.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "b85f294b568b556ab6e51ac7af2008b84dfdc965752e57f9518b260193edb1de",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In a conditional statement the keyword `if` is followed by a _condition_, such as a comparison of two values. The code block following this header line is only executed if the condition is true."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "baab61df210f687405990d631e77790ebd754fcdb7018d701238d16cbebe8510",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Notice the colon character following the `if` header. In the following code there is no colon:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0013",
+      "type": "code",
+      "order": 13,
+      "source_hash": "83b2a259433e4bb9c2f1e0100066540dbb39c6c2de3009d33760e84ef68836e0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "age = 10\n\n# no colon at the end of the following line\nif age > 17\n    print(\"You are of age.\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "age = 10\n\n# no colon at the end of the following line\nif age > 17\n    print(\"You are of age.\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "83b2a259433e4bb9c2f1e0100066540dbb39c6c2de3009d33760e84ef68836e0",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "a9853ea7c259cebbbe7efef939f34a8430aa8a31c0aa6b9c4998c252ced7e054",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Upon execution this causes an error:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0015",
+      "type": "sample_output",
+      "order": 15,
+      "source_hash": "6a5e716868240e130df688d8a2169ad6d98588b268dd43111e56a7a7ec110010",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "<pre>\nFile \"program.py\", line 3\n  if age > 17\n            ^\nSyntaxError: invalid syntax\n</pre>"
+      },
+      "translation": {
+        "language": "text",
+        "content": "<pre>\nFile \"program.py\", line 3\n  if age > 17\n            ^\nSyntaxError: invalid syntax\n</pre>"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n<pre>\nFile \"program.py\", line 3\n  if age > 17\n            ^\nSyntaxError: invalid syntax\n</pre>\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0016",
+      "type": "heading",
+      "order": 16,
+      "source_hash": "abdfe432a9b5d9a225cc363b3da2b520f1389034f19a3b24d9d4cea44c524353",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Comparison operators"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "8646698c7fd5dd319590e84205868b8c3eebad1829c1341fb35a7165c73a03ea",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Very typically conditions consist of comparing two values. Here is a table with the most common comparison operators used in Python:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0018",
+      "type": "table",
+      "order": 18,
+      "source_hash": "056daeef35ceb2e8e9408271b9e4432acefeb248e49725683ed80b4171b71445",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "| Operator | Purpose        | Example  |\n|:--------:|----------------|----------|\n| `==`     | Equal to       | `a == b` |\n| `!=`     | Not equal to   | `a != b` |\n| `>`      | Greater than   | `a > b`  |\n| `>=`     | Greater than or equal to | `a >= b` |\n| `<`      | Less than      | `a < b`  |\n| `<=`     | Less than or equal to    | `a <= b` |"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "d7e9c05985ee82c2893de6a67218c79f27b3307ee3484c01425675b1706a4605",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at a program which prints out different things based on whether the number the user inputs is negative, positive, or equal to zero:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0020",
+      "type": "code",
+      "order": 20,
+      "source_hash": "8b87ac577fae3f7fa69c2582c915807a78eec9c65e875b5446f4e97405f5e2ea",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\n\nif number < 0:\n    print(\"The number is negative.\")\n\nif number > 0:\n    print(\"The number is positive.\")\n\nif number == 0:\n    print(\"The number is zero.\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\n\nif number < 0:\n    print(\"The number is negative.\")\n\nif number > 0:\n    print(\"The number is positive.\")\n\nif number == 0:\n    print(\"The number is zero.\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8b87ac577fae3f7fa69c2582c915807a78eec9c65e875b5446f4e97405f5e2ea",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "5c2027b48ed0447f65e3e32a0394c9dbf9881fdf6cc5cda05e05e15cbeb6f894",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Examples of how the program functions with three different inputs:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0022",
+      "type": "sample_output",
+      "order": 22,
+      "source_hash": "83aea8c9ca13f86558fd343c9d1794cd83d85522b647ab6ce5db204c7cb5ede2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number: **15**\nThe number is positive."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number: **15**\nThe number is positive."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number: **15**\nThe number is positive.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0023",
+      "type": "sample_output",
+      "order": 23,
+      "source_hash": "6ca40aa6026c725eb0db9b373f637820c2e7c83e55a3acea766350d5a71ca8a5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number: **-18**\nThe number is negative."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number: **-18**\nThe number is negative."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number: **-18**\nThe number is negative.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0024",
+      "type": "sample_output",
+      "order": 24,
+      "source_hash": "155266301bf0c633ae95e60050dcf7d0d8b07aa112c6a7928ee68a548565e60c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number: **0**\nThe number is zero."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number: **0**\nThe number is zero."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number: **0**\nThe number is zero.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0025",
+      "type": "heading",
+      "order": 25,
+      "source_hash": "6b9f714aeabbfb15fea6e9a5d8714e9eaf0184da36ffa91d316e0ccd7e8674d2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Indentation"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "eea518c1792c5e50ec1af8c30036b6663cfc9060f93882bfca9b0e1d8b9d895a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Python recognises that a block of code is part of a conditional statement if each line of code in the block is _indented_ the same. That is, there should be a bit of whitespace at the beginning of every line of code within the code block. Each line should have the same amount of whitespace."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "652744a2ab28954bbafd780fd76c15c2bd557594532f907f10ead1989727af95",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "For example:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "8d33f520a3c4cef80d2453aef81b612bfe1cb44c8b2025630ad38662763f13d3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0029",
+      "type": "code",
+      "order": 29,
+      "source_hash": "d47715367a16afd53b41b133f5037b09fcbabf29d6782cc6987c373710ee9014",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "password = input(\"Please type in a password: \")\n\nif password == \"kittycat\":\n    print(\"You knew the password!\")\n    print(\"You must be either the intended user...\")\n    print(\"...or quite an accomplished hacker.\")\n\nprint(\"The program has finished its execution. Thanks and bye!\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "password = input(\"Please type in a password: \")\n\nif password == \"kittycat\":\n    print(\"You knew the password!\")\n    print(\"You must be either the intended user...\")\n    print(\"...or quite an accomplished hacker.\")\n\nprint(\"The program has finished its execution. Thanks and bye!\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d47715367a16afd53b41b133f5037b09fcbabf29d6782cc6987c373710ee9014",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "8d33f520a3c4cef80d2453aef81b612bfe1cb44c8b2025630ad38662763f13d3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "790f03df2f7a768c4799b9b7f2d33ee6047838eb5ef88091a0e79284e0099cf4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You can use the Tab key, short for _tabulator_ key, to insert a set amount of whitespace."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0032",
+      "type": "image",
+      "order": 32,
+      "source_hash": "cdcf8c3f9d7c88ba332c3b3a73313277b4e1db02469fb26dfccc2b1fd573899b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "1_5_keyboard.png",
+        "alt": "",
+        "attributes": {
+          "src": "1_5_keyboard.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "892a76b6622bca997f8b473899b2de47619995af4a18e5e166ddd1239e460ac7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Many text editors will automatically indent the following line when the Enter key is pressed after a colon character. When you want to end an indented code block you can use the `Backspace` key to return to the beginning of the line."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0034",
+      "type": "image",
+      "order": 34,
+      "source_hash": "241737d79a637116d7157c890ddf552e62dbc26ffa194b83b2c2316190d94d76",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "1_5_keyboard2.png",
+        "alt": "",
+        "attributes": {
+          "src": "1_5_keyboard2.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "9cd414c9d11766e9720185fb12072e33128a8d6f3718c0c037f013a93356d2db",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<small><center>\nThe source of the keyboard pictures:\n <a href=\"https://pixabay.com/users/Clker-Free-Vector-Images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=311803\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=311803\">Pixabay</a>\n</center></small>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0036",
+      "type": "exercise",
+      "order": 36,
+      "source_hash": "5ed263dd9abbecbef8a2a39d001a146c10a6029fa7ff34dd8fe2550d3e73060d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for an integer number. The program should print out \"Orwell\" if the number is exactly 1984, and otherwise do nothing.\n\n<sample-output>\n\nPlease type in a number: **2020**\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **1984**\nOrwell\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-21_orwell",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Orwell",
+        "tmc_name": "part01-21_orwell",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0037",
+      "type": "exercise",
+      "order": 37,
+      "source_hash": "19ab015318b50c41d65236255943811fb89316c7505474e258a19c27d38b12e2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for an integer number. If the number is less than zero, the program should print out the number multiplied by -1. Otherwise the program prints out the number as is. Please have a look at the examples of expected behaviour below.\n\n<sample-output>\n\nPlease type in a number: **-7**\nThe absolute value of this number is 7\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **1**\nThe absolute value of this number is 1\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **-99**\nThe absolute value of this number is 99\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-22_absolute_value",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Absolute value",
+        "tmc_name": "part01-22_absolute_value",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0038",
+      "type": "exercise",
+      "order": 38,
+      "source_hash": "1fcfb73463aefae0dd7dd504e655bf9b47570c4a22fafb1504d8fe099885601c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks for the user's name. If the name is anything but \"Jerry\", the program then asks for the number of portions and prints out the total cost. The price of a single portion is 5.90.\n\nTwo examples of the program's execution:\n\n<sample-output>\n\nPlease tell me your name: **Kramer**\nHow many portions of soup? **2**\nThe total cost is 11.8\nNext please!\n\n</sample-output>\n\n<sample-output>\n\nPlease tell me your name: **Jerry**\nNext please!\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-23_soup_or_no_soup",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Soup or no soup",
+        "tmc_name": "part01-23_soup_or_no_soup",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0039",
+      "type": "exercise",
+      "order": 39,
+      "source_hash": "3bb3313d03e92de08f241ffd64c5338dcf1024b543c75f93c9a92deb091bf5a5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for an integer number. The program should then print out the magnitude of the number according to the following examples.\n\n<sample-output>\n\nPlease type in a number: **950**\nThis number is smaller than 1000\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **59**\nThis number is smaller than 1000\nThis number is smaller than 100\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **2**\nThis number is smaller than 1000\nThis number is smaller than 100\nThis number is smaller than 10\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **1123**\nThank you!\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-24_order_of_magnitude",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Order of magnitude",
+        "tmc_name": "part01-24_order_of_magnitude",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0040",
+      "type": "heading",
+      "order": 40,
+      "source_hash": "eb27a59fc1e235fedf4b8f32943b38bc4ba6c4dcc72e21ba2b796453fc8bd8de",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Boolean values and Boolean expressions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "65a56f9964156de8801545a497a4c8a1213dff81ec155a706496c4582801b5a1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Any condition used in a conditional statement will result in a truth value, that is, either true or false. For example, the condition `a < 5` is true if `a` is less than 5, and false if `a` is equal to or greater than 5."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "e2ac070f748821f2bdb5f9471fa6398bc8b2c1bd0ce8b791994705611e3c7661",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "These types of values are often called _Boolean_ values, named after the English mathematician George Boole. In Python they are handled by the `bool` data type. Variables of type `bool` can only have two values: `True` or `False`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0043",
+      "type": "paragraph",
+      "order": 43,
+      "source_hash": "300e64e78138e32f5cefc0438f8272b618216b3b17fa64bfd768d533dddea5c3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Any bit of code that results in a Boolean value is called a _Boolean expression_. For example, the condition in a conditional statement is always a Boolean expression, and the words _condition_ and _Boolean expression_ can often be used interchangeably."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "3c28385dd795cc97be50891138f65b43981412b66ee29391eb98b6a789324db7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The result of a Boolean expression can be stored in a variable just like the result of any numerical calculation:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0045",
+      "type": "code",
+      "order": 45,
+      "source_hash": "141b8b14a7666b750e380bd1538b796ed1b9d59b4d7eb42a31e90b3d5d51aa71",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "a = 3\ncondition = a < 5\nprint(condition)\nif condition:\n    print(\"a is less than 5\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "a = 3\ncondition = a < 5\nprint(condition)\nif condition:\n    print(\"a is less than 5\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "141b8b14a7666b750e380bd1538b796ed1b9d59b4d7eb42a31e90b3d5d51aa71",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0046",
+      "type": "sample_output",
+      "order": 46,
+      "source_hash": "3d99d3fd32b6f9d802ad5c9b08658720229b303543f06ca28e567808681dbd90",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "True\na is less than 5"
+      },
+      "translation": {
+        "language": "text",
+        "content": "True\na is less than 5"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nTrue\na is less than 5\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0047",
+      "type": "paragraph",
+      "order": 47,
+      "source_hash": "2e65e6efe9f7b8e2ccae188a6d8590a619e9756219817684f7f026411a3c9a52",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The Python keywords `True` and `False` can also be used directly. In the following example the `print` command is executed every time, because the value of the condition is `True`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0048",
+      "type": "code",
+      "order": 48,
+      "source_hash": "43a534d2d507197f8c3c0456f8b29780020145bad9cb4e3ca6ba1df29c326feb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "condition = True\nif condition:\n    print(\"This is printed every time.\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "condition = True\nif condition:\n    print(\"This is printed every time.\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "43a534d2d507197f8c3c0456f8b29780020145bad9cb4e3ca6ba1df29c326feb",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0049",
+      "type": "sample_output",
+      "order": 49,
+      "source_hash": "f0193eff230a088218fe92fdb1960a9317a1fa6ac6166dc3525dddd654ccc0b3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "This is printed every time."
+      },
+      "translation": {
+        "language": "text",
+        "content": "This is printed every time."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThis is printed every time.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0050",
+      "type": "paragraph",
+      "order": 50,
+      "source_hash": "4e5682847554f86b4ec2f1a97e692ab6fc1ea6025c7a5df304aa54dd6f36b40c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A program like this is not very useful, but later on during the course you will see examples of Boolean variables coming in very handy."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0051",
+      "type": "exercise",
+      "order": 51,
+      "source_hash": "e9b1becbdbefa5414083e9237c44c6e8a9b205cb25b9d9bee3e1ad1605bedccd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for two numbers and an operation. If the operation is _add_, _multiply_ or _subtract_, the program should calculate and print out the result of the operation with the given numbers. If the user types in anything else, the program should print out nothing.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nNumber 1: **10**\nNumber 2: **17**\nOperation: **add**\n\n10 + 17 = 27\n\n</sample-output>\n\n<sample-output>\n\nNumber 1: **4**\nNumber 2: **6**\nOperation: **multiply**\n\n4 * 6 = 24\n\n</sample-output>\n\n<sample-output>\n\nNumber 1: **4**\nNumber 2: **6**\nOperation: **subtract**\n\n4 - 6 = -2\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-25_calculator",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Calculator",
+        "tmc_name": "part01-25_calculator",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0052",
+      "type": "exercise",
+      "order": 52,
+      "source_hash": "e0ee3f3ad741f78f5e57f4e3a3c2057b15fc64f82b7e686381ce8dacf33bcc61",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for a temperature in degrees Fahrenheit, and then prints out the same in degrees Celsius. If the converted temperature falls below zero degrees Celsius, the program should also print out \"Brr! It's cold in here!\".\n\nThe formula for converting degrees Fahrenheit to degrees Celsius can be found easily by any search engine of your choice.\n\nTwo examples of expected behaviour:\n\n<sample-output>\n\nPlease type in a temperature (F): **101**\n101 degrees Fahrenheit equals 38.333333333333336 degrees Celsius\n\nPlease type in a temperature (F): **21**\n21 degrees Fahrenheit equals -6.111111111111111 degrees Celsius\nBrr! It's cold in here!\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-26_temperatures",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Temperatures",
+        "tmc_name": "part01-26_temperatures",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0053",
+      "type": "exercise",
+      "order": 53,
+      "source_hash": "ee35f062fe8e0b4cc1f651b1f3976a25cbccd4a739878b6c13ff6fd37e1fb2b6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks for the hourly wage, hours worked, and the day of the week. The program should then print out the daily wages, which equal hourly wage multiplied by hours worked, except on Sundays when the hourly wage is doubled.\n\n<sample-output>\n\nHourly wage: **8.5**\nHours worked: **3**\nDay of the week: **Monday**\nDaily wages: 25.5 euros\n\n</sample-output>\n\n<sample-output>\n\nHourly wage: **12.5**\nHours worked: **10**\nDay of the week: **Sunday**\nDaily wages: 250.0 euros\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-27_daily_wages",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Daily wages",
+        "tmc_name": "part01-27_daily_wages",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0054",
+      "type": "exercise",
+      "order": 54,
+      "source_hash": "b6243393232bf1b636c5cf6999852c9b24849d81783f03a7579cd8717d258002",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This program calculates the end of year bonus a customer receives on their loyalty card. The bonus is calculated with the following formula:\n\n* If there are less than a hundred points on the card, the bonus is 10 %\n* In any other case the bonus is 15 %\n\nThe program should work like this:\n\n<sample-output>\n\nHow many points are on your card? **55**\nYour bonus is 10 %\nYou now have 60.5 points\n\n</sample-output>\n\nBut there is a problem with the program, so with some inputs it doesn't work quite right:\n\n<sample-output>\n\nHow many points are on your card? **95**\nYour bonus is 10 %\nYour bonus is 15 %\nYou now have 120.175 points\n\n</sample-output>\n\nPlease fix the program so that there is always either a 10 % or a 15 % bonus, but never both."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-28_loyalty_bonus",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Loyalty bonus",
+        "tmc_name": "part01-28_loyalty_bonus",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0055",
+      "type": "exercise",
+      "order": 55,
+      "source_hash": "638e1ddcd24fab5272bc35fec5139be8a8c9a0ba2e2aa993a53fa4b45d3f5535",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks for tomorrow's weather forecast and then suggests weather-appropriate clothing.\n\nThe suggestion should change if the temperature (measured in degrees Celsius) is over 20, 10 or 5 degrees, and also if there is rain on the radar.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nWhat is the weather forecast for tomorrow?\nTemperature: **21**\nWill it rain (yes/no): **no**\nWear jeans and a T-shirt\n\n</sample-output>\n\n<sample-output>\n\nWhat is the weather forecast for tomorrow?\nTemperature: **11**\nWill it rain (yes/no): **no**\nWear jeans and a T-shirt\nI recommend a jumper as well\n\n</sample-output>\n\n<sample-output>\n\nWhat is the weather forecast for tomorrow?\nTemperature: **7**\nWill it rain (yes/no): **no**\nWear jeans and a T-shirt\nI recommend a jumper as well\nTake a jacket with you\n\n</sample-output>\n\n<sample-output>\n\nWhat is the weather forecast for tomorrow?\nTemperature: **3**\nWill it rain (yes/no): **yes**\nWear jeans and a T-shirt\nI recommend a jumper as well\nTake a jacket with you\nMake it a warm coat, actually\nI think gloves are in order\nDon't forget your umbrella!\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-29_what_to_wear_tomorrow",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "What to wear tomorrow",
+        "tmc_name": "part01-29_what_to_wear_tomorrow",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0056",
+      "type": "exercise",
+      "order": 56,
+      "source_hash": "11b9d776edac4dca7f046392f1f1ebd300ba40887295ab6dafab55da68eda49c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the Python `math` module there is the function `sqrt`, which calculates the square root of a number. You can use it like so:\n\n```python\nfrom math import sqrt\n\nprint(sqrt(9))\n```\n\nThis should print out\n\n<sample-output>\n\n3.0\n\n</sample-output>\n\nWe will return to the concept of a _module_ and the `import` statement later. For now, it is sufficient to understand that the line `from math import sqrt` allows us to use the `sqrt` function in our program.\n\nPlease write a program for solving a quadratic equation of the form ax²+bx+c. The program asks for values a, b and c. It should then use the quadratic formula to solve the equation. The quadratic formula expressed with the Python `sqrt` function is as follows:\n\nx = (-b ± sqrt(b²-4ac))/(2a).\n\nYou can assume the equation will always have two real roots, so the above formula will always work.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nValue of a: **1**\nValue of b: **2**\nValue of c: **-8**\n\nThe roots are 2.0 and -4.0\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-30_quadratic_formula",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Solving a quadratic equation",
+        "tmc_name": "part01-30_quadratic_formula",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0057",
+      "type": "paragraph",
+      "order": 57,
+      "source_hash": "d3ac25ddc7ba9779c0556d543e4994d158e16a5a359347a1321dd236f1af0b67",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!--"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0058",
+      "type": "paragraph",
+      "order": 58,
+      "source_hash": "0937af8ca0d984621994ab6ab91b7b2cf722e5cf79e7103d9f4567fc678255c7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0059",
+      "type": "quiz",
+      "order": 59,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "bc7e500f-a91e-5709-8ae6-34637ff01737",
+        "attributes": {
+          "id": "bc7e500f-a91e-5709-8ae6-34637ff01737"
+        }
+      }
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0060",
+      "type": "paragraph",
+      "order": 60,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0061",
+      "type": "paragraph",
+      "order": 61,
+      "source_hash": "dc3b0c9905a4bf21a7be58f5736681d74779ffcf0a108842ed28312bc51e8fd3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please respond to a quick questionnaire on this week's materials. The questionnaire is worth one exercise point."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-5-conditional-statements-0062",
+      "type": "quiz",
+      "order": 62,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "9d55d599-eaf4-58c9-933f-7fc1b1f6962b",
+        "attributes": {
+          "id": "9d55d599-eaf4-58c9-933f-7fc1b1f6962b"
+        }
+      }
+    }
+  ]
+}

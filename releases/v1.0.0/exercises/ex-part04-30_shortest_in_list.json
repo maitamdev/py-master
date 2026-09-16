@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-30_shortest_in_list",
+  "lesson_id": "part04-4-definite-iteration",
+  "part": 4,
+  "tmc_name": "part04-30_shortest_in_list",
+  "title_original": "The shortest in the list",
+  "title_vi": "Ngắn nhất trong danh sách",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `shortest`, which takes a list of strings as its argument. The function returns whichever of the strings is the shortest. If more than one are equally short, the function can return any of the shortest strings (there will be no such situation in the tests). You may assume there will be no empty strings in the list.\n\n\n```python\nmy_list = [\"first\", \"second\", \"fourth\", \"eleventh\"]\n\nresult = shortest(my_list)\nprint(result)\n```\n\n```python\nmy_list = [\"adele\", \"mark\", \"dorothy\", \"tim\", \"hedy\", \"richard\"]\n\nresult = shortest(my_list)\nprint(result)\n```\n\n<sample-output>\n\nfirst\ntim\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `shortest`, hàm này lấy danh sách các chuỗi làm đối số. Hàm trả về chuỗi nào ngắn nhất. Nếu có nhiều hơn một chuỗi có độ ngắn bằng nhau, hàm có thể trả về bất kỳ chuỗi nào ngắn nhất (sẽ không có trường hợp nào như vậy trong các thử nghiệm). Bạn có thể cho rằng sẽ không có chuỗi trống nào trong danh sách.\n\n\n```python\nmy_list = [\"first\", \"second\", \"fourth\", \"eleventh\"]\n\nresult = shortest(my_list)\nprint(result)\n```\n\n```python\nmy_list = [\"adele\", \"mark\", \"dorothy\", \"tim\", \"hedy\", \"richard\"]\n\nresult = shortest(my_list)\nprint(result)\n```\n\n<sample-output>\n\nđầu tiên\ntim\n\n</sample-output>",
+  "starter_code": "my_list = [\"first\", \"second\", \"fourth\", \"eleventh\"]\n\nresult = shortest(my_list)\nprint(result)",
+  "grading_data_available": false,
+  "source_hash": "2296dfe8522a97dc6194f87eee0c5339782aecceab5ad078801c98c5256e1c7d",
+  "order": 63
+}

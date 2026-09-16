@@ -1,0 +1,316 @@
+{
+  "id": "part08-3-defining-classes",
+  "part": 8,
+  "part_slug": "part-8",
+  "slug": "3-defining-classes",
+  "is_part_index": false,
+  "title_original": "Defining classes",
+  "path": "/part-8/3-defining-classes",
+  "source_path": "data/part-8/3-defining-classes.md",
+  "source_hash": "fdf42021ab2f75dc2986d3de71d5438d354d7460dcbab85ea5216298130c83cc",
+  "frontmatter": {
+    "path": "/part-8/3-defining-classes",
+    "title": "Defining classes",
+    "hidden": false
+  },
+  "chunks_count": 49,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know how to define your own classes\n- You will be able to create objects based on classes you've defined yourself\n- You will know how to write a constructor\n- You are familiar with the parameter name `self`\n- You will know what attributes are and how they are used",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know how to define your own classes\n- You will be able to create objects based on classes you've defined yourself\n- You will know how to write a constructor\n- You are familiar with the parameter name `self`\n- You will know what attributes are and how they are used\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A class is defined with the keyword `class`. The syntax is as follows:",
+      "raw_source": "A class is defined with the keyword `class`. The syntax is as follows:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class NameOfClass:\n    # class defition goes here",
+      "raw_source": "```python\nclass NameOfClass:\n    # class defition goes here\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Classes are usually named in _PascalCase_, also known as _UpperCamelCase_. This means that all the words in the class name are written together, without spaces, and each word is capitalised. The following class names follow this convention:",
+      "raw_source": "Classes are usually named in _PascalCase_, also known as _UpperCamelCase_. This means that all the words in the class name are written together, without spaces, and each word is capitalised. The following class names follow this convention:"
+    },
+    {
+      "raw_type": "list",
+      "content": "* `Weekday`\n* `BankAccount`\n* `LibraryDatabase`\n* `PythonCourseGrades`",
+      "raw_source": "* `Weekday`\n* `BankAccount`\n* `LibraryDatabase`\n* `PythonCourseGrades`"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A single class definition should represent a single whole, the contents of which should be atomically linked together in some way. In more complicated programs classes can contain members of other classes. For example, the class `Course` could contain objects of class `Lecture`, `ExerciseSession` etc.",
+      "raw_source": "A single class definition should represent a single whole, the contents of which should be atomically linked together in some way. In more complicated programs classes can contain members of other classes. For example, the class `Course` could contain objects of class `Lecture`, `ExerciseSession` etc."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Lets have a look at a skeleton of a class definition. The functionalities are still missing at this point.",
+      "raw_source": "Lets have a look at a skeleton of a class definition. The functionalities are still missing at this point."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class BankAccount:\n    pass",
+      "raw_source": "```python\nclass BankAccount:\n    pass\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The above piece of code tells Python that here we are defining a class named `BankAccount`. The class does not contain any functionality yet, but we can still create an object based on the class.",
+      "raw_source": "The above piece of code tells Python that here we are defining a class named `BankAccount`. The class does not contain any functionality yet, but we can still create an object based on the class."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Lets have a look at a program where two variables are added to a `BankAccount` object: `balance` and `owner`. Any variables attached to an object are called its _attributes_, or more specifically, _data attributes_, or sometimes _instance variables_.",
+      "raw_source": "Lets have a look at a program where two variables are added to a `BankAccount` object: `balance` and `owner`. Any variables attached to an object are called its _attributes_, or more specifically, _data attributes_, or sometimes _instance variables_."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The attributes attached to an object can be accessed through the object:",
+      "raw_source": "The attributes attached to an object can be accessed through the object:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class BankAccount:\n    pass\n\npeters_account = BankAccount()\npeters_account.owner = \"Peter Python\"\npeters_account.balance = 5.0\n\nprint(peters_account.owner)\nprint(peters_account.balance)",
+      "raw_source": "```python\nclass BankAccount:\n    pass\n\npeters_account = BankAccount()\npeters_account.owner = \"Peter Python\"\npeters_account.balance = 5.0\n\nprint(peters_account.owner)\nprint(peters_account.balance)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Peter Python\n5.0",
+      "raw_source": "<sample-output>\n\nPeter Python\n5.0\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The data attributes are available only through the object they are attached to. Each `BankAccount` object created based on the `BankAccount` class has its own values attached to the data attributes. Those values can be accessed by referring to the object in question:",
+      "raw_source": "The data attributes are available only through the object they are attached to. Each `BankAccount` object created based on the `BankAccount` class has its own values attached to the data attributes. Those values can be accessed by referring to the object in question:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "account = BankAccount()\naccount.balance = 155.50\n\nprint(account.balance) # This refers to the data attribute balance attached to the account\nprint(balance) # THIS CAUSES AN ERROR, as there is no such independent variable available, and the object reference is missing",
+      "raw_source": "```python\naccount = BankAccount()\naccount.balance = 155.50\n\nprint(account.balance) # This refers to the data attribute balance attached to the account\nprint(balance) # THIS CAUSES AN ERROR, as there is no such independent variable available, and the object reference is missing\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Adding a constructor",
+      "raw_source": "## Adding a constructor"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the above example we saw that a new instance of a class can be created by calling the constructor method of the class like so: `NameOfClass()`. Above we then attached data attributes to the object separately, but it is often more convenient to pass these initial values of attributes directly as the object is created. In the above example we first had a `BankAccount` object without these attributes, and the attributes only existed after they were explicitly declared.",
+      "raw_source": "In the above example we saw that a new instance of a class can be created by calling the constructor method of the class like so: `NameOfClass()`. Above we then attached data attributes to the object separately, but it is often more convenient to pass these initial values of attributes directly as the object is created. In the above example we first had a `BankAccount` object without these attributes, and the attributes only existed after they were explicitly declared."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Declaring attributes outside the constructor results in a situation where different instances of the same class can have different attributes. The following code produces an error because we now have another `BankAccount` object, `paulas_account`, which does not contain the same attributes:",
+      "raw_source": "Declaring attributes outside the constructor results in a situation where different instances of the same class can have different attributes. The following code produces an error because we now have another `BankAccount` object, `paulas_account`, which does not contain the same attributes:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class BankAccount:\n    pass\n\npeters_account = BankAccount()\npeters_account.owner = \"Peter\"\npeters_account.balance = 1400\n\npaulas_account = BankAccount()\npaulas_account.owner = \"Paula\"\n\nprint(peters_account.balance)\nprint(paulas_account.balance) # THIS CAUSES AN ERROR",
+      "raw_source": "```python\nclass BankAccount:\n    pass\n\npeters_account = BankAccount()\npeters_account.owner = \"Peter\"\npeters_account.balance = 1400\n\npaulas_account = BankAccount()\npaulas_account.owner = \"Paula\"\n\nprint(peters_account.balance)\nprint(paulas_account.balance) # THIS CAUSES AN ERROR\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "So, instead of declaring attributes after each instance of the class is created, it is usually a better idea to initialize the values of the attributes as the class constructor is called. As the `BankAccount` class definition is currently just a skeleton, the constructor method is implicitly assumed by the Python interpreter, but it is possible to define your own constructor methods, and that is exactly what we will do now.",
+      "raw_source": "So, instead of declaring attributes after each instance of the class is created, it is usually a better idea to initialize the values of the attributes as the class constructor is called. As the `BankAccount` class definition is currently just a skeleton, the constructor method is implicitly assumed by the Python interpreter, but it is possible to define your own constructor methods, and that is exactly what we will do now."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A constructor method is a method declaration with the special name `__init__`, usually included at the very beginning of a class definition.",
+      "raw_source": "A constructor method is a method declaration with the special name `__init__`, usually included at the very beginning of a class definition."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Lets have a look at a `BankAccount` class with a constructor method added in:",
+      "raw_source": "Lets have a look at a `BankAccount` class with a constructor method added in:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class BankAccount:\n\n    # The constructor\n    def __init__(self, balance: float, owner: str):\n        self.balance = balance\n        self.owner = owner",
+      "raw_source": "```python\nclass BankAccount:\n\n    # The constructor\n    def __init__(self, balance: float, owner: str):\n        self.balance = balance\n        self.owner = owner\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The name of the constructor method is always `__init__`. Notice the _two underscores on both sides_ of the word `init`.",
+      "raw_source": "The name of the constructor method is always `__init__`. Notice the _two underscores on both sides_ of the word `init`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The first parameter in a constructor definition is always named `self`. This refers to the object itself, and is necessary for declaring any attributes attached to the object. The assignment",
+      "raw_source": "The first parameter in a constructor definition is always named `self`. This refers to the object itself, and is necessary for declaring any attributes attached to the object. The assignment"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "`self.balance = balance`",
+      "raw_source": "`self.balance = balance`"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "assigns the balance received as an argument to the balance attribute of the object. It is a common convention to use the same variable names for the parameters and the data attributes defined in a constructor, but the variable names `self.balance` and `balance` above refer to _two different variables_:",
+      "raw_source": "assigns the balance received as an argument to the balance attribute of the object. It is a common convention to use the same variable names for the parameters and the data attributes defined in a constructor, but the variable names `self.balance` and `balance` above refer to _two different variables_:"
+    },
+    {
+      "raw_type": "list",
+      "content": "* The variable `self.balance` is an attribute of the object. Each `BankAccount` object has its own balance.",
+      "raw_source": "* The variable `self.balance` is an attribute of the object. Each `BankAccount` object has its own balance."
+    },
+    {
+      "raw_type": "list",
+      "content": "* The variable `balance` is a parameter in the constructor method `__init__`. Its value is set to the value passed as an argument to the method as the constructor is called (that is, when a new instance of the class is created).",
+      "raw_source": "* The variable `balance` is a parameter in the constructor method `__init__`. Its value is set to the value passed as an argument to the method as the constructor is called (that is, when a new instance of the class is created)."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Now that we have defined the parameters of the constructor method, we can pass the desired initial values of the data attributes as arguments as a new object is created:",
+      "raw_source": "Now that we have defined the parameters of the constructor method, we can pass the desired initial values of the data attributes as arguments as a new object is created:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class BankAccount:\n\n    # The constructor\n    def __init__(self, balance: float, owner: str):\n        self.balance = balance\n        self.owner = owner\n\n# As the method is called, no argument should be given for the self parameter\n# Python assigns the value for self automatically\npeters_account = BankAccount(100, \"Peter Python\")\npaulas_account = BankAccount(20000, \"Paula Pythons\")\n\nprint(peters_account.balance)\nprint(paulas_account.balance)",
+      "raw_source": "```python\nclass BankAccount:\n\n    # The constructor\n    def __init__(self, balance: float, owner: str):\n        self.balance = balance\n        self.owner = owner\n\n# As the method is called, no argument should be given for the self parameter\n# Python assigns the value for self automatically\npeters_account = BankAccount(100, \"Peter Python\")\npaulas_account = BankAccount(20000, \"Paula Pythons\")\n\nprint(peters_account.balance)\nprint(paulas_account.balance)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "100\n20000",
+      "raw_source": "<sample-output>\n\n100\n20000\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It is now much easier to work with the `BankAccount` objects, as the values can be passed at object creation, and the resulting two separate instances can be handled more predictably and uniformly. Declaring data attributes in the constructor also ensures the attributes are actually declared, and the desired initial values are always given by the programmer using the class.",
+      "raw_source": "It is now much easier to work with the `BankAccount` objects, as the values can be passed at object creation, and the resulting two separate instances can be handled more predictably and uniformly. Declaring data attributes in the constructor also ensures the attributes are actually declared, and the desired initial values are always given by the programmer using the class."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It is still possible to change the initial values of the data attributes later in the program:",
+      "raw_source": "It is still possible to change the initial values of the data attributes later in the program:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class BankAccount:\n\n    # The constructor\n    def __init__(self, balance: float, owner: str):\n        self.balance = balance\n        self.owner = owner\n\npeters_account = BankAccount(100, \"Peter Python\")\nprint(peters_account.balance)\n\n# Change the balance to 1500\npeters_account.balance = 1500\nprint(peters_account.balance)\n\n# Add 2000 to the balance\npeters_account.balance += 2000\nprint(peters_account.balance)",
+      "raw_source": "```python\nclass BankAccount:\n\n    # The constructor\n    def __init__(self, balance: float, owner: str):\n        self.balance = balance\n        self.owner = owner\n\npeters_account = BankAccount(100, \"Peter Python\")\nprint(peters_account.balance)\n\n# Change the balance to 1500\npeters_account.balance = 1500\nprint(peters_account.balance)\n\n# Add 2000 to the balance\npeters_account.balance += 2000\nprint(peters_account.balance)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "100\n1500\n3500",
+      "raw_source": "<sample-output>\n\n100\n1500\n3500\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's have a look at another example of classes and objects. We'll write a class which models a single draw of lottery numbers:",
+      "raw_source": "Let's have a look at another example of classes and objects. We'll write a class which models a single draw of lottery numbers:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from datetime import date\n\nclass LotteryDraw:\n\n    def __init__(self, round_week: int, round_date: date, numbers: list):\n        self.round_week = round_week\n        self.round_date = round_date\n        self.numbers = numbers\n\n\n# Create a new LotteryDraw object\nround1 = LotteryDraw(1, date(2021, 1, 2), [1,4,8,12,13,14,33])\n\n# Tulostetaan tiedot\nprint(round1.round_week)\nprint(round1.round_date)\n\nfor number in round1.numbers:\n    print(number)",
+      "raw_source": "```python\nfrom datetime import date\n\nclass LotteryDraw:\n\n    def __init__(self, round_week: int, round_date: date, numbers: list):\n        self.round_week = round_week\n        self.round_date = round_date\n        self.numbers = numbers\n\n\n# Create a new LotteryDraw object\nround1 = LotteryDraw(1, date(2021, 1, 2), [1,4,8,12,13,14,33])\n\n# Tulostetaan tiedot\nprint(round1.round_week)\nprint(round1.round_date)\n\nfor number in round1.numbers:\n    print(number)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "1\n2021-01-02\n1\n4\n8\n12\n13\n14\n33",
+      "raw_source": "<sample-output>\n\n1\n2021-01-02\n1\n4\n8\n12\n13\n14\n33\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As you can see above, the attributes can be of any type. Here, each LotteryDraw object has attributes of type `list` and `date`.",
+      "raw_source": "As you can see above, the attributes can be of any type. Here, each LotteryDraw object has attributes of type `list` and `date`."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Book",
+        "tmcname": "part08-05_book"
+      },
+      "inner_content": "Please write a class named `Book` with the attributes `name`, `author`, `genre` and `year`, along with a constructor which assigns initial values to these attributes.\n\nYour class should work like this:\n\n```python\npython = Book(\"Fluent Python\", \"Luciano Ramalho\", \"programming\", 2015)\neverest = Book(\"High Adventure\", \"Edmund Hillary\", \"autobiography\", 1956)\n\nprint(f\"{python.author}: {python.name} ({python.year})\")\nprint(f\"The genre of the book {everest.name} is {everest.genre}\")\n```\n\n<sample-output>\n\nLuciano Ramalho: Fluent Python (2015)\nThe genre of the book High Adventure is autobiography\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Book' tmcname='part08-05_book'>\n\nPlease write a class named `Book` with the attributes `name`, `author`, `genre` and `year`, along with a constructor which assigns initial values to these attributes.\n\nYour class should work like this:\n\n```python\npython = Book(\"Fluent Python\", \"Luciano Ramalho\", \"programming\", 2015)\neverest = Book(\"High Adventure\", \"Edmund Hillary\", \"autobiography\", 1956)\n\nprint(f\"{python.author}: {python.name} ({python.year})\")\nprint(f\"The genre of the book {everest.name} is {everest.genre}\")\n```\n\n<sample-output>\n\nLuciano Ramalho: Fluent Python (2015)\nThe genre of the book High Adventure is autobiography\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Three classes",
+        "tmcname": "part08-06_three_classes"
+      },
+      "inner_content": "Please write the three classes specified below. Each class should have exactly the same names and types of attributes as listed.\n\nPlease also include a constructor in each class. The constructor should take the initial values of the attributes as its arguments, in the order listed below.\n\n1. Class Checklist\n- attribute header (string)\n- attribute entries (list)\n\n2. Class Customer\n- attribute id (string)\n- attribute balance (float)\n- attribute discount (integer)\n\n3. Class Cable\n- attribute model (string)\n- attribute length (float)\n- attribute max_speed (integer)\n- attribute bidirectional (Boolean)",
+      "raw_source": "<programming-exercise name='Three classes' tmcname='part08-06_three_classes'>\n\nPlease write the three classes specified below. Each class should have exactly the same names and types of attributes as listed.\n\nPlease also include a constructor in each class. The constructor should take the initial values of the attributes as its arguments, in the order listed below.\n\n1. Class Checklist\n- attribute header (string)\n- attribute entries (list)\n\n2. Class Customer\n- attribute id (string)\n- attribute balance (float)\n- attribute discount (integer)\n\n3. Class Cable\n- attribute model (string)\n- attribute length (float)\n- attribute max_speed (integer)\n- attribute bidirectional (Boolean)\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Using objecs formed from your own classes",
+      "raw_source": "## Using objecs formed from your own classes"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Objects formed from your own class definitions are no different from any other Python objects. They can be passed as arguments and return values just like any other object. We could, for example, write some helper functions for working with bank accounts:",
+      "raw_source": "Objects formed from your own class definitions are no different from any other Python objects. They can be passed as arguments and return values just like any other object. We could, for example, write some helper functions for working with bank accounts:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# this function creates a new bank account object and returns it\ndef open_account(name: str):\n    new_account =  BankAccount(0, name)\n    return new_account\n\n# this function adds the amount passed as an argument to the balance of the bank account also passed as an argument\ndef deposit_money_on_account(account: BankAccount, amount: int):\n    account.balance += amount\n\npeters_account = open_account(\"Peter Python\")\nprint(peters_account.balance)\n\ndeposit_money_on_account(peters_account, 500)\n\nprint(peters_account.balance)",
+      "raw_source": "```python\n# this function creates a new bank account object and returns it\ndef open_account(name: str):\n    new_account =  BankAccount(0, name)\n    return new_account\n\n# this function adds the amount passed as an argument to the balance of the bank account also passed as an argument\ndef deposit_money_on_account(account: BankAccount, amount: int):\n    account.balance += amount\n\npeters_account = open_account(\"Peter Python\")\nprint(peters_account.balance)\n\ndeposit_money_on_account(peters_account, 500)\n\nprint(peters_account.balance)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "0\n500",
+      "raw_source": "<sample-output>\n\n0\n500\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Define class: Pet",
+        "tmcname": "part08-07_pet"
+      },
+      "inner_content": "Please define the class `Pet`. The class should include a constructor, which takes the initial values of the attributes `name`, `species` and `year_of_birth` as its arguments, in that specific order.\n\nPlease also write a function named `new_pet(name: str, species: str, year_of_birth: int)` _outside the class definition_. The function should create and return a new object of type `Pet`, as defined in the class `Pet`.\n\nAn example of how the function is used:\n\n```python\nfluffy = new_pet(\"Fluffy\", \"dog\", 2017)\nprint(fluffy.name)\nprint(fluffy.species)\nprint(fluffy.year_of_birth)\n```\n\n<sample-output>\n\nFluffy\ndog\n2017\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Define class: Pet' tmcname='part08-07_pet'>\n\nPlease define the class `Pet`. The class should include a constructor, which takes the initial values of the attributes `name`, `species` and `year_of_birth` as its arguments, in that specific order.\n\nPlease also write a function named `new_pet(name: str, species: str, year_of_birth: int)` _outside the class definition_. The function should create and return a new object of type `Pet`, as defined in the class `Pet`.\n\nAn example of how the function is used:\n\n```python\nfluffy = new_pet(\"Fluffy\", \"dog\", 2017)\nprint(fluffy.name)\nprint(fluffy.species)\nprint(fluffy.year_of_birth)\n```\n\n<sample-output>\n\nFluffy\ndog\n2017\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "The older book",
+        "tmcname": "part08-08_older_book"
+      },
+      "inner_content": "Please write a function named `older_book(book1: Book, book2: Book)` which takes two objects of type `Book` as its arguments. The function should print out a message with the details of whichever is the older. It should print out a different message if the two books were written in the same year. Please see the examples below.\n\n```python\npython = Book(\"Fluent Python\", \"Luciano Ramalho\", \"programming\", 2015)\neverest = Book(\"High Adventure\", \"Edmund Hillary\", \"autobiography\", 1956)\nnorma = Book(\"Norma\", \"Sofi Oksanen\", \"crime\", 2015)\n\nolder_book(python, everest)\nolder_book(python, norma)\n```\n\n<sample-output>\n\nHigh Adventure is older, it was published in 1956\nFluent Python and Norma were published in 2015\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='The older book' tmcname='part08-08_older_book'>\n\nPlease write a function named `older_book(book1: Book, book2: Book)` which takes two objects of type `Book` as its arguments. The function should print out a message with the details of whichever is the older. It should print out a different message if the two books were written in the same year. Please see the examples below.\n\n```python\npython = Book(\"Fluent Python\", \"Luciano Ramalho\", \"programming\", 2015)\neverest = Book(\"High Adventure\", \"Edmund Hillary\", \"autobiography\", 1956)\nnorma = Book(\"Norma\", \"Sofi Oksanen\", \"crime\", 2015)\n\nolder_book(python, everest)\nolder_book(python, norma)\n```\n\n<sample-output>\n\nHigh Adventure is older, it was published in 1956\nFluent Python and Norma were published in 2015\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Books of a genre",
+        "tmcname": "part08-09_books_of_genre"
+      },
+      "inner_content": "Please write a function named `books_of_genre(books: list, genre: str)` which takes a list of objects of type `Book` and a string representing a genre as its arguments.\n\nThe function should return a _new_ list, which contains the books with the desired genre from the original list. Please see the examples below.\n\n```python\npython = Book(\"Fluent Python\", \"Luciano Ramalho\", \"programming\", 2015)\neverest = Book(\"High Adventure\", \"Edmund Hillary\", \"autobiography\", 1956)\nnorma = Book(\"Norma\", \"Sofi Oksanen\", \"crime\", 2015)\n\nbooks = [python, everest, norma, Book(\"The Snowman\", \"Jo Nesbø\", \"crime\", 2007)]\n\nprint(\"Books in the crime genre:\")\nfor book in books_of_genre(books, \"crime\"):\n    print(f\"{book.author}: {book.name}\")\n```\n\n<sample-output>\n\nBooks in the crime genre:\nSofi Oksanen: Norma\nJo Nesbø: The Snowman\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Books of a genre' tmcname='part08-09_books_of_genre'>\n\nPlease write a function named `books_of_genre(books: list, genre: str)` which takes a list of objects of type `Book` and a string representing a genre as its arguments.\n\nThe function should return a _new_ list, which contains the books with the desired genre from the original list. Please see the examples below.\n\n```python\npython = Book(\"Fluent Python\", \"Luciano Ramalho\", \"programming\", 2015)\neverest = Book(\"High Adventure\", \"Edmund Hillary\", \"autobiography\", 1956)\nnorma = Book(\"Norma\", \"Sofi Oksanen\", \"crime\", 2015)\n\nbooks = [python, everest, norma, Book(\"The Snowman\", \"Jo Nesbø\", \"crime\", 2007)]\n\nprint(\"Books in the crime genre:\")\nfor book in books_of_genre(books, \"crime\"):\n    print(f\"{book.author}: {book.name}\")\n```\n\n<sample-output>\n\nBooks in the crime genre:\nSofi Oksanen: Norma\nJo Nesbø: The Snowman\n\n</sample-output>\n\n</programming-exercise>"
+    }
+  ]
+}

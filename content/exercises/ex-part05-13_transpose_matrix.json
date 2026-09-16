@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-13_transpose_matrix",
+  "lesson_id": "part05-2-references",
+  "part": 5,
+  "tmc_name": "part05-13_transpose_matrix",
+  "title_original": "Transpose a matrix",
+  "title_vi": "Chuyển vị một ma trận",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `transpose(matrix: list)`, which takes a two-dimensional integer array, i.e., a matrix, as its argument. The function should _transpose_ the matrix. Transposing means essentially flipping the matrix over its diagonal: columns become rows, and rows become columns.\n\nYou may assume the matrix is a square matrix, so it will have an equal number of rows and columns.\n\nThe following matrix\n\n```python\n1 2 3\n4 5 6\n7 8 9\n```\n\ntransposed looks like this:\n\n```python\n1 4 7\n2 5 8\n3 6 9\n```\n\nThe function should not have a return value. The matrix should be modified directly through the reference.",
+  "description_vi": "Vui lòng viết một hàm có tên `transpose(matrix: list)`, hàm này lấy mảng số nguyên hai chiều, tức là ma trận, làm đối số. Hàm sẽ _transpose_ ma trận. Chuyển vị về cơ bản có nghĩa là lật ma trận theo đường chéo của nó: cột trở thành hàng và hàng trở thành cột.\n\nBạn có thể giả sử ma trận là ma trận vuông nên sẽ có số hàng và số cột bằng nhau.\n\nMa trận sau\n\n```python\n1 2 3\n4 5 6\n7 8 9\n```\n\nchuyển đổi trông như thế này:\n\n```python\n1 4 7\n2 5 8\n3 6 9\n```\n\nHàm không được có giá trị trả về. Ma trận nên được sửa đổi trực tiếp thông qua tài liệu tham khảo.",
+  "starter_code": "1 2 3\n4 5 6\n7 8 9",
+  "grading_data_available": false,
+  "source_hash": "d622bb66ee2c70433d131c45f213e089ef441d085917df376e88f1fae76f76e7",
+  "order": 89
+}

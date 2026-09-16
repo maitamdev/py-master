@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-28_distinct_numbers",
+  "lesson_id": "part04-4-definite-iteration",
+  "part": 4,
+  "tmc_name": "part04-28_distinct_numbers",
+  "title_original": "Distinct numbers",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `distinct_numbers`, which takes a list of integers as its argument. The function returns a new list containing the numbers from the original list in order of magnitude, and so that each distinct number is present only once.\n\n```python\nmy_list = [3, 2, 2, 1, 3, 3, 1]\nprint(distinct_numbers(my_list)) # [1, 2, 3]\n```",
+  "description_vi": "",
+  "starter_code": "my_list = [3, 2, 2, 1, 3, 3, 1]\nprint(distinct_numbers(my_list)) # [1, 2, 3]",
+  "grading_data_available": false,
+  "source_hash": "d20375811daee12b56ccddd0c94a01413146438399ee1c54264e8e18383d9f63",
+  "order": 55
+}

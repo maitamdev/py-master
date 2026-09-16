@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-09_greatest_number",
+  "lesson_id": "part04-2-more-functions",
+  "part": 4,
+  "tmc_name": "part04-09_greatest_number",
+  "title_original": "The greatest number",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named  `greatest_number`, which takes three arguments. The function returns the greatest in value of the three.\n\nAn example of how the function is used:\n\n```python\nprint(greatest_number(3, 4, 1)) # 4\nprint(greatest_number(99, -4, 7)) # 99\nprint(greatest_number(0, 0, 0)) # 0\n```",
+  "description_vi": "",
+  "starter_code": "print(greatest_number(3, 4, 1)) # 4\nprint(greatest_number(99, -4, 7)) # 99\nprint(greatest_number(0, 0, 0)) # 0",
+  "grading_data_available": false,
+  "source_hash": "045b884a15e3aa5109f3a69a56746bdc2c93f0434a555d45c8553eaadfe50504",
+  "order": 79
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-19_food_expenditure",
+  "lesson_id": "part01-4-arithmetic-operations",
+  "part": 1,
+  "tmc_name": "part01-19_food_expenditure",
+  "title_original": "Food expenditure",
+  "title_vi": "Chi tiêu thực phẩm",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which estimates a user's typical food expenditure.\n\nThe program asks the user how many times a week they eat at the student cafeteria. Then it asks for the price of a typical student lunch, and for money spent on groceries during the week.\n\nBased on this information the program calculates the user's typical food expenditure both weekly and daily.\n\nThe program should function as follows:\n\n<sample-output>\n\nHow many times a week do you eat at the student cafeteria? **4**\nThe price of a typical student lunch? **2.5**\nHow much money do you spend on groceries in a week? **28.5**\n\nAverage food expenditure:\nDaily: 5.5 euros\nWeekly: 38.5 euros\n\n</sample-output>",
+  "description_vi": "Hãy viết một chương trình ước tính chi tiêu thực phẩm thông thường của người dùng.\n\nChương trình hỏi người dùng họ ăn bao nhiêu lần một tuần tại căng tin sinh viên. Sau đó, nó hỏi giá một bữa trưa điển hình của sinh viên và số tiền chi tiêu cho cửa hàng tạp hóa trong tuần.\n\nDựa trên thông tin này, chương trình sẽ tính toán mức chi tiêu thực phẩm thông thường của người dùng hàng tuần và hàng ngày.\n\nChương trình sẽ hoạt động như sau:\n\n<sample-output>\n\nBạn ăn bao nhiêu lần một tuần ở căng tin sinh viên? **4**\nGiá một bữa trưa điển hình của sinh viên? **2,5**\nBạn chi bao nhiêu tiền cho cửa hàng tạp hóa trong một tuần? **28,5**\n\nChi tiêu lương thực trung bình:\nHàng ngày: 5,5 euro\nHàng tuần: 38,5 euro\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "0df67f8697f67ef2d4d2d56ea0cfc52ad00931934227a9c2a976f310697f6ece",
+  "order": 65
+}

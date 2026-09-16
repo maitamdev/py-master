@@ -1,0 +1,58 @@
+{
+  "id": "part06-index",
+  "part": 6,
+  "part_slug": "part-6",
+  "slug": "index",
+  "is_part_index": true,
+  "title_original": "Part 6",
+  "title_vi": "Thao tác Tệp tin và Xử lý Ngoại lệ",
+  "path": "/part-6",
+  "source_path": "data/part-6/index.md",
+  "source_hash": "95dc596865a6e417e8b7567a5605c086d2f673188d2abbf212ff31454d12178d",
+  "order": 1,
+  "blocks_count": 2,
+  "blocks": [
+    {
+      "id": "blk-part06-index-0001",
+      "type": "custom_component",
+      "order": 1,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "component_name": "pages-in-this-section",
+        "attributes": {},
+        "raw_source": "<pages-in-this-section></pages-in-this-section>",
+        "parsed": true
+      }
+    },
+    {
+      "id": "blk-part06-index-0002",
+      "type": "custom_component",
+      "order": 2,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "component_name": "exercises-in-this-section",
+        "attributes": {},
+        "raw_source": "<exercises-in-this-section></exercises-in-this-section>",
+        "parsed": true
+      }
+    }
+  ]
+}

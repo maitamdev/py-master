@@ -1,0 +1,16 @@
+{
+  "id": "ex-part06-10_inscription",
+  "lesson_id": "part06-2-writing-files",
+  "part": 6,
+  "tmc_name": "part06-10_inscription",
+  "title_original": "Inscription",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks for the name of the user and then creates an \"inscription\" in a file specified by the user. Please see the example below.\n\n<sample-output>\n\nWhom should I sign this to: **Ada**\nWhere shall I save it: **inscribed.txt**\n\n</sample-output>\n\nThe contents of the file `inscribed.txt` would be\n\n<sample-data>\n\nHi Ada, we hope you enjoy learning Python with us! Best, Mooc.fi Team\n\n</sample-data>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "54e39ffa52458281e6aad817c5de74476a31c3b888a38eeb574b96d56ab79b9a",
+  "order": 20
+}

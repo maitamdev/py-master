@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-24_order_of_magnitude",
+  "lesson_id": "part01-5-conditional-statements",
+  "part": 1,
+  "tmc_name": "part01-24_order_of_magnitude",
+  "title_original": "Order of magnitude",
+  "title_vi": "Thứ tự độ lớn",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for an integer number. The program should then print out the magnitude of the number according to the following examples.\n\n<sample-output>\n\nPlease type in a number: **950**\nThis number is smaller than 1000\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **59**\nThis number is smaller than 1000\nThis number is smaller than 100\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **2**\nThis number is smaller than 1000\nThis number is smaller than 100\nThis number is smaller than 10\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **1123**\nThank you!\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình yêu cầu người dùng nhập một số nguyên. Sau đó, chương trình sẽ in ra độ lớn của số theo các ví dụ sau.\n\n<sample-output>\n\nVui lòng nhập số: **950**\nSố này nhỏ hơn 1000\nCảm ơn bạn!\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập một số: **59**\nSố này nhỏ hơn 1000\nSố này nhỏ hơn 100\nCảm ơn bạn!\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập một số: **2**\nSố này nhỏ hơn 1000\nSố này nhỏ hơn 100\nSố này nhỏ hơn 10\nCảm ơn bạn!\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập số: **1123**\nCảm ơn bạn!\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "3bb3313d03e92de08f241ffd64c5338dcf1024b543c75f93c9a92deb091bf5a5",
+  "order": 39
+}

@@ -1,0 +1,1132 @@
+{
+  "id": "part10-3-oo-programming-techniques",
+  "part": 10,
+  "part_slug": "part-10",
+  "slug": "3-oo-programming-techniques",
+  "is_part_index": false,
+  "title_original": "Object oriented programming techniques",
+  "title_vi": "",
+  "path": "/part-10/3-oo-programming-techniques",
+  "source_path": "data/part-10/3-oo-programming-techniques.md",
+  "source_hash": "1b0c805c0f856c8e562d8f53c247a7cbbce57c6b4db11a20375a795152fb0c98",
+  "order": 1,
+  "blocks_count": 62,
+  "blocks": [
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "730734c3102ba4dfec5349183704e00acce073ba6f788f26638c6245ba5b190e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be familiar with some of the different uses for the variable name `self`\n- You will know how to overload operators in your own classes\n- You will be able to create an iterable class"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "226db795ceb9e780fbd85cf79b4f78f493b55dfa48dbceae12d51b8dddf8564b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A class can contain a method which returns an object of the very same class. For example, below we have the class `Product`, whose method `product_on_sale` returns a new Product object with the same name as the original but with a price which is 25 % lower:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0003",
+      "type": "code",
+      "order": 3,
+      "source_hash": "893e2c3b10d99438588df62331a1bdf3dfac7b6261e96eeec88ef6ecd096eff9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Product:\n    def __init__(self, name: str, price: float):\n        self.__name = name\n        self.__price = price\n\n    def __str__(self):\n        return f\"{self.__name} (price {self.__price})\"\n\n    def product_on_sale(self):\n        on_sale = Product(self.__name, self.__price * 0.75)\n        return on_sale"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Product:\n    def __init__(self, name: str, price: float):\n        self.__name = name\n        self.__price = price\n\n    def __str__(self):\n        return f\"{self.__name} (price {self.__price})\"\n\n    def product_on_sale(self):\n        on_sale = Product(self.__name, self.__price * 0.75)\n        return on_sale"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "893e2c3b10d99438588df62331a1bdf3dfac7b6261e96eeec88ef6ecd096eff9",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0004",
+      "type": "code",
+      "order": 4,
+      "source_hash": "28dd82132a1d97496a7d3c38ac63023b8bc0203ac91ea270c81d9f6274511903",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "apple1 = Product(\"Apple\", 2.99)\napple2 = apple1.product_on_sale()\nprint(apple1)\nprint(apple2)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "apple1 = Product(\"Apple\", 2.99)\napple2 = apple1.product_on_sale()\nprint(apple1)\nprint(apple2)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "28dd82132a1d97496a7d3c38ac63023b8bc0203ac91ea270c81d9f6274511903",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0005",
+      "type": "sample_output",
+      "order": 5,
+      "source_hash": "c7c4e82715c57bb21582a02ab3151ad221ab74fb25dde092e721dd7ab11365f6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Apple (price 2.99)\nApple (price 2.2425)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Apple (price 2.99)\nApple (price 2.2425)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nApple (price 2.99)\nApple (price 2.2425)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "a69107c9bc1b98c383c1d80f1de74a676a23698d2f4e3a277104a07b9fc4af43",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's review the purpose of the variable `self`: within a class definition it refers to the object itself. Typically it is used to refer to the object's own traits, its attributes and methods. The variable can be used to refer to the entire object as well, for example if the object itself needs to be returned to the client code. In the example below we've added the method `cheaper` to the class definition. It takes another Product as its argument and returns the cheaper of the two:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0007",
+      "type": "code",
+      "order": 7,
+      "source_hash": "b5b85f3cba89323c7c2cd4f4e603f9953c67b49ce82c99906055c6c36e4f5ae1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Product:\n    def __init__(self, name: str, price: float):\n        self.__name = name\n        self.__price = price\n\n    def __str__(self):\n        return f\"{self.__name} (price {self.__price})\"\n\n    @property\n    def price(self):\n        return self.__price\n\n    def cheaper(self, Product):\n        if self.__price < Product.price:\n            return self\n        else:\n            return Product"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Product:\n    def __init__(self, name: str, price: float):\n        self.__name = name\n        self.__price = price\n\n    def __str__(self):\n        return f\"{self.__name} (price {self.__price})\"\n\n    @property\n    def price(self):\n        return self.__price\n\n    def cheaper(self, Product):\n        if self.__price < Product.price:\n            return self\n        else:\n            return Product"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b5b85f3cba89323c7c2cd4f4e603f9953c67b49ce82c99906055c6c36e4f5ae1",
+        "length_lines": 17
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0008",
+      "type": "code",
+      "order": 8,
+      "source_hash": "3e4a488d4846b9a77b7d7fe26b0ca84533fc1bc96736070d6cbf41d20ce81ae6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "apple = Product(\"Apple\", 2.99)\norange = Product(\"Orange\", 3.95)\nbanana = Product(\"Banana\", 5.25)\n\nprint(orange.cheaper(apple))\nprint(orange.cheaper(banana))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "apple = Product(\"Apple\", 2.99)\norange = Product(\"Orange\", 3.95)\nbanana = Product(\"Banana\", 5.25)\n\nprint(orange.cheaper(apple))\nprint(orange.cheaper(banana))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3e4a488d4846b9a77b7d7fe26b0ca84533fc1bc96736070d6cbf41d20ce81ae6",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0009",
+      "type": "sample_output",
+      "order": 9,
+      "source_hash": "e46231cf7d7fc26d6fdcc2e3486fa0999d356e083a31527a9b5ac3c96f51ffcc",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Apple (2.99)\nOrange (3.95)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Apple (2.99)\nOrange (3.95)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nApple (2.99)\nOrange (3.95)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "b2a2feaba8f44f0bda9c09f7e5f282973045f14054f522ba4f5bb5f3de74ae02",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "While this works just fine, it is a very specialised case of comparing two objects. It would be better if we could use the Python comparison operators directly on these `Product` objects."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0011",
+      "type": "heading",
+      "order": 11,
+      "source_hash": "0a62daf259bb52425d939428a3a2c418dad4caf4ee03b9c2a4580c7e7c819795",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Overloading operators"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "c8fbb5196853f4cb7ee1f17fa0c24e452651371e7763f2988cd67ea149c5a693",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Python contains some specially named built-in methods for working with the standard arithmetic and comparison operators. The technique is called _operator overloading_. If you want to be able to use a certain operator on instances of self-defined classes, you can write a special method which returns the correct result of the operator. We have already used this technique with the `__str__` method: Python knows to look for a method named like this when a string representation of an object is called for."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "b92415dcb9a4bf29a4b760fe77b8b203fd19f8c8ea2cab305fea82b4ff589199",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's start with the operator `>` which tells us if the first operand is greater than the second. The `Product` class definition below contains the method `__gt__`, which is short for *g*reater *t*han. This specially named method should return the correct result of the comparison. Specifically, it should return `True` if and only if the current object is greater than the object passed as an argument. The criteria used can be determined by the programmer. By _current object_ we mean the object on which the method is called with the dot `.` notation."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "28c5eab747523c98b52a224d1883731087eb518f58178c3edd49988b59e40cf6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Product:\n    def __init__(self, name: str, price: float):\n        self.__name = name\n        self.__price = price\n\n    def __str__(self):\n        return f\"{self.__name} (price {self.__price})\"\n\n    @property\n    def price(self):\n        return self.__price\n\n    def __gt__(self, another_product):\n        return self.price > another_product.price"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Product:\n    def __init__(self, name: str, price: float):\n        self.__name = name\n        self.__price = price\n\n    def __str__(self):\n        return f\"{self.__name} (price {self.__price})\"\n\n    @property\n    def price(self):\n        return self.__price\n\n    def __gt__(self, another_product):\n        return self.price > another_product.price"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "28c5eab747523c98b52a224d1883731087eb518f58178c3edd49988b59e40cf6",
+        "length_lines": 14
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "f2f2debff801e474dad74f7033c69aab72f83090ba8d52501114fc7aa0748b0f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the implementation above, the method `__gt__` returns `True` if the price of the current product is greater than the price of the product passed as an argument. Otherwise the method returns `False`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "cbe177a47f85c6393a38975b3c34acee1cf5f521fe6aabbeacaa680f777e959f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Now the comparison operator `>` is available for use with objects of type Product:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0017",
+      "type": "code",
+      "order": 17,
+      "source_hash": "7a9a430437250d0fa9394240163849a75111a70f2d83bdaa0503223ebd96ca8c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "orange = Product(\"Orange\", 2.90)\napple = Product(\"Apple\", 3.95)\n\nif orange > apple:\n    print(\"Orange is greater\")\nelse:\n    print(\"Apple is greater\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "orange = Product(\"Orange\", 2.90)\napple = Product(\"Apple\", 3.95)\n\nif orange > apple:\n    print(\"Orange is greater\")\nelse:\n    print(\"Apple is greater\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "7a9a430437250d0fa9394240163849a75111a70f2d83bdaa0503223ebd96ca8c",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0018",
+      "type": "sample_output",
+      "order": 18,
+      "source_hash": "95344d5c3ece35e5f7cde9fc5971327955c1d40d5809fb165089d5c1522938b2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Apple is greater"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Apple is greater"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nApple is greater\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "961ebef017e0d2aa966d39a0a0541d33f7020bffd398ea9413a5015d4cd6051b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As stated above, it is up to the programmer to determine the criteria by which it is decided which is greater and which is lesser. We could, for instance, decide that the order should not be based on price, but be alphabetical by name instead. This would mean that `orange` would now be \"greater than\" `apple`, as \"orange\" comes alphabetically last."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0020",
+      "type": "code",
+      "order": 20,
+      "source_hash": "aa3c883daacfb23c06eda6455e8ba2eaff26e39bd1f586d2e857b3dc0e6776b1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Product:\n    def __init__(self, name: str, price: float):\n        self.__name = name\n        self.__price = price\n\n    def __str__(self):\n        return f\"{self.__name} (price {self.__price})\"\n\n    @property\n    def price(self):\n        return self.__price\n\n    @property\n    def name(self):\n        return self.__name\n\n    def __gt__(self, another_product):\n        return self.name > another_product.name"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Product:\n    def __init__(self, name: str, price: float):\n        self.__name = name\n        self.__price = price\n\n    def __str__(self):\n        return f\"{self.__name} (price {self.__price})\"\n\n    @property\n    def price(self):\n        return self.__price\n\n    @property\n    def name(self):\n        return self.__name\n\n    def __gt__(self, another_product):\n        return self.name > another_product.name"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "aa3c883daacfb23c06eda6455e8ba2eaff26e39bd1f586d2e857b3dc0e6776b1",
+        "length_lines": 18
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0021",
+      "type": "code",
+      "order": 21,
+      "source_hash": "6d0148fde11384d7b5185a025070cdb730947382f357a1be69f697e2cee07ce3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "Orange = Product(\"Orange\", 4.90)\nApple = Product(\"Apple\", 3.95)\n\nif Orange > Apple:\n    print(\"Orange is greater\")\nelse:\n    print(\"Apple is greater\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "Orange = Product(\"Orange\", 4.90)\nApple = Product(\"Apple\", 3.95)\n\nif Orange > Apple:\n    print(\"Orange is greater\")\nelse:\n    print(\"Apple is greater\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6d0148fde11384d7b5185a025070cdb730947382f357a1be69f697e2cee07ce3",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0022",
+      "type": "sample_output",
+      "order": 22,
+      "source_hash": "be4b8df0b75e839440d231a96da075a9e65b27ab50bc1cb015cecc4cffa6154d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Orange is greater"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Orange is greater"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nOrange is greater\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0023",
+      "type": "heading",
+      "order": 23,
+      "source_hash": "b1d59d888862ad57ae86bbcf6f41cedcf60f455171c85f6caa8139ed5c2ce506",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "More operators"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "09a975e6e8016247593ff32cbef05afa41128a041801ab84c1f135d50dcf0688",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Here we have a table containing the standard comparison operators, along with the methods which need to be implemented if we want to make them available for use on our objects:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "e9f5f50352d50243dda0b5f03ecf62dd2d498d85e6280a92efb9befb037ebc82",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Operator | Traditional meaning | Name of method\n:--:|:--:|:--:\n`<` | Less than | `__lt__(self, another)`\n`>` | Greater than | `__gt__(self, another)`\n`==` | Equal to | `__eq__(self, another)`\n`!=` | Not equal to | `__ne__(self, another)`\n`<=` | Less than or equal to | `__le__(self, another)`\n`>=` | Greater than or equal to | `__ge__(self, another)`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "5b812071cf79988ca098280dda5021f96f76dace1d77c71f9147eeedd961bce6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You can also implement some other operators, including the following arithmetic operators:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "aa4579610b17c6344e2504d11b3c38632ba7431f4d63038339125d8b5b889943",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Operator | Traditional meaning | Name of method\n:--:|:--:|:--:\n`+` | Addition | `__add__(self, another)`\n`-` | Subtraction | `__sub__(self, another)`\n`*` | Multiplication | `__mul__(self, another)`\n`/` | Division (floating point result) | `__truediv__(self, another)`\n`//` | Division (integer result) | `__floordiv__(self, another)`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "9a0cbe93a530cf7abfae8075d86c4f916a703c86350207a512573e126901895e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "More operators and method names are easily found online. Remember also the `dir` command for listing the methods available for use on a given object."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "4b3bd73e4b9e9ec440d18b5f17684f58049fc69cdef7f028bf8ce7e74360f2ff",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "It is very rarely necessary to implement all the arithmetic and comparison operators in your own classes. For example, division is an operation which rarely makes sense outside numerical objects. What would be the result of dividing a Student object by three, or by another Student object? Nevertheless, some of these operators are often very useful with also your own classes. The selection of methods to implement depends on what makes sense, knowing the properties of your objects."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "72e182e027e637eb99c6e6b4a54ecc1dea6f6f2871f02d5aa1f9d8d9e3868d6d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at a class which models a single note. If we implement the `__add__` method within our class definition, the addition operator `+` becomes available on our Note objects:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0031",
+      "type": "code",
+      "order": 31,
+      "source_hash": "d8a45e854c2859c65d14e506fa3c1fec5712c8fe314f5d88bf5458e9c784b1d8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from datetime import datetime\n\nclass Note:\n    def __init__(self, entry_date: datetime, entry: str):\n        self.entry_date = entry_date\n        self.entry = entry\n\n    def __str__(self):\n        return f\"{self.entry_date}: {self.entry}\"\n\n    def __add__(self, another):\n        # The date of the new note is the current time\n        new_note = Note(datetime.now(), \"\")\n        new_note.entry = self.entry + \" and \" + another.entry\n        return new_note"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from datetime import datetime\n\nclass Note:\n    def __init__(self, entry_date: datetime, entry: str):\n        self.entry_date = entry_date\n        self.entry = entry\n\n    def __str__(self):\n        return f\"{self.entry_date}: {self.entry}\"\n\n    def __add__(self, another):\n        # The date of the new note is the current time\n        new_note = Note(datetime.now(), \"\")\n        new_note.entry = self.entry + \" and \" + another.entry\n        return new_note"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d8a45e854c2859c65d14e506fa3c1fec5712c8fe314f5d88bf5458e9c784b1d8",
+        "length_lines": 15
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0032",
+      "type": "code",
+      "order": 32,
+      "source_hash": "3a0aa1096e5aafc571717a6c8b3df5db1b81332de3fff7626ad2201ed085133d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "entry1 = Note(datetime(2016, 12, 17), \"Remember to buy presents\")\nentry2 = Note(datetime(2016, 12, 23), \"Remember to get a tree\")\n\n# These notes can be added together with the + operator\n# This calls the  __add__ method in the Note class\nboth = entry1 + entry2\nprint(both)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "entry1 = Note(datetime(2016, 12, 17), \"Remember to buy presents\")\nentry2 = Note(datetime(2016, 12, 23), \"Remember to get a tree\")\n\n# These notes can be added together with the + operator\n# This calls the  __add__ method in the Note class\nboth = entry1 + entry2\nprint(both)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3a0aa1096e5aafc571717a6c8b3df5db1b81332de3fff7626ad2201ed085133d",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0033",
+      "type": "sample_output",
+      "order": 33,
+      "source_hash": "3c688f84da916f01d3f4ac781c17f3e6511035566c2c82fbd721a9399d060ecf",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "2020-09-09 14:13:02.163170: Remember to buy presents and Remember to get a tree"
+      },
+      "translation": {
+        "language": "text",
+        "content": "2020-09-09 14:13:02.163170: Remember to buy presents and Remember to get a tree"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n2020-09-09 14:13:02.163170: Remember to buy presents and Remember to get a tree\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0034",
+      "type": "heading",
+      "order": 34,
+      "source_hash": "4873f217dab8a47a3a0f7bfc5c23bec6def774b5673442d971d585e264de44e7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A string representation of an object"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "335952ce1229e16023d29f17db036290bc1192385465487c187984fcb9dc9cc5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You have already implemented quite a few `__str__` methods in your classes. As you know, the method returns a string representation of the object. Another quite similar method is `__repr__` which returns a _technical_ representation of the object. The method `__repr__` is often implemented so that it returns the program code which can be executed to return an object with _identical contents_ to the current object."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "9ed2d36b1677f9f76e5be3c346ed8e9c48c1ffc31b39f8589a2b11a81dd9aa8a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The function `repr` returns this technical string representation of the object. The technical representation is used also whenever the `__str__` method has not been defined for the object. The example below will make this clearer:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0037",
+      "type": "code",
+      "order": 37,
+      "source_hash": "1aa3ef5ea47136fcd2194257003cd0605beb42a96cba83f7042bccce1b92caf7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Person:\n    def __init__(self, name: str, age: int):\n        self.name = name\n        self.age = age\n        \n    def __repr__(self):\n        return f\"Person({repr(self.name)}, {self.age})\""
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Person:\n    def __init__(self, name: str, age: int):\n        self.name = name\n        self.age = age\n        \n    def __repr__(self):\n        return f\"Person({repr(self.name)}, {self.age})\""
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "1aa3ef5ea47136fcd2194257003cd0605beb42a96cba83f7042bccce1b92caf7",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0038",
+      "type": "code",
+      "order": 38,
+      "source_hash": "0cc2ef4bf5b9a226e94255ebbfd50bfcbd1d4dbc1544863b8d99c6eb8b39705f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "person1 = Person(\"Anna\", 25)\nperson2 = Person(\"Peter\", 99)\nprint(person1)\nprint(person2)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "person1 = Person(\"Anna\", 25)\nperson2 = Person(\"Peter\", 99)\nprint(person1)\nprint(person2)"
+      },
+      "metadata": {
+        "language": "python3",
+        "code_hash": "0cc2ef4bf5b9a226e94255ebbfd50bfcbd1d4dbc1544863b8d99c6eb8b39705f",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0039",
+      "type": "sample_output",
+      "order": 39,
+      "source_hash": "df0e0ef9841ec2d7d4ee2b7747460428252756bb1178bdbc9b95dbf0ec94a3b6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Person('Anna', 25)\nPerson('Peter', 99)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Person('Anna', 25)\nPerson('Peter', 99)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPerson('Anna', 25)\nPerson('Peter', 99)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "202caeac46998270dd49e92e47241ccc812675127ffcb0b93e16008b5260fd1f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Notice how the `__repr__`  method itself uses the `repr` function to retrieve the technical representation of the string. This is necessary to include the `'` characters in the result."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "884f82c64f944677e4c59e17e34f08049a766d05ff61623fa6bcde826d2d5585",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The following class has definitions for both `__repr__` and `__str__`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0042",
+      "type": "code",
+      "order": 42,
+      "source_hash": "f54b67fe41e6c0b11239f7537fc9b5941ca756f17cba4f9f94f33f21c02c2521",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Person:\n    def __init__(self, name: str, age: int):\n        self.name = name\n        self.age = age\n        \n    def __repr__(self):\n        return f\"Person({repr(self.name)}, {self.age})\"\n\n    def __str__(self):\n        return f\"{self.name} ({self.age} years)\""
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Person:\n    def __init__(self, name: str, age: int):\n        self.name = name\n        self.age = age\n        \n    def __repr__(self):\n        return f\"Person({repr(self.name)}, {self.age})\"\n\n    def __str__(self):\n        return f\"{self.name} ({self.age} years)\""
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f54b67fe41e6c0b11239f7537fc9b5941ca756f17cba4f9f94f33f21c02c2521",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0043",
+      "type": "code",
+      "order": 43,
+      "source_hash": "625a986e6260899f2398cbd9570266ccbc8ff2e833bfbf142d34af605b2642fb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "Person = Person(\"Anna\", 25)\nprint(Person)\nprint(repr(Person))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "Person = Person(\"Anna\", 25)\nprint(Person)\nprint(repr(Person))"
+      },
+      "metadata": {
+        "language": "python3",
+        "code_hash": "625a986e6260899f2398cbd9570266ccbc8ff2e833bfbf142d34af605b2642fb",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0044",
+      "type": "sample_output",
+      "order": 44,
+      "source_hash": "941cbb9be9d60cd3a84deaee5d9591bf8902aacd65e98ffac2c6ea1c9e034627",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Anna (25 years)\nPerson('Anna', 25)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Anna (25 years)\nPerson('Anna', 25)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nAnna (25 years)\nPerson('Anna', 25)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0045",
+      "type": "paragraph",
+      "order": 45,
+      "source_hash": "b00759c9610b6bd832d6d00c92a4f0c956d3aa234be45a20077a8c1e7a0b54c6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "It is worth mentioning that with data structures, such as lists, Python always uses the `__repr__` method for the string representation of the contents. This can sometimes look a bit baffling:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0046",
+      "type": "code",
+      "order": 46,
+      "source_hash": "4f5067e16b8ea1c6f620450591dcde3cdafe2e9c2651acc69a8fcbbb63c5484c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "persons = []\npersons.append(Person(\"Anna\", 25))\npersons.append(Person(\"Peter\", 99))\npersons.append(Person(\"Mary\", 55))\nprint(persons)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "persons = []\npersons.append(Person(\"Anna\", 25))\npersons.append(Person(\"Peter\", 99))\npersons.append(Person(\"Mary\", 55))\nprint(persons)"
+      },
+      "metadata": {
+        "language": "python3",
+        "code_hash": "4f5067e16b8ea1c6f620450591dcde3cdafe2e9c2651acc69a8fcbbb63c5484c",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0047",
+      "type": "sample_output",
+      "order": 47,
+      "source_hash": "5815a9bd87dd4845f1c83cc55baee7bfe49aef634bc41ab5f17bdad743e97419",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[Person('Anna', 25), Person('Peter', 99), Person('Mary', 55)]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[Person('Anna', 25), Person('Peter', 99), Person('Mary', 55)]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[Person('Anna', 25), Person('Peter', 99), Person('Mary', 55)]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0048",
+      "type": "exercise",
+      "order": 48,
+      "source_hash": "6f1574121e99402dfc03d06083911fcfbdfb12b876022824ee435d6002ba0d63",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains an outline for a class named `Money`. This exercise asks you to implement some additional methods and to fix some small problems in the template.\n\n## Fix the string representation\n\nThe `__str__` method in the class definition doesn't work quite right. Given the following two Money objects, the latter is printed out wrong:\n\n```python\ne1 = Money(4, 10)\ne2 = Money(2, 5)  # two euros and five cents\n\nprint(e1)\nprint(e2)\n```\n\n<sample-output>\n\n4.10\n2.5\n\n</sample-output>\n\nPlease fix the method so that it prints out \n\n<sample-output>\n\n4.10 eur\n2.05 eur\n\n</sample-output>\n\n## Equal amounts\n\nPlease define a new method named `__eq__(self, another)` which allows you to use the `==` comparison operator on Money objects. You can test your implementation with the following code:\n\n```python\ne1 = Money(4, 10)\ne2 = Money(2, 5)\ne3 = Money(4, 10)\n\nprint(e1)\nprint(e2)\nprint(e3)\nprint(e1 == e2)\nprint(e1 == e3)\n```\n\n<sample-output>\n\n4.10 eur\n2.05 eur\n4.10 eur\nFalse\nTrue\n\n</sample-output>\n\n## Other comparison operators\n\nPlease implement the appropriate methods for the comparison operators `<`, `>` and `!=`.\n\n```python\ne1 = Money(4, 10)\ne2 = Money(2, 5)\n\nprint(e1 != e2)\nprint(e1 < e2)\nprint(e1 > e2)\n```\n\n<sample-output>\n\nTrue\nFalse\nTrue\n\n</sample-output>\n\n## Addition and subtraction\n\nPlease implement the addition and subtraction operators `+` and `-` for Money objects. Both should return a new object of type Money. Neither the object itself nor the object passed as an argument should be changed as a result.\n\nNB: the value of a Money object cannot be negative. If an attempt to subtract would result in a negative result, the method should raise a `ValueError` exception.\n\n```python\ne1 = Money(4, 5)\ne2 = Money(2, 95)\n\ne3 = e1 + e2\ne4 = e1 - e2\n\nprint(e3)\nprint(e4)\n\ne5 = e2-e1\n```\n\n<sample-output>\n\n7.00 eur\n1.10 eur\nTraceback (most recent call last):\n  File \"money.py\", line 416, in <module>\n    e5 = e2-e1\n  File \"money.py\", line 404, in __sub__\n    raise ValueError(f\"a negative result is not allowed\")\nValueError: a negative result is not allowed\n\n</sample-output>\n\n## The value must not be directly accessible\n\nThe class still has a small integrity issue. The user can \"cheat\" by accessing the attributes directly and changing the value stored in the Money object:\n\n```python\nprint(e1)\ne1.euros = 1000\nprint(e1)\n```\n\n<sample-output>\n\n4.05 eur\n1000.05 eur\n\n</sample-output>\n\nPlease [encapsulate](/part-9/3-encapsulation#encapsulation) the implementation of the attributes defined in the class so that the cheat used above is not possible. The class should have no public attributes, and no getter or setter methods for the euros or the cents."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part10-07_money",
+        "exercise_type": "programming-exercise",
+        "name": "Money",
+        "tmc_name": "part10-07_money",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0049",
+      "type": "exercise",
+      "order": 49,
+      "source_hash": "28d28cfd391f62261b3f429688e2ce618f2fd5b55e682c211e164a1bd1d2fd05",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In this exercise you are asked to implement the class `SimpleDate` which allows you to handle dates. For simplicity's sake we assume here that _each month has 30 days_.\n\nBecause of this simplification you should not use the `datetime` module from the Python standard library. You will implement similar functionality by yourself instead.\n\n## Comparisons\n\nPlease implement the outline of the class, along with methods allowing for comparisons with the operators `<`, `>`, `==` and `!=`. You can use the following code to test your implementation:\n\n```python\nd1 = SimpleDate(4, 10, 2020)\nd2 = SimpleDate(28, 12, 1985)\nd3 = SimpleDate(28, 12, 1985)\n\nprint(d1)\nprint(d2)\nprint(d1 == d2)\nprint(d1 != d2)\nprint(d1 == d3)\nprint(d1 < d2)\nprint(d1 > d2)\n```\n\n<sample-output>\n\n4.10.2020\n28.12.1985\nFalse\nTrue\nFalse\nFalse\nTrue\n\n</sample-output>\n\n## Increment\n\nPlease implement the addition operator `+` which allows you to add a given number of days to a SimpleDate object. The operator should return a new SimpleDate object. The original object should not be changed.\n\n```python\nd1 = SimpleDate(4, 10, 2020)\nd2 = SimpleDate(28, 12, 1985)\n\nd3 = d1 + 3\nd4 = d2 + 400\n\nprint(d1)\nprint(d2)\nprint(d3)\nprint(d4)\n```\n\n<sample-output>\n\n4.10.2020\n28.12.1985\n7.10.2020\n8.2.1987\n\n</sample-output>\n\n## Difference\n\nPlease implement the subtraction operator `-` which allows you to find out the difference in days between two SimpleDate objects. As we assumed each month to have 30 days, a year within the confines of this exercise is 12*30 = 360 days long.\n\nYou can use the following code to test your program:\n\n```python\nd1 = SimpleDate(4, 10, 2020)\nd2 = SimpleDate(2, 11, 2020)\nd3 = SimpleDate(28, 12, 1985)\n\nprint(d2-d1)\nprint(d1-d2)\nprint(d1-d3)\n```\n\n<sample-output>\n\n28\n28\n12516\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part10-08_simple_date",
+        "exercise_type": "programming-exercise",
+        "name": "Simple date",
+        "tmc_name": "part10-08_simple_date",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0050",
+      "type": "heading",
+      "order": 50,
+      "source_hash": "a58e1e2691ee2c114626a98761ad54223c851c70bcca24f9a05fceed7119f9b3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Iterators"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0051",
+      "type": "paragraph",
+      "order": 51,
+      "source_hash": "4b3f4ffc9254817eb38c071da22aaae1b750f71bf90699b1424ac4dfb53a35b5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We know that the `for` statement can be used to _iterate_ through many different data structures, files and collections of items. A typical use case would be the following function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0052",
+      "type": "code",
+      "order": 52,
+      "source_hash": "21988c004f9781035d3e50f5ba8021d423c9491e80b4e7fbd6edbdc7d7fbbd6c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\ndef count_positives(my_list: list):\n    n = 0\n    for item in my_list:\n        if item > 0:\n            n += 1\n    return n\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "\ndef count_positives(my_list: list):\n    n = 0\n    for item in my_list:\n        if item > 0:\n            n += 1\n    return n\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "21988c004f9781035d3e50f5ba8021d423c9491e80b4e7fbd6edbdc7d7fbbd6c",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0053",
+      "type": "paragraph",
+      "order": 53,
+      "source_hash": "7dd8b7cdbaf65d1756c46934910b26072cf755dfd99da819dbf980555e998100",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The function goes through the items in the list one by one, and keeps track of how many of the items were positive."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0054",
+      "type": "paragraph",
+      "order": 54,
+      "source_hash": "e39510c1893709d0c64b66705b7364edcd7635029c2b8f5672976770fcbc47da",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "It is possible to make your own classes iterable, too. This is useful when the core purpose of the class involves storing a collection of items. The Bookshelf class from a previous example would be a good candidate, as it would make sense to use a `for` loop to go through the books on the shelf. The same applies to, say, a student register. Being able to iterate through the collection of students could be useful."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0055",
+      "type": "paragraph",
+      "order": 55,
+      "source_hash": "36f31661b81887e0248c81b3743d2ad0abc16258d0bf10c64fdb927935276832",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "To make a class iterable you must implement the iterator methods `__iter__` and  `__next__`. We will return to the specifics of these methods after the following example:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0056",
+      "type": "code",
+      "order": 56,
+      "source_hash": "ad1e0b1551a12060df683e5a20d1e3f92435b83c2049ec9bac888d60e03084bc",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Book:\n    def __init__(self, name: str, author: str, page_count: int):\n        self.name = name\n        self.author = author\n        self.page_count = page_count\n\nclass Bookshelf:\n    def __init__(self):\n        self._books = []\n\n    def add_book(self, book: Book):\n        self._books.append(book)\n\n    # This is the iterator initialization method\n    # The iteration variable(s) should be initialized here\n    def __iter__(self):\n        self.n = 0\n        # the method returns a reference to the object itself as \n        # the iterator is implemented within the same class definition\n        return self\n\n    # This method returns the next item within the object\n    # If all items have been traversed, the StopIteration event is raised\n    def __next__(self):\n        if self.n < len(self._books):\n            # Select the current item from the list within the object\n            book = self._books[self.n]\n            # increase the counter (i.e. iteration variable) by one\n            self.n += 1\n            # return the current item\n            return book\n        else:\n            # All books have been traversed\n            raise StopIteration"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Book:\n    def __init__(self, name: str, author: str, page_count: int):\n        self.name = name\n        self.author = author\n        self.page_count = page_count\n\nclass Bookshelf:\n    def __init__(self):\n        self._books = []\n\n    def add_book(self, book: Book):\n        self._books.append(book)\n\n    # This is the iterator initialization method\n    # The iteration variable(s) should be initialized here\n    def __iter__(self):\n        self.n = 0\n        # the method returns a reference to the object itself as \n        # the iterator is implemented within the same class definition\n        return self\n\n    # This method returns the next item within the object\n    # If all items have been traversed, the StopIteration event is raised\n    def __next__(self):\n        if self.n < len(self._books):\n            # Select the current item from the list within the object\n            book = self._books[self.n]\n            # increase the counter (i.e. iteration variable) by one\n            self.n += 1\n            # return the current item\n            return book\n        else:\n            # All books have been traversed\n            raise StopIteration"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ad1e0b1551a12060df683e5a20d1e3f92435b83c2049ec9bac888d60e03084bc",
+        "length_lines": 34
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0057",
+      "type": "paragraph",
+      "order": 57,
+      "source_hash": "55289b315fad1a78738973aaf4ed234a6db81ee29ca85c98ee95e59ef41efa65",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The method `__iter__` initializes the iteration variable or variables. In this case it suffices to have a simple counter containing the index of the current item in the list. We also need the method `__next__`, which returns the next item in the iterator. In the example above the method returns the item at index `n` from the list within the Bookshelf object, and the iterator variable is also incremented."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0058",
+      "type": "paragraph",
+      "order": 58,
+      "source_hash": "31b1870b4de5ebb030a84ccd1d2d4f81f261a9545b11af78a09900b29b527252",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When all objects have been traversed, the `__next__` method raises the `StopIteration` exception. The process is no different from raising any other exceptions, but this exception is automatically handled by Python and its purpose is to signal to the code calling the iterator (e.g. a `for` loop) that the iteration is now over."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0059",
+      "type": "paragraph",
+      "order": 59,
+      "source_hash": "18fc13b4de2dd91df152618c0438dbf6982cca37fa3176f562b7fd26e3444d75",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Our Bookshelf is now ready for iteration, for example with a `for` loop:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0060",
+      "type": "code",
+      "order": 60,
+      "source_hash": "a3b587722090c1bea6d9598342f725ee86a5031b892e7a52fc3d30107d708b19",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    b1 = Book(\"The Life of Python\", \"Montague Python\", 123)\n    b2 = Book(\"The Old Man and the C\", \"Ernest Hemingjavay\", 204)\n    b3 = Book(\"A Good Cup of Java\", \"Caffee Coder\", 997)\n\n    shelf = Bookshelf()\n    shelf.add_book(b1)\n    shelf.add_book(b2)\n    shelf.add_book(b3)\n\n    # Print the names of all the books\n    for book in shelf:\n        print(book.name)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    b1 = Book(\"The Life of Python\", \"Montague Python\", 123)\n    b2 = Book(\"The Old Man and the C\", \"Ernest Hemingjavay\", 204)\n    b3 = Book(\"A Good Cup of Java\", \"Caffee Coder\", 997)\n\n    shelf = Bookshelf()\n    shelf.add_book(b1)\n    shelf.add_book(b2)\n    shelf.add_book(b3)\n\n    # Print the names of all the books\n    for book in shelf:\n        print(book.name)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a3b587722090c1bea6d9598342f725ee86a5031b892e7a52fc3d30107d708b19",
+        "length_lines": 13
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0061",
+      "type": "sample_output",
+      "order": 61,
+      "source_hash": "0beed6842a3d17cb6bed66b0428d3517795afefbcec67b4460a2014f91d58e34",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The Life of Python\nThe Old Man and the C\nA Good Cup of Java"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The Life of Python\nThe Old Man and the C\nA Good Cup of Java"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe Life of Python\nThe Old Man and the C\nA Good Cup of Java\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-3-oo-programming-techniques-0062",
+      "type": "exercise",
+      "order": 62,
+      "source_hash": "d4e530fb2fc4681a2f3dc53c7c42b0e21e47b1b0c3dabac783b11847275bc19a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains the `ShoppingList` class from the [exercise in part 8](/part-8/2-classes-and-objects#programming-exercise-shopping-list). Please adjust the class so that it is iterable and can thus be used as follows:\n\n```python\nshopping_list = ShoppingList()\nshopping_list.add(\"bananas\", 10)\nshopping_list.add(\"apples\", 5)\nshopping_list.add(\"pineapple\", 1)\n\nfor product in shopping_list:\n    print(f\"{product[0]}: {product[1]} units\")\n```\n\n<sample-output>\n\nbananas: 10 units\napples: 5 units\npineapple: 1 units\n\n</sample-output>\n\nThe `__next__` method of your iterator should return tuples, where the first item is the name of the product and the second item is the amount."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part10-09_iterable_shopping_list",
+        "exercise_type": "programming-exercise",
+        "name": "An iterable shopping list",
+        "tmc_name": "part10-09_iterable_shopping_list",
+        "height": null
+      }
+    }
+  ]
+}

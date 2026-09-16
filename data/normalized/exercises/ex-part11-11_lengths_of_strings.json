@@ -1,0 +1,16 @@
+{
+  "id": "ex-part11-11_lengths_of_strings",
+  "lesson_id": "part11-2-more-comprehensions",
+  "part": 11,
+  "tmc_name": "part11-11_lengths_of_strings",
+  "title_original": "Lengths of strings",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `lengths(strings: list)` which takes a list of strings as its argument. The function should return a _dictionary_ with the strings in the list as the keys and their lengths as the values.\n\nThe function should be implemented with a dictionary comprehension. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nword_list = [\"once\", \"upon\" , \"a\", \"time\", \"in\"]\n\nword_lengths = lengths(word_list)\nprint(word_lengths)\n```\n\n<sample-output>\n\n{'once': 4, 'upon': 4, 'a': 1, 'time': 4, 'in': 2}\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "word_list = [\"once\", \"upon\" , \"a\", \"time\", \"in\"]\n\nword_lengths = lengths(word_list)\nprint(word_lengths)",
+  "grading_data_available": false,
+  "source_hash": "7618a23351f729afa016de7ba546667d4eba93fcd29d0d1e525b2ed9591c2737",
+  "order": 47
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-05_print_code",
+  "lesson_id": "part01-1-getting-started",
+  "part": 1,
+  "tmc_name": "part01-05_print_code",
+  "title_original": "Print some code",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Thus far, you have probably used double quotation marks `\"` to print out strings. In addition to the double quotation marks, Python also accepts single quotation marks `'`.\n\nThis comes in handy if you ever want to print out the actual quotation marks themselves:\n\n```python\n\nprint('\"Come right back!\", shouted the police officer.')\n\n```\n\n<sample-output>\n\n\"Come right back!\", shouted the police officer.\n\n</sample-output>\n\nPlease write a program which prints out the following:\n\n<sample-output>\n\nprint(\"Hello there!\")\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "print('\"Come right back!\", shouted the police officer.')\n",
+  "grading_data_available": false,
+  "source_hash": "e1906b5a897e2c25f154218c55218d0b75c9c5ab00174842483af0ef9bbd4e7f",
+  "order": 40
+}

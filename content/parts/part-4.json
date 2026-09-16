@@ -1,0 +1,71 @@
+{
+  "part": 4,
+  "slug": "part-4",
+  "title_original": "Part 4",
+  "title_vi": "Hàm nâng cao, Danh sách (List) và Định dạng",
+  "lessons": [
+    {
+      "id": "part04-1-vscode",
+      "slug": "1-vscode",
+      "is_index": false,
+      "title_original": "The Visual Studio Code editor, Python interpreter and built-in debugging tool",
+      "path": "/part-4/1-vscode",
+      "blocks_count": 49,
+      "title_vi": "Trình soạn thảo Visual Studio Code, trình thông dịch Python và công cụ gỡ lỗi tích hợp"
+    },
+    {
+      "id": "part04-2-more-functions",
+      "slug": "2-more-functions",
+      "is_index": false,
+      "title_original": "More functions",
+      "path": "/part-4/2-more-functions",
+      "blocks_count": 103,
+      "title_vi": "Nhiều chức năng hơn"
+    },
+    {
+      "id": "part04-3-lists",
+      "slug": "3-lists",
+      "is_index": false,
+      "title_original": "Lists",
+      "path": "/part-4/3-lists",
+      "blocks_count": 109,
+      "title_vi": "Danh sách"
+    },
+    {
+      "id": "part04-4-definite-iteration",
+      "slug": "4-definite-iteration",
+      "is_index": false,
+      "title_original": "Definite iteration",
+      "path": "/part-4/4-definite-iteration",
+      "blocks_count": 67,
+      "title_vi": "Lặp lại xác định"
+    },
+    {
+      "id": "part04-5-print-statement-formatting",
+      "slug": "5-print-statement-formatting",
+      "is_index": false,
+      "title_original": "Print statement formatting",
+      "path": "/part-4/5-print-statement-formatting",
+      "blocks_count": 39,
+      "title_vi": "In định dạng câu lệnh"
+    },
+    {
+      "id": "part04-6-strings-and-lists",
+      "slug": "6-strings-and-lists",
+      "is_index": false,
+      "title_original": "More strings and lists",
+      "path": "/part-4/6-strings-and-lists",
+      "blocks_count": 86,
+      "title_vi": "Nhiều chuỗi và danh sách hơn"
+    },
+    {
+      "id": "part04-index",
+      "slug": "index",
+      "is_index": true,
+      "title_original": "Part 4",
+      "path": "/part-4",
+      "blocks_count": 2,
+      "title_vi": "Hàm nâng cao, Danh sách (List) và Định dạng"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part10-03_areas",
+  "lesson_id": "part10-1-class-hierarchies",
+  "part": 10,
+  "tmc_name": "part10-03_areas",
+  "title_original": "Areas",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The exercise template contains a class definition for a `Rectangle`. It represents a [rectangle shape](https://en.wikipedia.org/wiki/Rectangle). A Rectangle works like this:\n\n```python\nrectangle = Rectangle(2, 3)\nprint(rectangle)\nprint(\"area:\", rectangle.area())\n```\n\n<sample-output>\n\nrectangle 2x3\narea: 6\n\n</sample-output>\n\n## Square\n\nPlease define a class named `Square` which inherits the `Rectangle` class. The sides of a [square](https://en.wikipedia.org/wiki/Square) are all of equal length, which makes the square a special case of the rectangle. The new class should not contain any new attributes.\n\nA Square object is used as follows:\n\n```python\nsquare = Square(4)\nprint(square)\nprint(\"area:\", square.area())\n```\n\n<sample-output>\n\nsquare 4x4\narea: 16\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "rectangle = Rectangle(2, 3)\nprint(rectangle)\nprint(\"area:\", rectangle.area())",
+  "grading_data_available": false,
+  "source_hash": "06f41f42d6809e1addfafe60a1299dccc3c39a4bb00a27be793863c031e25809",
+  "order": 45
+}

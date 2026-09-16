@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-15_right_aligned",
+  "lesson_id": "part03-2-working-with-strings",
+  "part": 3,
+  "tmc_name": "part03-15_right_aligned",
+  "title_original": "Right-aligned",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for a string and then prints it out so that exactly 20 characters are displayed. If the input is shorter than 20 characters, the beginning of the line is filled in with `*` characters.\n\nYou may assume the input string is at most 20 characters long.\n\n<sample-output>\n\nPlease type in a string: **python**\n<pre>\n**************python\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a string: **alongerstring**\n<pre>\n*******alongerstring\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a string: **averyverylongstring**\n<pre>\n*averyverylongstring\n</pre>\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "4bd674c3a3bf421b558ec469af3e85fbc1f586faa35d7ff22d2bb8a839459e77",
+  "order": 56
+}

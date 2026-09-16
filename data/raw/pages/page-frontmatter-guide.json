@@ -1,0 +1,140 @@
+{
+  "id": "page-frontmatter-guide",
+  "slug": "frontmatter-guide",
+  "title_original": "Frontmatter-guide",
+  "path": "/frontmatter-guide",
+  "source_path": "data/frontmatter-guide.md",
+  "source_hash": "7767d570a2bc9ec2c9c31823caa3b72408f984baf1e7242dee747d2fbf3f3c40",
+  "frontmatter": {
+    "banner": false,
+    "hidden": true,
+    "hide_in_sidebar": true,
+    "information_page": false,
+    "overview": true,
+    "path": "/frontmatter-guide",
+    "separator_after": "derp",
+    "sidebar_priority": 1337,
+    "title": "Frontmatter-guide",
+    "upcoming": "1.1.",
+    "vocabulary_page": false
+  },
+  "chunks_count": 23,
+  "raw_chunks": [
+    {
+      "raw_type": "heading",
+      "level": 3,
+      "content": "Kaikki mahdolliset frontmatter-fieldit:",
+      "raw_source": "### Kaikki mahdolliset frontmatter-fieldit:"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "banner",
+      "raw_source": "banner"
+    },
+    {
+      "raw_type": "list",
+      "content": "- Ei pakollinen\n- Boolean-tyyppinen\n- Lisää projektin juuresta löytyvän banner.svg -kuvan sivun yläreunaan.\n- HUOM! Banneri lisätään vain, jos myös information\\_page on true",
+      "raw_source": "- Ei pakollinen\n- Boolean-tyyppinen\n- Lisää projektin juuresta löytyvän banner.svg -kuvan sivun yläreunaan.\n- HUOM! Banneri lisätään vain, jos myös information\\_page on true"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "hidden",
+      "raw_source": "hidden"
+    },
+    {
+      "raw_type": "list",
+      "content": "- Ei pakollinen\n- Boolean-tyyppinen\n- Sivua ei näy sivupalkissa (HUOM! käytä mieluummin hide\\_in\\_sidebar-kenttää, jos haluat piilottaa sivun ainoastaan sivupalkista)\n- Heittää 404, jos yrittää mennä sivun url:iin",
+      "raw_source": "- Ei pakollinen\n- Boolean-tyyppinen\n- Sivua ei näy sivupalkissa (HUOM! käytä mieluummin hide\\_in\\_sidebar-kenttää, jos haluat piilottaa sivun ainoastaan sivupalkista)\n- Heittää 404, jos yrittää mennä sivun url:iin"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "hide\\_in\\_sidebar",
+      "raw_source": "hide\\_in\\_sidebar"
+    },
+    {
+      "raw_type": "list",
+      "content": "- Ei pakollinen\n- Boolean-tyyppiä\n- Piilottaa sivun sivupalkista, jos se muuten näkyisi sivupalkissa. Sivupalkissa näkyy oletuksena kaikki index.md-nimiset tiedostot sekä kaikki data-kansion juuressa olevat markdown-tiedostot.",
+      "raw_source": "- Ei pakollinen\n- Boolean-tyyppiä\n- Piilottaa sivun sivupalkista, jos se muuten näkyisi sivupalkissa. Sivupalkissa näkyy oletuksena kaikki index.md-nimiset tiedostot sekä kaikki data-kansion juuressa olevat markdown-tiedostot."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "information\\_page",
+      "raw_source": "information\\_page"
+    },
+    {
+      "raw_type": "list",
+      "content": "- Ei pakollinen\n- Boolean-tyyppinen\n- Sivupalkkia varten. Tiedostot, joissa information\\_page on true, ovat ensimmäisinä sivupalkissa",
+      "raw_source": "- Ei pakollinen\n- Boolean-tyyppinen\n- Sivupalkkia varten. Tiedostot, joissa information\\_page on true, ovat ensimmäisinä sivupalkissa"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "overview",
+      "raw_source": "overview"
+    },
+    {
+      "raw_type": "list",
+      "content": "- Ei pakollinen\n- Boolean-tyyppinen\n- Tarkoitettu kurssin osien indeksisivuille (esim osa-01/index.md). Piilottaa sivujen alareunassa olevan listan osan aliosista. HUOM! Nämä ovat piilotettu myös information\\_page-sivuista, eli tätä ei tarvitse erikseen asettaa false:ksi information\\_page-sivuilla",
+      "raw_source": "- Ei pakollinen\n- Boolean-tyyppinen\n- Tarkoitettu kurssin osien indeksisivuille (esim osa-01/index.md). Piilottaa sivujen alareunassa olevan listan osan aliosista. HUOM! Nämä ovat piilotettu myös information\\_page-sivuista, eli tätä ei tarvitse erikseen asettaa false:ksi information\\_page-sivuilla"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "path",
+      "raw_source": "path"
+    },
+    {
+      "raw_type": "list",
+      "content": "- Pakollinen\n- String-tyyppinen\n- Polku tiedostoon url:ssa, muodossa baseurl/path",
+      "raw_source": "- Pakollinen\n- String-tyyppinen\n- Polku tiedostoon url:ssa, muodossa baseurl/path"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "separator\\_after",
+      "raw_source": "separator\\_after"
+    },
+    {
+      "raw_type": "list",
+      "content": "- Ei pakollinen\n- String-tyyppinen\n- Lisää sivupalkkiin jakajan sivun linkin jälkeen.\n- Jos asetettu tyhjäksi tekstiksi (separator\\_after: \"\"), pelkkä jakaja ilman otsikkoa. Jos ei tyhjä, jakajan alla on otsikkona asetettu teksti.",
+      "raw_source": "- Ei pakollinen\n- String-tyyppinen\n- Lisää sivupalkkiin jakajan sivun linkin jälkeen.\n- Jos asetettu tyhjäksi tekstiksi (separator\\_after: \"\"), pelkkä jakaja ilman otsikkoa. Jos ei tyhjä, jakajan alla on otsikkona asetettu teksti."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "sidebar\\_priority",
+      "raw_source": "sidebar\\_priority"
+    },
+    {
+      "raw_type": "list",
+      "content": "- Ei pakollinen\n- Integer-tyyppinen\n- Tarkoitettu vain information\\_page-sivuille\n- Tällä kentällä voi uudelleenjärjestää sivupalkin information\\_page-sivujen linkkejä. Sivupalkissa on oletuksena ensin information\\_page-sivut, sitten muut. Sekä information\\_page-sivut että muut ovat aakkosjärjestyksessä.\n- sidebar\\_priority-kentän omaavat sivut tulevat ennen muita, ja ne ovat suuruusjärjestyksessä suurimmasta pienimpään (`sidebar_priority: 5000` tulee ennen `sidebar_priority: 2000`)",
+      "raw_source": "- Ei pakollinen\n- Integer-tyyppinen\n- Tarkoitettu vain information\\_page-sivuille\n- Tällä kentällä voi uudelleenjärjestää sivupalkin information\\_page-sivujen linkkejä. Sivupalkissa on oletuksena ensin information\\_page-sivut, sitten muut. Sekä information\\_page-sivut että muut ovat aakkosjärjestyksessä.\n- sidebar\\_priority-kentän omaavat sivut tulevat ennen muita, ja ne ovat suuruusjärjestyksessä suurimmasta pienimpään (`sidebar_priority: 5000` tulee ennen `sidebar_priority: 2000`)"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "title",
+      "raw_source": "title"
+    },
+    {
+      "raw_type": "list",
+      "content": "- Pakollinen\n- String-tyyppinen\n- Sivun otsikko selaimen yläreunassa, selaimen välilehdessä, sekä itse tiedoston yläreunassa",
+      "raw_source": "- Pakollinen\n- String-tyyppinen\n- Sivun otsikko selaimen yläreunassa, selaimen välilehdessä, sekä itse tiedoston yläreunassa"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "upcoming",
+      "raw_source": "upcoming"
+    },
+    {
+      "raw_type": "list",
+      "content": "- Ei pakollinen\n- String-tyyppinen\n- Jos asetettu, sivun linkki sivupalkissa on harmaana, ei klikattavissa, ja sen vieressä lukee asetettu teksti.\n- Suosittelemme, että tekstiksi asetetaan sivun julkaisupäivämäärä muodossa \"pv.kk.\", koska kenttä on sen verran pieni ettei vuosiluku mahdu kokonaan näkyville.",
+      "raw_source": "- Ei pakollinen\n- String-tyyppinen\n- Jos asetettu, sivun linkki sivupalkissa on harmaana, ei klikattavissa, ja sen vieressä lukee asetettu teksti.\n- Suosittelemme, että tekstiksi asetetaan sivun julkaisupäivämäärä muodossa \"pv.kk.\", koska kenttä on sen verran pieni ettei vuosiluku mahdu kokonaan näkyville."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "vocabulary\\_page",
+      "raw_source": "vocabulary\\_page"
+    },
+    {
+      "raw_type": "list",
+      "content": "- Ei pakollinen\n- Boolean-tyyppinen\n- Tarkoitettu ainoastaan sanastosivua varten. Jos tämä on asetettu, sivulla on pääsy dataan sanaston sanoista.",
+      "raw_source": "- Ei pakollinen\n- Boolean-tyyppinen\n- Tarkoitettu ainoastaan sanastosivua varten. Jos tämä on asetettu, sivulla on pääsy dataan sanaston sanoista."
+    }
+  ]
+}

@@ -1,0 +1,609 @@
+{
+  "id": "part14-4-your-own-game",
+  "part": 14,
+  "part_slug": "part-14",
+  "slug": "4-your-own-game",
+  "is_part_index": false,
+  "title_original": "Your own game",
+  "title_vi": "",
+  "path": "/part-14/4-your-own-game",
+  "source_path": "data/part-14/4-your-own-game.md",
+  "source_hash": "336d2c39755f297b801902f4405b6900f75f25e0dc7490484f3995581d84477b",
+  "order": 1,
+  "blocks_count": 34,
+  "blocks": [
+    {
+      "id": "blk-part14-4-your-own-game-0001",
+      "type": "heading",
+      "order": 1,
+      "source_hash": "51be5647a76ba776bbacdf7d2a8a6732cfb818f705c3e6a58c55aeb36d06deb5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The last programming exercise"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "4ede29075d63cedc87a25880a9447ba73de960fd4fd770dcba0cfe25891b8694",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The final programming exercise on this course is creating a small game of your own with pygame. The exercise template contains some images for you to use. Please don't use any other images in your game, or others will not be able to test your game based on the source code alone."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "11cf43ed3b8de9f56302bc58b03282f9b8df3816a7eaf6b143bdbe7c28249ec3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The subject of the game is up to you, but it should be about as complicated as the Sokoban example in this part of the material. The game should contain the following features:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0004",
+      "type": "list",
+      "order": 4,
+      "source_hash": "c034ad7471ce2e5bc30afa0dde2e28fa46f42e9ffb32a437eb26baffd495bf06",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* The game has a sprite the player can move in some way\n* The game has some collectable items and/or enemies \n* The player needs to be set a clear task in the game\n* The game contains a counter which tells the player how they are doing in the game\n* The source code for the game is divided into functions like in the Sokoban example"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "1421d9e614869425e6b46269ed17b0f88b33def6e590c4d3d450a6615a640047",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When the game is finished, submit it for peer reviews with the following form. After this, familiarize yourself with the games of two of your coursemates, give the games a grade you deem appropriate, and write a short review of the game. Please take into account both how interesting and playable the game was, and how readable the program code is, when grading and reviewing the games."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0006",
+      "type": "heading",
+      "order": 6,
+      "source_hash": "6d268f669e287bd20cccc01d86d3497525d0b912be296d205d9839e0bd62bcaf",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Submitting the game"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "374a818aa7f63e94b64479d021f2302e1a9bb12d5d7573dabd85b16ab79a07dc",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You should submit the source code of your game through the TMC Paste feature, and include the link you receive in the form below."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "5fcd1f0257af6585192459cde4e645816b11a490d45cb1458adc5f6e4f075e06",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "With your solution open in the editor, click the TMC menu button in Visual Studio Code (next to the eye symbol). This opens a menu where you can look for the TMC Paste feature by typing in `send`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0009",
+      "type": "image",
+      "order": 9,
+      "source_hash": "086b821be182148de516f2dfc5e44779c6c4582f6c8faafd947a1b7fcaa64c34",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "tmc_paste_1.png",
+        "alt": "",
+        "attributes": {
+          "src": "tmc_paste_1.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "0e33e8dbdf2c87d2a7c8708cae4c391969a545a9639c070dc5d5d91f664d7d7f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Select the option `Send Exercise to TMC Paste`, and there should be a notification in the bottom right hand corner of the window telling you that the source code has been sent to the TMC server:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0011",
+      "type": "image",
+      "order": 11,
+      "source_hash": "46c05773c9dc8dd744d538af9719748a20f284c70a669895dbf78b762aef5646",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "tmc_paste_2.png",
+        "alt": "",
+        "attributes": {
+          "src": "tmc_paste_2.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "721be23100b0ff5fef372548a445431099888993ebbf0cefbef1fa7cd97ac285",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You can copy the link by clicking on the `Open URL` button in the notification. A popup should appear, and it should contain the option to `Copy`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0013",
+      "type": "image",
+      "order": 13,
+      "source_hash": "47ab2aca2926dea4cc733d7072147990a225f5aeedeecb88a6803f6f51b12101",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "tmc_paste_3.png",
+        "alt": "",
+        "attributes": {
+          "src": "tmc_paste_3.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "abe8ba4168cfc702b909505ddab5c011babe3820f6dfe372b155d0794cc450c2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This is the link your should paste in the form below."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0015",
+      "type": "heading",
+      "order": 15,
+      "source_hash": "6531aff767a743d9479a5994dc5230afc6f34562274af06ceac3643c59efdaed",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "How part 14 is graded"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "ed5961efc92ccca7612fdc70edce16fba9416de1bbbaa7f535f8b2e714cde3f7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The goal of this part is to build a small, working game. As this part contains only a single task, *you get points for effort*. Please submit your game even if you can't get it to work quite the way you wanted to."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "94228c39349bb6df0efc22f7318892a9fc549deed4e95feb1c542e481615f4fb",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If your game doesn't work the way you intended, please include comments in your code about how it _should_ work, or any features you think are missing but did not manage to implement."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "5d20065476e4dcfd03bf0ffc854c13bf57e9a99bbfcdcb97acd7af73720eb363",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If a game you are reviewing is incomplete or doesn't work quite right, please include comments about what you think could have been done to make it work, if at all possible."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0019",
+      "type": "heading",
+      "order": 19,
+      "source_hash": "39d7253e616ec45b3726a7d185cb0c55d0e9dcb1d3c15f088b060980fdc30fc0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Some game ideas"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "418a85e55d1958f829ac5773362c8bf875768d86506c644dfecf5208c1e668f1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "It is completely up to you what your game will be about, but here are some ideas to help you get started. Remember the material in part 13; those examples can help you work on your ideas, too."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0021",
+      "type": "heading",
+      "order": 21,
+      "source_hash": "388431600227a0a1051296457596397e1a25f62c928180f2fd4d71bcb79aa9e7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A collecting game"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0022",
+      "type": "list",
+      "order": 22,
+      "source_hash": "b90b9d2d8d6fa076642720f27dcc037e0aa54202d843e9e1e3ff4639f16e5813",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* The player moves the robot with the arrow keys.\n* A coin appears in a random location on the screen. When the robot reaches it, the coin moves to a new location.\n* There are also monsters on the screen, and the robot must avoid them."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0023",
+      "type": "heading",
+      "order": 23,
+      "source_hash": "7db38f3b8efcae6d6a958402bf3f7a495c5e873aab6f1281c513aaef1943d663",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A rain of coins"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0024",
+      "type": "list",
+      "order": 24,
+      "source_hash": "382c3be15f2fc1d842d6b84c323fcc2420c1452568ffa568f4f79e6b213000a0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* The player moves the robot to the left and right along the bottom of the screen.\n* Coins rain from the sky. The robot must collect these.\n* Also monsters rain from the sky. The robot must avoid these."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0025",
+      "type": "heading",
+      "order": 25,
+      "source_hash": "87c3c75c13790d04fb0b74a3e891bcc236659d5262cd892a6841078eaa6ae799",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Peer review"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "dae49fddcf0ada5dc9515f59aa168bc61a15ee7a2871a6ef7b598dd337356566",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You should assess the game based on the following criteria:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0027",
+      "type": "list",
+      "order": 27,
+      "source_hash": "267180e01c5966c248ace09940ce98d41d2b65142469d5d11cec0e7c02b7350a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* What does the game look like?\n* Is the game *playable*? Is it fun to play and easy to use?\n* Is the game idea interesting?\n* How well is it programmed? Is the code readable, and does it make appropriate use of classes and functions?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "3a86674827433e22d14b7406bb527e7719d6419a66fd60b072e78be4e5ea232e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A good review usually points out both good features and some suggestions for improvements."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0029",
+      "type": "quiz",
+      "order": 29,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "15597fec-593e-5f5e-a983-8a1d9af48fa7",
+        "attributes": {
+          "id": "15597fec-593e-5f5e-a983-8a1d9af48fa7"
+        }
+      }
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0030",
+      "type": "heading",
+      "order": 30,
+      "source_hash": "b665a7966e3e2def996bde1bddd6200b4d2229d0513d01e4237666041566851c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Questionnaires to finish off"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "5d3cc810b12b8a313134b7592a12af178377529ccf91e0ddf6bad6f02a81f4ba",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "First, please respond to a quick questionnaire on this part of the course."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0032",
+      "type": "quiz",
+      "order": 32,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "874e38cb-946e-53b2-b636-7b27ccd547e5",
+        "attributes": {
+          "id": "874e38cb-946e-53b2-b636-7b27ccd547e5"
+        }
+      }
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "6496661bea38309c7f61ba040cf7396c21ab0707e75e3d16a7cfaeb16e446af1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please also respond to the course feedback questionnaire. The questionnaire results help us improve the course."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-4-your-own-game-0034",
+      "type": "quiz",
+      "order": 34,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "e538510f-8aee-51fb-806b-5b2f15dfd084",
+        "attributes": {
+          "id": "e538510f-8aee-51fb-806b-5b2f15dfd084"
+        }
+      }
+    }
+  ]
+}

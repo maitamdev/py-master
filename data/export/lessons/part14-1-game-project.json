@@ -1,0 +1,876 @@
+{
+  "id": "part14-1-game-project",
+  "part": 14,
+  "part_slug": "part-14",
+  "slug": "1-game-project",
+  "is_part_index": false,
+  "title_original": "Game project",
+  "title_vi": "Dự án trò chơi",
+  "path": "/part-14/1-game-project",
+  "source_path": "data/part-14/1-game-project.md",
+  "source_hash": "0669bed0c0e685c8b1ea12a320a5bc6acd078351b007b3eb1d5af8f63bbcaa5b",
+  "order": 1,
+  "blocks_count": 48,
+  "blocks": [
+    {
+      "id": "blk-part14-1-game-project-0001",
+      "type": "paragraph",
+      "order": 1,
+      "source_hash": "25462a9c7a4d2fccf46e042ad96e5d1d2d4747f7ff8814a9718a03c5e208f31c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In this part we will use pygame to create a somewhat larger game. It is a variation of the classic Sokoban game, where the player moves a robot on a grid and pushes boxes into correct locations with as few moves as possible."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong phần này chúng ta sẽ sử dụng pygame để tạo ra một trò chơi lớn hơn một chút. Đây là một biến thể của trò chơi Sokoban cổ điển, trong đó người chơi di chuyển robot trên lưới và đẩy các hộp vào đúng vị trí với càng ít lần di chuyển càng tốt."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "bf84afba555510cbee2570169fafb5de3eeaf92103ab79274ec12d75802991fe",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The end result will look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Kết quả cuối cùng sẽ trông như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0003",
+      "type": "image",
+      "order": 3,
+      "source_hash": "b591c55b913ce913eb9881818a77b37d42b2c7a6b52e83e885ebb77790704bd9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "game.png",
+        "alt": "",
+        "attributes": {
+          "src": "game.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0004",
+      "type": "heading",
+      "order": 4,
+      "source_hash": "a12d4c5c69b65a84192d253b416d6a5e742d944e1b3cbe514d57c2720a125285",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The game map"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bản đồ trò chơi"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "d0c81e77ccac74574895bf4bca60e08c81d2a390bcf696fc6b2444148d652706",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's begin by drawing the map used in the game. The game is implemented in the class `Sokoban`, which will contain all functionality required to play the game. In this first stage the contents of the class are as follows:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy bắt đầu bằng cách vẽ bản đồ được sử dụng trong trò chơi. Trò chơi được triển khai trong lớp `Sokoban`, lớp này sẽ chứa tất cả chức năng cần thiết để chơi trò chơi. Trong giai đoạn đầu tiên này, nội dung của lớp học như sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0006",
+      "type": "code",
+      "order": 6,
+      "source_hash": "1682b90abf4f3891151b7bf56e22c7b7c281e1cb9c17ae50f380f496fef41874",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import pygame\n\nclass Sokoban:\n    def __init__(self):\n        pygame.init()\n        \n        self.load_images()\n        self.new_game()\n        \n        self.height = len(self.map)\n        self.width = len(self.map[0])\n        self.scale = self.images[0].get_width()\n\n        window_height = self.scale * self.height\n        window_width = self.scale * self.width\n        self.window = pygame.display.set_mode((window_width, window_height))\n\n        pygame.display.set_caption(\"Sokoban\")\n\n        self.main_loop()\n\n    def load_images(self):\n        self.images = []\n        for name in [\"floor\", \"wall\", \"target\", \"box\", \"robot\", \"done\", \"target_robot\"]:\n            self.images.append(pygame.image.load(name + \".png\"))\n\n    def new_game(self):\n        self.map = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],\n                    [1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1],\n                    [1, 2, 3, 0, 0, 0, 1, 0, 0, 1, 2, 3, 0, 0, 0, 0, 1],\n                    [1, 0, 0, 1, 2, 3, 0, 2, 3, 0, 0, 0, 1, 0, 0, 0, 1],\n                    [1, 0, 4, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1],\n                    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]\n\n    def main_loop(self):\n        while True:\n            self.check_events()\n            self.draw_window()\n\n    def check_events(self):\n        for event in pygame.event.get():\n            if event.type == pygame.QUIT:\n                exit()\n\n    def draw_window(self):\n        self.window.fill((0, 0, 0))\n\n        for y in range(self.height):\n            for x in range(self.width):\n                square = self.map[y][x]\n                self.window.blit(self.images[square], (x * self.scale, y * self.scale))\n\n        pygame.display.flip()\n\nif __name__ == \"__main__\":\n    Sokoban()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import pygame\n\nclass Sokoban:\n    def __init__(self):\n        pygame.init()\n        \n        self.load_images()\n        self.new_game()\n        \n        self.height = len(self.map)\n        self.width = len(self.map[0])\n        self.scale = self.images[0].get_width()\n\n        window_height = self.scale * self.height\n        window_width = self.scale * self.width\n        self.window = pygame.display.set_mode((window_width, window_height))\n\n        pygame.display.set_caption(\"Sokoban\")\n\n        self.main_loop()\n\n    def load_images(self):\n        self.images = []\n        for name in [\"floor\", \"wall\", \"target\", \"box\", \"robot\", \"done\", \"target_robot\"]:\n            self.images.append(pygame.image.load(name + \".png\"))\n\n    def new_game(self):\n        self.map = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],\n                    [1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1],\n                    [1, 2, 3, 0, 0, 0, 1, 0, 0, 1, 2, 3, 0, 0, 0, 0, 1],\n                    [1, 0, 0, 1, 2, 3, 0, 2, 3, 0, 0, 0, 1, 0, 0, 0, 1],\n                    [1, 0, 4, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1],\n                    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]\n\n    def main_loop(self):\n        while True:\n            self.check_events()\n            self.draw_window()\n\n    def check_events(self):\n        for event in pygame.event.get():\n            if event.type == pygame.QUIT:\n                exit()\n\n    def draw_window(self):\n        self.window.fill((0, 0, 0))\n\n        for y in range(self.height):\n            for x in range(self.width):\n                square = self.map[y][x]\n                self.window.blit(self.images[square], (x * self.scale, y * self.scale))\n\n        pygame.display.flip()\n\nif __name__ == \"__main__\":\n    Sokoban()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "1682b90abf4f3891151b7bf56e22c7b7c281e1cb9c17ae50f380f496fef41874",
+        "length_lines": 56
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "31c01536303a42b7b1763cc027b95bd350eca5abe218d0ea195560b23b0a5bdb",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Running the program should display a window with the initial state of the game. Let's take a closer look at the code which achieves this."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chạy chương trình sẽ hiển thị một cửa sổ với trạng thái ban đầu của trò chơi. Chúng ta hãy xem xét kỹ hơn mã đạt được điều này."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0008",
+      "type": "heading",
+      "order": 8,
+      "source_hash": "7013c7e168c4056189c78874971beaeea659e6c88d6b6607cd0669e243759af8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The constructor"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "hàm tạo"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "f837d03a4563196eadfc9003b9cf99233c705215675bc0da330b5e6cb76d6588",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The constructor of the class initializes the pygame modules and the essential variables and data structures involved in the game. It also calls the main loop method of the game."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm tạo của lớp khởi tạo các mô-đun pygame cũng như các biến và cấu trúc dữ liệu thiết yếu có liên quan đến trò chơi. Nó cũng gọi phương thức vòng lặp chính của trò chơi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0010",
+      "type": "code",
+      "order": 10,
+      "source_hash": "6e42d9eeaced4b0331e38ddb968b7f737edee3e52f65a197777b5bbb896ef881",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    def __init__(self):\n        pygame.init()\n        \n        self.load_images()\n        self.new_game()\n        \n        self.height = len(self.map)\n        self.width = len(self.map[0])\n        self.scale = self.images[0].get_width()\n\n        window_height = self.scale * self.height\n        window_width = self.scale * self.width\n        self.window = pygame.display.set_mode((window_width, window_height))\n\n        pygame.display.set_caption(\"Sokoban\")\n\n        self.main_loop()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    def __init__(self):\n        pygame.init()\n        \n        self.load_images()\n        self.new_game()\n        \n        self.height = len(self.map)\n        self.width = len(self.map[0])\n        self.scale = self.images[0].get_width()\n\n        window_height = self.scale * self.height\n        window_width = self.scale * self.width\n        self.window = pygame.display.set_mode((window_width, window_height))\n\n        pygame.display.set_caption(\"Sokoban\")\n\n        self.main_loop()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6e42d9eeaced4b0331e38ddb968b7f737edee3e52f65a197777b5bbb896ef881",
+        "length_lines": 17
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "10bcd0a92dcfff02218d156ec8812cc2ffb7260940219d9322351d2200f3017c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The `load_images` method loads the images used in the game into a list named `images`. The `new_game` method creates a two-dimensional list named `map`, which contains the state of the game grid in the beginning of the game."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương thức `load_images` tải hình ảnh được sử dụng trong trò chơi vào danh sách có tên `images`. Phương thức `new_game` tạo một danh sách hai chiều có tên `map`, chứa trạng thái của lưới trò chơi khi bắt đầu trò chơi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "cbb80a1965114e2b32416bdacab8dc42e59dd859c21be51981e99cfc69842c0e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The variables `height` and `width` are initialized based on the dimensions of the game grid. The variable `scale` contains the length of the side of one square in the grid. As each image is a square of the exact same size, the size of all squares is covered by this one variable, and the width of the first image will do just fine for the value. This same value can be used to calculate the width and height of the entire grid, which lets us create a window of the appropriate size to display the game grid."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các biến `height` và `width` được khởi tạo dựa trên kích thước của lưới trò chơi. Biến `scale` chứa chiều dài cạnh của một hình vuông trong lưới. Vì mỗi hình ảnh là một hình vuông có cùng kích thước, kích thước của tất cả các hình vuông được bao phủ bởi một biến này và chiều rộng của hình ảnh đầu tiên sẽ phù hợp với giá trị. Giá trị tương tự này có thể được sử dụng để tính toán chiều rộng và chiều cao của toàn bộ lưới, cho phép chúng ta tạo một cửa sổ có kích thước phù hợp để hiển thị lưới trò chơi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0013",
+      "type": "heading",
+      "order": 13,
+      "source_hash": "1a4b4c374299f45b9392c74d951c8444898ee95ccc4229b0e0e66cf0240ab6d5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Loading images"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đang tải hình ảnh"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "458758d7c2187ae79279693411bdc07e9bdeb5d4c61094ebec208908490646b9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The `load_images` method loads all the images used in the game:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương thức `load_images` tải tất cả hình ảnh được sử dụng trong trò chơi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0015",
+      "type": "code",
+      "order": 15,
+      "source_hash": "a263058e321531384da8ed5f234aa0e52e0baa8e976f3faa79529cf87b94ad42",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    def load_images(self):\n        self.images = []\n        for name in [\"floor\", \"wall\", \"target\", \"box\", \"robot\", \"done\", \"target_robot\"]:\n            self.images.append(pygame.image.load(name + \".png\"))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    def load_images(self):\n        self.images = []\n        for name in [\"floor\", \"wall\", \"target\", \"box\", \"robot\", \"done\", \"target_robot\"]:\n            self.images.append(pygame.image.load(name + \".png\"))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a263058e321531384da8ed5f234aa0e52e0baa8e976f3faa79529cf87b94ad42",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "4019e1b9ac76117e0105611a434a8ae13237dd8e27210206bd3b8d4d4631bede",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The game makes use of the following images:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trò chơi sử dụng các hình ảnh sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0017",
+      "type": "heading",
+      "order": 17,
+      "source_hash": "feebd7d61631e2d3b8b386371b2313d2069f71cda1c3cd36cae14d418d747a76",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Floor square"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tầng vuông"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0018",
+      "type": "image",
+      "order": 18,
+      "source_hash": "9bf0688ed62ab639b4ab535155ced344340e3a4dcb0450bd8609620b80265ac9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "floor.png",
+        "alt": "",
+        "attributes": {
+          "src": "floor.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0019",
+      "type": "list",
+      "order": 19,
+      "source_hash": "726e2d9fec3709e1e32a85fc0783a1cca00563f48e769e071eeee0d78121f694",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* Filename: `floor.png`\n* Position in list: 0"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* Tên file: `floor.png`\n* Vị trí trong danh sách: 0"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0020",
+      "type": "heading",
+      "order": 20,
+      "source_hash": "32558a73ce6508ca98e4033852514cb8480b03b1c0db55543268ce7769b29689",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Wall square"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hình vuông treo tường"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0021",
+      "type": "image",
+      "order": 21,
+      "source_hash": "57a5c408822b8324af1bef487256c470793ce5046392c5835211788bc6400478",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "wall.png",
+        "alt": "",
+        "attributes": {
+          "src": "wall.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0022",
+      "type": "list",
+      "order": 22,
+      "source_hash": "f967a978968ddcbf7a617a84600c5ef233229c3a8d2b0784fa776c94da0e5a86",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* Filename: `wall.png`\n* Position in list: 1"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* Tên file: `wall.png`\n* Vị trí trong danh sách: 1"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0023",
+      "type": "heading",
+      "order": 23,
+      "source_hash": "5ebd7ed934a5690d2d8e7b76c9c678b5487b116aade2e21e4d3c056679c79bd3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Target square"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hình vuông mục tiêu"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0024",
+      "type": "image",
+      "order": 24,
+      "source_hash": "441408bbdcac8f237c5a20b5716a16d8caee6ec8cdc6860e3440b97a59c835e3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "target.png",
+        "alt": "",
+        "attributes": {
+          "src": "target.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0025",
+      "type": "list",
+      "order": 25,
+      "source_hash": "79b950e1e450317e6b48a645542a7eec02790e355ba6c340a306228c152284b7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* Filename: `target.png`\n* Position in list: 2\n* The robot should move some box to this square"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* Tên file: `target.png`\n* Vị trí trong danh sách: 2\n* Robot sẽ di chuyển một số ô tới ô vuông này"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0026",
+      "type": "heading",
+      "order": 26,
+      "source_hash": "512fd3c6042cd1d9150d46fa59b5911a1f97b8275d73eb0a841daa31e93bd349",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Box"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hộp"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0027",
+      "type": "image",
+      "order": 27,
+      "source_hash": "5cc21b1e820c10817f2da83e51979fb67c2774d4dc8b6f6627421f18af608fa0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "box.png",
+        "alt": "",
+        "attributes": {
+          "src": "box.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0028",
+      "type": "list",
+      "order": 28,
+      "source_hash": "fea434b1d59541e75909d371980dc0e12bdc2a33041e93fe6062ac3f8da9cb67",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* Filename: `box.png`\n* Position in list: 3"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* Tên file: `box.png`\n* Vị trí trong danh sách: 3"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0029",
+      "type": "heading",
+      "order": 29,
+      "source_hash": "3bf6b51b7b6ca4a0cf3e37d5b38296c7ba2eee1f7f9c9856fdab0b66c62352fd",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Robot"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "người máy"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0030",
+      "type": "image",
+      "order": 30,
+      "source_hash": "88db1fb578d3d02ec1c99eb8c5aaa02f67f5cfd38278e70401113d1f0c72581c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "robot.png",
+        "alt": "",
+        "attributes": {
+          "src": "robot.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0031",
+      "type": "list",
+      "order": 31,
+      "source_hash": "2d52d259413068af9a12bdb814758e95126704efe0dc3fbb68dc073162fc77a2",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* Filename: `robot.png`\n* Position in list: 4"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* Tên file: `robot.png`\n* Vị trí trong danh sách: 4"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0032",
+      "type": "heading",
+      "order": 32,
+      "source_hash": "c7625cdb03ccbb27e13b8c9e29ff8aa6bbb7fdec953c11c621671950a3c02b46",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Box on a target square"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hộp trên một hình vuông mục tiêu"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0033",
+      "type": "image",
+      "order": 33,
+      "source_hash": "3b6ac6a21cbb626201d80ef8d2fb4d0c121e3952fb620d0cf3ec3f28322fd5dc",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "done.png",
+        "alt": "",
+        "attributes": {
+          "src": "done.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0034",
+      "type": "list",
+      "order": 34,
+      "source_hash": "7de34de1667d5f249c16394fcf7579081165ec8f74e6791d33a7a0c26d152bbd",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* Filename: `done.png`\n* Position in list: 5\n* The box has been moved to the target square"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* Tên file: `done.png`\n* Vị trí trong danh sách: 5\n* Ô đã được chuyển đến ô đích"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0035",
+      "type": "heading",
+      "order": 35,
+      "source_hash": "2c71258e54401e543dc6972dfdb74f387dc90ee03d6f3737c258f49320fa1e6f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Robot on a target square"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Robot trên ô đích"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0036",
+      "type": "image",
+      "order": 36,
+      "source_hash": "ad52f4fafc73c8292013b4566c917f11c2cc581a59b2ad8115e66256269d31dd",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "target_robot.png",
+        "alt": "",
+        "attributes": {
+          "src": "target_robot.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0037",
+      "type": "list",
+      "order": 37,
+      "source_hash": "13037e98a1de803fd0e71b9dc6d952cab3491cfd7603ab2b8606a4f13ce5cb43",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* Filename: `target_robot.png`\n* Position in list: 6\n* The robot can also be on an empty target square"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* Tên file: `target_robot.png`\n* Vị trí trong danh sách: 6\n* Robot cũng có thể ở trên ô mục tiêu trống"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0038",
+      "type": "heading",
+      "order": 38,
+      "source_hash": "955da3018510a13c8730969b06621377c948905a794e3dfc293bb19a3530711c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Creating the grid"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tạo lưới"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "58fb4cb9781e49f67595eca15dac1886525e431543d3b427fe1ba07e9a2cf569",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The `new_game` method creates the initial state of the game grid:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương thức `new_game` tạo trạng thái ban đầu của lưới trò chơi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0040",
+      "type": "code",
+      "order": 40,
+      "source_hash": "6f3a2b5ff362800ee05cf75204ff866a1b963e126f726f972d757d8982fd3c8a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    def new_game(self):\n        self.map = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],\n                    [1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1],\n                    [1, 2, 3, 0, 0, 0, 1, 0, 0, 1, 2, 3, 0, 0, 0, 0, 1],\n                    [1, 0, 0, 1, 2, 3, 0, 2, 3, 0, 0, 0, 1, 0, 0, 0, 1],\n                    [1, 0, 4, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1],\n                    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    def new_game(self):\n        self.map = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],\n                    [1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1],\n                    [1, 2, 3, 0, 0, 0, 1, 0, 0, 1, 2, 3, 0, 0, 0, 0, 1],\n                    [1, 0, 0, 1, 2, 3, 0, 2, 3, 0, 0, 0, 1, 0, 0, 0, 1],\n                    [1, 0, 4, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1],\n                    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6f3a2b5ff362800ee05cf75204ff866a1b963e126f726f972d757d8982fd3c8a",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "bb81ce98d2502d67c3a2da6b021f93ef30b1b38fcd25d34cc3cc2057236178f7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The method creates a two.dimensional list named `map` which uses the numbered positions of the images in _their_ list to mark up which image goes where. This way the game contains a record of the state of the game grid at all times."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương thức này tạo một danh sách hai chiều có tên `map` sử dụng vị trí được đánh số của các hình ảnh trong danh sách _của họ_ để đánh dấu hình ảnh nào sẽ ở đâu. Bằng cách này, trò chơi luôn chứa bản ghi về trạng thái của lưới trò chơi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "9f4ee3a997f9674b0d121eceb1b1ab299b8fb8b24c88c74615dac1f8310e155c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "NB: in the beginning all spaces on the grid contain a number between 0 and 4. The numbers 5 and 6 are not included, as in the beginning no box or robot is on a target square."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lưu ý: lúc đầu, tất cả các khoảng trống trên lưới đều chứa một số từ 0 đến 4. Các số 5 và 6 không được bao gồm, vì lúc đầu không có hộp hoặc robot nào nằm trên ô vuông mục tiêu."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0043",
+      "type": "heading",
+      "order": 43,
+      "source_hash": "fab5040583e744045073b5a59eaee0bac8b87bc309af184307c876dfa4a6dc97",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The main loop"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vòng lặp chính"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "ded5aa39b435b022208ee976cba17d80b5744ecf049eebe98918d1e724849542",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The `main_loop` method is rather short. With each iteration it calls two methods: `check_events` goes through any events collected since the previous iteration, and the `draw_window` method updates the contents of the window."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương pháp `main_loop` khá ngắn. Với mỗi lần lặp, nó gọi hai phương thức: `check_events` xem qua mọi sự kiện được thu thập kể từ lần lặp trước và phương thức `draw_window` cập nhật nội dung của cửa sổ."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0045",
+      "type": "code",
+      "order": 45,
+      "source_hash": "5d255565194179977cfdc14752e0b4c028a5e4aed0ef69d3436c020e53fae46c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    def main_loop(self):\n        while True:\n            self.check_events()\n            self.draw_window()\n\n    def check_events(self):\n        for event in pygame.event.get():\n            if event.type == pygame.QUIT:\n                exit()\n\n    def draw_window(self):\n        self.window.fill((0, 0, 0))\n\n        for y in range(self.height):\n            for x in range(self.width):\n                square = self.map[y][x]\n                self.window.blit(self.images[square], (x * self.scale, y * self.scale))\n\n        pygame.display.flip()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    def main_loop(self):\n        while True:\n            self.check_events()\n            self.draw_window()\n\n    def check_events(self):\n        for event in pygame.event.get():\n            if event.type == pygame.QUIT:\n                exit()\n\n    def draw_window(self):\n        self.window.fill((0, 0, 0))\n\n        for y in range(self.height):\n            for x in range(self.width):\n                square = self.map[y][x]\n                self.window.blit(self.images[square], (x * self.scale, y * self.scale))\n\n        pygame.display.flip()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5d255565194179977cfdc14752e0b4c028a5e4aed0ef69d3436c020e53fae46c",
+        "length_lines": 19
+      }
+    },
+    {
+      "id": "blk-part14-1-game-project-0046",
+      "type": "paragraph",
+      "order": 46,
+      "source_hash": "f6e1db1dce391c43ac7427e76b8dc32f80df53adcac24ba542d90bec317b144c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "At this stage the only event actually handled by the game is closing the game window, e.g. from the exit button. The game then exits by calling the Python `exit` function."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ở giai đoạn này, sự kiện duy nhất thực sự được trò chơi xử lý là đóng cửa sổ trò chơi, ví dụ: từ nút thoát. Sau đó, trò chơi sẽ thoát bằng cách gọi hàm Python `exit`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0047",
+      "type": "paragraph",
+      "order": 47,
+      "source_hash": "1860994e425df8c456c4d3742891249bdb6de7c134ea5657add7b6b3541de921",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Each time `draw_window` method is called the entire game grid is matrix is traversed, and the image corresponding to each square in the grid is drawn in the correct location."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mỗi lần phương thức `draw_window` được gọi, toàn bộ lưới trò chơi sẽ được duyệt qua ma trận và hình ảnh tương ứng với mỗi ô vuông trong lưới sẽ được vẽ ở đúng vị trí."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-1-game-project-0048",
+      "type": "paragraph",
+      "order": 48,
+      "source_hash": "7828cdb3a1deff6dca4f525396f9a75535d4eeee9314adbfcad0e91d970a8520",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "NB: the coordinates x and y are used in two different ways in the game. When dealing with the indexes of a two-dimensional list, it is logical to give the y coordinate first, as the y refers to the number of the row while x is the number of the column. On the other hand, when using pygame methods, x is usually passed first, as it quite often is when dealing with graphics, and also in mathematical contexts."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lưu ý: tọa độ x và y được sử dụng theo hai cách khác nhau trong trò chơi. Khi xử lý các chỉ mục của danh sách hai chiều, điều hợp lý là đặt tọa độ y trước tiên, vì y đề cập đến số hàng trong khi x là số cột. Mặt khác, khi sử dụng các phương thức pygame, x thường được truyền đầu tiên, vì nó thường xảy ra khi xử lý đồ họa và cả trong bối cảnh toán học."
+      },
+      "metadata": {}
+    }
+  ]
+}

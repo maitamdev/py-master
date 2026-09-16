@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-04_square_of_hashes",
+  "lesson_id": "part04-2-more-functions",
+  "part": 4,
+  "tmc_name": "part04-04_square_of_hashes",
+  "title_original": "A square of hashes",
+  "title_vi": "Một hình vuông băm",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `square_of_hashes`, which draws a square of hash characters. The function takes one argument, which determines the length of the side of the square.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in the `line` function.\n\nSome examples:\n\n```python\nsquare_of_hashes(5)\nprint()\nsquare_of_hashes(3)\n```\n\n<sample-output>\n\n<pre>\n#####\n#####\n#####\n#####\n#####\n\n###\n###\n###\n</pre>\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `square_of_hashes` để vẽ một hình vuông gồm các ký tự băm. Hàm này nhận một đối số xác định độ dài cạnh của hình vuông.\n\nHàm sẽ gọi hàm `line` từ bài tập trên để in ra thực tế. Sao chép lời giải của bạn cho bài tập đó ở phía trên mã của bài tập này. Vui lòng không thay đổi bất cứ điều gì trong chức năng `line`.\n\nMột số ví dụ:\n\n```python\nsquare_of_hashes(5)\nprint()\nsquare_of_hashes(3)\n```\n\n<sample-output>\n\n<pre>\n#####\n#####\n#####\n#####\n#####\n\n###\n###\n###\n</pre>\n\n</sample-output>",
+  "starter_code": "square_of_hashes(5)\nprint()\nsquare_of_hashes(3)",
+  "grading_data_available": false,
+  "source_hash": "875c267400ce4ef3a905c43f7eb259e32775baf479548bbbee8f488a6af1e343",
+  "order": 30
+}

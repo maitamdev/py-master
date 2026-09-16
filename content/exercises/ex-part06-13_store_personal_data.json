@@ -1,0 +1,16 @@
+{
+  "id": "ex-part06-13_store_personal_data",
+  "lesson_id": "part06-2-writing-files",
+  "part": 6,
+  "tmc_name": "part06-13_store_personal_data",
+  "title_original": "Store personal data",
+  "title_vi": "Lưu trữ dữ liệu cá nhân",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `store_personal_data(person: tuple)`, which takes a tuple containing some identifying information as its argument.\n\nThe tuple contains the following elements:\n\n* Name (string)\n* Age (integer)\n* Height (float)\n\nThis should be processed and written into the file `people.csv`. The file may already contain some data; the new entry goes to the end of the file. The data should be written in the format\n\nname;age;height\n\nEach entry should be on a separate line. If we call the function with the argument `(\"Paul Paulson\", 37, 175.5)`, the function should write this line to the end of the file:\n\n`Paul Paulson;37;175.5`",
+  "description_vi": "Vui lòng viết một hàm có tên `store_personal_data(person: tuple)`, hàm này lấy một bộ chứa một số thông tin nhận dạng làm đối số của nó.\n\nTuple chứa các phần tử sau:\n\n* Tên (chuỗi)\n* Tuổi (số nguyên)\n* Chiều cao (nổi)\n\nĐiều này sẽ được xử lý và ghi vào tệp `people.csv`. Tệp có thể đã chứa một số dữ liệu; mục mới sẽ ở cuối tập tin. Dữ liệu phải được ghi dưới dạng\n\ntên; tuổi; chiều cao\n\nMỗi mục phải nằm trên một dòng riêng biệt. Nếu chúng ta gọi hàm với đối số `(\"Paul Paulson\", 37, 175.5)`, hàm sẽ ghi dòng này vào cuối tệp:\n\n`Paul Paulson;37;175.5`",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "7b350a38dea16928bac3621bae46aea79a968b7e0412b3de375720f69c266d1c",
+  "order": 50
+}

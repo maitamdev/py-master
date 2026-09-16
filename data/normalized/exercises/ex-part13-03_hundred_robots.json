@@ -1,0 +1,16 @@
+{
+  "id": "ex-part13-03_hundred_robots",
+  "lesson_id": "part13-1-pygame",
+  "part": 13,
+  "tmc_name": "part13-03_hundred_robots",
+  "title_original": "A hundred robots",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which draws a hundred robots: ten rows with ten robots in each row. The end result should look like this:\n\n<img src=\"pygame_hundred.gif\">",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "3b3c0324286f7084376cf95dd3421283a5fbb22318134361c025ae7b7dcfdcc6",
+  "order": 63
+}

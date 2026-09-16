@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-06_elder",
+  "lesson_id": "part02-2-else-elif",
+  "part": 2,
+  "tmc_name": "part02-06_elder",
+  "title_original": "The elder",
+  "title_vi": "Người lớn tuổi",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": "550px",
+  "description_original": "Please write a program which asks for the names and ages of two persons. The program should then print out the name of the elder.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nPerson 1:\nName: **Alan**\nAge: **26**\nPerson 2:\nName: **Ada**\nAge: **27**\nThe elder is Ada\n\n</sample-output>\n\n<sample-output>\n\nPerson 1:\nName: **Bill**\nAge: **1**\nPerson 2:\nName: **Jean**\nAge: **1**\nBill and Jean are the same age\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình hỏi tên và tuổi của 2 người. Sau đó chương trình sẽ in ra tên của người lớn tuổi.\n\nMột số ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nNgười 1:\nTên: **Alan**\nTuổi: **26**\nNgười 2:\nTên: **Ada**\nTuổi: **27**\nAnh cả là Ada\n\n</sample-output>\n\n<sample-output>\n\nNgười 1:\nTên: **Bill**\nTuổi: **1**\nNgười 2:\nTên: **Jean**\nTuổi: **1**\nBill và Jean bằng tuổi nhau\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "b910e79353dc92b4e61ccf0685d947ae78be214bfad5c5f47091b3f0b42f5572",
+  "order": 37
+}

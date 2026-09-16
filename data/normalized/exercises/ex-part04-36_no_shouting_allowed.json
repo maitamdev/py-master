@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-36_no_shouting_allowed",
+  "lesson_id": "part04-6-strings-and-lists",
+  "part": 4,
+  "tmc_name": "part04-36_no_shouting_allowed",
+  "title_original": "No shouting allowed",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The Python string method `isupper()` returns `True` if a string consists of _only_ uppercase characters.\n\nSome examples:\n\n```python\nprint(\"XYZ\".isupper())\n\nis_it_upper = \"Abc\".isupper()\nprint(is_it_upper)\n```\n\n<sample-output>\n\nTrue\nFalse\n\n</sample-output>\n\nPlease use the `isupper` method to write a function named `no_shouting`, which takes a list of strings as an argument. The function returns a new list, containing only those items from the original which do not consist of solely uppercase characters.\n\nAn example of expected behaviour:\n\n```python\nmy_list = [\"ABC\", \"def\", \"UPPER\", \"ANOTHERUPPER\", \"lower\", \"another lower\", \"Capitalized\"]\npruned_list = no_shouting(my_list)\nprint(pruned_list)\n```\n\n<sample-output>\n\n['def', 'lower', 'another lower', 'Capitalized']\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "print(\"XYZ\".isupper())\n\nis_it_upper = \"Abc\".isupper()\nprint(is_it_upper)",
+  "grading_data_available": false,
+  "source_hash": "9cededd1d3772e12e6fa3e2237506c345d8eaf3d8582e04c7c0b1c940988255c",
+  "order": 60
+}

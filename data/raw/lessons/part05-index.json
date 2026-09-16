@@ -1,0 +1,34 @@
+{
+  "id": "part05-index",
+  "part": 5,
+  "part_slug": "part-5",
+  "slug": "index",
+  "is_part_index": true,
+  "title_original": "Part 5",
+  "path": "/part-5",
+  "source_path": "data/part-5/index.md",
+  "source_hash": "85760263f39feef61acd86fb92ae9105363b457dfc708b1863e7c6e34acf0bf9",
+  "frontmatter": {
+    "path": "/part-5",
+    "title": "Part 5",
+    "overview": true,
+    "hidden": false
+  },
+  "chunks_count": 2,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "pages-in-this-section",
+      "attributes": {},
+      "inner_content": "",
+      "raw_source": "<pages-in-this-section></pages-in-this-section>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "exercises-in-this-section",
+      "attributes": {},
+      "inner_content": "",
+      "raw_source": "<exercises-in-this-section></exercises-in-this-section>"
+    }
+  ]
+}

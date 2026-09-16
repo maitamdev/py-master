@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-21_story",
+  "lesson_id": "part02-4-simple-loops",
+  "part": 2,
+  "tmc_name": "part02-21_story",
+  "title_original": "Story",
+  "title_vi": "Câu chuyện",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "### Part 1\n\nPlease write a program which keeps asking the user for words. If the user types in `end`, the program should print out the story the words formed, and finish.\n\n<sample-output>\n\nPlease type in a word: **Once**\nPlease type in a word: **upon**\nPlease type in a word: **a**\nPlease type in a word: **time**\nPlease type in a word: **there**\nPlease type in a word: **was**\nPlease type in a word: **a**\nPlease type in a word: **girl**\nPlease type in a word: **end**\nOnce upon a time there was a girl\n\n</sample-output>\n\n### Part 2\n\nChange the program so that the loop ends also if the user types in the same word twice in a row.\n\n<sample-output>\n\nPlease type in a word: **It**\nPlease type in a word: **was**\nPlease type in a word: **a**\nPlease type in a word: **dark**\nPlease type in a word: **and**\nPlease type in a word: **stormy**\nPlease type in a word: **night**\nPlease type in a word: **night**\nIt was a dark and stormy night\n\n</sample-output>",
+  "description_vi": "### Phần 1\n\nHãy viết một chương trình liên tục hỏi người dùng các từ. Nếu người dùng gõ `end`, chương trình sẽ in ra câu chuyện các từ đã tạo thành và kết thúc.\n\n<sample-output>\n\nHãy gõ một từ: **Một lần**\nHãy gõ một từ: **upon**\nHãy gõ một từ: **a**\nHãy gõ một từ: **thời gian**\nHãy gõ một từ: **ở đó**\nVui lòng nhập một từ: **was**\nHãy gõ một từ: **a**\nHãy gõ một từ: **girl**\nHãy gõ một từ: **end**\nNgày xửa ngày xưa có một cô gái\n\n</sample-output>\n\n### Phần 2\n\nThay đổi chương trình để vòng lặp cũng kết thúc nếu người dùng gõ cùng một từ hai lần liên tiếp.\n\n<sample-output>\n\nHãy gõ một từ: **Nó**\nVui lòng nhập một từ: **was**\nHãy gõ một từ: **a**\nHãy gõ một từ: **đen**\nHãy gõ một từ: **và**\nHãy gõ một từ: **bão tố**\nHãy gõ một từ: **đêm**\nHãy gõ một từ: **đêm**\nĐó là một đêm tối và giông bão\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "89bc72bd5b1877efb94f1b281d15a271698c1416e50c7dd69048c24a6403248f",
+  "order": 53
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-05_powers_of_base_n",
+  "lesson_id": "part03-1-loops-with-conditions",
+  "part": 3,
+  "tmc_name": "part03-05_powers_of_base_n",
+  "title_original": "Powers of base n",
+  "title_vi": "lũy thừa cơ số n",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please change the program from the previous exercise so that the user gets to input also the base which is multiplied (in the previous program the base was always 2). \n\n<sample-output>\n\nUpper limit: **27**\nBase: **3**\n1\n3\n9\n27\n\n</sample-output>\n\n<sample-output>\n\nUpper limit: **1234567**\nBase: **10**\n1\n10\n100\n1000\n10000\n100000\n1000000\n\n</sample-output>\n\nPlease don't use the value `True` as the condition of your `while` loop in this exercise!",
+  "description_vi": "Vui lòng thay đổi chương trình từ bài tập trước để người dùng nhập cả cơ số được nhân (trong chương trình trước, cơ số luôn là 2). \n\n<sample-output>\n\nGiới hạn trên: **27**\nCăn cứ: **3**\n1\n3\n9\n27\n\n</sample-output>\n\n<sample-output>\n\nGiới hạn trên: **1234567**\nCăn cứ: **10**\n1\n10\n100\n1000\n10000\n100000\n1000000\n\n</sample-output>\n\nVui lòng không sử dụng giá trị `True` làm điều kiện cho vòng lặp `while` của bạn trong bài tập này!",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "854ea57669669503720fc0df535b0ce98b3efaa470509d721638b34395396401",
+  "order": 65
+}

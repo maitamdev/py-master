@@ -1,0 +1,1545 @@
+{
+  "id": "part02-1-programming_terminology",
+  "part": 2,
+  "part_slug": "part-2",
+  "slug": "1-programming_terminology",
+  "is_part_index": false,
+  "title_original": "Programming terminology",
+  "title_vi": "",
+  "path": "/part-2/1-programming-terminology",
+  "source_path": "data/part-2/1-programming_terminology.md",
+  "source_hash": "f65c4f5489e25f5f96941306a9fb7c2a767977fafa2d6aebea73c17033c662bd",
+  "order": 1,
+  "blocks_count": 87,
+  "blocks": [
+    {
+      "id": "blk-part02-1-programming_terminology-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "bd0d4e3daeff3e254abc8daf33af6ff37a1b5afdd68b83c0a182f28fe1b43ab3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be familiar with some essential terminology in programming\n- You will know the difference between a statement and an expression\n- You will be able to find out the data type of an evaluated expression\n- You will have learnt to use debugging methods to find mistakes in your code"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "0cbe388a0ae6e668e75e53b254ce09b7c95ac73acf3766c8a8ad13e2a6e1fdd3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the first part of this course we didn't pay much attention to terminology, so let's have a look at some central concepts in programming."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0003",
+      "type": "heading",
+      "order": 3,
+      "source_hash": "6171b2a461207d19928471284b296dd163f75b99d814fb458b7ed7f2b1c9c8eb",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Statement"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "2be209c12a0b13f9d8be53bf41b9d3b25728531ea760494842c5b110b06d3f58",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A _statement_ is a part of the program which executes something. It often, but not always, refers to a single command."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "bc2a2f16d5939eb762fa67719e262ec7071ac1c406e5c5fdd8ecee8da941a79b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "For example, `print(\"Hi!\")` is a statement which prints out a line of text. Likewise, `number = 2` is a statement which assigns a value to a variable."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "2ddac8c543a3b7cfe9710534ad5a7e14d870cb839feab979ec4ccaaeb6e3a98c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A statement can also be more complicated. It can, for instance, contain other statements. The following statement spans three lines:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0007",
+      "type": "code",
+      "order": 7,
+      "source_hash": "c79959f5c29c00400261972a89fc737e865fd880f481a1d5ea5bef4bbcf62094",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "if name == \"Anna\":\n    print(\"Hi!\")\n    number = 2"
+      },
+      "translation": {
+        "language": "code",
+        "content": "if name == \"Anna\":\n    print(\"Hi!\")\n    number = 2"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c79959f5c29c00400261972a89fc737e865fd880f481a1d5ea5bef4bbcf62094",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "e6faa711e1526b5206aba3d5c000c3f845baf8091eb2d43cb076461a11a6882d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the above case there are two statements (a print statement and an assignment statement) within a conditional statement."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0009",
+      "type": "heading",
+      "order": 9,
+      "source_hash": "211d0bb8cf4f5b5202c2a9b7996e483898644aa24714b1e10edd80a54ba4b560",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Block"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "6183c94f9288616156dcb7b029219e7bfcaa7c4cf2c6d90858502e974113067c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A _block_ is a group of consecutive statements that are at the same level in the structure of the program. For example, the block of a conditional statement contains those statements which are executed only if the condition is true."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0011",
+      "type": "code",
+      "order": 11,
+      "source_hash": "00ad08a43a47b4a31d5afca6d8a6aabf6e90275e08e0916dccd36b1f428bdf01",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "if age > 17:\n    # beginning of the conditional block\n    print(\"You are of age!\")\n    age = age + 1\n    print(\"You are now one year older...\")\n    # end of the conditional block\n\nprint(\"This here belongs to another block\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "if age > 17:\n    # beginning of the conditional block\n    print(\"You are of age!\")\n    age = age + 1\n    print(\"You are now one year older...\")\n    # end of the conditional block\n\nprint(\"This here belongs to another block\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "00ad08a43a47b4a31d5afca6d8a6aabf6e90275e08e0916dccd36b1f428bdf01",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "ed634370a400bdc5e1cc1b51c4591ec2cd3d419ed69e5b9658bb9a6c59c3bc2e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In Python blocks are expressed by indenting all code in the block by the same amount of whitespace."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "0de280994b262fd7b15d56d441a7e769b312a242d00b92ed7eac4712d92f8efb",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "NB: the main block of a Python program must always be at the leftmost edge of the file, without indentation:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "b341398bf09c8bd92027c486feb0d3d20cf0838a8d7656afa359d2ee04ecbe40",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# this program will not work because it is not written at the leftmost egde of the file\n  print(\"hello world\")\n  print(\"this program is not very good...\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# this program will not work because it is not written at the leftmost egde of the file\n  print(\"hello world\")\n  print(\"this program is not very good...\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b341398bf09c8bd92027c486feb0d3d20cf0838a8d7656afa359d2ee04ecbe40",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0015",
+      "type": "heading",
+      "order": 15,
+      "source_hash": "c67415bcff328a59fd399e2a7ca9691e0044192fb7480ae501644339965d046d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Expression"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "5732a00e83beb4db8d797973fd7aaa2ef88bf6273adfee30efe322c2ddc0bd81",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "An _expression_ is a bit of code that results in a determined data type. When the program is executed, the expression is evaluated so that it has a value that can then be used in the program."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "ce3263ca11e995d4c160d5b99d58704f9fa46171019260487b34e59d0e167780",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Here are a few examples of expressions:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0018",
+      "type": "table",
+      "order": 18,
+      "source_hash": "b6ffac7291e11910b7ebc8b889be067f83f509b401a2f9859b9f0ada64d38a6b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "| Expression | Value  | Type    | Python data type |\n|------------|--------|---------|------------------|\n|`2 + 4 + 3` | `9`    | integer | `int` |\n|`\"abc\" + \"de\"` | `\"abcde\"` | string | `str`|\n|`11 / 2`    | `5.5`  | floating point number | `float` |\n|`2 * 5 > 9` | `True` | Boolean value | `bool`|"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "8695928f6c857929c8e663bb33ad5a59f5a4581c495a317b1268f1eafc70fa0c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Because all expressions have a type, they can be assigned to variables:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0020",
+      "type": "code",
+      "order": 20,
+      "source_hash": "a46c2cb62ac85bfc8a7a0b950ea56fb5147e65a58168be75cb08b0d3ea99dab5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# the variable x is assigned the value of the expression 1 + 2\nx = 1 + 2"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# the variable x is assigned the value of the expression 1 + 2\nx = 1 + 2"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a46c2cb62ac85bfc8a7a0b950ea56fb5147e65a58168be75cb08b0d3ea99dab5",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "d55219157d97d77e7a637024a9d5a734165c4bcfc5e5aa42edfe30a5ff9b8f65",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Simple expressions can be assembled together to form more complicated expressions, for example with arithmetic operations:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0022",
+      "type": "code",
+      "order": 22,
+      "source_hash": "7eed0709445c7b7cdb850f70a88f2643877518343ca778db345089a355b66706",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# the variable y is assigned the value of the expression '3 times x plus x squared'\ny = 3 * x + x**2"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# the variable y is assigned the value of the expression '3 times x plus x squared'\ny = 3 * x + x**2"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "7eed0709445c7b7cdb850f70a88f2643877518343ca778db345089a355b66706",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0023",
+      "type": "heading",
+      "order": 23,
+      "source_hash": "c803710302d5769d8fcd51958c516ff27f2a3c5ad9373c348d1d180c04a74624",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Function"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "7d46808d6fb49f3d6f3bd0c1ee69be357ddd9124e609c47a1c6ce20f2bc926cc",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A _function_ executes some functionality. Functions can also take one or more _arguments_, which are data that can be fed to and processed by the function. Arguments are sometimes also referred to as _parameters_. There is a technical distinction between an argument and a parameter, but the words are often used interchangeably. For now it should suffice to remember that both terms refer to the idea of some data passed to the function."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "2a842ebdaf50618dbe6d596e67e7a88a8ff55dc89cb5caa4852a899666b52a22",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A function is executed when it is _called_. That is, when the function (and its arguments, if any) is mentioned in the code. The following statement calls the `print` function with the argument `\"this is an argument\"`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0026",
+      "type": "code",
+      "order": 26,
+      "source_hash": "26e45aae7930c5126f726ca1e5bebd20eeb61dad59d1bbc972b96ae104de3fdd",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(\"this is an argument\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(\"this is an argument\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "26e45aae7930c5126f726ca1e5bebd20eeb61dad59d1bbc972b96ae104de3fdd",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "3efbab487149dc2830296997e4156585ead5239c5d40a3151f5f09900bcf7916",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Another function you've already used often is the `input` function, which asks the user for input. The argument of this function is the message that is shown to the user:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0028",
+      "type": "code",
+      "order": 28,
+      "source_hash": "815e6e622c720de11788a4f5b075a193ab31729cf8050970fc902f3e0f841491",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "name = input(\"Please type in your name: \")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "name = input(\"Please type in your name: \")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "815e6e622c720de11788a4f5b075a193ab31729cf8050970fc902f3e0f841491",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "396d92d1f939cd29d7677e95450670cd03bb7e60529cb34f8f3dd7e2927f8d64",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In this case the function also _returns_ a value. After the function has been executed, the section of code where it was called is replaced by the value it returns; it is another expression that has now been evaluated. The function `input` returns a string value containing whatever the user typed in at the prompt. The value a function returns is often stored in a variable so that it can be used in the program later on."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0030",
+      "type": "heading",
+      "order": 30,
+      "source_hash": "51fb172a8d569d8820009c7a05d941da1d7ecc21f5248c355fbd7b50899c4c7d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Data type"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "e4f849ff0c1fffb0a9bba690e44ab646930e1252efa87afc77271ccc6c1c3ef4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "_Data type_ refers to the characteristics of any value present in the program. In the following bit of code the data type of the variable `name` is string or `str`, and the data type of the variable `result` is integer or `int`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0032",
+      "type": "code",
+      "order": 32,
+      "source_hash": "8218019aaa8743e57f2e6fddf6e8e6dbcf43e2d5aa55601512504f775f033fe6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "name = \"Anna\"\nresult = 100"
+      },
+      "translation": {
+        "language": "code",
+        "content": "name = \"Anna\"\nresult = 100"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8218019aaa8743e57f2e6fddf6e8e6dbcf43e2d5aa55601512504f775f033fe6",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "35a35d3a0da52b4628cc75f9a8544c9fc8177a83f370402a52dc3e3f00b5089b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You can use the function `type` to find out the data type of any expression. An example of its use:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0034",
+      "type": "code",
+      "order": 34,
+      "source_hash": "bec36e3b5db296760c9c77806add7dad9de1ef723d5599d3c99cd3b9f9985ba4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(type(\"Anna\"))\nprint(type(100))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(type(\"Anna\"))\nprint(type(100))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "bec36e3b5db296760c9c77806add7dad9de1ef723d5599d3c99cd3b9f9985ba4",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0035",
+      "type": "sample_output",
+      "order": 35,
+      "source_hash": "59e380534b676928df8f31740fb576f536264de93de827c456222c8def4a15f3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "<class 'str'>\n<class 'int'>"
+      },
+      "translation": {
+        "language": "text",
+        "content": "<class 'str'>\n<class 'int'>"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n<class 'str'>\n<class 'int'>\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0036",
+      "type": "heading",
+      "order": 36,
+      "source_hash": "dc93879e3107703be39f22eda9bbaa9be63e870d015debad40eb70ceedebc03e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Syntax"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "281f23a413040c2a38b19e87f172201abb1df608dcdd91040673ea6fcc1b6fdb",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Similarly to natural languages, the _syntax_ of a programming language determines how the code of a program should be written. Each programming language has its own specific syntax."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "4250e4b9a377d82ae70ee5a6624f50eb85be1e3a8b8b66346106181a5d73a090",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The syntax of Python specifies, among other things, that the first line of an `if` statement should end in a colon character, and the block of the statement should be indented:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0039",
+      "type": "code",
+      "order": 39,
+      "source_hash": "0633d100edf839df73ecc67b1e3ec895c3ad2537ddba627068b1b2899f766d7c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "if name == \"Anna\":\n    print(\"Hi!\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "if name == \"Anna\":\n    print(\"Hi!\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "0633d100edf839df73ecc67b1e3ec895c3ad2537ddba627068b1b2899f766d7c",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "d501960c064b32275f9ea7f1f0705ef6832df58a4d70c03aebc8371e6d2ea970",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If the syntactic rules of the programming language are not followed, there will be an error:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0041",
+      "type": "code",
+      "order": 41,
+      "source_hash": "94e153476ff45159690bf7ea05fd9808b7e0cf78026717ea9a4833d7315104f8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "if name == \"Anna\"\n    print(\"Hi!\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "if name == \"Anna\"\n    print(\"Hi!\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "94e153476ff45159690bf7ea05fd9808b7e0cf78026717ea9a4833d7315104f8",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0042",
+      "type": "sample_output",
+      "order": 42,
+      "source_hash": "65f1fba51b45b7539f2d0166019996173e90817e8b3096ff23e7de3ca64cfe12",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "<pre>\n  File \"test.py\", line 1\n    if name == \"Anna\"\n                    ^\nSyntaxError: invalid syntax\n</pre>"
+      },
+      "translation": {
+        "language": "text",
+        "content": "<pre>\n  File \"test.py\", line 1\n    if name == \"Anna\"\n                    ^\nSyntaxError: invalid syntax\n</pre>"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n<pre>\n  File \"test.py\", line 1\n    if name == \"Anna\"\n                    ^\nSyntaxError: invalid syntax\n</pre>\n\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0043",
+      "type": "heading",
+      "order": 43,
+      "source_hash": "47fc5bfb5680bd7a9d55085c13c03c5c75ab3a5e2beb3eebd08067146a17a0f1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Debugging"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "50f12c727b83b445e46cc51940d5b6b48271e5d2de8909a528188fff72f91bfd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If the syntax of the program is correct but the program still doesn't function as intended, there is a _bug_ in the program."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0045",
+      "type": "paragraph",
+      "order": 45,
+      "source_hash": "a30e08400c28eb6bd59aeea5d586704d38054eaa231c0fcc9f6f2b8ad07715ed",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Bugs manifest in different ways. Some bugs cause an error during execution. For example, the following program"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0046",
+      "type": "code",
+      "order": 46,
+      "source_hash": "5bc8eed7a43b7acdbb4fa3f892993fed9ba3e0ecfe1dd6fc9e3af8dfe3f7d7f8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "x = 10\ny = 0\nresult = x / y\n\nprint(f\"{x} divided by {y} is {result}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "x = 10\ny = 0\nresult = x / y\n\nprint(f\"{x} divided by {y} is {result}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5bc8eed7a43b7acdbb4fa3f892993fed9ba3e0ecfe1dd6fc9e3af8dfe3f7d7f8",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0047",
+      "type": "paragraph",
+      "order": 47,
+      "source_hash": "cb1d2a5fcb18655a24bebb345cf8d8f11b5fcfb6d78bba8f5d089f045f8d3c1c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "causes this error:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0048",
+      "type": "sample_output",
+      "order": 48,
+      "source_hash": "cafe76ffa4835914752459b6731c72beb1edfd690cf0457e0204549329c0bed1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "<pre>\nZeroDivisionError: integer division or modulo by zero on line 3\n</pre>"
+      },
+      "translation": {
+        "language": "text",
+        "content": "<pre>\nZeroDivisionError: integer division or modulo by zero on line 3\n</pre>"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n<pre>\nZeroDivisionError: integer division or modulo by zero on line 3\n</pre>\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0049",
+      "type": "paragraph",
+      "order": 49,
+      "source_hash": "ae5ee84b36b7f9b0f0e9e7ed6d56e845ef3ab0a911cbe52d5515b60ae46f00b8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The problem here is mathematical in nature: division by zero is not allowed, and this halts the execution of the program."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0050",
+      "type": "paragraph",
+      "order": 50,
+      "source_hash": "89040ed70b08846c20685d2738906a1023f8fd47d1c21fcb31b026e0c2d23eef",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Errors during execution are usually rather easy to fix, because the error message states the line of code causing the error. Of course the actual reason for the bug might be somewhere quite different than the line of code causing the error."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0051",
+      "type": "paragraph",
+      "order": 51,
+      "source_hash": "f14c1bffe7b1472d29222820a2642c8aee53845404bbf0c28a8267e49bfd2849",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Sometimes a bug in the program is revealed because the result the code produces is wrong. Discovering and locating this type of bug can be challenging. In the programming exercises on this course the tests are usually intended to reveal bugs of this type. Before a bug can be fixed, its cause must first be located."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0052",
+      "type": "paragraph",
+      "order": 52,
+      "source_hash": "8c43ef1c3eaaa480d998bdae3b2a1014f108f38461284d3236874cc9f24915bb",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Programming jargon refers to discovering the causes of bugs as _debugging_. It is an extremely important skill in any programmer's toolbox. Professional programmers often spend more time debugging than writing fresh code."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0053",
+      "type": "paragraph",
+      "order": 53,
+      "source_hash": "24907bbc2aad06c446ea267831261763e7956df9d0bdc8a334f8afe021ad1cc9",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A simple yet effective way of debugging a program is adding debugging print statements to your code. Verifying the results of your code with `print` commands gives a quick confirmation the code does what you want it to do."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0054",
+      "type": "paragraph",
+      "order": 54,
+      "source_hash": "2d42cf44d365123ba9b77f85a80ecf51ea3f6ad10a793af70dff39bec13f3c67",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The following is an attempt to solve one of the exercises from the [previous section](/part-1/5-conditional-statements):"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0055",
+      "type": "code",
+      "order": 55,
+      "source_hash": "cd926ddb0f6b5d9309ad869325d83cf459b58c1862414b94fa8cd3efc278c0a8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "hourly_wage = float(input(\"Hourly wage: \"))\nhours = int(input(\"Hours worked: \"))\nday = input(\"Day of the week: \")\n\ndaily_wages = hourly_wage * hours\nif day == \"sunday\":\n    daily_wages * 2\n\nprint(f\"Daily wages: {daily_wages} euros\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "hourly_wage = float(input(\"Hourly wage: \"))\nhours = int(input(\"Hours worked: \"))\nday = input(\"Day of the week: \")\n\ndaily_wages = hourly_wage * hours\nif day == \"sunday\":\n    daily_wages * 2\n\nprint(f\"Daily wages: {daily_wages} euros\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "cd926ddb0f6b5d9309ad869325d83cf459b58c1862414b94fa8cd3efc278c0a8",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0056",
+      "type": "paragraph",
+      "order": 56,
+      "source_hash": "3109efb916dfe6a48628976ac8af80851412dc19ea0f329a60ed8f37d742990a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The program doesn't work quite right. Executing the tests prints out the following:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0057",
+      "type": "sample_output",
+      "order": 57,
+      "source_hash": "daf8829f0373eb89bf4f8c5ed83222f67431a6c743e289df94bc63dce16190e0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "<pre>\nFAIL: PythonEditorTest: test_sunday_1\n\nWith input 20.0,6,Sunday correct wage 240.0 is not found in output Daily wages: 120.0 euros\n</pre>"
+      },
+      "translation": {
+        "language": "text",
+        "content": "<pre>\nFAIL: PythonEditorTest: test_sunday_1\n\nWith input 20.0,6,Sunday correct wage 240.0 is not found in output Daily wages: 120.0 euros\n</pre>"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n<pre>\nFAIL: PythonEditorTest: test_sunday_1\n\nWith input 20.0,6,Sunday correct wage 240.0 is not found in output Daily wages: 120.0 euros\n</pre>\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0058",
+      "type": "paragraph",
+      "order": 58,
+      "source_hash": "1e9bf711d15d5941256106ca769e651ef6f24dfb1464e4500938db15b70145ac",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When debugging the exercises on this course, the first step is often checking how the program behaves with the input specified in the test that failed. Indeed the result isn't what was expected:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0059",
+      "type": "sample_output",
+      "order": 59,
+      "source_hash": "5b0025027f09aeddc0d671aa0e26bffcc2b022347b44df64fdbb73f3974c6781",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Daily wages: 120.0 euros"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Daily wages: 120.0 euros"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nDaily wages: 120.0 euros\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0060",
+      "type": "paragraph",
+      "order": 60,
+      "source_hash": "04d62bb9e3b9e3dc9b62a48f9f53c60ec362a3f93a771d9518b70181300185b4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Debugging usually means running the program multiple times. It can come in handy to temporarily \"hard-code\" the problematic input, instead of asking the user for input each time. In this case hard-coding could look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0061",
+      "type": "code",
+      "order": 61,
+      "source_hash": "ab5f2d7dce14581bfaf381289d8490e42558a2cb74406fd5f4b4f1d07bee87ba",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# hourly_wage = float(input(\"Hourly wage: \"))\n# hours = int(input(\"Hours worked: \"))\n# day = input(\"Day of the week: \")\nhourly_wage = 20.0\nhours = 6\nday = \"Sunday\"\n\ndaily_wages = hourly_wage * hours\nif day == \"sunday\":\n    daily_wages * 2\n\nprint(f\"Daily wages: {daily_wages} euros\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# hourly_wage = float(input(\"Hourly wage: \"))\n# hours = int(input(\"Hours worked: \"))\n# day = input(\"Day of the week: \")\nhourly_wage = 20.0\nhours = 6\nday = \"Sunday\"\n\ndaily_wages = hourly_wage * hours\nif day == \"sunday\":\n    daily_wages * 2\n\nprint(f\"Daily wages: {daily_wages} euros\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ab5f2d7dce14581bfaf381289d8490e42558a2cb74406fd5f4b4f1d07bee87ba",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0062",
+      "type": "paragraph",
+      "order": 62,
+      "source_hash": "438abc1ccc5606b222376b3ad55de633194c7e42059c4225450cbf0940274258",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The next step could be adding _debugging print statements_. The problematic part of the code is in the section dealing with Sundays, so let's add `print` commands before and after the line that should double the daily wages on Sundays:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0063",
+      "type": "code",
+      "order": 63,
+      "source_hash": "f35d6d108a56dd07ec004ded6a6e56327c94a7458b40ab8101a8dae46272f0ac",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# ...\n\ndaily_wages = hourly_wage * hours\nif day == \"sunday\":\n    print(\"wages before:\", daily_wages)\n    daily_wages * 2\n    print(\"wages after doubling:\", daily_wages)\n\nprint(f\"Daily wages: {daily_wages} euros\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# ...\n\ndaily_wages = hourly_wage * hours\nif day == \"sunday\":\n    print(\"wages before:\", daily_wages)\n    daily_wages * 2\n    print(\"wages after doubling:\", daily_wages)\n\nprint(f\"Daily wages: {daily_wages} euros\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f35d6d108a56dd07ec004ded6a6e56327c94a7458b40ab8101a8dae46272f0ac",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0064",
+      "type": "paragraph",
+      "order": 64,
+      "source_hash": "f6094805afd2ab935c60568c1ebf987923a5605642af82d81fd05071239b87a8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Running the code now reveals nothing - the debugging print statements aren't printed at all. It seems that the contents of the `if` block are never executed, so there must be a problem with the conditional statement. Let's try printing out the value of the Boolean expression:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0065",
+      "type": "code",
+      "order": 65,
+      "source_hash": "f6d9005b2070c360420ea4dfd395fe741ef702bb6360c2bddaef00ce9dd07957",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# ...\n\ndaily_wages = hourly_wage * hours\nprint(\"condition:\", day == \"sunday\")\nif day == \"sunday\":\n    print(\"wages before:\", daily_wages)\n    daily_wages * 2\n    print(\"wages after doubling:\", daily_wages)\n\nprint(f\"Daily wages: {daily_wages} euros\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# ...\n\ndaily_wages = hourly_wage * hours\nprint(\"condition:\", day == \"sunday\")\nif day == \"sunday\":\n    print(\"wages before:\", daily_wages)\n    daily_wages * 2\n    print(\"wages after doubling:\", daily_wages)\n\nprint(f\"Daily wages: {daily_wages} euros\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f6d9005b2070c360420ea4dfd395fe741ef702bb6360c2bddaef00ce9dd07957",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0066",
+      "type": "paragraph",
+      "order": 66,
+      "source_hash": "2a6053f9a79b2145e62eda38c61ce97a297599b62b3c3869247343127578c93a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Indeed, the value is `False`, so the contents of the if block are never executed:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0067",
+      "type": "sample_output",
+      "order": 67,
+      "source_hash": "bf18a46d983c8d193d5c2aa5df79f81762818942dbc7853b4eac2b44e9ca065f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "condition:  False\nDaily wages: 120.0 euros"
+      },
+      "translation": {
+        "language": "text",
+        "content": "condition:  False\nDaily wages: 120.0 euros"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\ncondition:  False\nDaily wages: 120.0 euros\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0068",
+      "type": "paragraph",
+      "order": 68,
+      "source_hash": "04b0aa7b23297f520ea6c08dbc4f4b80f71caf03b6cb19c3429e66f7df1df2e3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The issue must then lie within the condition of the `if` statement. As in so many situations in programming, the case of letters matters also in comparisons. Notice how the \"sunday\" in the Boolean expression has not been capitalized, but in the input it was. Let's fix this (in both the `print` command and the `if` statement):"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0069",
+      "type": "code",
+      "order": 69,
+      "source_hash": "cac4280a49dbea394bba3e10f26d92297f3558965daacacf6205b737540bd594",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# ...\n\ndaily_wages = hourly_wage * hours\nprint(\"condition:\", day == \"Sunday\")\nif day == \"Sunday\":\n    print(\"wages before:\", daily_wages)\n    daily_wages * 2\n    print(\"wages after doubling:\", daily_wages)\n\nprint(f\"Daily wages: {daily_wages} euros\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# ...\n\ndaily_wages = hourly_wage * hours\nprint(\"condition:\", day == \"Sunday\")\nif day == \"Sunday\":\n    print(\"wages before:\", daily_wages)\n    daily_wages * 2\n    print(\"wages after doubling:\", daily_wages)\n\nprint(f\"Daily wages: {daily_wages} euros\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "cac4280a49dbea394bba3e10f26d92297f3558965daacacf6205b737540bd594",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0070",
+      "type": "paragraph",
+      "order": 70,
+      "source_hash": "98d338d029f4e61b64e6978d48ab61137731317255949399152ab245ba9e1a66",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Running this prints out the following:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0071",
+      "type": "sample_output",
+      "order": 71,
+      "source_hash": "686c2abcddd21b008cd6f5dee8c04b7c8ea0357337b4008915dc774b8b86ae51",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "condition: True\nwages before: 120\nwages after doubling: 120\nDaily wages: 120.0 euros"
+      },
+      "translation": {
+        "language": "text",
+        "content": "condition: True\nwages before: 120\nwages after doubling: 120\nDaily wages: 120.0 euros"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\ncondition: True\nwages before: 120\nwages after doubling: 120\nDaily wages: 120.0 euros\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0072",
+      "type": "paragraph",
+      "order": 72,
+      "source_hash": "a9798e854d604ddfda9a231a5eb331484aa898f734c83b61abdeabb3e1b132c6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "It seems the value stored in `daily_wages` is correct at first: `hourly_wage = 20.0` and `hours = 6`, and 20.0 * 6 = 120.0. The command which is supposed to double the figure doesn't do so, however, so there must be a problem with the command. And indeed the command"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0073",
+      "type": "code",
+      "order": 73,
+      "source_hash": "6125ddc5bd3564c5717a44a80b9e8a40b58299bd4379c59450c195e8153753c7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "daily_wages * 2"
+      },
+      "translation": {
+        "language": "code",
+        "content": "daily_wages * 2"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6125ddc5bd3564c5717a44a80b9e8a40b58299bd4379c59450c195e8153753c7",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0074",
+      "type": "paragraph",
+      "order": 74,
+      "source_hash": "84470ed87b852227d4f75603b6b7c7adf51183b3fa39e647b6ab4e59e9daff90",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "does double the value, but it doesn't store the new value anywhere. Let's change it so it also stores the new value:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0075",
+      "type": "code",
+      "order": 75,
+      "source_hash": "f99681f5622022535e89402aa30bad52f8a12186dae63f50dc8c805e3373bf7a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "daily_wages *= 2"
+      },
+      "translation": {
+        "language": "code",
+        "content": "daily_wages *= 2"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f99681f5622022535e89402aa30bad52f8a12186dae63f50dc8c805e3373bf7a",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0076",
+      "type": "paragraph",
+      "order": 76,
+      "source_hash": "e2337c9aa7c73261911671a7348b057c9a62aab0b32de5bc0c1dcc2cbad9dbfc",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Running the program again reveals that the printout at the end is now also correct:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0077",
+      "type": "sample_output",
+      "order": 77,
+      "source_hash": "abba3eeaed2ba70a2fe64de672bf9ff25c2c5ddfb8f4cbff8ff5dd2f3175ef18",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "condition: True\nwages before: 120\nwages after doubling: 240\nDaily wages: 240.0 euros"
+      },
+      "translation": {
+        "language": "text",
+        "content": "condition: True\nwages before: 120\nwages after doubling: 240\nDaily wages: 240.0 euros"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\ncondition: True\nwages before: 120\nwages after doubling: 240\nDaily wages: 240.0 euros\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0078",
+      "type": "paragraph",
+      "order": 78,
+      "source_hash": "5144f4430236b45f35d67faaca95d29cd134ca8146dfdc8f73d8a3fb939989d2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When the program has been fixed, remember to remove all debugging print statements and other code added for debugging purposes."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0079",
+      "type": "paragraph",
+      "order": 79,
+      "source_hash": "8f1046c9cadbb7877aa531bcaf14c2453fff5d3afd9356c6dae7e8d8a4c468c3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This example was quite simple, and in such a short program one could probably figure out the bugs just by reading the code carefully. However, using debugging print statements is often a quick way to get a feeling for where the problem might lie. Print statements can be used to figure out which parts of the program seem to work correctly, so bug tracking efforts can be concentrated on the sections of code which are the most likely culprits."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0080",
+      "type": "paragraph",
+      "order": 80,
+      "source_hash": "ab55d49bb9df8f33cc2c9ad95869bd8bfeb9812753b30bdc96ffb64a415eb9e0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Debugging print statements are only one tool for debugging programs. We will come back to this subject later on during this course. You should now get into the habit of using debugging print statements to look for mistakes in your code. Programming professionals cannot get by without using them, so it is a very useful tool for beginners as well."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0081",
+      "type": "exercise",
+      "order": 81,
+      "source_hash": "0406408baec532c078ec41f5d856575e2be81ad71fbff7337466a464cf4e3b7b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The following program contains several _syntactic errors_. Please fix the program so that the syntax is in order and the program works as specified by the examples below.\n\n```python\n  number = input(\"Please type in a number: \")\n  if number>100\n    print(\"The number was greater than one hundred\")\n    number - 100\n    print(\"Now its value has decreased by one hundred)\n     print(\"Its value is now\"+ number)\n print(number + \" must be my lucky number!\")\n print(\"Have a nice day!)\n```\n\n<sample-output>\n\nPlease type in a number: **13**\n13 must be my lucky number!\nHave a nice day!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **101**\nThe number was greater than one hundred\nNow its value has decreased by one hundred\nIts value is now 1\n1 must be my lucky number!\nHave a nice day!\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-01_fix_syntax",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Fix the syntax",
+        "tmc_name": "part02-01_fix_syntax",
+        "height": "400px"
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0082",
+      "type": "exercise",
+      "order": 82,
+      "source_hash": "e41123c351b74dd0fdac72b9abd730f49c063334cbfb5559ee1b687be4a5de16",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The function `len` can be used to find out the length of a string, among other things. The function returns the number of characters in a string.\n\nSome examples of how this works:\n\n```python\nword = \"abcd\"\nprint(len(word))\n\nprint(len(\"hi there\"))\n\nword2 = \"howdydoody\"\nlength = len(word2)\nprint(length)\n\nempty_string = \"\"\nlength = len(empty_string)\nprint(length)\n```\n\n<sample-output>\n\n4\n8\n10\n0\n\n</sample-output>\n\nPlease write a program which asks the user for a word and then prints out the number of characters, if there was more than one typed in.\n\nExamples of expected behaviour:\n\n<sample-output>\n\nPlease type in a word: **hey**\nThere are 3 letters in the word hey\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a word: **banana**\nThere are 6 letters in the word banana\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a word: **b**\nThank you!\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-02_number_of_characters",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Number of characters",
+        "tmc_name": "part02-02_number_of_characters",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0083",
+      "type": "exercise",
+      "order": 83,
+      "source_hash": "39b14d5e2991b214c5de8cece78e35ebb7cb80b98c9c978990166e8bb52ea4ef",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When programming in Python, often we need to change the data type of a value. For example, a floating point number can be converted into an integer with the function `int`:\n\n```python\n\ntemperature = float(input(\"Please type in a temperature: \"))\n\nprint(\"The temperature is\", temperature)\n\nprint(\"...and rounded down it is\", int(temperature))\n\n```\n\n<sample-output>\n\nPlease type in a temperature: **5.15**\nThe temperature is 5.15\n...and rounded down it is 5\n\n</sample-output>\n\nNotice the function always rounds down, and not according to the rounding rules in mathematics. This is an example of a _floor function_.\n\n<sample-output>\n\nPlease type in a temperature: **8.99**\nThe temperature is 8.99\n...and rounded down it is 8\n\n</sample-output>\n\nPlease write a program which asks the user for a floating point number and then prints out the integer part and the decimal part separately. Use the Python `int` function.\n\nYou can assume the number given by the user is always greater than zero.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nPlease type in a number: **1.34**\nInteger part: 1\nDecimal part: 0.34\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-03_typecasting",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Typecasting",
+        "tmc_name": "part02-03_typecasting",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0084",
+      "type": "paragraph",
+      "order": 84,
+      "source_hash": "d3ac25ddc7ba9779c0556d543e4994d158e16a5a359347a1321dd236f1af0b67",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!--"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0085",
+      "type": "paragraph",
+      "order": 85,
+      "source_hash": "0937af8ca0d984621994ab6ab91b7b2cf722e5cf79e7103d9f4567fc678255c7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0086",
+      "type": "quiz",
+      "order": 86,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "eb4b41d3-b83b-5815-a1d5-ae9b377aa274",
+        "attributes": {
+          "id": "eb4b41d3-b83b-5815-a1d5-ae9b377aa274"
+        }
+      }
+    },
+    {
+      "id": "blk-part02-1-programming_terminology-0087",
+      "type": "paragraph",
+      "order": 87,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    }
+  ]
+}

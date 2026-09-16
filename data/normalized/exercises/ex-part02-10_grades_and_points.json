@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-10_grades_and_points",
+  "lesson_id": "part02-3-combining-conditions",
+  "part": 2,
+  "tmc_name": "part02-10_grades_and_points",
+  "title_original": "Grades and points",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "The table below outlines the grade boundaries on a certain university course. Please write a program which asks for the amount of points received and then prints out the grade attained according to the table.\n\npoints   | grade\n:--:|:----:\n< 0 |  impossible!\n0-49 | fail\n50-59 | 1\n60-69 | 2\n70-79 | 3\n80-89| 4\n90-100 | 5\n\\> 100 |  impossible!\n\nSome examples:\n\n<sample-output>\n\nHow many points [0-100]: **37**\nGrade: fail\n\n</sample-output>\n\n<sample-output>\n\nHow many points [0-100]: **76**\nGrade: 3\n\n</sample-output>\n\n<sample-output>\n\nHow many points [0-100]: **-3**\nGrade: impossible!\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "667cdac62b72954ed814c6a197add3d1ea463eef51772d7c4fa08212e86c10f2",
+  "order": 23
+}

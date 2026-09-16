@@ -1,0 +1,894 @@
+{
+  "id": "part04-1-vscode",
+  "part": 4,
+  "part_slug": "part-4",
+  "slug": "1-vscode",
+  "is_part_index": false,
+  "title_original": "The Visual Studio Code editor, Python interpreter and built-in debugging tool",
+  "title_vi": "Trình soạn thảo Visual Studio Code, trình thông dịch Python và công cụ gỡ lỗi tích hợp",
+  "path": "/part-4/1-vscode",
+  "source_path": "data/part-4/1-vscode.md",
+  "source_hash": "6f4ce22b25ec0b8410dc9d8f10136068e52da5ecda78d6e6358a8ec85c40d9d4",
+  "order": 1,
+  "blocks_count": 49,
+  "blocks": [
+    {
+      "id": "blk-part04-1-vscode-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "6dca31abcebc543de7d195486afd8578250272c9a405c0e52ba4969463da665c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be equipped to use the Visual Studio Code editor to complete exercises on this course\n- You will be familiar with the interactive Python interpreter, and will be able to use it to run code"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ được trang bị cách sử dụng trình soạn thảo Visual Studio Code để hoàn thành các bài tập trong khóa học này\n- Bạn sẽ làm quen với trình thông dịch Python tương tác và có thể sử dụng nó để chạy mã"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "b498a3473648ca7d21935cb42e97515e2c243caf35552b8179f67ad801b01ea4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Thus far all the exercises on this course have been completed directly on the course pages in embedded editor windows. Programming in the browser is very suitable for the very first steps in programming, but now it is time to start using a separate editor especially made for programming."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cho đến nay, tất cả các bài tập trong khóa học này đã được hoàn thành trực tiếp trên các trang khóa học trong các cửa sổ soạn thảo được nhúng. Lập trình trên trình duyệt rất phù hợp cho những bước đầu tiên trong lập trình, nhưng bây giờ đã đến lúc bắt đầu sử dụng một trình soạn thảo riêng biệt dành riêng cho lập trình."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "afd38667f7a8ab262ff79377a8902de488895d69b160d8917ddb6e287ccb36e6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "There are dozens of different editors that are suited to programming. On this course we will use the [Visual Studio Code](https://code.visualstudio.com/) editor, which has been gaining traction in recent years."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Có hàng chục trình soạn thảo khác nhau phù hợp với lập trình. Trong khóa học này, chúng tôi sẽ sử dụng trình chỉnh sửa [Visual Studio Code](https://code.visualstudio.com/), trình chỉnh sửa này đã thu hút được nhiều sự chú ý trong những năm gần đây."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "03b71c26725d1216c7b12fef36056abb4c436e3a61608f8c81e230e5d2de7214",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please install the Visual Studio Code editor on your own computer now. You may also need to install Python and the Visual Studio Code plugin for Python. You will also need the TMC plugin, which will take care of running the tests that go with the exercises. In the TMC plugin, select **MOOC** as the organization and **Python Programming 2026** as the course."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng cài đặt trình soạn thảo Visual Studio Code trên máy tính của bạn ngay bây giờ. Bạn cũng có thể cần cài đặt Python và plugin Visual Studio Code cho Python. Bạn cũng sẽ cần plugin TMC, plugin này sẽ đảm nhiệm việc chạy các bài kiểm tra đi kèm với các bài tập. Trong plugin TMC, chọn **MOOC** làm tổ chức và **Lập trình Python 2026** làm khóa học."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "c4c99a2d44587e09856031335530964e7708248010bdf9d2dccf72cd9baa4c13",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "[Here is a guide](https://www.mooc.fi/en/installation/vscode) to installing and running all of these. Read the instructions on working on and submitting exercises, and then complete the task below:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "[Đây là hướng dẫn](https://www.mooc.fi/en/installation/vscode) cách cài đặt và chạy tất cả những thứ này. Đọc hướng dẫn làm và nộp bài tập, sau đó hoàn thành nhiệm vụ bên dưới:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0006",
+      "type": "exercise",
+      "order": 6,
+      "source_hash": "bbb22435d34a33415ee4293097590562643f6b75bd3dc9da249e3596a8f647a4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user which editor they are using. The program should keep on asking until the user types in _Visual Studio Code_.\n\nHave a look at the example of expected behaviour below:\n\n<sample-output>\n\nEditor: **Emacs**\nnot good\nEditor: **Vim**\nnot good\nEditor: **Word**\nawful\nEditor: **Atom**\nnot good\nEditor: **Visual Studio Code**\nan excellent choice!\n\n</sample-output>\n\nIf the user types in Word or Notepad, the program counters with _awful_. Other unacceptable editor choices receive the reply _not good_.\n\nThe program should be case-insensitive in its reactions. That is, the same user input in lowercase, uppercase or mixed case should trigger the same reaction:\n\n<sample-output>\n\nEditor: **NOTEPAD**\nawful\nEditor: **viSUal STudiO cODe**\nan excellent choice!\n\n</sample-output>\n\nHint: The simplest way to achieve this is converting all characters to the same case. The Python string method `lower` converts a string to lowercase entirely. An example of its use:\n\n```python\nmystring = \"Visual Studio CODE\"\nif \"visual studio code\" == mystring.lower():\n    print(\"this was the string I was looking for!\")\n```\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block. The same applies to any upcoming exercises that don't explicitly ask for functions."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một chương trình hỏi người dùng xem họ đang sử dụng trình soạn thảo nào. Chương trình sẽ tiếp tục hỏi cho đến khi người dùng nhập _Visual Studio Code_.\n\nHãy xem ví dụ về hành vi dự kiến dưới đây:\n\n<sample-output>\n\nBiên tập viên: **Emacs**\nkhông tốt\nBiên tập viên: **Vim**\nkhông tốt\nNgười biên tập: **Lời**\nkhủng khiếp\nBiên tập viên: **Nguyên tử**\nkhông tốt\nBiên tập viên: **Mã Visual Studio**\nmột sự lựa chọn tuyệt vời!\n\n</sample-output>\n\nNếu người dùng gõ vào Word hoặc Notepad, chương trình sẽ đếm bằng _awful_. Các lựa chọn biên tập viên không được chấp nhận khác nhận được câu trả lời _không tốt_.\n\nChương trình không được phân biệt chữ hoa chữ thường trong các phản ứng của nó. Nghĩa là, cùng một dữ liệu nhập của người dùng ở dạng chữ thường, chữ hoa hoặc chữ hoa hỗn hợp sẽ gây ra phản ứng giống nhau:\n\n<sample-output>\n\nNgười biên tập: **NOTEPAD**\nkhủng khiếp\nBiên tập viên: **viSUal STudiO code**\nmột sự lựa chọn tuyệt vời!\n\n</sample-output>\n\nGợi ý: Cách đơn giản nhất để đạt được điều này là chuyển đổi tất cả các ký tự sang cùng một kiểu chữ. Phương thức chuỗi Python `lower` chuyển đổi hoàn toàn một chuỗi thành chữ thường. Một ví dụ về việc sử dụng nó:\n\n```python\nmystring = \"Visual Studio CODE\"\nif \"visual studio code\" == mystring.lower():\n    print(\"this was the string I was looking for!\")\n```\n\n**NB:** bài tập này không yêu cầu bạn viết bất kỳ hàm nào, vì vậy bạn nên __không__ đặt bất kỳ mã nào trong khối `if __name__ == \"__main__\"`. Điều tương tự cũng áp dụng cho bất kỳ bài tập sắp tới nào không yêu cầu chức năng một cách rõ ràng."
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-01_hello_visual_studio_code",
+        "exercise_type": "programming-exercise",
+        "name": "Hello Visual Studio Code",
+        "tmc_name": "part04-01_hello_visual_studio_code",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0007",
+      "type": "heading",
+      "order": 7,
+      "source_hash": "18aa4c30fc17545037d23f54f40ea88da81b5a7305166f8bf4f52349d7832a71",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Executing code"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mã thực thi"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "84da02a99bb62ce98895c91711bdb1f813dc7a4291819545f743c009466fec27",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In Visual Studio Code, the easiest way to execute your code is clicking on the triangle in the upper right hand corner. Sometimes it happens that some program is left running in the background, maybe waiting for input from the user or stuck in an infinite loop, without you realising it. You might only notice this when trying to execute the next program, which simply will not run because the previous execution is still hogging up resources. A quick fix is pressing on the keys _Control_+_C_ at the same time, which stops the execution of any ongoing process. The next program should now run fine."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong Visual Studio Code, cách dễ nhất để thực thi code của bạn là nhấp vào hình tam giác ở góc trên bên phải. Đôi khi xảy ra trường hợp một số chương trình vẫn chạy ở chế độ nền, có thể đang chờ đầu vào từ người dùng hoặc bị mắc kẹt trong một vòng lặp vô hạn mà bạn không nhận ra. Bạn chỉ có thể nhận thấy điều này khi cố gắng thực thi chương trình tiếp theo, chương trình này đơn giản là sẽ không chạy vì quá trình thực thi trước đó vẫn đang ngốn nhiều tài nguyên. Cách khắc phục nhanh là nhấn các phím _Control_+_C_ cùng lúc, thao tác này sẽ dừng việc thực thi bất kỳ quy trình đang diễn ra nào. Chương trình tiếp theo bây giờ sẽ chạy tốt."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0009",
+      "type": "heading",
+      "order": 9,
+      "source_hash": "614a9da76f51e5f7876a50dfa7442e1442f9cdd4e764bde84787647100214f10",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The interactive Python interpreter"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trình thông dịch Python tương tác"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "aea878d2b3a8c018183b2b70dc52ea4cafb9f596885c06e88153c61b31fad992",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "One of the most important tools for any Python programmer is the interactive Python interpreter."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một trong những công cụ quan trọng nhất đối với bất kỳ lập trình viên Python nào là trình thông dịch Python tương tác."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "c4bf45daec887a21e9143c7b71e768ea7dc144abcf333da57b71b5ec237f3d95",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Starting up the interpreter may depend on your platform. In a Linux or Mac system, you can type in `python3` in the terminal. In Windows, the command on the command line might be `python`. Firing up the interpreter on a Mac looks like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Việc khởi động trình thông dịch có thể phụ thuộc vào nền tảng của bạn. Trong hệ thống Linux hoặc Mac, bạn có thể nhập `python3` vào thiết bị đầu cuối. Trong Windows, lệnh trên dòng lệnh có thể là `python`. Việc kích hoạt trình thông dịch trên máy Mac trông như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0012",
+      "type": "image",
+      "order": 12,
+      "source_hash": "16849eec5843f04f3770f31d8b637654799d0f204ec82567bca405d626d9e00b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "4_1_1.png",
+        "alt": "",
+        "attributes": {
+          "src": "4_1_1.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "5eb7f37ba982c71fcb81ae742ca58e7d382aea3776c976ba51733a14077abe0b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "It is also possible to start the interpreter inside Visual Studio Code. First you should execute a program by clicking on the triangle. This should open a _Terminal_ section on your screen, where you can now type in `python3` (or `python`):"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cũng có thể khởi động trình thông dịch bên trong Visual Studio Code. Đầu tiên bạn nên thực hiện một chương trình bằng cách nhấp vào hình tam giác. Thao tác này sẽ mở phần _Terminal_ trên màn hình của bạn, nơi bạn hiện có thể nhập `python3` (hoặc `python`):"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0014",
+      "type": "image",
+      "order": 14,
+      "source_hash": "d549616fc5dc2d83272578a42e1e6fdda7ef44c9ba3fe7ff18d829b16d7f4b7e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "4_1_2.png",
+        "alt": "",
+        "attributes": {
+          "src": "4_1_2.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "6b75773a023d1a83653bd326bbb0cda9a2e6f21c70f3a8d01fe23a5d75ad67b8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You can also try a browser-based Python interpreter, such as <https://www.python.org/shell/>."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn cũng có thể dùng thử trình thông dịch Python dựa trên trình duyệt, chẳng hạn như <https://www.python.org/shell/>."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "069338608c24f070ae02f4a0ffb825579af6e8d5dacf591a9833424c23d0a542",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The interpreter is a way of executing Python code line by line as soon as you write it. When you write a line of code and press _Enter_, the interpreter executes the code right away and shows you the results:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trình thông dịch là một cách thực thi từng dòng mã Python ngay khi bạn viết nó. Khi bạn viết một dòng mã và nhấn _Enter_, trình thông dịch sẽ thực thi mã đó ngay lập tức và hiển thị cho bạn kết quả:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0017",
+      "type": "image",
+      "order": 17,
+      "source_hash": "53e7759f1729317d8cb75c1cee638cbc5f22807aca26660bfb3ff2303f326cd9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "4_1_3.png",
+        "alt": "",
+        "attributes": {
+          "src": "4_1_3.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "6717b0b6db9c57dc122fe9c95a3187fea60018803df71a4a2b3cfae1f51ecf67",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Any Python code that can be written in a file can also be written in the interpreter. You can even assign variables and define methods:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bất kỳ mã Python nào có thể được ghi vào tệp cũng có thể được viết bằng trình thông dịch. Bạn thậm chí có thể gán các biến và xác định các phương thức:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0019",
+      "type": "code",
+      "order": 19,
+      "source_hash": "2a030e751ae520960c9c9100800a3d3bfe3c8ed7ab52501a8b2220c05912fc88",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": ">>> t = [1,2,3,4,5]\n>>> for number in t:\n...   print(number)\n...\n1\n2\n3\n4\n5\n>>> def absolute_value(number):\n...   if number<0:\n...      number = -number\n...   return number\n...\n>>> x = 10\n>>> y = -7\n>>> absolute_value(number)\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'number' is not defined\n>>> absolute_value(x)\n10\n>>> absolute_value(y)\n7\n>>>"
+      },
+      "translation": {
+        "language": "code",
+        "content": ">>> t = [1,2,3,4,5]\n>>> for number in t:\n...   print(number)\n...\n1\n2\n3\n4\n5\n>>> def absolute_value(number):\n...   if number<0:\n...      number = -number\n...   return number\n...\n>>> x = 10\n>>> y = -7\n>>> absolute_value(number)\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'number' is not defined\n>>> absolute_value(x)\n10\n>>> absolute_value(y)\n7\n>>>"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2a030e751ae520960c9c9100800a3d3bfe3c8ed7ab52501a8b2220c05912fc88",
+        "length_lines": 25
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "9e634505dc65fb49a9affa75249a0da2c7a561a6b3361e36818a46714ec98e02",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The interpreter is best suited to making small checks. For instance, you can try out functions and methods, or check if they exist at all:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thông dịch viên là người phù hợp nhất để thực hiện các bước kiểm tra nhỏ. Ví dụ: bạn có thể thử các hàm và phương thức hoặc kiểm tra xem chúng có tồn tại hay không:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0021",
+      "type": "code",
+      "order": 21,
+      "source_hash": "366481438d0d9ba04dce9302ab0e3d7f37f4eb2c9a603427d29011ccead35ea6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": ">>> \"TextYteXt\".toupper()\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nAttributeError: 'str' object has no attribute 'toupper'\n>>> \"TextYteXt\".upper()\n'TEXTYTEXT'\n>>>"
+      },
+      "translation": {
+        "language": "code",
+        "content": ">>> \"TextYteXt\".toupper()\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nAttributeError: 'str' object has no attribute 'toupper'\n>>> \"TextYteXt\".upper()\n'TEXTYTEXT'\n>>>"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "366481438d0d9ba04dce9302ab0e3d7f37f4eb2c9a603427d29011ccead35ea6",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "89bff4bac6ce457e0d2111e0c80dfed632f3065403ea6dd57a6a006c443a23c4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If there is a method you need, and you can _almost_ remember its name, it's sometimes faster to skip Google and use the `dir` function in the interpreter. It tells you which methods are available to use on a given object:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu có một phương thức bạn cần và bạn có thể _gần như_ nhớ tên của nó, đôi khi sẽ nhanh hơn nếu bỏ qua Google và sử dụng chức năng `dir` trong trình thông dịch. Nó cho bạn biết những phương thức nào có thể sử dụng trên một đối tượng nhất định:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0023",
+      "type": "code",
+      "order": 23,
+      "source_hash": "53ae980c37c4679c55b2ae339818425c41fb753ad1b15e67a09b57aeb8871f97",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": ">>> dir(\"this is a string\")\n['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__',\n'__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__',\n'__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__',\n'__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__',\n'__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__',\n'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find',\n'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit',\n'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join',\n'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust','rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase',\n'title', 'translate', 'upper', 'zfill']"
+      },
+      "translation": {
+        "language": "code",
+        "content": ">>> dir(\"this is a string\")\n['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__',\n'__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__',\n'__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__',\n'__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__',\n'__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__',\n'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find',\n'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit',\n'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join',\n'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust','rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase',\n'title', 'translate', 'upper', 'zfill']"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "53ae980c37c4679c55b2ae339818425c41fb753ad1b15e67a09b57aeb8871f97",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "719b465c8354c461d9cef693d6fe0c43eb595bdc78f12eb29f61ce77a64d335a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Python strings have a lot of methods available, as you can see above. At this point it might be best to ignore any methods that have underscores in their names, but the rest may well prove useful. Some of them you can figure out by trying them out, and the rest you can search for online."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chuỗi Python có sẵn rất nhiều phương thức, như bạn có thể thấy ở trên. Tại thời điểm này, tốt nhất có thể bỏ qua bất kỳ phương thức nào có dấu gạch dưới trong tên của chúng, nhưng phần còn lại có thể tỏ ra hữu ích. Một số trong số chúng bạn có thể tìm ra bằng cách thử chúng và phần còn lại bạn có thể tìm kiếm trực tuyến."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "efdec8a2710cad19a1fb67a5ca5e297550f5f07b060251db73eae71da3b00a44",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Python lists don't have quite so many methods:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Danh sách Python không có nhiều phương thức:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0026",
+      "type": "code",
+      "order": 26,
+      "source_hash": "bd84ae9ba97d8dc6eeea6d6d2b12a121785007bcb2bc59814f339ada5a9c4815",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": ">>> dir([])\n['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__',\n'__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__',\n'__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__',\n'__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__',\n'__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__',\n'__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop',\n'remove', 'reverse', 'sort']\n>>>"
+      },
+      "translation": {
+        "language": "code",
+        "content": ">>> dir([])\n['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__',\n'__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__',\n'__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__',\n'__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__',\n'__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__',\n'__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop',\n'remove', 'reverse', 'sort']\n>>>"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "bd84ae9ba97d8dc6eeea6d6d2b12a121785007bcb2bc59814f339ada5a9c4815",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "150ce9ad0a7310429ef0ae2040d8c12b252bee1e0e0a2c467e6338e1b295c0d2",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's try a few of them, `reverse` and `clear` seem promising:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy thử một vài trong số chúng, `reverse` và `clear` có vẻ đầy hứa hẹn:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0028",
+      "type": "code",
+      "order": 28,
+      "source_hash": "dad6d880ea35a5129a03efa2489eefbdf9104e8bf7343a2d741cb8ee2a0322c3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": ">>> numbers = [1,2,3,4,5]\n>>> numbers.reverse()\n>>> numbers\n[5, 4, 3, 2, 1]\n>>> numbers.clear()\n>>> numbers\n[]"
+      },
+      "translation": {
+        "language": "code",
+        "content": ">>> numbers = [1,2,3,4,5]\n>>> numbers.reverse()\n>>> numbers\n[5, 4, 3, 2, 1]\n>>> numbers.clear()\n>>> numbers\n[]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "dad6d880ea35a5129a03efa2489eefbdf9104e8bf7343a2d741cb8ee2a0322c3",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "4ccfe96ab64579310bf296480b8f4cf3584f248250513e87fd905b38b148a60e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "As you can see, these methods do pretty much what you would expect based on their names."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Như bạn có thể thấy, những phương thức này thực hiện khá nhiều điều bạn mong đợi dựa trên tên của chúng."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "6a0228843b62a6800b2aafb1e813b5f1db10a460a923c12193caf5b20a72400e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Notice how the interpreter doesn't print out anything when you run the command `numbers.reverse()`. This is because the interpreter prints something out only if the line of code has a value. The `reverse()` method here doesn't return any value."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lưu ý cách trình thông dịch không in ra bất cứ điều gì khi bạn chạy lệnh `numbers.reverse()`. Điều này là do trình thông dịch chỉ in ra thứ gì đó nếu dòng mã có giá trị. Phương thức `reverse()` ở đây không trả về bất kỳ giá trị nào."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "3a78da354897aa38b222cccc01b5fa093595a88db18a55c1b6e16bbc2dbc24c0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the above example we printed out the value of the list `numbers` by typing in just the name of the variable. In fact, it is rarely necessary to explicitly type in `print` commands in the interpreter. You can include them if you want to, however."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong ví dụ trên, chúng tôi đã in ra giá trị của danh sách `numbers` bằng cách chỉ nhập tên của biến. Trên thực tế, hiếm khi cần phải nhập rõ ràng các lệnh `print` trong trình thông dịch. Tuy nhiên, bạn có thể bao gồm chúng nếu muốn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "76dc6df0550a47d27a6d9ef3d41fbe696e630d39f2d76c0ba71effc73e28d788",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Remember to close the interpreter when you are finished. The commands `quit()` or `exit()` will close it, as will the key combo _Control_+_D_ (Linux/Mac) or _Control_+_Z_ (Windows). Especially in Visual Studio Code this is important, as trying to execute another Python program while the interpreter is still running results in a rather cryptic error message:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy nhớ đóng trình thông dịch khi bạn hoàn tất. Các lệnh `quit()` hoặc `exit()` sẽ đóng nó, cũng như tổ hợp phím _Control_+_D_ (Linux/Mac) hoặc _Control_+_Z_ (Windows). Đặc biệt trong Visual Studio Code, điều này rất quan trọng, vì việc cố gắng thực thi một chương trình Python khác trong khi trình thông dịch vẫn đang chạy sẽ dẫn đến một thông báo lỗi khá khó hiểu:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0033",
+      "type": "image",
+      "order": 33,
+      "source_hash": "b07f47beceda79144c63861a8342490a7a1adeb894812c58f9674f06c0b96cc5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "4_1_4.png",
+        "alt": "",
+        "attributes": {
+          "src": "4_1_4.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0034",
+      "type": "heading",
+      "order": 34,
+      "source_hash": "96c3cd5fba3d1ae1ce114d1535b8b536026aaff2154e952ce2eda530993cdf4b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The built-in debugger"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trình gỡ lỗi tích hợp"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "1bcb3eb69b88ac26a86f2c83b989e8f0b9763bf0491b30176508498daffcc6f6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We have already spent a fair amount of time and effort on developing debugging skills, mainly through print statement debugging. The Visual Studio Code editor has another tool at your disposal: a built-in _visual debugger_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng tôi đã dành khá nhiều thời gian và công sức để phát triển kỹ năng gỡ lỗi, chủ yếu thông qua việc gỡ lỗi câu lệnh `print`. Trình chỉnh sửa Visual Studio Code có một công cụ khác mà bạn có thể tùy ý sử dụng: _trình gỡ lỗi trực quan_ tích hợp sẵn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "dd0a306fbe35a1efdec0fbae2f62e9095a3bda56f8f4f6bf583a96411c8a8561",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "To start debugging, first you have to define a _breakpoint_ in your code. A breakpoint is a point in your program where the debugger halts execution. You can set a breakpoint by clicking on the left edge of any line in your program."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Để bắt đầu gỡ lỗi, trước tiên bạn phải xác định _breakpoint_ trong mã của mình. Điểm dừng là một điểm trong chương trình của bạn nơi trình gỡ lỗi tạm dừng thực thi. Bạn có thể đặt điểm dừng bằng cách nhấp vào cạnh trái của bất kỳ dòng nào trong chương trình của bạn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "9d2603414fe754a29fd09db76e28188b4d160bbc06df0d595d0bb359763f0fac",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following example is a slightly faulty attempt at solving the exercise _The sum of consecutive numbers_ in the [previous part](/part-3/1-loops-with-conditions). There is a breakpoint on line 5:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ sau đây là một lỗi nhỏ khi giải bài tập _Tổng các số liên tiếp_ trong [phần trước](/part-3/1-loops-with-conditions). Có một điểm dừng trên dòng 5:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0038",
+      "type": "image",
+      "order": 38,
+      "source_hash": "4a429af183e9ef3c4455acac7a6fabe45f5cee1ec7c7a96b4d14be45f332e96b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "4_1_5.png",
+        "alt": "",
+        "attributes": {
+          "src": "4_1_5.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "2a8e34c295140e4ff8d5e2cf798bd70e067a6bfbed3bdbdb3d45d1ec9847d303",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After the breakpoint has been set, choose _Start debugging_ from the _Run_ menu. This opens a list of options, where you should select _Python File_:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau khi điểm dừng được đặt, hãy chọn _Bắt đầu gỡ lỗi_ từ menu _Run_. Thao tác này sẽ mở ra một danh sách các tùy chọn, trong đó bạn nên chọn _Python File_:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0040",
+      "type": "image",
+      "order": 40,
+      "source_hash": "b06ddceb1d262611b4dd2c8250de6643f9e5e5296ab9fa8b905e09176bb16506",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "4_1_6.png",
+        "alt": "",
+        "attributes": {
+          "src": "4_1_6.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "8a5d67a449154140e3047dfb8c5015fa4fa8ec24f7a48eb7fe442d9ad49a11a1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This starts the debugger, which executes your code as usual until the execution reaches a breakpoint and halts. If your code asks for input, remember to type that in in the terminal:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thao tác này sẽ khởi động trình gỡ lỗi, trình gỡ lỗi sẽ thực thi code của bạn như bình thường cho đến khi quá trình thực thi đạt đến điểm ngắt và dừng lại. Nếu code của bạn yêu cầu đầu vào, hãy nhớ nhập mã đó vào thiết bị đầu cuối:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0042",
+      "type": "image",
+      "order": 42,
+      "source_hash": "17cef3dfa379b3f25ea4708cc8fb6aa6c609a3013ce0e8cab1a8ec84092a3432",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "4_1_7.png",
+        "alt": "",
+        "attributes": {
+          "src": "4_1_7.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0043",
+      "type": "paragraph",
+      "order": 43,
+      "source_hash": "761453d948928e8fb5256ef5a4b48efcfa2064f4220f3a42de0d4e0986130cb6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "On the left there is now the _Variables_ view, which contains the current values of all variables active in the code. You can proceed with the execution line by line by clicking on the down arrow, which is labelled _Step into_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ở bên trái hiện có chế độ xem _Variables_, chứa các giá trị hiện tại của tất cả các biến đang hoạt động trong mã. Bạn có thể tiếp tục thực hiện từng dòng bằng cách nhấp vào mũi tên xuống có nhãn _Bước vào_."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "3fe0f7396859352e91857ca807fe6332f64b284fa838ea7d16c17ca69dffc8ac",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the image below the loop in the code has already been repeated a few times:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong hình ảnh bên dưới, vòng lặp trong mã đã được lặp lại một vài lần:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0045",
+      "type": "image",
+      "order": 45,
+      "source_hash": "18ee54619014345adf8f082056f91922781036d8c57823e9db56bfe3210bf667",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "4_1_8.png",
+        "alt": "",
+        "attributes": {
+          "src": "4_1_8.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0046",
+      "type": "paragraph",
+      "order": 46,
+      "source_hash": "14bf2fa70bf710fa5055cee8e7ec679fa86bbd582e554040224b3b26d2a9d909",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The debugger has a _Debug console_ tab, which lets you evaluate expressions with the current values stored in the variables. For example, you can check the value of the Boolean expression in the condition of the loop:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trình gỡ lỗi có tab _Debug console_, cho phép bạn đánh giá các biểu thức với các giá trị hiện tại được lưu trữ trong các biến. Ví dụ: bạn có thể kiểm tra giá trị của biểu thức Boolean trong điều kiện của vòng lặp:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0047",
+      "type": "image",
+      "order": 47,
+      "source_hash": "529419f9eb33914c84755b2ef9506746533a57c474d4924c6fc634faf67211ae",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "4_1_9.png",
+        "alt": "",
+        "attributes": {
+          "src": "4_1_9.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-1-vscode-0048",
+      "type": "paragraph",
+      "order": 48,
+      "source_hash": "8dc422b74470c8dda9a6ddf8a2d162f085cc5563be59f3586672ac45643252cb",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You can include several breakpoints in your program code. When execution has halted, you can start it again by clicking on the blue triangle. Execution proceeds until it reaches the next breakpoint."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn có thể bao gồm một số điểm dừng trong mã chương trình của mình. Khi quá trình thực thi đã tạm dừng, bạn có thể bắt đầu lại bằng cách nhấp vào hình tam giác màu xanh lam. Việc thực thi tiếp tục cho đến khi đạt đến điểm ngắt tiếp theo."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-1-vscode-0049",
+      "type": "paragraph",
+      "order": 49,
+      "source_hash": "456ea6a7f36fc54ae0993f20ef70e923e0356ddf8f2635cff9d801bdd3ab2771",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The built-in visual debugger is a good alternative to debugging print statements. It is up to you which you choose to employ more in the future. Each programmer has their own preferences, but it's always a good idea to try different options before settling on any single solution."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trình gỡ lỗi trực quan tích hợp sẵn là một giải pháp thay thế tốt để gỡ lỗi các câu lệnh `print`. Việc bạn chọn tuyển dụng nhiều hơn trong tương lai là tùy thuộc vào bạn. Mỗi lập trình viên có sở thích riêng của họ, nhưng bạn nên thử các tùy chọn khác nhau trước khi quyết định bất kỳ giải pháp nào."
+      },
+      "metadata": {}
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part08-09_books_of_genre",
+  "lesson_id": "part08-3-defining-classes",
+  "part": 8,
+  "tmc_name": "part08-09_books_of_genre",
+  "title_original": "Books of a genre",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `books_of_genre(books: list, genre: str)` which takes a list of objects of type `Book` and a string representing a genre as its arguments.\n\nThe function should return a _new_ list, which contains the books with the desired genre from the original list. Please see the examples below.\n\n```python\npython = Book(\"Fluent Python\", \"Luciano Ramalho\", \"programming\", 2015)\neverest = Book(\"High Adventure\", \"Edmund Hillary\", \"autobiography\", 1956)\nnorma = Book(\"Norma\", \"Sofi Oksanen\", \"crime\", 2015)\n\nbooks = [python, everest, norma, Book(\"The Snowman\", \"Jo Nesbø\", \"crime\", 2007)]\n\nprint(\"Books in the crime genre:\")\nfor book in books_of_genre(books, \"crime\"):\n    print(f\"{book.author}: {book.name}\")\n```\n\n<sample-output>\n\nBooks in the crime genre:\nSofi Oksanen: Norma\nJo Nesbø: The Snowman\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "python = Book(\"Fluent Python\", \"Luciano Ramalho\", \"programming\", 2015)\neverest = Book(\"High Adventure\", \"Edmund Hillary\", \"autobiography\", 1956)\nnorma = Book(\"Norma\", \"Sofi Oksanen\", \"crime\", 2015)\n\nbooks = [python, everest, norma, Book(\"The Snowman\", \"Jo Nesbø\", \"crime\", 2007)]\n\nprint(\"Books in the crime genre:\")\nfor book in books_of_genre(books, \"crime\"):\n    print(f\"{book.author}: {book.name}\")",
+  "grading_data_available": false,
+  "source_hash": "53141747d550dc9781597bf76e01d2c30aca7dfc0a7f1c5fcd9b579f3027595e",
+  "order": 49
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-24_palindromes",
+  "lesson_id": "part04-4-definite-iteration",
+  "part": 4,
+  "tmc_name": "part04-24_palindromes",
+  "title_original": "Palindromes",
+  "title_vi": "Palindrome",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `palindromes`, which takes a string argument and returns `True` if the string is a palindrome. Palindromes are words which are spelled exactly the same backwards and forwards.\n\nPlease also write a main program which asks the user to type in words until they type in a palindrome:\n\n<sample-output>\n\nPlease type in a palindrome: **python**\nthat wasn't a palindrome\nPlease type in a palindrome: **java**\nthat wasn't a palindrome\nPlease type in a palindrome: **oddoreven**\nthat wasn't a palindrome\nPlease type in a palindrome: **neveroddoreven**\nneveroddoreven is a palindrome!\n\n</sample-output>\n\n**NB:**, the main program **should not be** within an `if __name__ == \"__main__\":` block",
+  "description_vi": "Hãy viết một hàm có tên `palindromes`, hàm này nhận một đối số chuỗi và trả về `True` nếu chuỗi đó là một bảng màu. Palindromes là những từ được đánh vần ngược và xuôi giống hệt nhau.\n\nNgoài ra, hãy viết một chương trình chính yêu cầu người dùng nhập các từ cho đến khi họ nhập vào một bảng màu:\n\n<sample-output>\n\nVui lòng nhập một bảng màu: **python**\nđó không phải là một bảng màu\nVui lòng nhập một bảng màu: **java**\nđó không phải là một bảng màu\nVui lòng nhập một bảng màu: **oddoreven**\nđó không phải là một bảng màu\nVui lòng nhập một bảng màu: **neveroddoreven**\nneveroddoreven là một bảng màu!\n\n</sample-output>\n\n**NB:**, chương trình chính **không được** nằm trong khối `if __name__ == \"__main__\":`",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "a40db0ff4c581769dbd2f4c8a62b015a1fb267ce22a2fb5bcd0e90f3e7528598",
+  "order": 50
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-13_times_five",
+  "lesson_id": "part01-4-arithmetic-operations",
+  "part": 1,
+  "tmc_name": "part01-13_times_five",
+  "title_original": "Times five",
+  "title_vi": "Lần năm",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for a number. The program then prints out the number multiplied by five.\n\nThe program should function as follows:\n\n<sample-output>\n\nPlease type in a number: **3**\n3 times 5 is 15\n\n</sample-output>",
+  "description_vi": "Hãy viết một chương trình yêu cầu người dùng nhập một số. Chương trình sau đó in ra số nhân với năm.\n\nChương trình sẽ hoạt động như sau:\n\n<sample-output>\n\nVui lòng nhập một số: **3**\n3 nhân 5 là 15\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "17e006a754347c62f9bc80898810156fd955e4c4797ae0f7761451ccd1bff205",
+  "order": 33
+}

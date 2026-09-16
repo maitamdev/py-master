@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-15_seconds_in_a_day",
+  "lesson_id": "part01-4-arithmetic-operations",
+  "part": 1,
+  "tmc_name": "part01-15_seconds_in_a_day",
+  "title_original": "Seconds in a day",
+  "title_vi": "Giây trong một ngày",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for a number of days. The program then prints out the number of seconds in the amount of days given.\n\nThe program should function as follows:\n\n<sample-output>\n\nHow many days? **1**\nSeconds in that many days: 86400\n\n</sample-output>\n\nAnother example:\n\n<sample-output>\n\nHow many days? **7**\nSeconds in that many days: 604800\n\n</sample-output>",
+  "description_vi": "Hãy viết một chương trình hỏi người dùng về số ngày. Sau đó chương trình sẽ in ra số giây trong số ngày đã cho.\n\nChương trình sẽ hoạt động như sau:\n\n<sample-output>\n\nBao nhiêu ngày? **1**\nSố giây trong số ngày đó: 86400\n\n</sample-output>\n\nMột ví dụ khác:\n\n<sample-output>\n\nBao nhiêu ngày? **7**\nSố giây trong số ngày đó: 604800\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "772d0366009efe013910cd617bafd824ffac07e2d38df96c96d5871221105be9",
+  "order": 61
+}

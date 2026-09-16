@@ -1,0 +1,226 @@
+{
+  "id": "page-index",
+  "slug": "index",
+  "title_original": "About this course",
+  "title_vi": "Về khóa học này",
+  "path": "/",
+  "source_path": "data/index.md",
+  "source_hash": "b967ad3305ca644cc760b2f409b673c4683f84e7985559e30f51f9f98472aa86",
+  "blocks_count": 13,
+  "blocks": [
+    {
+      "id": "blk-page-index-0001",
+      "type": "paragraph",
+      "order": 1,
+      "source_hash": "6a2b6327ca3acfaeffaf5d372de7a30a6fed5a189936f23a78cdaaeedc37b3f7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This is the course material page for the Introduction to Programming course (BSCS1001, 5 ECTS) and the Advanced Course in Programming (BSCS1002, 5 ECTS) from the Department of Computer Science at the University of Helsinki."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đây là trang tài liệu khóa học cho khóa học Giới thiệu về Lập trình (BSCS1001, 5 ECTS) và Khóa học Lập trình Nâng cao (BSCS1002, 5 ECTS) của Khoa Khoa học Máy tính tại Đại học Helsinki."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-index-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "e9861e78042fd4310f9c5b0d89e980441c71cc76f26e0cf7ac3917df094b56c1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "To pass either of the two courses, you are expected to complete programming exercises and take part in an exam. Please see the [Grading and exams](/grading-and-exams) page for more details."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Để vượt qua một trong hai khóa học, bạn phải hoàn thành các bài tập lập trình và tham gia một kỳ thi. Vui lòng xem trang [Chấm điểm và bài kiểm tra](/grading-and-exams) để biết thêm chi tiết."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-index-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "5357979788ced24279af9d70cd7e4cb579d05e64938861fea727dcb714d5385f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The Introduction to Programming course consists of parts 1 through 7 in the material, and the Advanced Course in Programming consists of parts 8 through 14."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khóa học Giới thiệu về Lập trình bao gồm các phần từ 1 đến 7 trong tài liệu và Khóa học Lập trình Nâng cao bao gồm các phần từ 8 đến 14."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-index-0004",
+      "type": "heading",
+      "order": 4,
+      "source_hash": "17436159256f8f6550b3ca29d6bd7bfd2ad7b226b1fb76945fdc94088657892e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Support channels on the course"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các kênh hỗ trợ trong khóa học"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-page-index-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "7cec7a637000233f1549bd726a62672014449ba8faef9503fc2bc187c2d1919b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The official course support channels are available through workshop guidance on campus and Discord. The course channels in Discord are available through [this link](https://study.cs.helsinki.fi/discord/join/ohjelmoinnin_mooc)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các kênh hỗ trợ khóa học chính thức có sẵn thông qua hướng dẫn hội thảo trong khuôn viên trường và Discord. Các kênh khóa học trong Discord có sẵn thông qua [liên kết này](https://study.cs.helsinki.fi/discord/join/ohjelmoinnin_mooc)."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-index-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "8bff26a16fbdd75b6829ed482103d791313bffccbb8eedb9d73d8f0a429c99de",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please see the [Support and assistance](/support-and-assistance) page for more details."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng xem trang [Hỗ trợ và hỗ trợ](/support-and-assistance) để biết thêm chi tiết."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-index-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "83144f4a71eeaa108e7927bb71a9dfd45c8d99c00253bcb6381330034380798f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Use Discord primarily for communication. You can be in contact with the course teachers by e-mail ohjelmoinnin-mooc@helsinki.fi."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sử dụng Discord chủ yếu để liên lạc. Bạn có thể liên hệ với các giáo viên của khóa học bằng e-mail ohjelmoinnin-mooc@helsinki.fi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-index-0008",
+      "type": "heading",
+      "order": 8,
+      "source_hash": "e02ad6e51648c64f724383005480a19312ba2a0237a549dc6a263a3e7bc79990",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Timetable"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thời gian biểu"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-page-index-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "8647717210d4cd3e99b3a5be77a2503854cf27c56a2af78e8315393c56738812",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The course will be open until the end of the year 2026."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khóa học sẽ được mở cho đến cuối năm 2026."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-index-0010",
+      "type": "heading",
+      "order": 10,
+      "source_hash": "d953c00b4a161106f89131e283d846a640804da6d577f0b26af4e55704383579",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Lectures"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bài giảng"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-page-index-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "a731f62c950bcf30682a6c647504dc4a416fdd5d2316ea8738cfedf562dfc94f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The remote lectures in the course are given on Thursdays at 10.15 Finnish time. [You can follow the lectures via Zoom](https://helsinki.zoom.us/j/69552727154?pwd=skwCXNgrTltfFJBe38w2zC2mvxkd2e.1)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các bài giảng từ xa trong khóa học được giảng vào thứ Năm lúc 10h15 theo giờ Phần Lan. [Bạn có thể theo dõi bài giảng qua Zoom](https://helsinki.zoom.us/j/69552727154?pwd=skwCXNgrTltfFJBe38w2zC2mvxkd2e.1)."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-index-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "5b47f13a3a321a0c03d477e4f4e570924d409caaa52f618f71c89b1bbfe78436",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "There are also lecture recordings from 2025 available in the table below. Please note that dates and other practical information in those lecture videos do not concern this year's course."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ngoài ra còn có các bản ghi bài giảng từ năm 2025 trong bảng dưới đây. Xin lưu ý rằng ngày tháng và thông tin thực tế khác trong các video bài giảng đó không liên quan đến khóa học năm nay."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-index-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "aba7b5be61d113ec7c86d02a0488dd23ab5c4cfabe79009d3e376a33ce82e4b2",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<table>\n  <thead>\n    <tr>\n      <td>Part</td>\n      <td>Recording</td>\n      <td>Slides</td>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Part 1 (2026)</td>\n      <td><a href=\"https://youtu.be/-mmxsTadINo\">Recording 03.09.2026</a></td>\n      <td><a href=\"https://docs.google.com/presentation/d/1zUGqmAumuSVqPLZwgbfhuuhVAm_maBvoAuvNorS5Xw4/edit?usp=sharing\">Slides 1</a></td>\n    </tr>\n    <tr>\n      <td>Part 2 (2026)</td>\n      <td><a href=\"https://youtu.be/Z2ZNgwECF8U\">Recording 10.09.2026</a></td>\n      <td><a href=\"https://docs.google.com/presentation/d/1zYeb3ZSHi1xahDKKqBJg_5eI8gS7zzoIkjR_8__QNWY/edit?usp=sharing\">Slides 2</a></td>\n    </tr>\n    <tr>\n      <td>Part 3 (2025)</td>\n      <td><a href=\"https://youtu.be/kzGJLq6qmlc\">Recording 18.09.2025</a></td>>\n    </tr>\n    <tr>\n      <td>Part 4 (2025)</td>\n      <td><a href=\"https://youtu.be/kL82RuLZ-6g\">Recording 25.09.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 5 (2025)</td>\n      <td><a href=\"https://youtu.be/Q6e6ywoFoHM\">Recording 02.10.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 6 (2025)</td>\n      <td><a href=\"https://youtu.be/V0rzjcPNo0E\">Recording 09.10.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 7 (2025)</td>\n      <td><a href=\"https://youtu.be/6D1bvUdsNyg\">Recording 16.10.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 8 (2025)</td>\n      <td><a href=\"https://youtu.be/puTMAAO8GCM\">Recording 30.10.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 9 (2025)</td>\n      <td><a href=\"https://youtu.be/Kyu3-m2K9CM\">Recording 06.11.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 10 (2025)</td>\n      <td><a href=\"https://youtu.be/mTPc7DWiqHk\">Recording 13.11.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 11 (2025)</td>\n      <td><a href=\"https://youtu.be/F8ZR42dga94\">Recording 20.11.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 12 (2025)</td>\n      <td><a href=\"https://youtu.be/G1k-HffTUiM\">Recording 27.11.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 13 (2025)</td>\n      <td><a href=\"https://youtu.be/3S_kPT5jcRw\">Recording 04.12.2025</a></td>\n    </tr>\n    <tr>\n      <td>Part 14</td>\n      <td>No recording, project work</td>\n      <td></td>\n    </tr>\n  </tbody>\n</table>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<table>\n  <thead>\n    <tr>\n      <td>Part</td>\n      <td>Ghi âm</td>\n      <td>Slides</td>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Phần 1 (2026)</td>\n      <td><a href=\"https://youtu.be/-mmxsTadINo\">Recording 03.09.2026</a></td>\n      <td><a href=\"https://docs.google.com/presentation/d/1zUGqmAumuSVqPLZwgbfhuuhVAm_maBvoAuvNorS5Xw4/edit?usp=sharing\">Slide 1</a></td>\n    </tr>\n    <tr>\n      <td>Phần 2 (2026)</td>\n      <td><a href=\"https://youtu.be/Z2ZNgwECF8U\">Recording 10.09.2026</a></td>\n      <td><a href=\"https://docs.google.com/presentation/d/1zYeb3ZSHi1xahDKKqBJg_5eI8gS7zzoIkjR_8__QNWY/edit?usp=sharing\">Slide 2</a></td>\n    </tr>\n    <tr>\n      <td>Phần 3 (2025)</td>\n      <td><a href=\"https://youtu.be/kzGJLq6qmlc\">Recording 18.09.2025</a></td>>\n    </tr>\n    <tr>\n      <td>Phần 4 (2025)</td>\n      <td><a href=\"https://youtu.be/kL82RuLZ-6g\">Ghi ngày 25/09/2025</a></td>\n    </tr>\n    <tr>\n      <td>Phần 5 (2025)</td>\n      <td><a href=\"https://youtu.be/Q6e6ywoFoHM\">Ghi 02.10.2025</a></td>\n    </tr>\n    <tr>\n      <td>Phần 6 (2025)</td>\n      <td><a href=\"https://youtu.be/V0rzjcPNo0E\">Recording 09.10.2025</a></td>\n    </tr>\n    <tr>\n      <td>Phần 7 (2025)</td>\n      <td><a href=\"https://youtu.be/6D1bvUdsNyg\">Ghi 16.10.2025</a></td>\n    </tr>\n    <tr>\n      <td>Phần 8 (2025)</td>\n      <td><a href=\"https://youtu.be/puTMAAO8GCM\">Ghi ngày 30.10.2025</a></td>\n    </tr>\n    <tr>\n      <td>Phần 9 (2025)</td>\n      <td><a href=\"https://youtu.be/Kyu3-m2K9CM\">Ghi 06.11.2025</a></td>\n    </tr>\n    <tr>\n      <td>Phần 10 (2025)</td>\n      <td><a href=\"https://youtu.be/mTPc7DWiqHk\">Ghi ngày 13.11.2025</a></td>\n    </tr>\n    <tr>\n      <td>Phần 11 (2025)</td>\n      <td><a href=\"https://youtu.be/F8ZR42dga94\">Recording 20.11.2025</a></td>\n    </tr>\n    <tr>\n      <td>Phần 12 (2025)</td>\n      <td><a href=\"https://youtu.be/G1k-HffTUiM\">Ghi ngày 27.11.2025</a></td>\n    </tr>\n    <tr>\n      <td>Phần 13 (2025)</td>\n      <td><a href=\"https://youtu.be/3S_kPT5jcRw\">Ghi 04.12.2025</a></td>\n    </tr>\n    <tr>\n      <td>Phần 14</td>\n      <td>Không ghi âm, làm việc dự án</td>\n      <td></td>\n    </tr>\n  </tbody>\n</table>"
+      },
+      "metadata": {}
+    }
+  ]
+}

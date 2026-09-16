@@ -1,0 +1,16 @@
+{
+  "id": "ex-part06-05_course_grading_part_2",
+  "lesson_id": "part06-1-reading-files",
+  "part": 6,
+  "tmc_name": "part06-05_course_grading_part_2",
+  "title_original": "Course grading, part 2",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Let's expand the program created in the previous exercise. Now also the exam points awarded to each student are contained in a CSV file. The contents of the file follow this format:\n\n```csv\nid;e1;e2;e3\n12345678;4;1;4\n12345687;3;5;3\n12345699;10;2;2\n```\n\nIn the above example the student whose student number is 12345678 was awarded 4+1+4 points in the exam, which equals a total of 9 points. \n\nThe program should again ask the user for the names of the files. Then the program should process the files and print out a grade for each student.\n\n<sample-output>\n\nStudent information: **students1.csv**\nExercises completed: **exercises1.csv**\nExam points: **exam_points1.csv**\npekka peloton 0\njaana javanainen 1\nliisa virtanen 3\n\n</sample-output>\n\nEach completed exercise is counted towards _exercise points_, so that completing at least 10 % of the total exercices awards 1 point, completing at least 20 % awards 2 points, etc. Completing all 40 exercises awards 10 points. The number of points awarded is always an integer number.\n\nThe final grade for the course is determined based on the sum of exam and exercise points according to the following table:\n\nexam points + exercise points   | grade\n:--:|:----:\n0-14 | 0 (fail)\n15-17 | 1\n18-20 | 2\n21-23 | 3\n24-27 | 4\n28- | 5\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "e5f6ba3d79ba9766914c71f891ebdb70ce7dba0a1386856c6d885e9ebd1fb5f0",
+  "order": 105
+}

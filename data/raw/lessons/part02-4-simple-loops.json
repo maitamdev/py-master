@@ -1,0 +1,402 @@
+{
+  "id": "part02-4-simple-loops",
+  "part": 2,
+  "part_slug": "part-2",
+  "slug": "4-simple-loops",
+  "is_part_index": false,
+  "title_original": "Simple loops",
+  "path": "/part-2/4-simple-loops",
+  "source_path": "data/part-2/4-simple-loops.md",
+  "source_hash": "f05e7ea0fe5b742662a75d52a834015e53cfa79fbfb623305546734013fcbb5e",
+  "frontmatter": {
+    "path": "/part-2/4-simple-loops",
+    "title": "Simple loops",
+    "hidden": false
+  },
+  "chunks_count": 60,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know what a loop means in programming\n- You will be able to use a `while True` loop in your programs\n- You will know how to use the `break` command to break out of a loop",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know what a loop means in programming\n- You will be able to use a `while True` loop in your programs\n- You will know how to use the `break` command to break out of a loop\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We have now covered conditional structures in some detail. Another central technique in programming is repetition, or _iteration_. Together these form the fundamental control structures any programmer must master. They are called control structures because essentially they allow you to control which lines of code get executed when. While conditional structures allow you to _choose between_ sections of code, iteration structures allow you to _repeat_ sections of code. They are often called _loops_ because they allow the program to \"loop back\" to some line that was already executed before. The process of executing one repetition of a loop is also referred to as an iteration of the loop.",
+      "raw_source": "We have now covered conditional structures in some detail. Another central technique in programming is repetition, or _iteration_. Together these form the fundamental control structures any programmer must master. They are called control structures because essentially they allow you to control which lines of code get executed when. While conditional structures allow you to _choose between_ sections of code, iteration structures allow you to _repeat_ sections of code. They are often called _loops_ because they allow the program to \"loop back\" to some line that was already executed before. The process of executing one repetition of a loop is also referred to as an iteration of the loop."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This section introduces a simple `while` loop. Its structure is similar to the conditional statements we already covered. In the next part we will delve into some more sophisticated examples.",
+      "raw_source": "This section introduces a simple `while` loop. Its structure is similar to the conditional statements we already covered. In the next part we will delve into some more sophisticated examples."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's have a look at a program which asks the user to type in a number and then prints out the number squared. This continues until the user types in -1.",
+      "raw_source": "Let's have a look at a program which asks the user to type in a number and then prints out the number squared. This continues until the user types in -1."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "while True:\n    number = int(input(\"Please type in a number, -1 to quit: \"))\n\n    if number == -1:\n        break\n\n    print(number ** 2)\n\nprint(\"Thanks and bye!\")",
+      "raw_source": "```python\nwhile True:\n    number = int(input(\"Please type in a number, -1 to quit: \"))\n\n    if number == -1:\n        break\n\n    print(number ** 2)\n\nprint(\"Thanks and bye!\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Running the program could look like this:",
+      "raw_source": "Running the program could look like this:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in a number, -1 to quit: **2**\n4\nPlease type in a number, -1 to quit: **4**\n16\nPlease type in a number, -1 to quit: **10**\n100\nPlease type in a number, -1 to quit: **-1**\nThanks and bye!",
+      "raw_source": "<sample-output>\n\nPlease type in a number, -1 to quit: **2**\n4\nPlease type in a number, -1 to quit: **4**\n16\nPlease type in a number, -1 to quit: **10**\n100\nPlease type in a number, -1 to quit: **-1**\nThanks and bye!\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As you can see above, the program asks for several numbers, thanks to the `while` statement in the program. When the user types in -1, the `break` command is executed, which exits the loop and execution continues from the first line after the `while` block.",
+      "raw_source": "As you can see above, the program asks for several numbers, thanks to the `while` statement in the program. When the user types in -1, the `break` command is executed, which exits the loop and execution continues from the first line after the `while` block."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "With loops, it is crucial that there is always a way to exit the loop at some point in the code, otherwise the repetition could go on forever. To illustrate this, let's change the above example a little:",
+      "raw_source": "With loops, it is crucial that there is always a way to exit the loop at some point in the code, otherwise the repetition could go on forever. To illustrate this, let's change the above example a little:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number = int(input(\"Please type in a number, -1 to quit: \"))\nwhile True:\n    if number == -1:\n        break\n\n    print(number ** 2)\n\nprint(\"Thanks and bye!\")",
+      "raw_source": "```python\nnumber = int(input(\"Please type in a number, -1 to quit: \"))\nwhile True:\n    if number == -1:\n        break\n\n    print(number ** 2)\n\nprint(\"Thanks and bye!\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In this version the program asks the user to type in a number _outside the loop_. If the user types in any other number than -1, the loop is never exited from. This forms an _infinite loop_, which means the block of code within the loop is repeated endlessly:",
+      "raw_source": "In this version the program asks the user to type in a number _outside the loop_. If the user types in any other number than -1, the loop is never exited from. This forms an _infinite loop_, which means the block of code within the loop is repeated endlessly:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in a number, -1 to quit: **2**\n4\n4\n4\n4\n4\n4\n4\n4\n(continued ad infinitum...)",
+      "raw_source": "<sample-output>\n\nPlease type in a number, -1 to quit: **2**\n4\n4\n4\n4\n4\n4\n4\n4\n(continued ad infinitum...)\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following program has a similar structure to the example above the infinite loop, but the user experience is quite different. This program allows the user to proceed only if they type in the correct PIN _1234_:",
+      "raw_source": "The following program has a similar structure to the example above the infinite loop, but the user experience is quite different. This program allows the user to proceed only if they type in the correct PIN _1234_:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "while True:\n    code = input(\"Please type in your PIN: \")\n    if code == \"1234\":\n        break\n    print(\"Incorrect...try again\")\n\nprint(\"Correct PIN entered!\")",
+      "raw_source": "```python\nwhile True:\n    code = input(\"Please type in your PIN: \")\n    if code == \"1234\":\n        break\n    print(\"Incorrect...try again\")\n\nprint(\"Correct PIN entered!\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **9999**\nIncorrect...try again\nPlease type in your PIN: **1234**\nCorrect PIN entered!",
+      "raw_source": "<sample-output>\n\nPlease type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **9999**\nIncorrect...try again\nPlease type in your PIN: **1234**\nCorrect PIN entered!\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Shall we continue?",
+        "tmcname": "part02-15_shall_we_continue"
+      },
+      "inner_content": "Let's create a program along the lines of the example above. This program should print out the message \"hi\" and then ask \"Shall we continue?\" until the user inputs \"no\". Then the program should print out \"okay then\" and finish. Please have a look at the example below.\n\n<sample-output>\n\nhi\nShall we continue? **yes**\nhi\nShall we continue? **oui**\nhi\nShall we continue? **jawohl**\nhi\nShall we continue? **no**\nokay then\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Shall we continue?\" tmcname=\"part02-15_shall_we_continue\">\n\nLet's create a program along the lines of the example above. This program should print out the message \"hi\" and then ask \"Shall we continue?\" until the user inputs \"no\". Then the program should print out \"okay then\" and finish. Please have a look at the example below.\n\n<sample-output>\n\nhi\nShall we continue? **yes**\nhi\nShall we continue? **oui**\nhi\nShall we continue? **jawohl**\nhi\nShall we continue? **no**\nokay then\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Input validation",
+        "tmcname": "part02-16_input_validation"
+      },
+      "inner_content": "Please write a program which asks the user for integer numbers.\n\nIf the number is below zero, the program should print out the message \"Invalid number\".\n\nIf the number is above zero, the program should print out the square root of the number using the Python `sqrt` function.\n\nIn either case, the program should then ask for another number.\n\nIf the user inputs the number zero, the program should stop asking for numbers and exit the loop.\n\nBelow you'll find a reminder of how the `sqrt` function is used. Remember to `import` it in the beginning of the program.\n\n```python\n# sqrt function will not work without this line in the beginning of the program\nfrom math import sqrt\n\nprint(sqrt(9))\n```\n\n<sample-output>\n\n3.0\n\n</sample-output>\n\nAn example of expected behaviour of your program:\n\n<sample-output>\n\nPlease type in a number: **16**\n4.0\nPlease type in a number: **4**\n2.0\nPlease type in a number: **-3**\nInvalid number\nPlease type in a number: **1**\n1.0\nPlease type in a number: **0**\nExiting...\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Input validation\" tmcname=\"part02-16_input_validation\">\n\nPlease write a program which asks the user for integer numbers.\n\nIf the number is below zero, the program should print out the message \"Invalid number\".\n\nIf the number is above zero, the program should print out the square root of the number using the Python `sqrt` function.\n\nIn either case, the program should then ask for another number.\n\nIf the user inputs the number zero, the program should stop asking for numbers and exit the loop.\n\nBelow you'll find a reminder of how the `sqrt` function is used. Remember to `import` it in the beginning of the program.\n\n```python\n# sqrt function will not work without this line in the beginning of the program\nfrom math import sqrt\n\nprint(sqrt(9))\n```\n\n<sample-output>\n\n3.0\n\n</sample-output>\n\nAn example of expected behaviour of your program:\n\n<sample-output>\n\nPlease type in a number: **16**\n4.0\nPlease type in a number: **4**\n2.0\nPlease type in a number: **-3**\nInvalid number\nPlease type in a number: **1**\n1.0\nPlease type in a number: **0**\nExiting...\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Fix the code: Countdown",
+        "tmcname": "part02-17_countdown"
+      },
+      "inner_content": "This program should print out a countdown. The code is as follows:\n\n```python\nnumber = 5\nprint(\"Countdown!\")\nwhile True:\n  print(number)\n  number = number - 1\n  if number > 0:\n    break\n\nprint(\"Now!\")\n```\n\nThis should print out\n\n<sample-output>\n\nCountdown!\n5\n4\n3\n2\n1\nNow!\n\n</sample-output>\n\nHowever, the program doesn't quite work. Please fix it.",
+      "raw_source": "<in-browser-programming-exercise name=\"Fix the code: Countdown\" tmcname=\"part02-17_countdown\">\n\nThis program should print out a countdown. The code is as follows:\n\n```python\nnumber = 5\nprint(\"Countdown!\")\nwhile True:\n  print(number)\n  number = number - 1\n  if number > 0:\n    break\n\nprint(\"Now!\")\n```\n\nThis should print out\n\n<sample-output>\n\nCountdown!\n5\n4\n3\n2\n1\nNow!\n\n</sample-output>\n\nHowever, the program doesn't quite work. Please fix it.\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Repeat password",
+        "tmcname": "part02-18_repeat_password"
+      },
+      "inner_content": "Please write a program which asks the user for a password. The program should then ask the user to type in the password again. If the user types in something else than the first password, the program should keep on asking until the user types the first password again correctly.\n\nHave a look at the expected behaviour below:\n\n<sample-output>\n\nPassword: **sekred**\nRepeat password: **secret**\nThey do not match!\nRepeat password: **cantremember**\nThey do not match!\nRepeat password: **sekred**\nUser account created!\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Repeat password\" tmcname=\"part02-18_repeat_password\">\n\nPlease write a program which asks the user for a password. The program should then ask the user to type in the password again. If the user types in something else than the first password, the program should keep on asking until the user types the first password again correctly.\n\nHave a look at the expected behaviour below:\n\n<sample-output>\n\nPassword: **sekred**\nRepeat password: **secret**\nThey do not match!\nRepeat password: **cantremember**\nThey do not match!\nRepeat password: **sekred**\nUser account created!\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Loops and helper variables",
+      "raw_source": "## Loops and helper variables"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's make the PIN checking example a bit more realistic. This version gives the user only three attempts at typing in a PIN.",
+      "raw_source": "Let's make the PIN checking example a bit more realistic. This version gives the user only three attempts at typing in a PIN."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The program uses two helper variables. The variable `attempts` keeps track of how many times the user has typed in a PIN. The variable `success` is set to either `True` or `False` based on whether the user is successful in signing in.",
+      "raw_source": "The program uses two helper variables. The variable `attempts` keeps track of how many times the user has typed in a PIN. The variable `success` is set to either `True` or `False` based on whether the user is successful in signing in."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "attempts = 0\n\nwhile True:\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n\n    if code == \"1234\":\n        success = True\n        break\n\n    if attempts == 3:\n        success = False\n        break\n\n    # this is printed if the code was incorrect AND there have been less than three attempts\n    print(\"Incorrect...try again\")\n\nif success:\n    print(\"Correct PIN entered!\")\nelse:\n    print(\"Too many attempts...\")",
+      "raw_source": "```python\nattempts = 0\n\nwhile True:\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n\n    if code == \"1234\":\n        success = True\n        break\n\n    if attempts == 3:\n        success = False\n        break\n\n    # this is printed if the code was incorrect AND there have been less than three attempts\n    print(\"Incorrect...try again\")\n\nif success:\n    print(\"Correct PIN entered!\")\nelse:\n    print(\"Too many attempts...\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **1234**\nCorrect PIN entered!",
+      "raw_source": "<sample-output>\n\nPlease type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **1234**\nCorrect PIN entered!\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **9999**\nIncorrect...try again\nPlease type in your PIN: **4321**\nToo many attempts...",
+      "raw_source": "<sample-output>\n\nPlease type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **9999**\nIncorrect...try again\nPlease type in your PIN: **4321**\nToo many attempts...\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The loop is exited _either_ when the user types the correct PIN _or_ if there have been too many attempts. The `if` statement after the loop checks the value of the variable `success` and prints out a message accordingly.",
+      "raw_source": "The loop is exited _either_ when the user types the correct PIN _or_ if there have been too many attempts. The `if` statement after the loop checks the value of the variable `success` and prints out a message accordingly."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Debugging print statements in loops",
+      "raw_source": "## Debugging print statements in loops"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Adding loops to programs also adds to the potential sources of bugs. It becomes even more important to master the use of debugging print statements as introduced in the [first section of this part](/part-2/1-programming-terminology).",
+      "raw_source": "Adding loops to programs also adds to the potential sources of bugs. It becomes even more important to master the use of debugging print statements as introduced in the [first section of this part](/part-2/1-programming-terminology)."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's have a look at a program almost identical to the previous example, but with one crucial difference:",
+      "raw_source": "Let's have a look at a program almost identical to the previous example, but with one crucial difference:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "attempts = 0\n\nwhile True:\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n\n    if attempts == 3:\n        success = False\n        break\n\n    if code == \"1234\":\n        success = True\n        break\n\n    print(\"Incorrect...try again\")\n\nif success:\n    print(\"Correct PIN entered!\")\nelse:\n    print(\"Too many attempts...\")",
+      "raw_source": "```python\nattempts = 0\n\nwhile True:\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n\n    if attempts == 3:\n        success = False\n        break\n\n    if code == \"1234\":\n        success = True\n        break\n\n    print(\"Incorrect...try again\")\n\nif success:\n    print(\"Correct PIN entered!\")\nelse:\n    print(\"Too many attempts...\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This version acts strangely when the user types in the correct code on the third attempt:",
+      "raw_source": "This version acts strangely when the user types in the correct code on the third attempt:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **9999**\nIncorrect...try again\nPlease type in your PIN: **1234**\nToo many attempts...",
+      "raw_source": "<sample-output>\n\nPlease type in your PIN: **0000**\nIncorrect...try again\nPlease type in your PIN: **9999**\nIncorrect...try again\nPlease type in your PIN: **1234**\nToo many attempts...\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "So, let's try and find the cause by adding some strategic debugging print statements inside the loop:",
+      "raw_source": "So, let's try and find the cause by adding some strategic debugging print statements inside the loop:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "while True:\n    print(\"beginning of the while block:\")\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n\n    print(\"attempts:\", attempts)\n    print(\"condition1:\", attempts == 3)\n    if attempts == 3:\n        success = False\n        break\n\n    print(\"code:\", code)\n    print(\"condition2:\", code == \"1234\")\n    if code == \"1234\":\n        success = True\n        break\n\n    print(\"Incorrect...try again\")",
+      "raw_source": "```python\nwhile True:\n    print(\"beginning of the while block:\")\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n\n    print(\"attempts:\", attempts)\n    print(\"condition1:\", attempts == 3)\n    if attempts == 3:\n        success = False\n        break\n\n    print(\"code:\", code)\n    print(\"condition2:\", code == \"1234\")\n    if code == \"1234\":\n        success = True\n        break\n\n    print(\"Incorrect...try again\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "beginning of the while block:\nPlease type in your PIN: **2233**\nattempts: 1\ncondition1: False\ncode: 2233\ncondition2: False\nIncorrect...try again\nbeginning of the while block:\nPlease type in your PIN: **4545**\nattempts: 2\ncondition1: False\ncode: 4545\ncondition2: False\nIncorrect...try again\nbeginning of the while block:\nPlease type in your PIN: **1234**\nattempts: 3\ncondition1: True\nToo many attempts...",
+      "raw_source": "<sample-output>\n\nbeginning of the while block:\nPlease type in your PIN: **2233**\nattempts: 1\ncondition1: False\ncode: 2233\ncondition2: False\nIncorrect...try again\nbeginning of the while block:\nPlease type in your PIN: **4545**\nattempts: 2\ncondition1: False\ncode: 4545\ncondition2: False\nIncorrect...try again\nbeginning of the while block:\nPlease type in your PIN: **1234**\nattempts: 3\ncondition1: True\nToo many attempts...\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "From the above printouts we can see that during the third iteration of the loop the condition of the first `if` statement is `True`, and the loop is exited. This iteration never gets to the second `if` statement, which checks whether the code was typed in correctly:",
+      "raw_source": "From the above printouts we can see that during the third iteration of the loop the condition of the first `if` statement is `True`, and the loop is exited. This iteration never gets to the second `if` statement, which checks whether the code was typed in correctly:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "  while True:\n    # ....\n\n    # this block is executed too early\n    if attempts == 3:\n        success = False\n        break\n\n    # the third iteration never gets this far\n    if code == \"1234\":\n        success = True\n        break",
+      "raw_source": "```python\n  while True:\n    # ....\n\n    # this block is executed too early\n    if attempts == 3:\n        success = False\n        break\n\n    # the third iteration never gets this far\n    if code == \"1234\":\n        success = True\n        break\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The order of conditional statements, or of different branches within a conditional statement, is a common cause for bugs, especially in loops. Debugging print statements are often the simplest way of finding their cause.",
+      "raw_source": "The order of conditional statements, or of different branches within a conditional statement, is a common cause for bugs, especially in loops. Debugging print statements are often the simplest way of finding their cause."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "PIN and number of attempts",
+        "tmcname": "part02-19_pin_and_number_of_attempts"
+      },
+      "inner_content": "Please write a program which keeps asking the user for a PIN code until they type in the correct one, which is _4321_. The program should then print out the number of times the user tried different codes.\n\n<sample-output>\n\nPIN: **3245**\nWrong\nPIN: **1234**\nWrong\nPIN: **0000**\nWrong\nPIN: **4321**\nCorrect! It took you 4 attempts\n\n</sample-output>\n\nIf the user gets it right on the first try, the program should print out something a bit different:\n\n<sample-output>\n\nPIN: **4321**\nCorrect! It only took you one single attempt!\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"PIN and number of attempts\" tmcname=\"part02-19_pin_and_number_of_attempts\">\n\nPlease write a program which keeps asking the user for a PIN code until they type in the correct one, which is _4321_. The program should then print out the number of times the user tried different codes.\n\n<sample-output>\n\nPIN: **3245**\nWrong\nPIN: **1234**\nWrong\nPIN: **0000**\nWrong\nPIN: **4321**\nCorrect! It took you 4 attempts\n\n</sample-output>\n\nIf the user gets it right on the first try, the program should print out something a bit different:\n\n<sample-output>\n\nPIN: **4321**\nCorrect! It only took you one single attempt!\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "The next leap year",
+        "tmcname": "part02-20_next_leap_year"
+      },
+      "inner_content": "Please write a program which asks the user for a year, and prints out the next leap year.\n\n<sample-output>\n\nYear: **2023**\nThe next leap year after 2023 is 2024\n\n</sample-output>\n\nIf the user inputs a year which is a leap year (such as 2024), the program should print out the following leap year:\n\n<sample-output>\n\nYear: **2024**\nThe next leap year after 2024 is 2028\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"The next leap year\" tmcname=\"part02-20_next_leap_year\">\n\nPlease write a program which asks the user for a year, and prints out the next leap year.\n\n<sample-output>\n\nYear: **2023**\nThe next leap year after 2023 is 2024\n\n</sample-output>\n\nIf the user inputs a year which is a leap year (such as 2024), the program should print out the following leap year:\n\n<sample-output>\n\nYear: **2024**\nThe next leap year after 2024 is 2028\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Concatenating strings with the + operator",
+      "raw_source": "## Concatenating strings with the + operator"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The above example with PIN checking used a helper variable `attempts` to keep track of how many times the user had tried to type in a code:",
+      "raw_source": "The above example with PIN checking used a helper variable `attempts` to keep track of how many times the user had tried to type in a code:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "attempts = 0\n\nwhile True:\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n    # ...",
+      "raw_source": "```python\nattempts = 0\n\nwhile True:\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n    # ...\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The variable is set to zero outside the loop, and each iteration increases its value by one.",
+      "raw_source": "The variable is set to zero outside the loop, and each iteration increases its value by one."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A similar idea of incrementation works with string variables as well. The program could, for instance, keep track of all the PIN codes the user typed in:",
+      "raw_source": "A similar idea of incrementation works with string variables as well. The program could, for instance, keep track of all the PIN codes the user typed in:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "\ncodes = \"\"\nattempts = 0\n\nwhile True:\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n    codes += code + \", \"\n    # ...",
+      "raw_source": "```python\n\ncodes = \"\"\nattempts = 0\n\nwhile True:\n    code = input(\"Please type in your PIN: \")\n    attempts += 1\n    codes += code + \", \"\n    # ...\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The helper variable is initialized to _an empty string_, that is, a string with no characters in it:",
+      "raw_source": "The helper variable is initialized to _an empty string_, that is, a string with no characters in it:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "codes = \"\"",
+      "raw_source": "```python\ncodes = \"\"\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "With each iteration the string gets longer, as the code the user typed in is added, along with a comma:",
+      "raw_source": "With each iteration the string gets longer, as the code the user typed in is added, along with a comma:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "    code = input(\"Please type in your PIN: \")\n    codes += code + \", \"",
+      "raw_source": "```python\n    code = input(\"Please type in your PIN: \")\n    codes += code + \", \"\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the user types in the codes _1111 2222 1234_, at the end of the program's execution the value of `codes` would be",
+      "raw_source": "If the user types in the codes _1111 2222 1234_, at the end of the program's execution the value of `codes` would be"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "1111, 2222, 1234,",
+      "raw_source": "<sample-output>\n\n1111, 2222, 1234,\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Story",
+        "tmcname": "part02-21_story"
+      },
+      "inner_content": "### Part 1\n\nPlease write a program which keeps asking the user for words. If the user types in `end`, the program should print out the story the words formed, and finish.\n\n<sample-output>\n\nPlease type in a word: **Once**\nPlease type in a word: **upon**\nPlease type in a word: **a**\nPlease type in a word: **time**\nPlease type in a word: **there**\nPlease type in a word: **was**\nPlease type in a word: **a**\nPlease type in a word: **girl**\nPlease type in a word: **end**\nOnce upon a time there was a girl\n\n</sample-output>\n\n### Part 2\n\nChange the program so that the loop ends also if the user types in the same word twice in a row.\n\n<sample-output>\n\nPlease type in a word: **It**\nPlease type in a word: **was**\nPlease type in a word: **a**\nPlease type in a word: **dark**\nPlease type in a word: **and**\nPlease type in a word: **stormy**\nPlease type in a word: **night**\nPlease type in a word: **night**\nIt was a dark and stormy night\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Story\" tmcname=\"part02-21_story\">\n\n### Part 1\n\nPlease write a program which keeps asking the user for words. If the user types in `end`, the program should print out the story the words formed, and finish.\n\n<sample-output>\n\nPlease type in a word: **Once**\nPlease type in a word: **upon**\nPlease type in a word: **a**\nPlease type in a word: **time**\nPlease type in a word: **there**\nPlease type in a word: **was**\nPlease type in a word: **a**\nPlease type in a word: **girl**\nPlease type in a word: **end**\nOnce upon a time there was a girl\n\n</sample-output>\n\n### Part 2\n\nChange the program so that the loop ends also if the user types in the same word twice in a row.\n\n<sample-output>\n\nPlease type in a word: **It**\nPlease type in a word: **was**\nPlease type in a word: **a**\nPlease type in a word: **dark**\nPlease type in a word: **and**\nPlease type in a word: **stormy**\nPlease type in a word: **night**\nPlease type in a word: **night**\nIt was a dark and stormy night\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Working with numbers",
+        "tmcname": "part02-22_working_with_numbers"
+      },
+      "inner_content": "### Pre-task\n\nPlease write a program which asks the user for integer numbers. The program should keep asking for numbers until the user types in zero.\n\n<sample-output>\n\nPlease type in integer numbers. Type in 0 to finish.\nNumber: **5**\nNumber: **22**\nNumber: **9**\nNumber: **-2**\nNumber: **0**\n\n</sample-output>\n\n### Part 1: Count\n\nAfter reading in the numbers the program should print out how many numbers were typed in. The zero at the end should not be included in the count.\n\nYou will need a new variable here to keep track of the numbers typed in.\n\n<sample-output>\n\n... the program asks for numbers\nNumbers typed in 4\n\n</sample-output>\n\n### Part 2: Sum\n\nThe program should also print out the sum of all the numbers typed in. The zero at the end should not be included in the calculation.\n\nThe program should now print out the following:\n\n<sample-output>\n\n... the program asks for numbers\nNumbers typed in 4\nThe sum of the numbers is 34\n\n</sample-output>\n\n### Part 3: Mean\n\nThe program should also print out the mean of the numbers. The zero at the end should not be included in the calculation. You may assume the user will always type in at least one valid non-zero number.\n\n<sample-output>\n\n... the program asks for numbers\nNumbers typed in 4\nThe sum of the numbers is 34\nThe mean of the numbers is 8.5\n\n</sample-output>\n\n#### Part 4: Positives and negatives\n\nThe program should also print out statistics on how many of the numbers were positive and how many were negative. The zero at the end should not be included in the calculation.\n\n<sample-output>\n\n... the program asks for numbers\nNumbers typed in 4\nThe sum of the numbers is 34\nThe mean of the numbers is 8.5\nPositive numbers 3\nNegative numbers 1\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Working with numbers\" tmcname=\"part02-22_working_with_numbers\">\n\n### Pre-task\n\nPlease write a program which asks the user for integer numbers. The program should keep asking for numbers until the user types in zero.\n\n<sample-output>\n\nPlease type in integer numbers. Type in 0 to finish.\nNumber: **5**\nNumber: **22**\nNumber: **9**\nNumber: **-2**\nNumber: **0**\n\n</sample-output>\n\n### Part 1: Count\n\nAfter reading in the numbers the program should print out how many numbers were typed in. The zero at the end should not be included in the count.\n\nYou will need a new variable here to keep track of the numbers typed in.\n\n<sample-output>\n\n... the program asks for numbers\nNumbers typed in 4\n\n</sample-output>\n\n### Part 2: Sum\n\nThe program should also print out the sum of all the numbers typed in. The zero at the end should not be included in the calculation.\n\nThe program should now print out the following:\n\n<sample-output>\n\n... the program asks for numbers\nNumbers typed in 4\nThe sum of the numbers is 34\n\n</sample-output>\n\n### Part 3: Mean\n\nThe program should also print out the mean of the numbers. The zero at the end should not be included in the calculation. You may assume the user will always type in at least one valid non-zero number.\n\n<sample-output>\n\n... the program asks for numbers\nNumbers typed in 4\nThe sum of the numbers is 34\nThe mean of the numbers is 8.5\n\n</sample-output>\n\n#### Part 4: Positives and negatives\n\nThe program should also print out statistics on how many of the numbers were positive and how many were negative. The zero at the end should not be included in the calculation.\n\n<sample-output>\n\n... the program asks for numbers\nNumbers typed in 4\nThe sum of the numbers is 34\nThe mean of the numbers is 8.5\nPositive numbers 3\nNegative numbers 1\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!--",
+      "raw_source": "<!--"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A quiz to review the contents of this section:",
+      "raw_source": "A quiz to review the contents of this section:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "63a51999-e525-5f1d-a333-b26392a5585b"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"63a51999-e525-5f1d-a333-b26392a5585b\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Please respond to a quick questionnaire on this week's materials.",
+      "raw_source": "Please respond to a quick questionnaire on this week's materials."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "21a09240-92d7-5eb0-bae0-a5f89b5045c2"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"21a09240-92d7-5eb0-bae0-a5f89b5045c2\"></quiz>"
+    }
+  ]
+}

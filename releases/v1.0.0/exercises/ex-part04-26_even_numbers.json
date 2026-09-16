@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-26_even_numbers",
+  "lesson_id": "part04-4-definite-iteration",
+  "part": 4,
+  "tmc_name": "part04-26_even_numbers",
+  "title_original": "Even numbers",
+  "title_vi": "Số chẵn",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `even_numbers`, which takes a list of integers as an argument. The function returns a new list containing the even numbers from the original list.\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nnew_list = even_numbers(my_list)\nprint(\"original\", my_list)\nprint(\"new\", new_list)\n```\n\n<sample-output>\n\noriginal [1, 2, 3, 4, 5]\nnew [2, 4]\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `even_numbers`, hàm này lấy danh sách các số nguyên làm đối số. Hàm trả về một danh sách mới chứa các số chẵn từ danh sách ban đầu.\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nnew_list = even_numbers(my_list)\nprint(\"original\", my_list)\nprint(\"new\", new_list)\n```\n\n<sample-output>\n\nbản gốc [1, 2, 3, 4, 5]\nmới [2, 4]\n\n</sample-output>",
+  "starter_code": "my_list = [1, 2, 3, 4, 5]\nnew_list = even_numbers(my_list)\nprint(\"original\", my_list)\nprint(\"new\", new_list)",
+  "grading_data_available": false,
+  "source_hash": "827ba538312de2e7d4a276975c733170c0166352cb9d9d9fec85f9f99fa509ec",
+  "order": 53
+}

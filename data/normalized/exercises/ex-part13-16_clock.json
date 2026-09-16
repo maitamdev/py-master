@@ -1,0 +1,16 @@
+{
+  "id": "ex-part13-16_clock",
+  "lesson_id": "part13-4-more-pygame-techniques",
+  "part": 13,
+  "tmc_name": "part13-16_clock",
+  "title_original": "Clock",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which displays a clock face which displays the system time. The end result should look like this:\n\n<img src=\"pygame_clock.gif\">",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "e5ba896cca34daadd9fa539923cc684c5fb5344e663c078ab2ffff5c19edf9c3",
+  "order": 19
+}

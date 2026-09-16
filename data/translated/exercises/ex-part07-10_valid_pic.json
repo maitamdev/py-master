@@ -1,0 +1,16 @@
+{
+  "id": "ex-part07-10_valid_pic",
+  "lesson_id": "part07-3-times-and-dates",
+  "part": 7,
+  "tmc_name": "part07-10_valid_pic",
+  "title_original": "Valid PIC?",
+  "title_vi": "PIC hợp lệ?",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "In this exercise you will validate Finnish Personal Identity Codes (PIC). \n\nPlease write a function named `is_it_valid(pic: str)`, which returns `True` or `False` based on whether the PIC given as an argument is valid or not. Finnish PICs follow the format `ddmmyyXyyyz`, where `ddmmyy` contains the date of birth, `X` is the marker for century, `yyy` is the personal identifier and `z` is a control character.\n\nThe program should check the validity by these three criteria:\n\n* The first half of the code is a valid, existing date in the format `ddmmyy`.\n* The century marker is either `+` (1800s), `-` (1900s) or `A` (2000s).\n* The control character is valid.\n\nThe control character is calculated by taking the nine-digit number created by the date of birth and the personal identifier, dividing this by 31, and selecting the character at the index specified by the remainder from the string `0123456789ABCDEFHJKLMNPRSTUVWXY`. For example, if the remainder was 12, the control character would be `C`.\n\nMore examples and explanations of the uses of the PIC are available at the [Digital and Population Data Services Agency](https://dvv.fi/en/personal-identity-code).\n\n**NB!** Please make sure you do not share your own PIC, for example in the code you use for testing or through the course support channels.\n\nHere are some valid PICs you can use for testing:\n\n* 230827-906F\n* 120488+246L\n* 310823A9877",
+  "description_vi": "Trong bài tập này, bạn sẽ xác thực Mã nhận dạng cá nhân Phần Lan (PIC). \n\nVui lòng viết một hàm có tên `is_it_valid(pic: str)`, trả về `True` hoặc `False` dựa trên việc PIC được đưa ra làm đối số có hợp lệ hay không. PIC Phần Lan tuân theo định dạng `ddmmyyXyyyz`, trong đó `ddmmyy` chứa ngày sinh, `X` là điểm đánh dấu thế kỷ, `yyy` là mã định danh cá nhân và `z` là ký tự điều khiển.\n\nChương trình nên kiểm tra tính hợp lệ theo ba tiêu chí sau:\n\n* Nửa đầu của mã là ngày hợp lệ, hiện có ở định dạng `ddmmyy`.\n* Điểm đánh dấu thế kỷ là `+` (thập niên 1800), `-` (thập niên 1900) hoặc `A` (thập niên 2000).\n* Ký tự điều khiển là hợp lệ.\n\nKý tự điều khiển được tính bằng cách lấy số có chín chữ số được tạo bởi ngày sinh và số nhận dạng cá nhân, chia số này cho 31 và chọn ký tự tại chỉ mục được chỉ định bởi phần còn lại từ chuỗi `0123456789ABCDEFHJKLMNPRSTUVWXY`. Ví dụ: nếu phần còn lại là 12 thì ký tự điều khiển sẽ là `C`.\n\nCác ví dụ và giải thích khác về cách sử dụng PIC có tại [Cơ quan dịch vụ dữ liệu dân số và kỹ thuật số](https://dvv.fi/en/personal-identity-code).\n\n**NB!** Vui lòng đảm bảo rằng bạn không chia sẻ PIC của chính mình, chẳng hạn như trong mã bạn sử dụng để kiểm tra hoặc thông qua các kênh hỗ trợ khóa học.\n\nDưới đây là một số PIC hợp lệ mà bạn có thể sử dụng để thử nghiệm:\n\n* 230827-906F\n* 120488+246L\n* 310823A9877",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "c461b5d00acbb2b3bdaac4a0bd3ee2981f13f4d9d5c4d8092cbef39492d52e0c",
+  "order": 30
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-13_alphabetically_in_the_middle",
+  "lesson_id": "part02-3-combining-conditions",
+  "part": 2,
+  "tmc_name": "part02-13_alphabetically_in_the_middle",
+  "title_original": "Alphabetically in the middle",
+  "title_vi": "Theo bảng chữ cái ở giữa",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for three letters. The program should then print out whichever of the three letters would be in the middle if the letters were in alphabetical order.\n\nYou may assume the letters will be either all uppercase, or all lowercase.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\n1st letter: x\n2nd letter: c\n3rd letter: p\nThe letter in the middle is p\n\n</sample-output>\n\n<sample-output>\n\n1st letter: C\n2nd letter: B\n3rd letter: A\nThe letter in the middle is B\n\n</sample-output>",
+  "description_vi": "Hãy viết một chương trình yêu cầu người dùng nhập ba chữ cái. Sau đó, chương trình sẽ in ra bất kỳ chữ cái nào trong ba chữ cái sẽ ở giữa nếu các chữ cái đó theo thứ tự bảng chữ cái.\n\nBạn có thể cho rằng các chữ cái sẽ toàn là chữ hoa hoặc toàn chữ thường.\n\nMột số ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nchữ cái thứ 1: x\nchữ cái thứ 2: c\nchữ thứ 3: p\nChữ ở giữa là p\n\n</sample-output>\n\n<sample-output>\n\nChữ cái thứ nhất: C\nChữ thứ 2: B\nChữ cái thứ 3: A\nChữ ở giữa là B\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "6f6d323e7e6f881213bf30bf5a2f4607b4f35ebab51913b58d6211a7a7b67b42",
+  "order": 35
+}

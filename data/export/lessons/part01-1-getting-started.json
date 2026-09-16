@@ -1,0 +1,809 @@
+{
+  "id": "part01-1-getting-started",
+  "part": 1,
+  "part_slug": "part-1",
+  "slug": "1-getting-started",
+  "is_part_index": false,
+  "title_original": "Getting started",
+  "title_vi": "Bắt đầu",
+  "path": "/part-1/1-getting-started",
+  "source_path": "data/part-1/1-getting-started.md",
+  "source_hash": "1028ba646be26242d97195eae9845b168dabed79f143abda246341c632fd1580",
+  "order": 1,
+  "blocks_count": 44,
+  "blocks": [
+    {
+      "id": "blk-part01-1-getting-started-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "deae1a5470f3031b4fb9727e938301fb54642fbb5bfa6902397615a827585448",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will have written and executed your first Python program\n- You will know how to use the print command\n- You will be able to use programming for arithmetic operations"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ viết và thực thi chương trình Python đầu tiên của mình\n- Bạn sẽ biết cách sử dụng lệnh in\n- Bạn sẽ có thể sử dụng lập trình để thực hiện các phép tính số học"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "a9973839ee741146e0094a71ce54ce6b5982b5ff9896a796b460fadc68a228f4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Computer programs consist of _commands_, each command instructing the computer to take some action. A computer executes these commands one by one. Among other things, commands can be used to perform calculations, compare things in the computer's memory, cause changes in how the program functions, relay messages or ask for information from the program's user."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các chương trình máy tính bao gồm _lệnh_, mỗi lệnh sẽ hướng dẫn máy tính thực hiện một số hành động. Một máy tính thực hiện từng lệnh một. Ngoài ra, các lệnh có thể được sử dụng để thực hiện tính toán, so sánh mọi thứ trong bộ nhớ của máy tính, gây ra những thay đổi về cách thức hoạt động của chương trình, chuyển tiếp tin nhắn hoặc yêu cầu thông tin từ người dùng chương trình."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "dfcfc0c212f4ee1c28fa895e85c6da138bdde40e23c1f7142f40f41b7752e81b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's begin programming by getting familiar with the `print` command, which _prints_ text. In this context, printing essentially means that the program will show some text on the screen."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy bắt đầu lập trình bằng cách làm quen với lệnh `print`, lệnh _prints_. Trong ngữ cảnh này, in về cơ bản có nghĩa là chương trình sẽ hiển thị một số văn bản trên màn hình."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "db1b4626e7c9b250678543db105aa2312e6b2d24c1c212a9cbbcc03a2e9876be",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following program will print the line \"Hi there!\":"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình sau sẽ in ra dòng \"Xin chào!\":"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "cf9af7991f8a5d3648ee7a96123ee20a684a905c8786ff57eb6bb5f96971c042",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(\"Hi there!\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(\"Hi there!\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "cf9af7991f8a5d3648ee7a96123ee20a684a905c8786ff57eb6bb5f96971c042",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "385123b958e48cd66b4ef386afa632c30b898ed59b37ec2acf0786fa185dd4ec",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "When the program is run, it produces this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khi chạy chương trình thì nó ra cái này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0007",
+      "type": "sample_output",
+      "order": 7,
+      "source_hash": "d451d2a79e0a1f87270b313ca7d9e589359cb3d2aa906594529dcbc0535fd0f3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hi there!"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hi there!"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHi there!\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "a519adc3603f4c8117a1fc7fb37a63f6e9dd4916d03f250531a781d591993011",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The program will not work unless the code is written exactly as it is above. For example, trying to run the print command without the quotation marks, like so"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình sẽ không hoạt động trừ khi mã được viết chính xác như trên. Ví dụ: cố gắng chạy lệnh in mà không có dấu ngoặc kép, như vậy"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0009",
+      "type": "code",
+      "order": 9,
+      "source_hash": "a91f3942601553dfeceabe4d3f00f073ae3357b17462c967659e0c8da5d8d468",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(Hi there!)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(Hi there!)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a91f3942601553dfeceabe4d3f00f073ae3357b17462c967659e0c8da5d8d468",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "41d17838f730e02e2ef961036636eb89aa9bcffc2f71e25e9730731f0a3a90e7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "will not print out the message, but instead causes an error:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "sẽ không in ra thông báo mà thay vào đó gây ra lỗi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0011",
+      "type": "sample_output",
+      "order": 11,
+      "source_hash": "83d1311ecf0f5491bb210e5ccb71eb3106b7576c35b379f4f5ff3723a4236328",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "<pre>\nFile \"<stdin>\", line 1\n  print(Hi there!)\n                   ^\nSyntaxError: invalid syntax\n</pre>"
+      },
+      "translation": {
+        "language": "text",
+        "content": "<pre>\nFile \"<stdin>\", line 1\n  print(Hi there!)\n                   ^\nSyntaxError: invalid syntax\n</pre>"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n<pre>\nFile \"<stdin>\", line 1\n  print(Hi there!)\n                   ^\nSyntaxError: invalid syntax\n</pre>\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "2f9b7891a3ecd2bfc2e4005cde1ab04c8874f26dc51941bbcfa3eb3b65699d3c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In summary, if you want to print text, the text must all be encased in quotation marks or Python will not interpret it correctly."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tóm lại, nếu bạn muốn in văn bản, tất cả văn bản phải được đặt trong dấu ngoặc kép nếu không Python sẽ không diễn giải chính xác."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0013",
+      "type": "exercise",
+      "order": 13,
+      "source_hash": "8ae425f94cd3dcebbedfe2235efa1ef1e749db3889a83d34025528518adc5410",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which prints out an emoticon: :-)"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình in ra biểu tượng cảm xúc: :-)"
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-01_emoticon",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Emoticon",
+        "tmc_name": "part01-01_emoticon",
+        "height": "300px"
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0014",
+      "type": "heading",
+      "order": 14,
+      "source_hash": "c0f7e61da4eb72b174fdb8a9e0c80baf951aed9202969cb32b5726f875c08678",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A program of multiple commands"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một chương trình gồm nhiều lệnh"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "feb309227d071137dbd89b8f8f16040aa82dc071a16c4d367df0b81c100db534",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Multiple commands written in succession will be executed in order from first to last.\nFor example this program"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nhiều lệnh được viết liên tiếp sẽ được thực hiện theo thứ tự từ đầu đến cuối.\nVí dụ chương trình này"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0016",
+      "type": "code",
+      "order": 16,
+      "source_hash": "b612dc001a9a239724dca27536bb472f020bf9d564c41deda77a37ebcd7fadd0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(\"Welcome to Introduction to Programming!\")\nprint(\"First we will practice using the print command.\")\nprint(\"This program prints three lines of text on the screen.\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(\"Welcome to Introduction to Programming!\")\nprint(\"First we will practice using the print command.\")\nprint(\"This program prints three lines of text on the screen.\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b612dc001a9a239724dca27536bb472f020bf9d564c41deda77a37ebcd7fadd0",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "5ee7f4bbd0740905adb3b031083f43d880089b8e39c7d3a467e5ded8aad15894",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "prints the following lines on the screen:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "in ra màn hình những dòng sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0018",
+      "type": "sample_output",
+      "order": 18,
+      "source_hash": "c7e559f1ac16af988bf79245adf4b5040ea980730ae0106bb4b36bf55872c4fe",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Welcome to Introduction to Programming!\nFirst we will practice using the print command.\nThis program prints three lines of text on the screen."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Welcome to Introduction to Programming!\nFirst we will practice using the print command.\nThis program prints three lines of text on the screen."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nWelcome to Introduction to Programming!\nFirst we will practice using the print command.\nThis program prints three lines of text on the screen.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0019",
+      "type": "exercise",
+      "order": 19,
+      "source_hash": "15dbd6a9fd917d4421df17925a3d9186652efdb08dcab7037b48f0c1b1548230",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "\"Seitsemän veljestä\" is one of the first novels ever written in Finnish. It is the story of seven orphaned brothers learning to make their way in the world ([read more on Wikipedia](https://en.wikipedia.org/wiki/Seitsem%C3%A4n_veljest%C3%A4)).\n\nThis program is supposed to print out the names of the brothers in alphabetical order, but it's not working quite right yet. Please fix the program so that the names are printed in the correct order.\n\n\n```python\nprint(\"Simeoni\")\nprint(\"Juhani\")\nprint(\"Eero\")\nprint(\"Lauri\")\nprint(\"Aapo\")\nprint(\"Tuomas\")\nprint(\"Timo\")\n```"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "\"Seitsemän veljestä\" là một trong những cuốn tiểu thuyết đầu tiên được viết bằng tiếng Phần Lan. Đó là câu chuyện về bảy anh em mồ côi đang học cách tự lập trên thế giới ([đọc thêm trên Wikipedia](https://en.wikipedia.org/wiki/Seitsem%C3%A4n_veljest%C3%A4)).\n\nChương trình này lẽ ra sẽ in ra tên của các anh em theo thứ tự bảng chữ cái, nhưng nó vẫn chưa hoạt động bình thường. Hãy sửa lại chương trình để các tên được in theo đúng thứ tự.\n\n\n```python\nprint(\"Simeoni\")\nprint(\"Juhani\")\nprint(\"Eero\")\nprint(\"Lauri\")\nprint(\"Aapo\")\nprint(\"Tuomas\")\nprint(\"Timo\")\n```"
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-02_seven_brothers",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Fix the code: Seven Brothers",
+        "tmc_name": "part01-02_seven_brothers",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0020",
+      "type": "exercise",
+      "order": 20,
+      "source_hash": "399e64b87c54d3fc71aa416f03fa826ce60e66fdacae0eeb48919622648b1334",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which prints out the following lines exactly as they are written here, punctuation and all:\n\n<sample-output>\n\nRow, row, row your boat,\nGently down the stream.\nMerrily, merrily, merrily, merrily,\nLife is but a dream.\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một chương trình in ra những dòng sau đây chính xác như chúng được viết ở đây, dấu câu và tất cả:\n\n<sample-output>\n\nChèo, chèo, chèo thuyền của bạn,\nNhẹ nhàng xuôi dòng.\nVui vẻ, vui vẻ, vui vẻ, vui vẻ,\nCuộc đời chỉ là một giấc mơ.\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-03_row_your_boat",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Row, Row, Row Your Boat",
+        "tmc_name": "part01-03_row_your_boat",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0021",
+      "type": "heading",
+      "order": 21,
+      "source_hash": "fc0d976a9ce1179a9265b6037b9a39867032df28bfaf98e67105dc68c0241ddf",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Arithmetic operations"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "phép tính số học"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "b564bcc640c95195ce9d34adfd9753221392250a8a84fd7fa73ce9c13242f227",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You can also put arithmetic operations inside a `print` command. Running it will then print out the result of the operation. For example, the following program"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn cũng có thể đặt các phép tính số học bên trong lệnh `print`. Chạy nó sau đó sẽ in ra kết quả của hoạt động. Ví dụ: chương trình sau"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0023",
+      "type": "code",
+      "order": 23,
+      "source_hash": "5d92692b729c288c1f05b45b63a2d8ed26f52e90cc34af6d5dba308ba7371e96",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(2 + 5)\nprint(3 * 3)\nprint(2 + 2 * 10)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(2 + 5)\nprint(3 * 3)\nprint(2 + 2 * 10)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5d92692b729c288c1f05b45b63a2d8ed26f52e90cc34af6d5dba308ba7371e96",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "d077eabb268ad47075d668081822b3bc0283370fa49430467ca074d342bfe032",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "prints out these lines:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "in ra những dòng này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0025",
+      "type": "sample_output",
+      "order": 25,
+      "source_hash": "3c6468ae7f7c55f9996bc15b7f6ea0a57ac049a01579683a3ef7d051cbe85dff",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "7\n9\n22"
+      },
+      "translation": {
+        "language": "text",
+        "content": "7\n9\n22"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n7\n9\n22\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "d75d05d4ab9ac1f58ffc642490dc83dc2d659f55eddb53ce9c4753616c6ca664",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Notice the lack of quotation marks around the arithmetic operations above. Quotation marks are used to signify _strings_. In the context of programming, strings are sequences of characters. They can consist of letters, numbers and any other types of characters, such as punctuation. Strings aren't just words as we commonly understand them, but instead a single string can be as long as multiple complete sentences.\nStrings are usually printed out exactly as they are written. Thus, the following two commands produce two quite different results:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lưu ý việc thiếu dấu ngoặc kép xung quanh các phép tính số học ở trên. Dấu ngoặc kép được sử dụng để biểu thị _strings_. Trong ngữ cảnh lập trình, chuỗi là chuỗi ký tự. Chúng có thể bao gồm các chữ cái, số và bất kỳ loại ký tự nào khác, chẳng hạn như dấu câu. Chuỗi không chỉ là những từ như chúng ta thường hiểu mà thay vào đó, một chuỗi có thể dài bằng nhiều câu hoàn chỉnh.\nChuỗi thường được in ra chính xác như chúng được viết. Như vậy, hai lệnh sau cho ra hai kết quả khá khác nhau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0027",
+      "type": "code",
+      "order": 27,
+      "source_hash": "5ce496ec768dcdcf50aa6275b0a8f5991ffb844803cbe6b1e26124d9a6860367",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(2 + 2 * 10)\nprint(\"2 + 2 * 10\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(2 + 2 * 10)\nprint(\"2 + 2 * 10\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5ce496ec768dcdcf50aa6275b0a8f5991ffb844803cbe6b1e26124d9a6860367",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "ce0f48ce06bb44356ce3870b1d45ed1e76554ec7fd3177c18020121b91f280b0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This program prints out:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình này in ra:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0029",
+      "type": "sample_output",
+      "order": 29,
+      "source_hash": "3485d72eb8f161a7912e584562b4aefda76e56965c0776f889fda864622b1685",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "22\n2 + 2 * 10"
+      },
+      "translation": {
+        "language": "text",
+        "content": "22\n2 + 2 * 10"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n22\n2 + 2 * 10\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "ea77dbf12390a71ca23312e55cb090154755a5f009060c6b596a7cc160ffe989",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "With the second line of code, Python does not calculate the result of the operation, but instead prints out the operation itself, as a string.\nSo, strings are printed out just as they are written, without any reference to their contents."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Với dòng mã thứ hai, Python không tính toán kết quả của phép toán mà thay vào đó in ra chính thao tác đó dưới dạng một chuỗi.\nVì vậy, các chuỗi được in ra giống như khi chúng được viết mà không có bất kỳ tham chiếu nào đến nội dung của chúng."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0031",
+      "type": "heading",
+      "order": 31,
+      "source_hash": "447fbe62cca53d0a10b752cfbb09e5d79bfa24aa9ceda21cfd0352e7c139c4b8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Commenting"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bình luận"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "6d82d5377e4a261a54a82a836a1cb318da942df0540ad35280844b8e0d32d1f4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Any line beginning with the pound sign `#`, also known as a hash or a number sign, is a comment. This means that any text on that line following the `#` symbol will not in any way affect how the program functions. Python will simply ignore it."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bất kỳ dòng nào bắt đầu bằng dấu thăng `#`, còn được gọi là dấu băm hoặc dấu số, đều là một nhận xét. Điều này có nghĩa là bất kỳ văn bản nào trên dòng đó theo sau biểu tượng `#` sẽ không ảnh hưởng đến cách thức hoạt động của chương trình. Python sẽ đơn giản bỏ qua nó."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "ddb02ed7ae43bdb524b9e4eaf2dcfa0738bf4d1b58f37c45ecea4f28a6614965",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Comments are used for explaining how a program works, to both the programmer themselves, and others reading the program code. In this program a comment explains the calculation performed in the code:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các nhận xét được sử dụng để giải thích cách hoạt động của một chương trình cho cả người lập trình và những người khác đọc mã chương trình. Trong chương trình này, một nhận xét giải thích phép tính được thực hiện trong mã:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0034",
+      "type": "code",
+      "order": 34,
+      "source_hash": "9918fd00f7b80fb52b51747251a2d3e3f5665d0995732c6630d2404e2e5fbfc5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(\"Hours in a year:\")\n# there are 365 days in a year and 24 hours in each day\nprint(365*24)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(\"Hours in a year:\")\n# there are 365 days in a year and 24 hours in each day\nprint(365*24)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "9918fd00f7b80fb52b51747251a2d3e3f5665d0995732c6630d2404e2e5fbfc5",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "c1a8cf5f10015e2622c9923a5c886483ae25dd4971a97e69139c0dc0987a5c54",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "When the program is run, the comment will not be visible to the user:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khi chương trình chạy, người dùng sẽ không nhìn thấy bình luận:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0036",
+      "type": "sample_output",
+      "order": 36,
+      "source_hash": "8957e4de757407592736f12f15ade0ec0f91dabda613d3486ca5cd7fcd8fbac5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hours in a year:\n8760"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hours in a year:\n8760"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHours in a year:\n8760\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "cd9e5974429fd599fe70cbc448e75a0b32e1dee185a710ddb98fca9b708d298f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Short comments can also be added to the end of a line:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Những bình luận ngắn cũng có thể được thêm vào cuối dòng:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0038",
+      "type": "code",
+      "order": 38,
+      "source_hash": "d7d802c3265be4a4f958d5c492b6703e2c182df0b98e23eab3b1c4bc894189c9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(\"Hours in a year:\")\nprint(365*24) # 365 days, 24 hours in each day"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(\"Hours in a year:\")\nprint(365*24) # 365 days, 24 hours in each day"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d7d802c3265be4a4f958d5c492b6703e2c182df0b98e23eab3b1c4bc894189c9",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0039",
+      "type": "exercise",
+      "order": 39,
+      "source_hash": "1a49064d58ad19badf5ecbad6a06bded466bdb706a4b5c263db1132b1c58dc04",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which prints out the number of minutes in a year. Use Python code to perform the calculation, as in the previous code example."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình in ra số phút trong một năm. Sử dụng mã Python để thực hiện phép tính, như trong ví dụ về mã trước đó."
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-04_minutes_in_a_year",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Minutes in a year",
+        "tmc_name": "part01-04_minutes_in_a_year",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0040",
+      "type": "exercise",
+      "order": 40,
+      "source_hash": "e1906b5a897e2c25f154218c55218d0b75c9c5ab00174842483af0ef9bbd4e7f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Thus far, you have probably used double quotation marks `\"` to print out strings. In addition to the double quotation marks, Python also accepts single quotation marks `'`.\n\nThis comes in handy if you ever want to print out the actual quotation marks themselves:\n\n```python\n\nprint('\"Come right back!\", shouted the police officer.')\n\n```\n\n<sample-output>\n\n\"Come right back!\", shouted the police officer.\n\n</sample-output>\n\nPlease write a program which prints out the following:\n\n<sample-output>\n\nprint(\"Hello there!\")\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cho đến nay, có thể bạn đã sử dụng dấu ngoặc kép `\"` để in ra chuỗi. Ngoài dấu ngoặc kép, Python còn chấp nhận dấu ngoặc đơn `'`.\n\nĐiều này rất hữu ích nếu bạn muốn in ra các dấu ngoặc kép thực tế:\n\n```python\n\nprint('\"Come right back!\", shouted the police officer.')\n\n```\n\n<sample-output>\n\n\"Quay lại ngay!\", viên cảnh sát hét lên.\n\n</sample-output>\n\nHãy viết chương trình in ra kết quả sau:\n\n<sample-output>\n\nprint(\"Xin chào!\")\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-05_print_code",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Print some code",
+        "tmc_name": "part01-05_print_code",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "d3ac25ddc7ba9779c0556d543e4994d158e16a5a359347a1321dd236f1af0b67",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!--"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!--"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "0937af8ca0d984621994ab6ab91b7b2cf722e5cf79e7103d9f4567fc678255c7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một bài kiểm tra để ôn lại nội dung của phần này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-1-getting-started-0043",
+      "type": "quiz",
+      "order": 43,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "f1d6d205-dfd6-5c6f-b148-b332dfd64289",
+        "attributes": {
+          "id": "f1d6d205-dfd6-5c6f-b148-b332dfd64289"
+        }
+      }
+    },
+    {
+      "id": "blk-part01-1-getting-started-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "-->"
+      },
+      "metadata": {}
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part11-03_best_exam_result",
+  "lesson_id": "part11-1-list-comprehensions",
+  "part": 11,
+  "tmc_name": "part11-03_best_exam_result",
+  "title_original": "Best exam result",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The exercise template contains the class definition `ExamResult`. The class has the following public attributes:\n\n* name\n* grade1\n* grade2\n* grade3\n\nPlease write a function named `best_results(results: list)` which takes a list of ExamResult objects as its argument.\n\nThe function should return a new list containing only the best result from each ExamResult object. The function should use a list comprehension to achieve this.\n\nThe maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nresult1 = ExamResult(\"Peter\",5,3,4)\nresult2 = ExamResult(\"Pippa\",3,4,1)\nresult3 = ExamResult(\"Paul\",2,1,3)\nresults = [result1, result2, result3]\nprint(best_results(results))\n```\n\n<sample-output>\n\n[5, 4, 3]\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "result1 = ExamResult(\"Peter\",5,3,4)\nresult2 = ExamResult(\"Pippa\",3,4,1)\nresult3 = ExamResult(\"Paul\",2,1,3)\nresults = [result1, result2, result3]\nprint(best_results(results))",
+  "grading_data_available": false,
+  "source_hash": "a20de028528744151264b7cb45275978af58e32246b2f5f3c505aab1ed8ecd21",
+  "order": 28
+}

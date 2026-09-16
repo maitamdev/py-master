@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-21_find_all_substrings",
+  "lesson_id": "part03-2-working-with-strings",
+  "part": 3,
+  "tmc_name": "part03-21_find_all_substrings",
+  "title_original": "Find all the substrings",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please make an extended version of the previous program, which prints out _all the substrings which are at least three characters long_, and which begin with the character specified by the user. You may assume the input string is at least three characters long.\n\n<sample-output>\n\nPlease type in a word: **mammoth**\nPlease type in a character: **m**\nmam\nmmo\nmot\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a word: **banana**\nPlease type in a character: **n**\nnan\n\n</sample-output>\n\n**Hint** the following example may give you some inspiration as to how this exercise could be tackled:\n\n```python\nword = input(\"Word: \")\nwhile True:\n    if len(word) == 0:\n        break\n    print(word)\n    word = word[2:]\n```\n\n<sample-output>\n\nWord: **mammoth**\nmammoth\nmmoth\noth\nh\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "word = input(\"Word: \")\nwhile True:\n    if len(word) == 0:\n        break\n    print(word)\n    word = word[2:]",
+  "grading_data_available": false,
+  "source_hash": "0c5812670a633dabcbcbb40601955469a04c6ff07e592d5f7ca5b7d47c848820",
+  "order": 89
+}

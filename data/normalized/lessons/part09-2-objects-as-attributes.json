@@ -1,0 +1,878 @@
+{
+  "id": "part09-2-objects-as-attributes",
+  "part": 9,
+  "part_slug": "part-9",
+  "slug": "2-objects-as-attributes",
+  "is_part_index": false,
+  "title_original": "Objects as attributes",
+  "title_vi": "",
+  "path": "/part-9/2-objects-as-attributes",
+  "source_path": "data/part-9/2-objects-as-attributes.md",
+  "source_hash": "562f1a6e34b53a6cae0d40469f854393eed9a65e96fa61977b9ac52a0f04f8e3",
+  "order": 1,
+  "blocks_count": 48,
+  "blocks": [
+    {
+      "id": "blk-part09-2-objects-as-attributes-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "cbf792fd531faf0d117fa5c503a6fba690b31c8e88d719969e17a2850e1e979d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know how to use objects as attributes in other objects\n- You will be familiar with the keyword `None`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "d4c757f951187799a21aa856514558cc35b709772e745cae94a0ad9005aa11ce",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We have already seen examples of classes which have lists as attributes. As there is thus nothing stopping us from including mutable objects as attributes in our classes, we might as well use instances of our own classes as attributes in other classes we've defined ourselves. In the following examples we will define the classes `Course`, `Student` and `CompletedCourse`. A completed course makes use of the first two classes. The class definitions are very short and simple in order to better concentrate on the technique of using instances of our own classes as attributes."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "09a756e77bc268885839d05182d0cf346dfc8651fc0ce1f1fe70eb0d83afc82c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We will assume each class is defined in a separate file."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "c005e580f515066ded7043b633f057266fc03bb37591684c513c8f6d0f5aa120",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "First we define the class `Course` in a file named `course.py`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "54ff5d79472901eb9234d31b3e66ed6636ef84e92f11dfe62a427028fcfecf1e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Course:\n    def __init__(self, name: str, code: str, credits: int):\n        self.name = name\n        self.code = code\n        self.credits = credits"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Course:\n    def __init__(self, name: str, code: str, credits: int):\n        self.name = name\n        self.code = code\n        self.credits = credits"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "54ff5d79472901eb9234d31b3e66ed6636ef84e92f11dfe62a427028fcfecf1e",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "b9268b1892ae4486ece7e0cd8988653cd7299313bd0236c71dbd281d69e1d0a0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Next, the class `Student` in a file named `student.py`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0007",
+      "type": "code",
+      "order": 7,
+      "source_hash": "d035b45d91473c076c1922a51dbde96c675271d14ece7693fcba72cdb74dae45",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Student:\n    def __init__(self, name: str, student_number: str, credits: int):\n        self.name = name\n        self.student_number = student_number\n        self.credits = credits"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Student:\n    def __init__(self, name: str, student_number: str, credits: int):\n        self.name = name\n        self.student_number = student_number\n        self.credits = credits"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d035b45d91473c076c1922a51dbde96c675271d14ece7693fcba72cdb74dae45",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "b50509412492e34759d65129253119615427f0fdaa00b5ac4230e315f74a26a7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Finally, the class `CompletedCourse` is defined in a file named `completedcourse.py`. As it uses the other two classes, they have to be imported before they can be used:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0009",
+      "type": "code",
+      "order": 9,
+      "source_hash": "c2bf2bd9a341f7c4c78cd66f8183386a6fd408d22e8a84588283be971ae4495f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from course import Course\nfrom student import Student\n\nclass CompletedCourse:\n    def __init__(self, student: Student, course: Course, grade: int):\n        self.student = student\n        self.course = course\n        self.grade = grade"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from course import Course\nfrom student import Student\n\nclass CompletedCourse:\n    def __init__(self, student: Student, course: Course, grade: int):\n        self.student = student\n        self.course = course\n        self.grade = grade"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c2bf2bd9a341f7c4c78cd66f8183386a6fd408d22e8a84588283be971ae4495f",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "8567d64432413ddcf580a198ffe3014cb072099caf290a54d4f0bf8bd73d90cf",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Here is an example of a main function which adds some completed courses to a list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0011",
+      "type": "code",
+      "order": 11,
+      "source_hash": "f21fcf23a56ad4ace701ea8b095fdb96ebd3be02901da0cf5d6ac3f8b00ad649",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from completedcourse import CompletedCourse\nfrom course import Course\nfrom student import Student\n\n# Create a list of students\nstudents = []\nstudents.append(Student(\"Ollie\", \"1234\", 10))\nstudents.append(Student(\"Peter\", \"3210\", 23))\nstudents.append(Student(\"Lena\", \"9999\", 43))\nstudents.append(Student(\"Tina\", \"3333\", 8))\n\n# Create a course named Introduction to Programming\nitp = Course(\"Introduction to Programming\", \"itp1\", 5)\n\n# Add completed courses for each student, with grade 3 for all\ncompleted = []\nfor student in students:\n    completed.append(CompletedCourse(student, itp, 3))\n\n# Print out the name of the student for each completed course\nfor course in completed:\n    print(course.student.name)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from completedcourse import CompletedCourse\nfrom course import Course\nfrom student import Student\n\n# Create a list of students\nstudents = []\nstudents.append(Student(\"Ollie\", \"1234\", 10))\nstudents.append(Student(\"Peter\", \"3210\", 23))\nstudents.append(Student(\"Lena\", \"9999\", 43))\nstudents.append(Student(\"Tina\", \"3333\", 8))\n\n# Create a course named Introduction to Programming\nitp = Course(\"Introduction to Programming\", \"itp1\", 5)\n\n# Add completed courses for each student, with grade 3 for all\ncompleted = []\nfor student in students:\n    completed.append(CompletedCourse(student, itp, 3))\n\n# Print out the name of the student for each completed course\nfor course in completed:\n    print(course.student.name)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f21fcf23a56ad4ace701ea8b095fdb96ebd3be02901da0cf5d6ac3f8b00ad649",
+        "length_lines": 22
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0012",
+      "type": "sample_output",
+      "order": 12,
+      "source_hash": "6f637fc03eddc90ec671ee43dcff5e488de2f1cb9049287aa5001a4d14159f49",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Ollie\nPeter\nLena\nTina"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Ollie\nPeter\nLena\nTina"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nOllie\nPeter\nLena\nTina\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "4b86ec1e7e79f0afc2e483c213d11c5e58a64c03b4f0a5ee247fbcbac931a81b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "What exactly is happening with all the dots on the line `print(course.student.name)`?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0014",
+      "type": "list",
+      "order": 14,
+      "source_hash": "0ad36b0d343bc8172e5c540bb5468e74454eaab062cf2c79c4b12abe9e0501b5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* `course` is an instance of the class `CompletedCourse`\n* `student` refers to an attribute of the `CompletedCourse` object, which is an object of type `Student`\n* the attribute `name` in the `Student` object contains the name of the student"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0015",
+      "type": "heading",
+      "order": 15,
+      "source_hash": "59ced0be843be02ba0da36b82adb9d5ed4dfcd866c7ff9e7ad97895cca756f86",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When is an import necessary?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "1b9cdc1a84f114e4f12c394bc39479846e6195d73ee5c441add43ce910171ae2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the examples above an `import` statement appeared quite a few times:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0017",
+      "type": "code",
+      "order": 17,
+      "source_hash": "906b1efc51146dc9059a401a97dc105ff5a455f4ccdb10f6b955780e43366461",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from completedcourse import CompletedCourse\nfrom course import Course\nfrom student import Student\n\n# rest of the main function"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from completedcourse import CompletedCourse\nfrom course import Course\nfrom student import Student\n\n# rest of the main function"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "906b1efc51146dc9059a401a97dc105ff5a455f4ccdb10f6b955780e43366461",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "ea76732720d0897fefa23e33c09150493643a8ed76e3c0a9c65aa6747f05938f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "An `import` statement is only necessary when using code which is defined somewhere outside the current file (or Python interpreter session). This includes situations where we want to use something defined in the Python standard library. For example, the `math` module contains some mathematical operations:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0019",
+      "type": "code",
+      "order": 19,
+      "source_hash": "709b5f46b252bc30b9a10bc0539548af57398aeea4399e4e7550083c18259ad2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import math\n\nx = 10\nprint(f\"the square root of {x} is {math.sqrt(x)}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import math\n\nx = 10\nprint(f\"the square root of {x} is {math.sqrt(x)}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "709b5f46b252bc30b9a10bc0539548af57398aeea4399e4e7550083c18259ad2",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "2f6799de81b8de0254641fc13c443d1ef3db26cf93cc4c4ded7b0fcf80cd2fa8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the example above we assumed the three classes were each defined in a separate file, and the main function was run from yet another file. This is why the `import` statements were necessary."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "73550786c666f7c2754586847b5b62c2775e5bf2606dc271759e24a0e4af3c89",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If all program code is written in the same file, as most of the exercises on this course advise you to do, **you will not need** `import` statements to use the classes you have defined."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "dc2f08745259c322dffa147eb294661cb895b539dd33ea4334a9c229718e6beb",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If you find yourself writing something along the lines of"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0023",
+      "type": "code",
+      "order": 23,
+      "source_hash": "34f89057c6efca89c2df225ce11d500bf93b102b81361305167ab2ca2a61d36f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from person import Person\n\n# more code goes here"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from person import Person\n\n# more code goes here"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "34f89057c6efca89c2df225ce11d500bf93b102b81361305167ab2ca2a61d36f",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "9dabc247be9c24eea5bf39115c1d614a097c11c3a9d531d5a44bca2d737f05fc",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "it is likely you have gotten something wrong. If you need a refresher, the `import` statement was first introduced in [part 7](/part-7/1-modules) of this course material."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0025",
+      "type": "exercise",
+      "order": 25,
+      "source_hash": "19b8154e2c57dfd8503494c5a0692dfa6d0fb58d7b7ae3d0a5768f131c083657",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains the outlines of two classes: `Person` and `Pet`. Each person has one pet. Please change the `__str__` method in the class `Person` so that it also prints out information about the person's pet as shown in the example below.\n\nThe string returned by the method _must follow the format specified below exactly_.\n\n```python\nhulda = Pet(\"Hulda\", \"mixed-breed dog\")\nlevi = Person(\"Levi\", hulda)\n\nprint(levi)\n```\n\n<sample-output>\n\nLevi, whose pal is Hulda, a mixed-breed dog\n\n</sample-output>\n\n**NB:** all class definitions are in the same text file. You should not need to `import` anything."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part09-06_pets",
+        "exercise_type": "programming-exercise",
+        "name": "Pets",
+        "tmc_name": "part09-06_pets",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0026",
+      "type": "heading",
+      "order": 26,
+      "source_hash": "2c17d032bbe863b7bdbcc8c4da9eac3ad2eacbef02aa09adeecc979fc57f3d25",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A list of objects as an attribute of an object"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "67581a84bc98741e1ad92c8dcc53a816e817771f22854ecc696dc8813c2df925",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the examples above we used single instances of other classes as attributes: a Person has a single Pet as an attribute, and a CompletedCourse has one Student and one Course as its attributes."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "5d1449a296dd4a5041b9554c78c401b5f021a58a7094e36624ffeca1f6e4961b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In object oriented programming it is often the case that we want to have a _collection_ of objects as an attribute. For example, the relationship between a sports team and its players follows this pattern:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0029",
+      "type": "code",
+      "order": 29,
+      "source_hash": "cb68e2cc35b59ed6d462e0acd34b37ba5272df871daa866856a35c92e6f53794",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Player:\n    def __init__(self, name: str, goals: int):\n        self.name = name\n        self.goals = goals\n\n    def __str__(self):\n        return f\"{self.name} ({self.goals} goals)\"\n\nclass Team:\n    def __init__(self, name: str):\n        self.name = name\n        self.players = []\n\n    def add_player(self, player: Player):\n        self.players.append(player)\n\n    def summary(self):\n        goals = []\n        for player in self.players:\n            goals.append(player.goals)\n        print(\"Team:\", self.name)\n        print(\"Players:\", len(self.players))\n        print(\"Goals scored by each player:\", goals)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Player:\n    def __init__(self, name: str, goals: int):\n        self.name = name\n        self.goals = goals\n\n    def __str__(self):\n        return f\"{self.name} ({self.goals} goals)\"\n\nclass Team:\n    def __init__(self, name: str):\n        self.name = name\n        self.players = []\n\n    def add_player(self, player: Player):\n        self.players.append(player)\n\n    def summary(self):\n        goals = []\n        for player in self.players:\n            goals.append(player.goals)\n        print(\"Team:\", self.name)\n        print(\"Players:\", len(self.players))\n        print(\"Goals scored by each player:\", goals)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "cb68e2cc35b59ed6d462e0acd34b37ba5272df871daa866856a35c92e6f53794",
+        "length_lines": 23
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "0577f571c50030eefce53f0dda77dd713f5f70356fb8f2196bcf15a2813be1ce",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "An example of our class in action:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0031",
+      "type": "code",
+      "order": 31,
+      "source_hash": "8e00b4dca72a3d6202abe212d914ba47c01bd5d78f49d872fe75fe34dadc8202",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "ca = Team(\"Campus Allstars\")\nca.add_player(Player(\"Eric\", 10))\nca.add_player(Player(\"Emily\", 22))\nca.add_player(Player(\"Andy\", 1))\nca.summary()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "ca = Team(\"Campus Allstars\")\nca.add_player(Player(\"Eric\", 10))\nca.add_player(Player(\"Emily\", 22))\nca.add_player(Player(\"Andy\", 1))\nca.summary()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8e00b4dca72a3d6202abe212d914ba47c01bd5d78f49d872fe75fe34dadc8202",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0032",
+      "type": "sample_output",
+      "order": 32,
+      "source_hash": "0a2051c2bfd65995760ac9765e649a005bef8c8135ef673a09bc98b833d55a24",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Team: Campus Allstars\nPlayers: 3\nGoals scored by each player: [10, 22, 1]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Team: Campus Allstars\nPlayers: 3\nGoals scored by each player: [10, 22, 1]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nTeam: Campus Allstars\nPlayers: 3\nGoals scored by each player: [10, 22, 1]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0033",
+      "type": "exercise",
+      "order": 33,
+      "source_hash": "fef961e8cbc243069dcd7b897e24c0e1c53268b340c3e035e000346743bdb9fd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In this exercise you will practice wrapping presents. You will write two classes: `Present` and `Box`. A present has a name and a weight, and a box contains presents.\n\n## The Present class\n\nPlease define the class `Present` which can be used to represent different kinds of presents. The class definition should contain attributes for the name and the weight (in kg) of the present. Instances of the class should work as follows:\n\n```python\nbook = Present(\"ABC Book\", 2)\n\nprint(\"The name of the present:\", book.name)\nprint(\"The weight of the present:\", book.weight)\nprint(\"Present:\", book)\n```\n\nThis should print out\n\n<sample-output>\n\nThe name of the present: ABC Book\nThe weight of the present: 2\nPresent: ABC Book (2 kg)\n\n</sample-output>\n\n## The Box class\n\nPlease define the class `Box`. You should be able to add presents to the box, and the box should keep track of the combined weight of the presents within. The class definition should contain these methods:\n\n- `add_present(self, present: Present)` which adds the present given as an argument to the box. The method has no return value.\n- `total_weight(self)` which returns the combined weight of the presents in the box.\n\nYou may use the following code to test your class:\n\n```python\nbook = Present(\"ABC Book\", 2)\n\nbox = Box()\nbox.add_present(book)\nprint(box.total_weight())\n\ncd = Present(\"Pink Floyd: Dark Side of the Moon\", 1)\nbox.add_present(cd)\nprint(box.total_weight())\n```\n\n<sample-output>\n\n2\n3\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part09-07_box_of_presents",
+        "exercise_type": "programming-exercise",
+        "name": "A box of presents",
+        "tmc_name": "part09-07_box_of_presents",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0034",
+      "type": "heading",
+      "order": 34,
+      "source_hash": "ddd4eba75633f028ee2a194155ca99af7e01905f56bc235999fea6b2e22d5d38",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "None: a reference to nothing"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "21cfff10cadd8878c29c06199091c23d5c21756d333ce2f78b6263934f890895",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In Python programming all initialised variables refer to an object. There are, however, inevitably situations where we need to refer to something which does not exist, without causing errors. The keyword `None` represents exactly such an \"empty\" object."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "cc45b8df78e19e275b7b4ebb7676044a6523955c45a705c2e78a090e0d0e3493",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Continuing from the Team and Player example above, let's assume we want to add a method for searching for players on the team by the name of the player. If no such player is found, it might make sense to return `None`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0037",
+      "type": "code",
+      "order": 37,
+      "source_hash": "4f47e9a0b1a89237d473661db349282b1a8aabf1a9af19bc1b5b4e0dcac24af6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Player:\n    def __init__(self, name: str, goals: int):\n        self.name = name\n        self.goals = goals\n\n    def __str__(self):\n        return f\"{self.name} ({self.goals} goals)\"\n\nclass Team:\n    def __init__(self, name: str):\n        self.name = name\n        self.players = []\n\n    def add_player(self, player: Player):\n        self.players.append(player)\n\n    def find_player(self, name: str):\n        for player in self.players:\n            if player.name == name:\n                return player\n        return None"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Player:\n    def __init__(self, name: str, goals: int):\n        self.name = name\n        self.goals = goals\n\n    def __str__(self):\n        return f\"{self.name} ({self.goals} goals)\"\n\nclass Team:\n    def __init__(self, name: str):\n        self.name = name\n        self.players = []\n\n    def add_player(self, player: Player):\n        self.players.append(player)\n\n    def find_player(self, name: str):\n        for player in self.players:\n            if player.name == name:\n                return player\n        return None"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4f47e9a0b1a89237d473661db349282b1a8aabf1a9af19bc1b5b4e0dcac24af6",
+        "length_lines": 21
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "2e6f22d142af6ff584749dd577ff86376e9bca95c489d318e4453d7235e4f524",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's test our function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0039",
+      "type": "code",
+      "order": 39,
+      "source_hash": "41c20889da65c6295c861f4c410425f5c7eed47ed1281321b5502bff55fcc378",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "ca = Team(\"Campus Allstars\")\nca.add_player(Player(\"Eric\", 10))\nca.add_player(Player(\"Amily\", 22))\nca.add_player(Player(\"Andy\", 1))\n\nplayer1 = ca.find_player(\"Andy\")\nprint(player1)\nplayer2 = ca.find_player(\"Charlie\")\nprint(player2)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "ca = Team(\"Campus Allstars\")\nca.add_player(Player(\"Eric\", 10))\nca.add_player(Player(\"Amily\", 22))\nca.add_player(Player(\"Andy\", 1))\n\nplayer1 = ca.find_player(\"Andy\")\nprint(player1)\nplayer2 = ca.find_player(\"Charlie\")\nprint(player2)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "41c20889da65c6295c861f4c410425f5c7eed47ed1281321b5502bff55fcc378",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0040",
+      "type": "sample_output",
+      "order": 40,
+      "source_hash": "b7f347f25cb1c0574eb2ac08a402ec1d2963f531d3275d54687abc3df7635381",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Andy (1 goals)\nNone"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Andy (1 goals)\nNone"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nAndy (1 goals)\nNone\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "50a51b6a4d96d322cc5d3afe7c98be03bde2a15c985b94089d8b6f749d0e6bda",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Be careful with `None`, though. It can sometimes cause more trouble than it solves. It is a common programming error to try to access a method or an attribute through a reference which evaluates to `None`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0042",
+      "type": "code",
+      "order": 42,
+      "source_hash": "972115fbec6cf0da8ca6228c897f6ad4090e628cd9b9c45e124f916d5fc0d0e5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "ca = Team(\"Campus Allstars\")\nca.add_player(Player(\"Eric\", 10))\n\nplayer = ca.find_player(\"Charlie\")\nprint(f\"Goals by Charlie: {player.goals}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "ca = Team(\"Campus Allstars\")\nca.add_player(Player(\"Eric\", 10))\n\nplayer = ca.find_player(\"Charlie\")\nprint(f\"Goals by Charlie: {player.goals}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "972115fbec6cf0da8ca6228c897f6ad4090e628cd9b9c45e124f916d5fc0d0e5",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0043",
+      "type": "paragraph",
+      "order": 43,
+      "source_hash": "0a53fb9171c118c314520597781e97dcdec4fd919b8471a1b38b5dd053d3dd77",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Executing the above would cause an error:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0044",
+      "type": "sample_output",
+      "order": 44,
+      "source_hash": "ff1fd9b5cde8c38ff717c66633076ae39d7b3747afd2a223b8bbc917facbe980",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nAttributeError: 'NoneType' object has no attribute 'goals'"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nAttributeError: 'NoneType' object has no attribute 'goals'"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nAttributeError: 'NoneType' object has no attribute 'goals'\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0045",
+      "type": "paragraph",
+      "order": 45,
+      "source_hash": "efe4206e75769cb4953d7667cdd7efe277e501c23b7211a999838b1c7d4142f8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "It is a good idea to check for `None` before trying to access any attributes or methods of return values:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0046",
+      "type": "code",
+      "order": 46,
+      "source_hash": "ca7e0562cfda1f7b76f94835940c76e04f0c94d878a11ce4b7d6927f8f747d31",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "ca = Team(\"Campus Allstars\")\nca.add_player(Player(\"Eric\", 10))\n\nplayer = ca.find_player(\"Charlie\")\nif player is not None:\n    print(f\"Goals by Charlie: {player.goals}\")\nelse:\n    print(f\"Charlie doesn't play in Campus Allstars :(\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "ca = Team(\"Campus Allstars\")\nca.add_player(Player(\"Eric\", 10))\n\nplayer = ca.find_player(\"Charlie\")\nif player is not None:\n    print(f\"Goals by Charlie: {player.goals}\")\nelse:\n    print(f\"Charlie doesn't play in Campus Allstars :(\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ca7e0562cfda1f7b76f94835940c76e04f0c94d878a11ce4b7d6927f8f747d31",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0047",
+      "type": "sample_output",
+      "order": 47,
+      "source_hash": "de0983605a3c42649a0fa378d08aa779d5a466e4e9980eebd4fbda03226da084",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Charlie doesn't play in Campus Allstars :("
+      },
+      "translation": {
+        "language": "text",
+        "content": "Charlie doesn't play in Campus Allstars :("
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nCharlie doesn't play in Campus Allstars :(\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-2-objects-as-attributes-0048",
+      "type": "exercise",
+      "order": 48,
+      "source_hash": "fffcd9b6e0a5eafeb0a8b8727ad1b4a6b6c11abfa09d209ab9f60da0fc46777a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains the class `Person`. A person has a name and a height. In this exercise you will implement the class `Room`. You may add any number of persons to a room, and you may also search for and remove the shortest person in the room.\n\n## Room\n\nPlease define the class `Room`. It should have a list of persons as an attribute, and also contain the following methods:\n\n- `add(person: Person)` adds the person given as an argument to the room.\n- `is_empty()` returns `True` or `False` depending on whether the room is empty.\n- `print_contents()` prints out the contents of the list of persons in the room.\n\nPlease have a look at the following usage example:\n\n```python\nroom = Room()\nprint(\"Is the room empty?\", room.is_empty())\nroom.add(Person(\"Lea\", 183))\nroom.add(Person(\"Kenya\", 172))\nroom.add(Person(\"Ally\", 166))\nroom.add(Person(\"Nina\", 162))\nroom.add(Person(\"Dorothy\", 155))\nprint(\"Is the room empty?\", room.is_empty())\nroom.print_contents()\n```\n\n<sample-output>\n\nIs the room empty? True\nIs the room empty? False\nThere are 5 persons in the room, and their combined height is 838 cm\nLea (183 cm)\nKenya (172 cm)\nAlly (166 cm)\nNina (162 cm)\nDorothy (155 cm)\n\n</sample-output>\n\n## The shortest person\n\nPlease define the method `shortest()` within the `Room` class definition. The method should return the shortest person in the room it is called on. If the room is empty, the method should return `None`. The method should _not_ remove the person fron the room.\n\n```python\nroom = Room()\n\nprint(\"Is the room empty?\", room.is_empty())\nprint(\"Shortest:\", room.shortest())\n\nroom.add(Person(\"Lea\", 183))\nroom.add(Person(\"Kenya\", 172))\nroom.add(Person(\"Nina\", 162))\nroom.add(Person(\"Ally\", 166))\n\nprint()\n\nprint(\"Is the room empty?\", room.is_empty())\nprint(\"Shortest:\", room.shortest())\n\nprint()\n\nroom.print_contents()\n```\n\n<sample-output>\n\nIs the room empty? True\nShortest: None\n\nIs the room empty? False\nShortest: Nina\n\nThere are 4 persons in the room, and their combined height is 683 cm\nLea (183 cm)\nKenya (172 cm)\nNina (162 cm)\nAlly (166 cm)\n\n</sample-output>\n\n## Removing a person from the room\n\nPlease define the method `remove_shortest()` within the `Room` class definition. The method should remove the shortest `Person` object from the room and return the reference to the object. If the room is empty, the method should return `None`.\n\n```python\nroom = Room()\n\nroom.add(Person(\"Lea\", 183))\nroom.add(Person(\"Kenya\", 172))\nroom.add(Person(\"Nina\", 162))\nroom.add(Person(\"Ally\", 166))\nroom.print_contents()\n\nprint()\n\nremoved = room.remove_shortest()\nprint(f\"Removed from room: {removed.name}\")\n\nprint()\n\nroom.print_contents()\n```\n\n<sample-output>\n\nThere are 4 persons in the room, and their combined height is 683 cm\nLea (183 cm)\nKenya (172 cm)\nNina (162 cm)\nAlly (166 cm)\n\nRemoved from room: Nina\n\nThere are 3 persons in the room, and their combined height is 521 cm\nLea (183 cm)\nKenya (172 cm)\nAlly (166 cm)\n\n</sample-output>\n\n**Hint**: in [part 4](/part-4/3-lists#removing-items-from-a-list) you will find instructions for removing items from a list.\n\n**Hint2**: it is always possible to call another method of the same class from within a method. The following should work just fine:\n\n```python\nclass Room:\n    # ...\n    def shortest(self):\n        # your code goes here\n\n    def remove_shortest(self):\n        shortest_person = self.shortest()\n        # ...\n```"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part09-08_shortest_in_room",
+        "exercise_type": "programming-exercise",
+        "name": "The shortest person in the room",
+        "tmc_name": "part09-08_shortest_in_room",
+        "height": null
+      }
+    }
+  ]
+}

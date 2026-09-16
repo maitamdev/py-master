@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-20_star_studded",
+  "lesson_id": "part04-4-definite-iteration",
+  "part": 4,
+  "tmc_name": "part04-20_star_studded",
+  "title_original": "Star-studded",
+  "title_vi": "đầy sao",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user to type in a string. The program then prints each input character on a separate line. After each character there should be a star (*) printed on its own line.\n\nThis is how it should work:\n\n<sample-output>\n\nPlease type in a string: **Python**\nP\n*\ny\n*\nt\n*\nh\n*\no\n*\nn\n*\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+  "description_vi": "Hãy viết chương trình yêu cầu người dùng nhập một chuỗi. Sau đó chương trình sẽ in từng ký tự đầu vào trên một dòng riêng biệt. Sau mỗi ký tự phải có dấu sao (*) in trên dòng riêng.\n\nĐây là cách nó sẽ hoạt động:\n\n<sample-output>\n\nVui lòng nhập một chuỗi: **Python**\nP\n*\ny\n*\nt\n*\nh\n*\nồ\n*\nn\n*\n\n</sample-output>\n\n**NB:** bài tập này không yêu cầu bạn viết bất kỳ hàm nào, vì vậy bạn nên __không__ đặt bất kỳ mã nào trong khối `if __name__ == \"__main__\"`.",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "184e0c9024f7c96e97a8de3e64a0ecc3eda7719290ef99bd3af31fb1cff4bb30",
+  "order": 20
+}

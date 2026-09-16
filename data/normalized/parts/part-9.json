@@ -1,0 +1,64 @@
+{
+  "part": 9,
+  "slug": "part-9",
+  "title_original": "Part 9",
+  "title_vi": "Phần 9",
+  "lessons": [
+    {
+      "id": "part09-1-objects-and-references",
+      "slug": "1-objects-and-references",
+      "is_index": false,
+      "title_original": "Objects and references",
+      "path": "/part-9/1-objects-and-references",
+      "blocks_count": 74
+    },
+    {
+      "id": "part09-2-objects-as-attributes",
+      "slug": "2-objects-as-attributes",
+      "is_index": false,
+      "title_original": "Objects as attributes",
+      "path": "/part-9/2-objects-as-attributes",
+      "blocks_count": 48
+    },
+    {
+      "id": "part09-3-encapsulation",
+      "slug": "3-encapsulation",
+      "is_index": false,
+      "title_original": "Encapsulation",
+      "path": "/part-9/3-encapsulation",
+      "blocks_count": 58
+    },
+    {
+      "id": "part09-4-scope-of-methods",
+      "slug": "4-scope-of-methods",
+      "is_index": false,
+      "title_original": "Scope of methods",
+      "path": "/part-9/4-scope-of-methods",
+      "blocks_count": 20
+    },
+    {
+      "id": "part09-5-class-attributes",
+      "slug": "5-class-attributes",
+      "is_index": false,
+      "title_original": "Class attributes",
+      "path": "/part-9/5-class-attributes",
+      "blocks_count": 37
+    },
+    {
+      "id": "part09-6-more-examples-with-classes",
+      "slug": "6-more-examples-with-classes",
+      "is_index": false,
+      "title_original": "More examples with classes",
+      "path": "/part-9/6-more-examples-with-classes",
+      "blocks_count": 30
+    },
+    {
+      "id": "part09-index",
+      "slug": "index",
+      "is_index": true,
+      "title_original": "Part 9",
+      "path": "/part-9",
+      "blocks_count": 2
+    }
+  ]
+}

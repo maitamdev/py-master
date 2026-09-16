@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-19_invert_dictionary",
+  "lesson_id": "part05-3-dictionary",
+  "part": 5,
+  "tmc_name": "part05-19_invert_dictionary",
+  "title_original": "Invert a dictionary",
+  "title_vi": "Đảo ngược từ điển",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `invert(dictionary: dict)`, which takes a dictionary as its argument. The dictionary should be inverted in place so that values become keys and keys become values.\n\nAn example of its use:\n\n```python\ns = {1: \"first\", 2: \"second\", 3: \"third\", 4: \"fourth\"}\ninvert(s)\nprint(s)\n```\n\n<sample-output>\n\n{\"first\": 1, \"second\": 2, \"third\": 3, \"fourth\": 4}\n\n</sample-output>\n\n**NB:** the principles regarding lists covered [here](/part-5/2-references#using-lists-as-parameters-in-functions) also hold for dictionaries passed as arguments.\n\nIf you have trouble completing this exercise, the [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit) might help you understand what your code is or isn't doing.",
+  "description_vi": "Hãy viết một hàm có tên `invert(dictionary: dict)`, hàm này lấy từ điển làm đối số. Từ điển phải được đảo ngược tại chỗ để giá trị trở thành khóa và khóa trở thành giá trị.\n\nMột ví dụ về việc sử dụng nó:\n\n```python\ns = {1: \"first\", 2: \"second\", 3: \"third\", 4: \"fourth\"}\ninvert(s)\nprint(s)\n```\n\n<sample-output>\n\n{\"thứ nhất\": 1, \"thứ hai\": 2, \"thứ ba\": 3, \"thứ tư\": 4}\n\n</sample-output>\n\n**NB:** các nguyên tắc liên quan đến danh sách được đề cập [ở đây](/part-5/2-references#using-lists-as-parameters-in-functions) cũng áp dụng cho các từ điển được truyền dưới dạng đối số.\n\nNếu bạn gặp khó khăn khi hoàn thành bài tập này, [công cụ trực quan hóa](http://www.pythontutor.com/visualize.html#mode=edit) có thể giúp bạn hiểu code của bạn đang làm gì hoặc đang không làm gì.",
+  "starter_code": "s = {1: \"first\", 2: \"second\", 3: \"third\", 4: \"fourth\"}\ninvert(s)\nprint(s)",
+  "grading_data_available": false,
+  "source_hash": "d5ad3e3ecb155cd82ef19f3496b1d31c2ca1b121b29412793ee22fe3b72c08dd",
+  "order": 75
+}

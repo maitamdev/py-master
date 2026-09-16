@@ -1,0 +1,16 @@
+{
+  "id": "ex-part09-13_postcodes",
+  "lesson_id": "part09-5-class-attributes",
+  "part": 9,
+  "tmc_name": "part09-13_postcodes",
+  "title_original": "Postcodes",
+  "title_vi": "Mã bưu điện",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The exercise template contains the class definition `City` which is a model for a single city.\n\nPlease add a class variable named `postcodes` which refers to a dictionary. The keys of the dictionary are names of cities, and the values attached are the postcodes for those cities. Both are strings.\n\nThe dictionary should contain (at least) the following postcodes:\n\n* Helsinki 00100\n* Turku 20100\n* Tampere 33100\n* Rovaniemi 96100\n* Oulu 90100\n\nYou do not need to implement any other functionality.",
+  "description_vi": "Mẫu bài tập chứa định nghĩa lớp `City` là mô hình cho một thành phố.\n\nVui lòng thêm một biến lớp có tên `postcodes` để tham chiếu đến từ điển. Khóa của từ điển là tên của các thành phố và các giá trị đính kèm là mã bưu điện của các thành phố đó. Cả hai đều là chuỗi.\n\nTừ điển phải chứa (ít nhất) các mã bưu điện sau:\n\n* Helsinki 00100\n* Thổ Nhĩ Kỳ 20100\n* Tampere 33100\n* Rovaniemi 96100\n* Oulu 90100\n\nBạn không cần phải thực hiện bất kỳ chức năng nào khác.",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "12960cf4b53f0cd6a3c4ac85deeef3af0707e0bb6d7fa3455e1292d2022faa51",
+  "order": 27
+}

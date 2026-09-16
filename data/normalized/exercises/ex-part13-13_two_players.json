@@ -1,0 +1,16 @@
+{
+  "id": "ex-part13-13_two_players",
+  "lesson_id": "part13-3-events",
+  "part": 13,
+  "tmc_name": "part13-13_two_players",
+  "title_original": "Two players",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program where two players each direct their own robot. One of the players should use the arrow keys while the other could use, for example, the w-s-a-d keys. The end result should look like this:\n\n<img src=\"pygame_two_players.gif\">",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "ff2b307eb8a0273c16ff043f308799afc6ab6efe17ba59700c9f2fb7714ee0e2",
+  "order": 27
+}

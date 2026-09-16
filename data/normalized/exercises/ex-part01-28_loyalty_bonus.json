@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-28_loyalty_bonus",
+  "lesson_id": "part01-5-conditional-statements",
+  "part": 1,
+  "tmc_name": "part01-28_loyalty_bonus",
+  "title_original": "Loyalty bonus",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "This program calculates the end of year bonus a customer receives on their loyalty card. The bonus is calculated with the following formula:\n\n* If there are less than a hundred points on the card, the bonus is 10 %\n* In any other case the bonus is 15 %\n\nThe program should work like this:\n\n<sample-output>\n\nHow many points are on your card? **55**\nYour bonus is 10 %\nYou now have 60.5 points\n\n</sample-output>\n\nBut there is a problem with the program, so with some inputs it doesn't work quite right:\n\n<sample-output>\n\nHow many points are on your card? **95**\nYour bonus is 10 %\nYour bonus is 15 %\nYou now have 120.175 points\n\n</sample-output>\n\nPlease fix the program so that there is always either a 10 % or a 15 % bonus, but never both.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "b6243393232bf1b636c5cf6999852c9b24849d81783f03a7579cd8717d258002",
+  "order": 54
+}

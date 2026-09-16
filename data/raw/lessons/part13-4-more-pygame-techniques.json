@@ -1,0 +1,159 @@
+{
+  "id": "part13-4-more-pygame-techniques",
+  "part": 13,
+  "part_slug": "part-13",
+  "slug": "4-more-pygame-techniques",
+  "is_part_index": false,
+  "title_original": "More pygame techniques",
+  "path": "/part-13/4-more-pygame-techniques",
+  "source_path": "data/part-13/4-more-pygame-techniques.md",
+  "source_hash": "500e920b617c508ba026635fede98eb27c18028317a391677fa0c45942554a09",
+  "frontmatter": {
+    "path": "/part-13/4-more-pygame-techniques",
+    "title": "More pygame techniques",
+    "hidden": false
+  },
+  "chunks_count": 22,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know how the title of the pygame window\n- You will be able to draw shapes with pygame\n- You will know how to display text in your window",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know how the title of the pygame window\n- You will be able to draw shapes with pygame\n- You will know how to display text in your window\n\n</text-box>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "The window title",
+      "raw_source": "## The window title"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Your programs will look more professional if instead of \"pygame window\" the window title contains the actual name of the program.The title is set with the `pygame.display.set_caption` function:",
+      "raw_source": "Your programs will look more professional if instead of \"pygame window\" the window title contains the actual name of the program.The title is set with the `pygame.display.set_caption` function:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "pygame.display.set_caption(\"Great Adventure\")",
+      "raw_source": "```python\npygame.display.set_caption(\"Great Adventure\")\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Drawing shapes",
+      "raw_source": "## Drawing shapes"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following program draws a rectangle, a circle and a line on the screen:",
+      "raw_source": "The following program draws a rectangle, a circle and a line on the screen:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import pygame\n\npygame.init()\ndisplay = pygame.display.set_mode((640, 480))\ndisplay.fill((0, 0, 0))\n\npygame.draw.rect(display, (0, 255, 0), (50, 100, 200, 250))\npygame.draw.circle(display, (255, 0, 0), (200, 150), 40)\npygame.draw.line(display, (0, 0, 255), (80, 120), (300, 160), 2)\n\npygame.display.flip()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()",
+      "raw_source": "```python\nimport pygame\n\npygame.init()\ndisplay = pygame.display.set_mode((640, 480))\ndisplay.fill((0, 0, 0))\n\npygame.draw.rect(display, (0, 255, 0), (50, 100, 200, 250))\npygame.draw.circle(display, (255, 0, 0), (200, 150), 40)\npygame.draw.line(display, (0, 0, 255), (80, 120), (300, 160), 2)\n\npygame.display.flip()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Running the above code should look like this:",
+      "raw_source": "Running the above code should look like this:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "pygame_shapes.gif"
+      },
+      "raw_source": "<img src=\"pygame_shapes.gif\">"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Drawing text",
+      "raw_source": "## Drawing text"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Text in pygame is drawn in two steps: first we create an image containing the desired text, and then this image is drawn on the screen. It works like this:",
+      "raw_source": "Text in pygame is drawn in two steps: first we create an image containing the desired text, and then this image is drawn on the screen. It works like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import pygame\n\npygame.init()\ndisplay = pygame.display.set_mode((640, 480))\ndisplay.fill((0, 0, 0))\n\ngame_font = pygame.font.SysFont(\"Arial\", 24)\ntext = game_font.render(\"Moikka!\", True, (255, 0, 0))\ndisplay.blit(text, (100, 50))\npygame.display.flip()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()",
+      "raw_source": "```python\nimport pygame\n\npygame.init()\ndisplay = pygame.display.set_mode((640, 480))\ndisplay.fill((0, 0, 0))\n\ngame_font = pygame.font.SysFont(\"Arial\", 24)\ntext = game_font.render(\"Moikka!\", True, (255, 0, 0))\ndisplay.blit(text, (100, 50))\npygame.display.flip()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Running the above code should look like this:",
+      "raw_source": "Running the above code should look like this:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "pygame_text.gif"
+      },
+      "raw_source": "<img src=\"pygame_text.gif\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here the method `pygame.font.SysFont` creates a font object, which uses the system font Arial in size 24. The the method `render` creates an image of the specified text in the given colour. This image is drawn on the window with the `blit` method, just as before.",
+      "raw_source": "Here the method `pygame.font.SysFont` creates a font object, which uses the system font Arial in size 24. The the method `render` creates an image of the specified text in the given colour. This image is drawn on the window with the `blit` method, just as before."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "NB: different systems will have different fonts available. If the system this program is exeuted on doesn't have the Arial font, even though Arial is a very common font available on most systems, the default system font is used instead. If you need to have a specific font available for your game, you can include the font file in the game directory and specify its location for the `pygame.font.Font` method.",
+      "raw_source": "NB: different systems will have different fonts available. If the system this program is exeuted on doesn't have the Arial font, even though Arial is a very common font available on most systems, the default system font is used instead. If you need to have a specific font available for your game, you can include the font file in the game directory and specify its location for the `pygame.font.Font` method."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Exercises",
+      "raw_source": "## Exercises"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here are some more advanced exercises for practicing what you have learned in this part of the course material.",
+      "raw_source": "Here are some more advanced exercises for practicing what you have learned in this part of the course material."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Clock",
+        "tmcname": "part13-16_clock"
+      },
+      "inner_content": "Please write a program which displays a clock face which displays the system time. The end result should look like this:\n\n<img src=\"pygame_clock.gif\">",
+      "raw_source": "<programming-exercise name='Clock' tmcname='part13-16_clock'>\n\nPlease write a program which displays a clock face which displays the system time. The end result should look like this:\n\n<img src=\"pygame_clock.gif\">\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Asteroids",
+        "tmcname": "part13-17_asteroids"
+      },
+      "inner_content": "Please create a game where asteroids fall from the sky. The player moves a robot left and right and tries to collect the falling rocks. The player gets a point for each asteroid collected, and the points total is shown at the top of the window. The game ends when the player misses an asteroid. The end result should look like this:\n\n<img src=\"pygame_asteroids.gif\">\n\nNB: the above animation is from the Finnish version of the course. You may use the word \"Points\" instead of the Finnish equivalent \"Pisteet\" depicted above.\n\nThe exercise template contains the image `rock.png` for the asteroid.",
+      "raw_source": "<programming-exercise name='Asteroids' tmcname='part13-17_asteroids'>\n\nPlease create a game where asteroids fall from the sky. The player moves a robot left and right and tries to collect the falling rocks. The player gets a point for each asteroid collected, and the points total is shown at the top of the window. The game ends when the player misses an asteroid. The end result should look like this:\n\n<img src=\"pygame_asteroids.gif\">\n\nNB: the above animation is from the Finnish version of the course. You may use the word \"Points\" instead of the Finnish equivalent \"Pisteet\" depicted above.\n\nThe exercise template contains the image `rock.png` for the asteroid.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Please respond to a quick questionnaire on this part of the course.",
+      "raw_source": "Please respond to a quick questionnaire on this part of the course."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "9b57c7ea-8983-507f-93e7-243be766e2ad"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"9b57c7ea-8983-507f-93e7-243be766e2ad\"></quiz>"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part06-02_fruit_market",
+  "lesson_id": "part06-1-reading-files",
+  "part": 6,
+  "tmc_name": "part06-02_fruit_market",
+  "title_original": "Fruit market",
+  "title_vi": "chợ trái cây",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The file `fruits.csv` contains names of fruits, and their prices, in the format specified in this example:\n\n```sh\nbanana;6.50\napple;4.95\norange;8.0\n...etc...\n```\n\nPlease write a function named `read_fruits`, which reads the file and returns a dictionary based on the contents. In the dictionary, the name of the fruit should be the key, and the value should be its price. Prices should be of type `float`.\n\nNB: the function does not take any arguments. The file you are working with is always named `fruits.csv`.",
+  "description_vi": "Tệp `fruits.csv` chứa tên các loại trái cây và giá của chúng ở định dạng được chỉ định trong ví dụ này:\n\n```sh\nbanana;6.50\napple;4.95\norange;8.0\n...etc...\n```\n\nHãy viết một hàm có tên `read_fruits` để đọc tệp và trả về một từ điển dựa trên nội dung. Trong từ điển, tên của loại trái cây phải là chìa khóa và giá trị phải là giá của nó. Giá phải thuộc loại `float`.\n\nNB: hàm không nhận bất kỳ đối số nào. Tệp bạn đang làm việc luôn có tên `fruits.csv`.",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "aaf111ef3e48f2547eb20156d719f0cb1ac33ddde8d0bfd1c0c13fb2b7794ffa",
+  "order": 49
+}

@@ -1,0 +1,1006 @@
+{
+  "id": "part11-3-recursion",
+  "part": 11,
+  "part_slug": "part-11",
+  "slug": "3-recursion",
+  "is_part_index": false,
+  "title_original": "Recursion",
+  "title_vi": "đệ quy",
+  "path": "/part-11/3-recursion",
+  "source_path": "data/part-11/3-recursion.md",
+  "source_hash": "095c7bad140052a9c2db020a11499eebb8133bbe0b7e785ea21c874454390498",
+  "order": 1,
+  "blocks_count": 56,
+  "blocks": [
+    {
+      "id": "blk-part11-3-recursion-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "cc55ad2ef5810e5b457caafdaf6d41341735968ca189e7a784f411ffd27a00d5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know what recursion means\n- You will be able to write a simple recursive function"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ biết đệ quy nghĩa là gì\n- Bạn sẽ có thể viết một hàm đệ quy đơn giản"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "8b14d128a95e9b490f7e1869c579da1df4edf694f9da0ed04a83c25e4f9c0b18",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "As we have seen many times before, functions can call other functions. For example:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Như chúng ta đã thấy nhiều lần trước đây, các hàm có thể gọi các hàm khác. Ví dụ:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0003",
+      "type": "code",
+      "order": 3,
+      "source_hash": "543d812bc400cdcc3cf429eb60ba73b5b1cbb5a96bbf8e579c0c958de51b73c9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def hello(name : str):\n    print(\"Hello\", name)\n\ndef hello_many_times(name : str, times : int):\n    for i in range(times):\n        hello(name)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def hello(name : str):\n    print(\"Hello\", name)\n\ndef hello_many_times(name : str, times : int):\n    for i in range(times):\n        hello(name)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "543d812bc400cdcc3cf429eb60ba73b5b1cbb5a96bbf8e579c0c958de51b73c9",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "7e5f85ce98206b9532ce004cd1d0c61c0aad168080d30de756fdd5a70a837959",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A function can also call itself, but we as programmers have to be careful when we do that. It is easy to fall into an endless loop of function calls, just like we fell into an infinite loop of repetitions with `while` loops if we left out the appropriate break conditions. So, trying to call a `hello` function with the following definition"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một hàm cũng có thể tự gọi chính nó, nhưng với tư cách là lập trình viên, chúng ta phải cẩn thận khi thực hiện điều đó. Rất dễ rơi vào vòng lặp vô tận của các lệnh gọi hàm, giống như chúng ta rơi vào vòng lặp vô hạn của các lần lặp lại với các vòng lặp `while` nếu chúng ta bỏ qua các điều kiện ngắt thích hợp. Vì vậy, hãy thử gọi hàm `hello` với định nghĩa sau"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "679ed9d50b1febc937d69cbf8c204119ed494e5522565c2ae61fab4c5e8876da",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def hello(name : str):\n    print(\"Hello\", name)\n    hello(name) # function calls itself"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def hello(name : str):\n    print(\"Hello\", name)\n    hello(name) # function calls itself"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "679ed9d50b1febc937d69cbf8c204119ed494e5522565c2ae61fab4c5e8876da",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "714ad6c12ea589d7f0ed11e0e7d69d7ff4d5e52a248da77f629027481673f4bc",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "would cause a new kind of error:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "sẽ gây ra một loại lỗi mới:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0007",
+      "type": "sample_output",
+      "order": 7,
+      "source_hash": "0c44f6c232c791c8c8bd3182814d8ede91ef6c6cddf815206e14e19692784a7f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "RecursionError: maximum recursion depth exceeded"
+      },
+      "translation": {
+        "language": "text",
+        "content": "RecursionError: maximum recursion depth exceeded"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nRecursionError: maximum recursion depth exceeded\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0008",
+      "type": "heading",
+      "order": 8,
+      "source_hash": "8a04992953deab5aef31dc1321ea59d76f41e590c06f3b81c74c52419c9da6a7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "What does recursion mean?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "đệ quy nghĩa là gì?"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "090a1dac1b2523d013bf263cbafa5c7119d6136bccac343df0b6b782248c83da",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The _recursion_ mentioned in the error above refers to _defining something in terms of itself_. In a programming context it usually refers to a function which calls itself. For this to work without causing any infinite loops, the arguments passed to the function must change each time, so that the nested function calls will stop at some point. The basic principle here is the same as in `while` loops: there must always be a stop condition of some kind, and that condition must be triggered at some point in the execution."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "_recursion_ được đề cập trong lỗi trên đề cập đến _định nghĩa một cái gì đó theo chính nó_. Trong ngữ cảnh lập trình, nó thường đề cập đến một hàm gọi chính nó. Để tính năng này hoạt động mà không gây ra bất kỳ vòng lặp vô hạn nào, các đối số được truyền cho hàm phải thay đổi mỗi lần, để các lệnh gọi hàm lồng nhau sẽ dừng ở một điểm nào đó. Nguyên tắc cơ bản ở đây giống như trong các vòng lặp `while`: phải luôn có một loại điều kiện dừng nào đó và điều kiện đó phải được kích hoạt tại một thời điểm nào đó trong quá trình thực thi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "f892566a76c5850e9cc72b27f56515dcc4ca8f42bc77b2d0dcc996c4f1b4ab97",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at a simple function which adds zeroes to a list as long as there are less than 10 items in the list. This time we are not using a loop, however. If the condition is not yet met, the function calls itself:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy xem một hàm đơn giản có thể thêm các số 0 vào danh sách miễn là có ít hơn 10 mục trong danh sách. Tuy nhiên, lần này chúng ta không sử dụng vòng lặp. Nếu điều kiện chưa được đáp ứng, hàm sẽ tự gọi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0011",
+      "type": "code",
+      "order": 11,
+      "source_hash": "537c89add4a61a91a839ef6cab16c7c5bed379e063adeb7321a34538f9e2f497",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def fill_list(numbers: list):\n    \"\"\" If the length of the list is less than 10, add items to the list \"\"\"\n    if len(numbers) < 10:\n        numbers.append(0)\n        # call the function again\n        fill_list(numbers)\n\n\nif __name__ == \"__main__\":\n    test_list = [1,2,3,4]\n    fill_list(test_list)\n    print(test_list)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def fill_list(numbers: list):\n    \"\"\" If the length of the list is less than 10, add items to the list \"\"\"\n    if len(numbers) < 10:\n        numbers.append(0)\n        # call the function again\n        fill_list(numbers)\n\n\nif __name__ == \"__main__\":\n    test_list = [1,2,3,4]\n    fill_list(test_list)\n    print(test_list)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "537c89add4a61a91a839ef6cab16c7c5bed379e063adeb7321a34538f9e2f497",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0012",
+      "type": "sample_output",
+      "order": 12,
+      "source_hash": "8aeb495f82967d0358908a9e98781ccaa928c48682242ae2b64a50f1f7edea2d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[1, 2, 3, 4, 0, 0, 0, 0, 0, 0]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[1, 2, 3, 4, 0, 0, 0, 0, 0, 0]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[1, 2, 3, 4, 0, 0, 0, 0, 0, 0]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "1d932fbe279fb843d1f203e0f4ab506c94569c4cfbdd1ea62b3f636cd94a4686",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This functionality could just as well be achieved with a regular `while` loop:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm này cũng có thể đạt được bằng vòng lặp `while` thông thường:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "2d08c50055ed7fbedb8ecc8ce3b65dd400bea9ca2967e4e60b811e508b8e8852",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def fill_list(numbers: list):\n    \"\"\" If the length of the list is less than 10, add items to the list \"\"\"\n    while len(numbers) < 10:\n        numbers.append(0)\n\nif __name__ == \"__main__\":\n    test_list = [1,2,3,4]\n    fill_list(test_list)\n    print(test_list)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def fill_list(numbers: list):\n    \"\"\" If the length of the list is less than 10, add items to the list \"\"\"\n    while len(numbers) < 10:\n        numbers.append(0)\n\nif __name__ == \"__main__\":\n    test_list = [1,2,3,4]\n    fill_list(test_list)\n    print(test_list)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2d08c50055ed7fbedb8ecc8ce3b65dd400bea9ca2967e4e60b811e508b8e8852",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "0732b280f71166145361239545b969b1f0ae4992023bac1f280ed172352e9d2b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The more traditional iterative approach produces a shorter program which is arguably also easier to understand. With the recursive version it is not as clear that throughout the process we are working on the very same list. That is, however, the case, and that is why the recursive function works just as well."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cách tiếp cận lặp lại truyền thống hơn tạo ra một chương trình ngắn hơn và được cho là cũng dễ hiểu hơn. Với phiên bản đệ quy, không rõ ràng là trong suốt quá trình chúng ta đang làm việc trên cùng một danh sách. Tuy nhiên, trường hợp đó là như vậy và đó là lý do tại sao hàm đệ quy cũng hoạt động tốt như vậy."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0016",
+      "type": "text_box",
+      "order": 16,
+      "source_hash": "1b36a3ea240a9a35cb91f623bc0e92b9bd8be418f7ed2c7734f8bf425dc92c47",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Computer science theory often differentiates between _iterative_ and _recursive_ algorithms, so it is best to become familiar with these terms right from the start. Iterative solutions are ones that are based on sequential processing of items, often using loops. So far we have dealt with iterative methods quite exclusively. Recursive, on the other hand, refers to a method where the function calls itself with changing parameter values.\n\nIn principle it should be possible to solve any problem with either iterative or recursive methods. In practice, however, one or the other is usually clearly better suited to each problem. The ability to determine which is better comes largely with practice."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lý thuyết khoa học máy tính thường phân biệt giữa các thuật toán _iterative_ và _recursive_, vì vậy tốt nhất bạn nên làm quen với các thuật ngữ này ngay từ đầu. Giải pháp lặp là giải pháp dựa trên việc xử lý tuần tự các mục, thường sử dụng vòng lặp. Cho đến nay chúng ta đã xử lý khá độc quyền các phương thức lặp. Mặt khác, đệ quy đề cập đến một phương thức trong đó hàm gọi chính nó với các giá trị tham số thay đổi.\n\nVề nguyên tắc, có thể giải quyết bất kỳ vấn đề nào bằng phương pháp lặp hoặc đệ quy. Tuy nhiên, trong thực tế, cái này hay cái kia thường phù hợp hơn với từng vấn đề. Khả năng xác định cái nào tốt hơn phần lớn đến từ thực hành."
+      },
+      "metadata": {
+        "variant": "hint",
+        "name_original": "Iterative or recursive?",
+        "name_vi": "",
+        "attributes": {
+          "variant": "hint",
+          "name": "Iterative or recursive?"
+        }
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0017",
+      "type": "exercise",
+      "order": 17,
+      "source_hash": "df913fae94e052582ca7c918243c2bfacc6c3811b30008a67668c52cb8833808",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a _recursive function_ named `add_numbers_to_list(numbers: list)`. The function takes a list of numbers as its argument, and adds new numbers to the list until the length of the list is divisible by five. Each number added to the list should be one greater than the last number in the list.\n\nThe function must call itself recursively. Please see the example below.\n\n```python\nnumbers = [1,3,4,5,10,11]\nadd_numbers_to_list(numbers)\nprint(numbers)\n```\n\n<sample-output>\n\n[1, 3, 4, 5, 10, 11, 12, 13, 14, 15]\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng viết _hàm đệ quy_ có tên `add_numbers_to_list(numbers: list)`. Hàm lấy danh sách các số làm đối số và thêm các số mới vào danh sách cho đến khi độ dài của danh sách chia hết cho 5. Mỗi số được thêm vào danh sách phải lớn hơn số cuối cùng trong danh sách một đơn vị.\n\nHàm phải gọi chính nó một cách đệ quy. Xin vui lòng xem ví dụ dưới đây.\n\n```python\nnumbers = [1,3,4,5,10,11]\nadd_numbers_to_list(numbers)\nprint(numbers)\n```\n\n<sample-output>\n\n[1, 3, 4, 5, 10, 11, 12, 13, 14, 15]\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-13_add_numbers_to_list",
+        "exercise_type": "programming-exercise",
+        "name": "Add numbers to a list",
+        "tmc_name": "part11-13_add_numbers_to_list",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0018",
+      "type": "heading",
+      "order": 18,
+      "source_hash": "8681fa7b49e27a6c954cb232aaad15f23b9ee846f46e628b1a7e6f0cd077f890",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Recursion and return values"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Giá trị đệ quy và trả về"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "9d01070fe21e1572d08bb239adf6558989c145136d3081d7bdba262bc2c78cda",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Recursive functions can also have return values. In the last few sections we've worked with factorials, so let's write a recursive factorial function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm đệ quy cũng có thể có giá trị trả về. Trong một số phần trước, chúng ta đã làm việc với giai thừa, vì vậy hãy viết một hàm giai thừa đệ quy:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0020",
+      "type": "code",
+      "order": 20,
+      "source_hash": "1152df5f1c15fb45ec7772f58e6b68ed11425011cd146d6c20734c6b1648724e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\ndef factorial(n: int):\n    \"\"\" The function calculates the factorial n! for n >= 0 \"\"\"\n    if n < 2:\n        # The factorial for 0 and 1 is 1\n        return 1\n\n    # Call the function again with an argument that is one smaller\n    return n * factorial(n - 1)\n\nif __name__ == \"__main__\":\n    # Tesing our function\n    for i in range(1, 7):\n        print(f\"The factorial of {i} is {factorial(i)}\")\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "\ndef factorial(n: int):\n    \"\"\" The function calculates the factorial n! for n >= 0 \"\"\"\n    if n < 2:\n        # The factorial for 0 and 1 is 1\n        return 1\n\n    # Call the function again with an argument that is one smaller\n    return n * factorial(n - 1)\n\nif __name__ == \"__main__\":\n    # Tesing our function\n    for i in range(1, 7):\n        print(f\"The factorial of {i} is {factorial(i)}\")\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "1152df5f1c15fb45ec7772f58e6b68ed11425011cd146d6c20734c6b1648724e",
+        "length_lines": 14
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0021",
+      "type": "sample_output",
+      "order": 21,
+      "source_hash": "c5e82c0ca295eced383db9237ebe36c0ff3c78b1a765496a793409c98e1c1818",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The factorial of 1 is 1\nThe factorial of 2 is 2\nThe factorial of 3 is 6\nThe factorial of 4 is 24\nThe factorial of 5 is 120\nThe factorial of 6 is 720"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The factorial of 1 is 1\nThe factorial of 2 is 2\nThe factorial of 3 is 6\nThe factorial of 4 is 24\nThe factorial of 5 is 120\nThe factorial of 6 is 720"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe factorial of 1 is 1\nThe factorial of 2 is 2\nThe factorial of 3 is 6\nThe factorial of 4 is 24\nThe factorial of 5 is 120\nThe factorial of 6 is 720\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "ef7235cc633bfdb425fa923d742c0362e4a996c054cac629d6b196ddce97475d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If the parameter of the recursive factorial function is 0 or 1, the function returns 1, because this is how the factorial operation is defined. In any other case the function returns the value `n * factorial(n - 1)`, which is the value of its parameter `n` multiplied by the return value of the function call `factorial(n - 1)`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu tham số của hàm giai thừa đệ quy là 0 hoặc 1, hàm sẽ trả về 1, vì đây là cách xác định phép toán giai thừa. Trong mọi trường hợp khác, hàm trả về giá trị `n * factorial(n - 1)`, là giá trị của tham số `n` nhân với giá trị trả về của lệnh gọi hàm `factorial(n - 1)`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "c37ff12e128e03b6ff796d6ff8b8b1c43076cf7681bb978101f7c74ac52afc65",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The crucial part here is that the function definition contains a stop condition. If this is met, the recursion ends. In this case that condition is `n < 2`. We know it will be reached eventually, beacuse the value passed as the argument to the function is decreased by one on each level of the recursion."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phần quan trọng ở đây là định nghĩa hàm có chứa điều kiện dừng. Nếu điều này được đáp ứng, đệ quy kết thúc. Trong trường hợp này điều kiện đó là `n < 2`. Chúng ta biết cuối cùng nó sẽ đạt được vì giá trị được truyền khi đối số của hàm giảm đi một ở mỗi cấp độ đệ quy."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "a0422a9c9f74dfb3efbd5e511e08cf381d3496502d10de8aca221196d0271180",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit) can be a great help in making sense of recursive programs."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "[Công cụ trực quan hóa](http://www.pythontutor.com/visualize.html#mode=edit) có thể trợ giúp đắc lực trong việc hiểu các chương trình đệ quy."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "37d1ab72b8536edf09786761ab876ae40e37d2df5b6679126c5f7b5a8df27847",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "It might make the above example a little clearer if we used helper variables:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nó có thể làm cho ví dụ trên rõ ràng hơn một chút nếu chúng ta sử dụng các biến trợ giúp:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0026",
+      "type": "code",
+      "order": 26,
+      "source_hash": "2ada02966912c26667ed07b0c46804b1cace3fd01a065754583229858f50519a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def factorial(n: int):\n    if n < 2:\n        return 1\n\n    factorial_one_level_down = factorial(n - 1)\n    factorial_now = n * factorial_one_level_down\n    return factorial_now\n    \nfactorial(5)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def factorial(n: int):\n    if n < 2:\n        return 1\n\n    factorial_one_level_down = factorial(n - 1)\n    factorial_now = n * factorial_one_level_down\n    return factorial_now\n    \nfactorial(5)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2ada02966912c26667ed07b0c46804b1cace3fd01a065754583229858f50519a",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "617c41754454c13e168ce373d69011213ca5cec8d1543cda13471f34f7ac6bba",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Take a look at how the [visualisation tool](http://www.pythontutor.com/visualize.html#code=def%20factorial%28n%3A%20int%29%3A%0A%20%20%20%20if%20n%20%3C%202%3A%0A%20%20%20%20%20%20%20%20return%201%0A%0A%20%20%20%20factorial_one_level_down%20%3D%20factorial%28n%20-%201%29%0A%20%20%20%20factorial_now%20%3D%20n%20*%20factorial_one_level_down%0A%20%20%20%20return%20factorial_now%0A%20%20%20%20%0Afactorial%285%29&cumulative=false&curInstr=5&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false) demonstrates the progress of the recursion."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy xem [công cụ trực quan hóa](http://www.pythontutor.com/visualize.html#code=def%20factorial%28n%3A%20int%29%3A%0A%20%20%20%20if%20n%20%3C%202%3A%0A%20%20%20%20%20%20%20%20return%201%0A%0A%20%20%20%20factorial_one_level_down%20%3D%20factorial%28n%20-%201%29%0A%20%20%20%20factorial_now%20%3D%20n%20*%20factorial_one_level_down%0A%20%20%20%20return%20factorial_now%0A%20%20%20%20%0Afactorial%285%29&cumulative=false&curInstr=5&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false) thể hiện tiến trình đệ quy như thế nào."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "e9228678abfa1b3c8380d96235c24d49cf4b598edbe269a008baa47139fb7846",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The visualisation tool has a small quirk in the way it handles the call stack, as it seems to \"grow\" downwards. Usually call stacks are depicted as just that: stacks, where the new calls are placed on top. In the visualisation tool, the currently active function call is the shaded block at the bottom, which has its own copies of the variables visible."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Công cụ trực quan hóa có một điểm khác biệt nhỏ trong cách nó xử lý ngăn xếp cuộc gọi, vì nó dường như \"phát triển\" xuống dưới. Thông thường, ngăn xếp cuộc gọi được mô tả như sau: ngăn xếp, nơi các cuộc gọi mới được đặt lên trên cùng. Trong công cụ trực quan hóa, lệnh gọi hàm hiện đang hoạt động là khối được tô bóng ở phía dưới, khối này hiển thị các bản sao riêng của các biến."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "5b603ef68091014d6fd40585d83651e04e81e0e449abcf6b4cc7b8af9901c8a2",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "When the recursive factorial function is called, the call stack is built until the limit posed by `n < 2` is reached. Then the final function call in the stack returns with a value - it is `1`, as `n` is now less than 2. This return value is passed to the previous function call in the stack, where it is used to calculate that function call's return value, and so forth back out of the stack."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khi hàm giai thừa đệ quy được gọi, ngăn xếp cuộc gọi sẽ được xây dựng cho đến khi đạt đến giới hạn do `n < 2` đặt ra. Sau đó, lệnh gọi hàm cuối cùng trong ngăn xếp trả về một giá trị - đó là `1`, vì `n` hiện nhỏ hơn 2. Giá trị trả về này được chuyển cho lệnh gọi hàm trước đó trong ngăn xếp, trong đó nó được sử dụng để tính giá trị trả về của lệnh gọi hàm đó, v.v. trở lại ngăn xếp."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "3f57b7348e4d7d1e9c22e88af841c09d31cab7d31e1a95298c32c62829dc8230",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The return value of each function call is stored in the helper variable `factorial_now`. Please go through the visualisation carefully until you understand what happens at each step, and pay special attention to the value returned at each step."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Giá trị trả về của mỗi lệnh gọi hàm được lưu trữ trong biến trợ giúp `factorial_now`. Vui lòng xem kỹ hình ảnh trực quan cho đến khi bạn hiểu điều gì xảy ra ở mỗi bước và đặc biệt chú ý đến giá trị được trả về ở mỗi bước."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0031",
+      "type": "image",
+      "order": 31,
+      "source_hash": "9f76009ec2e696275b06f00cf3fbe049fb71fbd512680ccaba4b267e70b61afa",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "11_1_1.png",
+        "alt": "",
+        "attributes": {
+          "src": "11_1_1.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "c546f1d3de1cc08bd71a9a0afe991a452561fad211dfa066143980855f1ad947",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at another common recursive example: the Fibonacci number. In a Fibonacci sequence each number is the sum of the two preceding numbers. The first two numbers are here defined as 1 and 1, and the sequence then begins like this: 1, 1, 2, 3, 5, 8, 13, 21, 34."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy xem một ví dụ đệ quy phổ biến khác: số Fibonacci. Trong dãy Fibonacci, mỗi số là tổng của hai số đứng trước. Hai số đầu tiên ở đây được định nghĩa là 1 và 1, và chuỗi bắt đầu như sau: 1, 1, 2, 3, 5, 8, 13, 21, 34."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0033",
+      "type": "code",
+      "order": 33,
+      "source_hash": "9eecbcb6b98d4707e06b4bc37876f4b8b76fab2707e9f933c5f14df3899181bc",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def fibonacci(n: int):\n    \"\"\" The function returns the nth number in the Fibonacci sequence (1, 1, 2, 3, 5, 8 etc.); n > 0\"\"\"\n\n    if n <= 2:\n        # the first two are ones\n        return 1\n\n    # All other numbers equal the sum of the two preceding numbers in the sequence\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\n# Test that everything works\nif __name__ == \"__main__\":\n    for i in range(1, 11):\n        print(f\"The {i}. number in the Fibonacci sequence is {fibonacci(i)}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def fibonacci(n: int):\n    \"\"\" The function returns the nth number in the Fibonacci sequence (1, 1, 2, 3, 5, 8 etc.); n > 0\"\"\"\n\n    if n <= 2:\n        # the first two are ones\n        return 1\n\n    # All other numbers equal the sum of the two preceding numbers in the sequence\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\n# Test that everything works\nif __name__ == \"__main__\":\n    for i in range(1, 11):\n        print(f\"The {i}. number in the Fibonacci sequence is {fibonacci(i)}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "9eecbcb6b98d4707e06b4bc37876f4b8b76fab2707e9f933c5f14df3899181bc",
+        "length_lines": 14
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0034",
+      "type": "sample_output",
+      "order": 34,
+      "source_hash": "74e8ad7e84d80f110343f5afcbd5106f486dfa064ec415856dbe772dc0bc3962",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The 1. number in the Fibonacci sequence is 1\nThe 2. number in the Fibonacci sequence is 1\nThe 3. number in the Fibonacci sequence is 2\nThe 4. number in the Fibonacci sequence is 3\nThe 5. number in the Fibonacci sequence is 5\nThe 6. number in the Fibonacci sequence is 8\nThe 7. number in the Fibonacci sequence is 13\nThe 8. number in the Fibonacci sequence is 21\nThe 9. number in the Fibonacci sequence is 34\nThe 10. number in the Fibonacci sequence is 55"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The 1. number in the Fibonacci sequence is 1\nThe 2. number in the Fibonacci sequence is 1\nThe 3. number in the Fibonacci sequence is 2\nThe 4. number in the Fibonacci sequence is 3\nThe 5. number in the Fibonacci sequence is 5\nThe 6. number in the Fibonacci sequence is 8\nThe 7. number in the Fibonacci sequence is 13\nThe 8. number in the Fibonacci sequence is 21\nThe 9. number in the Fibonacci sequence is 34\nThe 10. number in the Fibonacci sequence is 55"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe 1. number in the Fibonacci sequence is 1\nThe 2. number in the Fibonacci sequence is 1\nThe 3. number in the Fibonacci sequence is 2\nThe 4. number in the Fibonacci sequence is 3\nThe 5. number in the Fibonacci sequence is 5\nThe 6. number in the Fibonacci sequence is 8\nThe 7. number in the Fibonacci sequence is 13\nThe 8. number in the Fibonacci sequence is 21\nThe 9. number in the Fibonacci sequence is 34\nThe 10. number in the Fibonacci sequence is 55\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "7df5ad3c87bcea1af001d8891f87ce897c997b565b58e8468a36ef4051dd2a57",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This time the stop condition is that the parameter is less than or equal to 2, because the entire sequence is defined from the first two numbers onwards, and we defined the first two numbers to be equal to 1."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lần này điều kiện dừng là tham số nhỏ hơn hoặc bằng 2, vì toàn bộ dãy được xác định từ hai số đầu tiên trở đi và chúng ta đã xác định hai số đầu tiên bằng 1."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "c81e525bf435dad75b61ced77de5df6c3becf9743d65da8e4e353aa2c1cb43df",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "So, how does this function work in practice?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vậy hàm này hoạt động như thế nào trong thực tế?"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "bd2d48a09a47c73412dcc607ca0c3aea3ab7ed9beca9de53c5772e8fcb986a9e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If the function is called with 1 or 2 as its argument, it returns 1, as dictated by the condition `n <= 2`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu hàm được gọi với đối số là 1 hoặc 2 thì hàm đó sẽ trả về 1, như được chỉ định bởi điều kiện `n <= 2`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "5a4534c9a1de808dc6ad53b265f86599d777100ed0fcc65a4526574d35c83087",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If the argument is 3 or greater, the function returns the value of `fibonacci(n - 1) + fibonacci(n - 2)`. If the argument is 3 exactly, this value is equal to `fibonacci(2) + fibonacci(1)`, and we already know the result of both of those from the previous step. `1 + 1` equals 2, which is indeed the third number in the Fibonacci sequence."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu đối số là 3 hoặc lớn hơn, hàm trả về giá trị `fibonacci(n - 1) + fibonacci(n - 2)`. Nếu đối số chính xác là 3 thì giá trị này bằng `fibonacci(2) + fibonacci(1)` và chúng ta đã biết kết quả của cả hai giá trị đó ở bước trước. `1 + 1` bằng 2, đây thực sự là số thứ ba trong dãy Fibonacci."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "9ed8b6b93d5d5e2fa09523c551bd50a07b2a78f1d1dc6714e0e27d55d97756d0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If the argument is 4, the return value is `fibonacci(3) + fibonacci(2)`, which we now know to be `2 + 1`, which equals 3."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu đối số là 4 thì giá trị trả về là `fibonacci(3) + fibonacci(2)`, hiện nay chúng ta biết là `2 + 1`, bằng 3."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "11dac62ca352203af39d5d882d71a92feb293c1f6ff3d01cc2d55ba5a2a0164f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If the argument is 5, the return value is `fibonacci(4) + fibonacci(3)`, which we now know to be `3 + 2`, which equals 5."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu đối số là 5 thì giá trị trả về là `fibonacci(4) + fibonacci(3)`, hiện nay chúng ta biết là `3 + 2`, bằng 5."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "623af9272b7b6a6672ced3e7afa06c8c6bf3273cc2168d0714cacf38262be222",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "And so forth, and so forth."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Và vân vân, vân vân."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "9ba1ddd1d9a770bdc756c1f084bb0d5ef1061ab1b2488758797bbd51c608d1ad",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We can verify at every step that the function produces the correct results, which is often enough in basic programming tasks. The formal verifiability of algorithms is a topic for more advanced courses, such as [Data Structures and Algorithms](https://studies.helsinki.fi/courses/cur/hy-opt-cur-2122-808d3413-3db0-4ab9-89d9-e816e94bf51d)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta có thể xác minh ở mỗi bước rằng hàm tạo ra kết quả chính xác, điều này thường đủ trong các tác vụ lập trình cơ bản. Khả năng xác minh chính thức của thuật toán là chủ đề cho các khóa học nâng cao hơn, chẳng hạn như [Cấu trúc dữ liệu và thuật toán](https://studies.helsinki.fi/courses/cur/hy-opt-cur-2122-808d3413-3db0-4ab9-89d9-e816e94bf51d)."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0043",
+      "type": "exercise",
+      "order": 43,
+      "source_hash": "292437168b050afe4e3d124b70d46a601e68994b02ae2f2779a0ae6edb7dbf2f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a recursive function named `recursive_sum(number: int)` which calculates the sum `1 + 2 + ... + number`. The exercise template contains the following outline:\n\n```python\ndef recursive_sum(number: int):\n    # if the number is 1, there is nothing else to add\n    if number <= 1:\n        return number\n\n    # fill in the rest of the function\n```\n\nSome examples:\n\n```python\nresult = recursive_sum(3)\nprint(result)\n\nprint(recursive_sum(5))\nprint(recursive_sum(10))\n```\n\n<sample-output>\n\n6\n15\n55\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết hàm đệ quy có tên `recursive_sum(number: int)` để tính tổng `1 + 2 + ... + number`. Mẫu bài tập có dàn ý sau:\n\n```python\ndef recursive_sum(number: int):\n    # if the number is 1, there is nothing else to add\n    if number <= 1:\n        return number\n\n    # fill in the rest of the function\n```\n\nMột số ví dụ:\n\n```python\nresult = recursive_sum(3)\nprint(result)\n\nprint(recursive_sum(5))\nprint(recursive_sum(10))\n```\n\n<sample-output>\n\n6\n15\n55\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-14_recursive_sum",
+        "exercise_type": "programming-exercise",
+        "name": "Recursive sum",
+        "tmc_name": "part11-14_recursive_sum",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0044",
+      "type": "exercise",
+      "order": 44,
+      "source_hash": "f1edc0a8e22e5cf63864d44e2d8f51a9860b5869f58053382765efc6ac57edbc",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains the function `balanced_brackets` which takes a string as its argument. It checks if the _round_ brackets, or parentheses, within the string are balanced. That is, for each opening bracket `(` there should be a closing bracket `)`, and all pairs of brackets should be matched in order, i.e. the bracket pairs must not be crossed.\n\n```python\ndef balanced_brackets(my_string: str):\n    if len(my_string) == 0:\n        return True\n    if not (my_string[0] == '(' and my_string[-1] == ')'):\n        return False\n\n    # remove first and last character\n    return balanced_brackets(my_string[1:-1])\n\nok = balanced_brackets(\"(((())))\")\nprint(ok)\n\n# there is one closing bracket too many, so this produces False\nok = balanced_brackets(\"()())\")\nprint(ok)\n\n# this one starts with a closing bracket, False again\nok = balanced_brackets(\")()\")\nprint(ok)\n\n# this produces False because the function only handles entirely nested brackets\nok = balanced_brackets(\"()(())\")\nprint(ok)\n```\n\n<sample-output>\n\nTrue\nFalse\nFalse\nFalse\n\n</sample-output>\n\nPlease expand the function so that it also works with square brackets `[]`. The function should also ignore all characters which are not brackets `()` or `[]`. The different types of brackets must be matched correctly in order.\n\nPlease have a look at the examples below::\n\n```python\nok = balanced_brackets(\"([([])])\")\nprint(ok)\n\nok = balanced_brackets(\"(python version [3.7]) please use this one!\")\nprint(ok)\n\n# this is no good, the closing bracket doesn't match\nok = balanced_brackets(\"(()]\")\nprint(ok)\n\n# different types of brackets are mismatched\nok = balanced_brackets(\"([bad egg)]\")\nprint(ok)\n```\n\nNB: the function only needs to handle entirely nested brackets. The string `(x + 1)(y + 1)` should produce `False` as the brackets are not nested within each other.\n\n<sample-output>\n\nTrue\nTrue\nFalse\nFalse\n\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mẫu bài tập chứa hàm `balanced_brackets` lấy một chuỗi làm đối số. Nó kiểm tra xem dấu ngoặc tròn hoặc dấu ngoặc đơn trong chuỗi có cân bằng hay không. Nghĩa là, đối với mỗi dấu ngoặc mở `(` phải có dấu ngoặc đóng `)` và tất cả các cặp dấu ngoặc phải khớp theo thứ tự, tức là các cặp dấu ngoặc không được gạch chéo.\n\n```python\ndef balanced_brackets(my_string: str):\n    if len(my_string) == 0:\n        return True\n    if not (my_string[0] == '(' and my_string[-1] == ')'):\n        return False\n\n    # remove first and last character\n    return balanced_brackets(my_string[1:-1])\n\nok = balanced_brackets(\"(((())))\")\nprint(ok)\n\n# there is one closing bracket too many, so this produces False\nok = balanced_brackets(\"()())\")\nprint(ok)\n\n# this one starts with a closing bracket, False again\nok = balanced_brackets(\")()\")\nprint(ok)\n\n# this produces False because the function only handles entirely nested brackets\nok = balanced_brackets(\"()(())\")\nprint(ok)\n```\n\n<sample-output>\n\nĐúng\nsai\nsai\nsai\n\n</sample-output>\n\nVui lòng mở rộng chức năng để nó cũng hoạt động với dấu ngoặc vuông `[]`. Hàm cũng nên bỏ qua tất cả các ký tự không phải là dấu ngoặc `()` hoặc `[]`. Các loại dấu ngoặc khác nhau phải được khớp chính xác theo thứ tự.\n\nMời các bạn xem các ví dụ dưới đây::\n\n```python\nok = balanced_brackets(\"([([])])\")\nprint(ok)\n\nok = balanced_brackets(\"(python version [3.7]) please use this one!\")\nprint(ok)\n\n# this is no good, the closing bracket doesn't match\nok = balanced_brackets(\"(()]\")\nprint(ok)\n\n# different types of brackets are mismatched\nok = balanced_brackets(\"([bad egg)]\")\nprint(ok)\n```\n\nNB: hàm chỉ cần xử lý các dấu ngoặc lồng nhau hoàn toàn. Chuỗi `(x + 1)(y + 1)` sẽ tạo ra `False` vì các dấu ngoặc không được lồng vào nhau.\n\n<sample-output>\n\nĐúng\nĐúng\nsai\nsai\n\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-15_balanced_brackets",
+        "exercise_type": "programming-exercise",
+        "name": "Balance all the brackets",
+        "tmc_name": "part11-15_balanced_brackets",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0045",
+      "type": "heading",
+      "order": 45,
+      "source_hash": "275036f95e31fce6eb0691d71fe8fab5fccdd72d211dec30df1bc88f61d008dd",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Binary search"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tìm kiếm nhị phân"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0046",
+      "type": "paragraph",
+      "order": 46,
+      "source_hash": "441b3f0403cb0e012a1adc8b18c8b8cbc097077134a34fc72dcc473f8fddd31d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In a binary search we have a sorted list of items and we are trying to find a certain item within. The order of the items could be, for example, numbers from smallest to greatest, or strings from alphabetically first to last. The method of sorting doesn't matter, as long as it is known and relevant to the item we are trying to find."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong tìm kiếm nhị phân, chúng tôi có một danh sách các mục được sắp xếp và chúng tôi đang cố gắng tìm một mục nhất định bên trong. Ví dụ: thứ tự của các mục có thể là các số từ nhỏ nhất đến lớn nhất hoặc các chuỗi từ đầu đến cuối theo thứ tự bảng chữ cái. Phương pháp sắp xếp không quan trọng, miễn là nó được biết đến và phù hợp với mục mà chúng ta đang cố gắng tìm kiếm."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0047",
+      "type": "paragraph",
+      "order": 47,
+      "source_hash": "f836ef0aa2e1455575d8312f043db21568d5a075bb145c7d7e2f3cfac32be2b8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The idea of a binary search is to always look at the item at the very centre of the list. We then have three possible scenarios. If the item at the centre is \n- the one we are looking for: we can return an indication that we found the item\n- smaller than the one we are looking for: we can re-do the search in the greater half of the list\n- greater than the one we are looking for: we can re-do the search in the smaller half of the list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ý tưởng của tìm kiếm nhị phân là luôn nhìn vào mục ở chính giữa danh sách. Sau đó chúng tôi có ba kịch bản có thể xảy ra. Nếu mục ở trung tâm là \n- thứ chúng ta đang tìm kiếm: chúng ta có thể trả về dấu hiệu cho thấy chúng ta đã tìm thấy món hàng đó\n- nhỏ hơn cái chúng ta đang tìm: chúng ta có thể thực hiện lại tìm kiếm ở nửa lớn hơn của danh sách\n- lớn hơn kết quả chúng tôi đang tìm kiếm: chúng tôi có thể thực hiện lại tìm kiếm ở nửa nhỏ hơn của danh sách."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0048",
+      "type": "paragraph",
+      "order": 48,
+      "source_hash": "b6c0255ce9aebe7a69da2395dbb90e192bb045a43d5532d36aeb311a64d3acc3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If the list is empty, we can determine that the item was not found, and return an indication of that."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu danh sách trống, chúng tôi có thể xác định rằng mục đó không được tìm thấy và trả về dấu hiệu đó."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0049",
+      "type": "paragraph",
+      "order": 49,
+      "source_hash": "037877e4dc353fecdd536ed4303b8c67963f9c366c7a94e133420c601cacd3be",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the following image we can see how a binary search progresses as it looks for the number 24:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong hình ảnh sau đây, chúng ta có thể thấy quá trình tìm kiếm nhị phân tiến triển như thế nào khi tìm kiếm số 24:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0050",
+      "type": "image",
+      "order": 50,
+      "source_hash": "1b20c62272c387ebd17b7940c7becf1f251362acabcf470c942ffd214e5dc269",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "11_3_1.png",
+        "alt": "",
+        "attributes": {
+          "src": "11_3_1.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0051",
+      "type": "paragraph",
+      "order": 51,
+      "source_hash": "f99598809feeec9944fbed822faeb67f326618a394d011e4ff00338835335c97",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Here is a recursive algorithm for a binary search:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đây là một thuật toán đệ quy cho tìm kiếm nhị phân:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0052",
+      "type": "code",
+      "order": 52,
+      "source_hash": "003f527436cd504d92c38a0b5d7179ed20fb4a50f4c82beb55918586e6adb1d0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def binary_search(target: list, item: int, left : int, right : int):\n    \"\"\" The function returns True if the item is contained in the target list, False otherwise \"\"\"\n    # If the search area is empty, item was not found\n    if left > right:\n        return False\n\n    # Calculate the centre of the search area, integer result\n    centre = (left+right)//2\n\n    # If the item is found at the centre, return\n    if target[centre] == item:\n        return True\n\n    # If the item is greater, search the greater half\n    if target[centre] < item:\n        return binary_search(target, item, centre+1, right)\n    # Else the item is smaller, search the smaller half\n    else:\n        return binary_search(target, item, left, centre-1)\n\n\nif __name__ == \"__main__\":\n    # Test your function\n    target = [1, 2, 4, 5, 7, 8, 11, 13, 14, 18]\n    print(binary_search(target, 2, 0, len(target)-1))\n    print(binary_search(target, 13, 0, len(target)-1))\n    print(binary_search(target, 6, 0, len(target)-1))\n    print(binary_search(target, 15, 0, len(target)-1))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def binary_search(target: list, item: int, left : int, right : int):\n    \"\"\" The function returns True if the item is contained in the target list, False otherwise \"\"\"\n    # If the search area is empty, item was not found\n    if left > right:\n        return False\n\n    # Calculate the centre of the search area, integer result\n    centre = (left+right)//2\n\n    # If the item is found at the centre, return\n    if target[centre] == item:\n        return True\n\n    # If the item is greater, search the greater half\n    if target[centre] < item:\n        return binary_search(target, item, centre+1, right)\n    # Else the item is smaller, search the smaller half\n    else:\n        return binary_search(target, item, left, centre-1)\n\n\nif __name__ == \"__main__\":\n    # Test your function\n    target = [1, 2, 4, 5, 7, 8, 11, 13, 14, 18]\n    print(binary_search(target, 2, 0, len(target)-1))\n    print(binary_search(target, 13, 0, len(target)-1))\n    print(binary_search(target, 6, 0, len(target)-1))\n    print(binary_search(target, 15, 0, len(target)-1))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "003f527436cd504d92c38a0b5d7179ed20fb4a50f4c82beb55918586e6adb1d0",
+        "length_lines": 28
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0053",
+      "type": "sample_output",
+      "order": 53,
+      "source_hash": "3fb6bb7306c0417fa3f3f697bc78126bbcf2a1659e294609cabd10e0deb169e4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "True\nTrue\nFalse\nFalse"
+      },
+      "translation": {
+        "language": "text",
+        "content": "True\nTrue\nFalse\nFalse"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nTrue\nTrue\nFalse\nFalse\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-3-recursion-0054",
+      "type": "paragraph",
+      "order": 54,
+      "source_hash": "781ab2782b7fba0819e43b5248c6cd16ddd47985ed281a09bdca66e3d16b0669",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The `binary_search` function takes four arguments: the target list, the item being searched for, and the left and right edges of the search area. When the function is first called, the search area covers the entire target list. The left edge is at index `0` and the right edge is at index `len(target)-1`. The function calculates the central index and checks that position on the list. Either the item was found, or the search continues to the smaller or greater half of the target list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm `binary_search` nhận bốn đối số: danh sách mục tiêu, mục đang được tìm kiếm và các cạnh trái và phải của vùng tìm kiếm. Khi hàm được gọi lần đầu tiên, vùng tìm kiếm sẽ bao gồm toàn bộ danh sách mục tiêu. Cạnh trái có chỉ số `0` và cạnh phải có chỉ số `len(target)-1`. Hàm tính chỉ số trung tâm và kiểm tra vị trí đó trong danh sách. Mục đã được tìm thấy hoặc việc tìm kiếm tiếp tục đến nửa nhỏ hơn hoặc lớn hơn của danh sách mục tiêu."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0055",
+      "type": "paragraph",
+      "order": 55,
+      "source_hash": "d88e8843853b7aada3bf43ed8acfe9bc17bc552d234217d43ca2aa0ce4e52a04",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's compare this to a simple linear search. In a linear search, the search area is traversed from the beginning onwards, until either the item is found, or we run out of search area. The number of steps needed to cover the entire search area grows _linearly_ at the same pace as the size of the search area. Each search step covers only one search candidate from the beginning of the search area. Let's assume the item searched for is _not_ found. If the search area is a million items long, we would have to take a million search steps to make sure the item is not in the search area."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy so sánh điều này với một tìm kiếm tuyến tính đơn giản. Trong tìm kiếm tuyến tính, vùng tìm kiếm được duyệt từ đầu trở đi cho đến khi tìm thấy mục hoặc hết vùng tìm kiếm. Số bước cần thiết để bao phủ toàn bộ khu vực tìm kiếm tăng lên _tuyến tính_ với cùng tốc độ với kích thước của khu vực tìm kiếm. Mỗi bước tìm kiếm chỉ bao gồm một ứng cử viên tìm kiếm từ đầu vùng tìm kiếm. Giả sử mục được tìm kiếm là _not_ được tìm thấy. Nếu vùng tìm kiếm dài một triệu mục, chúng ta sẽ phải thực hiện một triệu bước tìm kiếm để đảm bảo mục đó không có trong vùng tìm kiếm."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-3-recursion-0056",
+      "type": "paragraph",
+      "order": 56,
+      "source_hash": "bf1c175aa1e980361739b4936c791721172cd619162101ab41645018f25038eb",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In a binary search, on the other hand, the number of steps needed grows _logarithmically_. Let's assume again that the item searched for is _not_ found. The search area is cut in half with each step, as we know that the item is either smaller or greater than the current search candidate at the centre. 2 to the power of 20 (2^20) is already well over 1 million, so it will take at most 20 steps to cover the entire search area with a binary search. So, when we are dealing with sorted search areas, as we often are when dealing with computers and materials that are meant to be automatically processed, a binary search is much more efficient than a linear search."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mặt khác, trong tìm kiếm nhị phân, số bước cần thiết tăng lên _logarit_. Giả sử một lần nữa rằng mục được tìm kiếm không được tìm thấy. Vùng tìm kiếm bị cắt làm đôi theo mỗi bước, vì chúng tôi biết rằng mục đó nhỏ hơn hoặc lớn hơn ứng cử viên tìm kiếm hiện tại ở trung tâm. 2 lũy thừa 20 (2^20) đã là hơn 1 triệu, do đó sẽ mất tối đa 20 bước để bao phủ toàn bộ khu vực tìm kiếm bằng tìm kiếm nhị phân. Vì vậy, khi chúng ta xử lý các vùng tìm kiếm được sắp xếp, như chúng ta thường làm khi xử lý máy tính và tài liệu được xử lý tự động, tìm kiếm nhị phân hiệu quả hơn nhiều so với tìm kiếm tuyến tính."
+      },
+      "metadata": {}
+    }
+  ]
+}

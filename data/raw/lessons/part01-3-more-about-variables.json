@@ -1,0 +1,528 @@
+{
+  "id": "part01-3-more-about-variables",
+  "part": 1,
+  "part_slug": "part-1",
+  "slug": "3-more-about-variables",
+  "is_part_index": false,
+  "title_original": "More about variables",
+  "path": "/part-1/3-more-about-variables",
+  "source_path": "data/part-1/3-more-about-variables.md",
+  "source_hash": "5312a1fb35574575472d0c9858f70747c150eba66ac552c448c770ac743e7be2",
+  "frontmatter": {
+    "path": "/part-1/3-more-about-variables",
+    "title": "More about variables",
+    "hidden": false
+  },
+  "chunks_count": 84,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will be able to use variables in different contexts\n- You will know what kind of data can be stored in variables\n- You will understand the difference between strings, integers and floating point numbers",
+      "raw_source": "<text-box variant='learningObjectives' name='Learning objectives'>\n\nAfter this section\n\n- You will be able to use variables in different contexts\n- You will know what kind of data can be stored in variables\n- You will understand the difference between strings, integers and floating point numbers\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Please fill in this questionnaire before getting started with this section. You will get one exercise point for answering.",
+      "raw_source": "Please fill in this questionnaire before getting started with this section. You will get one exercise point for answering."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "87834513-84c8-5714-90b1-404e2943ad90"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"87834513-84c8-5714-90b1-404e2943ad90\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Variables are needed for various purposes in programming. You can use variables to store any information that will be needed later in the program's execution.",
+      "raw_source": "Variables are needed for various purposes in programming. You can use variables to store any information that will be needed later in the program's execution."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In Python programming variables are created like so:",
+      "raw_source": "In Python programming variables are created like so:"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "`variable_name = ...`",
+      "raw_source": "`variable_name = ...`"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here `...` means the value stored in the variable.",
+      "raw_source": "Here `...` means the value stored in the variable."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "For example, when you used the `input` command to read a string from the user, you stored the string in a variable and then used the variable later in your program:",
+      "raw_source": "For example, when you used the `input` command to read a string from the user, you stored the string in a variable and then used the variable later in your program:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "name = input(\"What is your name? \")\nprint(\"Hi, \" + name)",
+      "raw_source": "```python\nname = input(\"What is your name? \")\nprint(\"Hi, \" + name)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "What is your name? **Ghosty**\nHi, Ghosty",
+      "raw_source": "<sample-output>\n\nWhat is your name? **Ghosty**\nHi, Ghosty\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The value stored in a variable can also be defined using other variables:",
+      "raw_source": "The value stored in a variable can also be defined using other variables:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "given_name = \"Paul\"\nfamily_name = \"Python\"\n\nname = given_name + \" \" + family_name\n\nprint(name)",
+      "raw_source": "```python\ngiven_name = \"Paul\"\nfamily_name = \"Python\"\n\nname = given_name + \" \" + family_name\n\nprint(name)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Paul Python",
+      "raw_source": "<sample-output>\n\nPaul Python\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here the values stored in the three variables are not obtained from user input. They remain the same every time the program is executed. This is called _hard-coding_ data into the program.",
+      "raw_source": "Here the values stored in the three variables are not obtained from user input. They remain the same every time the program is executed. This is called _hard-coding_ data into the program."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Changing the value of a variable",
+      "raw_source": "## Changing the value of a variable"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As implied by the name _variable_, the value stored in a variable can change. In the previous section we noticed that the new value replaces the old one.",
+      "raw_source": "As implied by the name _variable_, the value stored in a variable can change. In the previous section we noticed that the new value replaces the old one."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "During the execution of the following program, the variable `word` will have three different values:",
+      "raw_source": "During the execution of the following program, the variable `word` will have three different values:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "word = input(\"Please type in a word: \")\nprint(word)\n\nword = input(\"And another word: \")\nprint(word)\n\nword = \"third\"\nprint(word)",
+      "raw_source": "```python\nword = input(\"Please type in a word: \")\nprint(word)\n\nword = input(\"And another word: \")\nprint(word)\n\nword = \"third\"\nprint(word)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in a word: **first**\nfirst\nAnd another word: **second**\nsecond\nthird",
+      "raw_source": "<sample-output>\n\nPlease type in a word: **first**\nfirst\nAnd another word: **second**\nsecond\nthird\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The value stored in the variable changes each time the variable is assigned a new value.",
+      "raw_source": "The value stored in the variable changes each time the variable is assigned a new value."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The new value of a variable can be derived from its old value. In the following example the variable `word` is first assigned a value based on user input. Then it is assigned a new value, which is the old value with three exclamation marks added to the end.",
+      "raw_source": "The new value of a variable can be derived from its old value. In the following example the variable `word` is first assigned a value based on user input. Then it is assigned a new value, which is the old value with three exclamation marks added to the end."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "word = input(\"Please type in a word: \")\nprint(word)\n\nword = word + \"!!!\"\nprint(word)",
+      "raw_source": "```python\nword = input(\"Please type in a word: \")\nprint(word)\n\nword = word + \"!!!\"\nprint(word)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in a word: **test**\ntest\ntest!!!",
+      "raw_source": "<sample-output>\n\nPlease type in a word: **test**\ntest\ntest!!!\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "hint",
+        "name": "Choosing a good name for a variable"
+      },
+      "inner_content": "* It is often useful to name variables according to what they are used for. For example, if the variable contains a word, the name `word` is a better choice than, say, `a`.\n\n* There is no set limit to the length of a variable name in Python, but there are some other limitations. A variable name should begin with a letter, and it can only contain letters, numbers and underscores &#95;.\n\n* Lowercase and uppercase letters are different characters. The variables `name`, `Name` and `NAME` are all different variables. While this rule has a few exceptions, we will ignore those for now.\n\n* It is a common programming practice in Python to use only lowercase characters in variable names. If the variable name consists of multiple words, use an underscore between the words. While this rule also has a few exceptions, we will ignore those for now.",
+      "raw_source": "<text-box variant=\"hint\" name=\"Choosing a good name for a variable\">\n\n* It is often useful to name variables according to what they are used for. For example, if the variable contains a word, the name `word` is a better choice than, say, `a`.\n\n* There is no set limit to the length of a variable name in Python, but there are some other limitations. A variable name should begin with a letter, and it can only contain letters, numbers and underscores &#95;.\n\n* Lowercase and uppercase letters are different characters. The variables `name`, `Name` and `NAME` are all different variables. While this rule has a few exceptions, we will ignore those for now.\n\n* It is a common programming practice in Python to use only lowercase characters in variable names. If the variable name consists of multiple words, use an underscore between the words. While this rule also has a few exceptions, we will ignore those for now.\n\n</text-box>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Integers",
+      "raw_source": "## Integers"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Thus far, we have only stored strings in variables, but there are also many other types of information we will want to store and access later. Let's have a look at integers first. Integers are numbers that do not have a decimal or fractional part, such as `-15`, `0` and `1`.",
+      "raw_source": "Thus far, we have only stored strings in variables, but there are also many other types of information we will want to store and access later. Let's have a look at integers first. Integers are numbers that do not have a decimal or fractional part, such as `-15`, `0` and `1`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following program creates the variable `age`, which contains an integer value.",
+      "raw_source": "The following program creates the variable `age`, which contains an integer value."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "age = 24\nprint(age)",
+      "raw_source": "```python\nage = 24\nprint(age)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The program prints out just this:",
+      "raw_source": "The program prints out just this:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "24",
+      "raw_source": "<sample-output>\n\n24\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Notice the lack of quotation marks here. In fact, if we were to add quotation marks around the number, this would mean our variable would no longer be an integer, but a string instead. A string can contain numbers, but it is processed differently.",
+      "raw_source": "Notice the lack of quotation marks here. In fact, if we were to add quotation marks around the number, this would mean our variable would no longer be an integer, but a string instead. A string can contain numbers, but it is processed differently."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "So, why does it matter that variables have a type, when the following program still prints out the same thing twice?",
+      "raw_source": "So, why does it matter that variables have a type, when the following program still prints out the same thing twice?"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number1 = 100\nnumber2 = \"100\"\n\nprint(number1)\nprint(number2)",
+      "raw_source": "```python\nnumber1 = 100\nnumber2 = \"100\"\n\nprint(number1)\nprint(number2)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "100\n100",
+      "raw_source": "<sample-output>\n\n100\n100\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Variable types matter because different operations affect different types of variables in different ways. Let's have a look at an example:",
+      "raw_source": "Variable types matter because different operations affect different types of variables in different ways. Let's have a look at an example:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number1 = 100\nnumber2 = \"100\"\n\nprint(number1 + number1)\nprint(number2 + number2)",
+      "raw_source": "```python\nnumber1 = 100\nnumber2 = \"100\"\n\nprint(number1 + number1)\nprint(number2 + number2)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This prints out the following:",
+      "raw_source": "This prints out the following:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "200\n100100",
+      "raw_source": "<sample-output>\n\n200\n100100\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "For integer values the `+` operator means addition, but for string values it means concatenation, or \"stringing together\".",
+      "raw_source": "For integer values the `+` operator means addition, but for string values it means concatenation, or \"stringing together\"."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Not all operators are available for all types of variables. While numbers can be divided using the division operator `/`, attempting to divide a string by a number causes an error:",
+      "raw_source": "Not all operators are available for all types of variables. While numbers can be divided using the division operator `/`, attempting to divide a string by a number causes an error:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number = \"100\"\nprint(number / 2)",
+      "raw_source": "```python\nnumber = \"100\"\nprint(number / 2)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "TypeError: unsupported operand type(s) for /: 'str' and 'int'",
+      "raw_source": "<sample-output>\nTypeError: unsupported operand type(s) for /: 'str' and 'int'\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Combining values when printing",
+      "raw_source": "## Combining values when printing"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Similarly, the following program will not work, because `\"The result is \"` and `result` are of two different types:",
+      "raw_source": "Similarly, the following program will not work, because `\"The result is \"` and `result` are of two different types:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "result = 10 * 25\n# the following line produces an error\nprint(\"The result is \" + result)",
+      "raw_source": "```python\nresult = 10 * 25\n# the following line produces an error\nprint(\"The result is \" + result)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The program does not print out anything, but instead throws an error:",
+      "raw_source": "The program does not print out anything, but instead throws an error:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "TypeError: unsupported operand type(s) for +: 'str' and 'int'",
+      "raw_source": "<sample-output>\n\nTypeError: unsupported operand type(s) for +: 'str' and 'int'\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here, Python tells us that combining two different types of values will not work just like that. In this case, `\"The result is \"` is of type string, while the value stored in `result` is of type integer.",
+      "raw_source": "Here, Python tells us that combining two different types of values will not work just like that. In this case, `\"The result is \"` is of type string, while the value stored in `result` is of type integer."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If we do want to print out a string and an integer in a single command, the integer can be cast as a string with the `str` function, and the two strings can then be combined normally. For example, this would work:",
+      "raw_source": "If we do want to print out a string and an integer in a single command, the integer can be cast as a string with the `str` function, and the two strings can then be combined normally. For example, this would work:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "result = 10 * 25\nprint(\"The result is \" + str(result))",
+      "raw_source": "```python\nresult = 10 * 25\nprint(\"The result is \" + str(result))\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The result is 250",
+      "raw_source": "<sample-output>\n\nThe result is 250\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `print` command also has built-in functionalities that support combining different types of values. The simplest way is to add a comma between the values. All the values will be printed out regardless of their type:",
+      "raw_source": "The `print` command also has built-in functionalities that support combining different types of values. The simplest way is to add a comma between the values. All the values will be printed out regardless of their type:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "result = 10 * 25\nprint(\"The result is\", result)",
+      "raw_source": "```python\nresult = 10 * 25\nprint(\"The result is\", result)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The result is 250",
+      "raw_source": "<sample-output>\n\nThe result is 250\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Notice that there is an automatically added whitespace character between the values separated by a comma here.",
+      "raw_source": "Notice that there is an automatically added whitespace character between the values separated by a comma here."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Printing with f-strings",
+      "raw_source": "## Printing with f-strings"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "What if we want to have more flexibility and control over what we print out? So called _f-strings_ are another way of formatting printouts in Python. The syntax can initially look a bit confusing, but in the end f-strings are often the simplest way of formatting text.",
+      "raw_source": "What if we want to have more flexibility and control over what we print out? So called _f-strings_ are another way of formatting printouts in Python. The syntax can initially look a bit confusing, but in the end f-strings are often the simplest way of formatting text."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "With f-strings the previous example would look like this:",
+      "raw_source": "With f-strings the previous example would look like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "result = 10 * 25\nprint(f\"The result is {result}\")",
+      "raw_source": "```python\nresult = 10 * 25\nprint(f\"The result is {result}\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's break this apart. In the very beginning of the string we are printing out there is the character _f_. This tells Python that what follows is an f-string. Within the string, enclosed in curly brackets, is the variable name `result`. The value it contains becomes a part of the printed string. The printout is exactly the same as in the previous examples:",
+      "raw_source": "Let's break this apart. In the very beginning of the string we are printing out there is the character _f_. This tells Python that what follows is an f-string. Within the string, enclosed in curly brackets, is the variable name `result`. The value it contains becomes a part of the printed string. The printout is exactly the same as in the previous examples:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The result is 250",
+      "raw_source": "<sample-output>\n\nThe result is 250\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A single f-string can contain multiple variables. For example this code",
+      "raw_source": "A single f-string can contain multiple variables. For example this code"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "name = \"Mark\"\nage = 37\ncity = \"Palo Alto\"\nprint(f\"Hi {name}, you are {age} years old. You live in {city}.\")",
+      "raw_source": "```python\nname = \"Mark\"\nage = 37\ncity = \"Palo Alto\"\nprint(f\"Hi {name}, you are {age} years old. You live in {city}.\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "prints out this:",
+      "raw_source": "prints out this:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Hi Mark, you are 37 years old. You live in Palo Alto.",
+      "raw_source": "<sample-output>\n\nHi Mark, you are 37 years old. You live in Palo Alto.\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It is difficult to create a printout exactly like this using the comma notation in the `print` command. For example, this program",
+      "raw_source": "It is difficult to create a printout exactly like this using the comma notation in the `print` command. For example, this program"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "name = \"Mark\"\nage = 37\ncity = \"Palo Alto\"\nprint(\"Hi\", name, \", you are\", age, \"years old. You live in\", city, \".\")",
+      "raw_source": "```python\nname = \"Mark\"\nage = 37\ncity = \"Palo Alto\"\nprint(\"Hi\", name, \", you are\", age, \"years old. You live in\", city, \".\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "prints out the following:",
+      "raw_source": "prints out the following:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Hi Mark , you are 37 years old. You live in Palo Alto .",
+      "raw_source": "<sample-output>\n\nHi Mark , you are 37 years old. You live in Palo Alto .\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Notice the automatically inserted whitespace between each comma-separated part of the printout. Preventing `print` from adding the extra spaces is technically possible, but not worth the trouble given that we can instead use f-strings.",
+      "raw_source": "Notice the automatically inserted whitespace between each comma-separated part of the printout. Preventing `print` from adding the extra spaces is technically possible, but not worth the trouble given that we can instead use f-strings."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In its simplicity the comma notation of the `print` command can often be useful, but it does sometimes cause more trouble than it's worth. F-strings are usually a more reliable option. In part 4 you will learn more about the handy features of f-strings when it comes to formatting printouts.",
+      "raw_source": "In its simplicity the comma notation of the `print` command can often be useful, but it does sometimes cause more trouble than it's worth. F-strings are usually a more reliable option. In part 4 you will learn more about the handy features of f-strings when it comes to formatting printouts."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "hint",
+        "name": "F-strings and Python versions"
+      },
+      "inner_content": "If you are using an older version of Python, f-strings may not work. They were introduced in Python version 3.6. Later on during the course you will install Python on your own computer. Unfortunately, the more modern versions of Python are not always available for older operating systems. If that is the case with your computer, when there are exercises requiring the use of f-strings, you can always try them out in the in-browser exercise templates in these early parts of this course.",
+      "raw_source": "<text-box variant=\"hint\" name=\"F-strings and Python versions\">\n\nIf you are using an older version of Python, f-strings may not work. They were introduced in Python version 3.6. Later on during the course you will install Python on your own computer. Unfortunately, the more modern versions of Python are not always available for older operating systems. If that is the case with your computer, when there are exercises requiring the use of f-strings, you can always try them out in the in-browser exercise templates in these early parts of this course.\n\n</text-box>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Extra space",
+        "tmcname": "part01-10b_extra_space",
+        "height": "400px"
+      },
+      "inner_content": "Your friend is working on an app for jobseekers. She sends you this bit of code:\n\n```python\nname = \"Tim Tester\"\nage = 20\nskill1 = \"python\"\nlevel1 = \"beginner\"\nskill2 = \"java\"\nlevel2 = \"veteran\"\nskill3 = \"programming\"\nlevel3 = \"semiprofessional\"\nlower = 2000\nupper = 3000\n\nprint(\"my name is \", name, \" , I am \", age, \"years old\")\nprint(\"my skills are\")\nprint(\"- \", skill1, \" (\", level1, \")\")\nprint(\"- \", skill2, \" (\", level2, \")\")\nprint(\"- \", skill3, \" (\", level3, \" )\")\nprint(\"I am looking for a job with a salary of\", lower, \"-\", upper, \"euros per month\")\n```\n\nThe program should print out _exactly_ the following:\n\n<sample-output>\n\n<pre>\nmy name is Tim Tester, I am 20 years old\n\nmy skills are\n - python (beginner)\n - java (veteran)\n - programming (semiprofessional)\n\nI am looking for a job with a salary of 2000-3000 euros per month\n</pre>\n\n</sample-output>\n\nThe code works almost correctly, but not quite. This exercise has very strict tests, which check the output for every single bit of whitespace.\n\nPlease fix the code so that the printout looks right. Notice especially how the comma notation in the `print` command automatically inserts a space around the different comma-separated parts.\n\nThe easiest way to transform the code so that it meets requirements is to use f-strings.\n\nHint: you can print an empty line by adding an empty `print` command, or by adding the newline character `\\n` into your string.\n\nDo remember to be extra careful when formatting printouts also in the future on this course. Some of the exercises have tests that require your output to be exactly as specified in the examples given. For example, please use actual whitespace characters in your code, instead of ASCII character codes for whitespace, or some such.",
+      "raw_source": "<in-browser-programming-exercise name=\"Extra space\" tmcname=\"part01-10b_extra_space\" height=400px>\n\nYour friend is working on an app for jobseekers. She sends you this bit of code:\n\n```python\nname = \"Tim Tester\"\nage = 20\nskill1 = \"python\"\nlevel1 = \"beginner\"\nskill2 = \"java\"\nlevel2 = \"veteran\"\nskill3 = \"programming\"\nlevel3 = \"semiprofessional\"\nlower = 2000\nupper = 3000\n\nprint(\"my name is \", name, \" , I am \", age, \"years old\")\nprint(\"my skills are\")\nprint(\"- \", skill1, \" (\", level1, \")\")\nprint(\"- \", skill2, \" (\", level2, \")\")\nprint(\"- \", skill3, \" (\", level3, \" )\")\nprint(\"I am looking for a job with a salary of\", lower, \"-\", upper, \"euros per month\")\n```\n\nThe program should print out _exactly_ the following:\n\n<sample-output>\n\n<pre>\nmy name is Tim Tester, I am 20 years old\n\nmy skills are\n - python (beginner)\n - java (veteran)\n - programming (semiprofessional)\n\nI am looking for a job with a salary of 2000-3000 euros per month\n</pre>\n\n</sample-output>\n\nThe code works almost correctly, but not quite. This exercise has very strict tests, which check the output for every single bit of whitespace.\n\nPlease fix the code so that the printout looks right. Notice especially how the comma notation in the `print` command automatically inserts a space around the different comma-separated parts.\n\nThe easiest way to transform the code so that it meets requirements is to use f-strings.\n\nHint: you can print an empty line by adding an empty `print` command, or by adding the newline character `\\n` into your string.\n\nDo remember to be extra careful when formatting printouts also in the future on this course. Some of the exercises have tests that require your output to be exactly as specified in the examples given. For example, please use actual whitespace characters in your code, instead of ASCII character codes for whitespace, or some such.\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Floating point numbers",
+      "raw_source": "## Floating point numbers"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "`Floating point number` or _float_ is a term you will come across often in programming. It refers to numbers with a decimal point. They can be used much in the same way as integer values.",
+      "raw_source": "`Floating point number` or _float_ is a term you will come across often in programming. It refers to numbers with a decimal point. They can be used much in the same way as integer values."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This program calculates the mean of three floating point numbers:",
+      "raw_source": "This program calculates the mean of three floating point numbers:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number1 = 2.5\nnumber2 = -1.25\nnumber3 = 3.62\n\nmean = (number1 + number2 + number3) / 3\nprint(f\"Mean: {mean}\")",
+      "raw_source": "```python\nnumber1 = 2.5\nnumber2 = -1.25\nnumber3 = 3.62\n\nmean = (number1 + number2 + number3) / 3\nprint(f\"Mean: {mean}\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Mean: 1.6233333333333333",
+      "raw_source": "<sample-output>\n\nMean: 1.6233333333333333\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Arithmetics",
+        "tmcname": "part01-11_arithmetics"
+      },
+      "inner_content": "This program already contains two integer variables, `x` and `y`:\n\n```python\nx = 27\ny = 15\n```\n\nPlease complete the program so that it also prints out the following:\n\n<sample-output>\n\n27 + 15 = 42\n27 - 15 = 12\n27 * 15 = 405\n27 / 15 = 1.8\n\n</sample-output>\n\nThe program should work correctly even if the values of the variables are changed. That is, if the first two lines are replaced with this\n\n```python\nx = 4\ny = 9\n```\n\nthe program should print out the following:\n\n<sample-output>\n\n4 + 9 = 13\n4 - 9 = -5\n4 * 9 = 36\n4 / 9 = 0.4444444444444444\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Arithmetics\" tmcname=\"part01-11_arithmetics\">\n\nThis program already contains two integer variables, `x` and `y`:\n\n```python\nx = 27\ny = 15\n```\n\nPlease complete the program so that it also prints out the following:\n\n<sample-output>\n\n27 + 15 = 42\n27 - 15 = 12\n27 * 15 = 405\n27 / 15 = 1.8\n\n</sample-output>\n\nThe program should work correctly even if the values of the variables are changed. That is, if the first two lines are replaced with this\n\n```python\nx = 4\ny = 9\n```\n\nthe program should print out the following:\n\n<sample-output>\n\n4 + 9 = 13\n4 - 9 = -5\n4 * 9 = 36\n4 / 9 = 0.4444444444444444\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Fix the code: Print a single line",
+        "tmcname": "part01-12_print_a_single_line"
+      },
+      "inner_content": "Each `print` command usually prints out a line of its own, complete with a change of line at the end. However, if the `print` command is given an additional argument `end = \"\"`, it will not print a line change.\n\nFor example:\n\n```python\nprint(\"Hi \", end=\"\")\nprint(\"there!\")\n```\n\n<sample-output>\n\nHi there!\n\n</sample-output>\n\nPlease fix this program so that the entire calculation, complete with result, is printed out on a single line. Do not change the number of `print` commands used.\n\n```python\n\nprint(5)\nprint(\" + \")\nprint(8)\nprint(\" - \")\nprint(4)\nprint(\" = \")\nprint(5 + 8 - 4)\n```",
+      "raw_source": "<in-browser-programming-exercise name=\"Fix the code: Print a single line\" tmcname=\"part01-12_print_a_single_line\">\n\nEach `print` command usually prints out a line of its own, complete with a change of line at the end. However, if the `print` command is given an additional argument `end = \"\"`, it will not print a line change.\n\nFor example:\n\n```python\nprint(\"Hi \", end=\"\")\nprint(\"there!\")\n```\n\n<sample-output>\n\nHi there!\n\n</sample-output>\n\nPlease fix this program so that the entire calculation, complete with result, is printed out on a single line. Do not change the number of `print` commands used.\n\n```python\n\nprint(5)\nprint(\" + \")\nprint(8)\nprint(\" - \")\nprint(4)\nprint(\" = \")\nprint(5 + 8 - 4)\n```\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!--",
+      "raw_source": "<!--"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A quiz to review the contents of this section:",
+      "raw_source": "A quiz to review the contents of this section:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "49bf296e-41d1-5982-89a9-c784b630eaee"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"49bf296e-41d1-5982-89a9-c784b630eaee\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    }
+  ]
+}

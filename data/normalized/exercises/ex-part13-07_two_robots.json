@@ -1,0 +1,16 @@
+{
+  "id": "ex-part13-07_two_robots",
+  "lesson_id": "part13-2-animation",
+  "part": 13,
+  "tmc_name": "part13-07_two_robots",
+  "title_original": "Two robots",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please create an animation where two robots move back and forth to the left and right. The lower robot should move at double the speed of the upper one. The end result should look like this:\n\n<img src=\"pygame_move2.gif\">",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "3ff167b28493f1efb14c564447672436ffffbf1a40d782fd6ec34ec405c6f7cb",
+  "order": 43
+}

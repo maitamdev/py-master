@@ -1,0 +1,414 @@
+{
+  "id": "page-error_messages",
+  "slug": "error_messages",
+  "title_original": "Common error messages",
+  "title_vi": "Thông báo lỗi phổ biến",
+  "path": "/error_messages",
+  "source_path": "data/error_messages.md",
+  "source_hash": "1d6b120c224703f83b7a3ebc9d44cc921cb60651db863cb8d50cdd696c9ed023",
+  "blocks_count": 23,
+  "blocks": [
+    {
+      "id": "blk-page-error_messages-0001",
+      "type": "paragraph",
+      "order": 1,
+      "source_hash": "40afb673c84b66b64b55206fd49f8b646b57029a2ec54deda72cf1505976bb64",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This page contains information about the most common error messages you may come across when completing the programming exercises on this course."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trang này chứa thông tin về các thông báo lỗi phổ biến nhất mà bạn có thể gặp phải khi hoàn thành các bài tập lập trình trong khóa học này."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-error_messages-0002",
+      "type": "heading",
+      "order": 2,
+      "source_hash": "ae884198d1cdf703d236368896c89075e41293bc303d57249c08dae3b39b3c16",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "My printout looks identical to the example in the instructions, but my submission still fails"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bản in của tôi trông giống hệt với ví dụ trong hướng dẫn, nhưng bản gửi của tôi vẫn không thành công"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-error_messages-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "b6ae9623f1a7ab77664d605a640b16e1873c2fcf5db9bd5ad06735ac500b29aa",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Make sure your program doesn't print any extra whitespace, such as space characters. Notice that the default behaviour of the `print` function is to add a space between any strings separated with a comma."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đảm bảo chương trình của bạn không in thêm bất kỳ khoảng trắng nào, chẳng hạn như ký tự khoảng trắng. Lưu ý rằng hành vi mặc định của hàm `print` là thêm khoảng trắng giữa bất kỳ chuỗi nào được phân tách bằng dấu phẩy."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-error_messages-0004",
+      "type": "code",
+      "order": 4,
+      "source_hash": "ab67db932ddbb3539c088fc71a54a4633c4b23e3d21dba228fecda89db328d74",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    print(\"Hello\",\"World!\")    # This prints out: Hello World!"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    print(\"Hello\",\"World!\")    # This prints out: Hello World!"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ab67db932ddbb3539c088fc71a54a4633c4b23e3d21dba228fecda89db328d74",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-page-error_messages-0005",
+      "type": "heading",
+      "order": 5,
+      "source_hash": "ba045e3343356994927bc353c7368f09cbfa337d98060b739c9510c6563f1622",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "SyntaxError: bad input on line [line number]"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lỗi cú pháp: đầu vào sai trên dòng [số dòng]"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-error_messages-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "4beb3db4de3dc298f51991c5298bbc8f493f33f8bf3f0d265cd2a28732ef3eb3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This error message usually appears when there is a typo in your code which the Python interpreter finds hard to classify more specifically. For example, there may be a colon character missing from the end of an `if` statement, or a keyword, such as `while`, may have been misspelled. The only way to fix this problem is to inspect the line indicated in the error message."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thông báo lỗi này thường xuất hiện khi có lỗi đánh máy trong code của bạn mà trình thông dịch Python khó phân loại cụ thể hơn. Ví dụ: có thể thiếu ký tự dấu hai chấm ở cuối câu lệnh `if` hoặc một từ khóa, chẳng hạn như `while`, có thể đã sai chính tả. Cách duy nhất để khắc phục sự cố này là kiểm tra dòng được chỉ ra trong thông báo lỗi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-error_messages-0007",
+      "type": "code",
+      "order": 7,
+      "source_hash": "6e3283b3a5788cba6b275d3db4a0bfe6a7da81151bbda48c01015260b82a0d1d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    number1 = 1\n    number1 = 2\n    if number1 < number2    # ':' missing\n        print('number2 is greater')"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    number1 = 1\n    number1 = 2\n    if number1 < number2    # ':' missing\n        print('number2 is greater')"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6e3283b3a5788cba6b275d3db4a0bfe6a7da81151bbda48c01015260b82a0d1d",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-page-error_messages-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "05eaeeec828486ae16a3ffea501e3747cd64d93bc8dfa151ff234dafc3920af3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If the line indicated in the error message looks correct, the error may often be one line above or below the line indicated, so check around the issue, too."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu dòng được chỉ ra trong thông báo lỗi có vẻ chính xác thì lỗi thường có thể nằm ở một dòng trên hoặc dưới dòng được chỉ định, vì vậy, hãy kiểm tra cả vấn đề."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-error_messages-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "4fa2b87bd31afffb6adb9b0d6504a1940b49477ed9d3c93d31aebd26d7c83422",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "**NB: The programming exercises in the early parts of this course use a framework called Skulpt to run Python code in the browser.** Skulpt is quite limited compared to a regular Python interpreter, and thus the error messages printed out are often less informative. For example, the `bad input on line` error message may refer to many different programming errors, and it is difficult to find out the true cause of the error just based on this message."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "**NB: Các bài tập lập trình trong phần đầu của khóa học này sử dụng khung có tên Skulpt để chạy mã Python trong trình duyệt.** Skulpt khá hạn chế so với trình thông dịch Python thông thường và do đó các thông báo lỗi được in ra thường ít thông tin hơn. Ví dụ: thông báo lỗi `bad input on line` có thể đề cập đến nhiều lỗi lập trình khác nhau và rất khó để tìm ra nguyên nhân thực sự của lỗi chỉ dựa trên thông báo này."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-error_messages-0010",
+      "type": "heading",
+      "order": 10,
+      "source_hash": "c7314136a81c0792146319051af6d506401e541853840c3a7f1355b4d9af105d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "SyntaxError: unindent does not match any outer indentation level on line [line number]"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cú phápError: unindent không khớp với bất kỳ mức thụt lề bên ngoài nào trên dòng [số dòng]"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-error_messages-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "21a0261c7657606e3d15f6c078256ca239e9016c120d149cc7fd870b1fb3e2c6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Your code is indented incorrectly at the line indicated in the error message. For example, all lines within an `if` block must be indented the same. To fix this error, indent all lines within a block of code with the exact same amount of whitespace.\nThe following code would cause this error:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "code của bạn được thụt vào không chính xác ở dòng được chỉ ra trong thông báo lỗi. Ví dụ: tất cả các dòng trong khối `if` phải được thụt lề giống nhau. Để khắc phục lỗi này, hãy thụt lề tất cả các dòng trong một khối mã có cùng khoảng trắng.\nĐoạn mã sau sẽ gây ra lỗi này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-error_messages-0012",
+      "type": "code",
+      "order": 12,
+      "source_hash": "7b6a66058417de53d25403a97aef3e77f1b7ec562075d7e0e3e30da2ff2a31c7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    if True:\n        print('Indented correctly')\n       print('Indented incorrectly!')"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    if True:\n        print('Indented correctly')\n       print('Indented incorrectly!')"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "7b6a66058417de53d25403a97aef3e77f1b7ec562075d7e0e3e30da2ff2a31c7",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-page-error_messages-0013",
+      "type": "heading",
+      "order": 13,
+      "source_hash": "bbc1fa996325d76981664c3175e4eeb65da10176cdb4614e4b471b132e5b4b02",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "NameError: name [variable name] is not defined on line [line number]"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "NameError: tên [tên biến] không được xác định trên dòng [số dòng]"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-error_messages-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "0a9e1ff36cc22a7cfe293cc73e63a30a9ce1f644fa33dbe93be488556e84923f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You are trying to refer to a variable or object which does not exist at that specific point in your program. It may be that the variable has not yet been assigned a value, or there is a typo in the variable name. It may also be the case that you have defined a variable inside a function, and are trying to refer to that same variable outside the function."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn đang cố gắng tham chiếu đến một biến hoặc đối tượng không tồn tại tại điểm cụ thể đó trong chương trình của bạn. Có thể biến đó chưa được gán giá trị hoặc có lỗi đánh máy trong tên biến. Cũng có thể xảy ra trường hợp bạn đã xác định một biến bên trong hàm và đang cố gắng tham chiếu đến biến đó bên ngoài hàm."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-error_messages-0015",
+      "type": "code",
+      "order": 15,
+      "source_hash": "52655673a185bff38d210190676bee89e2aeb6c766bd5b9e3260853bc5bf9aac",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    person = input('Please type in your name: ')\n    input('Please type in your age: ')\n\n    print(\"Hi\", pearson)                # error: person was typed pearson\n    print(\"You are\", age, \"years old\")  # error: the variable age has not been defined"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    person = input('Please type in your name: ')\n    input('Please type in your age: ')\n\n    print(\"Hi\", pearson)                # error: person was typed pearson\n    print(\"You are\", age, \"years old\")  # error: the variable age has not been defined"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "52655673a185bff38d210190676bee89e2aeb6c766bd5b9e3260853bc5bf9aac",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-page-error_messages-0016",
+      "type": "heading",
+      "order": 16,
+      "source_hash": "1d63dbdc7846b017c217517869f76169e410afd7d239adfdaae9dca76c18ab37",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "TypeError: unsupported operand type(s) for Add: 'int' and 'str' on line [line number]"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "TypeError: (các) loại toán hạng không được hỗ trợ cho Thêm: 'int' và 'str' trên dòng [số dòng]"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-error_messages-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "531c1846d8049970e500aeb81e64d862827a3b59c109e484b21b13b24bc36bd5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You may be trying to add an integer and a string together, without first converting the string into an integer value. Strings can be converted into integers with the `int()` function. A similar error message may appear if you try to perform other arithmetic operations, such as division or subtraction, on strings."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Có thể bạn đang cố gắng cộng một số nguyên và một chuỗi với nhau mà không chuyển đổi chuỗi đó thành một giá trị số nguyên trước tiên. Chuỗi có thể được chuyển đổi thành số nguyên bằng hàm `int()`. Thông báo lỗi tương tự có thể xuất hiện nếu bạn cố gắng thực hiện các phép tính số học khác, chẳng hạn như phép chia hoặc phép trừ trên chuỗi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-error_messages-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "8590bee4103f0abbebdc133c988d00900b977c0b5719d5f10f863fef0ce9ae73",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "It may also be the case that you are trying to create a new string by combining a string and an integer. You should first convert the integer into a string with the `str()` function."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cũng có thể xảy ra trường hợp bạn đang cố gắng tạo một chuỗi mới bằng cách kết hợp một chuỗi và một số nguyên. Trước tiên bạn nên chuyển đổi số nguyên thành chuỗi bằng hàm `str()`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-error_messages-0019",
+      "type": "code",
+      "order": 19,
+      "source_hash": "285902aa330f4d06dc852de1b23b0a19a72ae8faf4b1fc2af7863815451050be",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    my_age = input(\"Please type in your age: \")\n    my_name = input(\"Please type in your name: \")\n\n    print(my_age//2)   # error: the variable my_age has not been converted into an integer"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    my_age = input(\"Please type in your age: \")\n    my_name = input(\"Please type in your name: \")\n\n    print(my_age//2)   # error: the variable my_age has not been converted into an integer"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "285902aa330f4d06dc852de1b23b0a19a72ae8faf4b1fc2af7863815451050be",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-page-error_messages-0020",
+      "type": "heading",
+      "order": 20,
+      "source_hash": "8c717bf3d0f6a5d999354d1db8778ef86137babb4a7df50f6002356db93c4330",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "TypeError: cannot concatenate 'str' and 'int' objects on line [line number]"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "TypeError: không thể nối các đối tượng 'str' và 'int' trên dòng [số dòng]"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-error_messages-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "7231208d48134d543eaf00e21bd1d7eb4502470c5557096e8167a53ce333d87c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "See above."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Xem ở trên."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-error_messages-0022",
+      "type": "heading",
+      "order": 22,
+      "source_hash": "69de31e82b390330e45e9ed22dcf7614efff898d3dcb020a7eca960f3d51c828",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Pylance is crashing"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Pylance đang gặp sự cố"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-error_messages-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "b675939f54e7df90e54831060f7132fb932980f3f73f41f27c18b0f783a8bd4b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This is usually caused by the TMC plugin having too many exercises open at the same time. You can try closing unused exercises from the TMC menu in the VS code sidebar.\nClick the TMC menu open, under my courses open the courses you have, and click on \"close all\" on parts which you are no longer working on.\nYou can always reopen the exercises if you decide to return to the part."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điều này thường xảy ra do plugin TMC mở quá nhiều bài tập cùng lúc. Bạn có thể thử đóng các bài tập không sử dụng từ menu TMC trong thanh bên mã VS.\nNhấp vào mở menu TMC, trong khóa học của tôi, mở các khóa học bạn có và nhấp vào \"đóng tất cả\" đối với những phần bạn không còn làm việc nữa.\nBạn luôn có thể mở lại các bài tập nếu bạn quyết định quay lại phần đó."
+      },
+      "metadata": {}
+    }
+  ]
+}

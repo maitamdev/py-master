@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-25_calculator",
+  "lesson_id": "part01-5-conditional-statements",
+  "part": 1,
+  "tmc_name": "part01-25_calculator",
+  "title_original": "Calculator",
+  "title_vi": "Máy tính",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for two numbers and an operation. If the operation is _add_, _multiply_ or _subtract_, the program should calculate and print out the result of the operation with the given numbers. If the user types in anything else, the program should print out nothing.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nNumber 1: **10**\nNumber 2: **17**\nOperation: **add**\n\n10 + 17 = 27\n\n</sample-output>\n\n<sample-output>\n\nNumber 1: **4**\nNumber 2: **6**\nOperation: **multiply**\n\n4 * 6 = 24\n\n</sample-output>\n\n<sample-output>\n\nNumber 1: **4**\nNumber 2: **6**\nOperation: **subtract**\n\n4 - 6 = -2\n\n</sample-output>",
+  "description_vi": "Hãy viết một chương trình yêu cầu người dùng nhập hai số và một phép tính. Nếu phép toán là _add_, _multiply_ hoặc _subtract_, chương trình sẽ tính toán và in ra kết quả của phép toán với các số đã cho. Nếu người dùng gõ bất cứ thứ gì khác, chương trình sẽ không in ra gì cả.\n\nMột số ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nSố 1: **10**\nSố 2: **17**\nThao tác: **thêm**\n\n10 + 17 = 27\n\n</sample-output>\n\n<sample-output>\n\nSố 1: **4**\nSố 2: **6**\nThao tác: **nhân**\n\n4 * 6 = 24\n\n</sample-output>\n\n<sample-output>\n\nSố 1: **4**\nSố 2: **6**\nHoạt động: **trừ**\n\n4 - 6 = -2\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "e9b1becbdbefa5414083e9237c44c6e8a9b205cb25b9d9bee3e1ad1605bedccd",
+  "order": 51
+}

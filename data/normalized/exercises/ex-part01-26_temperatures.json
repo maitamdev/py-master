@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-26_temperatures",
+  "lesson_id": "part01-5-conditional-statements",
+  "part": 1,
+  "tmc_name": "part01-26_temperatures",
+  "title_original": "Temperatures",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for a temperature in degrees Fahrenheit, and then prints out the same in degrees Celsius. If the converted temperature falls below zero degrees Celsius, the program should also print out \"Brr! It's cold in here!\".\n\nThe formula for converting degrees Fahrenheit to degrees Celsius can be found easily by any search engine of your choice.\n\nTwo examples of expected behaviour:\n\n<sample-output>\n\nPlease type in a temperature (F): **101**\n101 degrees Fahrenheit equals 38.333333333333336 degrees Celsius\n\nPlease type in a temperature (F): **21**\n21 degrees Fahrenheit equals -6.111111111111111 degrees Celsius\nBrr! It's cold in here!\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "e0ee3f3ad741f78f5e57f4e3a3c2057b15fc64f82b7e686381ce8dacf33bcc61",
+  "order": 52
+}

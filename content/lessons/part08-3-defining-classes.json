@@ -1,0 +1,892 @@
+{
+  "id": "part08-3-defining-classes",
+  "part": 8,
+  "part_slug": "part-8",
+  "slug": "3-defining-classes",
+  "is_part_index": false,
+  "title_original": "Defining classes",
+  "title_vi": "Định nghĩa lớp",
+  "path": "/part-8/3-defining-classes",
+  "source_path": "data/part-8/3-defining-classes.md",
+  "source_hash": "fdf42021ab2f75dc2986d3de71d5438d354d7460dcbab85ea5216298130c83cc",
+  "order": 1,
+  "blocks_count": 49,
+  "blocks": [
+    {
+      "id": "blk-part08-3-defining-classes-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "1d0ddcba5350819e1795cf80af2bdbecddadb88578ab144662d9e961076e51ef",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know how to define your own classes\n- You will be able to create objects based on classes you've defined yourself\n- You will know how to write a constructor\n- You are familiar with the parameter name `self`\n- You will know what attributes are and how they are used"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ biết cách xác định các lớp của riêng mình\n- Bạn sẽ có thể tạo các đối tượng dựa trên các lớp bạn đã tự xác định\n- Bạn sẽ biết cách viết hàm khởi tạo\n- Các bạn đã quen với tên tham số `self`\n- Bạn sẽ biết thuộc tính là gì và chúng được sử dụng như thế nào"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "14ad374d69bfe1bc0a5dfb87f7ac357d750429a3698fd02b4e9cfa3fb6918479",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A class is defined with the keyword `class`. The syntax is as follows:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một lớp được định nghĩa bằng từ khóa `class`. Cú pháp như sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0003",
+      "type": "code",
+      "order": 3,
+      "source_hash": "336f2fe1c2da688da1c10f6b833c32ca5204579d1c71e9ce2d59e7da1089a56a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class NameOfClass:\n    # class defition goes here"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class NameOfClass:\n    # class defition goes here"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "336f2fe1c2da688da1c10f6b833c32ca5204579d1c71e9ce2d59e7da1089a56a",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "b923d9a696dd283d29603ceebc2fe5cba433793feee8287add296f881ce1755f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Classes are usually named in _PascalCase_, also known as _UpperCamelCase_. This means that all the words in the class name are written together, without spaces, and each word is capitalised. The following class names follow this convention:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các lớp thường được đặt tên trong _PascalCase_, còn được gọi là _UpperCamelCase_. Điều này có nghĩa là tất cả các từ trong tên lớp được viết cùng nhau, không có dấu cách và mỗi từ đều được viết hoa. Các tên lớp sau đây tuân theo quy ước này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0005",
+      "type": "list",
+      "order": 5,
+      "source_hash": "df24ceb796d219a75e3b37f6f8810c5d72071a0f09198e977d220bb35df653e5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* `Weekday`\n* `BankAccount`\n* `LibraryDatabase`\n* `PythonCourseGrades`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* `Weekday`\n* `BankAccount`\n* `LibraryDatabase`\n* `PythonCourseGrades`"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "194d362cb6fc6d87bcdc856121702a692f797f584a6172c5408a15425f40124f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A single class definition should represent a single whole, the contents of which should be atomically linked together in some way. In more complicated programs classes can contain members of other classes. For example, the class `Course` could contain objects of class `Lecture`, `ExerciseSession` etc."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một định nghĩa lớp duy nhất phải đại diện cho một tổng thể duy nhất, nội dung của nó phải được liên kết nguyên tử với nhau theo một cách nào đó. Trong các chương trình phức tạp hơn, các lớp có thể chứa các thành viên của các lớp khác. Ví dụ: lớp `Course` có thể chứa các đối tượng của lớp `Lecture`, `ExerciseSession`, v.v."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "fb11e16d2b7813397f8ff6fa4b3ab623b7e043016c700d8c187fd20cc86b3ed3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Lets have a look at a skeleton of a class definition. The functionalities are still missing at this point."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy nhìn vào khung của định nghĩa lớp. Các chức năng vẫn còn thiếu vào thời điểm này."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0008",
+      "type": "code",
+      "order": 8,
+      "source_hash": "04ef9f3829af970099e763b8eb90dd83cefdd9f7e1cee394707da71cbc616590",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class BankAccount:\n    pass"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class BankAccount:\n    pass"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "04ef9f3829af970099e763b8eb90dd83cefdd9f7e1cee394707da71cbc616590",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "166cee8870d9b824afee52ed93b2376532c45fa51cbfe8a6f3069af02f4ad306",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The above piece of code tells Python that here we are defining a class named `BankAccount`. The class does not contain any functionality yet, but we can still create an object based on the class."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đoạn mã trên cho Python biết rằng ở đây chúng ta đang định nghĩa một lớp có tên `BankAccount`. Lớp này chưa chứa bất kỳ chức năng nào, nhưng chúng ta vẫn có thể tạo một đối tượng dựa trên lớp đó."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "def4321a96a22421c1b2f9309815e788985997d5d0bbebf7be281a52e5806228",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Lets have a look at a program where two variables are added to a `BankAccount` object: `balance` and `owner`. Any variables attached to an object are called its _attributes_, or more specifically, _data attributes_, or sometimes _instance variables_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy xem một chương trình trong đó hai biến được thêm vào đối tượng `BankAccount`: `balance` và `owner`. Bất kỳ biến nào được gắn vào một đối tượng đều được gọi là _attributes_, hay cụ thể hơn là _data attribute_, hoặc đôi khi là _biến thể hiện_."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "a792a4886608605945d755faf1e8facd7e9726377e4bced5d935c99ada9e055a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The attributes attached to an object can be accessed through the object:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các thuộc tính gắn liền với một đối tượng có thể được truy cập thông qua đối tượng đó:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0012",
+      "type": "code",
+      "order": 12,
+      "source_hash": "704923218da9d42e67fd68c45a9ab040f423db8b00dbda607c560624aad0f218",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class BankAccount:\n    pass\n\npeters_account = BankAccount()\npeters_account.owner = \"Peter Python\"\npeters_account.balance = 5.0\n\nprint(peters_account.owner)\nprint(peters_account.balance)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class BankAccount:\n    pass\n\npeters_account = BankAccount()\npeters_account.owner = \"Peter Python\"\npeters_account.balance = 5.0\n\nprint(peters_account.owner)\nprint(peters_account.balance)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "704923218da9d42e67fd68c45a9ab040f423db8b00dbda607c560624aad0f218",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0013",
+      "type": "sample_output",
+      "order": 13,
+      "source_hash": "0c293410830299fd7a33df817e532c84650518ce49b8d84212eb5f3a3362926d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Peter Python\n5.0"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Peter Python\n5.0"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPeter Python\n5.0\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "43eb79b28b3ce147eaa6353f503f413ac88669af610de5eeb9fde2b2e8a4a455",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The data attributes are available only through the object they are attached to. Each `BankAccount` object created based on the `BankAccount` class has its own values attached to the data attributes. Those values can be accessed by referring to the object in question:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các thuộc tính dữ liệu chỉ có sẵn thông qua đối tượng mà chúng được gắn vào. Mỗi đối tượng `BankAccount` được tạo dựa trên lớp `BankAccount` có các giá trị riêng được gắn với thuộc tính dữ liệu. Những giá trị đó có thể được truy cập bằng cách tham chiếu đến đối tượng được đề cập:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0015",
+      "type": "code",
+      "order": 15,
+      "source_hash": "36e9a26e5c53a314c5e8faba2a8ae8fd2c1c8d1d066a45b2d1590cbdb6c01d2b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "account = BankAccount()\naccount.balance = 155.50\n\nprint(account.balance) # This refers to the data attribute balance attached to the account\nprint(balance) # THIS CAUSES AN ERROR, as there is no such independent variable available, and the object reference is missing"
+      },
+      "translation": {
+        "language": "code",
+        "content": "account = BankAccount()\naccount.balance = 155.50\n\nprint(account.balance) # This refers to the data attribute balance attached to the account\nprint(balance) # THIS CAUSES AN ERROR, as there is no such independent variable available, and the object reference is missing"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "36e9a26e5c53a314c5e8faba2a8ae8fd2c1c8d1d066a45b2d1590cbdb6c01d2b",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0016",
+      "type": "heading",
+      "order": 16,
+      "source_hash": "71e6b1bb36e4464887ffe5fad7990d1a65b78ff458c70b468375582d6bb85fea",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Adding a constructor"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thêm một hàm tạo"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "1c9882ef64dac17b6ffc28844ab7019aa6be3abd93d2674461c643a3ff2553e1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the above example we saw that a new instance of a class can be created by calling the constructor method of the class like so: `NameOfClass()`. Above we then attached data attributes to the object separately, but it is often more convenient to pass these initial values of attributes directly as the object is created. In the above example we first had a `BankAccount` object without these attributes, and the attributes only existed after they were explicitly declared."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong ví dụ trên, chúng ta thấy rằng một thể hiện mới của một lớp có thể được tạo bằng cách gọi phương thức khởi tạo của lớp như sau: `NameOfClass()`. Ở trên, chúng ta đã gắn các thuộc tính dữ liệu vào đối tượng một cách riêng biệt, nhưng sẽ thuận tiện hơn khi truyền trực tiếp các giá trị ban đầu này của các thuộc tính khi đối tượng được tạo. Trong ví dụ trên, lần đầu tiên chúng ta có một đối tượng `BankAccount` không có các thuộc tính này và các thuộc tính chỉ tồn tại sau khi chúng được khai báo rõ ràng."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "34a188895d49498d40511de01bff9fa1f81222d8d9d5f54828bf9737816bedd4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Declaring attributes outside the constructor results in a situation where different instances of the same class can have different attributes. The following code produces an error because we now have another `BankAccount` object, `paulas_account`, which does not contain the same attributes:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Việc khai báo các thuộc tính bên ngoài hàm tạo dẫn đến tình huống trong đó các phiên bản khác nhau của cùng một lớp có thể có các thuộc tính khác nhau. Đoạn mã sau gây ra lỗi vì hiện tại chúng ta có một đối tượng `BankAccount` khác, `paulas_account`, không chứa các thuộc tính tương tự:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0019",
+      "type": "code",
+      "order": 19,
+      "source_hash": "f6477d3f48101149f79e8ced69795e7cfb16ab5b1b9ccfc2db0d00fb7058d37e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class BankAccount:\n    pass\n\npeters_account = BankAccount()\npeters_account.owner = \"Peter\"\npeters_account.balance = 1400\n\npaulas_account = BankAccount()\npaulas_account.owner = \"Paula\"\n\nprint(peters_account.balance)\nprint(paulas_account.balance) # THIS CAUSES AN ERROR"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class BankAccount:\n    pass\n\npeters_account = BankAccount()\npeters_account.owner = \"Peter\"\npeters_account.balance = 1400\n\npaulas_account = BankAccount()\npaulas_account.owner = \"Paula\"\n\nprint(peters_account.balance)\nprint(paulas_account.balance) # THIS CAUSES AN ERROR"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f6477d3f48101149f79e8ced69795e7cfb16ab5b1b9ccfc2db0d00fb7058d37e",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "95aa80aa9ac4a06641934e675433ba4277f8148447eac7117a5ade43fd75f8be",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "So, instead of declaring attributes after each instance of the class is created, it is usually a better idea to initialize the values of the attributes as the class constructor is called. As the `BankAccount` class definition is currently just a skeleton, the constructor method is implicitly assumed by the Python interpreter, but it is possible to define your own constructor methods, and that is exactly what we will do now."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vì vậy, thay vì khai báo các thuộc tính sau mỗi phiên bản của lớp được tạo, tốt hơn hết bạn nên khởi tạo các giá trị của thuộc tính khi hàm tạo của lớp được gọi. Vì định nghĩa lớp `BankAccount` hiện chỉ là khung, nên phương thức khởi tạo được trình thông dịch Python giả định ngầm, nhưng bạn có thể định nghĩa các phương thức khởi tạo của riêng mình và đó chính xác là những gì chúng ta sẽ làm bây giờ."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "632b2dcd9c21dfa895ea72403d4cb060d59fff29086cf001325edc8822fe23e2",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A constructor method is a method declaration with the special name `__init__`, usually included at the very beginning of a class definition."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương thức khởi tạo là một khai báo phương thức có tên đặc biệt `__init__`, thường được đặt ở phần đầu của định nghĩa lớp."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "e163b322a1a85120dff07fe1dfb1ca1954e61b954e87cbb12eb0e8406629b37c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Lets have a look at a `BankAccount` class with a constructor method added in:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy xem lớp `BankAccount` với phương thức hàm tạo được thêm vào:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0023",
+      "type": "code",
+      "order": 23,
+      "source_hash": "5d6bf0689e1daa6cf01559d328e0df766d8753398e052a3126642c72adf191e4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class BankAccount:\n\n    # The constructor\n    def __init__(self, balance: float, owner: str):\n        self.balance = balance\n        self.owner = owner"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class BankAccount:\n\n    # The constructor\n    def __init__(self, balance: float, owner: str):\n        self.balance = balance\n        self.owner = owner"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5d6bf0689e1daa6cf01559d328e0df766d8753398e052a3126642c72adf191e4",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "61dd35067d54f47aab38e9879344a37fa18bba0c2315b19b6cc4f01ec594b415",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The name of the constructor method is always `__init__`. Notice the _two underscores on both sides_ of the word `init`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tên của phương thức khởi tạo luôn là `__init__`. Lưu ý _hai dấu gạch dưới ở cả hai bên_ của từ `init`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "d56afcdfd04343a00ea3a61a3e0f81b83880f55f4fe3d01c121e8d26b0581060",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The first parameter in a constructor definition is always named `self`. This refers to the object itself, and is necessary for declaring any attributes attached to the object. The assignment"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tham số đầu tiên trong định nghĩa hàm tạo luôn được đặt tên là `self`. Điều này đề cập đến chính đối tượng và cần thiết để khai báo bất kỳ thuộc tính nào được gắn vào đối tượng. Nhiệm vụ"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "b499ee192d7dd244abecc44cf6f1cf25f684a9f65148945b3ad5ece5016ca8f5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "`self.balance = balance`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "`self.balance = balance`"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "fe73ea4ef80c143fd8fb9a41cc2f08032fdcf6785e746e0b75a30a8ea9ed2fe5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "assigns the balance received as an argument to the balance attribute of the object. It is a common convention to use the same variable names for the parameters and the data attributes defined in a constructor, but the variable names `self.balance` and `balance` above refer to _two different variables_:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "gán số dư nhận được làm đối số cho thuộc tính số dư của đối tượng. Quy ước chung là sử dụng cùng tên biến cho tham số và thuộc tính dữ liệu được xác định trong hàm tạo, nhưng tên biến `self.balance` và `balance` ở trên đề cập đến _hai biến khác nhau_:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0028",
+      "type": "list",
+      "order": 28,
+      "source_hash": "d786bf704e2b08bcdee678c7f118394f02165bc7ed11cfa7b15df3551b5b2514",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* The variable `self.balance` is an attribute of the object. Each `BankAccount` object has its own balance."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* Biến `self.balance` là thuộc tính của đối tượng. Mỗi đối tượng `BankAccount` đều có số dư riêng."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0029",
+      "type": "list",
+      "order": 29,
+      "source_hash": "b8499837840d7c8988563e74cc5f0f9cf046e4a24ea8b531d3ce88dcbe0c52e4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* The variable `balance` is a parameter in the constructor method `__init__`. Its value is set to the value passed as an argument to the method as the constructor is called (that is, when a new instance of the class is created)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* Biến `balance` là một tham số trong phương thức khởi tạo `__init__`. Giá trị của nó được đặt thành giá trị được truyền dưới dạng đối số cho phương thức khi hàm tạo được gọi (nghĩa là khi một phiên bản mới của lớp được tạo)."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "80173ba19a4e1bcf93434970ac0aefade863580cad069814a5806622b95bac41",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Now that we have defined the parameters of the constructor method, we can pass the desired initial values of the data attributes as arguments as a new object is created:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bây giờ chúng ta đã xác định các tham số của phương thức khởi tạo, chúng ta có thể chuyển các giá trị ban đầu mong muốn của các thuộc tính dữ liệu làm đối số khi một đối tượng mới được tạo:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0031",
+      "type": "code",
+      "order": 31,
+      "source_hash": "53cf171fe7781de7214583a9f43ea0e0a852cf06dd72651a23a7811ddacce104",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class BankAccount:\n\n    # The constructor\n    def __init__(self, balance: float, owner: str):\n        self.balance = balance\n        self.owner = owner\n\n# As the method is called, no argument should be given for the self parameter\n# Python assigns the value for self automatically\npeters_account = BankAccount(100, \"Peter Python\")\npaulas_account = BankAccount(20000, \"Paula Pythons\")\n\nprint(peters_account.balance)\nprint(paulas_account.balance)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class BankAccount:\n\n    # The constructor\n    def __init__(self, balance: float, owner: str):\n        self.balance = balance\n        self.owner = owner\n\n# As the method is called, no argument should be given for the self parameter\n# Python assigns the value for self automatically\npeters_account = BankAccount(100, \"Peter Python\")\npaulas_account = BankAccount(20000, \"Paula Pythons\")\n\nprint(peters_account.balance)\nprint(paulas_account.balance)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "53cf171fe7781de7214583a9f43ea0e0a852cf06dd72651a23a7811ddacce104",
+        "length_lines": 14
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0032",
+      "type": "sample_output",
+      "order": 32,
+      "source_hash": "1b272bbe87afcf3be175cc5c912d8146d757d534c7e79d2d8fac070ee03b9837",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "100\n20000"
+      },
+      "translation": {
+        "language": "text",
+        "content": "100\n20000"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n100\n20000\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "45845a58921720ae3481797e4323dad0ae2e9ac5d4a3324bbb6a3cc1099ff1ba",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "It is now much easier to work with the `BankAccount` objects, as the values can be passed at object creation, and the resulting two separate instances can be handled more predictably and uniformly. Declaring data attributes in the constructor also ensures the attributes are actually declared, and the desired initial values are always given by the programmer using the class."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Giờ đây, việc làm việc với các đối tượng `BankAccount` trở nên dễ dàng hơn nhiều vì các giá trị có thể được chuyển khi tạo đối tượng và hai phiên bản riêng biệt thu được có thể được xử lý dễ dự đoán và thống nhất hơn. Việc khai báo các thuộc tính dữ liệu trong hàm tạo cũng đảm bảo các thuộc tính được khai báo thực sự và các giá trị ban đầu mong muốn luôn được người lập trình sử dụng lớp đưa ra."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "5a93b0f82857c62211196eb0d1ee367cc33c6ecfcc3b9ffe34b8f60c4f4970f1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "It is still possible to change the initial values of the data attributes later in the program:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vẫn có thể thay đổi giá trị ban đầu của các thuộc tính dữ liệu sau này trong chương trình:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0035",
+      "type": "code",
+      "order": 35,
+      "source_hash": "5d5b6704e950051dfbcca498374a239235d15c95583f93704d41b0dd555b5e0e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class BankAccount:\n\n    # The constructor\n    def __init__(self, balance: float, owner: str):\n        self.balance = balance\n        self.owner = owner\n\npeters_account = BankAccount(100, \"Peter Python\")\nprint(peters_account.balance)\n\n# Change the balance to 1500\npeters_account.balance = 1500\nprint(peters_account.balance)\n\n# Add 2000 to the balance\npeters_account.balance += 2000\nprint(peters_account.balance)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class BankAccount:\n\n    # The constructor\n    def __init__(self, balance: float, owner: str):\n        self.balance = balance\n        self.owner = owner\n\npeters_account = BankAccount(100, \"Peter Python\")\nprint(peters_account.balance)\n\n# Change the balance to 1500\npeters_account.balance = 1500\nprint(peters_account.balance)\n\n# Add 2000 to the balance\npeters_account.balance += 2000\nprint(peters_account.balance)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5d5b6704e950051dfbcca498374a239235d15c95583f93704d41b0dd555b5e0e",
+        "length_lines": 17
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0036",
+      "type": "sample_output",
+      "order": 36,
+      "source_hash": "99226e7eab468b8cb8de0b2a5d6319fa23a14e0543814185269871fa082a26fa",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "100\n1500\n3500"
+      },
+      "translation": {
+        "language": "text",
+        "content": "100\n1500\n3500"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n100\n1500\n3500\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "0b3f1c6171e3e4003c78c7c3b0ffd12ce6e4dfba2479a3bc892e590fbeda9108",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at another example of classes and objects. We'll write a class which models a single draw of lottery numbers:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy xem một ví dụ khác về lớp và đối tượng. Chúng ta sẽ viết một lớp mô hình hóa một lần rút số xổ số:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0038",
+      "type": "code",
+      "order": 38,
+      "source_hash": "5875ede180bf57f076eaea0ce4bddc7a766436b5d2863197869230aa3a2ea29e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from datetime import date\n\nclass LotteryDraw:\n\n    def __init__(self, round_week: int, round_date: date, numbers: list):\n        self.round_week = round_week\n        self.round_date = round_date\n        self.numbers = numbers\n\n\n# Create a new LotteryDraw object\nround1 = LotteryDraw(1, date(2021, 1, 2), [1,4,8,12,13,14,33])\n\n# Tulostetaan tiedot\nprint(round1.round_week)\nprint(round1.round_date)\n\nfor number in round1.numbers:\n    print(number)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from datetime import date\n\nclass LotteryDraw:\n\n    def __init__(self, round_week: int, round_date: date, numbers: list):\n        self.round_week = round_week\n        self.round_date = round_date\n        self.numbers = numbers\n\n\n# Create a new LotteryDraw object\nround1 = LotteryDraw(1, date(2021, 1, 2), [1,4,8,12,13,14,33])\n\n# Tulostetaan tiedot\nprint(round1.round_week)\nprint(round1.round_date)\n\nfor number in round1.numbers:\n    print(number)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5875ede180bf57f076eaea0ce4bddc7a766436b5d2863197869230aa3a2ea29e",
+        "length_lines": 19
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0039",
+      "type": "sample_output",
+      "order": 39,
+      "source_hash": "8b9d7a934e96cef2a8b3ec6efc211d0ec4222a0429eedb2962710e640d2b8db2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "1\n2021-01-02\n1\n4\n8\n12\n13\n14\n33"
+      },
+      "translation": {
+        "language": "text",
+        "content": "1\n2021-01-02\n1\n4\n8\n12\n13\n14\n33"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n1\n2021-01-02\n1\n4\n8\n12\n13\n14\n33\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "865147ba1485f7e2a53f8965a9de015a7400eb5767c08252dea2a1a5a6de450b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "As you can see above, the attributes can be of any type. Here, each LotteryDraw object has attributes of type `list` and `date`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Như bạn có thể thấy ở trên, các thuộc tính có thể thuộc bất kỳ loại nào. Ở đây, mỗi đối tượng LotteryDraw có các thuộc tính loại `list` và `date`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0041",
+      "type": "exercise",
+      "order": 41,
+      "source_hash": "6fb5df66f6199460c6e2ec8c03f661f34767976621d0df9b404d4be481f852f9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a class named `Book` with the attributes `name`, `author`, `genre` and `year`, along with a constructor which assigns initial values to these attributes.\n\nYour class should work like this:\n\n```python\npython = Book(\"Fluent Python\", \"Luciano Ramalho\", \"programming\", 2015)\neverest = Book(\"High Adventure\", \"Edmund Hillary\", \"autobiography\", 1956)\n\nprint(f\"{python.author}: {python.name} ({python.year})\")\nprint(f\"The genre of the book {everest.name} is {everest.genre}\")\n```\n\n<sample-output>\n\nLuciano Ramalho: Fluent Python (2015)\nThe genre of the book High Adventure is autobiography\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng viết một lớp có tên `Book` với các thuộc tính `name`, `author`, `genre` và `year`, cùng với hàm tạo gán giá trị ban đầu cho các thuộc tính này.\n\nLớp học của bạn sẽ hoạt động như thế này:\n\n```python\npython = Book(\"Fluent Python\", \"Luciano Ramalho\", \"programming\", 2015)\neverest = Book(\"High Adventure\", \"Edmund Hillary\", \"autobiography\", 1956)\n\nprint(f\"{python.author}: {python.name} ({python.year})\")\nprint(f\"The genre of the book {everest.name} is {everest.genre}\")\n```\n\n<sample-output>\n\nLuciano Ramalho:  Python thông thạo (2015)\nThể loại của sách High Adventure là tự truyện\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part08-05_book",
+        "exercise_type": "programming-exercise",
+        "name": "Book",
+        "tmc_name": "part08-05_book",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0042",
+      "type": "exercise",
+      "order": 42,
+      "source_hash": "cd7ac14b8c42faad3719fab7e1c44a38f15f0b219180bcdc5dded22579f19e2f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write the three classes specified below. Each class should have exactly the same names and types of attributes as listed.\n\nPlease also include a constructor in each class. The constructor should take the initial values of the attributes as its arguments, in the order listed below.\n\n1. Class Checklist\n- attribute header (string)\n- attribute entries (list)\n\n2. Class Customer\n- attribute id (string)\n- attribute balance (float)\n- attribute discount (integer)\n\n3. Class Cable\n- attribute model (string)\n- attribute length (float)\n- attribute max_speed (integer)\n- attribute bidirectional (Boolean)"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng viết ba lớp được chỉ định dưới đây. Mỗi lớp phải có cùng tên và loại thuộc tính như được liệt kê.\n\nVui lòng bao gồm một hàm tạo trong mỗi lớp. Hàm tạo nên lấy các giá trị ban đầu của các thuộc tính làm đối số của nó, theo thứ tự được liệt kê bên dưới.\n\n1. Danh sách kiểm tra lớp học\n- tiêu đề thuộc tính (chuỗi)\n- mục thuộc tính (danh sách)\n\n2. Hạng khách hàng\n- id thuộc tính (chuỗi)\n- cân bằng thuộc tính (float)\n- thuộc tính giảm giá (số nguyên)\n\n3. Cáp lớp\n- mô hình thuộc tính (chuỗi)\n- chiều dài thuộc tính (float)\n- thuộc tính max_speed (số nguyên)\n- thuộc tính hai chiều (Boolean)"
+      },
+      "metadata": {
+        "exercise_id": "ex-part08-06_three_classes",
+        "exercise_type": "programming-exercise",
+        "name": "Three classes",
+        "tmc_name": "part08-06_three_classes",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0043",
+      "type": "heading",
+      "order": 43,
+      "source_hash": "11688af1aa69b2216fa02ad5de1efa63b68a4682c4709bfbd8c9c2ad9d487311",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Using objecs formed from your own classes"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sử dụng các đối tượng được hình thành từ các lớp của riêng bạn"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "8c8b06e38180004c7e1e466fb16d71d04411c1c6c0d07ef0fca082b6ae4e556a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Objects formed from your own class definitions are no different from any other Python objects. They can be passed as arguments and return values just like any other object. We could, for example, write some helper functions for working with bank accounts:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các đối tượng được hình thành từ định nghĩa lớp của riêng bạn không khác với bất kỳ đối tượng Python nào khác. Chúng có thể được truyền dưới dạng đối số và trả về giá trị giống như bất kỳ đối tượng nào khác. Ví dụ: chúng ta có thể viết một số hàm trợ giúp để làm việc với tài khoản ngân hàng:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0045",
+      "type": "code",
+      "order": 45,
+      "source_hash": "281f2d28564c6c438b4ccc6c05e9a2e043309281aab1efbfa91aeac18f7fd70d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# this function creates a new bank account object and returns it\ndef open_account(name: str):\n    new_account =  BankAccount(0, name)\n    return new_account\n\n# this function adds the amount passed as an argument to the balance of the bank account also passed as an argument\ndef deposit_money_on_account(account: BankAccount, amount: int):\n    account.balance += amount\n\npeters_account = open_account(\"Peter Python\")\nprint(peters_account.balance)\n\ndeposit_money_on_account(peters_account, 500)\n\nprint(peters_account.balance)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# this function creates a new bank account object and returns it\ndef open_account(name: str):\n    new_account =  BankAccount(0, name)\n    return new_account\n\n# this function adds the amount passed as an argument to the balance of the bank account also passed as an argument\ndef deposit_money_on_account(account: BankAccount, amount: int):\n    account.balance += amount\n\npeters_account = open_account(\"Peter Python\")\nprint(peters_account.balance)\n\ndeposit_money_on_account(peters_account, 500)\n\nprint(peters_account.balance)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "281f2d28564c6c438b4ccc6c05e9a2e043309281aab1efbfa91aeac18f7fd70d",
+        "length_lines": 15
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0046",
+      "type": "sample_output",
+      "order": 46,
+      "source_hash": "8e8300df0dc96e75e3d8efd75c6664e592aabcecae5ba52dd894cf717f1668ba",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "0\n500"
+      },
+      "translation": {
+        "language": "text",
+        "content": "0\n500"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n0\n500\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0047",
+      "type": "exercise",
+      "order": 47,
+      "source_hash": "c45888681bf62d0e8f871f039eba5eaee04d2e2163b91ac95818d7b84fe712f1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please define the class `Pet`. The class should include a constructor, which takes the initial values of the attributes `name`, `species` and `year_of_birth` as its arguments, in that specific order.\n\nPlease also write a function named `new_pet(name: str, species: str, year_of_birth: int)` _outside the class definition_. The function should create and return a new object of type `Pet`, as defined in the class `Pet`.\n\nAn example of how the function is used:\n\n```python\nfluffy = new_pet(\"Fluffy\", \"dog\", 2017)\nprint(fluffy.name)\nprint(fluffy.species)\nprint(fluffy.year_of_birth)\n```\n\n<sample-output>\n\nFluffy\ndog\n2017\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng xác định lớp `Pet`. Lớp này phải bao gồm một hàm tạo, lấy các giá trị ban đầu của các thuộc tính `name`, `species` và `year_of_birth` làm đối số, theo thứ tự cụ thể đó.\n\nVui lòng viết một hàm có tên `new_pet(name: str, species: str, year_of_birth: int)` _bên ngoài định nghĩa lớp_. Hàm sẽ tạo và trả về một đối tượng mới thuộc loại `Pet`, như được định nghĩa trong lớp `Pet`.\n\nMột ví dụ về cách sử dụng chức năng:\n\n```python\nfluffy = new_pet(\"Fluffy\", \"dog\", 2017)\nprint(fluffy.name)\nprint(fluffy.species)\nprint(fluffy.year_of_birth)\n```\n\n<sample-output>\n\nmịn màng\ncon chó\n2017\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part08-07_pet",
+        "exercise_type": "programming-exercise",
+        "name": "Define class: Pet",
+        "tmc_name": "part08-07_pet",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0048",
+      "type": "exercise",
+      "order": 48,
+      "source_hash": "3da29dcda939f1f4ad8f8cdce1eae2a81584f44606df1f2180829daa25ebee80",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `older_book(book1: Book, book2: Book)` which takes two objects of type `Book` as its arguments. The function should print out a message with the details of whichever is the older. It should print out a different message if the two books were written in the same year. Please see the examples below.\n\n```python\npython = Book(\"Fluent Python\", \"Luciano Ramalho\", \"programming\", 2015)\neverest = Book(\"High Adventure\", \"Edmund Hillary\", \"autobiography\", 1956)\nnorma = Book(\"Norma\", \"Sofi Oksanen\", \"crime\", 2015)\n\nolder_book(python, everest)\nolder_book(python, norma)\n```\n\n<sample-output>\n\nHigh Adventure is older, it was published in 1956\nFluent Python and Norma were published in 2015\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng viết một hàm có tên `older_book(book1: Book, book2: Book)` lấy hai đối tượng thuộc loại `Book` làm đối số. Hàm sẽ in ra một thông báo với thông tin chi tiết về cái nào cũ hơn. Nó sẽ in ra một thông điệp khác nếu hai cuốn sách được viết trong cùng một năm. Xin vui lòng xem các ví dụ dưới đây.\n\n```python\npython = Book(\"Fluent Python\", \"Luciano Ramalho\", \"programming\", 2015)\neverest = Book(\"High Adventure\", \"Edmund Hillary\", \"autobiography\", 1956)\nnorma = Book(\"Norma\", \"Sofi Oksanen\", \"crime\", 2015)\n\nolder_book(python, everest)\nolder_book(python, norma)\n```\n\n<sample-output>\n\nHigh Adventure cũ hơn, được xuất bản năm 1956\nFluent Python và Norma được xuất bản vào năm 2015\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part08-08_older_book",
+        "exercise_type": "programming-exercise",
+        "name": "The older book",
+        "tmc_name": "part08-08_older_book",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part08-3-defining-classes-0049",
+      "type": "exercise",
+      "order": 49,
+      "source_hash": "53141747d550dc9781597bf76e01d2c30aca7dfc0a7f1c5fcd9b579f3027595e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `books_of_genre(books: list, genre: str)` which takes a list of objects of type `Book` and a string representing a genre as its arguments.\n\nThe function should return a _new_ list, which contains the books with the desired genre from the original list. Please see the examples below.\n\n```python\npython = Book(\"Fluent Python\", \"Luciano Ramalho\", \"programming\", 2015)\neverest = Book(\"High Adventure\", \"Edmund Hillary\", \"autobiography\", 1956)\nnorma = Book(\"Norma\", \"Sofi Oksanen\", \"crime\", 2015)\n\nbooks = [python, everest, norma, Book(\"The Snowman\", \"Jo Nesbø\", \"crime\", 2007)]\n\nprint(\"Books in the crime genre:\")\nfor book in books_of_genre(books, \"crime\"):\n    print(f\"{book.author}: {book.name}\")\n```\n\n<sample-output>\n\nBooks in the crime genre:\nSofi Oksanen: Norma\nJo Nesbø: The Snowman\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng viết một hàm có tên `books_of_genre(books: list, genre: str)` để nhận danh sách các đối tượng thuộc loại `Book` và một chuỗi đại diện cho một thể loại làm đối số của nó.\n\nHàm sẽ trả về một danh sách _new_, chứa các sách có thể loại mong muốn từ danh sách ban đầu. Xin vui lòng xem các ví dụ dưới đây.\n\n```python\npython = Book(\"Fluent Python\", \"Luciano Ramalho\", \"programming\", 2015)\neverest = Book(\"High Adventure\", \"Edmund Hillary\", \"autobiography\", 1956)\nnorma = Book(\"Norma\", \"Sofi Oksanen\", \"crime\", 2015)\n\nbooks = [python, everest, norma, Book(\"The Snowman\", \"Jo Nesbø\", \"crime\", 2007)]\n\nprint(\"Books in the crime genre:\")\nfor book in books_of_genre(books, \"crime\"):\n    print(f\"{book.author}: {book.name}\")\n```\n\n<sample-output>\n\nSách thuộc thể loại tội phạm:\nSofi Oksanen: Norma\nJo Nesbø: Người tuyết\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part08-09_books_of_genre",
+        "exercise_type": "programming-exercise",
+        "name": "Books of a genre",
+        "tmc_name": "part08-09_books_of_genre",
+        "height": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-14_addition_and_removal",
+  "lesson_id": "part04-3-lists",
+  "part": 4,
+  "tmc_name": "part04-14_addition_and_removal",
+  "title_original": "Addition and removal",
+  "title_vi": "Bổ sung và loại bỏ",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user to choose between addition and removal. Depending on the choice, the program _adds an item to_ or _removes an item from_ the end of a list. The item that is added must always be one greater than the last item in the list. The first item to be added must be 1.\n\nThe list is printed out in the beginning and after each operation. Have a look at the example execution below:\n\n<sample-output>\n\nThe list is now []\na(d)d, (r)emove or e(x)it: **d**\nThe list is now [1]\na(d)d, (r)emove or e(x)it: **d**\nThe list is now [1, 2]\na(d)d, (r)emove or e(x)it: **d**\nThe list is now [1, 2, 3]\na(d)d, (r)emove or e(x)it: **r**\nThe list is now [1, 2]\na(d)d, (r)emove or e(x)it: **d**\nThe list is now [1, 2, 3]\na(d)d, (r)emove or e(x)it: **x**\nBye!\n\n</sample-output>\n\nYou may assume that, if the list is empty, there will not be an attempt to remove items.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+  "description_vi": "Hãy viết chương trình yêu cầu người dùng lựa chọn giữa thêm và bớt. Tùy thuộc vào lựa chọn, chương trình _thêm một mục vào_ hoặc _xóa một mục khỏi_ cuối danh sách. Mục được thêm vào phải luôn lớn hơn mục cuối cùng trong danh sách. Mục đầu tiên được thêm vào phải là 1.\n\nDanh sách được in ra đầu và sau mỗi thao tác. Hãy xem cách thực hiện ví dụ dưới đây:\n\n<sample-output>\n\nDanh sách bây giờ là []\na(d)d, (r)emove hoặc e(x)it: **d**\nDanh sách bây giờ là [1]\na(d)d, (r)emove hoặc e(x)it: **d**\nDanh sách bây giờ là [1, 2]\na(d)d, (r)emove hoặc e(x)it: **d**\nDanh sách bây giờ là [1, 2, 3]\na(d)d, (r)emove hoặc e(x)it: **r**\nDanh sách bây giờ là [1, 2]\na(d)d, (r)emove hoặc e(x)it: **d**\nDanh sách bây giờ là [1, 2, 3]\na(d)d, (r)emove hoặc e(x)it: **x**\nTạm biệt!\n\n</sample-output>\n\nBạn có thể cho rằng nếu danh sách trống thì sẽ không có nỗ lực xóa mục nào.\n\n**NB:** bài tập này không yêu cầu bạn viết bất kỳ hàm nào, vì vậy bạn nên __không__ đặt bất kỳ mã nào trong khối `if __name__ == \"__main__\"`.",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "25643dfba5562bce91f890910c1681c025c3dc97d0df1859223fd40adfe0b1d6",
+  "order": 56
+}

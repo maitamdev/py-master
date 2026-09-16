@@ -1,0 +1,1180 @@
+{
+  "id": "part13-1-pygame",
+  "part": 13,
+  "part_slug": "part-13",
+  "slug": "1-pygame",
+  "is_part_index": false,
+  "title_original": "Pygame",
+  "title_vi": "",
+  "path": "/part-13/1-pygame",
+  "source_path": "data/part-13/1-pygame.md",
+  "source_hash": "659caf4e8cb6b7ddba7487a5f09b70adee56481781054233d5a2c939b563d5f1",
+  "order": 1,
+  "blocks_count": 64,
+  "blocks": [
+    {
+      "id": "blk-part13-1-pygame-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "944947854ea20923dfd9f763c61c4f2c7646ac1e897a90eaae64fd2f31a5d482",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will have installed the pygame library on your computer\n- You will know how to create a pygame window and how to exit a program\n- You will be able to use an image stored in a file in a pygame window"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "dd92ca2b2cfa9142a81954c1f222c28103ba1845b521e8bec90263721f357678",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In these last two parts of this course material we will get to grips with the pygame library. It is a Python library for programming games. It helps you create graphical elements, handle events from the keyboard and the mouse, and implement other features necessary in games."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0003",
+      "type": "heading",
+      "order": 3,
+      "source_hash": "9643f66027d1ba115e46bda9a7a27ca6c576832f26bb8cb200aa93d9b536b740",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Installing pygame"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0004",
+      "type": "heading",
+      "order": 4,
+      "source_hash": "4828e60247c1636f57b7446a314e7f599c12b53d40061cc851a1442004354fed",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Linux"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "0a0f71015dba92599d7aaacfa6f7179101e073adc956be88917aeec74570b0a5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Open a command line, type in `pip3 install pygame` an press `enter`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0006",
+      "type": "image",
+      "order": 6,
+      "source_hash": "22c0ebda15a7decc0799d8bea1dbeb78a73fcc13c00fe2f09b5bded0d8cb4a78",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "pygame_linux.png",
+        "alt": "",
+        "attributes": {
+          "src": "pygame_linux.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "3aa26a518c7e908f3522e32d43d4626dbd3b950ecc91c83f694077cf304db237",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This should install the pygame library on your computer."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0008",
+      "type": "heading",
+      "order": 8,
+      "source_hash": "d598026a9cbc60505f138ce53ac78088d582100c196d0f70c7e2538d4a8d7e10",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Windows"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "853ce9ef6087cea6cec3cf0171ef2f8856491115c4af337bb03295dcdd61a282",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Open the Windows terminal by opening the menu, typing in `cmd` and pressing `enter`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0010",
+      "type": "image",
+      "order": 10,
+      "source_hash": "f0fb6481720582ea1bc4587980e288c77462ee0601e3674cc8c41c5d8bcf8429",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "13_1_1.png",
+        "alt": "",
+        "attributes": {
+          "src": "13_1_1.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "c9ed136481e38b015754d26e5615e0f86bd203d2607863813ce863059515c6d2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The command line interpreter window should open. Type in `pip3 install pygame` and press `enter`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "3aa26a518c7e908f3522e32d43d4626dbd3b950ecc91c83f694077cf304db237",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This should install the pygame library on your computer."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "7c421c8fe83362482b8b6ef5c3b9e2a650b6a27bb7afcac4756b0c6fec4c24de",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Installation may require system administrator privileges. If the above doesn't work, you can try running the terminal application as an administrator: open the Windows menu, find the CMD application, right-click it and choose \"Run as administrator\"."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "e409af3414d3c5f2a903028f49421f838041223ec45846e321a52b033b10cd86",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Installing and accessing pygame requires that your Python installation is added to path, as instructed [here](https://www.mooc.fi/en/installation/vscode/#python3)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0015",
+      "type": "heading",
+      "order": 15,
+      "source_hash": "8b3795aa25390811064d8e7276e56384b720d78e3ab2780e415c7dc9d4e9522b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Mac"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "579898752ab250e57615254c34407e1ae03860ec968723acb50d2f156076ab5b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Open the _Terminal_, for example through the magnifying glass symbol in the top right corner:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0017",
+      "type": "image",
+      "order": 17,
+      "source_hash": "4fd83cc9c10bf84b379c0bceb1d4f16b9f08209d737934f3dbdce5bd1f81db76",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "13-1-2.png",
+        "alt": "",
+        "attributes": {
+          "src": "13-1-2.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "bdb9ba56b0cedc58be63e68668e5dd9ecb092656e91f3af70b22e12c91213941",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The search tool should open. Type in `terminal` and press `enter`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0019",
+      "type": "image",
+      "order": 19,
+      "source_hash": "8b47d808f1c863d3258030b0244bef9d5878aaf7cd3c399d4a4fe01d3bc89ab4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "13-1-3.png",
+        "alt": "",
+        "attributes": {
+          "src": "13-1-3.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "f69ea8c566409f61b6d302eaa67670a3b1d7292de0f05602b50f6aa05c74d8b7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Type in the following and press `enter`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "36800b0bd0e57e15cdf7d346c26c1ec2d2522be70376acf1e9da8bf26718c9bf",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "`pip3 install pygame`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0022",
+      "type": "image",
+      "order": 22,
+      "source_hash": "db6c55eebca55d382247ef835d149b0747509bc180f37c8c3593af449adce58e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "13-1-4.png",
+        "alt": "",
+        "attributes": {
+          "src": "13-1-4.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "3aa26a518c7e908f3522e32d43d4626dbd3b950ecc91c83f694077cf304db237",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This should install the pygame library on your computer."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0024",
+      "type": "heading",
+      "order": 24,
+      "source_hash": "fd35641530876876e82034de22daf99eb59323edeac439b891d628807d06c8de",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Your first program"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "3d44bfa4b26e517ccae138d10e8caad10c8cf5b871b27c83d33ca454737ba4d7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Here is a simple program for checking your pygame installation works correctly:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0026",
+      "type": "code",
+      "order": 26,
+      "source_hash": "0dbcae60b88c2e1255b210a9cca8c7c9b42749d7bc7a281dac1b60336d944a95",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nwindow.fill((0,0,0))\npygame.display.flip()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nwindow.fill((0,0,0))\npygame.display.flip()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "0dbcae60b88c2e1255b210a9cca8c7c9b42749d7bc7a281dac1b60336d944a95",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "925d1765bf5e70c8983d90e22eb42c59dd825203654ac7f41960aec4c8bb7801",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When this program is run, it should display a window:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0028",
+      "type": "image",
+      "order": 28,
+      "source_hash": "8215c417320ee89eca252bc300643b9ec6932c5eed964b4d88f05893e3d65cb1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "pygame_first.gif",
+        "alt": "",
+        "attributes": {
+          "src": "pygame_first.gif"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "235d979451fd902edebfe1d60150c873c071e82107730239da83fa102f568a51",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The program only consists of displaying a window, and it runs until the user closes the window."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "1a70a4eb4b0883bd0fa29f565839f582a774d5bf1ebe4d315397909eda75822d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's take a closer look at the steps required to achieve this. The first line takes the pygame library into use: `import pygame`. The next command `pygame.init` initializes the pygame modules, and the next one creates a window with the function `pygame.display.set_mode`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0031",
+      "type": "code",
+      "order": 31,
+      "source_hash": "44fd4a64948076d46115293605726a7d6328c2dd6bfc243db480c9a1e247bd05",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "pygame.init()\nwindow = pygame.display.set_mode((640, 480))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "pygame.init()\nwindow = pygame.display.set_mode((640, 480))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "44fd4a64948076d46115293605726a7d6328c2dd6bfc243db480c9a1e247bd05",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "531aee66ad628db9689f3c7bd926bfd831284b2afbf22f34f597a6ae1b2bcc6f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `set_mode` function takes the window dimensions as an argument. The tuple `(640, 480)` indicates that the window is 640 pixels wide and 480 pixels high. The variable name `window` can be used later to access the window, for example to draw something in it."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "96f3a5ba4cb8ec0dc6cdffcd196cddb709b55c200a48dc5beab3b85137760847",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The following two commands do just that:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0034",
+      "type": "code",
+      "order": 34,
+      "source_hash": "55ba0a8c15f87406bf4a2b47666b08ec7e581d1d1ec3fd71627a72ded7a48ccb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "window.fill((0, 0, 0))\npygame.display.flip()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "window.fill((0, 0, 0))\npygame.display.flip()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "55ba0a8c15f87406bf4a2b47666b08ec7e581d1d1ec3fd71627a72ded7a48ccb",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "eb86de575f94bb2abc50cc35e314dd68f13d748dfe3e48443ac01e659ce10557",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `fill` method fills the window with the colour passed as an argument. In this case the colour is black, passed as an RGB value in the tuple `(0, 0, 0)`. The `pygame.display.flip` updates the contents of the window."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "6dc6ffe88ecde8d03f74c39cae7d27cef16442cd2651c14ae9d04fd8b205e023",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After these initialization commands the _main loop_ of the program begins:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0037",
+      "type": "code",
+      "order": 37,
+      "source_hash": "45745a3a2d4e706b97ac4f080e8939014a1741fb81a914003b35e41e2f916fcf",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "while True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "while True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "45745a3a2d4e706b97ac4f080e8939014a1741fb81a914003b35e41e2f916fcf",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "42907e8cf002e882c3510af36f9e23239afe130b4a01ad0685fd2c815bf1340f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The main loop handles all events the operating system passes to the program. With each iteration the function `pygame.event.get` returns a list of any events collected since the previous iteration."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "b40e8035d71f9f587d9d403090799523f286b2c6657281b887673f6f2c0ff6bc",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the example above the program only handles events of type `pygame.QUIT`. This event is raised by, for example, clicking on the exit button in the corner of the window. If the `pygame.QUIT` event is raised, the program exits through the `exit` function."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "0491c06d594c975337e0338d842c5814d988ecf291a607f88919cd40b74ce7d3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You can try and see what happens if your program doesn't handle the `pygame.QUIT` event. This should mean that clicking on the exit button does nothing, which would be confusing for the user. As the program is run from the command line, you can still stop it from the command line with Control+C."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0041",
+      "type": "heading",
+      "order": 41,
+      "source_hash": "f4727118bd34e4d42159203976a8caf194e39e89fda6cb8b325bba476ca5ebba",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Add an image"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "218dfa6eec50393ac1030e4787cb5b2bd5c7d319c90e938441db898ed170ff6d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's add an image to the window:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0043",
+      "type": "code",
+      "order": 43,
+      "source_hash": "551da054589ed099169891f61be5b1f388734abd234436f09a0f0bd0a08cc1f3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nwindow.fill((0, 0, 0))\nwindow.blit(robot, (100, 50))\npygame.display.flip()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nwindow.fill((0, 0, 0))\nwindow.blit(robot, (100, 50))\npygame.display.flip()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "551da054589ed099169891f61be5b1f388734abd234436f09a0f0bd0a08cc1f3",
+        "length_lines": 15
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "ecc93f788dd86a242ee7b7801cd101f471670bb8693f1b7168bce04efcd6f47b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The program uses this image of a robot, which is stored in the file `robot.png`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0045",
+      "type": "image",
+      "order": 45,
+      "source_hash": "88db1fb578d3d02ec1c99eb8c5aaa02f67f5cfd38278e70401113d1f0c72581c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "robot.png",
+        "alt": "",
+        "attributes": {
+          "src": "robot.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0046",
+      "type": "paragraph",
+      "order": 46,
+      "source_hash": "4c20e8f186d0662edd54293ab6f11fd65bedf37eac7aa9ec1b51f6e2ead167b0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The file `robot.png` has to be in the same directory with the source code of the your program, or the program won't be able to find it. In the exercise templates for this part the images are waiting in the exercise directory."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0047",
+      "type": "paragraph",
+      "order": 47,
+      "source_hash": "99e803474c339f08c484817bc1d7cae818dd10d3b674f0d729b0d4f94b8975fd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The window should now look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0048",
+      "type": "image",
+      "order": 48,
+      "source_hash": "58f75e5773a295635e6c52774416b47664f57bc7e6cefaad4694463f2ffc2838",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "pygame_pic.gif",
+        "alt": "",
+        "attributes": {
+          "src": "pygame_pic.gif"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0049",
+      "type": "paragraph",
+      "order": 49,
+      "source_hash": "64532cce966288fc0b9ba039c92889a05e7204d4335d408347cd9f7b04259a0f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The function `pygame.image.load` loads the image in the file `robot.png` and stores a reference to it in the variable named `robot`. The method `blit` draws the image at the location `(100, 50)`, and the function `pygame.display.flip` updates the window contents, as before. The location `(100, 50)` means that the _top left corner_ of the image is at that location within the window."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0050",
+      "type": "paragraph",
+      "order": 50,
+      "source_hash": "0d39fc1ee06efc160391be50211026e70ff8d8f1b92495e1aeff9d1ad65dd0b4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In pygame the origo point `(0, 0)` is in the top left corner of the window. The x coordinates increase to the right, and the y coordinates increase downwards, so that the bottom right corner has the coordinates `(640, 480)`. This is contrary to how coordinates are usually handled in e.g. mathematics, but it is quite common in a programming context, and worth getting used to."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0051",
+      "type": "paragraph",
+      "order": 51,
+      "source_hash": "178cce02757b213c6d2f5dc70d38d32dd252e3e712760f6f4a758431d64b27aa",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Once you have loaded an image, you can use it many times within the same window. The following code draws the image of the robot at three different locations:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0052",
+      "type": "code",
+      "order": 52,
+      "source_hash": "16126114a0e07e8f40112dd5c489a546f1d3ee98af770cc53152c23557d7cede",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "window.blit(robot, (0, 0))\nwindow.blit(robot, (300, 0))\nwindow.blit(robot, (100, 200))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "window.blit(robot, (0, 0))\nwindow.blit(robot, (300, 0))\nwindow.blit(robot, (100, 200))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "16126114a0e07e8f40112dd5c489a546f1d3ee98af770cc53152c23557d7cede",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0053",
+      "type": "paragraph",
+      "order": 53,
+      "source_hash": "edfeefad0309069e993404b7333f9453e524b67a4472032796c894925740078e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The window should look like this as a result:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0054",
+      "type": "image",
+      "order": 54,
+      "source_hash": "06e0a286ef4b877641e81473f39d14ce5cc47ad64b3f0c77eaed020ca76b7025",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "pygame_pic2.gif",
+        "alt": "",
+        "attributes": {
+          "src": "pygame_pic2.gif"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0055",
+      "type": "paragraph",
+      "order": 55,
+      "source_hash": "11d585ca2e4ddfce4f051212335b91279b024a1718400bae7f0c328305c5fedc",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Here we set the location of the image so that it lies at the centre of the window:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0056",
+      "type": "code",
+      "order": 56,
+      "source_hash": "91754e275e1d0bc637e93164206233bde9b52c8ddaa7e460a670fdd58557ee1e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "width = robot.get_width()\nheight = robot.get_height()\nwindow.blit(robot, (320-width/2, 240-height/2))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "width = robot.get_width()\nheight = robot.get_height()\nwindow.blit(robot, (320-width/2, 240-height/2))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "91754e275e1d0bc637e93164206233bde9b52c8ddaa7e460a670fdd58557ee1e",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0057",
+      "type": "paragraph",
+      "order": 57,
+      "source_hash": "99e803474c339f08c484817bc1d7cae818dd10d3b674f0d729b0d4f94b8975fd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The window should now look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0058",
+      "type": "image",
+      "order": 58,
+      "source_hash": "a25bdb42cd3a0b4ecc3c8e6471cf426c6aae2eb91381f22d1aacef08c7357bd0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "pygame_pic3.gif",
+        "alt": "",
+        "attributes": {
+          "src": "pygame_pic3.gif"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0059",
+      "type": "paragraph",
+      "order": 59,
+      "source_hash": "e02e4caefba622341f8b7f5d80488cda08162182c3729b6b0a0056a5abda0de4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The method `get_width` returns the width of the image, and the method `get_height` returns its height, both in pixels. The centre of the window is at half its width and height, so at `(320, 240)`, which we can use to calculate a suitable location for the top left corner of the image, so that it lies exactly at the centre."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-1-pygame-0060",
+      "type": "text_box",
+      "order": 60,
+      "source_hash": "10c8b957c77c2516a7c3cae4d086f2a26478cc3f2cedf9c773c0f8f967cb681d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercises in this part of the course have no automated tests, as the results as visually verified. The tests grant points automatically as you submit your solution to the server, no matter what your implementation. Only submit your solution when you are ready, and your solution matches the exercise description. The exercises may not have automatic tests, but the course staff will still see your solution. Also submitting incomplete solution to TMC Paste grants points automatically, so it should not be used when asking for help with the exercises in this part. You can use [Pastebin.com](https://pastebin.com/) or some another internet pastebin service when asking for help in the course's support channels.\n\nIf your solution clearly does not match the exercise description, you may lose the points granted for the exercises in this part."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "hint",
+        "name_original": "Pygame exercises",
+        "name_vi": "",
+        "attributes": {
+          "variant": "hint",
+          "name": "Pygame exercises"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0061",
+      "type": "exercise",
+      "order": 61,
+      "source_hash": "44c56b984b6a1566f477bc173aaf15d3389bc20ab95ee800585f0f81cd29d0cd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which draws a robot in each of the four corners of the window. The end result should look like this:\n\n<img src=\"pygame_four.gif\">"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part13-01_four_robots",
+        "exercise_type": "programming-exercise",
+        "name": "Four robots",
+        "tmc_name": "part13-01_four_robots",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0062",
+      "type": "exercise",
+      "order": 62,
+      "source_hash": "49fc2f9685ce79b1d21ee6d098148c0249eaed6519daacd4689ff0b0b0141b84",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which draws ten robots in a row. The end result should look like this:\n\n<img src=\"pygame_row.gif\">"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part13-02_robots_row",
+        "exercise_type": "programming-exercise",
+        "name": "Robots in a row",
+        "tmc_name": "part13-02_robots_row",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0063",
+      "type": "exercise",
+      "order": 63,
+      "source_hash": "3b3c0324286f7084376cf95dd3421283a5fbb22318134361c025ae7b7dcfdcc6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which draws a hundred robots: ten rows with ten robots in each row. The end result should look like this:\n\n<img src=\"pygame_hundred.gif\">"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part13-03_hundred_robots",
+        "exercise_type": "programming-exercise",
+        "name": "A hundred robots",
+        "tmc_name": "part13-03_hundred_robots",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part13-1-pygame-0064",
+      "type": "exercise",
+      "order": 64,
+      "source_hash": "16bc4c7a106c439ba1365ff5962d76c63b2e6ee4b05b56eb783254ebb1a91036",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which draws _a thousand_ robots in random places. The end result should look like this:\n\n<img src=\"pygame_thousand.gif\">"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part13-04_random_robots",
+        "exercise_type": "programming-exercise",
+        "name": "Random robots",
+        "tmc_name": "part13-04_random_robots",
+        "height": null
+      }
+    }
+  ]
+}

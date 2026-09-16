@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-37_neighbours_in_list",
+  "lesson_id": "part04-6-strings-and-lists",
+  "part": 4,
+  "tmc_name": "part04-37_neighbours_in_list",
+  "title_original": "Neighbours in a list",
+  "title_vi": "Hàng xóm trong danh sách",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Given a list of integers, let's decide that two consecutive items in the list are neighbours if their difference is 1. So, items 1 and 2 would be neighbours, and so would items 56 and 55.\n\nPlease write a function named `longest_series_of_neighbours`, which looks for the longest series of neighbours within the list, and returns its length.\n\nFor example, in the list `[1, 2, 5, 4, 3, 4]` the longest list of neighbours would be  `[5, 4, 3, 4]`, with a length of 4.\n\nAn example function call:\n\n```python\nmy_list = [1, 2, 5, 7, 6, 5, 6, 3, 4, 1, 0]\nprint(longest_series_of_neighbours(my_list))\n```\n\n<sample-output>\n\n4\n\n</sample-output>",
+  "description_vi": "Cho một danh sách các số nguyên, hãy quyết định rằng hai mục liên tiếp trong danh sách là lân cận nếu hiệu của chúng là 1. Vì vậy, mục 1 và 2 sẽ là hàng xóm, và mục 56 và 55 cũng vậy.\n\nHãy viết một hàm có tên `longest_series_of_neighbours` để tìm chuỗi hàng xóm dài nhất trong danh sách và trả về độ dài của nó.\n\nVí dụ: trong danh sách `[1, 2, 5, 4, 3, 4]`, danh sách hàng xóm dài nhất sẽ là `[5, 4, 3, 4]`, với độ dài là 4.\n\nMột lệnh gọi hàm ví dụ:\n\n```python\nmy_list = [1, 2, 5, 7, 6, 5, 6, 3, 4, 1, 0]\nprint(longest_series_of_neighbours(my_list))\n```\n\n<sample-output>\n\n4\n\n</sample-output>",
+  "starter_code": "my_list = [1, 2, 5, 7, 6, 5, 6, 3, 4, 1, 0]\nprint(longest_series_of_neighbours(my_list))",
+  "grading_data_available": false,
+  "source_hash": "611328a065803c48c226f0914fb56c5c2db9c1c8fed4d5021a59307969aa24e6",
+  "order": 61
+}

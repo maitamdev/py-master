@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-22_find_movies",
+  "lesson_id": "part05-3-dictionary",
+  "part": 5,
+  "tmc_name": "part05-22_find_movies",
+  "title_original": "Find movies",
+  "title_vi": "Tìm phim",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `find_movies(database: list, search_term: str)`, which processes the movie database created in the previous exercise. The function should formulate a new list, which contains only the movies whose title includes the word searched for. Capitalisation is irrelevant here. A search for `ana` should return a list containing both `Anaconda` and `Management`.\n\nAn example of its use:\n\n```python\ndatabase = [{\"name\": \"Gone with the Python\", \"director\": \"Victor Pything\", \"year\": 2017, \"runtime\": 116},\n{\"name\": \"Pythons on a Plane\", \"director\": \"Renny Pytholin\", \"year\": 2001, \"runtime\": 94},\n{\"name\": \"Dawn of the Dead Programmers\", \"director\": \"M. Night Python\", \"year\": 2011, \"runtime\": 101}]\n\nmy_movies = find_movies(database, \"python\")\nprint(my_movies)\n```\n\n<sample-output>\n\n[{\"name\": \"Gone with the Python\", \"director\": \"Victor Pything\", \"year\": 2017, \"runtime\": 116}, {\"name\": \"Pythons on a Plane\", \"director\": \"Renny Pytholin\", \"year\": 2001, \"runtime\": 94}]\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `find_movies(database: list, search_term: str)` để xử lý cơ sở dữ liệu phim được tạo trong bài tập trước. Hàm sẽ tạo một danh sách mới, chỉ chứa các phim có tiêu đề bao gồm từ được tìm kiếm. Viết hoa ở đây không liên quan. Tìm kiếm `ana` sẽ trả về danh sách chứa cả `Anaconda` và `Management`.\n\nMột ví dụ về việc sử dụng nó:\n\n```python\ndatabase = [{\"name\": \"Gone with the Python\", \"director\": \"Victor Pything\", \"year\": 2017, \"runtime\": 116},\n{\"name\": \"Pythons on a Plane\", \"director\": \"Renny Pytholin\", \"year\": 2001, \"runtime\": 94},\n{\"name\": \"Dawn of the Dead Programmers\", \"director\": \"M. Night Python\", \"year\": 2011, \"runtime\": 101}]\n\nmy_movies = find_movies(database, \"python\")\nprint(my_movies)\n```\n\n<sample-output>\n\n[{\"name\": \"Cuốn theo Python\", \"đạo diễn\": \"Victor Pything\", \"năm\": 2017, \"thời gian chạy\": 116}, {\"name\": \"Pythons trên máy bay\", \"đạo diễn\": \"Renny Pytholin\", \"năm\": 2001, \"thời gian chạy\": 94}]\n\n</sample-output>",
+  "starter_code": "database = [{\"name\": \"Gone with the Python\", \"director\": \"Victor Pything\", \"year\": 2017, \"runtime\": 116},\n{\"name\": \"Pythons on a Plane\", \"director\": \"Renny Pytholin\", \"year\": 2001, \"runtime\": 94},\n{\"name\": \"Dawn of the Dead Programmers\", \"director\": \"M. Night Python\", \"year\": 2011, \"runtime\": 101}]\n\nmy_movies = find_movies(database, \"python\")\nprint(my_movies)",
+  "grading_data_available": false,
+  "source_hash": "0bd1d3aace0d49bd4ecc387061d520af9c08f9875732e5c25ffe943b8e769353",
+  "order": 89
+}

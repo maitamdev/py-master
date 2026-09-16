@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-15_right_aligned",
+  "lesson_id": "part03-2-working-with-strings",
+  "part": 3,
+  "tmc_name": "part03-15_right_aligned",
+  "title_original": "Right-aligned",
+  "title_vi": "Căn phải",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for a string and then prints it out so that exactly 20 characters are displayed. If the input is shorter than 20 characters, the beginning of the line is filled in with `*` characters.\n\nYou may assume the input string is at most 20 characters long.\n\n<sample-output>\n\nPlease type in a string: **python**\n<pre>\n**************python\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a string: **alongerstring**\n<pre>\n*******alongerstring\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a string: **averyverylongstring**\n<pre>\n*averyverylongstring\n</pre>\n\n</sample-output>",
+  "description_vi": "Hãy viết một chương trình yêu cầu người dùng nhập một chuỗi rồi in ra để hiển thị đúng 20 ký tự. Nếu đầu vào ngắn hơn 20 ký tự, đầu dòng sẽ được điền bằng các ký tự `*`.\n\nBạn có thể giả sử chuỗi đầu vào dài tối đa 20 ký tự.\n\n<sample-output>\n\nVui lòng nhập một chuỗi: **python**\n<pre>\n**************trăn\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập một chuỗi: **alongerstring**\n<pre>\n*******dọc theo chuỗi\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập một chuỗi: **averyverylongstring**\n<pre>\n*rất dài\n</pre>\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "4bd674c3a3bf421b558ec469af3e85fbc1f586faa35d7ff22d2bb8a839459e77",
+  "order": 56
+}

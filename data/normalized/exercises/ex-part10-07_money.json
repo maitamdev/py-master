@@ -1,0 +1,16 @@
+{
+  "id": "ex-part10-07_money",
+  "lesson_id": "part10-3-oo-programming-techniques",
+  "part": 10,
+  "tmc_name": "part10-07_money",
+  "title_original": "Money",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The exercise template contains an outline for a class named `Money`. This exercise asks you to implement some additional methods and to fix some small problems in the template.\n\n## Fix the string representation\n\nThe `__str__` method in the class definition doesn't work quite right. Given the following two Money objects, the latter is printed out wrong:\n\n```python\ne1 = Money(4, 10)\ne2 = Money(2, 5)  # two euros and five cents\n\nprint(e1)\nprint(e2)\n```\n\n<sample-output>\n\n4.10\n2.5\n\n</sample-output>\n\nPlease fix the method so that it prints out \n\n<sample-output>\n\n4.10 eur\n2.05 eur\n\n</sample-output>\n\n## Equal amounts\n\nPlease define a new method named `__eq__(self, another)` which allows you to use the `==` comparison operator on Money objects. You can test your implementation with the following code:\n\n```python\ne1 = Money(4, 10)\ne2 = Money(2, 5)\ne3 = Money(4, 10)\n\nprint(e1)\nprint(e2)\nprint(e3)\nprint(e1 == e2)\nprint(e1 == e3)\n```\n\n<sample-output>\n\n4.10 eur\n2.05 eur\n4.10 eur\nFalse\nTrue\n\n</sample-output>\n\n## Other comparison operators\n\nPlease implement the appropriate methods for the comparison operators `<`, `>` and `!=`.\n\n```python\ne1 = Money(4, 10)\ne2 = Money(2, 5)\n\nprint(e1 != e2)\nprint(e1 < e2)\nprint(e1 > e2)\n```\n\n<sample-output>\n\nTrue\nFalse\nTrue\n\n</sample-output>\n\n## Addition and subtraction\n\nPlease implement the addition and subtraction operators `+` and `-` for Money objects. Both should return a new object of type Money. Neither the object itself nor the object passed as an argument should be changed as a result.\n\nNB: the value of a Money object cannot be negative. If an attempt to subtract would result in a negative result, the method should raise a `ValueError` exception.\n\n```python\ne1 = Money(4, 5)\ne2 = Money(2, 95)\n\ne3 = e1 + e2\ne4 = e1 - e2\n\nprint(e3)\nprint(e4)\n\ne5 = e2-e1\n```\n\n<sample-output>\n\n7.00 eur\n1.10 eur\nTraceback (most recent call last):\n  File \"money.py\", line 416, in <module>\n    e5 = e2-e1\n  File \"money.py\", line 404, in __sub__\n    raise ValueError(f\"a negative result is not allowed\")\nValueError: a negative result is not allowed\n\n</sample-output>\n\n## The value must not be directly accessible\n\nThe class still has a small integrity issue. The user can \"cheat\" by accessing the attributes directly and changing the value stored in the Money object:\n\n```python\nprint(e1)\ne1.euros = 1000\nprint(e1)\n```\n\n<sample-output>\n\n4.05 eur\n1000.05 eur\n\n</sample-output>\n\nPlease [encapsulate](/part-9/3-encapsulation#encapsulation) the implementation of the attributes defined in the class so that the cheat used above is not possible. The class should have no public attributes, and no getter or setter methods for the euros or the cents.",
+  "description_vi": "",
+  "starter_code": "e1 = Money(4, 10)\ne2 = Money(2, 5)  # two euros and five cents\n\nprint(e1)\nprint(e2)",
+  "grading_data_available": false,
+  "source_hash": "6f1574121e99402dfc03d06083911fcfbdfb12b876022824ee435d6002ba0d63",
+  "order": 48
+}

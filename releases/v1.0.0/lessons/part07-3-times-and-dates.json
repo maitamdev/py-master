@@ -1,0 +1,815 @@
+{
+  "id": "part07-3-times-and-dates",
+  "part": 7,
+  "part_slug": "part-7",
+  "slug": "3-times-and-dates",
+  "is_part_index": false,
+  "title_original": "Times and dates",
+  "title_vi": "Thời gian và ngày tháng",
+  "path": "/part-7/3-times-and-dates",
+  "source_path": "data/part-7/3-times-and-dates.md",
+  "source_hash": "11149326c30358ed71d7a29be9e334c3d668f85c56d21a0fbdca48fc58b9bae5",
+  "order": 1,
+  "blocks_count": 44,
+  "blocks": [
+    {
+      "id": "blk-part07-3-times-and-dates-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "3c93110d51e454ca176908c067ec1760659ec54bafbd280fa2318752a02b5047",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know how to handle dates and times in Python code\n- You will be able to create and use `datetime` objects\n- You will know how to compare and calculate differences between two dates or times"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ biết cách xử lý ngày và giờ trong code Python\n- Bạn sẽ có thể tạo và sử dụng các đối tượng `datetime`\n- Bạn sẽ biết cách so sánh và tính toán sự khác biệt giữa hai ngày hoặc giờ"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0002",
+      "type": "heading",
+      "order": 2,
+      "source_hash": "3abc4fb7f11e0d906aac267bd6fc891ffeadd7c3e653fa7a1e1ae289f4e1ef7f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The datetime object"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đối tượng ngày giờ"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "9d0d8740caa34de5512ca6d4369643dd16a0aa720a78e39d5e10cdc8375d9b02",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The Python [datetime](https://docs.python.org/3/library/datetime.html?highlight=datetime#datetime.datetime) module includes the function [now](https://docs.python.org/3/library/datetime.html?highlight=datetime#datetime.datetime.now), which returns a datetime object containing the current date and time. The default printout of a datetime object looks like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mô-đun Python [datetime](https://docs.python.org/3/library/datetime.html?highlight=datetime#datetime.datetime) bao gồm hàm [now](https://docs.python.org/3/library/datetime.html?highlight=datetime#datetime.datetime.now), trả về một đối tượng datetime chứa ngày và giờ hiện tại. Bản in mặc định của đối tượng datetime trông như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0004",
+      "type": "code",
+      "order": 4,
+      "source_hash": "a42cda33e5fd9f9cf003456f4898453ca039b72a26d721e239faed43d2d9a2fe",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from datetime import datetime\n\nmy_time = datetime.now()\nprint(my_time)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from datetime import datetime\n\nmy_time = datetime.now()\nprint(my_time)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a42cda33e5fd9f9cf003456f4898453ca039b72a26d721e239faed43d2d9a2fe",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0005",
+      "type": "sample_output",
+      "order": 5,
+      "source_hash": "bb858ecf7943f48e7d69d6722b25c413c9f705292b8da35b81c152974cec3060",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "2021-10-19 08:46:49.311393"
+      },
+      "translation": {
+        "language": "text",
+        "content": "2021-10-19 08:46:49.311393"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n2021-10-19 08:46:49.311393\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "b1b19d185d736bd03b2a13c2852bfd060bbf38c8ec839a2b2f28603768907220",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You can also define the object yourself:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn cũng có thể tự xác định đối tượng:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0007",
+      "type": "code",
+      "order": 7,
+      "source_hash": "d7c167a11c4fc4d3836950cbb63e9857e0944b0c83be4df20973a48637074c77",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from datetime import datetime\n\nmy_time = datetime(1952, 12, 24)\nprint(my_time)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from datetime import datetime\n\nmy_time = datetime(1952, 12, 24)\nprint(my_time)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d7c167a11c4fc4d3836950cbb63e9857e0944b0c83be4df20973a48637074c77",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0008",
+      "type": "sample_output",
+      "order": 8,
+      "source_hash": "27c615649810b852e97e30ba3b13e319ba03d19a33c08dfa1f16b60fc4ae476b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "1952-12-24 00:00:00"
+      },
+      "translation": {
+        "language": "text",
+        "content": "1952-12-24 00:00:00"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n1952-12-24 00:00:00\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "ff6032a20a00f693429cc26688444af601d3d2114804379a4924066f921f0531",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "By default, the time is set to midnight, as we did not give a time of day in the example above."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Theo mặc định, thời gian được đặt là nửa đêm vì chúng tôi không đưa ra thời gian trong ngày trong ví dụ trên."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "821adb7a2fae8f3a54eb87b212f341ec8d79ee1f1a0fb0cdd1483deda327fccb",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Different elements of the datetime object can be accessed in the following manner:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các phần tử khác nhau của đối tượng datetime có thể được truy cập theo cách sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0011",
+      "type": "code",
+      "order": 11,
+      "source_hash": "4d3055f0d6100279dbb4d7513360ab4e740bacf2708d79a46c8b835f3df00057",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from datetime import datetime\n\nmy_time = datetime(1952, 12, 24)\nprint(\"Day:\", my_time.day)\nprint(\"Month:\", my_time.month)\nprint(\"Year:\", my_time.year)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from datetime import datetime\n\nmy_time = datetime(1952, 12, 24)\nprint(\"Day:\", my_time.day)\nprint(\"Month:\", my_time.month)\nprint(\"Year:\", my_time.year)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4d3055f0d6100279dbb4d7513360ab4e740bacf2708d79a46c8b835f3df00057",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0012",
+      "type": "sample_output",
+      "order": 12,
+      "source_hash": "a942cd8aafb86b299e151e51e9e1ac361be20a3f41c4a2af9fe7465d7c12f2a1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Day: 24\nMonth: 12\nYear: 1952"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Day: 24\nMonth: 12\nYear: 1952"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nDay: 24\nMonth: 12\nYear: 1952\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "dae4a90a84f51245d816cf18cd75a9ff46f7c0679330f27282e3a88dd8bf5abd",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A time of day can also be specified. The precision can vary, as you can see below:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một thời gian trong ngày cũng có thể được chỉ định. Độ chính xác có thể khác nhau, như bạn có thể thấy bên dưới:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "2bd08af790f844cc9bb55e3e29582ad4b9bded2c8f4d58870e9fed29c39ebddd",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from datetime import datetime\n\npv1 = datetime(2021, 6, 30, 13)     # 30.6.2021 at 1PM\npv2 = datetime(2021, 6, 30, 18, 45) # 30.6.2021 at 6.45PM"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from datetime import datetime\n\npv1 = datetime(2021, 6, 30, 13)     # 30.6.2021 at 1PM\npv2 = datetime(2021, 6, 30, 18, 45) # 30.6.2021 at 6.45PM"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2bd08af790f844cc9bb55e3e29582ad4b9bded2c8f4d58870e9fed29c39ebddd",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0015",
+      "type": "heading",
+      "order": 15,
+      "source_hash": "72884c9809a209ed82906f243c382130b30f7175824b4ff19cf3f4500132faea",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Compare times and calculate differences between them"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "So sánh thời gian và tính toán sự khác biệt giữa chúng"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "1ecffc239ec3b17902029192dcaed7a380ec99b6a4c4c0efca4d2fe1a7a5e8a8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The familiar comparison operators work also on datetime objects:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các toán tử so sánh quen thuộc cũng hoạt động trên các đối tượng datetime:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0017",
+      "type": "code",
+      "order": 17,
+      "source_hash": "bc94b07edd51ae825c51a746a348c4d5fa3aba1306a10346dad24cbaf4eb5d2a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from datetime import datetime\n\ntime_now = datetime.now()\nmidsummer = datetime(2021, 6, 26)\n\nif time_now < midsummer:\n    print(\"It is not yet Midsummer\")\nelif time_now == midsummer:\n    print(\"Happy Midsummer!\")\nelif time_now > midsummer:\n    print(\"It is past Midsummer\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from datetime import datetime\n\ntime_now = datetime.now()\nmidsummer = datetime(2021, 6, 26)\n\nif time_now < midsummer:\n    print(\"It is not yet Midsummer\")\nelif time_now == midsummer:\n    print(\"Happy Midsummer!\")\nelif time_now > midsummer:\n    print(\"It is past Midsummer\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "bc94b07edd51ae825c51a746a348c4d5fa3aba1306a10346dad24cbaf4eb5d2a",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0018",
+      "type": "sample_output",
+      "order": 18,
+      "source_hash": "d1de1f795da3cadd354c53b5fdf738aac7716f5174ef9ead4af42a97eb9dc12b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "It is past Midsummer"
+      },
+      "translation": {
+        "language": "text",
+        "content": "It is past Midsummer"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nIt is past Midsummer\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "2433194b8a279efafc3761512ba4f5af695b6c7797a5b39aa3d7ba8a287eeac5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The difference between two datetime objects can be calculated simply with the subtraction operator:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sự khác biệt giữa hai đối tượng datetime có thể được tính toán đơn giản bằng toán tử trừ:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0020",
+      "type": "code",
+      "order": 20,
+      "source_hash": "7dda56da2573ade3480648e005bb467351c01f09db5006b9c0ad14bad58730a0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from datetime import datetime\n\ntime_now = datetime.now()\nmidsummer = datetime(2021, 6, 26)\n\ndifference = midsummer - time_now\nprint(\"Midsummer is\", difference.days, \"days away\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from datetime import datetime\n\ntime_now = datetime.now()\nmidsummer = datetime(2021, 6, 26)\n\ndifference = midsummer - time_now\nprint(\"Midsummer is\", difference.days, \"days away\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "7dda56da2573ade3480648e005bb467351c01f09db5006b9c0ad14bad58730a0",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0021",
+      "type": "sample_output",
+      "order": 21,
+      "source_hash": "c0708152f09ebaadddac9331f955c62e472aecb77726e1ce8ea1186a06d09975",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Midsummer is -116 days away"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Midsummer is -116 days away"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nMidsummer is -116 days away\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "35408f0556c4e63ef8e104b35b7221dc9148cf20bf4e8664e560dc36ec21795c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "NB: the result of the datetime subtraction is a [timedelta](https://docs.python.org/3/library/datetime.html?highlight=datetime#timedelta-objects) object. It is less versatile than the `datetime` object. For instance, you can access the number of days in a `timedelta` object, but not the number of years, as the length of a year varies. A `timedelta` object contains the attributes `days`, `seconds` and `microseconds`. Other measures can be passed as arguments, but they will be converted internally."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lưu ý: kết quả của phép trừ datetime là một đối tượng [timedelta](https://docs.python.org/3/library/datetime.html?highlight=datetime#timedelta-objects). Nó kém linh hoạt hơn đối tượng `datetime`. Ví dụ: bạn có thể truy cập số ngày trong đối tượng `timedelta` nhưng không thể truy cập số năm vì độ dài của một năm thay đổi. Đối tượng `timedelta` chứa các thuộc tính `days`, `seconds` và `microseconds`. Các biện pháp khác có thể được thông qua dưới dạng đối số, nhưng chúng sẽ được chuyển đổi nội bộ."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "84b950414c88f9858bf25542dc255be75d406e2904a00bd9a2a66945db2eadf9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Similarly, addition is available between `datetime` and `timedelta` objects. The result will be the `datetime` produced when the specified number of days (or weeks, seconds, etc) is added to a `datetime` object:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tương tự, phép cộng có sẵn giữa các đối tượng `datetime` và `timedelta`. Kết quả sẽ là `datetime` được tạo khi số ngày (hoặc tuần, giây, v.v.) được chỉ định được thêm vào đối tượng `datetime`:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0024",
+      "type": "code",
+      "order": 24,
+      "source_hash": "84c69589598af8f97a3e3319142d9039e7fe8989e18fa553ca0fce81336560ed",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from datetime import datetime, timedelta\nmidsummer = datetime(2021, 6, 26)\n\none_week = timedelta(days=7)\nweek_from_date = midsummer + one_week\n\nprint(\"A week after Midsummer it will be\", week_from_date)\n\nlong_time = timedelta(weeks=32, days=15)\n\nprint(\"32 weeks and 15 days after Midsummer it will be\", midsummer + long_time)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from datetime import datetime, timedelta\nmidsummer = datetime(2021, 6, 26)\n\none_week = timedelta(days=7)\nweek_from_date = midsummer + one_week\n\nprint(\"A week after Midsummer it will be\", week_from_date)\n\nlong_time = timedelta(weeks=32, days=15)\n\nprint(\"32 weeks and 15 days after Midsummer it will be\", midsummer + long_time)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "84c69589598af8f97a3e3319142d9039e7fe8989e18fa553ca0fce81336560ed",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0025",
+      "type": "sample_output",
+      "order": 25,
+      "source_hash": "84a4e52f3b0a8aaade101247710f296ebbf49a3a833d5648fac876a1840e9b4a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "A week after Midsummer it will be 2021-07-03 00:00:00\n32 weeks and 15 days after Midsummer it will be 2022-02-20 00:00:00"
+      },
+      "translation": {
+        "language": "text",
+        "content": "A week after Midsummer it will be 2021-07-03 00:00:00\n32 weeks and 15 days after Midsummer it will be 2022-02-20 00:00:00"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nA week after Midsummer it will be 2021-07-03 00:00:00\n32 weeks and 15 days after Midsummer it will be 2022-02-20 00:00:00\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "f6239ccdee668ce36538245da081907ca876ae93b5b9f4d27b38293135438f5b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's see how a higher precision works:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy xem cách hoạt động của độ chính xác cao hơn:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0027",
+      "type": "code",
+      "order": 27,
+      "source_hash": "1d068645c02fb6c97ffd09c92a8ce6a979472c8e6ab5fe087401f47425f4fa14",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "time_now = datetime.now()\nmidnight = datetime(2021, 6, 30)\ndifference = midnight - time_now\nprint(f\"Midnight is still {difference.seconds} seconds away\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "time_now = datetime.now()\nmidnight = datetime(2021, 6, 30)\ndifference = midnight - time_now\nprint(f\"Midnight is still {difference.seconds} seconds away\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "1d068645c02fb6c97ffd09c92a8ce6a979472c8e6ab5fe087401f47425f4fa14",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0028",
+      "type": "sample_output",
+      "order": 28,
+      "source_hash": "39d552702bf9ba55175fa12ac8ac75209a2e070a7977518cb26cc2aed7764b2d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Midnight is still 8188 seconds away"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Midnight is still 8188 seconds away"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nMidnight is still 8188 seconds away\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0029",
+      "type": "exercise",
+      "order": 29,
+      "source_hash": "82c7a8abee72a6e67e8ec8eec09657566589018a67552354f2b102b594d0cb4f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for their date of birth, and then prints out how old the user was on the eve of the new millennium. The program should ask for the day, month and year separately, and print out the age in days. Please have a look at the examples below:\n\n<sample-output>\n\nDay: **10**\nMonth: **9**\nYear: **1979**\nYou were 7417 days old on the eve of the new millennium.\n\n</sample-output>\n\n<sample-output>\n\nDay: **28**\nMonth: **3**\nYear: **2005**\nYou weren't born yet on the eve of the new millennium.\n\n</sample-output>\n\nYou may assume all day-month-year combinations given as an argument will be valid dates. That is, there will not be a date like February 31st."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một chương trình hỏi ngày sinh của người dùng, sau đó in ra tuổi của người dùng vào đêm trước thiên niên kỷ mới. Chương trình sẽ yêu cầu ngày, tháng, năm riêng biệt và in ra tuổi theo ngày. Xin vui lòng xem các ví dụ dưới đây:\n\n<sample-output>\n\nNgày: **10**\nTháng: **9**\nNăm: **1979**\nBạn đã được 7417 ngày tuổi vào đêm trước thiên niên kỷ mới.\n\n</sample-output>\n\n<sample-output>\n\nNgày: **28**\nTháng: **3**\nNăm: **2005**\nBạn vẫn chưa được sinh ra vào đêm trước thiên niên kỷ mới.\n\n</sample-output>\n\nBạn có thể cho rằng tất cả các kết hợp ngày-tháng-năm được đưa ra làm đối số sẽ là ngày hợp lệ. Tức là sẽ không có ngày như ngày 31 tháng 2."
+      },
+      "metadata": {
+        "exercise_id": "ex-part07-09_how_old",
+        "exercise_type": "programming-exercise",
+        "name": "How old",
+        "tmc_name": "part07-09_how_old",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0030",
+      "type": "exercise",
+      "order": 30,
+      "source_hash": "c461b5d00acbb2b3bdaac4a0bd3ee2981f13f4d9d5c4d8092cbef39492d52e0c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In this exercise you will validate Finnish Personal Identity Codes (PIC). \n\nPlease write a function named `is_it_valid(pic: str)`, which returns `True` or `False` based on whether the PIC given as an argument is valid or not. Finnish PICs follow the format `ddmmyyXyyyz`, where `ddmmyy` contains the date of birth, `X` is the marker for century, `yyy` is the personal identifier and `z` is a control character.\n\nThe program should check the validity by these three criteria:\n\n* The first half of the code is a valid, existing date in the format `ddmmyy`.\n* The century marker is either `+` (1800s), `-` (1900s) or `A` (2000s).\n* The control character is valid.\n\nThe control character is calculated by taking the nine-digit number created by the date of birth and the personal identifier, dividing this by 31, and selecting the character at the index specified by the remainder from the string `0123456789ABCDEFHJKLMNPRSTUVWXY`. For example, if the remainder was 12, the control character would be `C`.\n\nMore examples and explanations of the uses of the PIC are available at the [Digital and Population Data Services Agency](https://dvv.fi/en/personal-identity-code).\n\n**NB!** Please make sure you do not share your own PIC, for example in the code you use for testing or through the course support channels.\n\nHere are some valid PICs you can use for testing:\n\n* 230827-906F\n* 120488+246L\n* 310823A9877"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong bài tập này, bạn sẽ xác thực Mã nhận dạng cá nhân Phần Lan (PIC). \n\nVui lòng viết một hàm có tên `is_it_valid(pic: str)`, trả về `True` hoặc `False` dựa trên việc PIC được đưa ra làm đối số có hợp lệ hay không. PIC Phần Lan tuân theo định dạng `ddmmyyXyyyz`, trong đó `ddmmyy` chứa ngày sinh, `X` là điểm đánh dấu thế kỷ, `yyy` là mã định danh cá nhân và `z` là ký tự điều khiển.\n\nChương trình nên kiểm tra tính hợp lệ theo ba tiêu chí sau:\n\n* Nửa đầu của mã là ngày hợp lệ, hiện có ở định dạng `ddmmyy`.\n* Điểm đánh dấu thế kỷ là `+` (thập niên 1800), `-` (thập niên 1900) hoặc `A` (thập niên 2000).\n* Ký tự điều khiển là hợp lệ.\n\nKý tự điều khiển được tính bằng cách lấy số có chín chữ số được tạo bởi ngày sinh và số nhận dạng cá nhân, chia số này cho 31 và chọn ký tự tại chỉ mục được chỉ định bởi phần còn lại từ chuỗi `0123456789ABCDEFHJKLMNPRSTUVWXY`. Ví dụ: nếu phần còn lại là 12 thì ký tự điều khiển sẽ là `C`.\n\nCác ví dụ và giải thích khác về cách sử dụng PIC có tại [Cơ quan dịch vụ dữ liệu dân số và kỹ thuật số](https://dvv.fi/en/personal-identity-code).\n\n**NB!** Vui lòng đảm bảo rằng bạn không chia sẻ PIC của chính mình, chẳng hạn như trong mã bạn sử dụng để kiểm tra hoặc thông qua các kênh hỗ trợ khóa học.\n\nDưới đây là một số PIC hợp lệ mà bạn có thể sử dụng để thử nghiệm:\n\n* 230827-906F\n* 120488+246L\n* 310823A9877"
+      },
+      "metadata": {
+        "exercise_id": "ex-part07-10_valid_pic",
+        "exercise_type": "programming-exercise",
+        "name": "Valid PIC?",
+        "tmc_name": "part07-10_valid_pic",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0031",
+      "type": "heading",
+      "order": 31,
+      "source_hash": "49391e543e4a522baa7f0f3595859b881d41f0e2689548120eef72ddb57cc907",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Formatting times and dates"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Định dạng ngày và giờ"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "fadb1ecd8490236f440052ccc208c35013a3a8173c8e05b20056bacf6fb00230",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The `datetime` module contains a handy method [strftime](https://docs.python.org/3/library/datetime.html?highlight=datetime#datetime.date.strftime) for formatting the string representation of a datetime object. For example, the following code will print the current date in the format `dd.mm.yyyy`, and then the date and time in a different format:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mô-đun `datetime` chứa một phương thức tiện dụng [strftime](https://docs.python.org/3/library/datetime.html?highlight=datetime#datetime.date.strftime) để định dạng biểu diễn chuỗi của đối tượng datetime. Ví dụ: đoạn mã sau sẽ in ngày hiện tại ở định dạng `dd.mm.yyyy`, sau đó in ngày và giờ ở định dạng khác:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0033",
+      "type": "code",
+      "order": 33,
+      "source_hash": "fb35eb877e37e8c39de25268af6f258a987c1fd0811d260b24173b1da504a556",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from datetime import datetime\n\nmy_time = datetime.now()\nprint(my_time.strftime(\"%d.%m.%Y\"))\nprint(my_time.strftime(\"%d/%m/%Y %H:%M\"))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from datetime import datetime\n\nmy_time = datetime.now()\nprint(my_time.strftime(\"%d.%m.%Y\"))\nprint(my_time.strftime(\"%d/%m/%Y %H:%M\"))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "fb35eb877e37e8c39de25268af6f258a987c1fd0811d260b24173b1da504a556",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0034",
+      "type": "sample_output",
+      "order": 34,
+      "source_hash": "4f782a4d9801f087427a3ea06336fdcc7c1336776cb104502a52bbb85d23082c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "19.10.2021\n19/10/2021 09:31"
+      },
+      "translation": {
+        "language": "text",
+        "content": "19.10.2021\n19/10/2021 09:31"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n19.10.2021\n19/10/2021 09:31\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "edf8f6cee42a0652d712db208caaabb8c0ec5e8c8e0dcd94db86a387e9b11c56",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Time formatting uses specific characters to signify specific formats. The following is a list of a few of them (please see the Python [documentation](https://docs.python.org/3/library/time.html#time.strftime) for a complete list):"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Định dạng thời gian sử dụng các ký tự cụ thể để biểu thị các định dạng cụ thể. Sau đây là danh sách một vài trong số chúng (vui lòng xem [tài liệu] Python(https://docs.python.org/3/library/time.html#time.strftime) để biết danh sách đầy đủ):"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "1891fc8d77a8fbf29199c6b127c73e724df047c94cfdf5b28337b456248ee1f7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Notation | Significance\n:--------|:--------\n`%d` | day (01–31)\n`%m` | month (01–12)\n`%Y` | year in 4 digit format\n`%H` | hours in 24 hour format\n`%M` | minutes (00–59)\n`%S` | seconds (00–59)"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ký hiệu | Ý nghĩa\n:--------|:--------\n`%d` | ngày (01–31)\n`%m` | tháng (01–12)\n`%Y` | năm ở định dạng 4 chữ số\n`%H` | giờ ở định dạng 24 giờ\n`%M` | phút (00–59)\n`%S` | giây (00–59)"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "8f97890aaadf00ee7264b1ad8d7fa0f2151537ec2e051fe9cad64e71ce5e54c7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You can also specify the delimiter between the different elements, as seen in the examples above."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn cũng có thể chỉ định dấu phân cách giữa các phần tử khác nhau, như đã thấy trong các ví dụ ở trên."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "d22151526217163809061ca4eb36c8a1c578ce6ad2cf7496f8d41c571ac69865",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Datetime formatting works in the reverse direction as well, in case you need to parse a datetime object from a string given by the user. The method [strptime](https://docs.python.org/3/library/datetime.html?highlight=datetime#datetime.datetime.strptime) will do just that:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Định dạng ngày giờ cũng hoạt động theo hướng ngược lại, trong trường hợp bạn cần phân tích một đối tượng ngày giờ từ một chuỗi do người dùng cung cấp. Phương thức [strptime](https://docs.python.org/3/library/datetime.html?highlight=datetime#datetime.datetime.strptime) sẽ thực hiện điều đó:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0039",
+      "type": "code",
+      "order": 39,
+      "source_hash": "b4aa528659adff9801b44b480ad23d4457e3465e99d71642ddde2eec2ccbd563",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from datetime import datetime\n\nbirthday = input(\"Please type in your birthday in the format dd.mm.yyyy: \")\nmy_time = datetime.strptime(birthday, \"%d.%m.%Y\")\n\nif my_time < datetime(2000, 1, 1):\n    print(\"You were born in the previous millennium\")\nelse:\n    print(\"You were born during this millennium\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from datetime import datetime\n\nbirthday = input(\"Please type in your birthday in the format dd.mm.yyyy: \")\nmy_time = datetime.strptime(birthday, \"%d.%m.%Y\")\n\nif my_time < datetime(2000, 1, 1):\n    print(\"You were born in the previous millennium\")\nelse:\n    print(\"You were born during this millennium\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b4aa528659adff9801b44b480ad23d4457e3465e99d71642ddde2eec2ccbd563",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0040",
+      "type": "sample_output",
+      "order": 40,
+      "source_hash": "9b355adc9c7fd837125eb54b0626f5c15ac37058b9c5fea68b404c45c8879c42",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in your birthday in the format dd.mm.yyyy: **5.11.1986**\nYou were born in the previous millennium"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in your birthday in the format dd.mm.yyyy: **5.11.1986**\nYou were born in the previous millennium"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in your birthday in the format dd.mm.yyyy: **5.11.1986**\nYou were born in the previous millennium\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0041",
+      "type": "exercise",
+      "order": 41,
+      "source_hash": "ff82e771ee6593d468095bfe19904f423bffd384748e73ce17840eb538f9648a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program for recording the amount of time the user has spent in front of a television, computer or mobile device screen over a specific period of time. \n\nThe program should work as follows:\n\n<sample-output>\n\nFilename: **late_june.txt**\nStarting date: **24.6.2020**\nHow many days: **5**\nPlease type in screen time in minutes on each day (TV computer mobile):\nScreen time 24.06.2020: **60 120 0**\nScreen time 25.06.2020: **0 0 0**\nScreen time 26.06.2020: **180 0 0**\nScreen time 27.06.2020: **25 240 15**\nScreen time 28.06.2020: **45 90 5**\nData stored in file late_june.txt\n\n</sample-output>\n\nThe user will input each day on a separate line, and the entries will contain three numbers separated by spaces, representing minutes.\n\nWith the above input, the program should store the data in a file named `late_june.txt`. The contents should look like this:\n\n<sample-data>\n\nTime period: 24.06.2020-28.06.2020\nTotal minutes: 780\nAverage minutes: 156.0\n24.06.2020: 60/120/0\n25.06.2020: 0/0/0\n26.06.2020: 180/0/0\n27.06.2020: 25/240/15\n28.06.2020: 45/90/5\n\n</sample-data>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một chương trình để ghi lại lượng thời gian người dùng ngồi trước màn hình tivi, máy tính hoặc thiết bị di động trong một khoảng thời gian cụ thể. \n\nChương trình sẽ hoạt động như sau:\n\n<sample-output>\n\nTên tệp: **late_june.txt**\nNgày bắt đầu: **24.6.2020**\nBao nhiêu ngày: **5**\nVui lòng nhập thời gian sử dụng thiết bị tính bằng phút mỗi ngày (TV máy tính di động):\nThời gian chiếu 24.06.2020: **60 120 0**\nThời gian chiếu 25.06.2020: **0 0 0**\nThời gian chiếu 26.06.2020: **180 0 0**\nThời gian chiếu 27.06.2020: **25 240 15**\nThời gian chiếu 28.06.2020: **45 90 5**\nDữ liệu được lưu trữ trong file Late_june.txt\n\n</sample-output>\n\nNgười dùng sẽ nhập mỗi ngày trên một dòng riêng biệt và các mục nhập sẽ chứa ba số cách nhau bằng dấu cách, biểu thị số phút.\n\nVới dữ liệu đầu vào ở trên, chương trình sẽ lưu trữ dữ liệu trong tệp có tên `late_june.txt`. Nội dung sẽ trông như thế này:\n\n<sample-data>\n\nKhoảng thời gian: 24.06.2020-28.06.2020\nTổng số phút: 780\nSố phút trung bình: 156,0\n24.06.2020: 60/120/0\n25.06.2020: 0/0/0\n26.06.2020: 180/0/0\n27.06.2020: 240/25/15\n28.06.2020: 45/90/5\n\n</sample-data>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part07-11_screen_time",
+        "exercise_type": "programming-exercise",
+        "name": "Screen time",
+        "tmc_name": "part07-11_screen_time",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "abff66d5c3b87e785a9f5858aa4a5a727e09e7c3dc5b12c46f58c801eff70b2f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!---"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!---"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0043",
+      "type": "quiz",
+      "order": 43,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "6fff0633-2f18-5e2b-9eab-6c8950c8378b",
+        "attributes": {
+          "id": "6fff0633-2f18-5e2b-9eab-6c8950c8378b"
+        }
+      }
+    },
+    {
+      "id": "blk-part07-3-times-and-dates-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "-->"
+      },
+      "metadata": {}
+    }
+  ]
+}

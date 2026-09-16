@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-06_name_twice",
+  "lesson_id": "part01-2-information-from-the-user",
+  "part": 1,
+  "tmc_name": "part01-06_name_twice",
+  "title_original": "Name twice",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks for the user's name and then prints it twice, on two consecutive lines.\n\nAn example of the how the program should function:\n\n<sample-output>\n\nWhat is your name? **Paul**\nPaul\nPaul\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "ac328785cf98b77db18634d1f82da8df435bf13646b929f84fb5ee58a3473af4",
+  "order": 11
+}

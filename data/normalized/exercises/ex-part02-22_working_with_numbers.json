@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-22_working_with_numbers",
+  "lesson_id": "part02-4-simple-loops",
+  "part": 2,
+  "tmc_name": "part02-22_working_with_numbers",
+  "title_original": "Working with numbers",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "### Pre-task\n\nPlease write a program which asks the user for integer numbers. The program should keep asking for numbers until the user types in zero.\n\n<sample-output>\n\nPlease type in integer numbers. Type in 0 to finish.\nNumber: **5**\nNumber: **22**\nNumber: **9**\nNumber: **-2**\nNumber: **0**\n\n</sample-output>\n\n### Part 1: Count\n\nAfter reading in the numbers the program should print out how many numbers were typed in. The zero at the end should not be included in the count.\n\nYou will need a new variable here to keep track of the numbers typed in.\n\n<sample-output>\n\n... the program asks for numbers\nNumbers typed in 4\n\n</sample-output>\n\n### Part 2: Sum\n\nThe program should also print out the sum of all the numbers typed in. The zero at the end should not be included in the calculation.\n\nThe program should now print out the following:\n\n<sample-output>\n\n... the program asks for numbers\nNumbers typed in 4\nThe sum of the numbers is 34\n\n</sample-output>\n\n### Part 3: Mean\n\nThe program should also print out the mean of the numbers. The zero at the end should not be included in the calculation. You may assume the user will always type in at least one valid non-zero number.\n\n<sample-output>\n\n... the program asks for numbers\nNumbers typed in 4\nThe sum of the numbers is 34\nThe mean of the numbers is 8.5\n\n</sample-output>\n\n#### Part 4: Positives and negatives\n\nThe program should also print out statistics on how many of the numbers were positive and how many were negative. The zero at the end should not be included in the calculation.\n\n<sample-output>\n\n... the program asks for numbers\nNumbers typed in 4\nThe sum of the numbers is 34\nThe mean of the numbers is 8.5\nPositive numbers 3\nNegative numbers 1\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "be054b1a49927c6653959248c2df675f0ede0288b92ae511193a46bc36a70bff",
+  "order": 54
+}

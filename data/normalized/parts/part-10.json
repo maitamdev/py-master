@@ -1,0 +1,48 @@
+{
+  "part": 10,
+  "slug": "part-10",
+  "title_original": "Part 10",
+  "title_vi": "Phần 10",
+  "lessons": [
+    {
+      "id": "part10-1-class-hierarchies",
+      "slug": "1-class-hierarchies",
+      "is_index": false,
+      "title_original": "Class hierarchies",
+      "path": "/part-10/1-class-hierarchies",
+      "blocks_count": 46
+    },
+    {
+      "id": "part10-2-access-modifiers",
+      "slug": "2-access-modifiers",
+      "is_index": false,
+      "title_original": "Access modifiers",
+      "path": "/part-10/2-access-modifiers",
+      "blocks_count": 21
+    },
+    {
+      "id": "part10-3-oo-programming-techniques",
+      "slug": "3-oo-programming-techniques",
+      "is_index": false,
+      "title_original": "Object oriented programming techniques",
+      "path": "/part-10/3-oo-programming-techniques",
+      "blocks_count": 62
+    },
+    {
+      "id": "part10-4-application-development",
+      "slug": "4-application-development",
+      "is_index": false,
+      "title_original": "Developing a larger application",
+      "path": "/part-10/4-application-development",
+      "blocks_count": 117
+    },
+    {
+      "id": "part10-index",
+      "slug": "index",
+      "is_index": true,
+      "title_original": "Part 10",
+      "path": "/part-10",
+      "blocks_count": 2
+    }
+  ]
+}

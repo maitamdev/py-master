@@ -1,0 +1,1709 @@
+{
+  "id": "part05-3-dictionary",
+  "part": 5,
+  "part_slug": "part-5",
+  "slug": "3-dictionary",
+  "is_part_index": false,
+  "title_original": "Dictionary",
+  "title_vi": "",
+  "path": "/part-5/3-dictionary",
+  "source_path": "data/part-5/3-dictionary.md",
+  "source_hash": "60a7b59ba9c5bcc426035d9d109baaadbf8237970450827a85cef97002e47033",
+  "order": 1,
+  "blocks_count": 93,
+  "blocks": [
+    {
+      "id": "blk-part05-3-dictionary-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "012da2adf82627e5cb3123c4c7021cc25be30be079a637dde652f550be02c901",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be familiar with the dictionary data structure\n- You will be able to use a dictionary with different types of keys and values\n- You will know how to traverse through the contents of a dictionary\n- You will be able to name some typical use cases for dictionaries"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "74d7899bcc5f87919f3b36ab46b825dfa1af14d5ca33b4cc00a37952a700fb58",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Lists can be handy in many situations, but they are limited by the fact that the items are accessed through indexes; 0, 1, 2, and so forth. If you want to find some item in a list, you will either have to know its index, or, at worst, traverse through the entire list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "25765dd7ee1d9b40685302792aa6baf11c7620e3d03fafdb60c5c4fa46859559",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Another central data structure in Python is the _dictionary_. In a dictionary, the items are indexed by _keys_. Each key maps to a _value_. The values stored in the dictionary can be accessed and changed using the key."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0004",
+      "type": "heading",
+      "order": 4,
+      "source_hash": "7a9b03f7ab633f090afd7f6f02e91135f012874858e4cee47fe0992067326657",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Using a dictionary"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "31b0261355986fb4b0ee2fc061ff99fe69630bba89db66432f6e051abb92a6f1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The following example shows you how the dictionary data structure works. Here is a simple dictionary from Finnish to English:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0006",
+      "type": "code",
+      "order": 6,
+      "source_hash": "eafe41bfa07f71f430ce23d79ba0f656754abe1fea19d55b9e65d41b9f05cab8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_dictionary = {}\n\nmy_dictionary[\"apina\"] = \"monkey\"\nmy_dictionary[\"banaani\"] = \"banana\"\nmy_dictionary[\"cembalo\"] = \"harpsichord\"\n\nprint(len(my_dictionary))\nprint(my_dictionary)\nprint(my_dictionary[\"apina\"])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_dictionary = {}\n\nmy_dictionary[\"apina\"] = \"monkey\"\nmy_dictionary[\"banaani\"] = \"banana\"\nmy_dictionary[\"cembalo\"] = \"harpsichord\"\n\nprint(len(my_dictionary))\nprint(my_dictionary)\nprint(my_dictionary[\"apina\"])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "eafe41bfa07f71f430ce23d79ba0f656754abe1fea19d55b9e65d41b9f05cab8",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0007",
+      "type": "sample_output",
+      "order": 7,
+      "source_hash": "38ec4e80d8b9103b3e6ef7d432d91555d0b9b8311a27b1b75759718d7971da5d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "3\n{'apina': 'monkey', 'banaani': 'banana', 'cembalo': 'harpsichord'}\nmonkey"
+      },
+      "translation": {
+        "language": "text",
+        "content": "3\n{'apina': 'monkey', 'banaani': 'banana', 'cembalo': 'harpsichord'}\nmonkey"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n3\n{'apina': 'monkey', 'banaani': 'banana', 'cembalo': 'harpsichord'}\nmonkey\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "f04db6ca98e401c7c1ecfb121bd7ba874f3fed37de44fd3d63332b4bd1574c19",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The notation `{}` creates an empty dictionary, to which we can now add content. Three key-value pairs are added:`\"apina\"` maps to `\"monkey\"`, `\"banaani\"` maps to `\"banana\"`, and `\"cembalo\"` maps to `\"harpsichord\"`. Finally, the number of key-value pairs in the dictionary is printed, along with the entire dictionary, and the value mapped to the key `\"apina\"`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "b923a6021b9e4136fcce8c85e35661fe318ae335d1b58b876437575ce137f8ca",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After defining the dictionary we could also use it with user input:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0010",
+      "type": "code",
+      "order": 10,
+      "source_hash": "62e3e75e28d47354f7431c0bde2780e2c9c5dfe2f206fef1818cf1d5fc12214c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "word = input(\"Please type in a word: \")\nif word in my_dictionary:\n    print(\"Translation: \", my_dictionary[word])\nelse:\n    print(\"Word not found\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "word = input(\"Please type in a word: \")\nif word in my_dictionary:\n    print(\"Translation: \", my_dictionary[word])\nelse:\n    print(\"Word not found\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "62e3e75e28d47354f7431c0bde2780e2c9c5dfe2f206fef1818cf1d5fc12214c",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "59fa89d300a01a8ec3354cbb547331bb0bff1787af4090a36ae62f5c34b6bef6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Notice the use of the `in` operator above. When used on a variable of type dictionary, it checks whether the first operand is among the keys stored in the dictionary. Given different inputs, this program might print out the following:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0012",
+      "type": "sample_output",
+      "order": 12,
+      "source_hash": "85aefae7ddf635eb2e378690b9812d79598945235cd36a5671e6ac140021b3a5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a word: **apina**\nTranslation: monkey"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a word: **apina**\nTranslation: monkey"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a word: **apina**\nTranslation: monkey\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0013",
+      "type": "sample_output",
+      "order": 13,
+      "source_hash": "1be33820d9c5cc9dc47fb4f13ab7bf07df7f1cdceb287b89e9a1f0db329169c1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a word: **pöllö**\nWord not found"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a word: **pöllö**\nWord not found"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a word: **pöllö**\nWord not found\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0014",
+      "type": "heading",
+      "order": 14,
+      "source_hash": "58dca63b280dc1b8bbccab6890cd1bbfb1bca88ff1b00dd1819fdd991e83ccc1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "What can be stored in a dictionary?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "2579de9d9b1ed49f5d3a68c6890914388284d9e01db1d61b8616215d4adb2044",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The data type is called dictionary, but it does not have to contain only strings. For example, in the following dictionary the keys are strings, but the values are integers:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0016",
+      "type": "code",
+      "order": 16,
+      "source_hash": "68eed62a9b9b70b4bcc22abe096e9df1954296ced2dd412bc305a9c8113406c6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "results = {}\nresults[\"Mary\"] = 4\nresults[\"Alice\"] = 5\nresults[\"Larry\"] = 2"
+      },
+      "translation": {
+        "language": "code",
+        "content": "results = {}\nresults[\"Mary\"] = 4\nresults[\"Alice\"] = 5\nresults[\"Larry\"] = 2"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "68eed62a9b9b70b4bcc22abe096e9df1954296ced2dd412bc305a9c8113406c6",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "8c7ef22eed8ddda13bac5b4ba075affab56d6e639ab64230e4720d51a3ec4b92",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Here the keys are integers and the values are lists:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0018",
+      "type": "code",
+      "order": 18,
+      "source_hash": "c6c894e2f97c59641473fa99ff7575a993fd920f9d8e193c1dc427f009cc6a61",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "lists = {}\nlists[5] = [1, 2, 3]\nlists[42] = [5, 4, 5, 4, 5]\nlists[100] = [5, 2, 3]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "lists = {}\nlists[5] = [1, 2, 3]\nlists[42] = [5, 4, 5, 4, 5]\nlists[100] = [5, 2, 3]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c6c894e2f97c59641473fa99ff7575a993fd920f9d8e193c1dc427f009cc6a61",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0019",
+      "type": "heading",
+      "order": 19,
+      "source_hash": "664afccf95bdb77e75bbdd849ca5a5a400a7e28472f960bd1bc08797cd9b5920",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "How keys and values work"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "ea2af0e45e0d92971d4791ebfb96ea2add40eea3d77819ac97e2dc4119405e64",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Each key can appear only once in the dictionary. If you add an entry using a key that already exists in the dictionary, the original value mapped to that key is replaced with the new value:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0021",
+      "type": "code",
+      "order": 21,
+      "source_hash": "f95632e6dd8cc7ffe2072dfe72a35b2fc96d97e5f6d15a15848eb2c64438e291",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_dictionary[\"suuri\"] = \"big\"\nmy_dictionary[\"suuri\"] = \"large\"\nprint(my_dictionary[\"suuri\"])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_dictionary[\"suuri\"] = \"big\"\nmy_dictionary[\"suuri\"] = \"large\"\nprint(my_dictionary[\"suuri\"])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f95632e6dd8cc7ffe2072dfe72a35b2fc96d97e5f6d15a15848eb2c64438e291",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0022",
+      "type": "sample_output",
+      "order": 22,
+      "source_hash": "d35c416a85b807e9b5384915d6ebb4a9f7352713efd89857b45a242f473728a9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "large"
+      },
+      "translation": {
+        "language": "text",
+        "content": "large"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nlarge\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "c3199717b87ea39f6b817e5de1c3bdbec208111252dfe3ac936e554908d33f18",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "All keys in a dictionary must be _immutable_. So, a list cannot be used as a key, because it can be changed. For example, executing the following code causes an error:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0024",
+      "type": "code",
+      "order": 24,
+      "source_hash": "4832bfd0eca24a81b5a33b39ff69d814a2cffcb297bfb15550dbcf68a39775e2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_dictionary[[1, 2, 3]] = 5"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_dictionary[[1, 2, 3]] = 5"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4832bfd0eca24a81b5a33b39ff69d814a2cffcb297bfb15550dbcf68a39775e2",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0025",
+      "type": "sample_output",
+      "order": 25,
+      "source_hash": "8c906e910aefce607ac399cf47cb48e30c9b06bfe1038b55ecf7e88ff3c27ff0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "TypeError: unhashable type: 'list'"
+      },
+      "translation": {
+        "language": "text",
+        "content": "TypeError: unhashable type: 'list'"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nTypeError: unhashable type: 'list'\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0026",
+      "type": "text_box",
+      "order": 26,
+      "source_hash": "b779fdf539ac4fd250a6b2c9ab2c241207fda7636195c8bbcfe0665f0239e615",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Notice the word 'unhashable' in the error message above. This is a reference to the inner workings of the dictionary data type. Python stores the contents of a dictionary in a _hash table_. Each key is reduced to a _hash value_, which determines where the key is stored in computer memory. The error message above indicates that a list cannot be processed into a hash value, so it cannot be used as a key in a dictionary.\n\nThe _Data Structures and Algorithms_ courses will further explore hash tables."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "hint",
+        "name_original": "Hash table",
+        "name_vi": "",
+        "attributes": {
+          "variant": "hint",
+          "name": "Hash table"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "6ba06022613bb16bd64e221cfe89b2dc3202f5c2b97cab07f423623bb5a6a091",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Unlike keys, the _values_ stored in a dictionary can change, so any type of data is acceptable as a value. A value can also be mapped to more than one key in the same dictionary."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0028",
+      "type": "exercise",
+      "order": 28,
+      "source_hash": "e14167fae7291c88e1145e43ea060db4b06a6c1a1a965736e6622ae085214e32",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `times_ten(start_index: int, end_index: int)`, which creates and returns a new dictionary. The keys of the dictionary should be the numbers between `start_index` and `end_index` inclusive\n\nThe value mapped to each key should be the key times ten.\n\nFor example:\n\n```python\nd = times_ten(3, 6)\nprint(d)\n```\n\n<sample-output>\n\n{3: 30, 4: 40, 5: 50, 6: 60}\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-14_times_ten",
+        "exercise_type": "programming-exercise",
+        "name": "Times ten",
+        "tmc_name": "part05-14_times_ten",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0029",
+      "type": "exercise",
+      "order": 29,
+      "source_hash": "3d2269f50f1083997dfaf27ad66acfe804fa6516865a8909f1f6c7ed30d4f66b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `factorials(n: int)`, which returns the factorials of the numbers 1 to `n` in a dictionary. The number is the key, and the factorial of that number is the value mapped to it.\n\nA reminder: the factorial of the number `n` is written `n`! and is calculated by multiplying the number by each integer smaller than itself. For example, the factorial of 4 is 4 * 3 * 2 * 1 = 24.\n\nAn example of the function in action:\n\n```python\nk = factorials(5)\nprint(k[1])\nprint(k[3])\nprint(k[5])\n```\n\n<sample-output>\n\n1\n6\n120\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-15_factorials",
+        "exercise_type": "programming-exercise",
+        "name": "Factorials",
+        "tmc_name": "part05-15_factorials",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0030",
+      "type": "heading",
+      "order": 30,
+      "source_hash": "acc4c2f79a721e1d45eab746cd765334a25efe0467f8e931bdb5e10188262a39",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Traversing a dictionary"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "8ae5a2732a7b5e45c42418fae689f732ce04ac5536e5db1bfd33040fc299f407",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The familiar `for item in collection` loop can be used to traverse a dictionary, too. When used on the dictionary directly, the loop goes through the keys stored in the dictionary, one by one. In the following example, all keys and values stored in the dictionary are printed out:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0032",
+      "type": "code",
+      "order": 32,
+      "source_hash": "fabc6d36ed035c07beb33fcaa0b773eb52157656a173daf23845d73c0488dba3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_dictionary = {}\n\nmy_dictionary[\"apina\"] = \"monkey\"\nmy_dictionary[\"banaani\"] = \"banana\"\nmy_dictionary[\"cembalo\"] = \"harpsichord\"\n\nfor key in my_dictionary:\n    print(\"key:\", key)\n    print(\"value:\", my_dictionary[key])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_dictionary = {}\n\nmy_dictionary[\"apina\"] = \"monkey\"\nmy_dictionary[\"banaani\"] = \"banana\"\nmy_dictionary[\"cembalo\"] = \"harpsichord\"\n\nfor key in my_dictionary:\n    print(\"key:\", key)\n    print(\"value:\", my_dictionary[key])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "fabc6d36ed035c07beb33fcaa0b773eb52157656a173daf23845d73c0488dba3",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0033",
+      "type": "sample_output",
+      "order": 33,
+      "source_hash": "47dc5cf94842213c6613000e4302afc5a7c10dfcecd03feab98e504ea9d728fb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "key: apina\nvalue: monkey\nkey: banaani\nvalue: banana\nkey: cembalo\nvalue: harpsichord"
+      },
+      "translation": {
+        "language": "text",
+        "content": "key: apina\nvalue: monkey\nkey: banaani\nvalue: banana\nkey: cembalo\nvalue: harpsichord"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nkey: apina\nvalue: monkey\nkey: banaani\nvalue: banana\nkey: cembalo\nvalue: harpsichord\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "f8e7ebdb4374db8b551e1562345e1234e0f08975a23d490310a6f4b5de82728b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Sometimes you need to traverse the entire contents of a dictionary. The method `items` returns all the keys and values stored in the dictionary, one pair at a time:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0035",
+      "type": "code",
+      "order": 35,
+      "source_hash": "3b0410ea14ebb1941ec7e1316601feb22bf34916b5a4b95dd709fbc900fb2f50",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\nfor key, value in my_dictionary.items():\n    print(\"key:\", key)\n    print(\"value:\", value)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "\nfor key, value in my_dictionary.items():\n    print(\"key:\", key)\n    print(\"value:\", value)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3b0410ea14ebb1941ec7e1316601feb22bf34916b5a4b95dd709fbc900fb2f50",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "1ac7bb9dcd4a4697e8ce54480900d933d44e4b9e86538740fe5b9fab211ba35f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the examples above, you may have noticed that the keys are processed in the same order as they were added to the dictionary. As the keys are processed based on a hash value, the order should not usually matter in applications. In fact, in many older versions of Python the order is not guaranteed to follow the time of insertion."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0037",
+      "type": "heading",
+      "order": 37,
+      "source_hash": "234a342373db9d7024fcd6141d2f258ff1d1cef9fbeb47aed56308be2f02aad7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Some more advanced ways to use dictionaries"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "635e8c39e510b59bea91466ee4bfe7c38f84012bb10590ac4221d863c4058f51",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at a list of words:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0039",
+      "type": "code",
+      "order": 39,
+      "source_hash": "857fe046fccc1f47634ca89b63de2d8b0fbbca11cb5fab5a570a594cc10c1654",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "word_list = [\n  \"banana\", \"milk\", \"beer\", \"cheese\", \"sourmilk\", \"juice\", \"sausage\",\n  \"tomato\", \"cucumber\", \"butter\", \"margarine\", \"cheese\", \"sausage\",\n  \"beer\", \"sourmilk\", \"sourmilk\", \"butter\", \"beer\", \"chocolate\"\n]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "word_list = [\n  \"banana\", \"milk\", \"beer\", \"cheese\", \"sourmilk\", \"juice\", \"sausage\",\n  \"tomato\", \"cucumber\", \"butter\", \"margarine\", \"cheese\", \"sausage\",\n  \"beer\", \"sourmilk\", \"sourmilk\", \"butter\", \"beer\", \"chocolate\"\n]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "857fe046fccc1f47634ca89b63de2d8b0fbbca11cb5fab5a570a594cc10c1654",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "1c6e04adb7c70d36a8c92ff4588737acc47ad42680048a3adfc9a00234ff85ce",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We would like to analyze this list of words in different ways. For instance, we would like to know how many times each word appears in the list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "a86967799e5aa8481f7bfc639f745b84dfd10945e61b321a230ce959ede26dd8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A dictionary can be a useful tool in managing this kind of information. In the example below, we go through the items in the list one by one. Using the words in the list as keys in a new dictionary, the value mapped to each key is the number of times the word has appeared:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0042",
+      "type": "code",
+      "order": 42,
+      "source_hash": "a3b9fc585fdd8882b387443884d908dc09990b402497562723a4df49efebee9a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def counts(my_list):\n    words = {}\n    for word in my_list:\n        # if the word is not yet in the dictionary, initialize the value to zero\n        if word not in words:\n            words[word] = 0\n        # increment the value\n        words[word] += 1\n    return words\n\n# call the function\nprint(counts(word_list))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def counts(my_list):\n    words = {}\n    for word in my_list:\n        # if the word is not yet in the dictionary, initialize the value to zero\n        if word not in words:\n            words[word] = 0\n        # increment the value\n        words[word] += 1\n    return words\n\n# call the function\nprint(counts(word_list))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a3b9fc585fdd8882b387443884d908dc09990b402497562723a4df49efebee9a",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0043",
+      "type": "paragraph",
+      "order": 43,
+      "source_hash": "2be5659c5a7bc25c4ad4ed97b103d11c8cdc40c20d1ecf905bd0bb671382c325",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The program prints out the following:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0044",
+      "type": "sample_output",
+      "order": 44,
+      "source_hash": "266252abf383d6a9dd7eadb3164fbe93347495a5b74e255d530f530933d18c4e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "{'banana': 1, 'milk': 1, 'beer': 3, 'cheese': 2, 'sourmilk': 3, 'juice': 1, 'sausage': 2, 'tomato': 1, 'cucumber': 1, 'butter': 2, 'margarine': 1, 'chocolate': 1}"
+      },
+      "translation": {
+        "language": "text",
+        "content": "{'banana': 1, 'milk': 1, 'beer': 3, 'cheese': 2, 'sourmilk': 3, 'juice': 1, 'sausage': 2, 'tomato': 1, 'cucumber': 1, 'butter': 2, 'margarine': 1, 'chocolate': 1}"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n{'banana': 1, 'milk': 1, 'beer': 3, 'cheese': 2, 'sourmilk': 3, 'juice': 1, 'sausage': 2, 'tomato': 1, 'cucumber': 1, 'butter': 2, 'margarine': 1, 'chocolate': 1}\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0045",
+      "type": "paragraph",
+      "order": 45,
+      "source_hash": "1abda80806a2384d4ad3653c7f6c2a02aeab4dfb8c3c5bb35c74a72e2a2574e2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "What if we wanted to categorize the words based on the initial letter in each word? One way to accomplish this would be to use dictionaries:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0046",
+      "type": "code",
+      "order": 46,
+      "source_hash": "062d073561f320828e182e00ccddfe656163e669130b7665903c7aec527fb782",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def categorize_by_initial(my_list):\n    groups = {}\n    for word in my_list:\n        initial = word[0]\n        # initialize a new list when the letter is first encountered\n        if initial not in groups:\n            groups[initial] = []\n        # add the word to the appropriate list\n        groups[initial].append(word)\n    return groups\n\ngroups = categorize_by_initial(word_list)\n\nfor key, value in groups.items():\n    print(f\"words beginning with {key}:\")\n    for word in value:\n        print(word)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def categorize_by_initial(my_list):\n    groups = {}\n    for word in my_list:\n        initial = word[0]\n        # initialize a new list when the letter is first encountered\n        if initial not in groups:\n            groups[initial] = []\n        # add the word to the appropriate list\n        groups[initial].append(word)\n    return groups\n\ngroups = categorize_by_initial(word_list)\n\nfor key, value in groups.items():\n    print(f\"words beginning with {key}:\")\n    for word in value:\n        print(word)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "062d073561f320828e182e00ccddfe656163e669130b7665903c7aec527fb782",
+        "length_lines": 17
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0047",
+      "type": "paragraph",
+      "order": 47,
+      "source_hash": "99fc3074b5635b05d4155da51ce6df2b99023758bbc27d1ffa098a34bcaf32ca",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The structure of the function is very similar to the previous exercise but this time the values mapped to the keys are lists. The program prints out the following:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0048",
+      "type": "sample_output",
+      "order": 48,
+      "source_hash": "8eb6f3f606a290c2ad6c68ba231e985b5567264011a8302bfbb56a7657352d7e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "words beginning with b:\nbanana\nbeer\nbutter\nbeer\nbutter\nbeer\nwords beginning with m:\nmilk\nmargarine\nwords beginning with c:\ncheese\ncucumber\ncheese\nchocolate\nwords beginning with s:\nsourmilk\nsausage\nsausage\nsourmilk\nsourmilk\nwords beginning with j:\njuice\nwords beginning with t:\ntomato"
+      },
+      "translation": {
+        "language": "text",
+        "content": "words beginning with b:\nbanana\nbeer\nbutter\nbeer\nbutter\nbeer\nwords beginning with m:\nmilk\nmargarine\nwords beginning with c:\ncheese\ncucumber\ncheese\nchocolate\nwords beginning with s:\nsourmilk\nsausage\nsausage\nsourmilk\nsourmilk\nwords beginning with j:\njuice\nwords beginning with t:\ntomato"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nwords beginning with b:\nbanana\nbeer\nbutter\nbeer\nbutter\nbeer\nwords beginning with m:\nmilk\nmargarine\nwords beginning with c:\ncheese\ncucumber\ncheese\nchocolate\nwords beginning with s:\nsourmilk\nsausage\nsausage\nsourmilk\nsourmilk\nwords beginning with j:\njuice\nwords beginning with t:\ntomato\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0049",
+      "type": "exercise",
+      "order": 49,
+      "source_hash": "25a6d80946ec2045eba748709eeff16b664fbecac1bd36067b66b5200977a159",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `histogram`, which takes a string as its argument. The function should print out a histogram representing the number of times each letter occurs in the string. Each occurrence of a letter should be represented by a star on the specific line for that letter.\n\nFor example, the function call `histogram(\"abba\")` should print out\n\n<sample-output>\n\n<pre>\na **\nb **\n</pre>\n\n</sample-output>\n\nwhile `histogram(\"statistically\")` should print out\n\n<sample-output>\n\n<pre>\ns **\nt ***\na **\ni **\nc *\nl **\ny *\n</pre>\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-16_histogram",
+        "exercise_type": "programming-exercise",
+        "name": "Histogram",
+        "tmc_name": "part05-16_histogram",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0050",
+      "type": "exercise",
+      "order": 50,
+      "source_hash": "43f89b431e51f012f4ce8cbe0290c30a4448984c8eda78b9e134eb40b9a9d1a2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a phone book application. It should work as follows:\n\n<sample-output>\n\ncommand (1 search, 2 add, 3 quit): **2**\nname: **peter**\nnumber: **040-5466745**\nok!\ncommand (1 search, 2 add, 3 quit): **2**\nname: **emily**\nnumber: **045-1212344**\nok!\ncommand (1 search, 2 add, 3 quit): **1**\nname: **peter**\n040-5466745\ncommand (1 search, 2 add, 3 quit): **1**\nname: **mary**\nno number\ncommand (1 search, 2 add, 3 quit): **2**\nname: **peter**\nnumber: **09-22223333**\nok!\ncommand (1 search, 2 add, 3 quit): **1**\nname: **peter**\n09-22223333\ncommand (1 search, 2 add, 3 quit): **3**\nquitting...\n\n</sample-output>\n\nAs you can see above, each name can be attached to a single number only. If a new entry with the same name is added, the number attached to the old entry is replaced with the new number.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-17_phone_book_v1",
+        "exercise_type": "programming-exercise",
+        "name": "Phone book, version 1",
+        "tmc_name": "part05-17_phone_book_v1",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0051",
+      "type": "exercise",
+      "order": 51,
+      "source_hash": "1b6f03e39723aaa3a350ef79d4316c0fbd0cc170896838f834f3680e0e5629f3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write an improved version of the phone book application. Each entry should now accommodate multiple phone numbers. The application should work otherwise exactly as above, but this time _all_ numbers attached to a name should be printed.\n\n<sample-output>\n\ncommand (1 search, 2 add, 3 quit): **2**\nname: **peter**\nnumber: **040-5466745**\nok!\ncommand (1 search, 2 add, 3 quit): **2**\nname: **emily**\nnumber: **045-1212344**\nok!\ncommand (1 search, 2 add, 3 quit): **1**\nname: **peter**\n040-5466745\ncommand (1 search, 2 add, 3 quit): **1**\nname: **mary**\nno number\ncommand (1 search, 2 add, 3 quit): **2**\nname: **peter**\nnumber: **09-22223333**\nok!\ncommand (1 search, 2 add, 3 quit): **1**\nname: **peter**\n040-5466745\n09-22223333\ncommand (1 search, 2 add, 3 quit): **3**\nquitting..."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-18_phone_book_v2",
+        "exercise_type": "programming-exercise",
+        "name": "Phone book, version 2",
+        "tmc_name": "part05-18_phone_book_v2",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0052",
+      "type": "heading",
+      "order": 52,
+      "source_hash": "6c848a38d75faa5cf9b9085a4d5875301e2eac784747e48cfc07ab53252da518",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Removing keys and values from a dictionary"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0053",
+      "type": "paragraph",
+      "order": 53,
+      "source_hash": "892f2a40e8035686868fff756ad1a3721e2d0fa431eec6849457368cd7ff263e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "It is naturally possible to also remove key-value pairs from the dictionary. There are two ways to accomplish this. The first is the command `del`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0054",
+      "type": "code",
+      "order": 54,
+      "source_hash": "97cbf8df6aceced76524dfb21acbc585faf6caa594870b9b8968c92e5e397f13",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "staff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\ndel staff[\"David\"]\nprint(staff)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "staff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\ndel staff[\"David\"]\nprint(staff)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "97cbf8df6aceced76524dfb21acbc585faf6caa594870b9b8968c92e5e397f13",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0055",
+      "type": "sample_output",
+      "order": 55,
+      "source_hash": "1b6b673bbe4eae27a0f3f1d2af28dd03fdacdf3b2b2d740eab896a95a335363f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "{'Alan': 'lecturer', 'Emily': 'professor'}"
+      },
+      "translation": {
+        "language": "text",
+        "content": "{'Alan': 'lecturer', 'Emily': 'professor'}"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n{'Alan': 'lecturer', 'Emily': 'professor'}\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0056",
+      "type": "paragraph",
+      "order": 56,
+      "source_hash": "0011efcea626659864cc09ce062e9e2fb8da6011388bf43e7ea1c2d53dbb7a70",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If you try to use the `del` command to delete a key which doesn't exist in the dictionary, there will be an error:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0057",
+      "type": "code",
+      "order": 57,
+      "source_hash": "a53fabc5a9223fa07221cff762c1f21cc92fac29a6f0ad45a5d0d72ab9a32efb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "staff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\ndel staff[\"Paul\"]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "staff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\ndel staff[\"Paul\"]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a53fabc5a9223fa07221cff762c1f21cc92fac29a6f0ad45a5d0d72ab9a32efb",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0058",
+      "type": "sample_output",
+      "order": 58,
+      "source_hash": "e436e6a24a3a79fb561b7864daa1404dae3c6a503b796b25c205a23e3b76e9c5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "<pre>\n>>> del staff[\"Paul\"]\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nKeyError: 'Paul'\n</pre>"
+      },
+      "translation": {
+        "language": "text",
+        "content": "<pre>\n>>> del staff[\"Paul\"]\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nKeyError: 'Paul'\n</pre>"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n<pre>\n>>> del staff[\"Paul\"]\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nKeyError: 'Paul'\n</pre>\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0059",
+      "type": "paragraph",
+      "order": 59,
+      "source_hash": "2ca74d167ce9cd252469bf072cacfbe4dd0936418ef2a8af8725c6d85852e164",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "So, before deleting a key you should check if it is present in the dictionary:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0060",
+      "type": "code",
+      "order": 60,
+      "source_hash": "07b02b2c83e70699aceb5b0160f9591625a6c4c4cbc4a125ba299697a182f4e9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "staff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\nif \"Paul\" in staff:\n  del staff[\"Paul\"]\n  print(\"Deleted\")\nelse:\n  print(\"This person is not a staff member\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "staff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\nif \"Paul\" in staff:\n  del staff[\"Paul\"]\n  print(\"Deleted\")\nelse:\n  print(\"This person is not a staff member\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "07b02b2c83e70699aceb5b0160f9591625a6c4c4cbc4a125ba299697a182f4e9",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0061",
+      "type": "paragraph",
+      "order": 61,
+      "source_hash": "c4e6c467b743fb238aa8b263ac14100588ab504b0468a0255b6506b21d552428",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The other way to delete entries in a dictionary is the method `pop`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0062",
+      "type": "code",
+      "order": 62,
+      "source_hash": "bdec9c17cf7f8e622a7856e6cb27634d24839b9d740b09c296de2d1d8564e863",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "staff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\ndeleted = staff.pop(\"David\")\nprint(staff)\nprint(deleted, \"deleted\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "staff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\ndeleted = staff.pop(\"David\")\nprint(staff)\nprint(deleted, \"deleted\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "bdec9c17cf7f8e622a7856e6cb27634d24839b9d740b09c296de2d1d8564e863",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0063",
+      "type": "sample_output",
+      "order": 63,
+      "source_hash": "c4fb77102ffa08b7797ef24c2012f448c8164613d33051167910f816e6bb3c59",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "{'Alan': 'lecturer', 'Emily': 'professor'}\nlecturer deleted"
+      },
+      "translation": {
+        "language": "text",
+        "content": "{'Alan': 'lecturer', 'Emily': 'professor'}\nlecturer deleted"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n{'Alan': 'lecturer', 'Emily': 'professor'}\nlecturer deleted\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0064",
+      "type": "paragraph",
+      "order": 64,
+      "source_hash": "f749ad7ba0e2497296c4b007d23c4c5e5087905f63dab122cc356d141ba4949f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As you can see above, `pop` also returns the value from the deleted entry."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0065",
+      "type": "paragraph",
+      "order": 65,
+      "source_hash": "237d3d6f6c969c3316a59521e1a57cd81c027d2c469d6f90095fa1b8968d193b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "By default, `pop` will also cause an error if you try to delete a key which is not present in the dictionary. It is possible to avoid this by giving the method a second argument, which contains a _default return value_. This value is returned in case the key is not found in the dictionary. The special Python value `None` will work here:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0066",
+      "type": "code",
+      "order": 66,
+      "source_hash": "60e03f1be6df0be02311efc408dcb11089688265650501bd268a3889a76d74e0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "staff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\ndeleted = staff.pop(\"Paul\", None)\nif deleted == None:\n  print(\"This person is not a staff member\")\nelse:\n  print(deleted, \"deleted\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "staff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\ndeleted = staff.pop(\"Paul\", None)\nif deleted == None:\n  print(\"This person is not a staff member\")\nelse:\n  print(deleted, \"deleted\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "60e03f1be6df0be02311efc408dcb11089688265650501bd268a3889a76d74e0",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0067",
+      "type": "sample_output",
+      "order": 67,
+      "source_hash": "0f05ae4f5c9f917f72dbdda0f9c3ca736bc99aac6d804e2023823f03ee6e8732",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "This person is not a staff member"
+      },
+      "translation": {
+        "language": "text",
+        "content": "This person is not a staff member"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThis person is not a staff member\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0068",
+      "type": "paragraph",
+      "order": 68,
+      "source_hash": "e02edaeca992c65324a02eec75e791d6affb7e6673f160c6fed6586bca7a01a0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "NB: if you need to delete the contents of the entire dictionary, and try to do it with a for loop, like so"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0069",
+      "type": "code",
+      "order": 69,
+      "source_hash": "33b2790d9b236fb6656c609f929cf5e2ad9d633db005a9f3be4b357f0938ae05",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "staff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\nfor key in staff:\n  del staff[key]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "staff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\nfor key in staff:\n  del staff[key]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "33b2790d9b236fb6656c609f929cf5e2ad9d633db005a9f3be4b357f0938ae05",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0070",
+      "type": "paragraph",
+      "order": 70,
+      "source_hash": "bf692a5e31781aedafb4a4cbad06a49dbbe38fbd20da83383eba79d6740c68f0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "you will receive an error message:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0071",
+      "type": "sample_output",
+      "order": 71,
+      "source_hash": "81e1d1fb0077c3bba7dde7772f9b95b9d83415200b9f141760b49cb71cac8c64",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "RuntimeError: dictionary changed size during iteration"
+      },
+      "translation": {
+        "language": "text",
+        "content": "RuntimeError: dictionary changed size during iteration"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nRuntimeError: dictionary changed size during iteration\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0072",
+      "type": "paragraph",
+      "order": 72,
+      "source_hash": "62c1b0b885b73e7021738c045619a129f12902a1910982353d0b4c310ec5e5ff",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When traversing a collection with a `for` loop, the contents may not change while the loop is in progress."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0073",
+      "type": "paragraph",
+      "order": 73,
+      "source_hash": "1d16e668c8d8f604972d0462203f9b2295890cf44fb782b712a5e15df68e519a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Luckily, there is a dictionary method for just this purpose:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0074",
+      "type": "code",
+      "order": 74,
+      "source_hash": "8dacf0b80656a5da175b994910e17a99e756739807246eaeb5190301b96f3330",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "staff.clear()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "staff.clear()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8dacf0b80656a5da175b994910e17a99e756739807246eaeb5190301b96f3330",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0075",
+      "type": "exercise",
+      "order": 75,
+      "source_hash": "d5ad3e3ecb155cd82ef19f3496b1d31c2ca1b121b29412793ee22fe3b72c08dd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `invert(dictionary: dict)`, which takes a dictionary as its argument. The dictionary should be inverted in place so that values become keys and keys become values.\n\nAn example of its use:\n\n```python\ns = {1: \"first\", 2: \"second\", 3: \"third\", 4: \"fourth\"}\ninvert(s)\nprint(s)\n```\n\n<sample-output>\n\n{\"first\": 1, \"second\": 2, \"third\": 3, \"fourth\": 4}\n\n</sample-output>\n\n**NB:** the principles regarding lists covered [here](/part-5/2-references#using-lists-as-parameters-in-functions) also hold for dictionaries passed as arguments.\n\nIf you have trouble completing this exercise, the [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit) might help you understand what your code is or isn't doing."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-19_invert_dictionary",
+        "exercise_type": "programming-exercise",
+        "name": "Invert a dictionary",
+        "tmc_name": "part05-19_invert_dictionary",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0076",
+      "type": "exercise",
+      "order": 76,
+      "source_hash": "53f331142896669e74a8c8cb668c48d17b09cd7ad8f809609494924403458d5c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `dict_of_numbers()`, which returns a new dictionary. The dictionary should have the numbers from 0 to 99 as its keys. The value attached to each key should be the number spelled out in words. Please have a look at the example below:\n\n```python\nnumbers = dict_of_numbers()\nprint(numbers[2])\nprint(numbers[11])\nprint(numbers[45])\nprint(numbers[99])\nprint(numbers[0])\n```\n\n<sample-output>\n\ntwo\neleven\nforty-five\nninety-nine\nzero\n\n</sample-output>\n\nNB: Please don't formulate each spelled out number by hand. Figure out how you can use loops and dictionaries in your solution."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-20_numbers_spelled_out",
+        "exercise_type": "programming-exercise",
+        "name": "Numbers spelled out",
+        "tmc_name": "part05-20_numbers_spelled_out",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0077",
+      "type": "heading",
+      "order": 77,
+      "source_hash": "9aa945f7582098551b452ff8823eb8d041fd7ba1919554f5e7b0adc78ae9b992",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Using dictionaries for structured data"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0078",
+      "type": "paragraph",
+      "order": 78,
+      "source_hash": "769917c1bbb18b1ee917a353957b3491dfdb225790d2281957dd5d80181d86d7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Dictionaries are very useful for structuring data. The following code will create a dictionary which contains some personal data:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0079",
+      "type": "code",
+      "order": 79,
+      "source_hash": "a6239f18fadfda8cf12ba57db9eeae45f7b5dd9671bac508fcdefcfa7e95fe5c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "person = {\"name\": \"Pippa Python\", \"height\": 154, \"weight\": 61, \"age\": 44}"
+      },
+      "translation": {
+        "language": "code",
+        "content": "person = {\"name\": \"Pippa Python\", \"height\": 154, \"weight\": 61, \"age\": 44}"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a6239f18fadfda8cf12ba57db9eeae45f7b5dd9671bac508fcdefcfa7e95fe5c",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0080",
+      "type": "paragraph",
+      "order": 80,
+      "source_hash": "5061c982b862006e44fbe036e8ee39be0fa151b5b087521d0f3b4fcd1197e24d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This means that we have here a person named Pippa Python, whose height is 154, weight 61, and age 44. The same information could just as well be stored in variables:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0081",
+      "type": "code",
+      "order": 81,
+      "source_hash": "2a8c711d7d1a798f72477f80da98a0ac2193c91696620e151750c4c4e0c0b50c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "name = \"Pippa Python\"\nheight = 154\nweight = 61\nage = 44"
+      },
+      "translation": {
+        "language": "code",
+        "content": "name = \"Pippa Python\"\nheight = 154\nweight = 61\nage = 44"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2a8c711d7d1a798f72477f80da98a0ac2193c91696620e151750c4c4e0c0b50c",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0082",
+      "type": "paragraph",
+      "order": 82,
+      "source_hash": "4c96a318d00bacf5c15588496bdac5e5146a6bd78289ce206a8bc2c32c524ca9",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The advantage of a dictionary is that it is a collection. It collects related data under one variable, so it is easy to access the different components. This same advantage is offered by a list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0083",
+      "type": "code",
+      "order": 83,
+      "source_hash": "1b7d6601d75c9f43a1fb6e165a7c25eb4df5d641e3859f99c0929560b3c7bd4c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "person = [\"Pippa Python\", 153, 61, 44]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "person = [\"Pippa Python\", 153, 61, 44]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "1b7d6601d75c9f43a1fb6e165a7c25eb4df5d641e3859f99c0929560b3c7bd4c",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0084",
+      "type": "paragraph",
+      "order": 84,
+      "source_hash": "5c80de2b03a14d04dacda2ba83ad73dcc06b1b26e4d534e716245ffa793fd415",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "With lists, the programmer will have to remember what is stored at each index in the list. There is nothing to indicate that `person[2]` contains the weight and `person[3]` the age of the person. When using a dictionary this problem is avoided, as each bit of data is accessed through a named key."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0085",
+      "type": "paragraph",
+      "order": 85,
+      "source_hash": "70bcb371f41c631d76b18edd648a558c1c8f4d869302a842de3870674d9e359a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Assuming we have defined multiple people using the same format, we can access their data in the following manner:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0086",
+      "type": "code",
+      "order": 86,
+      "source_hash": "a11fd17a7a66abb6fa7a23e8a0fb4f94c8e7745f0198c1151ecca5c156a501f0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "person1 = {\"name\": \"Pippa Python\", \"height\": 154, \"weight\": 61, \"age\": 44}\nperson2 = {\"name\": \"Peter Pythons\", \"height\": 174, \"weight\": 103, \"age\": 31}\nperson3 = {\"name\": \"Pedro Python\", \"height\": 191, \"weight\": 71, \"age\": 14}\n\npeople = [person1, person2, person3]\n\nfor person in people:\n    print(person[\"name\"])\n\ncombined_height = 0\nfor person in people:\n    combined_height += person[\"height\"]\n\nprint(\"The average height is\", combined_height / len(people))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "person1 = {\"name\": \"Pippa Python\", \"height\": 154, \"weight\": 61, \"age\": 44}\nperson2 = {\"name\": \"Peter Pythons\", \"height\": 174, \"weight\": 103, \"age\": 31}\nperson3 = {\"name\": \"Pedro Python\", \"height\": 191, \"weight\": 71, \"age\": 14}\n\npeople = [person1, person2, person3]\n\nfor person in people:\n    print(person[\"name\"])\n\ncombined_height = 0\nfor person in people:\n    combined_height += person[\"height\"]\n\nprint(\"The average height is\", combined_height / len(people))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a11fd17a7a66abb6fa7a23e8a0fb4f94c8e7745f0198c1151ecca5c156a501f0",
+        "length_lines": 14
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0087",
+      "type": "sample_output",
+      "order": 87,
+      "source_hash": "59c0e64fd052698df3ec578bad451fd64fd4fc7eeeea7e5a5ef32292a9bb381a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Pippa Python\nPeter Pythons\nPedro Python\nThe average height is 173.0"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Pippa Python\nPeter Pythons\nPedro Python\nThe average height is 173.0"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPippa Python\nPeter Pythons\nPedro Python\nThe average height is 173.0\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0088",
+      "type": "exercise",
+      "order": 88,
+      "source_hash": "8de52f32695856851b5856984470560621faa4fb08c13a1798a9a6ee781bc2e0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `add_movie(database: list, name: str, director: str, year: int, runtime: int)`, which adds a new movie object into a movie database.\n\nThe database is a list, and each movie object in the list is a dictionary. The dictionary should contain the following keys.\n\n* name\n* director\n* year\n* runtime\n\nThe values attached to these keys are given as arguments to the function.\n\nAn example of its use:\n\n```python\ndatabase = []\nadd_movie(database, \"Gone with the Python\", \"Victor Pything\", 2017, 116)\nadd_movie(database, \"Pythons on a Plane\", \"Renny Pytholin\", 2001, 94)\nprint(database)\n```\n\n<sample-output>\n\n[{\"name\": \"Gone with the Python\", \"director\": \"Victor Pything\", \"year\": 2017, \"runtime\": 116}, {\"name\": \"Pythons on a Plane\", \"director\": \"Renny Pytholin\", \"year\": 2001, \"runtime\": 94}]\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-21_movie_database",
+        "exercise_type": "programming-exercise",
+        "name": "Movie database",
+        "tmc_name": "part05-21_movie_database",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0089",
+      "type": "exercise",
+      "order": 89,
+      "source_hash": "0bd1d3aace0d49bd4ecc387061d520af9c08f9875732e5c25ffe943b8e769353",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `find_movies(database: list, search_term: str)`, which processes the movie database created in the previous exercise. The function should formulate a new list, which contains only the movies whose title includes the word searched for. Capitalisation is irrelevant here. A search for `ana` should return a list containing both `Anaconda` and `Management`.\n\nAn example of its use:\n\n```python\ndatabase = [{\"name\": \"Gone with the Python\", \"director\": \"Victor Pything\", \"year\": 2017, \"runtime\": 116},\n{\"name\": \"Pythons on a Plane\", \"director\": \"Renny Pytholin\", \"year\": 2001, \"runtime\": 94},\n{\"name\": \"Dawn of the Dead Programmers\", \"director\": \"M. Night Python\", \"year\": 2011, \"runtime\": 101}]\n\nmy_movies = find_movies(database, \"python\")\nprint(my_movies)\n```\n\n<sample-output>\n\n[{\"name\": \"Gone with the Python\", \"director\": \"Victor Pything\", \"year\": 2017, \"runtime\": 116}, {\"name\": \"Pythons on a Plane\", \"director\": \"Renny Pytholin\", \"year\": 2001, \"runtime\": 94}]\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-22_find_movies",
+        "exercise_type": "programming-exercise",
+        "name": "Find movies",
+        "tmc_name": "part05-22_find_movies",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0090",
+      "type": "paragraph",
+      "order": 90,
+      "source_hash": "a6ca4e902b22c294f01454898a014425cfc2e891e8f3ce691f85d0d205b987bd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "At this point in the course, you can choose to participate in a research study related to learning programming. Participation is voluntary and individual participants cannot be identified from the data gathered in the study. You can freely quit the experiment at any point. [Click here to begin the study!](https://runestone.academy/ns/books/published/p3pt/index.html)"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0091",
+      "type": "paragraph",
+      "order": 91,
+      "source_hash": "b97eebcf5a0222c688482a2c1f8f4510ba0c7934c136e1f60999bbcc47c2ab75",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!---\nA quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-3-dictionary-0092",
+      "type": "quiz",
+      "order": 92,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "6361eeca-a2e2-5577-892c-749706d754f0",
+        "attributes": {
+          "id": "6361eeca-a2e2-5577-892c-749706d754f0"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-3-dictionary-0093",
+      "type": "paragraph",
+      "order": 93,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "id": "page-exam",
+  "slug": "exam",
+  "title_original": "Exam 4.6.",
+  "path": "/exam",
+  "source_path": "data/exam.md",
+  "source_hash": "00b992592ced708ac7ab31913e951ac6710569bb2f263ff3669297906d30f6b4",
+  "frontmatter": {
+    "path": "/exam",
+    "title": "Exam 4.6.",
+    "information_page": true,
+    "sidebar_priority": 5000,
+    "hide_in_sidebar": true
+  },
+  "chunks_count": 24,
+  "raw_chunks": [
+    {
+      "raw_type": "heading",
+      "level": 1,
+      "content": "Advanced Course in Programming",
+      "raw_source": "# Advanced Course in Programming"
+    },
+    {
+      "raw_type": "list",
+      "content": "* The exam questions, in the form of programming task instructions, will become available at courses.mooc.fi at 10:00 AM (UTC+3) on the day of the exam.\n* Links to the exam questions can be found from this page on section [Exam questions and starting the exam](#exam-questions-and-starting-the-exam)",
+      "raw_source": "* The exam questions, in the form of programming task instructions, will become available at courses.mooc.fi at 10:00 AM (UTC+3) on the day of the exam.\n* Links to the exam questions can be found from this page on section [Exam questions and starting the exam](#exam-questions-and-starting-the-exam)"
+    },
+    {
+      "raw_type": "heading",
+      "level": 4,
+      "content": "Taking the programming exam",
+      "raw_source": "#### Taking the programming exam"
+    },
+    {
+      "raw_type": "list",
+      "content": "* You do not need to enrol for the exam.\n* Taking the programming exam is a mandatory requirement for completing the course.",
+      "raw_source": "* You do not need to enrol for the exam.\n* Taking the programming exam is a mandatory requirement for completing the course."
+    },
+    {
+      "raw_type": "heading",
+      "level": 4,
+      "content": "Exam arrangements",
+      "raw_source": "#### Exam arrangements"
+    },
+    {
+      "raw_type": "list",
+      "content": "* Your solutions to the programming tasks in the exam will be submitted in the Visual Studio Code programming environment, in the same manner as the weekly exercises on the course.\n* The course exam can be taken on June 4th 2022 **between 10:00 (UTC+3) AM and 10:00 PM (UTC+3)**.\n* The exam ends at 10:00 PM (UTC+3) at the latest. If you want to be able to spend the maximum time allowed on the exam, you should **start at 6:00 PM (UTC+3) at the latest**.\n* You will have **four hours** to complete the exam. If you have been granted extra time through special arrangements, you will have five hours to complete the exam, and should start at 5:00 PM (UTC+3) at the latest.",
+      "raw_source": "* Your solutions to the programming tasks in the exam will be submitted in the Visual Studio Code programming environment, in the same manner as the weekly exercises on the course.\n* The course exam can be taken on June 4th 2022 **between 10:00 (UTC+3) AM and 10:00 PM (UTC+3)**.\n* The exam ends at 10:00 PM (UTC+3) at the latest. If you want to be able to spend the maximum time allowed on the exam, you should **start at 6:00 PM (UTC+3) at the latest**.\n* You will have **four hours** to complete the exam. If you have been granted extra time through special arrangements, you will have five hours to complete the exam, and should start at 5:00 PM (UTC+3) at the latest."
+    },
+    {
+      "raw_type": "heading",
+      "level": 4,
+      "content": "Before the exam date",
+      "raw_source": "#### Before the exam date"
+    },
+    {
+      "raw_type": "list",
+      "content": "* Read these instructions carefully\n* Fetch the the programming task templates and test submitting the exercises [by following to the instructions below](#fetching-the-programming-task-templates)\n* If you encounter problems with fetching the templates or submitting the exercises, you have other technical problems or questions about exam arrangements, you can ask for help in the course's [Discord](https://study.cs.helsinki.fi/discord/join/ohjelmoinnin_mooc)",
+      "raw_source": "* Read these instructions carefully\n* Fetch the the programming task templates and test submitting the exercises [by following to the instructions below](#fetching-the-programming-task-templates)\n* If you encounter problems with fetching the templates or submitting the exercises, you have other technical problems or questions about exam arrangements, you can ask for help in the course's [Discord](https://study.cs.helsinki.fi/discord/join/ohjelmoinnin_mooc)"
+    },
+    {
+      "raw_type": "heading",
+      "level": 4,
+      "content": "At the exam date",
+      "raw_source": "#### At the exam date"
+    },
+    {
+      "raw_type": "list",
+      "content": "* In case of technical problems, the course instructor will be on standby **from 10:00 AM (UTC+3) to 02:00 PM (UTC+3)** on the [Discord](https://study.cs.helsinki.fi/discord/join/ohjelmoinnin_mooc) at channel `ohjelmoinnin_mooc_english`.\n* On the exam date **from 02:00 PM (UTC+3) to 10:00 PM (UTC+3)** discussion in the course's support channels is forbidden. The course's Discord is locked and messages cannot be sent to channels.",
+      "raw_source": "* In case of technical problems, the course instructor will be on standby **from 10:00 AM (UTC+3) to 02:00 PM (UTC+3)** on the [Discord](https://study.cs.helsinki.fi/discord/join/ohjelmoinnin_mooc) at channel `ohjelmoinnin_mooc_english`.\n* On the exam date **from 02:00 PM (UTC+3) to 10:00 PM (UTC+3)** discussion in the course's support channels is forbidden. The course's Discord is locked and messages cannot be sent to channels."
+    },
+    {
+      "raw_type": "heading",
+      "level": 4,
+      "content": "Fetching the programming task templates",
+      "raw_source": "#### Fetching the programming task templates"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "**You will be able to fetch and test the programming task templates already on the day before the exam.**",
+      "raw_source": "**You will be able to fetch and test the programming task templates already on the day before the exam.**"
+    },
+    {
+      "raw_type": "list",
+      "content": "1. Launch Visual Studio Code.\n2. Select the `My courses` view in the TMC menu.\n3. Click the `Add new course` button.\n4. Select the organization `Helsingin yliopisto`.\n5. Select the course `Advanced Course in Programming exam 4.6.2022`.\n6. Fetch the programming task templates.\n7. Try submitting the programming tasks.\n8. If you are able to submit the tasks, you are ready to take the exam. If not, get in touch with course instructors. Don't panic, we will work it out.",
+      "raw_source": "1. Launch Visual Studio Code.\n2. Select the `My courses` view in the TMC menu.\n3. Click the `Add new course` button.\n4. Select the organization `Helsingin yliopisto`.\n5. Select the course `Advanced Course in Programming exam 4.6.2022`.\n6. Fetch the programming task templates.\n7. Try submitting the programming tasks.\n8. If you are able to submit the tasks, you are ready to take the exam. If not, get in touch with course instructors. Don't panic, we will work it out."
+    },
+    {
+      "raw_type": "heading",
+      "level": 4,
+      "content": "Exam questions and starting the exam",
+      "raw_source": "#### Exam questions and starting the exam"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "notice",
+      "attributes": {},
+      "inner_content": "Please do not ask any questions about specific programming tasks assigned to you on the public course support channels while the exam session is still ongoing. That is, you may only ask task-specific questions about the exam after 10 PM on the day of the exam. Complete the programming tasks to the best of your understanding, and please do indicate in your course feedback if the instructions were confusing.",
+      "raw_source": "<notice>\nPlease do not ask any questions about specific programming tasks assigned to you on the public course support channels while the exam session is still ongoing. That is, you may only ask task-specific questions about the exam after 10 PM on the day of the exam. Complete the programming tasks to the best of your understanding, and please do indicate in your course feedback if the instructions were confusing.\n</notice>"
+    },
+    {
+      "raw_type": "list",
+      "content": "* The exam questions, in the form of programming task instructions, will become available at courses.mooc.fi at 10:00 AM on the day of the exam.\n* You should use your usual mooc.fi login details to log in at the exam page.\n* The exam questions can be found from here: <a href=\"https://courses.mooc.fi/org/uh-cs/exams/1ea25f48-6c6c-4201-b261-346c09b92803\">https://courses.mooc.fi/org/uh-cs/exams/1ea25f48-6c6c-4201-b261-346c09b92803</a>\n* If you have been granted extra time through special arrangements, open the exam questions from this link: <a href=\"https://courses.mooc.fi/org/uh-cs/exams/b5c2ddb8-1642-4455-a7e7-0c293bdc8ad9\">https://courses.mooc.fi/org/uh-cs/exams/b5c2ddb8-1642-4455-a7e7-0c293bdc8ad9</a>\n* Your allocated exam time will begin when you click on the button `START THE EXAM!`.",
+      "raw_source": "* The exam questions, in the form of programming task instructions, will become available at courses.mooc.fi at 10:00 AM on the day of the exam.\n* You should use your usual mooc.fi login details to log in at the exam page.\n* The exam questions can be found from here: <a href=\"https://courses.mooc.fi/org/uh-cs/exams/1ea25f48-6c6c-4201-b261-346c09b92803\">https://courses.mooc.fi/org/uh-cs/exams/1ea25f48-6c6c-4201-b261-346c09b92803</a>\n* If you have been granted extra time through special arrangements, open the exam questions from this link: <a href=\"https://courses.mooc.fi/org/uh-cs/exams/b5c2ddb8-1642-4455-a7e7-0c293bdc8ad9\">https://courses.mooc.fi/org/uh-cs/exams/b5c2ddb8-1642-4455-a7e7-0c293bdc8ad9</a>\n* Your allocated exam time will begin when you click on the button `START THE EXAM!`."
+    },
+    {
+      "raw_type": "heading",
+      "level": 4,
+      "content": "Submitting your solutions",
+      "raw_source": "#### Submitting your solutions"
+    },
+    {
+      "raw_type": "list",
+      "content": "* Your solutions to the programming tasks in the exam are submitted in the same manner as your solutions to the programming exercises on the course.\n* The programming tasks in the exam **will not have automated tests**.\n* Any attempt to submit tasks after the exam time allocated to you have ended will lead to an automatic fail.",
+      "raw_source": "* Your solutions to the programming tasks in the exam are submitted in the same manner as your solutions to the programming exercises on the course.\n* The programming tasks in the exam **will not have automated tests**.\n* Any attempt to submit tasks after the exam time allocated to you have ended will lead to an automatic fail."
+    },
+    {
+      "raw_type": "heading",
+      "level": 4,
+      "content": "Finishing the exam",
+      "raw_source": "#### Finishing the exam"
+    },
+    {
+      "raw_type": "list",
+      "content": "* Please submit all your programming tasks one final time, within the exam time allocated to you, before finishing.\n* You can check the arrival of the exercises you have submitted to the server by logging in to the page [https://tmc.mooc.fi/org/hy/courses/1042](https://tmc.mooc.fi/org/hy/courses/1042). The programming task has arrived on the server if you can see the name of the task template and the time when you submitted the task.\n* When you are done, you can close all Visual Studio Code tabs and windows, along with the exam question page. There is no need to do anything else.",
+      "raw_source": "* Please submit all your programming tasks one final time, within the exam time allocated to you, before finishing.\n* You can check the arrival of the exercises you have submitted to the server by logging in to the page [https://tmc.mooc.fi/org/hy/courses/1042](https://tmc.mooc.fi/org/hy/courses/1042). The programming task has arrived on the server if you can see the name of the task template and the time when you submitted the task.\n* When you are done, you can close all Visual Studio Code tabs and windows, along with the exam question page. There is no need to do anything else."
+    },
+    {
+      "raw_type": "heading",
+      "level": 4,
+      "content": "Exam results",
+      "raw_source": "#### Exam results"
+    },
+    {
+      "raw_type": "list",
+      "content": "* The results of the exam will be emailed to you when the course has been fully graded.\n* The email will also contain instructions for registering your course credits.",
+      "raw_source": "* The results of the exam will be emailed to you when the course has been fully graded.\n* The email will also contain instructions for registering your course credits."
+    },
+    {
+      "raw_type": "heading",
+      "level": 4,
+      "content": "Other information",
+      "raw_source": "#### Other information"
+    },
+    {
+      "raw_type": "list",
+      "content": "* You are **not** allowed to collaborate with other students or copy ready solutions from anywhere during the exam. However, **this is an open book exam, so the usual resources, such as course materials, Python Tutor visualisation tool and Google, are allowed.**\n* Your programming task submissions will be checked with a plagiarism detector. Any cheating detected leads to a failed exam at minimum, but may also lead to expulsion from the course.\n* The programming tasks in the exam will be similar to the programming tasks in the course material. The best way to prepare for the exam is to revisit the course material.\n* Your course results will be emailed to you after the exam, along with instructions for registering your course credits.",
+      "raw_source": "* You are **not** allowed to collaborate with other students or copy ready solutions from anywhere during the exam. However, **this is an open book exam, so the usual resources, such as course materials, Python Tutor visualisation tool and Google, are allowed.**\n* Your programming task submissions will be checked with a plagiarism detector. Any cheating detected leads to a failed exam at minimum, but may also lead to expulsion from the course.\n* The programming tasks in the exam will be similar to the programming tasks in the course material. The best way to prepare for the exam is to revisit the course material.\n* Your course results will be emailed to you after the exam, along with instructions for registering your course credits."
+    }
+  ]
+}

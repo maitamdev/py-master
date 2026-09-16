@@ -1,0 +1,35 @@
+{
+  "id": "part07-index",
+  "part": 7,
+  "part_slug": "part-7",
+  "slug": "index",
+  "is_part_index": true,
+  "title_original": "Part 7",
+  "path": "/part-7",
+  "source_path": "data/part-7/index.md",
+  "source_hash": "e4436dffd4878a8fd3430ce2c3d68c5f40febe1989cba0767204ee513b40e270",
+  "frontmatter": {
+    "path": "/part-7",
+    "title": "Part 7",
+    "overview": true,
+    "hidden": false,
+    "separator_after": "Advanced Course in Programming"
+  },
+  "chunks_count": 2,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "pages-in-this-section",
+      "attributes": {},
+      "inner_content": "",
+      "raw_source": "<pages-in-this-section></pages-in-this-section>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "exercises-in-this-section",
+      "attributes": {},
+      "inner_content": "",
+      "raw_source": "<exercises-in-this-section></exercises-in-this-section>"
+    }
+  ]
+}

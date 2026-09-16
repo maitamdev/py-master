@@ -1,0 +1,16 @@
+{
+  "id": "ex-part13-08_robot_circle",
+  "lesson_id": "part13-2-animation",
+  "part": 13,
+  "tmc_name": "part13-08_robot_circle",
+  "title_original": "Robots in a circle",
+  "title_vi": "Robot trong một vòng tròn",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please create an animation where ten robots go round in a circle. The end result should look like this:\n\n<img src=\"pygame_circle.gif\">",
+  "description_vi": "Vui lòng tạo hoạt ảnh trong đó mười robot đi vòng tròn. Kết quả cuối cùng sẽ trông như thế này:\n\n<img src=\"pygame_circle.gif\">",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "cc73f6cc9f6f28c81c396a02221dc7e766f825bb689dbae89cbf69e18421c93d",
+  "order": 44
+}

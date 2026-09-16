@@ -1,0 +1,289 @@
+{
+  "id": "part02-2-else-elif",
+  "part": 2,
+  "part_slug": "part-2",
+  "slug": "2-else-elif",
+  "is_part_index": false,
+  "title_original": "More conditionals",
+  "path": "/part-2/2-else-elif",
+  "source_path": "data/part-2/2-else-elif.md",
+  "source_hash": "0cfc617ad5fad3067095b3dbbed0e1d5951b38a1c7ffd6aae9549c28787fcd95",
+  "frontmatter": {
+    "path": "/part-2/2-else-elif",
+    "title": "More conditionals",
+    "hidden": false
+  },
+  "chunks_count": 42,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know how to create multiple branches within conditional statements\n- You will understand the purpose of `if`, `elif` and `else` statements within a conditional statement\n- You will be able to use the modulo operation `%` in Boolean expressions",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know how to create multiple branches within conditional statements\n- You will understand the purpose of `if`, `elif` and `else` statements within a conditional statement\n- You will be able to use the modulo operation `%` in Boolean expressions\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's have a look at a program which asks the user to input a number, and then prints out different messages based on whether the number is negative, positive, or equal to zero:",
+      "raw_source": "Let's have a look at a program which asks the user to input a number, and then prints out different messages based on whether the number is negative, positive, or equal to zero:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number = int(input(\"Please type in a number: \"))\n\nif number < 0:\n    print(\"The number is negative\")\n\nif number >= 0:\n    print(\"The number is positive or zero\")",
+      "raw_source": "```python\nnumber = int(input(\"Please type in a number: \"))\n\nif number < 0:\n    print(\"The number is negative\")\n\nif number >= 0:\n    print(\"The number is positive or zero\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This looks a bit clumsy and repetitive. We only ever want to execute one of the `if` blocks, because the input will always be either below zero, or zero or above. That is, either `number < 0` or `number >= 0` is true, but never both at the same time. So, the first conditional statement actually contains all we need here. If it is true, the number is negative. If it is false, the number equals zero or is positive.",
+      "raw_source": "This looks a bit clumsy and repetitive. We only ever want to execute one of the `if` blocks, because the input will always be either below zero, or zero or above. That is, either `number < 0` or `number >= 0` is true, but never both at the same time. So, the first conditional statement actually contains all we need here. If it is true, the number is negative. If it is false, the number equals zero or is positive."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Instead of creating a whole another conditional statement, as in the example above, it is possible to create another branch of the same conditional statement to cover all cases _where the condition was false_. This is called the `else` statement.",
+      "raw_source": "Instead of creating a whole another conditional statement, as in the example above, it is possible to create another branch of the same conditional statement to cover all cases _where the condition was false_. This is called the `else` statement."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The previous example rewritten:",
+      "raw_source": "The previous example rewritten:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number = int(input(\"Please type in a number: \"))\n\nif number < 0:\n    print(\"The number is negative\")\nelse:\n    print(\"The number is positive or zero\")",
+      "raw_source": "```python\nnumber = int(input(\"Please type in a number: \"))\n\nif number < 0:\n    print(\"The number is negative\")\nelse:\n    print(\"The number is positive or zero\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When using an if-else construction, one and exactly one of the branches will always be executed. The following picture illustrates the structure:",
+      "raw_source": "When using an if-else construction, one and exactly one of the branches will always be executed. The following picture illustrates the structure:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "2_2_1.png"
+      },
+      "raw_source": "<img src=\"2_2_1.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "NB: there can never be an else branch without an if branch before it. The if-else construction as a whole forms a single _conditional statement_.",
+      "raw_source": "NB: there can never be an else branch without an if branch before it. The if-else construction as a whole forms a single _conditional statement_."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following example checks whether a number given by the user is even or not. Parity can be checked with the modulo operator `%`, which produces the remainder of an integer division operation. When divided by two, if the remainder is zero, the number is even. Otherwise the number is odd.",
+      "raw_source": "The following example checks whether a number given by the user is even or not. Parity can be checked with the modulo operator `%`, which produces the remainder of an integer division operation. When divided by two, if the remainder is zero, the number is even. Otherwise the number is odd."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number = int(input(\"Please type in a number: \"))\n\nif number % 2 == 0:\n    print(\"The number is even\")\nelse:\n    print(\"The number is odd\")",
+      "raw_source": "```python\nnumber = int(input(\"Please type in a number: \"))\n\nif number % 2 == 0:\n    print(\"The number is even\")\nelse:\n    print(\"The number is odd\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in a number: **5**\nThe number is odd",
+      "raw_source": "<sample-output>\n\nPlease type in a number: **5**\nThe number is odd\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Another example with string comparison:",
+      "raw_source": "Another example with string comparison:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "correct = \"kittycat\"\npassword = input(\"Please type in the password: \")\n\nif password == correct:\n    print(\"Welcome\")\nelse:\n    print(\"No admittance\")",
+      "raw_source": "```python\ncorrect = \"kittycat\"\npassword = input(\"Please type in the password: \")\n\nif password == correct:\n    print(\"Welcome\")\nelse:\n    print(\"No admittance\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "With two different inputs this should print out:",
+      "raw_source": "With two different inputs this should print out:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in the password: **kittycat**\nWelcome",
+      "raw_source": "<sample-output>\n\nPlease type in the password: **kittycat**\nWelcome\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in the password: **monkey**\nNo admittance",
+      "raw_source": "<sample-output>\n\nPlease type in the password: **monkey**\nNo admittance\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Age of maturity",
+        "tmcname": "part02-04_age_of_maturity",
+        "height": "400px"
+      },
+      "inner_content": "Please write a program which asks the user for their age. The program should then print out a message based on whether the user is of age or not, using 18 as the age of maturity.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nHow old are you? **12**\nYou are not of age!\n\n</sample-output>\n\n\n<sample-output>\n\nHow old are you? **32**\nYou are of age!\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Age of maturity\" tmcname=\"part02-04_age_of_maturity\" height=\"400px\">\n\nPlease write a program which asks the user for their age. The program should then print out a message based on whether the user is of age or not, using 18 as the age of maturity.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nHow old are you? **12**\nYou are not of age!\n\n</sample-output>\n\n\n<sample-output>\n\nHow old are you? **32**\nYou are of age!\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Alternative branches using the elif statement",
+      "raw_source": "## Alternative branches using the elif statement"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Often there are more than two options the program should account for. For example, the result of a football match could go three ways: home wins, away wins, or there is a tie.",
+      "raw_source": "Often there are more than two options the program should account for. For example, the result of a football match could go three ways: home wins, away wins, or there is a tie."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A conditional statement can be added to with an `elif` branch. It is short for the words \"else if\", which means the branch will contain an alternative to the original condition. Importantly, an `elif` statement is executed only if none of the preceding branches is executed.",
+      "raw_source": "A conditional statement can be added to with an `elif` branch. It is short for the words \"else if\", which means the branch will contain an alternative to the original condition. Importantly, an `elif` statement is executed only if none of the preceding branches is executed."
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "2_2_2.png"
+      },
+      "raw_source": "<img src=\"2_2_2.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's have a look at a program which determines the winner of a match:",
+      "raw_source": "Let's have a look at a program which determines the winner of a match:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "goals_home = int(input(\"Home goals scored: \"))\ngoals_away = int(input(\"Away goals scored: \"))\n\nif goals_home > goals_away:\n    print(\"The home team won!\")\nelif goals_away > goals_home:\n    print(\"The away team won!\")\nelse:\n    print(\"It's a tie!\")",
+      "raw_source": "```python\ngoals_home = int(input(\"Home goals scored: \"))\ngoals_away = int(input(\"Away goals scored: \"))\n\nif goals_home > goals_away:\n    print(\"The home team won!\")\nelif goals_away > goals_home:\n    print(\"The away team won!\")\nelse:\n    print(\"It's a tie!\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This program could print out three different statements given different inputs:",
+      "raw_source": "This program could print out three different statements given different inputs:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Home goals scored: **4**\nAway goals scored: **2**\nThe home team won!",
+      "raw_source": "<sample-output>\n\nHome goals scored: **4**\nAway goals scored: **2**\nThe home team won!\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Home goals scored: **0**\nAway goals scored: **6**\nThe away team won!",
+      "raw_source": "<sample-output>\n\nHome goals scored: **0**\nAway goals scored: **6**\nThe away team won!\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Home goals scored: **3**\nAway goals scored: **3**\nIt's a tie!",
+      "raw_source": "<sample-output>\n\nHome goals scored: **3**\nAway goals scored: **3**\nIt's a tie!\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the above example there are three alternative branches, exactly one of which will always be executed. However, there is no limit to the number of `elif` branches a conditional statement can contain, and the `else` branch is not mandatory.",
+      "raw_source": "In the above example there are three alternative branches, exactly one of which will always be executed. However, there is no limit to the number of `elif` branches a conditional statement can contain, and the `else` branch is not mandatory."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This is also a valid conditional statement:",
+      "raw_source": "This is also a valid conditional statement:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "print(\"Holiday calendar\")\ndate = input(\"What is the date today? \")\n\nif date == \"Dec 26\":\n    print(\"It's Boxing Day\")\nelif date == \"Dec 31\":\n    print(\"It's Hogmanay\")\nelif date == \"Jan 1\":\n    print(\"It's New Year's Day\")\n\nprint(\"Thanks and bye.\")",
+      "raw_source": "```python\nprint(\"Holiday calendar\")\ndate = input(\"What is the date today? \")\n\nif date == \"Dec 26\":\n    print(\"It's Boxing Day\")\nelif date == \"Dec 31\":\n    print(\"It's Hogmanay\")\nelif date == \"Jan 1\":\n    print(\"It's New Year's Day\")\n\nprint(\"Thanks and bye.\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Holiday calendar\nWhat is the date today? **Dec 31**\nIt's Hogmanay\nThanks and bye.",
+      "raw_source": "<sample-output>\n\nHoliday calendar\nWhat is the date today? **Dec 31**\nIt's Hogmanay\nThanks and bye.\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Notice the previous example has no `else` branch. If the user inputs a date which is not mentioned in any of the `if` or `elif` branches, or inputs a date in a different format, none of the three branches of the conditional statement is executed.",
+      "raw_source": "Notice the previous example has no `else` branch. If the user inputs a date which is not mentioned in any of the `if` or `elif` branches, or inputs a date in a different format, none of the three branches of the conditional statement is executed."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Holiday calendar\nWhat is the date today? **Dec 25**\nThanks and bye.",
+      "raw_source": "<sample-output>\n\nHoliday calendar\nWhat is the date today? **Dec 25**\nThanks and bye.\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Greater than or equal to",
+        "tmcname": "part02-05_greater_or_equal",
+        "height": "400px"
+      },
+      "inner_content": "Please write a program which asks for two integer numbers. The program should then print out whichever is greater. If the numbers are equal, the program should print a different message.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nPlease type in the first number: **5**\nPlease type in another number: **3**\nThe greater number was: 5\n\n</sample-output>\n\n<sample-output>\n\nPlease type in the first number: **5**\nPlease type in another number: **8**\nThe greater number was: 8\n\n</sample-output>\n\n<sample-output>\n\nPlease type in the first number: **5**\nPlease type in another number: **5**\nThe numbers are equal!\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Greater than or equal to\" tmcname=\"part02-05_greater_or_equal\"  height=\"400px\">\n\nPlease write a program which asks for two integer numbers. The program should then print out whichever is greater. If the numbers are equal, the program should print a different message.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nPlease type in the first number: **5**\nPlease type in another number: **3**\nThe greater number was: 5\n\n</sample-output>\n\n<sample-output>\n\nPlease type in the first number: **5**\nPlease type in another number: **8**\nThe greater number was: 8\n\n</sample-output>\n\n<sample-output>\n\nPlease type in the first number: **5**\nPlease type in another number: **5**\nThe numbers are equal!\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "The elder",
+        "tmcname": "part02-06_elder",
+        "height": "550px"
+      },
+      "inner_content": "Please write a program which asks for the names and ages of two persons. The program should then print out the name of the elder.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nPerson 1:\nName: **Alan**\nAge: **26**\nPerson 2:\nName: **Ada**\nAge: **27**\nThe elder is Ada\n\n</sample-output>\n\n<sample-output>\n\nPerson 1:\nName: **Bill**\nAge: **1**\nPerson 2:\nName: **Jean**\nAge: **1**\nBill and Jean are the same age\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"The elder\" tmcname=\"part02-06_elder\" height=\"550px\">\n\nPlease write a program which asks for the names and ages of two persons. The program should then print out the name of the elder.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nPerson 1:\nName: **Alan**\nAge: **26**\nPerson 2:\nName: **Ada**\nAge: **27**\nThe elder is Ada\n\n</sample-output>\n\n<sample-output>\n\nPerson 1:\nName: **Bill**\nAge: **1**\nPerson 2:\nName: **Jean**\nAge: **1**\nBill and Jean are the same age\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Alphabetically last",
+        "tmcname": "part02-07_alphabetically_last",
+        "height": "500px"
+      },
+      "inner_content": "Python comparison operators can also be used on strings. String `a` is smaller than string `b` if it comes alphabetically before `b`. Notice however that the comparison is only reliable if\n- the characters compared are of the same case, i.e. both UPPERCASE or both lowercase\n- only the standard English alphabet of a to z, or A to Z, is used.\n\nPlease write a program which asks the user for two words. The program should then print out whichever of the two comes alphabetically last.\n\nYou can assume all words will be typed in lowercase entirely.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nPlease type in the 1st word: **car**\nPlease type in the 2nd word: **scooter**\nscooter comes alphabetically last.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in the 1st word: **zorro**\nPlease type in the 2nd word: **batman**\nzorro comes alphabetically last.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in the 1st word: **python**\nPlease type in the 2nd word: **python**\nYou gave the same word twice.\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Alphabetically last\" tmcname=\"part02-07_alphabetically_last\"  height=\"500px\">\n\nPython comparison operators can also be used on strings. String `a` is smaller than string `b` if it comes alphabetically before `b`. Notice however that the comparison is only reliable if\n- the characters compared are of the same case, i.e. both UPPERCASE or both lowercase\n- only the standard English alphabet of a to z, or A to Z, is used.\n\nPlease write a program which asks the user for two words. The program should then print out whichever of the two comes alphabetically last.\n\nYou can assume all words will be typed in lowercase entirely.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nPlease type in the 1st word: **car**\nPlease type in the 2nd word: **scooter**\nscooter comes alphabetically last.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in the 1st word: **zorro**\nPlease type in the 2nd word: **batman**\nzorro comes alphabetically last.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in the 1st word: **python**\nPlease type in the 2nd word: **python**\nYou gave the same word twice.\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!--",
+      "raw_source": "<!--"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A quiz to review the contents of this section:",
+      "raw_source": "A quiz to review the contents of this section:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "82f644fe-5d89-5153-842a-11d5d11bc059"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"82f644fe-5d89-5153-842a-11d5d11bc059\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    }
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "id": "part02-3-combining-conditions",
+  "part": 2,
+  "part_slug": "part-2",
+  "slug": "3-combining-conditions",
+  "is_part_index": false,
+  "title_original": "Combining conditions",
+  "path": "/part-2/3-combining-conditions",
+  "source_path": "data/part-2/3-combining-conditions.md",
+  "source_hash": "cda523ae65162a9b22c9fd6283b83389686783c0d208ce0e4d2a63b0ab4323ca",
+  "frontmatter": {
+    "path": "/part-2/3-combining-conditions",
+    "title": "Combining conditions",
+    "hidden": false
+  },
+  "chunks_count": 40,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know how to use the operators `and`, `or` and `not` in conditions\n- You will be able to write nested conditionals",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know how to use the operators `and`, `or` and `not` in conditions\n- You will be able to write nested conditionals\n\n</text-box>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Logical operators",
+      "raw_source": "## Logical operators"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You can combine conditions with the logical operators `and` and `or`. The operator `and` specifies that all the given conditions must be true at the same time. The operator `or` specifies that at least one of the given conditions must be true.",
+      "raw_source": "You can combine conditions with the logical operators `and` and `or`. The operator `and` specifies that all the given conditions must be true at the same time. The operator `or` specifies that at least one of the given conditions must be true."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "For example, the condition `number >= 5 and number <= 8` determines that `number` must simultaneously be at least 5 and at most 8. That is, it must be between 5 and 8.",
+      "raw_source": "For example, the condition `number >= 5 and number <= 8` determines that `number` must simultaneously be at least 5 and at most 8. That is, it must be between 5 and 8."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number = int(input(\"Please type in a number: \"))\nif number >= 5 and number <= 8:\n    print(\"The number is between 5 and 8\")",
+      "raw_source": "```python\nnumber = int(input(\"Please type in a number: \"))\nif number >= 5 and number <= 8:\n    print(\"The number is between 5 and 8\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Meanwhile, the condition `number < 5 or number > 8` determines that `number` must be either less than 5 or greater than 8. That is, it must not be within the range of 5 to 8.",
+      "raw_source": "Meanwhile, the condition `number < 5 or number > 8` determines that `number` must be either less than 5 or greater than 8. That is, it must not be within the range of 5 to 8."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number = int(input(\"Please type in a number: \"))\nif number < 5 or number > 8:\n    print(\"The number is not within the range of 5 to 8\")",
+      "raw_source": "```python\nnumber = int(input(\"Please type in a number: \"))\nif number < 5 or number > 8:\n    print(\"The number is not within the range of 5 to 8\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following truth table contains the behaviour of these operators in different situations:",
+      "raw_source": "The following truth table contains the behaviour of these operators in different situations:"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "a     | b     | a and b | a or b |\n:----:|:-----:|:-------:|:------:|\nFalse | False | False   | False  |\nTrue  | False | False   | True   |\nFalse | True  | False   | True   |\nTrue  | True  | True    | True   |",
+      "raw_source": "a     | b     | a and b | a or b |\n:----:|:-----:|:-------:|:------:|\nFalse | False | False   | False  |\nTrue  | False | False   | True   |\nFalse | True  | False   | True   |\nTrue  | True  | True    | True   |"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Sometimes it is necessary to know if something is _not_ true. The operator `not` negates a condition:",
+      "raw_source": "Sometimes it is necessary to know if something is _not_ true. The operator `not` negates a condition:"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "a     | not a\n:----:|:----:\nTrue  | False\nFalse | True",
+      "raw_source": "a     | not a\n:----:|:----:\nTrue  | False\nFalse | True"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The above example with the range of 5 to 8 _excluded_ could also be programmed like this:",
+      "raw_source": "The above example with the range of 5 to 8 _excluded_ could also be programmed like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number = int(input(\"Please type in a number: \"))\nif not (number >= 5 and number <= 8):\n    print(\"The number is not within the range of 5 to 8\")",
+      "raw_source": "```python\nnumber = int(input(\"Please type in a number: \"))\nif not (number >= 5 and number <= 8):\n    print(\"The number is not within the range of 5 to 8\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Especially in programming, logical operators are often called _Boolean operators_.",
+      "raw_source": "Especially in programming, logical operators are often called _Boolean operators_."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "hint",
+        "name": "Simplified combined conditions"
+      },
+      "inner_content": "The condition `x >= a and x <= b` is a very common way of checking whether the number `x` falls within the range of `a` to `b`. An expression with this structure works the same way in most programming languages.\n\nPython also allows a simplified notation for combining conditions: `a <= x <= b` achieves the same result as the longer version using `and`. This shorter notation might be more familiar from mathematics, but it is not very widely used in Python programming, possibly because very few other programming languages have a similar shorthand.",
+      "raw_source": "<text-box variant='hint' name=\"Simplified combined conditions\">\n\nThe condition `x >= a and x <= b` is a very common way of checking whether the number `x` falls within the range of `a` to `b`. An expression with this structure works the same way in most programming languages.\n\nPython also allows a simplified notation for combining conditions: `a <= x <= b` achieves the same result as the longer version using `and`. This shorter notation might be more familiar from mathematics, but it is not very widely used in Python programming, possibly because very few other programming languages have a similar shorthand.\n\n</text-box>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Combining and chaining conditions",
+      "raw_source": "## Combining and chaining conditions"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following program asks the user to type in four numbers. It then works out which of the four is the greatest, with the help of some conditions:",
+      "raw_source": "The following program asks the user to type in four numbers. It then works out which of the four is the greatest, with the help of some conditions:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "n1 = int(input(\"Number 1: \"))\nn2 = int(input(\"Number 2: \"))\nn3 = int(input(\"Number 3: \"))\nn4 = int(input(\"Number 4: \"))\n\nif n1 > n2 and n1 > n3 and n1 > n4:\n    greatest = n1\nelif n2 > n3 and n2 > n4:\n    greatest = n2\nelif n3 > n4:\n    greatest = n3\nelse:\n    greatest = n4\n\nprint(f\" {greatest} is the greatest of the numbers.\")",
+      "raw_source": "```python\nn1 = int(input(\"Number 1: \"))\nn2 = int(input(\"Number 2: \"))\nn3 = int(input(\"Number 3: \"))\nn4 = int(input(\"Number 4: \"))\n\nif n1 > n2 and n1 > n3 and n1 > n4:\n    greatest = n1\nelif n2 > n3 and n2 > n4:\n    greatest = n2\nelif n3 > n4:\n    greatest = n3\nelse:\n    greatest = n4\n\nprint(f\" {greatest} is the greatest of the numbers.\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Number 1: **2**\nNumber 2: **4**\nNumber 3: **1**\nNumber 4: **1**\n4 is the greatest of the numbers.",
+      "raw_source": "<sample-output>\n\nNumber 1: **2**\nNumber 2: **4**\nNumber 3: **1**\nNumber 4: **1**\n4 is the greatest of the numbers.\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the above example the first condition `n1 > n2 and n1 > n3 and n1 > n4` is true only if all three conditions within are true.",
+      "raw_source": "In the above example the first condition `n1 > n2 and n1 > n3 and n1 > n4` is true only if all three conditions within are true."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Age check",
+        "tmcname": "part02-08_age_check"
+      },
+      "inner_content": "Please write a program which asks for the user's age. If the age is not plausible, that is, it is under 5 or something that can't be an actual human age, the program should print out a comment.\n\nHave a look at the examples of expected behaviour below to figure out which comment is applicable in each case.\n\n<sample-output>\n\nWhat is your age? **13**\nOk, you're 13 years old\n\n</sample-output>\n\n<sample-output>\n\nWhat is your age? **2**\nI suspect you can't write quite yet...\n\n</sample-output>\n\n<sample-output>\n\nWhat is your age? **-4**\nThat must be a mistake\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Age check\" tmcname=\"part02-08_age_check\">\n\nPlease write a program which asks for the user's age. If the age is not plausible, that is, it is under 5 or something that can't be an actual human age, the program should print out a comment.\n\nHave a look at the examples of expected behaviour below to figure out which comment is applicable in each case.\n\n<sample-output>\n\nWhat is your age? **13**\nOk, you're 13 years old\n\n</sample-output>\n\n<sample-output>\n\nWhat is your age? **2**\nI suspect you can't write quite yet...\n\n</sample-output>\n\n<sample-output>\n\nWhat is your age? **-4**\nThat must be a mistake\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Nephews",
+        "tmcname": "part02-09_nephews"
+      },
+      "inner_content": "Please write a program which asks for the user's name. If the name is Huey, Dewey or Louie, the program should recognise the user as one of Donald Duck's nephews.\n\nIn a similar fashion, if the name is Morty or Ferdie, the program should recognise the user as one of Mickey Mouse's nephews.\n\nSome examples:\n\n<sample-output>\n\nPlease type in your name: **Morty**\nI think you might be one of Mickey Mouse's nephews.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in your name: **Huey**\nI think you might be one of Donald Duck's nephews.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in your name: **Ken**\nYou're not a nephew of any character I know of.\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Nephews\" tmcname=\"part02-09_nephews\">\n\nPlease write a program which asks for the user's name. If the name is Huey, Dewey or Louie, the program should recognise the user as one of Donald Duck's nephews.\n\nIn a similar fashion, if the name is Morty or Ferdie, the program should recognise the user as one of Mickey Mouse's nephews.\n\nSome examples:\n\n<sample-output>\n\nPlease type in your name: **Morty**\nI think you might be one of Mickey Mouse's nephews.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in your name: **Huey**\nI think you might be one of Donald Duck's nephews.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in your name: **Ken**\nYou're not a nephew of any character I know of.\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Grades and points",
+        "tmcname": "part02-10_grades_and_points"
+      },
+      "inner_content": "The table below outlines the grade boundaries on a certain university course. Please write a program which asks for the amount of points received and then prints out the grade attained according to the table.\n\npoints   | grade\n:--:|:----:\n< 0 |  impossible!\n0-49 | fail\n50-59 | 1\n60-69 | 2\n70-79 | 3\n80-89| 4\n90-100 | 5\n\\> 100 |  impossible!\n\nSome examples:\n\n<sample-output>\n\nHow many points [0-100]: **37**\nGrade: fail\n\n</sample-output>\n\n<sample-output>\n\nHow many points [0-100]: **76**\nGrade: 3\n\n</sample-output>\n\n<sample-output>\n\nHow many points [0-100]: **-3**\nGrade: impossible!\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Grades and points\" tmcname=\"part02-10_grades_and_points\">\n\nThe table below outlines the grade boundaries on a certain university course. Please write a program which asks for the amount of points received and then prints out the grade attained according to the table.\n\npoints   | grade\n:--:|:----:\n< 0 |  impossible!\n0-49 | fail\n50-59 | 1\n60-69 | 2\n70-79 | 3\n80-89| 4\n90-100 | 5\n\\> 100 |  impossible!\n\nSome examples:\n\n<sample-output>\n\nHow many points [0-100]: **37**\nGrade: fail\n\n</sample-output>\n\n<sample-output>\n\nHow many points [0-100]: **76**\nGrade: 3\n\n</sample-output>\n\n<sample-output>\n\nHow many points [0-100]: **-3**\nGrade: impossible!\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "FizzBuzz",
+        "tmcname": "part02-11_fizzbuzz"
+      },
+      "inner_content": "Please write a program which asks the user for an integer number. If the number is divisible by three, the program should print out Fizz. If the number is divisible by five, the program should print out Buzz. If the number is divisible by both three and five, the program should print out FizzBuzz.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nNumber: **9**\nFizz\n\n</sample-output>\n\n<sample-output>\n\nNumber: **7**\n\n</sample-output>\n\n<sample-output>\n\nNumber: **20**\nBuzz\n\n</sample-output>\n\n<sample-output>\n\nNumber: **45**\nFizzBuzz\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"FizzBuzz\" tmcname=\"part02-11_fizzbuzz\">\n\nPlease write a program which asks the user for an integer number. If the number is divisible by three, the program should print out Fizz. If the number is divisible by five, the program should print out Buzz. If the number is divisible by both three and five, the program should print out FizzBuzz.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nNumber: **9**\nFizz\n\n</sample-output>\n\n<sample-output>\n\nNumber: **7**\n\n</sample-output>\n\n<sample-output>\n\nNumber: **20**\nBuzz\n\n</sample-output>\n\n<sample-output>\n\nNumber: **45**\nFizzBuzz\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Nested conditionals",
+      "raw_source": "## Nested conditionals"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Conditional statements can also be nested within other conditional statements. For example, the following program checks whether a number is above zero, and then whether it is odd or even:",
+      "raw_source": "Conditional statements can also be nested within other conditional statements. For example, the following program checks whether a number is above zero, and then whether it is odd or even:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number = int(input(\"Please type in a number: \"))\n\nif number > 0:\n    if number % 2 == 0:\n        print(\"The number is even\")\n    else:\n        print(\"The number is odd\")\nelse:\n    print(\"The number is negative or zero\")",
+      "raw_source": "```python\nnumber = int(input(\"Please type in a number: \"))\n\nif number > 0:\n    if number % 2 == 0:\n        print(\"The number is even\")\n    else:\n        print(\"The number is odd\")\nelse:\n    print(\"The number is negative or zero\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Some examples of how this program behaves:",
+      "raw_source": "Some examples of how this program behaves:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in a number: **3**\nThe number is odd\n\nPlease type in a number: **18**\nThe number is even\n\nPlease type in a number: **-4**\nThe number is negative or zero",
+      "raw_source": "<sample-output>\n\nPlease type in a number: **3**\nThe number is odd\n\nPlease type in a number: **18**\nThe number is even\n\nPlease type in a number: **-4**\nThe number is negative or zero\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "With nested conditional statements it is crucial to get the indentations right. Indentations determine which branches are linked together. For example, an `if` branch and an `else` branch with the same amount of whitespace are determined to be branches of the same conditional statement.",
+      "raw_source": "With nested conditional statements it is crucial to get the indentations right. Indentations determine which branches are linked together. For example, an `if` branch and an `else` branch with the same amount of whitespace are determined to be branches of the same conditional statement."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The same result can often be achieved using either nested conditional statements or conditions combined with logical operators. The example below is functionally no different from the example above, in the sense that it will print out the exactly same things with the same inputs:",
+      "raw_source": "The same result can often be achieved using either nested conditional statements or conditions combined with logical operators. The example below is functionally no different from the example above, in the sense that it will print out the exactly same things with the same inputs:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number = int(input(\"Please type in a number: \"))\n\nif number > 0 and number % 2 == 0:\n    print(\"The number is even\")\nelif number > 0 and number % 2 != 0:\n    print(\"The number is odd\")\nelse:\n    print(\"The number is negative or zero\")",
+      "raw_source": "```python\nnumber = int(input(\"Please type in a number: \"))\n\nif number > 0 and number % 2 == 0:\n    print(\"The number is even\")\nelif number > 0 and number % 2 != 0:\n    print(\"The number is odd\")\nelse:\n    print(\"The number is negative or zero\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Neither approach is intrinsically better than the other, but in different situations one or the other may seem more logical. In this particular example most people tend to find the first version with nesting to be more intuitive.",
+      "raw_source": "Neither approach is intrinsically better than the other, but in different situations one or the other may seem more logical. In this particular example most people tend to find the first version with nesting to be more intuitive."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Leap year",
+        "tmcname": "part02-12_leap_year"
+      },
+      "inner_content": "Generally, any year that is divisible by four is a leap year. However, if the year is additionally divisible by 100, it is a leap year only if it also divisible by 400.\n\nPlease write a program which asks the user for a year, and then prints out whether that year is a leap year or not.\n\nSome examples:\n\n<sample-output>\n\nPlease type in a year: **2011**\nThat year is not a leap year.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a year: **2020**\nThat year is a leap year.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a year: **1800**\nThat year is not a leap year.\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Leap year\" tmcname=\"part02-12_leap_year\">\n\nGenerally, any year that is divisible by four is a leap year. However, if the year is additionally divisible by 100, it is a leap year only if it also divisible by 400.\n\nPlease write a program which asks the user for a year, and then prints out whether that year is a leap year or not.\n\nSome examples:\n\n<sample-output>\n\nPlease type in a year: **2011**\nThat year is not a leap year.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a year: **2020**\nThat year is a leap year.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a year: **1800**\nThat year is not a leap year.\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Alphabetically in the middle",
+        "tmcname": "part02-13_alphabetically_in_the_middle"
+      },
+      "inner_content": "Please write a program which asks the user for three letters. The program should then print out whichever of the three letters would be in the middle if the letters were in alphabetical order.\n\nYou may assume the letters will be either all uppercase, or all lowercase.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\n1st letter: x\n2nd letter: c\n3rd letter: p\nThe letter in the middle is p\n\n</sample-output>\n\n<sample-output>\n\n1st letter: C\n2nd letter: B\n3rd letter: A\nThe letter in the middle is B\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Alphabetically in the middle\" tmcname=\"part02-13_alphabetically_in_the_middle\">\n\nPlease write a program which asks the user for three letters. The program should then print out whichever of the three letters would be in the middle if the letters were in alphabetical order.\n\nYou may assume the letters will be either all uppercase, or all lowercase.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\n1st letter: x\n2nd letter: c\n3rd letter: p\nThe letter in the middle is p\n\n</sample-output>\n\n<sample-output>\n\n1st letter: C\n2nd letter: B\n3rd letter: A\nThe letter in the middle is B\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Gift tax calculator",
+        "tmcname": "part02-14_gift_tax_calculator",
+        "height": "500px"
+      },
+      "inner_content": "Some say paying taxes makes Finns happy, so let's see if the secret of happiness lies in one of the taxes set out in Finnish tax code. \n\n[According to the Finnish Tax Administration](https://www.vero.fi/en/individuals/property/gifts/), a gift is a transfer of property to another person against no compensation or payment. If the total value of the gifts you receive from the same donor in the course of 3 years is €5,000 or more, you must pay gift tax.\n\nWhen the gift is received from a close relative or a family member, the amount of tax to be paid is determined by the following table, which is also available on [this website](https://www.vero.fi/en/individuals/property/gifts/gift-tax-calculator/):\n\nValue of gift | Tax at the lower limit | Tax rate for the exceeding part (%)\n:------------:|:----------------------:|:-----------------------------------:\n5 000 — 25 000 |        100     |       8\n25 000 — 55 000\t|       1 700   |\t10\n55 000 — 200 000 |      4 700\t|       12\n200 000 — 1 000 000 |   22 100  |\t15\n1 000 000 —\t|       142 100 |\t17\n\nSo, for a gift of 6 000 euros the recipient pays a tax of 180 euros (100 + (6 000 - 5 000) * 0.08). Similarly, for a gift of 75 000 euros the recipient pays a tax of 7 100 euros (4 700 + (75 000 - 55 000) * 0.12).\n\nPlease write a program which calculates the correct amount of tax for a gift from a close relative. Have a look at the examples below to see what is expected. Notice the lack of thousands separators in the input values - you may assume there will be no spaces or other thousands separators in the numbers in the input, as we haven't yet covered dealing with these.\n\n<sample-output>\n\nValue of gift: **3500**\nNo tax!\n\n</sample-output>\n\n<sample-output>\n\nValue of gift: **5000**\nAmount of tax: 100.0 euros\n\n</sample-output>\n\n<sample-output>\n\nValue of gift: **27500**\nAmount of tax: 1950.0 euros\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Gift tax calculator\" tmcname=\"part02-14_gift_tax_calculator\"  height=\"500px\">\n\nSome say paying taxes makes Finns happy, so let's see if the secret of happiness lies in one of the taxes set out in Finnish tax code. \n\n[According to the Finnish Tax Administration](https://www.vero.fi/en/individuals/property/gifts/), a gift is a transfer of property to another person against no compensation or payment. If the total value of the gifts you receive from the same donor in the course of 3 years is €5,000 or more, you must pay gift tax.\n\nWhen the gift is received from a close relative or a family member, the amount of tax to be paid is determined by the following table, which is also available on [this website](https://www.vero.fi/en/individuals/property/gifts/gift-tax-calculator/):\n\nValue of gift | Tax at the lower limit | Tax rate for the exceeding part (%)\n:------------:|:----------------------:|:-----------------------------------:\n5 000 — 25 000 |        100     |       8\n25 000 — 55 000\t|       1 700   |\t10\n55 000 — 200 000 |      4 700\t|       12\n200 000 — 1 000 000 |   22 100  |\t15\n1 000 000 —\t|       142 100 |\t17\n\nSo, for a gift of 6 000 euros the recipient pays a tax of 180 euros (100 + (6 000 - 5 000) * 0.08). Similarly, for a gift of 75 000 euros the recipient pays a tax of 7 100 euros (4 700 + (75 000 - 55 000) * 0.12).\n\nPlease write a program which calculates the correct amount of tax for a gift from a close relative. Have a look at the examples below to see what is expected. Notice the lack of thousands separators in the input values - you may assume there will be no spaces or other thousands separators in the numbers in the input, as we haven't yet covered dealing with these.\n\n<sample-output>\n\nValue of gift: **3500**\nNo tax!\n\n</sample-output>\n\n<sample-output>\n\nValue of gift: **5000**\nAmount of tax: 100.0 euros\n\n</sample-output>\n\n<sample-output>\n\nValue of gift: **27500**\nAmount of tax: 1950.0 euros\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!--",
+      "raw_source": "<!--"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A quiz to review the contents of this section:",
+      "raw_source": "A quiz to review the contents of this section:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "6bfd7e0d-2998-5697-80dc-418703fabbbf"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"6bfd7e0d-2998-5697-80dc-418703fabbbf\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    }
+  ]
+}

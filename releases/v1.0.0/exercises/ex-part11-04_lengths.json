@@ -1,0 +1,16 @@
+{
+  "id": "ex-part11-04_lengths",
+  "lesson_id": "part11-1-list-comprehensions",
+  "part": 11,
+  "tmc_name": "part11-04_lengths",
+  "title_original": "Lengths",
+  "title_vi": "Độ dài",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `lengths(lists: list)` which takes a list containing lists of integers as its argument. The function should return a new list, containing the lengths of the lists within the argument list.\n\nThe function should use a list comprehension to achieve this. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nlists = [[1,2,3,4,5], [324, -1, 31, 7],[]]\nprint(lengths(lists))\n```\n\n<sample-output>\n\n[5, 4, 0]\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `lengths(lists: list)` lấy danh sách chứa danh sách các số nguyên làm đối số. Hàm sẽ trả về một danh sách mới, chứa độ dài của danh sách trong danh sách đối số.\n\nHàm nên sử dụng khả năng hiểu danh sách để đạt được điều này. Độ dài tối đa của hàm là hai dòng mã, bao gồm dòng tiêu đề bắt đầu bằng từ khóa `def`.\n\nChức năng này sẽ hoạt động như sau:\n\n```python\nlists = [[1,2,3,4,5], [324, -1, 31, 7],[]]\nprint(lengths(lists))\n```\n\n<sample-output>\n\n[5, 4, 0]\n\n</sample-output>",
+  "starter_code": "lists = [[1,2,3,4,5], [324, -1, 31, 7],[]]\nprint(lengths(lists))",
+  "grading_data_available": false,
+  "source_hash": "669ff453a5f13baba37b2db244c74089bab76b7fd031caa65f994e417f529e4a",
+  "order": 29
+}

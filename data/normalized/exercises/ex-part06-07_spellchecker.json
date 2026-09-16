@@ -1,0 +1,16 @@
+{
+  "id": "ex-part06-07_spellchecker",
+  "lesson_id": "part06-1-reading-files",
+  "part": 6,
+  "tmc_name": "part06-07_spellchecker",
+  "title_original": "Spell checker",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user to type in some text. Your program should then perform a spell check, and print out feedback to the user, so that all misspelled words have stars around them. Please see the two examples below:\n\n<sample-output>\n\nWrite text: **We use ptython to make a spell checker**\n<pre>\nWe use *ptython* to make a spell checker\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nWrite text: **This is acually a good and usefull program**\n<pre>\nThis is *acually* good and *usefull* program\n</pre>\n\n</sample-output>\n\nThe case of the letters should be irrelevant to the functioning of your program.\n\nThe exercise template includes the file `wordlist.txt`, which contains all the words the spell checker should accept as correct.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.\n\n**NB2** If Visual Studio can't find the file and you have checked that there are no spelling errors, take a look at [these instructions](/part-6/1-reading-files#what-if-visual-studio-code-cannot-find-my-file).",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "0d76b236dacf28a1b3d42b4a36a5540c7da55351fadb1add3353c9b2e718df2b",
+  "order": 107
+}

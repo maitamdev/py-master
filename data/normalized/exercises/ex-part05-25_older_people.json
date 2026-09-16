@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-25_older_people",
+  "lesson_id": "part05-4-tuple",
+  "part": 5,
+  "tmc_name": "part05-25_older_people",
+  "title_original": "Older people",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "In this exercise we are handling tuples just like the ones described in the previous exercise.\n\nPlease write a function named `older_people(people: list, year: int)`, which selects all those people on the list who were born _before_ the year given as an argument. The function should return the names of these people in a new list.\n\nAn example of its use:\n\n```python\np1 = (\"Adam\", 1977)\np2 = (\"Ellen\", 1985)\np3 = (\"Mary\", 1953)\np4 = (\"Ernest\", 1997)\npeople = [p1, p2, p3, p4]\n\nolder = older_people(people, 1979)\nprint(older)\n```\n\n<sample-output>\n\n[ 'Adam', 'Mary' ]\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "p1 = (\"Adam\", 1977)\np2 = (\"Ellen\", 1985)\np3 = (\"Mary\", 1953)\np4 = (\"Ernest\", 1997)\npeople = [p1, p2, p3, p4]\n\nolder = older_people(people, 1979)\nprint(older)",
+  "grading_data_available": false,
+  "source_hash": "1acf35a337c80a49c1ffde18cbc5002977f64e950ac0bc6111e2e15160961a32",
+  "order": 14
+}

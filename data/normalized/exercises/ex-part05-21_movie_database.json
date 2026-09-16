@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-21_movie_database",
+  "lesson_id": "part05-3-dictionary",
+  "part": 5,
+  "tmc_name": "part05-21_movie_database",
+  "title_original": "Movie database",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `add_movie(database: list, name: str, director: str, year: int, runtime: int)`, which adds a new movie object into a movie database.\n\nThe database is a list, and each movie object in the list is a dictionary. The dictionary should contain the following keys.\n\n* name\n* director\n* year\n* runtime\n\nThe values attached to these keys are given as arguments to the function.\n\nAn example of its use:\n\n```python\ndatabase = []\nadd_movie(database, \"Gone with the Python\", \"Victor Pything\", 2017, 116)\nadd_movie(database, \"Pythons on a Plane\", \"Renny Pytholin\", 2001, 94)\nprint(database)\n```\n\n<sample-output>\n\n[{\"name\": \"Gone with the Python\", \"director\": \"Victor Pything\", \"year\": 2017, \"runtime\": 116}, {\"name\": \"Pythons on a Plane\", \"director\": \"Renny Pytholin\", \"year\": 2001, \"runtime\": 94}]\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "database = []\nadd_movie(database, \"Gone with the Python\", \"Victor Pything\", 2017, 116)\nadd_movie(database, \"Pythons on a Plane\", \"Renny Pytholin\", 2001, 94)\nprint(database)",
+  "grading_data_available": false,
+  "source_hash": "8de52f32695856851b5856984470560621faa4fb08c13a1798a9a6ee781bc2e0",
+  "order": 88
+}

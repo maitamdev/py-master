@@ -1,0 +1,16 @@
+{
+  "id": "ex-part11-10_cheaper_properties",
+  "lesson_id": "part11-2-more-comprehensions",
+  "part": 11,
+  "tmc_name": "part11-10_cheaper_properties",
+  "title_original": "Price difference of cheaper properties",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "This exercise is a slightly modified version of the exercise [Comparing properties](/part-9/1-objects-and-references#programming-exercise-comparing-properties) from part 9.\n\nPlease write a function named `cheaper_properties(properties: list, reference: RealProperty)` which takes a list of properties and a single RealProperty object as its arguments. The function should return a list containing only those properties in the original list which are cheaper than the reference property, along with the price difference. The items in the returned list should be tuples, where the first item is the property itself and the second is the difference in price.\n\nThe function should be implemented using list comprehensions. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe code for the `RealProperty` class is included in the exercise template and should not be changed.\n\nAn example of the function in action:\n\n```python\na1 = RealProperty(1, 16, 5500, \"Central studio\")\na2 = RealProperty(2, 38, 4200, \"Two bedrooms downtown\")\na3 = RealProperty(3, 78, 2500, \"Three bedrooms in the suburbs\")\na4 = RealProperty(6, 215, 500, \"Farm in the middle of nowhere\")\na5 = RealProperty(4, 105, 1700, \"Loft in a small town\")\na6 = RealProperty(25, 1200, 2500, \"Countryside mansion\")\n\nproperties = [a1, a2, a3, a4, a5, a6]\n\nprint(f\"cheaper options when compared to {a3.description}:\")\nfor item in cheaper_properties(properties, a3):\n    print(f\"{item[0].description:35} price difference {item[1]} euros\")\n```\n\n<sample-output>\n\ncheaper options when compared to Three bedrooms in the suburbs:\nCentral studio                                    price difference 107000 euros\nTwo bedrooms downtown               price difference 35400 euros\nFarm in the middle of nowhere       price difference 87500 euros\nLoft in a small town                           price difference 16500 euros\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "a1 = RealProperty(1, 16, 5500, \"Central studio\")\na2 = RealProperty(2, 38, 4200, \"Two bedrooms downtown\")\na3 = RealProperty(3, 78, 2500, \"Three bedrooms in the suburbs\")\na4 = RealProperty(6, 215, 500, \"Farm in the middle of nowhere\")\na5 = RealProperty(4, 105, 1700, \"Loft in a small town\")\na6 = RealProperty(25, 1200, 2500, \"Countryside mansion\")\n\nproperties = [a1, a2, a3, a4, a5, a6]\n\nprint(f\"cheaper options when compared to {a3.description}:\")\nfor item in cheaper_properties(properties, a3):\n    print(f\"{item[0].description:35} price difference {item[1]} euros\")",
+  "grading_data_available": false,
+  "source_hash": "e15ff34ad5124f271a7a7b960574603dbc1e957d18e19f187cad6360d951021b",
+  "order": 35
+}

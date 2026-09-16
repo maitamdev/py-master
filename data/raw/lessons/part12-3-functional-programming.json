@@ -1,0 +1,570 @@
+{
+  "id": "part12-3-functional-programming",
+  "part": 12,
+  "part_slug": "part-12",
+  "slug": "3-functional-programming",
+  "is_part_index": false,
+  "title_original": "Functional programming",
+  "path": "/part-12/3-functional-programming",
+  "source_path": "data/part-12/3-functional-programming.md",
+  "source_hash": "e0a7104b50a68ccfee5a1e063935c3d1f0026c3456a2f3ceef02574d1a084cfb",
+  "frontmatter": {
+    "path": "/part-12/3-functional-programming",
+    "title": "Functional programming",
+    "hidden": false
+  },
+  "chunks_count": 95,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know what functional programming means\n- You will be able to make use of the functions `map`, `reduce` and `filter` in your own programs",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know what functional programming means\n- You will be able to make use of the functions `map`, `reduce` and `filter` in your own programs\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Functional programming refers to a _programming paradigm_ which avoids changes in program state as much as possible. Variables are generally avoided. Instead, chains of function calls form the backbone of the program.",
+      "raw_source": "Functional programming refers to a _programming paradigm_ which avoids changes in program state as much as possible. Variables are generally avoided. Instead, chains of function calls form the backbone of the program."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Lambda expressions and different types of comprehensions are common techniques in the functional programming style, as they let you process data without storing it in variables, so that the state of the program does not change. For example, a lambda expression is for all intents and purposes a function, but we do not need to store a named reference to it anywhere.",
+      "raw_source": "Lambda expressions and different types of comprehensions are common techniques in the functional programming style, as they let you process data without storing it in variables, so that the state of the program does not change. For example, a lambda expression is for all intents and purposes a function, but we do not need to store a named reference to it anywhere."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As mentioned above, functional programming is a programming paradigm, or a style of programming. There are many different programming paradigms, and we've already come across some of them:",
+      "raw_source": "As mentioned above, functional programming is a programming paradigm, or a style of programming. There are many different programming paradigms, and we've already come across some of them:"
+    },
+    {
+      "raw_type": "list",
+      "content": "* imperative programming, where the program consists of a sequence of commands which is executed in order\n* procedural programming, where the program is grouped into procedures or sub-programs\n* object-oriented programming, where the program and its state is stored in objects defined in classes.",
+      "raw_source": "* imperative programming, where the program consists of a sequence of commands which is executed in order\n* procedural programming, where the program is grouped into procedures or sub-programs\n* object-oriented programming, where the program and its state is stored in objects defined in classes."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "There are differing opinions on the divisions between the different paradigms; for example, some maintain that imperative and procedural programming mean the same thing, while others place imperative programming as an umbrella term which covers both procedural and object-oriented programming. Th terminology and divisions are not that important, and neither is strictly sticking to one or the other paradigm, but it is important to understand that such different approaches exist, as they affect the choices programmers make.",
+      "raw_source": "There are differing opinions on the divisions between the different paradigms; for example, some maintain that imperative and procedural programming mean the same thing, while others place imperative programming as an umbrella term which covers both procedural and object-oriented programming. Th terminology and divisions are not that important, and neither is strictly sticking to one or the other paradigm, but it is important to understand that such different approaches exist, as they affect the choices programmers make."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Many programming languages are designed with one or the other programming paradigm in mind, but Python is a rather versatile programming language, and allows for following several different programming paradigms, even within a single program. This lets us choose the most efficient and clear method for solving each problem.",
+      "raw_source": "Many programming languages are designed with one or the other programming paradigm in mind, but Python is a rather versatile programming language, and allows for following several different programming paradigms, even within a single program. This lets us choose the most efficient and clear method for solving each problem."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's have a look at some functional programming tools provided by Python.",
+      "raw_source": "Let's have a look at some functional programming tools provided by Python."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "map",
+      "raw_source": "## map"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `map` function executes some operation on each item in an iterable series. This sounds a lot like the effect a comprehension has, but the syntax is different.",
+      "raw_source": "The `map` function executes some operation on each item in an iterable series. This sounds a lot like the effect a comprehension has, but the syntax is different."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's assume we have list of strings which we want to convert into a list of integers:",
+      "raw_source": "Let's assume we have list of strings which we want to convert into a list of integers:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "str_list = [\"123\",\"-10\", \"23\", \"98\", \"0\", \"-110\"]\n\nintegers = map(lambda x : int(x), str_list)\n\nprint(integers) # this tells us the type of object we're dealing with\n\nfor number in integers:\n    print(number)",
+      "raw_source": "```python\nstr_list = [\"123\",\"-10\", \"23\", \"98\", \"0\", \"-110\"]\n\nintegers = map(lambda x : int(x), str_list)\n\nprint(integers) # this tells us the type of object we're dealing with\n\nfor number in integers:\n    print(number)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "<map object at 0x0000021A4BFA9A90>\n123\n-10\n23\n98\n0\n-110",
+      "raw_source": "<sample-output>\n\n<map object at 0x0000021A4BFA9A90>\n123\n-10\n23\n98\n0\n-110\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The general syntax for the `map` function is",
+      "raw_source": "The general syntax for the `map` function is"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "`map(<function>, <series>)`",
+      "raw_source": "`map(<function>, <series>)`"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "where `function` is the operation we want to execute on each item in the `series`.",
+      "raw_source": "where `function` is the operation we want to execute on each item in the `series`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `map` function returns an object of type `map`, which is iterable, and can be converted into a list:",
+      "raw_source": "The `map` function returns an object of type `map`, which is iterable, and can be converted into a list:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def capitalize(my_string: str):\n    first = my_string[0]\n    first = first.upper()\n    return first + my_string[1:]\n\ntest_list = [\"first\", \"second\", \"third\", \"fourth\"]\n\ncapitalized = map(capitalize, test_list)\n\ncapitalized_list = list(capitalized)\nprint(capitalized_list)",
+      "raw_source": "```python\ndef capitalize(my_string: str):\n    first = my_string[0]\n    first = first.upper()\n    return first + my_string[1:]\n\ntest_list = [\"first\", \"second\", \"third\", \"fourth\"]\n\ncapitalized = map(capitalize, test_list)\n\ncapitalized_list = list(capitalized)\nprint(capitalized_list)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "['First', 'Second', 'Third', 'Fourth']",
+      "raw_source": "<sample-output>\n\n['First', 'Second', 'Third', 'Fourth']\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As you can see from the examples above, the `map` function accepts both an anonymous lambda function and a named function defined with the `def` keyword.",
+      "raw_source": "As you can see from the examples above, the `map` function accepts both an anonymous lambda function and a named function defined with the `def` keyword."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We could achieve the same result with a list comprehension:",
+      "raw_source": "We could achieve the same result with a list comprehension:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def capitalize(my_string: str):\n    first = my_string[0]\n    first = first.upper()\n    return first + my_string[1:]\n\ntest_list = [\"first\", \"second\", \"third\", \"fourth\"]\n\ncapitalized_list = [capitalize(item) for item in test_list]\nprint(capitalized_list)",
+      "raw_source": "```python\ndef capitalize(my_string: str):\n    first = my_string[0]\n    first = first.upper()\n    return first + my_string[1:]\n\ntest_list = [\"first\", \"second\", \"third\", \"fourth\"]\n\ncapitalized_list = [capitalize(item) for item in test_list]\nprint(capitalized_list)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "...or we could go through the original list with a `for` loop and save the processed items in a new list with the `append` method. Typically, in programming there are many different solutions to each problem. There are rarely any absolutely right or wrong answers. Knowing many different approaches helps you choose the most appropriate one for each situation, or one that best suits your own tastes.",
+      "raw_source": "...or we could go through the original list with a `for` loop and save the processed items in a new list with the `append` method. Typically, in programming there are many different solutions to each problem. There are rarely any absolutely right or wrong answers. Knowing many different approaches helps you choose the most appropriate one for each situation, or one that best suits your own tastes."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It is worth pointing out that the `map` function does not return a list, but an _iterator_ object of type map. An iterator behaves in many ways like a list, but there are exceptions, as can be seen in the following example:",
+      "raw_source": "It is worth pointing out that the `map` function does not return a list, but an _iterator_ object of type map. An iterator behaves in many ways like a list, but there are exceptions, as can be seen in the following example:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def capitalize(my_string: str):\n    first = my_string[0]\n    first = first.upper()\n    return first + my_string[1:]\n\ntest_list = [\"first\", \"second\", \"third\", \"fourth\"]\n\n# store the return value from the map function\ncapitalized = map(capitalize, test_list)\n\nfor word in capitalized:\n  print(word)\n\nprint(\"print the same again:\")\nfor word in capitalized:\n  print(word)",
+      "raw_source": "```python\ndef capitalize(my_string: str):\n    first = my_string[0]\n    first = first.upper()\n    return first + my_string[1:]\n\ntest_list = [\"first\", \"second\", \"third\", \"fourth\"]\n\n# store the return value from the map function\ncapitalized = map(capitalize, test_list)\n\nfor word in capitalized:\n  print(word)\n\nprint(\"print the same again:\")\nfor word in capitalized:\n  print(word)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This would print out the following:",
+      "raw_source": "This would print out the following:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "First\nSecond\nThird\nFourth\nprint the same again:",
+      "raw_source": "<sample-output>\n\nFirst\nSecond\nThird\nFourth\nprint the same again:\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Above we tried to print out the contents of the `map` iterator twice, but the second attempt produced no printout. The reason is that `map` is an iterator; passing through it with a `for` loop \"depletes\" it, much like a generator is depleted once its maximum value is reached. Once the items in the iterator have been traversed with a `for` loop, there is nothing left to go through.",
+      "raw_source": "Above we tried to print out the contents of the `map` iterator twice, but the second attempt produced no printout. The reason is that `map` is an iterator; passing through it with a `for` loop \"depletes\" it, much like a generator is depleted once its maximum value is reached. Once the items in the iterator have been traversed with a `for` loop, there is nothing left to go through."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If you need to go through the contents of a `map` iterator more than once, you could, for example, convert the map into a list:",
+      "raw_source": "If you need to go through the contents of a `map` iterator more than once, you could, for example, convert the map into a list:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "test_list = [\"first\", \"second\", \"third\", \"fourth\"]\n\n# convert the return value of the map function into a list\ncapitalized = list(map(capitalize, test_list))\n\nfor word in capitalized:\n  print(word)\n\nprint(\"print the same again:\")\nfor word in capitalized:\n  print(word)",
+      "raw_source": "```python\ntest_list = [\"first\", \"second\", \"third\", \"fourth\"]\n\n# convert the return value of the map function into a list\ncapitalized = list(map(capitalize, test_list))\n\nfor word in capitalized:\n  print(word)\n\nprint(\"print the same again:\")\nfor word in capitalized:\n  print(word)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "First\nSecond\nThird\nFourth\nprint the same again:\nFirst\nSecond\nThird\nFourth",
+      "raw_source": "<sample-output>\n\nFirst\nSecond\nThird\nFourth\nprint the same again:\nFirst\nSecond\nThird\nFourth\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "The map function and your own classes",
+      "raw_source": "## The map function and your own classes"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You can naturally also process instances of your own classes with the `map` function. There are no special gimmicks involved, as you can see in the example below:",
+      "raw_source": "You can naturally also process instances of your own classes with the `map` function. There are no special gimmicks involved, as you can see in the example below:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class BankAccount:\n    def __init__(self, account_number: str, name: str, balance: float):\n        self.__account_number = account_number\n        self.name = name\n        self.__balance = balance\n\n    def deposit(self, amount: float):\n        if amount > 0:\n            self.__balance += amount\n\n    def get_balance(self):\n        return self.__balance\n\na1 = BankAccount(\"123456\", \"Randy Riches\", 5000)\na2 = BankAccount(\"12321\", \"Paul Pauper\", 1)\na3 = BankAccount(\"223344\", \"Mary Millionaire \", 1000000)\n\naccounts = [a1, a2, a3]\n\nclients = map(lambda t: t.name, accounts)\nfor name in clients:\n  print(name)\n\nbalances = map(lambda t: t.get_balance(), accounts)\nfor balance in balances:\n  print(balance)",
+      "raw_source": "```python\nclass BankAccount:\n    def __init__(self, account_number: str, name: str, balance: float):\n        self.__account_number = account_number\n        self.name = name\n        self.__balance = balance\n\n    def deposit(self, amount: float):\n        if amount > 0:\n            self.__balance += amount\n\n    def get_balance(self):\n        return self.__balance\n\na1 = BankAccount(\"123456\", \"Randy Riches\", 5000)\na2 = BankAccount(\"12321\", \"Paul Pauper\", 1)\na3 = BankAccount(\"223344\", \"Mary Millionaire \", 1000000)\n\naccounts = [a1, a2, a3]\n\nclients = map(lambda t: t.name, accounts)\nfor name in clients:\n  print(name)\n\nbalances = map(lambda t: t.get_balance(), accounts)\nfor balance in balances:\n  print(balance)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Randy Riches\nPaul Pauper\nMary Millionaire\n5000\n1\n1000000",
+      "raw_source": "<sample-output>\n\nRandy Riches\nPaul Pauper\nMary Millionaire\n5000\n1\n1000000\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here we first collect the names of the account holders with the `map` function. An anonymous lambda function is used to retrieve the value of the `name` attribute from each BankAccount object:",
+      "raw_source": "Here we first collect the names of the account holders with the `map` function. An anonymous lambda function is used to retrieve the value of the `name` attribute from each BankAccount object:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "clients = map(lambda t: t.name, accounts)",
+      "raw_source": "```python\nclients = map(lambda t: t.name, accounts)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Similarly, the balance of each BankAccount is collected. The lambda function looks a bit different, because the balance is retrieved with a method call, not from the attribute directly:",
+      "raw_source": "Similarly, the balance of each BankAccount is collected. The lambda function looks a bit different, because the balance is retrieved with a method call, not from the attribute directly:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "balances = map(lambda t: t.get_balance(), accounts)",
+      "raw_source": "```python\nbalances = map(lambda t: t.get_balance(), accounts)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Attempted courses",
+        "tmcname": "part12-11_attempted_courses"
+      },
+      "inner_content": "The exercise template contains the class definition for a `CourseAttempt`. It works like this:\n\n```python\nattempt = CourseAttempt(\"Peter Python\", \"Introduction to Programming\", 5)\nprint(attempt.student_name)\nprint(attempt.course_name)\nprint(attempt.grade)\nprint(attempt)\n```\n\n<sample-output>\n\nPeter Python\nIntroduction to Programming\n5\nPeter Python, grade for the course Introduction to Programming 5\n\n</sample-output>\n\n## Names of students\n\nPlease write a function named `names_of_students(attempts: list)` which takes a list of CourseAttempt objects as its argument. The function should return a new list with the names of the students who have attempted the course.\n\n```python\ns1 = CourseAttempt(\"Peter Python\", \"Introduction to Programming\", 3)\ns2 = CourseAttempt(\"Olivia C. Objective\", \"Introduction to Programming\", 5)\ns3 = CourseAttempt(\"Peter Python\", \"Advanced Course in Programming\", 2)\n\nfor name in names_of_students([s1, s2, s3]):\n    print(name)\n```\n\n<sample-output>\n\nPeter Python\nOlivia C. Objective\nPeter Python\n\n</sample-output>\n\nPlease implement the function using the `map` function.\n\n## Courses\n\nPlease write a function named `course_names(attempts: list)` which takes a list of CourseAttempt objects as its argument. The function should return a new list containing the names of the courses on the original list in alphabetical order. Each course name should appear only once on the list.\n\n```python\ns1 = CourseAttempt(\"Peter Python\", \"Introduction to Programming\", 3)\ns2 = CourseAttempt(\"Olivia C. Objective\", \"Introduction to Programming\", 5)\ns3 = CourseAttempt(\"Peter Python\", \"Advanced Course in Programming\", 2)\n\nfor name in course_names([s1, s2, s3]):\n    print(name)\n```\n<sample-output>\n\nAdvanced Course in Programming\nIntroduction to Programming\n\n</sample-output>\n\nPlease implement the function using the `map` function. That alone will likely not be enough, however. You will need something else, too, to make sure the course names are unique.",
+      "raw_source": "<programming-exercise name='Attempted courses' tmcname='part12-11_attempted_courses'>\n\nThe exercise template contains the class definition for a `CourseAttempt`. It works like this:\n\n```python\nattempt = CourseAttempt(\"Peter Python\", \"Introduction to Programming\", 5)\nprint(attempt.student_name)\nprint(attempt.course_name)\nprint(attempt.grade)\nprint(attempt)\n```\n\n<sample-output>\n\nPeter Python\nIntroduction to Programming\n5\nPeter Python, grade for the course Introduction to Programming 5\n\n</sample-output>\n\n## Names of students\n\nPlease write a function named `names_of_students(attempts: list)` which takes a list of CourseAttempt objects as its argument. The function should return a new list with the names of the students who have attempted the course.\n\n```python\ns1 = CourseAttempt(\"Peter Python\", \"Introduction to Programming\", 3)\ns2 = CourseAttempt(\"Olivia C. Objective\", \"Introduction to Programming\", 5)\ns3 = CourseAttempt(\"Peter Python\", \"Advanced Course in Programming\", 2)\n\nfor name in names_of_students([s1, s2, s3]):\n    print(name)\n```\n\n<sample-output>\n\nPeter Python\nOlivia C. Objective\nPeter Python\n\n</sample-output>\n\nPlease implement the function using the `map` function.\n\n## Courses\n\nPlease write a function named `course_names(attempts: list)` which takes a list of CourseAttempt objects as its argument. The function should return a new list containing the names of the courses on the original list in alphabetical order. Each course name should appear only once on the list.\n\n```python\ns1 = CourseAttempt(\"Peter Python\", \"Introduction to Programming\", 3)\ns2 = CourseAttempt(\"Olivia C. Objective\", \"Introduction to Programming\", 5)\ns3 = CourseAttempt(\"Peter Python\", \"Advanced Course in Programming\", 2)\n\nfor name in course_names([s1, s2, s3]):\n    print(name)\n```\n<sample-output>\n\nAdvanced Course in Programming\nIntroduction to Programming\n\n</sample-output>\n\nPlease implement the function using the `map` function. That alone will likely not be enough, however. You will need something else, too, to make sure the course names are unique.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "filter",
+      "raw_source": "## filter"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The built-in Python function `filter` is similar to the `map` function, but, as the name implies, it doesn't take all the items from the source. Instead, it filters them with a criterion function, which is passed as an argument. If the criterion function returns `True`, the item is selected.",
+      "raw_source": "The built-in Python function `filter` is similar to the `map` function, but, as the name implies, it doesn't take all the items from the source. Instead, it filters them with a criterion function, which is passed as an argument. If the criterion function returns `True`, the item is selected."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's look at an example using `filter`:",
+      "raw_source": "Let's look at an example using `filter`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "integers = [1, 2, 3, 5, 6, 4, 9, 10, 14, 15]\n\neven_numbers = filter(lambda number: number % 2 == 0, integers)\n\nfor number in even_numbers:\n    print(number)",
+      "raw_source": "```python\nintegers = [1, 2, 3, 5, 6, 4, 9, 10, 14, 15]\n\neven_numbers = filter(lambda number: number % 2 == 0, integers)\n\nfor number in even_numbers:\n    print(number)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "2\n6\n4\n10\n14",
+      "raw_source": "<sample-output>\n\n2\n6\n4\n10\n14\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It might make the above example a bit clearer if we used a named function instead:",
+      "raw_source": "It might make the above example a bit clearer if we used a named function instead:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def is_it_even(number: int):\n    if number % 2 == 0:\n        return True\n    return False\n\nintegers = [1, 2, 3, 5, 6, 4, 9, 10, 14, 15]\n\neven_numbers = filter(is_it_even, integers)\n\nfor number in even_numbers:\n    print(number)",
+      "raw_source": "```python\ndef is_it_even(number: int):\n    if number % 2 == 0:\n        return True\n    return False\n\nintegers = [1, 2, 3, 5, 6, 4, 9, 10, 14, 15]\n\neven_numbers = filter(is_it_even, integers)\n\nfor number in even_numbers:\n    print(number)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "These two programs are functionally completely identical. It is mostly a matter of opinion which you consider the better approach.",
+      "raw_source": "These two programs are functionally completely identical. It is mostly a matter of opinion which you consider the better approach."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's have a look at another filtering example. This program models fishes, and selects only those which weigh at least 1000 grams:",
+      "raw_source": "Let's have a look at another filtering example. This program models fishes, and selects only those which weigh at least 1000 grams:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class Fish:\n    \"\"\" The class models a fish of a certain species and weight \"\"\"\n    def __init__(self, species: str, weight: int):\n        self.species = species\n        self.weight = weight\n\n    def __repr__(self):\n        return f\"{self.species} ({self.weight} g.)\"\n\nif __name__ == \"__main__\":\n    f1 = Fish(\"Pike\", 1870)\n    f2 = Fish(\"Perch\", 763)\n    f3 = Fish(\"Pike\", 3410)\n    f4 = Fish(\"Cod\", 2449)\n    f5 = Fish(\"Roach\", 210)\n\n    fishes = [f1, f2, f3, f4, f5]\n\n    over_a_kilo = filter(lambda fish : fish.weight >= 1000, fishes)\n\n    for fish in over_a_kilo:\n        print(fish)",
+      "raw_source": "```python\nclass Fish:\n    \"\"\" The class models a fish of a certain species and weight \"\"\"\n    def __init__(self, species: str, weight: int):\n        self.species = species\n        self.weight = weight\n\n    def __repr__(self):\n        return f\"{self.species} ({self.weight} g.)\"\n\nif __name__ == \"__main__\":\n    f1 = Fish(\"Pike\", 1870)\n    f2 = Fish(\"Perch\", 763)\n    f3 = Fish(\"Pike\", 3410)\n    f4 = Fish(\"Cod\", 2449)\n    f5 = Fish(\"Roach\", 210)\n\n    fishes = [f1, f2, f3, f4, f5]\n\n    over_a_kilo = filter(lambda fish : fish.weight >= 1000, fishes)\n\n    for fish in over_a_kilo:\n        print(fish)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Pike (1870 g.)\nPike (3410 g.)\nCod (2449 g.)",
+      "raw_source": "<sample-output>\n\nPike (1870 g.)\nPike (3410 g.)\nCod (2449 g.)\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We could just as well use a list comprehension and achieve the same result:",
+      "raw_source": "We could just as well use a list comprehension and achieve the same result:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "over_a_kilo = [fish for fish in fishes if fish.weight >= 1000]",
+      "raw_source": "```python\nover_a_kilo = [fish for fish in fishes if fish.weight >= 1000]\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "The return value of filter is an iterator",
+      "raw_source": "## The return value of filter is an iterator"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `filter` function resembles the `map` function in also that it returns an _iterator_. There are situations where you should be especially careful with `filter` as iterators can only be traversed once. So, trying to print out the collection of large fishes twice will not work quite as straightforwardly as you might think:",
+      "raw_source": "The `filter` function resembles the `map` function in also that it returns an _iterator_. There are situations where you should be especially careful with `filter` as iterators can only be traversed once. So, trying to print out the collection of large fishes twice will not work quite as straightforwardly as you might think:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "f1 = Fish(\"Pike\", 1870)\nf2 = Fish(\"Perch\", 763)\nf3 = Fish(\"Pike\", 3410)\nf4 = Fish(\"Cod\", 2449)\nf5 = Fish(\"Roach\", 210)\n\nfishes = [f1, f2, f3, f4, f5]\n\nover_a_kilo = filter(lambda fish : fish.weight >= 1000, fishes)\n\nfor fish in over_a_kilo:\n    print(fish)\n\nprint(\"print the same again:\")\n\nfor Fish in over_a_kilo:\n    print(Fish)",
+      "raw_source": "```python\nf1 = Fish(\"Pike\", 1870)\nf2 = Fish(\"Perch\", 763)\nf3 = Fish(\"Pike\", 3410)\nf4 = Fish(\"Cod\", 2449)\nf5 = Fish(\"Roach\", 210)\n\nfishes = [f1, f2, f3, f4, f5]\n\nover_a_kilo = filter(lambda fish : fish.weight >= 1000, fishes)\n\nfor fish in over_a_kilo:\n    print(fish)\n\nprint(\"print the same again:\")\n\nfor Fish in over_a_kilo:\n    print(Fish)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This would print out the following:",
+      "raw_source": "This would print out the following:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Pike (1870 g.)\nPike (3410 g.)\nCod (2449 g.)\nprint the same again:",
+      "raw_source": "<sample-output>\n\nPike (1870 g.)\nPike (3410 g.)\nCod (2449 g.)\nprint the same again:\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If you need to go through the contents of a `filter` iterator more than once, you could convert the result into a list:",
+      "raw_source": "If you need to go through the contents of a `filter` iterator more than once, you could convert the result into a list:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "fishes = [f1, f2, f3, f4, f5]\n\n# convert the return value of the filter function into a list\nover_a_kilo = list(filter(lambda fish : fish.weight >= 1000, fishes))",
+      "raw_source": "```python\nfishes = [f1, f2, f3, f4, f5]\n\n# convert the return value of the filter function into a list\nover_a_kilo = list(filter(lambda fish : fish.weight >= 1000, fishes))\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Filtering attempts",
+        "tmcname": "part12-12_filtering_attempts"
+      },
+      "inner_content": "In this exercise we will continue with the `CourseAttempt` class.\n\n## Accepted attempts\n\nPlease write a function named `accepted(attempts: list)` which takes a list of CourseAttempt objects as its argument. The function should return a new list of CourseAttempt objects, including only those items from the original list whose grade is at least 1.\n\n```python\ns1 = CourseAttempt(\"Peter Python\", \"Introduction to Programming\", 3)\ns2 = CourseAttempt(\"Olivia C. Objective\", \"Introduction to Programming\", 5)\ns3 = CourseAttempt(\"Peter Python\", \"Advanced Course in Programming\", 0)\n\nfor attempt in accepted([s1, s2, s3]):\n    print(attempt)\n```\n\n<sample-output>\n\nPeter Python, grade for the course Introduction to Programming 3\nOlivia C. Objective grade for the course Introduction to Programming 5\n\n</sample-output>\n\nPlease implement the function using the `filter` function.\n\n## Attempts with grade\n\nPlease write a function named `attempts_with_grade(attempts: list, grade: int)` which takes a list of CourseAttempt objects and an integer as its arguments. The function should return a new list containing only those CourseAttempt objects from the original list whose grade matches the second argument.\n\n```python\ns1 = CourseAttempt(\"Peter Python\", \"Introduction to Programming\", 3)\ns2 = CourseAttempt(\"Olivia C. Objective\", \"Introduction to Programming\", 5)\ns3 = CourseAttempt(\"Peter Python\", \"Introduction to AI\", 3)\ns4 = CourseAttempt(\"Olivia C. Objective\", \"Data Structures and Algorithms\", 3)\n\nfor attempt in attempts_with_grade([s1, s2, s3, s4], 3):\n    print(attempt)\n```\n\n<sample-output>\n\nPeter Python, grade for the course Introduction to Programming 3\nPeter Python, grade for the course Introduction to AI 3\nOlivia C. Objective, grade for the course Data Structures and Algorithms 3\n\n</sample-output>\n\nPlease implement the function using the `filter` function.\n\n## Students who passed the course\n\nPlease write a function named `passed_students(attempts: list, course: str)` which takes a list of CourseAttempt objects and a course name as its arguments. The function should return an _alphabetically ordered_ list of names of those students who passed the course, i.e. their grade for the given course was higher than 0.\n\n```python\ns1 = CourseAttempt(\"Peter Python\", \"Introduction to Programming\", 3)\ns2 = CourseAttempt(\"Olivia C. Objective\", \"Introduction to AI\", 5)\ns3 = CourseAttempt(\"Peter Python\", \"Introduction to AI\", 0)\ns4 = CourseAttempt(\"Jack Java\", \"Introduction to AI\", 3)\n\nfor attempt in passed_students([s1, s2, s3, s4], \"Introduction to AI\"):\n    print(attempt)\n```\n\n<sample-output>\n\nJack Java\nOlivia C. Objective\n\n</sample-output>\n\nPlease implement the function using the `filter` and `map` functions.",
+      "raw_source": "<programming-exercise name='Filtering attempts' tmcname='part12-12_filtering_attempts'>\n\nIn this exercise we will continue with the `CourseAttempt` class.\n\n## Accepted attempts\n\nPlease write a function named `accepted(attempts: list)` which takes a list of CourseAttempt objects as its argument. The function should return a new list of CourseAttempt objects, including only those items from the original list whose grade is at least 1.\n\n```python\ns1 = CourseAttempt(\"Peter Python\", \"Introduction to Programming\", 3)\ns2 = CourseAttempt(\"Olivia C. Objective\", \"Introduction to Programming\", 5)\ns3 = CourseAttempt(\"Peter Python\", \"Advanced Course in Programming\", 0)\n\nfor attempt in accepted([s1, s2, s3]):\n    print(attempt)\n```\n\n<sample-output>\n\nPeter Python, grade for the course Introduction to Programming 3\nOlivia C. Objective grade for the course Introduction to Programming 5\n\n</sample-output>\n\nPlease implement the function using the `filter` function.\n\n## Attempts with grade\n\nPlease write a function named `attempts_with_grade(attempts: list, grade: int)` which takes a list of CourseAttempt objects and an integer as its arguments. The function should return a new list containing only those CourseAttempt objects from the original list whose grade matches the second argument.\n\n```python\ns1 = CourseAttempt(\"Peter Python\", \"Introduction to Programming\", 3)\ns2 = CourseAttempt(\"Olivia C. Objective\", \"Introduction to Programming\", 5)\ns3 = CourseAttempt(\"Peter Python\", \"Introduction to AI\", 3)\ns4 = CourseAttempt(\"Olivia C. Objective\", \"Data Structures and Algorithms\", 3)\n\nfor attempt in attempts_with_grade([s1, s2, s3, s4], 3):\n    print(attempt)\n```\n\n<sample-output>\n\nPeter Python, grade for the course Introduction to Programming 3\nPeter Python, grade for the course Introduction to AI 3\nOlivia C. Objective, grade for the course Data Structures and Algorithms 3\n\n</sample-output>\n\nPlease implement the function using the `filter` function.\n\n## Students who passed the course\n\nPlease write a function named `passed_students(attempts: list, course: str)` which takes a list of CourseAttempt objects and a course name as its arguments. The function should return an _alphabetically ordered_ list of names of those students who passed the course, i.e. their grade for the given course was higher than 0.\n\n```python\ns1 = CourseAttempt(\"Peter Python\", \"Introduction to Programming\", 3)\ns2 = CourseAttempt(\"Olivia C. Objective\", \"Introduction to AI\", 5)\ns3 = CourseAttempt(\"Peter Python\", \"Introduction to AI\", 0)\ns4 = CourseAttempt(\"Jack Java\", \"Introduction to AI\", 3)\n\nfor attempt in passed_students([s1, s2, s3, s4], \"Introduction to AI\"):\n    print(attempt)\n```\n\n<sample-output>\n\nJack Java\nOlivia C. Objective\n\n</sample-output>\n\nPlease implement the function using the `filter` and `map` functions.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "reduce",
+      "raw_source": "## reduce"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A third cornerstone function in this introduction to functional programming principles is `reduce`, from the `functools` module. As the name implies, its purpose is to _reduce_ the items in a series into a single value.",
+      "raw_source": "A third cornerstone function in this introduction to functional programming principles is `reduce`, from the `functools` module. As the name implies, its purpose is to _reduce_ the items in a series into a single value."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `reduce` function starts with an operation and an initial value. It performs the given operation on each item in the series in turn, so that the value changes at each step. Once all items have been processed, the resulting value is returned.",
+      "raw_source": "The `reduce` function starts with an operation and an initial value. It performs the given operation on each item in the series in turn, so that the value changes at each step. Once all items have been processed, the resulting value is returned."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We have done summation of lists of integers in different ways before, but here we have an example with the help of the `reduce` function. Notice the `import` statement; in Python versions 3 and higher it is necessary to access the `reduce` function. In older Python versions the `import` statement was not needed, so you may come across examples without it online.",
+      "raw_source": "We have done summation of lists of integers in different ways before, but here we have an example with the help of the `reduce` function. Notice the `import` statement; in Python versions 3 and higher it is necessary to access the `reduce` function. In older Python versions the `import` statement was not needed, so you may come across examples without it online."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from functools import reduce\n\nmy_list = [2, 3, 1, 5]\n\nsum_of_numbers = reduce(lambda reduced_sum, item: reduced_sum + item, my_list, 0)\n\nprint(sum_of_numbers)",
+      "raw_source": "```python\nfrom functools import reduce\n\nmy_list = [2, 3, 1, 5]\n\nsum_of_numbers = reduce(lambda reduced_sum, item: reduced_sum + item, my_list, 0)\n\nprint(sum_of_numbers)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "11",
+      "raw_source": "<sample-output>\n\n11\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's take a closer look at what's happening here. The `reduce` function takes three arguments: a function, a series of items, and an initial value. In this case, the series is a list of integers, and as we are calculating a sum, a suitable initial value is zero.",
+      "raw_source": "Let's take a closer look at what's happening here. The `reduce` function takes three arguments: a function, a series of items, and an initial value. In this case, the series is a list of integers, and as we are calculating a sum, a suitable initial value is zero."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The first argument is a function, which represents the operation we want to perform on each item. Here the function is an anonymous lambda function:",
+      "raw_source": "The first argument is a function, which represents the operation we want to perform on each item. Here the function is an anonymous lambda function:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "lambda reduced_sum, item: reduced_sum + item",
+      "raw_source": "```python\nlambda reduced_sum, item: reduced_sum + item\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This function takes two arguments: the current reduced value and the item whose turn it is to be processed. These are used to calculate a new value for the reduced value. In this case the new value is the sum of the old value and the current item.",
+      "raw_source": "This function takes two arguments: the current reduced value and the item whose turn it is to be processed. These are used to calculate a new value for the reduced value. In this case the new value is the sum of the old value and the current item."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It may be easier to comprehend what the `reduce` function actually does if we use a normal named function instead of a lambda function. That way we can also include helpful printouts:",
+      "raw_source": "It may be easier to comprehend what the `reduce` function actually does if we use a normal named function instead of a lambda function. That way we can also include helpful printouts:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from functools import reduce\n\nmy_list = [2, 3, 1, 5]\n\n# a helper function for reduce, adds one value to the current reduced sum\ndef sum_helper(reduced_sum, item):\n  print(f\"the reduced sum is now {reduced_sum}, next item is {item}\")\n  # the new reduced sum is the old sum + the next item\n  return reduced_sum + item\n\nsum_of_numbers = reduce(sum_helper, my_list, 0)\n\nprint(sum_of_numbers)",
+      "raw_source": "```python\nfrom functools import reduce\n\nmy_list = [2, 3, 1, 5]\n\n# a helper function for reduce, adds one value to the current reduced sum\ndef sum_helper(reduced_sum, item):\n  print(f\"the reduced sum is now {reduced_sum}, next item is {item}\")\n  # the new reduced sum is the old sum + the next item\n  return reduced_sum + item\n\nsum_of_numbers = reduce(sum_helper, my_list, 0)\n\nprint(sum_of_numbers)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The program prints out:",
+      "raw_source": "The program prints out:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "the reduced sum is now 0, next item is 2\nthe reduced sum is now 2, next item is 3\nthe reduced sum is now 5, next item is 1\nthe reduced sum is now 6, next item is 5\n11",
+      "raw_source": "<sample-output>\n\nthe reduced sum is now 0, next item is 2\nthe reduced sum is now 2, next item is 3\nthe reduced sum is now 5, next item is 1\nthe reduced sum is now 6, next item is 5\n11\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "First, the function takes care of the item with value 2. To begin with, the reduced sum is 0, which is the initial value passed to the `reduce` function. The function calculates and returns the sum of these two: `0 + 2 = 2`.",
+      "raw_source": "First, the function takes care of the item with value 2. To begin with, the reduced sum is 0, which is the initial value passed to the `reduce` function. The function calculates and returns the sum of these two: `0 + 2 = 2`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This is the value stored in `reduced_sum` as the `reduce` function processes the next item on the list, with value 3. The function calculates and returns the sum of these two: `2 + 3 = 5`. This result is then used when processing the next item, and so forth, and so forth.",
+      "raw_source": "This is the value stored in `reduced_sum` as the `reduce` function processes the next item on the list, with value 3. The function calculates and returns the sum of these two: `2 + 3 = 5`. This result is then used when processing the next item, and so forth, and so forth."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Now, summation is simple, as there is even the built-in `sum` function for this purpose. But how about multiplication? Only minor changes are needed to create a reduced product:",
+      "raw_source": "Now, summation is simple, as there is even the built-in `sum` function for this purpose. But how about multiplication? Only minor changes are needed to create a reduced product:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from functools import reduce\n\nmy_list = [2, 2, 4, 3, 5, 2]\n\nproduct_of_list = reduce(lambda product, item: product * item, my_list, 1)\n\nprint(product_of_list)",
+      "raw_source": "```python\nfrom functools import reduce\n\nmy_list = [2, 2, 4, 3, 5, 2]\n\nproduct_of_list = reduce(lambda product, item: product * item, my_list, 1)\n\nprint(product_of_list)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "480",
+      "raw_source": "<sample-output>\n\n480\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As we are dealing with multiplication the initial value is not zero. Instead, we use 1. What would happen if we used 0 as the initial value?",
+      "raw_source": "As we are dealing with multiplication the initial value is not zero. Instead, we use 1. What would happen if we used 0 as the initial value?"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Above we have dealt largely with integers, but `map`, `filter` and `reduce` can all handle a collection of objects of any type.",
+      "raw_source": "Above we have dealt largely with integers, but `map`, `filter` and `reduce` can all handle a collection of objects of any type."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As an example, let's generate a sum total of the balances of all accounts in a bank, with the help of `reduce`:",
+      "raw_source": "As an example, let's generate a sum total of the balances of all accounts in a bank, with the help of `reduce`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class BankAccount:\n    def __init__(self, account_number: str, name: str, balance: float):\n        self.__account_number = account_number\n        self.name = name\n        self.__balance = balance\n\n    def deposit(self, amount: float):\n        if amount > 0:\n            self.__balance += amount\n\n    def get_balance(self):\n        return self.__balance\n\na1 = BankAccount(\"123456\", \"Randy Riches\", 5000)\na2 = BankAccount(\"12321\", \"Paul Pauper\", 1)\na3 = BankAccount(\"223344\", \"Mary Millionaire \", 1000000)\n\naccounts = [a1, a2, a3]\n\nfrom functools import reduce\n\ndef balance_sum_helper(balance_sum, account):\n  return balance_sum + account.get_balance()\n\nbalances_total = reduce(balance_sum_helper, accounts, 0)\n\nprint(\"The total of the bank's balances:\")\nprint(balances_total)",
+      "raw_source": "```python\nclass BankAccount:\n    def __init__(self, account_number: str, name: str, balance: float):\n        self.__account_number = account_number\n        self.name = name\n        self.__balance = balance\n\n    def deposit(self, amount: float):\n        if amount > 0:\n            self.__balance += amount\n\n    def get_balance(self):\n        return self.__balance\n\na1 = BankAccount(\"123456\", \"Randy Riches\", 5000)\na2 = BankAccount(\"12321\", \"Paul Pauper\", 1)\na3 = BankAccount(\"223344\", \"Mary Millionaire \", 1000000)\n\naccounts = [a1, a2, a3]\n\nfrom functools import reduce\n\ndef balance_sum_helper(balance_sum, account):\n  return balance_sum + account.get_balance()\n\nbalances_total = reduce(balance_sum_helper, accounts, 0)\n\nprint(\"The total of the bank's balances:\")\nprint(balances_total)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This program would print out:",
+      "raw_source": "This program would print out:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The total of the bank's balances:\n1005001",
+      "raw_source": "<sample-output>\n\nThe total of the bank's balances:\n1005001\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `balance_sum_helper` function grabs the balance of each bank account, with the method dedicated for the purpose in the `BankAccount` class definition:",
+      "raw_source": "The `balance_sum_helper` function grabs the balance of each bank account, with the method dedicated for the purpose in the `BankAccount` class definition:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def balance_sum_helper(balance_sum, account):\n  return balance_sum + account.get_balance()",
+      "raw_source": "```python\ndef balance_sum_helper(balance_sum, account):\n  return balance_sum + account.get_balance()\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "hint",
+        "name": "Reduce without an initial value"
+      },
+      "inner_content": "You do not need to always pass a third argument to the `reduce` function. For instance, summation would work just as well _without_ the initial value:\n\n```python\nmy_list = [2, 3, 1, 5]\n\nsum_of_numbers = reduce(lambda reduced_sum, item: reduced_sum + item, my_list)\n\nprint(sum_of_numbers)\n```\n\nIf the initial value is left out, `reduce` takes the first item in the list as the initial value and starts reducing from the second item onwards.",
+      "raw_source": "<text-box variant='hint' name='Reduce without an initial value'>\n\nYou do not need to always pass a third argument to the `reduce` function. For instance, summation would work just as well _without_ the initial value:\n\n```python\nmy_list = [2, 3, 1, 5]\n\nsum_of_numbers = reduce(lambda reduced_sum, item: reduced_sum + item, my_list)\n\nprint(sum_of_numbers)\n```\n\nIf the initial value is left out, `reduce` takes the first item in the list as the initial value and starts reducing from the second item onwards.\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "**NB:** if the items in the series are of a different type than the intended reduced result, the thrd argument is mandatory. The example with the bank accounts would not work without the initial value. That is, trying this",
+      "raw_source": "**NB:** if the items in the series are of a different type than the intended reduced result, the thrd argument is mandatory. The example with the bank accounts would not work without the initial value. That is, trying this"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "balances_total = reduce(balance_sum_helper, accounts)",
+      "raw_source": "```python\nbalances_total = reduce(balance_sum_helper, accounts)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "would produce an error:",
+      "raw_source": "would produce an error:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "TypeError: unsupported operand type(s) for +: 'BankAccount' and 'int'",
+      "raw_source": "```python\nTypeError: unsupported operand type(s) for +: 'BankAccount' and 'int'\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the above case, when `reduce` tries to execute the `balance_sum_helper` function for the first time, the arguments it uses are the _two first items in the list_, which are both of type BankAccount. Specifically, the value assigned to the parameter `balance_sum` is the first item in the list.  The `balance_sum_helper` function tries to add an integer value to it, but adding an integer directly to a BankAccount object is not a supported operation.",
+      "raw_source": "In the above case, when `reduce` tries to execute the `balance_sum_helper` function for the first time, the arguments it uses are the _two first items in the list_, which are both of type BankAccount. Specifically, the value assigned to the parameter `balance_sum` is the first item in the list.  The `balance_sum_helper` function tries to add an integer value to it, but adding an integer directly to a BankAccount object is not a supported operation."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Study credits",
+        "tmcname": "part12-13_credits"
+      },
+      "inner_content": "In this exercise we will work with a slightly modified version of the `CourseAttempt` class. The name of the student is omitted, but the number of credits is included. The class works as follows:\n\n```python\nattempt = CourseAttempt(\"Data Structures and Algorithms\", 3, 10)\nprint(attempt)\nprint(attempt.course_name)\nprint(attempt.credits)\nprint(attempt.grade)\n```\n\n<sample-output>\n\nData Structures and Algorithms (10 cr) grade 3\nData Structures and Algorithms\n10\n3\n\n</sample-output>\n\n## The sum of all credits\n\nPlease implement a function named `sum_of_all_credits` which takes a list of course attempts as its argument. The function sums up the total number of study credits covered by the courses. It should work like this:\n\n```python\ns1 = CourseAttempt(\"Introduction to Programming\", 5, 5)\ns2 = CourseAttempt(\"Advanced Course in Programming\", 4, 5)\ns3 = CourseAttempt(\"Data Structures and Algorithms\", 3, 10)\ncredit_sum = sum_of_all_credits([s1, s2, s3])\nprint(credit_sum)\n```\n\n<sample-output>\n\n20\n\n</sample-output>\n\nPlease implement the function using the `reduce` function.\n\n## The sum of passed credits\n\nPlease implement a function named `sum_of_passed_credits` which takes a list of course attempts as its argument. The function sums up the credits for the course attempts with grade 1 or above. It should work like this:\n\n```python\ns1 = CourseAttempt(\"Introduction to Programming\", 5, 5)\ns2 = CourseAttempt(\"Advanced Course in Programming\", 0, 4)\ns3 = CourseAttempt(\"Data Structures and Algorithms\", 3, 10)\ncredit_sum = sum_of_passed_credits([s1, s2, s3])\nprint(credit_sum)\n```\n\n<sample-output>\n\n15\n\n</sample-output>\n\nPlease implement the function using the `reduce` and `filter` functions.\n\n## Average grade for passed courses\n\nPlease implement a function named `average` which takes a list of course attempts as its argument. The function calculates the average grade for the course attempts with grade 1 or above. It should work like this:\n\n```python\ns1 = CourseAttempt(\"Introduction to Programming\", 5, 5)\ns2 = CourseAttempt(\"Advanced Course in Programming\", 0, 4)\ns3 = CourseAttempt(\"Data Structures and Algorithms\", 3, 10)\nag = average([s1, s2, s3])\nprint(ag)\n```\n\n<sample-output>\n\n4.0\n\n</sample-output>\n\nPlease implement the function using the `reduce` and `filter` functions. NB: the exercise asks for a simple mean value, not a weighted average.\n\nWhile working on this exercise, it is likely worth remembering that [the return value of filter is an iterator](/part-12/3-functional-programming#the-return-value-of-filter-is-an-iterator).",
+      "raw_source": "<programming-exercise name='Study credits' tmcname='part12-13_credits'>\n\nIn this exercise we will work with a slightly modified version of the `CourseAttempt` class. The name of the student is omitted, but the number of credits is included. The class works as follows:\n\n```python\nattempt = CourseAttempt(\"Data Structures and Algorithms\", 3, 10)\nprint(attempt)\nprint(attempt.course_name)\nprint(attempt.credits)\nprint(attempt.grade)\n```\n\n<sample-output>\n\nData Structures and Algorithms (10 cr) grade 3\nData Structures and Algorithms\n10\n3\n\n</sample-output>\n\n## The sum of all credits\n\nPlease implement a function named `sum_of_all_credits` which takes a list of course attempts as its argument. The function sums up the total number of study credits covered by the courses. It should work like this:\n\n```python\ns1 = CourseAttempt(\"Introduction to Programming\", 5, 5)\ns2 = CourseAttempt(\"Advanced Course in Programming\", 4, 5)\ns3 = CourseAttempt(\"Data Structures and Algorithms\", 3, 10)\ncredit_sum = sum_of_all_credits([s1, s2, s3])\nprint(credit_sum)\n```\n\n<sample-output>\n\n20\n\n</sample-output>\n\nPlease implement the function using the `reduce` function.\n\n## The sum of passed credits\n\nPlease implement a function named `sum_of_passed_credits` which takes a list of course attempts as its argument. The function sums up the credits for the course attempts with grade 1 or above. It should work like this:\n\n```python\ns1 = CourseAttempt(\"Introduction to Programming\", 5, 5)\ns2 = CourseAttempt(\"Advanced Course in Programming\", 0, 4)\ns3 = CourseAttempt(\"Data Structures and Algorithms\", 3, 10)\ncredit_sum = sum_of_passed_credits([s1, s2, s3])\nprint(credit_sum)\n```\n\n<sample-output>\n\n15\n\n</sample-output>\n\nPlease implement the function using the `reduce` and `filter` functions.\n\n## Average grade for passed courses\n\nPlease implement a function named `average` which takes a list of course attempts as its argument. The function calculates the average grade for the course attempts with grade 1 or above. It should work like this:\n\n```python\ns1 = CourseAttempt(\"Introduction to Programming\", 5, 5)\ns2 = CourseAttempt(\"Advanced Course in Programming\", 0, 4)\ns3 = CourseAttempt(\"Data Structures and Algorithms\", 3, 10)\nag = average([s1, s2, s3])\nprint(ag)\n```\n\n<sample-output>\n\n4.0\n\n</sample-output>\n\nPlease implement the function using the `reduce` and `filter` functions. NB: the exercise asks for a simple mean value, not a weighted average.\n\nWhile working on this exercise, it is likely worth remembering that [the return value of filter is an iterator](/part-12/3-functional-programming#the-return-value-of-filter-is-an-iterator).\n\n</programming-exercise>"
+    }
+  ]
+}

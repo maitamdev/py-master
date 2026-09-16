@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-33_chessboard",
+  "lesson_id": "part03-4-defining-functions",
+  "part": 3,
+  "tmc_name": "part03-33_chessboard",
+  "title_original": "Chessboard",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `chessboard`, which prints out a chessboard made out of ones and zeroes. The function takes an integer argument, which specifies the length of the side of the board. See the examples below for details:\n\n```python\nchessboard(3)\nprint()\nchessboard(6)\n```\n\n<sample-output>\n\n<pre>\n101\n010\n101\n\n101010\n010101\n101010\n010101\n101010\n010101\n</pre>\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "chessboard(3)\nprint()\nchessboard(6)",
+  "grading_data_available": false,
+  "source_hash": "abca1f8d3095eb58491b5d5db5d7b265c4c837c201117c7315b825471ad292e5",
+  "order": 71
+}

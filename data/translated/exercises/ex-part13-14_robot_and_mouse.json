@@ -1,0 +1,16 @@
+{
+  "id": "ex-part13-14_robot_and_mouse",
+  "lesson_id": "part13-3-events",
+  "part": 13,
+  "tmc_name": "part13-14_robot_and_mouse",
+  "title_original": "Robot and mouse",
+  "title_vi": "Robot và chuột",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program where the robot follows the mouse cursor so that the centre of the robot is always directly at the mouse cursor. The end result should look like this:\n\n<img src=\"pygame_robot_cursor.gif\">",
+  "description_vi": "Hãy viết chương trình robot di chuyển theo con trỏ chuột sao cho tâm của robot luôn nằm ngay tại con trỏ chuột. Kết quả cuối cùng sẽ trông như thế này:\n\n<img src=\"pygame_robot_cursor.gif\">",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "519990415dadccabb30197775b88ad2cd30a99988ed5dffab486113fab4f9b0e",
+  "order": 42
+}

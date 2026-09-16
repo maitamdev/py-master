@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-14_gift_tax_calculator",
+  "lesson_id": "part02-3-combining-conditions",
+  "part": 2,
+  "tmc_name": "part02-14_gift_tax_calculator",
+  "title_original": "Gift tax calculator",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": "500px",
+  "description_original": "Some say paying taxes makes Finns happy, so let's see if the secret of happiness lies in one of the taxes set out in Finnish tax code. \n\n[According to the Finnish Tax Administration](https://www.vero.fi/en/individuals/property/gifts/), a gift is a transfer of property to another person against no compensation or payment. If the total value of the gifts you receive from the same donor in the course of 3 years is €5,000 or more, you must pay gift tax.\n\nWhen the gift is received from a close relative or a family member, the amount of tax to be paid is determined by the following table, which is also available on [this website](https://www.vero.fi/en/individuals/property/gifts/gift-tax-calculator/):\n\nValue of gift | Tax at the lower limit | Tax rate for the exceeding part (%)\n:------------:|:----------------------:|:-----------------------------------:\n5 000 — 25 000 |        100     |       8\n25 000 — 55 000\t|       1 700   |\t10\n55 000 — 200 000 |      4 700\t|       12\n200 000 — 1 000 000 |   22 100  |\t15\n1 000 000 —\t|       142 100 |\t17\n\nSo, for a gift of 6 000 euros the recipient pays a tax of 180 euros (100 + (6 000 - 5 000) * 0.08). Similarly, for a gift of 75 000 euros the recipient pays a tax of 7 100 euros (4 700 + (75 000 - 55 000) * 0.12).\n\nPlease write a program which calculates the correct amount of tax for a gift from a close relative. Have a look at the examples below to see what is expected. Notice the lack of thousands separators in the input values - you may assume there will be no spaces or other thousands separators in the numbers in the input, as we haven't yet covered dealing with these.\n\n<sample-output>\n\nValue of gift: **3500**\nNo tax!\n\n</sample-output>\n\n<sample-output>\n\nValue of gift: **5000**\nAmount of tax: 100.0 euros\n\n</sample-output>\n\n<sample-output>\n\nValue of gift: **27500**\nAmount of tax: 1950.0 euros\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "7a424e3dd6bd704184ee8b8dc3d2a754d40c38d150f348ea7ce0eeb688964016",
+  "order": 36
+}

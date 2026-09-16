@@ -1,0 +1,16 @@
+{
+  "id": "ex-part07-12_json_files",
+  "lesson_id": "part07-4-data-processing",
+  "part": 7,
+  "tmc_name": "part07-12_json_files",
+  "title_original": "Handling JSON files",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Let's have a look at a JSON file, which contains some information about students in the following format:\n\n```json\n[\n    {\n        \"name\": \"Peter Pythons\",\n        \"age\": 27,\n        \"hobbies\": [\n            \"coding\",\n            \"knitting\"\n        ]\n    },\n    {\n        \"name\": \"Jean Javanese\",\n        \"age\": 24,\n        \"hobbies\": [\n            \"coding\",\n            \"rock climbing\",\n            \"reading\"\n        ]\n    }\n]\n```\n\nPlease write a function named `print_persons(filename: str)`, which reads a JSON file in the above format, and prints the contents as shown below. The file may contain any number of entries.\n\n<sample-output>\n\nPeter Pythons 27 years (coding, knitting)\nJean Javanese 24 years (coding, rock climbing, reading)\n\n</sample-output>\n\nThe hobbies should be listed in the same order as they appear in the JSON file.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "a6b12daba427cca2e618b0555e00584af56c14053650798b0942b1aa569813b2",
+  "order": 26
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-14_times_ten",
+  "lesson_id": "part05-3-dictionary",
+  "part": 5,
+  "tmc_name": "part05-14_times_ten",
+  "title_original": "Times ten",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `times_ten(start_index: int, end_index: int)`, which creates and returns a new dictionary. The keys of the dictionary should be the numbers between `start_index` and `end_index` inclusive\n\nThe value mapped to each key should be the key times ten.\n\nFor example:\n\n```python\nd = times_ten(3, 6)\nprint(d)\n```\n\n<sample-output>\n\n{3: 30, 4: 40, 5: 50, 6: 60}\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "d = times_ten(3, 6)\nprint(d)",
+  "grading_data_available": false,
+  "source_hash": "e14167fae7291c88e1145e43ea060db4b06a6c1a1a965736e6622ae085214e32",
+  "order": 28
+}

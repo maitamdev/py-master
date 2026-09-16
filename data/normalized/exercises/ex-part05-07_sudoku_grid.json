@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-07_sudoku_grid",
+  "lesson_id": "part05-1-more-lists",
+  "part": 5,
+  "tmc_name": "part05-07_sudoku_grid",
+  "title_original": "Sudoku: check grid",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `sudoku_grid_correct(sudoku: list)`, which takes a two-dimensional array representing a sudoku grid as its argument. The function should use the functions from the three previous exercises to determine whether the complete sudoku grid is filled in correctly. Copy the functions from the exercises above into your Python code file for this exercise.\n\nThe function should check each of the nine rows, columns and 3 by 3 blocks in the grid. If all contain each of the numbers 1 to 9 at most once, the function returns `True`. If a single one is filled in incorrectly, the function returns `False`. \n\nThe image of a sudoku grid above these exercises has the nine blocks within the grid indicated with thicker borders. These are the blocks the function should check, and they begin at the indexes (0, 0), (0, 3), (0, 6), (3, 0), (3, 3), (3, 6), (6, 0), (6, 3) and (6, 6). \n\n```python\nsudoku1 = [\n  [9, 0, 0, 0, 8, 0, 3, 0, 0],\n  [2, 0, 0, 2, 5, 0, 7, 0, 0],\n  [0, 2, 0, 3, 0, 0, 0, 0, 4],\n  [2, 9, 4, 0, 0, 0, 0, 0, 0],\n  [0, 0, 0, 7, 3, 0, 5, 6, 0],\n  [7, 0, 5, 0, 6, 0, 4, 0, 0],\n  [0, 0, 7, 8, 0, 3, 9, 0, 0],\n  [0, 0, 1, 0, 0, 0, 0, 0, 3],\n  [3, 0, 0, 0, 0, 0, 0, 0, 2]\n]\n\nprint(sudoku_grid_correct(sudoku1))\n\nsudoku2 = [\n  [2, 6, 7, 8, 3, 9, 5, 0, 4],\n  [9, 0, 3, 5, 1, 0, 6, 0, 0],\n  [0, 5, 1, 6, 0, 0, 8, 3, 9],\n  [5, 1, 9, 0, 4, 6, 3, 2, 8],\n  [8, 0, 2, 1, 0, 5, 7, 0, 6],\n  [6, 7, 4, 3, 2, 0, 0, 0, 5],\n  [0, 0, 0, 4, 5, 7, 2, 6, 3],\n  [3, 2, 0, 0, 8, 0, 0, 5, 7],\n  [7, 4, 5, 0, 0, 3, 9, 0, 1]\n]\n\nprint(sudoku_grid_correct(sudoku2))\n```\n\n<sample-output>\n\nFalse\nTrue\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "sudoku1 = [\n  [9, 0, 0, 0, 8, 0, 3, 0, 0],\n  [2, 0, 0, 2, 5, 0, 7, 0, 0],\n  [0, 2, 0, 3, 0, 0, 0, 0, 4],\n  [2, 9, 4, 0, 0, 0, 0, 0, 0],\n  [0, 0, 0, 7, 3, 0, 5, 6, 0],\n  [7, 0, 5, 0, 6, 0, 4, 0, 0],\n  [0, 0, 7, 8, 0, 3, 9, 0, 0],\n  [0, 0, 1, 0, 0, 0, 0, 0, 3],\n  [3, 0, 0, 0, 0, 0, 0, 0, 2]\n]\n\nprint(sudoku_grid_correct(sudoku1))\n\nsudoku2 = [\n  [2, 6, 7, 8, 3, 9, 5, 0, 4],\n  [9, 0, 3, 5, 1, 0, 6, 0, 0],\n  [0, 5, 1, 6, 0, 0, 8, 3, 9],\n  [5, 1, 9, 0, 4, 6, 3, 2, 8],\n  [8, 0, 2, 1, 0, 5, 7, 0, 6],\n  [6, 7, 4, 3, 2, 0, 0, 0, 5],\n  [0, 0, 0, 4, 5, 7, 2, 6, 3],\n  [3, 2, 0, 0, 8, 0, 0, 5, 7],\n  [7, 4, 5, 0, 0, 3, 9, 0, 1]\n]\n\nprint(sudoku_grid_correct(sudoku2))",
+  "grading_data_available": false,
+  "source_hash": "2e049533f38be2bb5698ea58aedfbd22d69cc497817386ca978550871426cb2e",
+  "order": 103
+}

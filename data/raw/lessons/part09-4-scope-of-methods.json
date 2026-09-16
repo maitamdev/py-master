@@ -1,0 +1,144 @@
+{
+  "id": "part09-4-scope-of-methods",
+  "part": 9,
+  "part_slug": "part-9",
+  "slug": "4-scope-of-methods",
+  "is_part_index": false,
+  "title_original": "Scope of methods",
+  "path": "/part-9/4-scope-of-methods",
+  "source_path": "data/part-9/4-scope-of-methods.md",
+  "source_hash": "cf9bd3d78193d30eeec9932118ffd3dd4cb4cffc866e00aaa0fde0957002f813",
+  "frontmatter": {
+    "path": "/part-9/4-scope-of-methods",
+    "title": "Scope of methods",
+    "hidden": false
+  },
+  "chunks_count": 20,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know how you can limit the visibility of a method in Python\n- You will be able to write private methods",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know how you can limit the visibility of a method in Python\n- You will be able to write private methods\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The methods defined within a class can be hidden in exactly the same way as the attributes were in the previous section. If the method begins with two underscores `__`, it is not directly accessible by the client.",
+      "raw_source": "The methods defined within a class can be hidden in exactly the same way as the attributes were in the previous section. If the method begins with two underscores `__`, it is not directly accessible by the client."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "So, the technique is the same for both methods and attributes, but the use cases are usually a little different. Private attributes often come paired with getter and setter methods for controlling access to them. Private methods, on the other hand, are usually intended for internal use only, as helper methods for processes which the client does not need to know about.",
+      "raw_source": "So, the technique is the same for both methods and attributes, but the use cases are usually a little different. Private attributes often come paired with getter and setter methods for controlling access to them. Private methods, on the other hand, are usually intended for internal use only, as helper methods for processes which the client does not need to know about."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A private method can be used within the class just like any other method, of course remembering to include the `self` prefix. The following is a simple class representing the recipient of email letters. It includes a private helper method for checking the email address is in a valid format:",
+      "raw_source": "A private method can be used within the class just like any other method, of course remembering to include the `self` prefix. The following is a simple class representing the recipient of email letters. It includes a private helper method for checking the email address is in a valid format:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class Recipient:\n    def __init__(self, name: str, email: str):\n        self.__name = name\n        if self.__check_email(email):\n            self.__email = email\n        else:\n            raise ValueError(\"The email address is not valid\")\n\n    def __check_email(self, email: str):\n        # A simple check: the address must be over 5 characters long \n        # and contain a dot and an @ character\n        return len(email) > 5 and \".\" in email and \"@\" in email",
+      "raw_source": "```python\nclass Recipient:\n    def __init__(self, name: str, email: str):\n        self.__name = name\n        if self.__check_email(email):\n            self.__email = email\n        else:\n            raise ValueError(\"The email address is not valid\")\n\n    def __check_email(self, email: str):\n        # A simple check: the address must be over 5 characters long \n        # and contain a dot and an @ character\n        return len(email) > 5 and \".\" in email and \"@\" in email\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Attempting to call the private method directly causes an error:",
+      "raw_source": "Attempting to call the private method directly causes an error:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "peter = Recipient(\"Peter Emailer\", \"peter@example.com\")\npeter.__check_email(\"someone@example.com\")",
+      "raw_source": "```python\npeter = Recipient(\"Peter Emailer\", \"peter@example.com\")\npeter.__check_email(\"someone@example.com\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "AttributeError: 'Recipient' object has no attribute '__check_email'",
+      "raw_source": "<sample-output>\n\nAttributeError: 'Recipient' object has no attribute '__check_email'\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Within the class the method can be accessed normally, and it makes sense to use it also for setting a new value for the address. Let's add getter and setter methods for the email address:",
+      "raw_source": "Within the class the method can be accessed normally, and it makes sense to use it also for setting a new value for the address. Let's add getter and setter methods for the email address:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class Recipient:\n    def __init__(self, name: str, email: str):\n        self.__name = name\n        if self.__check_email(email):\n            self.__email = email\n        else:\n            raise ValueError(\"The email address is not valid\")\n\n    def __check_email(self, email: str):\n        # A simple check: the address must be over 5 characters long \n        # and contain a dot and an @ character\n        return len(email) > 5 and \".\" in email and \"@\" in email\n\n    @property\n    def email(self):\n        return self.__email\n\n    @email.setter\n    def email(self, email: str):\n        if self.__check_email(email):\n            self.__email = email\n        else:\n            raise ValueError(\"The email address is not valid\")",
+      "raw_source": "```python\nclass Recipient:\n    def __init__(self, name: str, email: str):\n        self.__name = name\n        if self.__check_email(email):\n            self.__email = email\n        else:\n            raise ValueError(\"The email address is not valid\")\n\n    def __check_email(self, email: str):\n        # A simple check: the address must be over 5 characters long \n        # and contain a dot and an @ character\n        return len(email) > 5 and \".\" in email and \"@\" in email\n\n    @property\n    def email(self):\n        return self.__email\n\n    @email.setter\n    def email(self, email: str):\n        if self.__check_email(email):\n            self.__email = email\n        else:\n            raise ValueError(\"The email address is not valid\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "info",
+        "name": "Python scope and namespace"
+      },
+      "inner_content": "We already came across the term _scope_ in [part 6](/part-6/4-scope-of-variables) of this material, and defined it as the sections of a program where a (variable) name is visible. Looking at the term from another direction, it also refers to what is visible from a specific point in program code. Another related term is _namespace_, which refers to the names specifically available within a defined Python unit, such as a class or a function definition.\n\nThe scope within a method is different from the scope within a class, which is again different from the scope at the client code which creates an instance of the class. A method has access to its local variables, but also to the attributes and other methods in the class it is a part of, even if they are private. The class also has access to these, its own members, but it cannot directly access the local variables within its methods. The client code has access to only the public methods and attributes defined in the class, but of course also some other names in the environment in which it exists.\n\nIt may seem counter-intuitive that a class would not have access to all its contents, but it is essential for ensuring integrity. For example, it might make sense to use the same local variable name in various different methods within the same class, if they perform somehow similar functionalities. If the class had direct access to all of the local variables within the methods, they would have to be named differently, or else it would not be clear which version of the variable was meant where. We have already seen with attributes declared with `self` that helper variables should not be made accessible outside a method, so adding the variables as attributes or global variables should not be an option. There has to be a way to keep names in different parts of the program separate, and this is what namespaces are for.\n\nThe idea of a namespace helps with understanding how the same name can happily coexist in different functions, classes or modules at the same time. If a name is specific to a namespace, such as a method definition, it is not directly accessible outside it, and so there is no reason why another namespace could not use the same name. Mastering namespaces and scopes is essential in becoming a proficient programmer, and you will get much practice on this course.",
+      "raw_source": "<text-box variant=\"info\" name=\"Python scope and namespace\">\n\nWe already came across the term _scope_ in [part 6](/part-6/4-scope-of-variables) of this material, and defined it as the sections of a program where a (variable) name is visible. Looking at the term from another direction, it also refers to what is visible from a specific point in program code. Another related term is _namespace_, which refers to the names specifically available within a defined Python unit, such as a class or a function definition.\n\nThe scope within a method is different from the scope within a class, which is again different from the scope at the client code which creates an instance of the class. A method has access to its local variables, but also to the attributes and other methods in the class it is a part of, even if they are private. The class also has access to these, its own members, but it cannot directly access the local variables within its methods. The client code has access to only the public methods and attributes defined in the class, but of course also some other names in the environment in which it exists.\n\nIt may seem counter-intuitive that a class would not have access to all its contents, but it is essential for ensuring integrity. For example, it might make sense to use the same local variable name in various different methods within the same class, if they perform somehow similar functionalities. If the class had direct access to all of the local variables within the methods, they would have to be named differently, or else it would not be clear which version of the variable was meant where. We have already seen with attributes declared with `self` that helper variables should not be made accessible outside a method, so adding the variables as attributes or global variables should not be an option. There has to be a way to keep names in different parts of the program separate, and this is what namespaces are for.\n\nThe idea of a namespace helps with understanding how the same name can happily coexist in different functions, classes or modules at the same time. If a name is specific to a namespace, such as a method definition, it is not directly accessible outside it, and so there is no reason why another namespace could not use the same name. Mastering namespaces and scopes is essential in becoming a proficient programmer, and you will get much practice on this course.\n\n</text-box>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Do I need a private method?",
+      "raw_source": "## Do I need a private method?"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the following example the class `DeckOfCards` is a model for a deck of 52 cards. It contains the helper method `__reset_deck`, which creates a new shuffled deck of cards. The private method is at the moment only called in the constructor method, so the implementation could arguably be placed directly in the constructor. However, using a separate method makes the code easier to read and also makes it possible to access the functionality later in other methods if necessary.",
+      "raw_source": "In the following example the class `DeckOfCards` is a model for a deck of 52 cards. It contains the helper method `__reset_deck`, which creates a new shuffled deck of cards. The private method is at the moment only called in the constructor method, so the implementation could arguably be placed directly in the constructor. However, using a separate method makes the code easier to read and also makes it possible to access the functionality later in other methods if necessary."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from random import shuffle\n\nclass DeckOfCards:\n    def __init__(self):\n        self.__reset_deck()\n\n    def __reset_deck(self):\n        self.__deck = []\n        # Add all 52 cards to the deck\n        suits = [\"spades\", \"hearts\", \"clubs\", \"diamonds\"]\n        for suit in suits:\n            for number in range(1, 14):\n                self.__deck.append((suit, number))\n        # Shuffle the deck\n        shuffle(self.__deck)\n\n    def deal(self, number_of_cards: int):\n        hand = []\n        # Move the top cards in the deck to the hand\n        for i in range(number_of_cards):\n            hand.append(self.__deck.pop())\n        return hand",
+      "raw_source": "```python\nfrom random import shuffle\n\nclass DeckOfCards:\n    def __init__(self):\n        self.__reset_deck()\n\n    def __reset_deck(self):\n        self.__deck = []\n        # Add all 52 cards to the deck\n        suits = [\"spades\", \"hearts\", \"clubs\", \"diamonds\"]\n        for suit in suits:\n            for number in range(1, 14):\n                self.__deck.append((suit, number))\n        # Shuffle the deck\n        shuffle(self.__deck)\n\n    def deal(self, number_of_cards: int):\n        hand = []\n        # Move the top cards in the deck to the hand\n        for i in range(number_of_cards):\n            hand.append(self.__deck.pop())\n        return hand\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's test the class:",
+      "raw_source": "Let's test the class:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "deck = DeckOfCards()\nhand1 = deck.deal(5)\nprint(hand1)\nhand2 = deck.deal(5)\nprint(hand2)",
+      "raw_source": "```python\ndeck = DeckOfCards()\nhand1 = deck.deal(5)\nprint(hand1)\nhand2 = deck.deal(5)\nprint(hand2)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As the hands are randomly generated, the following is only an example of what could be printed out:",
+      "raw_source": "As the hands are randomly generated, the following is only an example of what could be printed out:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[('spades', 7), ('spades', 11), ('hearts', 7), ('diamonds', 3), ('spades', 4)]\n[('clubs', 8), ('spades', 12), ('diamonds', 13), ('clubs', 11), ('spades', 10)]",
+      "raw_source": "<sample-output>\n\n[('spades', 7), ('spades', 11), ('hearts', 7), ('diamonds', 3), ('spades', 4)]\n[('clubs', 8), ('spades', 12), ('diamonds', 13), ('clubs', 11), ('spades', 10)]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Private methods are generally less common than private attributes. As a rule of thumb, a method should be hidden whenever the client has no need to directly access it. This is especially the case when it is possible that the client could adversely affect the integrity of the object by calling the method.",
+      "raw_source": "Private methods are generally less common than private attributes. As a rule of thumb, a method should be hidden whenever the client has no need to directly access it. This is especially the case when it is possible that the client could adversely affect the integrity of the object by calling the method."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Service charge",
+        "tmcname": "part09-12_service_charge"
+      },
+      "inner_content": "Please create a class named `BankAccount` which models a bank account. The class should contain \n\n* a constructor which takes the name of the owner (str), account number (str) and balance (float) as arguments\n* a method `deposit(amount: float)` for depositing money to the account\n* a method `withdraw(amount: float)` for withdrawing money from the account\n* a getter method `balance` which returns the balance of the account\n\nThe class should also contain the private method\n\n* `__service_charge()`, which decreases the balance on the account by one percent. Whenever either of the methods `deposit` or `withdraw` is called, this method should also be called. The service charge is calculated and subtracted only after the actual operation is completed (that is, after the amount specified has been added to or subtracted from the balance).\n\nAll data attributes within the class definition should be private.\n\nYou may use the following code for testing your class:\n\n```python\naccount = BankAccount(\"Randy Riches\", \"12345-6789\", 1000)\naccount.withdraw(100)\nprint(account.balance)\naccount.deposit(100)\nprint(account.balance)\n\n```\n\n<sample-output>\n\n891.0\n981.09\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Service charge' tmcname='part09-12_service_charge'>\n\nPlease create a class named `BankAccount` which models a bank account. The class should contain \n\n* a constructor which takes the name of the owner (str), account number (str) and balance (float) as arguments\n* a method `deposit(amount: float)` for depositing money to the account\n* a method `withdraw(amount: float)` for withdrawing money from the account\n* a getter method `balance` which returns the balance of the account\n\nThe class should also contain the private method\n\n* `__service_charge()`, which decreases the balance on the account by one percent. Whenever either of the methods `deposit` or `withdraw` is called, this method should also be called. The service charge is calculated and subtracted only after the actual operation is completed (that is, after the amount specified has been added to or subtracted from the balance).\n\nAll data attributes within the class definition should be private.\n\nYou may use the following code for testing your class:\n\n```python\naccount = BankAccount(\"Randy Riches\", \"12345-6789\", 1000)\naccount.withdraw(100)\nprint(account.balance)\naccount.deposit(100)\nprint(account.balance)\n\n```\n\n<sample-output>\n\n891.0\n981.09\n\n</sample-output>\n\n\n</programming-exercise>"
+    }
+  ]
+}

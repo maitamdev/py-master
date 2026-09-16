@@ -1,0 +1,16 @@
+{
+  "id": "ex-part13-01_four_robots",
+  "lesson_id": "part13-1-pygame",
+  "part": 13,
+  "tmc_name": "part13-01_four_robots",
+  "title_original": "Four robots",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which draws a robot in each of the four corners of the window. The end result should look like this:\n\n<img src=\"pygame_four.gif\">",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "44c56b984b6a1566f477bc173aaf15d3389bc20ab95ee800585f0f81cd29d0cd",
+  "order": 61
+}

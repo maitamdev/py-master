@@ -1,0 +1,16 @@
+{
+  "id": "ex-part11-15_balanced_brackets",
+  "lesson_id": "part11-3-recursion",
+  "part": 11,
+  "tmc_name": "part11-15_balanced_brackets",
+  "title_original": "Balance all the brackets",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The exercise template contains the function `balanced_brackets` which takes a string as its argument. It checks if the _round_ brackets, or parentheses, within the string are balanced. That is, for each opening bracket `(` there should be a closing bracket `)`, and all pairs of brackets should be matched in order, i.e. the bracket pairs must not be crossed.\n\n```python\ndef balanced_brackets(my_string: str):\n    if len(my_string) == 0:\n        return True\n    if not (my_string[0] == '(' and my_string[-1] == ')'):\n        return False\n\n    # remove first and last character\n    return balanced_brackets(my_string[1:-1])\n\nok = balanced_brackets(\"(((())))\")\nprint(ok)\n\n# there is one closing bracket too many, so this produces False\nok = balanced_brackets(\"()())\")\nprint(ok)\n\n# this one starts with a closing bracket, False again\nok = balanced_brackets(\")()\")\nprint(ok)\n\n# this produces False because the function only handles entirely nested brackets\nok = balanced_brackets(\"()(())\")\nprint(ok)\n```\n\n<sample-output>\n\nTrue\nFalse\nFalse\nFalse\n\n</sample-output>\n\nPlease expand the function so that it also works with square brackets `[]`. The function should also ignore all characters which are not brackets `()` or `[]`. The different types of brackets must be matched correctly in order.\n\nPlease have a look at the examples below::\n\n```python\nok = balanced_brackets(\"([([])])\")\nprint(ok)\n\nok = balanced_brackets(\"(python version [3.7]) please use this one!\")\nprint(ok)\n\n# this is no good, the closing bracket doesn't match\nok = balanced_brackets(\"(()]\")\nprint(ok)\n\n# different types of brackets are mismatched\nok = balanced_brackets(\"([bad egg)]\")\nprint(ok)\n```\n\nNB: the function only needs to handle entirely nested brackets. The string `(x + 1)(y + 1)` should produce `False` as the brackets are not nested within each other.\n\n<sample-output>\n\nTrue\nTrue\nFalse\nFalse\n\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "def balanced_brackets(my_string: str):\n    if len(my_string) == 0:\n        return True\n    if not (my_string[0] == '(' and my_string[-1] == ')'):\n        return False\n\n    # remove first and last character\n    return balanced_brackets(my_string[1:-1])\n\nok = balanced_brackets(\"(((())))\")\nprint(ok)\n\n# there is one closing bracket too many, so this produces False\nok = balanced_brackets(\"()())\")\nprint(ok)\n\n# this one starts with a closing bracket, False again\nok = balanced_brackets(\")()\")\nprint(ok)\n\n# this produces False because the function only handles entirely nested brackets\nok = balanced_brackets(\"()(())\")\nprint(ok)",
+  "grading_data_available": false,
+  "source_hash": "f1edc0a8e22e5cf63864d44e2d8f51a9860b5869f58053382765efc6ac57edbc",
+  "order": 44
+}

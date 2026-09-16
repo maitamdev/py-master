@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-28_seven_brothers",
+  "lesson_id": "part03-4-defining-functions",
+  "part": 3,
+  "tmc_name": "part03-28_seven_brothers",
+  "title_original": "Seven Brothers",
+  "title_vi": "Bảy anh em",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `seven_brothers`. When the function is called, it should print out the names of the seven brothers in alphabetical order, as in the example below. See the [similarly named exercise in part 1](/part-1/1-getting-started#programming-exercise-fix-the-code-seven-brothers) for more details about the brothers.\n\n\n<sample-output>\n\nAapo\nEero\nJuhani\nLauri\nSimeoni\nTimo\nTuomas\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `seven_brothers`. Khi hàm được gọi, nó sẽ in ra tên của bảy anh em theo thứ tự bảng chữ cái, như trong ví dụ dưới đây. Xem [bài tập có tên tương tự ở phần 1](/part-1/1-getting-started#programming-exercise-fix-the-code-seven-brothers) để biết thêm chi tiết về các anh em.\n\n\n<sample-output>\n\nôi\nEero\nJuhani\nLauri\nSimeoni\ntimo\nkhối u\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "f2a112417e14b8bb44653401eea0e5044f69c559fa7fa01f27e02fced7beab32",
+  "order": 23
+}

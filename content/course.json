@@ -1,0 +1,129 @@
+{
+  "id": "python-programming-master",
+  "slug": "programming-master",
+  "name_en": "Python Programming Master",
+  "name_vi": "Khóa học Lập trình Python Toàn diện",
+  "organization": "PYTHON-MASTER",
+  "department": "MaiTamDev",
+  "platform": "PYTHON-MASTER",
+  "source_repository": "",
+  "source_commit": "",
+  "source_license": {
+    "material_template": "MIT License",
+    "course_material": "Creative Commons Non-Commercial Educational Platform"
+  },
+  "imported_at": "2026-09-16T15:46:00+07:00",
+  "total_parts": 14,
+  "total_lessons": 78,
+  "total_exercises": 283,
+  "parts": [
+    {
+      "part": 1,
+      "slug": "part-1",
+      "title_original": "Part 1",
+      "title_vi": "Bắt đầu với Lập trình Python",
+      "lessons_count": 6
+    },
+    {
+      "part": 10,
+      "slug": "part-10",
+      "title_original": "Part 10",
+      "title_vi": "Kế thừa Lớp và Kỹ thuật Hướng đối tượng",
+      "lessons_count": 5
+    },
+    {
+      "part": 11,
+      "slug": "part-11",
+      "title_original": "Part 11",
+      "title_vi": "List Comprehensions và Đệ quy (Recursion)",
+      "lessons_count": 5
+    },
+    {
+      "part": 12,
+      "slug": "part-12",
+      "title_original": "Part 12",
+      "title_vi": "Hàm như Đối số, Generator và Biểu thức chính quy",
+      "lessons_count": 5
+    },
+    {
+      "part": 13,
+      "slug": "part-13",
+      "title_original": "Part 13",
+      "title_vi": "Lập trình Game đồ họa với Pygame",
+      "lessons_count": 5
+    },
+    {
+      "part": 14,
+      "slug": "part-14",
+      "title_original": "Part 14",
+      "title_vi": "Dự án Phát triển Game hoàn chỉnh",
+      "lessons_count": 5
+    },
+    {
+      "part": 2,
+      "slug": "part-2",
+      "title_original": "Part 2",
+      "title_vi": "Cấu trúc Điều kiện và Vòng lặp đơn giản",
+      "lessons_count": 5
+    },
+    {
+      "part": 3,
+      "slug": "part-3",
+      "title_original": "Part 3",
+      "title_vi": "Vòng lặp có điều kiện, Chuỗi và Hàm",
+      "lessons_count": 5
+    },
+    {
+      "part": 4,
+      "slug": "part-4",
+      "title_original": "Part 4",
+      "title_vi": "Hàm nâng cao, Danh sách (List) và Định dạng",
+      "lessons_count": 7
+    },
+    {
+      "part": 5,
+      "slug": "part-5",
+      "title_original": "Part 5",
+      "title_vi": "Tham chiếu, Từ điển (Dictionary) và Tuple",
+      "lessons_count": 5
+    },
+    {
+      "part": 6,
+      "slug": "part-6",
+      "title_original": "Part 6",
+      "title_vi": "Thao tác Tệp tin và Xử lý Ngoại lệ",
+      "lessons_count": 5
+    },
+    {
+      "part": 7,
+      "slug": "part-7",
+      "title_original": "Part 7",
+      "title_vi": "Mô-đun và Các tính năng nâng cao của Python",
+      "lessons_count": 7
+    },
+    {
+      "part": 8,
+      "slug": "part-8",
+      "title_original": "Part 8",
+      "title_vi": "Lập trình Hướng đối tượng: Lớp và Phương thức",
+      "lessons_count": 6
+    },
+    {
+      "part": 9,
+      "slug": "part-9",
+      "title_original": "Part 9",
+      "title_vi": "Đối tượng, Thuộc tính và Đóng gói (Encapsulation)",
+      "lessons_count": 7
+    }
+  ],
+  "supabase_target_tables": [
+    "courses",
+    "modules",
+    "lessons",
+    "lesson_blocks",
+    "exercises",
+    "exercise_hints",
+    "assets",
+    "glossary"
+  ]
+}

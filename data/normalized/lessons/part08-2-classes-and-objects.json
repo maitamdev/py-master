@@ -1,0 +1,788 @@
+{
+  "id": "part08-2-classes-and-objects",
+  "part": 8,
+  "part_slug": "part-8",
+  "slug": "2-classes-and-objects",
+  "is_part_index": false,
+  "title_original": "Classes and objects",
+  "title_vi": "",
+  "path": "/part-8/2-classes-and-objects",
+  "source_path": "data/part-8/2-classes-and-objects.md",
+  "source_hash": "cc16d94370bb6b59813326d2d15eca7557edec9afef268d2a7fd973de750a080",
+  "order": 1,
+  "blocks_count": 43,
+  "blocks": [
+    {
+      "id": "blk-part08-2-classes-and-objects-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "7fa3f46cab20ba6f11ea5169bd230bfb30cb3b5a0c31643c86d71a666bf25d95",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know what a class is\n- You will understand what the connection between a class and an object is\n- You will know what is meant by object oriented programming"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "4140a6db73ec80cda3ec0d735f85319a30f46b6895ee54c4a4fa11fa0e099f24",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the previous section we worked with lists, tuples, dictionaries and strings. These are all rather special cases in Python programming. Python syntax features a unique, pre-defined method of declaring an object belonging to each of these types:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0003",
+      "type": "code",
+      "order": 3,
+      "source_hash": "1d370faad538f5fd7b1c1c389249133278d3dc02cf721ae4f5655b04a3a7d401",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# Lists are declared with square brackets\nmy_list = [1,2,3]\n\n# Strings are declared with quotation marks\nmy_string = \"Hi there!\"\n\n# Dictionaries are declared with curly brackets\nmy_dict = {\"one\": 1, \"two:\": 2}\n\n# Tuples are declared with parentheses\nmy_tuple = (1,2,3)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# Lists are declared with square brackets\nmy_list = [1,2,3]\n\n# Strings are declared with quotation marks\nmy_string = \"Hi there!\"\n\n# Dictionaries are declared with curly brackets\nmy_dict = {\"one\": 1, \"two:\": 2}\n\n# Tuples are declared with parentheses\nmy_tuple = (1,2,3)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "1d370faad538f5fd7b1c1c389249133278d3dc02cf721ae4f5655b04a3a7d401",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "66e99a9034e122e47c56d3ee797f85736e869aca2b1adbcf22f0b4697b69e31b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When some other type of object is declared, we need to call a special initialization function called a _constructor_. Let's have a look at working with fractions through the `Fraction` class."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "5a40a5c80ff12b347c19fd57aa6ed721d8c359d4351c0b1a18eec640256ab3e6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# we are using the class Fraction from the module fractions\nfrom fractions import Fraction\n\n# create some new fractions\nhalf = Fraction(1,2)\n\nthird = Fraction(1,3)\n\nanother = Fraction(3,11)\n\n# print these out\nprint(half)\nprint(third)\nprint(another)\n\n# Fractions can be added together, for example\nprint(half + third)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# we are using the class Fraction from the module fractions\nfrom fractions import Fraction\n\n# create some new fractions\nhalf = Fraction(1,2)\n\nthird = Fraction(1,3)\n\nanother = Fraction(3,11)\n\n# print these out\nprint(half)\nprint(third)\nprint(another)\n\n# Fractions can be added together, for example\nprint(half + third)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5a40a5c80ff12b347c19fd57aa6ed721d8c359d4351c0b1a18eec640256ab3e6",
+        "length_lines": 17
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0006",
+      "type": "sample_output",
+      "order": 6,
+      "source_hash": "a03b989da3b38017985dc62ebaffd380fa558a9a50a138dbaaa78b7079b3fd47",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "1/2\n1/3\n3/11\n5/6"
+      },
+      "translation": {
+        "language": "text",
+        "content": "1/2\n1/3\n3/11\n5/6"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n1/2\n1/3\n3/11\n5/6\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "0869c8f099cc188f6b4c73d921ce0782fa8971d4691a89be2b482b5644187ce8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As you can see above, constructor method calls look a little different than the normal method calls we have come across before. For one, they are not attached to any object with the dot notation (as the constructor call is needed to create an object in the first place). The constructor method is also capitalized: `half = Fraction(1,2)`. Let's have a closer look at how objects are constructed by getting familiar with the concept of the _class_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0008",
+      "type": "heading",
+      "order": 8,
+      "source_hash": "35a3d098f2fd455cc15c217b6b979f9863f22afd04600027accae1d8f8b94654",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A class is the blueprint of an object"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "40c52f958a8b1ac357764b039cd431a15bcf60f1e5224d06dc9ddd25aa9343f1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We have already used the term _class_ in the material many times. For instance, in the example above we imported the `Fraction` class from the module `fractions`. New fraction objects were created by calling the _constructor_ method of the `Fraction` class."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "ddd3d2770aaaa03e9d364c85d326298997f7d3c3f36483642f3f4b3996a346d3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A class definition contains the structure and functionalities of any object which represents it. That is why classes are sometimes referred to as the blueprints of objects. So, a class definition tells you what kind of data an object contains, and defines also the methods which can be used on the object. _Object oriented programming_ refers to a programming paradigm where the functionality of the program is tied into the use of classes and objects created based on them."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "e98b204fd5b808ac419fb72eeb098294a67738023a0cafa2665b424c074d169a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A single class definition can be used to create multiple objects. As mentioned before, objects are independent. Changes made to one object generally do not affect the other objects representing the same class. Each object has its own unique set of data attributes. It might be helpful to consider this simplification of the class-object relationship:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0012",
+      "type": "list",
+      "order": 12,
+      "source_hash": "2257054f49a752559a6ef01380ba3c7765c37daf0d5389d390c0a2eaf9909a2a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* a class defines the variables\n* when an object is created, those variables are assigned values"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "172d90c31cfb05ddefbf379c60f8b25fbe8ce9a98e56ed1da745a40e323c2e0b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "So, we can use an object of type `Fraction` to access the numerator and denominator of a fractional number:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "c650507103a8ec945cb29cf19b8eaf5e744451525d2021deb6f2ff129cbc64d7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from fractions import Fraction\n\nnumber = Fraction(2,5)\n\n# Print the numerator\nprint(number.numerator)\n\n# ...and the denominator\nprint(number.denominator)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from fractions import Fraction\n\nnumber = Fraction(2,5)\n\n# Print the numerator\nprint(number.numerator)\n\n# ...and the denominator\nprint(number.denominator)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c650507103a8ec945cb29cf19b8eaf5e744451525d2021deb6f2ff129cbc64d7",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0015",
+      "type": "sample_output",
+      "order": 15,
+      "source_hash": "05b6a35fb70bc2b734e11eaefb4692bc082651030133fedc7fc0d759efb71e6d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "2\n5"
+      },
+      "translation": {
+        "language": "text",
+        "content": "2\n5"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n2\n5\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "74bcbcdcd4e7f1d83d9748aabf30ad0ef65d35c417d1d7467055bccbc00111f7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `Fraction` class definition contains declarations for the variables `numerator` and `denominator`. Each object created based on the class has its own specific values assigned to these variables."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "108df2ca62f0072453eb88d4f715160d5f611fcd3d88b20a41ddd6598c16aa7d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Similarly, objects created based on the `date` class each contain their own unique values for the year, month and day of the date:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0018",
+      "type": "code",
+      "order": 18,
+      "source_hash": "a6c458a5f38624818095af86632034fdb788edf182083ed0414aed64e8b23167",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from datetime import date\n\nxmas_eve = date(2020, 12, 24)\nmidsummer = date(2020, 6, 20)\n\n# print only the month attribute of both objects\nprint(xmas_eve.month)\nprint(midsummer.month)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from datetime import date\n\nxmas_eve = date(2020, 12, 24)\nmidsummer = date(2020, 6, 20)\n\n# print only the month attribute of both objects\nprint(xmas_eve.month)\nprint(midsummer.month)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a6c458a5f38624818095af86632034fdb788edf182083ed0414aed64e8b23167",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0019",
+      "type": "sample_output",
+      "order": 19,
+      "source_hash": "c9bf7662fce57a583968ac479cfa5cec04af0618d6873fc285611c1bb4658b8b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "12\n6"
+      },
+      "translation": {
+        "language": "text",
+        "content": "12\n6"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n12\n6\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "243773f49a35c3bfd6c4ad507bfc549406dd9948c56adb7f48e5b30cfb0a251a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `date` class definition contains declarations of the `year`, `month` and `day` variables. When a new `date` object is created based on the class, these variables are assigned values. Each object has its own unique values assigned to these variables."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0021",
+      "type": "heading",
+      "order": 21,
+      "source_hash": "2d8696b50d767ec026204d2f554f9057c1f701e1a9a70eb0c143f2bba3ab4bd6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Functions which work with objects"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "832408f1fa251d13d5164c280aec95c1729e19d8c7364f4014492b2aa72e2f1b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Passing an object as an argument to a function should be familiar to you by now, as we have done so many times on this course so far. Let's have a look at the following example. Here we have a function which checks if the `date` object passed as an argument falls on a weekend:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0023",
+      "type": "code",
+      "order": 23,
+      "source_hash": "a5d273af5c6ee64fb679e9c76cba3fe88409319709267598d175e4b68493022e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def is_it_weekend(my_date: date):\n    weekday = my_date.isoweekday()\n    return weekday == 6 or weekday == 7"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def is_it_weekend(my_date: date):\n    weekday = my_date.isoweekday()\n    return weekday == 6 or weekday == 7"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a5d273af5c6ee64fb679e9c76cba3fe88409319709267598d175e4b68493022e",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "25427b32ca6d96f007e14c01b279d31dba58124f6ea2eca56e0e181a681e1899",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This function uses the method [isoweekday](https://docs.python.org/3/library/datetime.html#datetime.date.isoweekday), which is defined in the `date` class definition, and returns an integer value so that if the date given is a Monday, it returns 1, and if it is a Tuesday, it returns 2, and so forth."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "63d3cd70acb1be5e75d90704d47852c61d76f503f00ba1c569ddde097e7b5ecb",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You can use the above function like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0026",
+      "type": "code",
+      "order": 26,
+      "source_hash": "79799543ca8919ee61c1615a4750cc3d35f621d173af6d413d9f311214a6d6f2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "xmas_eve = date(2020, 12, 24)\nmidsummer = date(2020, 6, 20)\n\nprint(is_it_weekend(xmas_eve))\nprint(is_it_weekend(midsummer))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "xmas_eve = date(2020, 12, 24)\nmidsummer = date(2020, 6, 20)\n\nprint(is_it_weekend(xmas_eve))\nprint(is_it_weekend(midsummer))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "79799543ca8919ee61c1615a4750cc3d35f621d173af6d413d9f311214a6d6f2",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0027",
+      "type": "sample_output",
+      "order": 27,
+      "source_hash": "2c7384f3aca5211a0210afcd37ca15d5fb380774af1f8fc09f7455d08801fabf",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "False\nTrue"
+      },
+      "translation": {
+        "language": "text",
+        "content": "False\nTrue"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nFalse\nTrue\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0028",
+      "type": "heading",
+      "order": 28,
+      "source_hash": "ea2a0fd8db25399e536bd26c348c39d45840ce84ce26cba920d9ab18da9f05a2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Methods vs variables"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "fad145e544f72ff3b5d2e891b94b3b3f9062232aad1ff094a88acb3d73b03e8e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When working with an object of type `date` you may notice there is a slight difference between how the variables contained in the object are accessed, as opposed to how the methods attached to the objects are used:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0030",
+      "type": "code",
+      "order": 30,
+      "source_hash": "2ba57168130afebc3b5eae04ef1a28ed9262197b68da7d59925fc68efedd505c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_date = date(2020, 12, 24)\n\n# calling a method\nweekday = my_date.isoweekday()\n\n# accessing a variable\nmy_month = my_date.month\n\nprint(\"The day of the week:\", weekday)\nprint(\"The month:\", my_month)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_date = date(2020, 12, 24)\n\n# calling a method\nweekday = my_date.isoweekday()\n\n# accessing a variable\nmy_month = my_date.month\n\nprint(\"The day of the week:\", weekday)\nprint(\"The month:\", my_month)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2ba57168130afebc3b5eae04ef1a28ed9262197b68da7d59925fc68efedd505c",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0031",
+      "type": "sample_output",
+      "order": 31,
+      "source_hash": "982af7c34b6b0c164c9c2ad8484edcdafc1d425883534ee2ddcbec62155ef679",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The day of the week: 4\nThe month: 12"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The day of the week: 4\nThe month: 12"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe day of the week: 4\nThe month: 12\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "f20a0ba4c9c38e5c17befc533e67fc53a4eb65f562abda1688a1589c1efe860e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The day of the week the date falls on is available through the _method_ `isoweekday`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0033",
+      "type": "code",
+      "order": 33,
+      "source_hash": "a7de51857ea219892ccc92b04663aa622310c3488b36d66caddafc6d158d57ad",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "weekday = my_date.isoweekday()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "weekday = my_date.isoweekday()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a7de51857ea219892ccc92b04663aa622310c3488b36d66caddafc6d158d57ad",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "5f88dbfbc52f4fb50bdb86377d61485e6cb1adbec5ec000ef39b6653fae567c9",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This is a method call, so there are parentheses after the name of the method. Leaving the parentheses out does not cause an error, but the results are weird:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0035",
+      "type": "code",
+      "order": 35,
+      "source_hash": "19a2af089a7f2a089dada992f492ff6d26a2c69aa0a245e328354b3ce88ac4b8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "weekday =  my_date.isoweekday\nprint(\"The day of the week:\", weekday)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "weekday =  my_date.isoweekday\nprint(\"The day of the week:\", weekday)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "19a2af089a7f2a089dada992f492ff6d26a2c69aa0a245e328354b3ce88ac4b8",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0036",
+      "type": "sample_output",
+      "order": 36,
+      "source_hash": "1eaf0bff7ecce0b29b01c28b4607f5ca56f5bddde361c7eef59667064ac4eeba",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The day of the week: <built-in method isoweekday of datetime.date object at 0x10ed66450>"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The day of the week: <built-in method isoweekday of datetime.date object at 0x10ed66450>"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe day of the week: <built-in method isoweekday of datetime.date object at 0x10ed66450>\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "249237f3eadb43d3cf4f6f2ca7caad009cbea78b8a2828de849b35661777446c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The month of a `date` object is a variable, so the value attached can be accessed with a _reference_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0038",
+      "type": "code",
+      "order": 38,
+      "source_hash": "e02fa749332447db4e16b374225ed39d5a06321fd7c5b8439e15fe9c861566fb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_month = my_date.month"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_month = my_date.month"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e02fa749332447db4e16b374225ed39d5a06321fd7c5b8439e15fe9c861566fb",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "800bd260ad17c57d1460a1b0812a93c1919c11afd8cf3239e1c6b7eb43ccf6d1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Notice there are _no parentheses_ here. Adding parentheses _would_ cause an error:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0040",
+      "type": "code",
+      "order": 40,
+      "source_hash": "335a8bca437d40909b5d718b55c311a50dcb40ddbce0f414db46b68354b5d3a3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_month = my_date.month()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_month = my_date.month()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "335a8bca437d40909b5d718b55c311a50dcb40ddbce0f414db46b68354b5d3a3",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0041",
+      "type": "sample_output",
+      "order": 41,
+      "source_hash": "ec6f3c618576c792a6004125f0aefe2cb6843121a6bfca02b30e7273bd25f092",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nTypeError: 'int' object is not callable"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nTypeError: 'int' object is not callable"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nTypeError: 'int' object is not callable\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0042",
+      "type": "exercise",
+      "order": 42,
+      "source_hash": "8ec605a6d737b1288ec07fa4704b9cf817b981d295de3c40c970409e93859f18",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `list_years(dates: list)` which takes a list of `date` type objects as its argument. The function should return a new list, which contains the _years in the original list in chronological order_, from earliest to latest.\n\nAn example of the function in action:\n\n```python\ndate1 = date(2019, 2, 3)\ndate2 = date(2006, 10, 10)\ndate3 = date(1993, 5, 9)\n\nyears = list_years([date1, date2, date3])\nprint(years)\n```\n\n<sample-output>\n\n[1993, 2006, 2019]\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part08-03_list_years",
+        "exercise_type": "programming-exercise",
+        "name": "List of years",
+        "tmc_name": "part08-03_list_years",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part08-2-classes-and-objects-0043",
+      "type": "exercise",
+      "order": 43,
+      "source_hash": "b5dfa6556658c980af29dd7145dbbb49601b8b388fec9a58a09147340963bc13",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains a pre-defined `ShoppingList` class, which can be used to model a shopping list. Your task is to add a method to the class definition. You do not need to change any methods already defined.\n\nAssuming we have a `ShoppingList` object referenced in a variable named `shopping_list`, the object can be handled with the following methods:\n\n```python\n\nprint(shopping_list.number_of_items())\nprint(shopping_list.item(1))\nprint(shopping_list.amount(1))\nprint(shopping_list.item(2))\nprint(shopping_list.amount(2))\n\n```\n\n<sample-output>\n\n2\nBananas\n4\nMilk\n1\n\n</sample-output>\n\nWe can also do this:\n\n```python\n# the items on the shopping list are indexed from 1\nfor i in range(1, shopping_list.number_of_items()+1):\n    item = shopping_list.item(i)\n    amount = shopping_list.amount(i)\n    print(f\"{item}: {amount} units\")\n```\n\n\n<sample-output>\n\nBananas 4 units\nMilk 1 units\n\n</sample-output>\n\nAs you can see, a `ShoppingList` works a bit like a normal list, but it is accessed via the methods provided by the ShoppingList class. Unlike normal Python lists, indexing starts from 1, not 0.\n\nPlease write a function named `total_units(my_list: ShoppingList)`, which takes a `ShoppingList` type object as its argument. The function should calculate the total number of units listed, and return the value.\n\nYou can use the following code to test your function:\n\n```python\nif __name__ == \"__main__\":\n    my_list = ShoppingList()\n    my_list.add(\"bananas\", 10)\n    my_list.add(\"apples\", 5)\n    my_list.add(\"pineapple\", 1)\n\n    print(total_units(my_list))\n```\n\n<sample-output>\n\n16\n\n</sample-output>\n\n**NB:** the definition of the `ShoppingList` class is already included in the exercise template. You do not need to use an `import` statement to import it, unlike in the examples above with the Python standard library classes `Fraction` and `date`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part08-04_shopping_list",
+        "exercise_type": "programming-exercise",
+        "name": "Shopping list",
+        "tmc_name": "part08-04_shopping_list",
+        "height": null
+      }
+    }
+  ]
+}

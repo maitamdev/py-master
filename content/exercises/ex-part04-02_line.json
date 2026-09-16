@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-02_line",
+  "lesson_id": "part04-2-more-functions",
+  "part": 4,
+  "tmc_name": "part04-02_line",
+  "title_original": "Line",
+  "title_vi": "Đường kẻ",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `line`, which takes two arguments: an integer and a string. The function prints out a line of text, the length of which is specified by the first argument. The character used to draw the line should be the first character in the second argument. If the second argument is an empty string, the line should consist of stars.\n\nAn example of expected behaviour:\n\n```python\nline(7, \"%\")\nline(10, \"LOL\")\nline(3, \"\")\n```\n\n<sample-output>\n\n<pre>\n%%%%%%%\nLLLLLLLLLL\n***\n</pre>\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `line`, hàm này nhận hai đối số: một số nguyên và một chuỗi. Hàm in ra một dòng văn bản, độ dài của dòng này được chỉ định bởi đối số đầu tiên. Ký tự dùng để vẽ đường thẳng phải là ký tự đầu tiên trong đối số thứ hai. Nếu đối số thứ hai là một chuỗi trống thì dòng đó sẽ bao gồm các ngôi sao.\n\nMột ví dụ về hành vi dự kiến:\n\n```python\nline(7, \"%\")\nline(10, \"LOL\")\nline(3, \"\")\n```\n\n<sample-output>\n\n<pre>\n%%%%%%%%\nllllllllll\n***\n</pre>\n\n</sample-output>",
+  "starter_code": "line(7, \"%\")\nline(10, \"LOL\")\nline(3, \"\")",
+  "grading_data_available": false,
+  "source_hash": "ab08364c1007e9dae837608201e8927639a38dd6bff84dfdcb764694cfe92fe3",
+  "order": 24
+}

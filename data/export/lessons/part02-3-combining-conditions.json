@@ -1,0 +1,753 @@
+{
+  "id": "part02-3-combining-conditions",
+  "part": 2,
+  "part_slug": "part-2",
+  "slug": "3-combining-conditions",
+  "is_part_index": false,
+  "title_original": "Combining conditions",
+  "title_vi": "Điều kiện kết hợp",
+  "path": "/part-2/3-combining-conditions",
+  "source_path": "data/part-2/3-combining-conditions.md",
+  "source_hash": "cda523ae65162a9b22c9fd6283b83389686783c0d208ce0e4d2a63b0ab4323ca",
+  "order": 1,
+  "blocks_count": 40,
+  "blocks": [
+    {
+      "id": "blk-part02-3-combining-conditions-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "324230cb2d5030838d73ea12ee37678c14d01213b7f7388420302b2afdb547de",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know how to use the operators `and`, `or` and `not` in conditions\n- You will be able to write nested conditionals"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ biết cách sử dụng các toán tử `and`, `or` và `not` trong điều kiện\n- Bạn sẽ có thể viết các điều kiện lồng nhau"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0002",
+      "type": "heading",
+      "order": 2,
+      "source_hash": "d811d885e76a65ad4166863d6378f6e932f5faddc1c0013edc721b0238234602",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Logical operators"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Toán tử logic"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "bc0940ef7a8b20599eb9a96f4d284e2a8525dc064014cb7d845aba3dd857101a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You can combine conditions with the logical operators `and` and `or`. The operator `and` specifies that all the given conditions must be true at the same time. The operator `or` specifies that at least one of the given conditions must be true."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn có thể kết hợp các điều kiện với toán tử logic `and` và `or`. Toán tử `and` chỉ định rằng tất cả các điều kiện đã cho phải đúng cùng một lúc. Toán tử `or` chỉ định rằng ít nhất một trong các điều kiện đã cho phải đúng."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "e32345eaf4e539a33de54e123ddde6fe9c1bea5605bc89f8f823d16a4ec75780",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "For example, the condition `number >= 5 and number <= 8` determines that `number` must simultaneously be at least 5 and at most 8. That is, it must be between 5 and 8."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ: điều kiện `number >= 5 and number <= 8` xác định rằng `number` phải đồng thời có ít nhất là 5 và nhiều nhất là 8. Nghĩa là, nó phải nằm trong khoảng từ 5 đến 8."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "0407d18b18c6f9240193186559e47fc720f27c34b4c6819b0409d25e241046ff",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\nif number >= 5 and number <= 8:\n    print(\"The number is between 5 and 8\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\nif number >= 5 and number <= 8:\n    print(\"The number is between 5 and 8\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "0407d18b18c6f9240193186559e47fc720f27c34b4c6819b0409d25e241046ff",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "7919040fc74206cda9c977b08db78b7888bbc9507d354e251e8f4c52ae6bf809",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Meanwhile, the condition `number < 5 or number > 8` determines that `number` must be either less than 5 or greater than 8. That is, it must not be within the range of 5 to 8."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong khi đó, điều kiện `number < 5 or number > 8` xác định `number` phải nhỏ hơn 5 hoặc lớn hơn 8. Nghĩa là nó không được nằm trong phạm vi từ 5 đến 8."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0007",
+      "type": "code",
+      "order": 7,
+      "source_hash": "bd1f3d2c946bcf9e600b452ad130028926a353bf35698c1679d96a489fd0aa78",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\nif number < 5 or number > 8:\n    print(\"The number is not within the range of 5 to 8\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\nif number < 5 or number > 8:\n    print(\"The number is not within the range of 5 to 8\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "bd1f3d2c946bcf9e600b452ad130028926a353bf35698c1679d96a489fd0aa78",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "d07d5c5c983975fef35bc45497d4194e78d726b40ca3603b34aba4e9f93db114",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following truth table contains the behaviour of these operators in different situations:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bảng chân lý sau đây chứa hành vi của các toán tử này trong các tình huống khác nhau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "6e1b9345d170953197d18a9ac577d99ffd1c3295d68318c3542b47a0843fd00e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "a     | b     | a and b | a or b |\n:----:|:-----:|:-------:|:------:|\nFalse | False | False   | False  |\nTrue  | False | False   | True   |\nFalse | True  | False   | True   |\nTrue  | True  | True    | True   |"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "một | b | a và b | a hoặc b |\n:----:|:-----:|:-------:|:------:|\nSai | Sai | Sai | Sai |\nĐúng | Sai | Sai | Đúng |\nSai | Đúng | Sai | Đúng |\nĐúng | Đúng | Đúng | Đúng |"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "302afa435eed300af7525427d5ad92b9d126d361c2a501e83ea48e1c52467f09",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Sometimes it is necessary to know if something is _not_ true. The operator `not` negates a condition:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đôi khi cần phải biết liệu điều gì đó có phải là không đúng hay không. Toán tử `not` phủ định một điều kiện:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "e5903255f6f04cdb2f07099990d8fc1e80fe5c3e0f1b8038c5d4631db6966b05",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "a     | not a\n:----:|:----:\nTrue  | False\nFalse | True"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "một | không phải một\n:----:|:----:\nĐúng | sai\nSai | ĐÚNG VẬY"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "5b7a1d4350b23494e6207696426a1ee999687e4b7825a4ef78f4875fd478f888",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The above example with the range of 5 to 8 _excluded_ could also be programmed like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ trên có phạm vi từ 5 đến 8 _excluded_ cũng có thể được lập trình như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0013",
+      "type": "code",
+      "order": 13,
+      "source_hash": "2fa7f71e13db01ac9699199fc0d8f126f26b78830ee0665db60d9d6d6eb7c3b7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\nif not (number >= 5 and number <= 8):\n    print(\"The number is not within the range of 5 to 8\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\nif not (number >= 5 and number <= 8):\n    print(\"The number is not within the range of 5 to 8\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2fa7f71e13db01ac9699199fc0d8f126f26b78830ee0665db60d9d6d6eb7c3b7",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "cd77af7203e4d5a7f731e207b8a944290b843dbda90fe10bf1d750eacfdd5e98",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Especially in programming, logical operators are often called _Boolean operators_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đặc biệt trong lập trình, các toán tử logic thường được gọi là _toán tử Boolean_."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0015",
+      "type": "text_box",
+      "order": 15,
+      "source_hash": "cd02f0b42d31601ed1a4d869481953bb211811780211374a077462be5904e302",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The condition `x >= a and x <= b` is a very common way of checking whether the number `x` falls within the range of `a` to `b`. An expression with this structure works the same way in most programming languages.\n\nPython also allows a simplified notation for combining conditions: `a <= x <= b` achieves the same result as the longer version using `and`. This shorter notation might be more familiar from mathematics, but it is not very widely used in Python programming, possibly because very few other programming languages have a similar shorthand."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điều kiện `x >= a and x <= b` là cách rất phổ biến để kiểm tra xem số `x` có nằm trong phạm vi `a` đến `b` hay không. Biểu thức có cấu trúc này hoạt động theo cách tương tự trong hầu hết các ngôn ngữ lập trình.\n\nPython cũng cho phép ký hiệu đơn giản hóa để kết hợp các điều kiện: `a <= x <= b` đạt được kết quả tương tự như phiên bản dài hơn sử dụng `and`. Ký hiệu ngắn hơn này có thể quen thuộc hơn trong toán học, nhưng nó không được sử dụng rộng rãi trong lập trình Python, có thể vì rất ít ngôn ngữ lập trình khác có cách viết tắt tương tự."
+      },
+      "metadata": {
+        "variant": "hint",
+        "name_original": "Simplified combined conditions",
+        "name_vi": "",
+        "attributes": {
+          "variant": "hint",
+          "name": "Simplified combined conditions"
+        }
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0016",
+      "type": "heading",
+      "order": 16,
+      "source_hash": "89cde4dd20dc0777138b71a06f3afe3b2e41d064b52f446859422c3078f630d4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Combining and chaining conditions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điều kiện kết hợp và chuỗi"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "69b8c3b55b1454aee509a46ffff8b8cd9c72cecb73f87472654a24c76d9f8c7c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following program asks the user to type in four numbers. It then works out which of the four is the greatest, with the help of some conditions:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình sau đây yêu cầu người dùng nhập bốn số. Sau đó, nó sẽ tìm ra cái nào trong bốn cái là lớn nhất, với sự trợ giúp của một số điều kiện:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0018",
+      "type": "code",
+      "order": 18,
+      "source_hash": "7dc1486b24f004d9846b4c5770f7e2e2a7416560b9e947bb98fca9af469dafcd",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "n1 = int(input(\"Number 1: \"))\nn2 = int(input(\"Number 2: \"))\nn3 = int(input(\"Number 3: \"))\nn4 = int(input(\"Number 4: \"))\n\nif n1 > n2 and n1 > n3 and n1 > n4:\n    greatest = n1\nelif n2 > n3 and n2 > n4:\n    greatest = n2\nelif n3 > n4:\n    greatest = n3\nelse:\n    greatest = n4\n\nprint(f\" {greatest} is the greatest of the numbers.\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "n1 = int(input(\"Number 1: \"))\nn2 = int(input(\"Number 2: \"))\nn3 = int(input(\"Number 3: \"))\nn4 = int(input(\"Number 4: \"))\n\nif n1 > n2 and n1 > n3 and n1 > n4:\n    greatest = n1\nelif n2 > n3 and n2 > n4:\n    greatest = n2\nelif n3 > n4:\n    greatest = n3\nelse:\n    greatest = n4\n\nprint(f\" {greatest} is the greatest of the numbers.\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "7dc1486b24f004d9846b4c5770f7e2e2a7416560b9e947bb98fca9af469dafcd",
+        "length_lines": 15
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0019",
+      "type": "sample_output",
+      "order": 19,
+      "source_hash": "d03f2e8e89f2dac2efe950ac01f277a87d07b1d1b4517afd63ab2a5333abdb33",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Number 1: **2**\nNumber 2: **4**\nNumber 3: **1**\nNumber 4: **1**\n4 is the greatest of the numbers."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Number 1: **2**\nNumber 2: **4**\nNumber 3: **1**\nNumber 4: **1**\n4 is the greatest of the numbers."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nNumber 1: **2**\nNumber 2: **4**\nNumber 3: **1**\nNumber 4: **1**\n4 is the greatest of the numbers.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "adca3a24206830ef7104d18c16866b7c7539fa3593df5809ebce22fcc00a9364",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the above example the first condition `n1 > n2 and n1 > n3 and n1 > n4` is true only if all three conditions within are true."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong ví dụ trên, điều kiện đầu tiên `n1 > n2 and n1 > n3 and n1 > n4` chỉ đúng nếu cả ba điều kiện bên trong đều đúng."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0021",
+      "type": "exercise",
+      "order": 21,
+      "source_hash": "29a6c410fd989f12458fa44cbc7c6edd34dc70807138259dc923ccb1e0eaf274",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks for the user's age. If the age is not plausible, that is, it is under 5 or something that can't be an actual human age, the program should print out a comment.\n\nHave a look at the examples of expected behaviour below to figure out which comment is applicable in each case.\n\n<sample-output>\n\nWhat is your age? **13**\nOk, you're 13 years old\n\n</sample-output>\n\n<sample-output>\n\nWhat is your age? **2**\nI suspect you can't write quite yet...\n\n</sample-output>\n\n<sample-output>\n\nWhat is your age? **-4**\nThat must be a mistake\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình hỏi tuổi của người dùng. Nếu độ tuổi không hợp lý, tức là dưới 5 tuổi hoặc độ tuổi nào đó không thể là tuổi thực tế của con người, thì chương trình sẽ in ra một nhận xét.\n\nHãy xem các ví dụ về hành vi dự kiến ​​bên dưới để tìm ra nhận xét nào có thể áp dụng trong từng trường hợp.\n\n<sample-output>\n\nTuổi của bạn là bao nhiêu? **13**\nĐược rồi, bạn 13 tuổi\n\n</sample-output>\n\n<sample-output>\n\nTuổi của bạn là bao nhiêu? **2**\nTôi nghi ngờ bạn chưa thể viết được...\n\n</sample-output>\n\n<sample-output>\n\nTuổi của bạn là bao nhiêu? **-4**\nĐó chắc chắn là một sai lầm\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-08_age_check",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Age check",
+        "tmc_name": "part02-08_age_check",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0022",
+      "type": "exercise",
+      "order": 22,
+      "source_hash": "5668390704c592463d84af4fe17beda32e89ee5af712656a7c234ffb9e925247",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks for the user's name. If the name is Huey, Dewey or Louie, the program should recognise the user as one of Donald Duck's nephews.\n\nIn a similar fashion, if the name is Morty or Ferdie, the program should recognise the user as one of Mickey Mouse's nephews.\n\nSome examples:\n\n<sample-output>\n\nPlease type in your name: **Morty**\nI think you might be one of Mickey Mouse's nephews.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in your name: **Huey**\nI think you might be one of Donald Duck's nephews.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in your name: **Ken**\nYou're not a nephew of any character I know of.\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình hỏi tên người dùng. Nếu tên là Huey, Dewey hoặc Louie, chương trình sẽ nhận dạng người dùng là một trong những cháu trai của Vịt Donald.\n\nTheo cách tương tự, nếu tên là Morty hoặc Ferdie, chương trình sẽ nhận dạng người dùng là một trong những cháu trai của Chuột Mickey.\n\nMột số ví dụ:\n\n<sample-output>\n\nVui lòng nhập tên của bạn: **Morty**\nTôi nghĩ bạn có thể là một trong những cháu trai của chuột Mickey.\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập tên của bạn: **Huey**\nTôi nghĩ bạn có thể là một trong những cháu trai của Donald Duck.\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập tên của bạn: **Ken**\nBạn không phải là cháu trai của bất kỳ nhân vật nào mà tôi biết.\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-09_nephews",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Nephews",
+        "tmc_name": "part02-09_nephews",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0023",
+      "type": "exercise",
+      "order": 23,
+      "source_hash": "667cdac62b72954ed814c6a197add3d1ea463eef51772d7c4fa08212e86c10f2",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The table below outlines the grade boundaries on a certain university course. Please write a program which asks for the amount of points received and then prints out the grade attained according to the table.\n\npoints   | grade\n:--:|:----:\n< 0 |  impossible!\n0-49 | fail\n50-59 | 1\n60-69 | 2\n70-79 | 3\n80-89| 4\n90-100 | 5\n\\> 100 |  impossible!\n\nSome examples:\n\n<sample-output>\n\nHow many points [0-100]: **37**\nGrade: fail\n\n</sample-output>\n\n<sample-output>\n\nHow many points [0-100]: **76**\nGrade: 3\n\n</sample-output>\n\n<sample-output>\n\nHow many points [0-100]: **-3**\nGrade: impossible!\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bảng dưới đây phác thảo các ranh giới cấp lớp trong một khóa học đại học nhất định. Hãy viết chương trình hỏi số điểm đạt được rồi in ra số điểm đạt được theo bảng.\n\nđiểm | lớp\n:--:|:----:\n< 0 |  không thể nào!\n0-49 | thất bại\n50-59 | 1\n60-69 | 2\n70-79 | 3\n80-89| 4\n90-100 | 5\n\\> 100 |  không thể nào!\n\nMột số ví dụ:\n\n<sample-output>\n\nBao nhiêu điểm [0-100]: **37**\nLớp: trượt\n\n</sample-output>\n\n<sample-output>\n\nCó bao nhiêu điểm [0-100]: **76**\nLớp: 3\n\n</sample-output>\n\n<sample-output>\n\nCó bao nhiêu điểm [0-100]: **-3**\nCấp: không thể!\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-10_grades_and_points",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Grades and points",
+        "tmc_name": "part02-10_grades_and_points",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0024",
+      "type": "exercise",
+      "order": 24,
+      "source_hash": "f08b1f3549a597c36d08527199ff4a41e4703571c5793bb56ef9eb63f22ec7f5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for an integer number. If the number is divisible by three, the program should print out Fizz. If the number is divisible by five, the program should print out Buzz. If the number is divisible by both three and five, the program should print out FizzBuzz.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nNumber: **9**\nFizz\n\n</sample-output>\n\n<sample-output>\n\nNumber: **7**\n\n</sample-output>\n\n<sample-output>\n\nNumber: **20**\nBuzz\n\n</sample-output>\n\n<sample-output>\n\nNumber: **45**\nFizzBuzz\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình yêu cầu người dùng nhập một số nguyên. Nếu số đó chia hết cho ba thì chương trình sẽ in ra Fizz. Nếu số đó chia hết cho 5 thì chương trình sẽ in ra Buzz. Nếu số đó chia hết cho cả ba và năm thì chương trình sẽ in ra FizzBuzz.\n\nMột số ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nSố: **9**\nxì hơi\n\n</sample-output>\n\n<sample-output>\n\nSố: **7**\n\n</sample-output>\n\n<sample-output>\n\nSố lượng: **20**\nBuzz\n\n</sample-output>\n\n<sample-output>\n\nSố: **45**\nFizzBuzz\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-11_fizzbuzz",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "FizzBuzz",
+        "tmc_name": "part02-11_fizzbuzz",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0025",
+      "type": "heading",
+      "order": 25,
+      "source_hash": "0cf3ed8fa65c9ec91db268627a3280d40bcf4f648a3451ad3a46a710f85cf468",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Nested conditionals"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điều kiện lồng nhau"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "c71e3f234c6537449ab5dbf75a82d342eb24ac72090af8c50c5c3654fd26fe4f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Conditional statements can also be nested within other conditional statements. For example, the following program checks whether a number is above zero, and then whether it is odd or even:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các câu lệnh điều kiện cũng có thể được lồng trong các câu lệnh điều kiện khác. Ví dụ: chương trình sau đây kiểm tra xem một số có lớn hơn 0 hay không và sau đó xem nó là số lẻ hay số chẵn:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0027",
+      "type": "code",
+      "order": 27,
+      "source_hash": "667951ca5263098e410a0aba85b4d8f711fa42be1c73a5c0d099d8c60ac4ebf5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\n\nif number > 0:\n    if number % 2 == 0:\n        print(\"The number is even\")\n    else:\n        print(\"The number is odd\")\nelse:\n    print(\"The number is negative or zero\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\n\nif number > 0:\n    if number % 2 == 0:\n        print(\"The number is even\")\n    else:\n        print(\"The number is odd\")\nelse:\n    print(\"The number is negative or zero\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "667951ca5263098e410a0aba85b4d8f711fa42be1c73a5c0d099d8c60ac4ebf5",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "41280ee55bd20f327ec93f8cff8e6da17dc2efd0ab67acf640e6b1a66361c8b9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Some examples of how this program behaves:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một số ví dụ về cách chương trình này hoạt động:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0029",
+      "type": "sample_output",
+      "order": 29,
+      "source_hash": "8dee7c0e6f58b65123e12fa4a3c48a4d73956cab627882c5e66211806e816397",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number: **3**\nThe number is odd\n\nPlease type in a number: **18**\nThe number is even\n\nPlease type in a number: **-4**\nThe number is negative or zero"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number: **3**\nThe number is odd\n\nPlease type in a number: **18**\nThe number is even\n\nPlease type in a number: **-4**\nThe number is negative or zero"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number: **3**\nThe number is odd\n\nPlease type in a number: **18**\nThe number is even\n\nPlease type in a number: **-4**\nThe number is negative or zero\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "422cf6c3154bc9b0285de38b00936ee67ae583eb6a128810b5cd508e7591929e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "With nested conditional statements it is crucial to get the indentations right. Indentations determine which branches are linked together. For example, an `if` branch and an `else` branch with the same amount of whitespace are determined to be branches of the same conditional statement."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Với các câu lệnh điều kiện lồng nhau, điều quan trọng là phải thụt lề đúng cách. Các vết lõm xác định các nhánh nào được liên kết với nhau. Ví dụ: nhánh `if` và nhánh `else` có cùng khoảng trắng được xác định là nhánh của cùng một câu lệnh điều kiện."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "6d55c1ce6de74bba08de1de7e4533788813f39215103bea346277d93b57ffd7a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The same result can often be achieved using either nested conditional statements or conditions combined with logical operators. The example below is functionally no different from the example above, in the sense that it will print out the exactly same things with the same inputs:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Kết quả tương tự thường có thể đạt được bằng cách sử dụng câu lệnh điều kiện lồng nhau hoặc điều kiện kết hợp với toán tử logic. Ví dụ bên dưới về mặt chức năng không khác với ví dụ trên, theo nghĩa là nó sẽ in ra những thứ giống hệt nhau với cùng thông tin đầu vào:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0032",
+      "type": "code",
+      "order": 32,
+      "source_hash": "b6551d388a665b8f0c1f06b6e996e076fb6a3c0134d56a705c2baa6c204ec39d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\n\nif number > 0 and number % 2 == 0:\n    print(\"The number is even\")\nelif number > 0 and number % 2 != 0:\n    print(\"The number is odd\")\nelse:\n    print(\"The number is negative or zero\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\n\nif number > 0 and number % 2 == 0:\n    print(\"The number is even\")\nelif number > 0 and number % 2 != 0:\n    print(\"The number is odd\")\nelse:\n    print(\"The number is negative or zero\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b6551d388a665b8f0c1f06b6e996e076fb6a3c0134d56a705c2baa6c204ec39d",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "d65623381f831efbc2bd72c2f939701bd7f95418befbd1988dae8a409dd28e50",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Neither approach is intrinsically better than the other, but in different situations one or the other may seem more logical. In this particular example most people tend to find the first version with nesting to be more intuitive."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Về bản chất, cả hai cách tiếp cận đều không tốt hơn cách tiếp cận kia, nhưng trong những tình huống khác nhau, cách tiếp cận này hoặc cách tiếp cận kia có vẻ hợp lý hơn. Trong ví dụ cụ thể này, hầu hết mọi người có xu hướng tìm phiên bản đầu tiên có tính năng lồng nhau để trực quan hơn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0034",
+      "type": "exercise",
+      "order": 34,
+      "source_hash": "76a87c2154e70d0ef8a1fdb9ad7db676f15118e44ff834fda49fe0050c298856",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Generally, any year that is divisible by four is a leap year. However, if the year is additionally divisible by 100, it is a leap year only if it also divisible by 400.\n\nPlease write a program which asks the user for a year, and then prints out whether that year is a leap year or not.\n\nSome examples:\n\n<sample-output>\n\nPlease type in a year: **2011**\nThat year is not a leap year.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a year: **2020**\nThat year is a leap year.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a year: **1800**\nThat year is not a leap year.\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nói chung, năm nào chia hết cho 4 là năm nhuận. Tuy nhiên, nếu năm đó chia hết cho 100 thì năm đó chỉ chia hết cho 400 là năm nhuận.\n\nHãy viết chương trình hỏi người dùng một năm rồi in ra năm đó có phải là năm nhuận hay không.\n\nMột số ví dụ:\n\n<sample-output>\n\nVui lòng nhập năm: **2011**\nNăm đó không phải là năm nhuận.\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập năm: **2020**\nNăm đó là năm nhuận.\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập năm: **1800**\nNăm đó không phải là năm nhuận.\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-12_leap_year",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Leap year",
+        "tmc_name": "part02-12_leap_year",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0035",
+      "type": "exercise",
+      "order": 35,
+      "source_hash": "6f6d323e7e6f881213bf30bf5a2f4607b4f35ebab51913b58d6211a7a7b67b42",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for three letters. The program should then print out whichever of the three letters would be in the middle if the letters were in alphabetical order.\n\nYou may assume the letters will be either all uppercase, or all lowercase.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\n1st letter: x\n2nd letter: c\n3rd letter: p\nThe letter in the middle is p\n\n</sample-output>\n\n<sample-output>\n\n1st letter: C\n2nd letter: B\n3rd letter: A\nThe letter in the middle is B\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một chương trình yêu cầu người dùng nhập ba chữ cái. Sau đó, chương trình sẽ in ra bất kỳ chữ cái nào trong ba chữ cái sẽ ở giữa nếu các chữ cái đó theo thứ tự bảng chữ cái.\n\nBạn có thể cho rằng các chữ cái sẽ toàn là chữ hoa hoặc toàn chữ thường.\n\nMột số ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nchữ cái thứ 1: x\nchữ cái thứ 2: c\nchữ thứ 3: p\nChữ ở giữa là p\n\n</sample-output>\n\n<sample-output>\n\nChữ cái thứ nhất: C\nChữ thứ 2: B\nChữ cái thứ 3: A\nChữ ở giữa là B\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-13_alphabetically_in_the_middle",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Alphabetically in the middle",
+        "tmc_name": "part02-13_alphabetically_in_the_middle",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0036",
+      "type": "exercise",
+      "order": 36,
+      "source_hash": "7a424e3dd6bd704184ee8b8dc3d2a754d40c38d150f348ea7ce0eeb688964016",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Some say paying taxes makes Finns happy, so let's see if the secret of happiness lies in one of the taxes set out in Finnish tax code. \n\n[According to the Finnish Tax Administration](https://www.vero.fi/en/individuals/property/gifts/), a gift is a transfer of property to another person against no compensation or payment. If the total value of the gifts you receive from the same donor in the course of 3 years is €5,000 or more, you must pay gift tax.\n\nWhen the gift is received from a close relative or a family member, the amount of tax to be paid is determined by the following table, which is also available on [this website](https://www.vero.fi/en/individuals/property/gifts/gift-tax-calculator/):\n\nValue of gift | Tax at the lower limit | Tax rate for the exceeding part (%)\n:------------:|:----------------------:|:-----------------------------------:\n5 000 — 25 000 |        100     |       8\n25 000 — 55 000\t|       1 700   |\t10\n55 000 — 200 000 |      4 700\t|       12\n200 000 — 1 000 000 |   22 100  |\t15\n1 000 000 —\t|       142 100 |\t17\n\nSo, for a gift of 6 000 euros the recipient pays a tax of 180 euros (100 + (6 000 - 5 000) * 0.08). Similarly, for a gift of 75 000 euros the recipient pays a tax of 7 100 euros (4 700 + (75 000 - 55 000) * 0.12).\n\nPlease write a program which calculates the correct amount of tax for a gift from a close relative. Have a look at the examples below to see what is expected. Notice the lack of thousands separators in the input values - you may assume there will be no spaces or other thousands separators in the numbers in the input, as we haven't yet covered dealing with these.\n\n<sample-output>\n\nValue of gift: **3500**\nNo tax!\n\n</sample-output>\n\n<sample-output>\n\nValue of gift: **5000**\nAmount of tax: 100.0 euros\n\n</sample-output>\n\n<sample-output>\n\nValue of gift: **27500**\nAmount of tax: 1950.0 euros\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một số người cho rằng nộp thuế khiến người Phần Lan hạnh phúc, vậy hãy cùng xem liệu bí mật của hạnh phúc có nằm ở một trong những loại thuế được quy định trong bộ luật thuế Phần Lan hay không. \n\n[Theo Cơ quan quản lý thuế Phần Lan](https://www.vero.fi/en/individuals/property/gifts/), quà tặng là việc chuyển giao tài sản cho người khác mà không phải bồi thường hoặc thanh toán. Nếu tổng giá trị quà tặng bạn nhận được từ cùng một nhà tài trợ trong thời gian 3 năm là 5.000 Euro trở lên thì bạn phải nộp thuế quà tặng.\n\nKhi nhận quà từ người thân hoặc thành viên gia đình, số thuế phải nộp được xác định theo bảng sau, bảng này cũng có trên [trang web này](https://www.vero.fi/en/individuals/property/gifts/gift-tax-calculator/):\n\nGiá trị quà tặng | Thuế ở giới hạn dưới | Thuế suất phần vượt (%)\n:----------:|:----------------------:|:-----------------------------------:\n5 000 — 25 000 |        100 |       8\n25 000 — 55 000 |       1 700 |\t10\n55 000 — 200 000 |      4 700 |       12\n200 000 — 1 000 000 |   22 100 |\t15\n1 000 000 — |       142 100 |\t17\n\nVì vậy, đối với một món quà trị giá 6.000 euro, người nhận phải trả thuế 180 euro (100 + (6 000 - 5 000) * 0,08). Tương tự, đối với một món quà trị giá 75 000 euro, người nhận phải trả thuế 7 100 euro (4 700 + (75 000 - 55 000) * 0,12).\n\nHãy viết chương trình tính số thuế chính xác cho một món quà từ người thân. Hãy xem các ví dụ dưới đây để biết những gì được mong đợi. Lưu ý việc thiếu dấu phân cách hàng nghìn trong các giá trị đầu vào - bạn có thể cho rằng sẽ không có dấu cách hoặc dấu phân cách hàng nghìn khác trong các số ở đầu vào, vì chúng tôi chưa đề cập đến việc xử lý các dấu phân cách này.\n\n<sample-output>\n\nGiá trị quà tặng: **3500**\nKhông có thuế!\n\n</sample-output>\n\n<sample-output>\n\nGiá trị quà tặng: **5000**\nSố tiền thuế: 100,0 euro\n\n</sample-output>\n\n<sample-output>\n\nGiá trị quà tặng: **27500**\nSố tiền thuế: 1950,0 euro\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-14_gift_tax_calculator",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Gift tax calculator",
+        "tmc_name": "part02-14_gift_tax_calculator",
+        "height": "500px"
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "d3ac25ddc7ba9779c0556d543e4994d158e16a5a359347a1321dd236f1af0b67",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!--"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!--"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "0937af8ca0d984621994ab6ab91b7b2cf722e5cf79e7103d9f4567fc678255c7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một bài kiểm tra để ôn lại nội dung của phần này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0039",
+      "type": "quiz",
+      "order": 39,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "6bfd7e0d-2998-5697-80dc-418703fabbbf",
+        "attributes": {
+          "id": "6bfd7e0d-2998-5697-80dc-418703fabbbf"
+        }
+      }
+    },
+    {
+      "id": "blk-part02-3-combining-conditions-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "-->"
+      },
+      "metadata": {}
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-02_number_of_characters",
+  "lesson_id": "part02-1-programming_terminology",
+  "part": 2,
+  "tmc_name": "part02-02_number_of_characters",
+  "title_original": "Number of characters",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "The function `len` can be used to find out the length of a string, among other things. The function returns the number of characters in a string.\n\nSome examples of how this works:\n\n```python\nword = \"abcd\"\nprint(len(word))\n\nprint(len(\"hi there\"))\n\nword2 = \"howdydoody\"\nlength = len(word2)\nprint(length)\n\nempty_string = \"\"\nlength = len(empty_string)\nprint(length)\n```\n\n<sample-output>\n\n4\n8\n10\n0\n\n</sample-output>\n\nPlease write a program which asks the user for a word and then prints out the number of characters, if there was more than one typed in.\n\nExamples of expected behaviour:\n\n<sample-output>\n\nPlease type in a word: **hey**\nThere are 3 letters in the word hey\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a word: **banana**\nThere are 6 letters in the word banana\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a word: **b**\nThank you!\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "word = \"abcd\"\nprint(len(word))\n\nprint(len(\"hi there\"))\n\nword2 = \"howdydoody\"\nlength = len(word2)\nprint(length)\n\nempty_string = \"\"\nlength = len(empty_string)\nprint(length)",
+  "grading_data_available": false,
+  "source_hash": "e41123c351b74dd0fdac72b9abd730f49c063334cbfb5559ee1b687be4a5de16",
+  "order": 82
+}

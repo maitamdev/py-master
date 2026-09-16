@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-01_emoticon",
+  "lesson_id": "part01-1-getting-started",
+  "part": 1,
+  "tmc_name": "part01-01_emoticon",
+  "title_original": "Emoticon",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": "300px",
+  "description_original": "Please write a program which prints out an emoticon: :-)",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "8ae425f94cd3dcebbedfe2235efa1ef1e749db3889a83d34025528518adc5410",
+  "order": 13
+}

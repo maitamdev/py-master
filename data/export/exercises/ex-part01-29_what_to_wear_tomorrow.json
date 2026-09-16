@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-29_what_to_wear_tomorrow",
+  "lesson_id": "part01-5-conditional-statements",
+  "part": 1,
+  "tmc_name": "part01-29_what_to_wear_tomorrow",
+  "title_original": "What to wear tomorrow",
+  "title_vi": "Ngày mai mặc gì",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks for tomorrow's weather forecast and then suggests weather-appropriate clothing.\n\nThe suggestion should change if the temperature (measured in degrees Celsius) is over 20, 10 or 5 degrees, and also if there is rain on the radar.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nWhat is the weather forecast for tomorrow?\nTemperature: **21**\nWill it rain (yes/no): **no**\nWear jeans and a T-shirt\n\n</sample-output>\n\n<sample-output>\n\nWhat is the weather forecast for tomorrow?\nTemperature: **11**\nWill it rain (yes/no): **no**\nWear jeans and a T-shirt\nI recommend a jumper as well\n\n</sample-output>\n\n<sample-output>\n\nWhat is the weather forecast for tomorrow?\nTemperature: **7**\nWill it rain (yes/no): **no**\nWear jeans and a T-shirt\nI recommend a jumper as well\nTake a jacket with you\n\n</sample-output>\n\n<sample-output>\n\nWhat is the weather forecast for tomorrow?\nTemperature: **3**\nWill it rain (yes/no): **yes**\nWear jeans and a T-shirt\nI recommend a jumper as well\nTake a jacket with you\nMake it a warm coat, actually\nI think gloves are in order\nDon't forget your umbrella!\n\n</sample-output>",
+  "description_vi": "Hãy viết một chương trình hỏi dự báo thời tiết ngày mai và gợi ý quần áo phù hợp với thời tiết.\n\nĐề xuất sẽ thay đổi nếu nhiệt độ (tính bằng độ C) trên 20, 10 hoặc 5 độ và cả khi có mưa trên radar.\n\nMột số ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nDự báo thời tiết cho ngày mai là gì?\nNhiệt độ: **21**\nLiệu trời có mưa không (có/không): **không**\nMặc quần jean và áo phông\n\n</sample-output>\n\n<sample-output>\n\nDự báo thời tiết cho ngày mai là gì?\nNhiệt độ: **11**\nLiệu trời có mưa không (có/không): **không**\nMặc quần jean và áo phông\nTôi cũng khuyên bạn nên mặc áo liền quần\n\n</sample-output>\n\n<sample-output>\n\nDự báo thời tiết cho ngày mai là gì?\nNhiệt độ: **7**\nLiệu trời có mưa không (có/không): **không**\nMặc quần jean và áo phông\nTôi cũng khuyên bạn nên mặc áo liền quần\nMang theo áo khoác\n\n</sample-output>\n\n<sample-output>\n\nDự báo thời tiết cho ngày mai là gì?\nNhiệt độ: **3**\nLiệu trời có mưa không (có/không): **có**\nMặc quần jean và áo phông\nTôi cũng khuyên bạn nên mặc áo liền quần\nMang theo áo khoác\nThực ra hãy biến nó thành một chiếc áo khoác ấm áp\nTôi nghĩ găng tay là hợp lý\nĐừng quên chiếc ô của bạn!\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "638e1ddcd24fab5272bc35fec5139be8a8c9a0ba2e2aa993a53fa4b45d3f5535",
+  "order": 55
+}

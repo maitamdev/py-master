@@ -1,0 +1,16 @@
+{
+  "id": "ex-part07-01_hypotenuse",
+  "lesson_id": "part07-1-modules",
+  "part": 7,
+  "tmc_name": "part07-01_hypotenuse",
+  "title_original": "Hypotenuse",
+  "title_vi": "Cạnh huyền",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `hypotenuse(leg1: float, leg2: float)`, which takes the lengths of the two sides adjacent to the right angle of an orthogonal triangle. The function should return the length of the hypotenuse, or the side opposite to the right angle.\n\nYou can use the [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythagorean_theorem) to calculate the result. You will need the `sqrt` function from the `math` module.\n\nSome examples:\n\n```python\nprint(hypotenuse(3,4)) # 5.0\nprint(hypotenuse(5,12)) # 13.0\nprint(hypotenuse(1,1)) # 1.4142135623730951\n```",
+  "description_vi": "Hãy viết hàm có tên `hypotenuse(leg1: float, leg2: float)`, tính độ dài hai cạnh kề với góc vuông của một tam giác trực giao. Hàm sẽ trả về độ dài của cạnh huyền hoặc cạnh đối diện với góc vuông.\n\nBạn có thể sử dụng [định lý Pythagore](https://en.wikipedia.org/wiki/Pythagorean_theorem) để tính kết quả. Bạn sẽ cần chức năng `sqrt` từ mô-đun `math`.\n\nMột số ví dụ:\n\n```python\nprint(hypotenuse(3,4)) # 5.0\nprint(hypotenuse(5,12)) # 13.0\nprint(hypotenuse(1,1)) # 1.4142135623730951\n```",
+  "starter_code": "print(hypotenuse(3,4)) # 5.0\nprint(hypotenuse(5,12)) # 13.0\nprint(hypotenuse(1,1)) # 1.4142135623730951",
+  "grading_data_available": false,
+  "source_hash": "37e86d13587600a5837e95398d99937288e02a4bfef4e83eadd1463073ef6554",
+  "order": 29
+}

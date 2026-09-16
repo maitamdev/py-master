@@ -1,0 +1,16 @@
+{
+  "id": "ex-part13-15_robot_location",
+  "lesson_id": "part13-3-events",
+  "part": 13,
+  "tmc_name": "part13-15_robot_location",
+  "title_original": "The location of the robot",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program where the robot appears at a random location within the window. When the player clicks on the robot with the mouse, the robot moves to a new location. The end result should look like this:\n\n<img src=\"pygame_robot_location.gif\">",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "92cf3bfb78b0568705d4f17b72ace895b6ddfe952e2349bc0758efe32c4892f4",
+  "order": 43
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-22_absolute_value",
+  "lesson_id": "part01-5-conditional-statements",
+  "part": 1,
+  "tmc_name": "part01-22_absolute_value",
+  "title_original": "Absolute value",
+  "title_vi": "Giá trị tuyệt đối",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for an integer number. If the number is less than zero, the program should print out the number multiplied by -1. Otherwise the program prints out the number as is. Please have a look at the examples of expected behaviour below.\n\n<sample-output>\n\nPlease type in a number: **-7**\nThe absolute value of this number is 7\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **1**\nThe absolute value of this number is 1\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **-99**\nThe absolute value of this number is 99\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình yêu cầu người dùng nhập một số nguyên. Nếu số đó nhỏ hơn 0 thì chương trình sẽ in ra số đó nhân với -1. Ngược lại chương trình sẽ in ra số nguyên như cũ. Vui lòng xem các ví dụ về hành vi được mong đợi bên dưới.\n\n<sample-output>\n\nVui lòng nhập một số: **-7**\nGiá trị tuyệt đối của số này là 7\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập một số: **1**\nGiá trị tuyệt đối của số này là 1\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập một số: **-99**\nGiá trị tuyệt đối của số này là 99\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "19ab015318b50c41d65236255943811fb89316c7505474e258a19c27d38b12e2",
+  "order": 37
+}

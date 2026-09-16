@@ -1,0 +1,1753 @@
+{
+  "id": "part03-2-working-with-strings",
+  "part": 3,
+  "part_slug": "part-3",
+  "slug": "2-working-with-strings",
+  "is_part_index": false,
+  "title_original": "Working with strings",
+  "title_vi": "",
+  "path": "/part-3/2-working-with-strings",
+  "source_path": "data/part-3/2-working-with-strings.md",
+  "source_hash": "5382a1112d3299d2774d068cbd470f8f73b32bd4438a730e124339293c760330",
+  "order": 1,
+  "blocks_count": 93,
+  "blocks": [
+    {
+      "id": "blk-part03-2-working-with-strings-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "4b95e051b715c796774eed2d7936a913f7da1d0e698a34d633aad9f47601df94",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be able to use the operators `+` and `*` with strings\n- You will know how to find out the length of a string\n- You will know what is meant by string indexing\n- You will know how to look for substrings within a string"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0002",
+      "type": "heading",
+      "order": 2,
+      "source_hash": "d9c7dc7409647f9668f33226575cea6bb1df3651ccc5b30a618de854c6d03de0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "String operations"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "6b273c330975480e11cb7b97ecf2b06bbaa8a8e8dabe507f74d27a606679e873",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Strings can be combined, or _concatenated_, with the `+` operator:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0004",
+      "type": "code",
+      "order": 4,
+      "source_hash": "8df5500754a8fae8b9b65529850dd47f3520f01f5658cd5431e5022343a52a98",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "begin = \"ex\"\nend = \"ample\"\nword = begin+end\nprint(word)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "begin = \"ex\"\nend = \"ample\"\nword = begin+end\nprint(word)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8df5500754a8fae8b9b65529850dd47f3520f01f5658cd5431e5022343a52a98",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0005",
+      "type": "sample_output",
+      "order": 5,
+      "source_hash": "50d858e0985ecc7f60418aaf0cc5ab587f42c2570a884095a9e8ccacd0f6545c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "example"
+      },
+      "translation": {
+        "language": "text",
+        "content": "example"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nexample\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "ac46fca5925a46e7e8ff73e1b9a23f55bc71200fcf021b33ef1c5b8a0cb7a787",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `*` operator can also be used with a string, when the other operand is an integer. The string operand is then repeated the number of times specified by the integer. For example this would work:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0007",
+      "type": "code",
+      "order": 7,
+      "source_hash": "53bdebf22121ebe665618792b510c4200789cbacc2a4d00d0dd8e25be7ffcfe7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "word = \"banana\"\nprint(word*3)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "word = \"banana\"\nprint(word*3)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "53bdebf22121ebe665618792b510c4200789cbacc2a4d00d0dd8e25be7ffcfe7",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0008",
+      "type": "sample_output",
+      "order": 8,
+      "source_hash": "ac979451353ba13ec2e2630050e966a6b7e2aa2493123f5ff74176a10957a90e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "bananabananabanana"
+      },
+      "translation": {
+        "language": "text",
+        "content": "bananabananabanana"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nbananabananabanana\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "1f3a58b0827253648ab8e7e1377300e6da91a44e83ef7bad5a90aabcb9460038",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Using string operations together with a loop we can write a program which draws a pyramid:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0010",
+      "type": "code",
+      "order": 10,
+      "source_hash": "ad20bf4ef78bfdb5f4f6de31b96164dbfb49f2112aaa0e241d6324b2c4717961",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "n = 10 # number of layers in the pyramid\nrow = \"*\"\n\nwhile n > 0:\n    print(\" \" * n + row)\n    row += \"**\"\n    n -= 1"
+      },
+      "translation": {
+        "language": "code",
+        "content": "n = 10 # number of layers in the pyramid\nrow = \"*\"\n\nwhile n > 0:\n    print(\" \" * n + row)\n    row += \"**\"\n    n -= 1"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ad20bf4ef78bfdb5f4f6de31b96164dbfb49f2112aaa0e241d6324b2c4717961",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "1ceb5578cc1236ba59ceea85e0e4438e857cf3dedb447acf08d1e02617565a20",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This prints out the following:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0012",
+      "type": "code",
+      "order": 12,
+      "source_hash": "fc3ede57e2b3b2986c857752acc9ba8d26883888a75fb941ce58d461bcde2d0b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "          *\n         ***\n        *****\n       *******\n      *********\n     ***********\n    *************\n   ***************\n  *****************\n *******************"
+      },
+      "translation": {
+        "language": "code",
+        "content": "          *\n         ***\n        *****\n       *******\n      *********\n     ***********\n    *************\n   ***************\n  *****************\n *******************"
+      },
+      "metadata": {
+        "language": "x",
+        "code_hash": "fc3ede57e2b3b2986c857752acc9ba8d26883888a75fb941ce58d461bcde2d0b",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "e979dd26f3a2593d4fed61a37654f6886cb749b395493df26f18031dea97ef67",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `print` command within the loop prints a line, which begins with `n` spaces, followed by whatever is stored in the variable `row`. Then two stars are added to the end of the variable `row`, and the value of the variable `n` is decreased by 1."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0014",
+      "type": "exercise",
+      "order": 14,
+      "source_hash": "af7cac0694262b48ccfdc4ac2526b8ed306efb4e2606ce0edc1ced90eaf55556",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for a string and an amount. The program then prints out the string as many times as specified by the amount. The printout should all be on one line, with no extra spaces or symbols added.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nPlease type in a string: **hiya**\nPlease type in an amount: **4**\nhiyahiyahiyahiya\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-08_string_multiplied",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "String multiplied",
+        "tmc_name": "part03-08_string_multiplied",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0015",
+      "type": "heading",
+      "order": 15,
+      "source_hash": "eb1f792a14d3068f0b6cc222b094a8779f4de8dff1797405a1db8cd923b7dd17",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The length and index of a string"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "25171b7dfe19c3ba961460279b3a36cbaa89291e75ab207acf61f2c514cd5cfa",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The function `len` returns the number of characters in a string, which is always an integer value. For example, `len(\"hey\")` returns 3, because there are three characters in the string `hey`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "3765e75213354e3ae06fc5d855c4b300ed6012a4dc52886839826f1933da31bd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The following program asks the user for a string and then prints it \"underlined\". The program prints a second line with as many `-` characters as is the length of the input:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0018",
+      "type": "code",
+      "order": 18,
+      "source_hash": "f831b7984deda1daeb56a6059dc36742d7ce534e2b19f34adae8c70aa7e132f3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "input_string = input(\"Please type in a string: \")\nprint(input_string)\nprint(\"-\"*len(input_string))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "input_string = input(\"Please type in a string: \")\nprint(input_string)\nprint(\"-\"*len(input_string))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f831b7984deda1daeb56a6059dc36742d7ce534e2b19f34adae8c70aa7e132f3",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0019",
+      "type": "sample_output",
+      "order": 19,
+      "source_hash": "ec0d10619c868e940f2af88b0479dcb40248966590770fe9dc02e7b6396bb4b8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a string: **Hi there!**\n\n<pre>\nHi there!\n---------\n</pre>"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a string: **Hi there!**\n\n<pre>\nHi there!\n---------\n</pre>"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a string: **Hi there!**\n\n<pre>\nHi there!\n---------\n</pre>\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "0f62cbd7737683109d725c162bde7e7683d652c41b09c43e49a0c606336e0a47",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The length of a string includes all the characters in the string, including whitespace. For example, the length of the string `bye bye` is 7."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0021",
+      "type": "exercise",
+      "order": 21,
+      "source_hash": "b47dd9e10158f6ff39c8489590b5dfe9c111316d0dab7b9b87d6ab97b0d81222",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for two strings and then prints out whichever is the longer of the two - that is, whichever has the more characters. If the strings are of equal length, the program should print out \"The strings are equally long\".\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nPlease type in string 1: **hey**\nPlease type in string 2: **hiya**\nhiya is longer\n\n</sample-output>\n\n<sample-output>\n\nPlease type in string 1: **howdy doody**\nPlease type in string 2: **hola**\nhowdy doody is longer\n\n</sample-output>\n\n<sample-output>\n\nPlease type in string 1: **hey**\nPlease type in string 2: **bye**\nThe strings are equally long\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-09_longer_string",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "The longer string",
+        "tmc_name": "part03-09_longer_string",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "7a4ae2f812cbccb9567515aaf2c87bfb063dc1b4a54131662c010414e017665a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As strings are essentially sequences of characters, any single character in a string can also be retrieved. The operator `[]` finds the character with the _index_ specified within the brackets."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "6c0237ab1afbd0fc34fc9abe61979f3908b36537c472f9a08af31fb9e2a110e4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The index refers to a position in the string, counting up from zero. The first character in the string has index 0, the second character has index 1, and so forth."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0024",
+      "type": "image",
+      "order": 24,
+      "source_hash": "5875bd245ced97efe9baade0f634904ee691f8255626cb4ec331e0ab10fac35b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "3_2_1.png",
+        "alt": "",
+        "attributes": {
+          "src": "3_2_1.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "90b8d97f020ccaf34f01eab90cb0d36faeb0eee6d05cdda37aedac98a606f59c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "For example, this program"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0026",
+      "type": "code",
+      "order": 26,
+      "source_hash": "dff21d9a816c8b739e9ed605de4d6d79d68b8d15f5a0ea7a98663fc6fdcdb602",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\ninput_string = input(\"Please type in a string: \")\nprint(input_string[0])\nprint(input_string[1])\nprint(input_string[3])\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "\ninput_string = input(\"Please type in a string: \")\nprint(input_string[0])\nprint(input_string[1])\nprint(input_string[3])\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "dff21d9a816c8b739e9ed605de4d6d79d68b8d15f5a0ea7a98663fc6fdcdb602",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "26b1fdba07d8ffb6bd46bbe1d51b88ba8f648cca6bcc7b767f691a126d7c37c8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "would print out this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0028",
+      "type": "sample_output",
+      "order": 28,
+      "source_hash": "956d77cbf7072fae3e3e12dc8fd348e5df849bbf5979eb34e87ab34e1094ac98",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a string: **monkey**\nm\no\nk"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a string: **monkey**\nm\no\nk"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a string: **monkey**\nm\no\nk\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "ca1f08fad6f2ef43f9478f267643dd5237cfee8b7487bf49cf0ac96ecdb046ca",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Since the first character in a string has the index 0, the last character has the index _length - 1_. The following program prints out the first and the last characters of a string:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0030",
+      "type": "code",
+      "order": 30,
+      "source_hash": "a5c305476a3455f8a63e385cfcd9195ca1bc5879eef291fee2eb70ccf923bd03",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "input_string = input(\"Please type in a string: \")\nprint(\"First character: \" + input_string[0])\nprint(\"Last character: \" + input_string[len(input_string) - 1])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "input_string = input(\"Please type in a string: \")\nprint(\"First character: \" + input_string[0])\nprint(\"Last character: \" + input_string[len(input_string) - 1])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a5c305476a3455f8a63e385cfcd9195ca1bc5879eef291fee2eb70ccf923bd03",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0031",
+      "type": "sample_output",
+      "order": 31,
+      "source_hash": "b9069997c56168050e1f3b52847d831890ca00328e6c5a290af1d9492586ccc3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a string: **testing**\nFirst character: t\nLast character: g"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a string: **testing**\nFirst character: t\nLast character: g"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a string: **testing**\nFirst character: t\nLast character: g\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "dfea4630cd7a96c2ac4d41894f50de109ef29f440e9f3aeeb29439f53e3db87b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The following program loops through all the characters in a string from first to last:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0033",
+      "type": "code",
+      "order": 33,
+      "source_hash": "732c813b691bfcf913a9b3c3dd4efbfa056bfd34b0b0e1e23d84f28db98406ed",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "input_string = input(\"Please type in a string: \")\nindex = 0\nwhile index < len(input_string):\n    print(input_string[index])\n    index += 1"
+      },
+      "translation": {
+        "language": "code",
+        "content": "input_string = input(\"Please type in a string: \")\nindex = 0\nwhile index < len(input_string):\n    print(input_string[index])\n    index += 1"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "732c813b691bfcf913a9b3c3dd4efbfa056bfd34b0b0e1e23d84f28db98406ed",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0034",
+      "type": "sample_output",
+      "order": 34,
+      "source_hash": "0a3c5a8ee8cb117fcd2a82ca1c1c1e545bcd21257e54c224a05d4d70d9cb0c6e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a string: **test**\nt\ne\ns\nt"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a string: **test**\nt\ne\ns\nt"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a string: **test**\nt\ne\ns\nt\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "41eaf69bb0d87d022503bea8ed30d8c5cd7adca271a5f26642606d07a63bcaf7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You can also use negative indexing to access characters counting from the end of the string. The last character in a string is at index -1, the second to last character is at index -2, and so forth. You can think of `input_string[-1]` as shorthand for `input_string[len(input_string) - 1]`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0036",
+      "type": "image",
+      "order": 36,
+      "source_hash": "d93f01bf0eb35ffaf10cea7c47fd79c2cc9a75f306c0ab23a02285cd347ed182",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "3_2_2.png",
+        "alt": "",
+        "attributes": {
+          "src": "3_2_2.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "89da9f4d42f973680ff75f809f3fa677e15f8d7240193c34e86311d27aa073ce",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The example from above can be simplified with negative indexing:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0038",
+      "type": "code",
+      "order": 38,
+      "source_hash": "32bf9b900ee3b108ad29113b36571d727b097901ceedf3a00763967110e7d174",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "input_string = input(\"Please type in a string: \")\nprint(\"First character: \" + input_string[0])\nprint(\"Last character: \" + input_string[-1])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "input_string = input(\"Please type in a string: \")\nprint(\"First character: \" + input_string[0])\nprint(\"Last character: \" + input_string[-1])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "32bf9b900ee3b108ad29113b36571d727b097901ceedf3a00763967110e7d174",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0039",
+      "type": "sample_output",
+      "order": 39,
+      "source_hash": "b9069997c56168050e1f3b52847d831890ca00328e6c5a290af1d9492586ccc3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a string: **testing**\nFirst character: t\nLast character: g"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a string: **testing**\nFirst character: t\nLast character: g"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a string: **testing**\nFirst character: t\nLast character: g\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0040",
+      "type": "heading",
+      "order": 40,
+      "source_hash": "2d2997d6d5169eea19ae3a7f9084c9b2c7f8d504dcf3494c160c97b8fb5e51d4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "IndexError: string index out of range"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "7e486ce51971729f0c9df512bfc6b7674463650caeb96f1746e4bf6fe42cd9c5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If you tried the above examples for yourself, you may already have come across the error message _IndexError: string index out of range_. This error appears if you try to access an index which is not present in the string."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0042",
+      "type": "code",
+      "order": 42,
+      "source_hash": "94b0c17c7926004be40152e1e854e7092740d1a33ba7c6c9a415eea4296207d2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "input_string = input(\"Please type in a string: \")\nprint(\"The tenth character: \" + input_string[9])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "input_string = input(\"Please type in a string: \")\nprint(\"The tenth character: \" + input_string[9])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "94b0c17c7926004be40152e1e854e7092740d1a33ba7c6c9a415eea4296207d2",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0043",
+      "type": "sample_output",
+      "order": 43,
+      "source_hash": "70f3df20109f40b5d87fe0e0c34cd03a4c2f4a751822de40a5b2763d527dd385",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a string: **introduction to programming**\nThe tenth character: i"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a string: **introduction to programming**\nThe tenth character: i"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a string: **introduction to programming**\nThe tenth character: i\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0044",
+      "type": "sample_output",
+      "order": 44,
+      "source_hash": "8e72f4c27e645fc728de3940ac623fb6a691537e564071d8c58d0193d8f0f12a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a string: **python**\n\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nIndexError: string index out of range"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a string: **python**\n\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nIndexError: string index out of range"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a string: **python**\n\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nIndexError: string index out of range\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0045",
+      "type": "paragraph",
+      "order": 45,
+      "source_hash": "3605aa6db1cc7c58df0f73e754a69d4af153d223d948b548d1bacc8fff6d3333",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Sometimes an indexing error is caused by a bug in the code. For example, it is quite common to index too far when trying to access the last character in a string:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0046",
+      "type": "code",
+      "order": 46,
+      "source_hash": "c6934eac3c6f96036277345bcb3b1821c13e99ad281e3eb263456ce13bb3dcd9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "input_string = input(\"Please type in a string: \")\nprint(\"Last character: \" + input_string[len(input_string)])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "input_string = input(\"Please type in a string: \")\nprint(\"Last character: \" + input_string[len(input_string)])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c6934eac3c6f96036277345bcb3b1821c13e99ad281e3eb263456ce13bb3dcd9",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0047",
+      "type": "paragraph",
+      "order": 47,
+      "source_hash": "6cc7313c92540eb541ff7a9550a1d9ef0152fdbea499f86a41f9fed505b1eb8f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Since string indexing begins at zero, the last character is at index `len(input_string) - 1`, not at `len(input_string)`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0048",
+      "type": "paragraph",
+      "order": 48,
+      "source_hash": "67d2c2ea4ef725ef3406eae51782b938e1e504ac7ee01e2e613f7b546cce2b25",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "There are situations where the program should prepare for errors caused by input from the user:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0049",
+      "type": "code",
+      "order": 49,
+      "source_hash": "58ff2e548857f0333acce0c2b80a5107e107b4d65cee4ac28e51233096e2d0bb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "input_string = input(\"Please type in a string: \")\nif len(input_string) > 0:\n    print(\"First character: \" + input_string[0])\nelse:\n    print(\"The input string is empty. There is no first character.\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "input_string = input(\"Please type in a string: \")\nif len(input_string) > 0:\n    print(\"First character: \" + input_string[0])\nelse:\n    print(\"The input string is empty. There is no first character.\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "58ff2e548857f0333acce0c2b80a5107e107b4d65cee4ac28e51233096e2d0bb",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0050",
+      "type": "paragraph",
+      "order": 50,
+      "source_hash": "cd56884a71cae64ea2201fb774ef665c60987bc102e2d625db7b1e99f3aa524e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the example above, if the programmer hadn't included a check for the length of the input string, a string of length zero would have caused an error. A string of length zero is also called an empty string, and here it would be achieved by just pressing Enter at the input prompt."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0051",
+      "type": "exercise",
+      "order": 51,
+      "source_hash": "7f5abc6b561ccd8aaf7e4ab776a12c2f01366db33f6ee808b134080e90223bf4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for a string. The program then prints out the input string in reversed order, from end to beginning. Each character should be on a separate line.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nPlease type in a string: **hiya**\na\ny\ni\nh\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-10_end_to_beginning",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "End to beginning",
+        "tmc_name": "part03-10_end_to_beginning",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0052",
+      "type": "exercise",
+      "order": 52,
+      "source_hash": "0522d3313e1185d695b15af9473654f2165766287d9023debdb2968679e7d593",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for a string. The program then prints out a message based on whether the second character and the second to last character are the same or not. See the examples below.\n\n<sample-output>\n\nPlease type in a string: **python**\nThe second and the second to last characters are different\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a string: **pascal**\nThe second and the second to last characters are a\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-11_second_and_second_to_last",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Second and second to last characters",
+        "tmc_name": "part03-11_second_and_second_to_last",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0053",
+      "type": "exercise",
+      "order": 53,
+      "source_hash": "01ec641192532cce88725a090412b3f0c4cda4779d7f6752ccac1be2422da1ba",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which prints out a line of hash characters, the width of which is chosen by the user.\n\n<sample-output>\n\nWidth: **3**\n<pre>\n###\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nWidth: **8**\n<pre>\n########\n</pre>\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-12_line_of_hashes",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "A line of hashes",
+        "tmc_name": "part03-12_line_of_hashes",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0054",
+      "type": "exercise",
+      "order": 54,
+      "source_hash": "cb41952f964414b9b93d75404d6ab57e597f5f0234b755a9e31e8e00b6705936",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please modify the previous program so that it also asks for the height, and prints out a rectangle of hash characters accordingly.\n\n<sample-output>\n\nWidth: **10**\nHeight: **3**\n##########\n##########\n##########\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-13_rectangle_of_hashes",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "A rectangle of hashes",
+        "tmc_name": "part03-13_rectangle_of_hashes",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0055",
+      "type": "exercise",
+      "order": 55,
+      "source_hash": "9b2d8a000e951b04bee47e3ce899db3b02b3adff80e14605bc6508433e46a458",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for strings using a loop. The program prints out each string underlined as shown in the examples below. The execution ends when the user inputs an empty string - that is, just presses Enter at the prompt.\n\n<sample-output>\n\nPlease type in a string: **Hi there!**\n<pre>\nHi there!\n---------\n</pre>\nPlease type in a string: **This is a test**\n<pre>\nThis is a test\n--------------\n</pre>\nPlease type in a string: **a**\n<pre>\na\n-\n</pre>\nPlease type in a string:\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-14_underlining",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Underlining",
+        "tmc_name": "part03-14_underlining",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0056",
+      "type": "exercise",
+      "order": 56,
+      "source_hash": "4bd674c3a3bf421b558ec469af3e85fbc1f586faa35d7ff22d2bb8a839459e77",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for a string and then prints it out so that exactly 20 characters are displayed. If the input is shorter than 20 characters, the beginning of the line is filled in with `*` characters.\n\nYou may assume the input string is at most 20 characters long.\n\n<sample-output>\n\nPlease type in a string: **python**\n<pre>\n**************python\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a string: **alongerstring**\n<pre>\n*******alongerstring\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a string: **averyverylongstring**\n<pre>\n*averyverylongstring\n</pre>\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-15_right_aligned",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Right-aligned",
+        "tmc_name": "part03-15_right_aligned",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0057",
+      "type": "exercise",
+      "order": 57,
+      "source_hash": "e60eafefc20d75e725ad8a8aa421e8a2603ad9712203aa4a206e276508b65f57",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for a string and then prints out a frame of `*` characters with the word in the centre. The width of the frame should be 30 characters. You may assume the input string will always fit inside the frame.\n\nIf the length of the input string is an odd number, you may print out the word in either of the two possible centre locations.\n\n<sample-output>\n\nWord: **testing**\n<pre>\n******************************\n*          testing           *\n******************************\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nWord: **python**\n<pre>\n******************************\n*           python           *\n******************************\n</pre>\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-16_framed_word",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "A framed word",
+        "tmc_name": "part03-16_framed_word",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0058",
+      "type": "heading",
+      "order": 58,
+      "source_hash": "23c29f6c7b08035d6fded4f4f356acebfc77f4906bd3a792460cfbf2708a6ee2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Substrings and slices"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0059",
+      "type": "paragraph",
+      "order": 59,
+      "source_hash": "9c715c544845a72a62c17fbf966407b200d311152a2632bcd36e0fa50912781e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A _substring_ of a string is a sequence of characters that forms a part of the string. For example, the string `example` contains the substrings `exam`, `amp` and `ple`, among others. In Python programming, the process of selecting substrings is usually called _slicing_, and a substring is often referred to as a _slice_ of the string. The two terms can often be used interchangeably."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0060",
+      "type": "paragraph",
+      "order": 60,
+      "source_hash": "308f5ed4f1fcf2cb21e161226916f9a22fe36bd4aa36c0e01977990eaa0a446c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If you know the beginning and end indexes of the slice you wish to extract, you can do so with the notation `[a:b]`. This means the slice begins at the index `a` and ends at the last character before index `b` - that is, including the first, but excluding the last. You can think of the indexes as separator lines drawn on the left side of the indexed character, as illustrated in the image below:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0061",
+      "type": "image",
+      "order": 61,
+      "source_hash": "4bd62b4dcd3876a16d780736cb67b26e600a00835ad00d6d282c9dcdf9bd4148",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "3_2_3.png",
+        "alt": "",
+        "attributes": {
+          "src": "3_2_3.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0062",
+      "type": "paragraph",
+      "order": 62,
+      "source_hash": "a2119317cb15abcb35e420a8cc60f188f732d071f8d4e145a2993251ca9d7dee",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's have a closer look at some sliced strings:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0063",
+      "type": "code",
+      "order": 63,
+      "source_hash": "91544c7521391513ba7172378d471aaf399ee2751aa46d0012c1d5ab3df5eb5d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "input_string = \"presumptious\"\n\nprint(input_string[0:3])\nprint(input_string[4:10])\n\n# if the beginning index is left out, it defaults to 0\nprint(input_string[:3])\n\n# if the end index is left out, it defaults to the length of the string\nprint(input_string[4:])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "input_string = \"presumptious\"\n\nprint(input_string[0:3])\nprint(input_string[4:10])\n\n# if the beginning index is left out, it defaults to 0\nprint(input_string[:3])\n\n# if the end index is left out, it defaults to the length of the string\nprint(input_string[4:])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "91544c7521391513ba7172378d471aaf399ee2751aa46d0012c1d5ab3df5eb5d",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0064",
+      "type": "sample_output",
+      "order": 64,
+      "source_hash": "1fcad929e2acb574b65b353fa8b4c4d633f703439d2e9784a93180c4dcda9b1a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "pre\numptio\npre\numptious"
+      },
+      "translation": {
+        "language": "text",
+        "content": "pre\numptio\npre\numptious"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\npre\numptio\npre\numptious\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0065",
+      "type": "text_box",
+      "order": 65,
+      "source_hash": "c0c26812c8ea54d4fbe59e07c9c3ed178856665647701a465812e263d13e7d4f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In Python string processing the interval `[a:b]` is _half open_, which in this case means that the character at the beginning index `a` is included in the interval, but the character at the end index `b` is left out. Why is that?\n\nThere is no profound reason for this feature. Rather it is a convention inherited from other programming languages.\n\nHalf open intervals may feel unintuitive, but in practice they do have some advantages. For example, you can easily calculate the length of a slice with `b-a`. On the other hand, you must always remember that the character at the end index `b` will not be included in the slice."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "hint",
+        "name_original": "Half open intervals",
+        "name_vi": "",
+        "attributes": {
+          "variant": "hint",
+          "name": "Half open intervals"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0066",
+      "type": "exercise",
+      "order": 66,
+      "source_hash": "2c84aaa9e9b8bfdb92e619afe9f329e302487d3b3890d87a499df904571c1563",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user to type in a string. The program then prints out all the substrings which begin with the first character, from the shortest to the longest. Have a look at the example below.\n\n<sample-output>\n\nPlease type in a string: **test**\nt\nte\ntes\ntest\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-17_substrings_part_1",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Substrings, part 1",
+        "tmc_name": "part03-17_substrings_part_1",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0067",
+      "type": "exercise",
+      "order": 67,
+      "source_hash": "52a049d659df31c7fd45c4b8cc7459a87d3f21e9dca0a62fd7013c3541e55122",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user to type in a string. The program then prints out all the substrings which end with the last character, from the shortest to the longest. Have a look at the example below.\n\n<sample-output>\n\nPlease type in a string: **test**\nt\nst\nest\ntest\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-18_substrings_part_2",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Substrings, part 2",
+        "tmc_name": "part03-18_substrings_part_2",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0068",
+      "type": "heading",
+      "order": 68,
+      "source_hash": "866849d9c22f4e0be0fb9170c508c3cc5badb5254300c100ee0185dd727e681c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Searching for substrings"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0069",
+      "type": "paragraph",
+      "order": 69,
+      "source_hash": "09359b11685fdc9f779ae84a440538f8372d5f23cd6596089ad3fb65580ca0a4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `in` operator can tell us if a string contains a particular substring. The Boolean expression `a in b` is true, if `b` contains the substring `a`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0070",
+      "type": "paragraph",
+      "order": 70,
+      "source_hash": "64d6f2943d58844ce260a5193c35465e225c4ed7931315c519cd2f67f14211a3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "For example, this bit of code"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0071",
+      "type": "code",
+      "order": 71,
+      "source_hash": "3c2ddfedec05f7617710cbe088fb35c24b05a703b71846c7096325f8c5b1cf5c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "input_string = \"test\"\n\nprint(\"t\" in input_string)\nprint(\"x\" in input_string)\nprint(\"es\" in input_string)\nprint(\"ets\" in input_string)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "input_string = \"test\"\n\nprint(\"t\" in input_string)\nprint(\"x\" in input_string)\nprint(\"es\" in input_string)\nprint(\"ets\" in input_string)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3c2ddfedec05f7617710cbe088fb35c24b05a703b71846c7096325f8c5b1cf5c",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0072",
+      "type": "paragraph",
+      "order": 72,
+      "source_hash": "79b3882296154cd244890bc0597c6f1cdee466cd0742d0acc08e2a3710415f10",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "prints out the following:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0073",
+      "type": "sample_output",
+      "order": 73,
+      "source_hash": "5225d93f37d1a6031bb1aab95feeced2a08fb7e759f7b365e74446afe42efa01",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "True\nFalse\nTrue\nFalse"
+      },
+      "translation": {
+        "language": "text",
+        "content": "True\nFalse\nTrue\nFalse"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nTrue\nFalse\nTrue\nFalse\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0074",
+      "type": "paragraph",
+      "order": 74,
+      "source_hash": "996728c81e8b9ba7f9585a348905d27d351e85f7d1e1f74a04fc2c3f3cc05430",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The program below lets the user search for substrings within a string hardcoded into the program:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0075",
+      "type": "code",
+      "order": 75,
+      "source_hash": "697ba81c449f8beb580af2be924589344d9ce0ac6fc06b18c052802b60bb3225",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "input_string = \"perpendicular\"\n\nwhile True:\n    substring = input(\"What are you looking for? \")\n    if substring in input_string:\n        print(\"Found it\")\n    else:\n        print(\"Not found\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "input_string = \"perpendicular\"\n\nwhile True:\n    substring = input(\"What are you looking for? \")\n    if substring in input_string:\n        print(\"Found it\")\n    else:\n        print(\"Not found\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "697ba81c449f8beb580af2be924589344d9ce0ac6fc06b18c052802b60bb3225",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0076",
+      "type": "sample_output",
+      "order": 76,
+      "source_hash": "1c127ba76c57075e6d3c706d5f284fb95c08b234c2a59633126dd4d2e505f175",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "What are you looking for? **perp**\nFound it\nWhat are you looking for? **abc**\nNot found\nWhat are you looking for? **pen**\nFound it\n..."
+      },
+      "translation": {
+        "language": "text",
+        "content": "What are you looking for? **perp**\nFound it\nWhat are you looking for? **abc**\nNot found\nWhat are you looking for? **pen**\nFound it\n..."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nWhat are you looking for? **perp**\nFound it\nWhat are you looking for? **abc**\nNot found\nWhat are you looking for? **pen**\nFound it\n...\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0077",
+      "type": "exercise",
+      "order": 77,
+      "source_hash": "367112ad092ffffa6635ea312fd0ccc4f1edd01d2d14470c040bc6ba0ad72d1f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user to input a string. The program then prints out different messages if the string contains any of the vowels a, e or o.\n\nYou may assume the input will be in lowercase entirely. Have a look at the examples below.\n\n<sample-output>\n\nPlease type in a string: **hello there**\na not found\ne found\no found\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a string: **hiya**\na found\ne not found\no not found\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-19_does_it_contain_vowels",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Does it contain vowels",
+        "tmc_name": "part03-19_does_it_contain_vowels",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0078",
+      "type": "paragraph",
+      "order": 78,
+      "source_hash": "c8ca284c9d1cd356747c822bc6202fe01ffa06269c621b2e7f352a2a6bc3aac9",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The operator `in` returns a Boolean value, so it will only tell us _if_ a substring exists in a string, but it will not be useful in finding out _where_ exactly it is. Instead, the Python string method `find` can be used for this purpose. It takes the substring searched for as an argument, and returns either the first index where it is found, or `-1` if the substring is not found within the string."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0079",
+      "type": "paragraph",
+      "order": 79,
+      "source_hash": "423702f2ac445984db8ba6144099b4b4d95ada67fdb362b94a908d49dd487f05",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The image below illustrates how it is used:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0080",
+      "type": "image",
+      "order": 80,
+      "source_hash": "11978b64ee66354953a7a3b7876b92e3c2b854147497c4253c8c58e759bdab4b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "3_2_4.png",
+        "alt": "",
+        "attributes": {
+          "src": "3_2_4.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0081",
+      "type": "paragraph",
+      "order": 81,
+      "source_hash": "2a4e3df50344ec329ac9caef9ddb6cef694f176213ef745211a0895c7861879f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Some examples of how `find` is used:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0082",
+      "type": "code",
+      "order": 82,
+      "source_hash": "c5ff424abb4964c1cdf6c5686fe25c69895a79cd5ba69e6722b53b1f83526e61",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "input_string = \"test\"\n\nprint(input_string.find(\"t\"))\nprint(input_string.find(\"x\"))\nprint(input_string.find(\"es\"))\nprint(input_string.find(\"ets\"))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "input_string = \"test\"\n\nprint(input_string.find(\"t\"))\nprint(input_string.find(\"x\"))\nprint(input_string.find(\"es\"))\nprint(input_string.find(\"ets\"))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c5ff424abb4964c1cdf6c5686fe25c69895a79cd5ba69e6722b53b1f83526e61",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0083",
+      "type": "sample_output",
+      "order": 83,
+      "source_hash": "ca9c049e93848c3a2c0c64302073e20d86b09766010fe1acbcb483bef757a512",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "0\n-1\n1\n-1"
+      },
+      "translation": {
+        "language": "text",
+        "content": "0\n-1\n1\n-1"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n0\n-1\n1\n-1\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0084",
+      "type": "paragraph",
+      "order": 84,
+      "source_hash": "f2de1bf63dd3834f5ee067f197a45e4d3f429e211eaf472d51eeac8d6c69d0b1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The above substring search example implemented with `find`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0085",
+      "type": "code",
+      "order": 85,
+      "source_hash": "3eb0037c4bafcaf6ea6ea2e69dd3eabf16ad426edfd0891241ea4a19652a339f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "input_string = \"perpendicular\"\n\nwhile True:\n    substring = input(\"What are you looking for? \")\n    index = input_string.find(substring)\n    if index >= 0:\n        print(f\"Found it at the index {index}\")\n    else:\n        print(\"Not found\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "input_string = \"perpendicular\"\n\nwhile True:\n    substring = input(\"What are you looking for? \")\n    index = input_string.find(substring)\n    if index >= 0:\n        print(f\"Found it at the index {index}\")\n    else:\n        print(\"Not found\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3eb0037c4bafcaf6ea6ea2e69dd3eabf16ad426edfd0891241ea4a19652a339f",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0086",
+      "type": "sample_output",
+      "order": 86,
+      "source_hash": "04c5ee03f7fa1be0a35b06c2450fadc8ebf066da3f30aa0d36938f38380eb16f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "What are you looking for? **perp**\nFound it at the index 0\nWhat are you looking for? **abc**\nNot found\nWhat are you looking for? **pen**\nFound it at the index 3\n..."
+      },
+      "translation": {
+        "language": "text",
+        "content": "What are you looking for? **perp**\nFound it at the index 0\nWhat are you looking for? **abc**\nNot found\nWhat are you looking for? **pen**\nFound it at the index 3\n..."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nWhat are you looking for? **perp**\nFound it at the index 0\nWhat are you looking for? **abc**\nNot found\nWhat are you looking for? **pen**\nFound it at the index 3\n...\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0087",
+      "type": "text_box",
+      "order": 87,
+      "source_hash": "1702e26e1a2fca77d0f89077c0e23c3401b84bee0720b1dd93aba72aee7b1230",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Above we used the string _method_ `find`. Methods work quite similarly to the _functions_ covered in the previous part. What distinguishes them from functions is that methods are always attached to the _object_ they are called on. The object is the entity named before the method in the method call. In the case of `find` the object is the string where the method looks for the substring it has as an argument."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "hint",
+        "name_original": "Methods",
+        "name_vi": "",
+        "attributes": {
+          "variant": "hint",
+          "name": "Methods"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0088",
+      "type": "exercise",
+      "order": 88,
+      "source_hash": "516d61339cd22a836d1827b927eb9868863a8d82132eabe2e21417f6ee31c89b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user to type in a string and a single character. The program then prints the first three character slice which begins with the character specified by the user. You may assume the input string is at least three characters long. The program must print out three characters, or else nothing. \n\nPay special attention to when there are less than two characters left in the string after the first occurrence of the character looked for. In that case nothing should be printed out, and there should not be any indexing errors when executing the program.\n\n<sample-output>\n\nPlease type in a word: **mammoth**\nPlease type in a character: **m**\nmam\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a word: **banana**\nPlease type in a character: **n**\nnan\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a word: **tomato**\nPlease type in a character: **x**\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a word: **python**\nPlease type in a character: **n**\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-20_find_first_substring",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Find the first substring",
+        "tmc_name": "part03-20_find_first_substring",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0089",
+      "type": "exercise",
+      "order": 89,
+      "source_hash": "0c5812670a633dabcbcbb40601955469a04c6ff07e592d5f7ca5b7d47c848820",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please make an extended version of the previous program, which prints out _all the substrings which are at least three characters long_, and which begin with the character specified by the user. You may assume the input string is at least three characters long.\n\n<sample-output>\n\nPlease type in a word: **mammoth**\nPlease type in a character: **m**\nmam\nmmo\nmot\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a word: **banana**\nPlease type in a character: **n**\nnan\n\n</sample-output>\n\n**Hint** the following example may give you some inspiration as to how this exercise could be tackled:\n\n```python\nword = input(\"Word: \")\nwhile True:\n    if len(word) == 0:\n        break\n    print(word)\n    word = word[2:]\n```\n\n<sample-output>\n\nWord: **mammoth**\nmammoth\nmmoth\noth\nh\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-21_find_all_substrings",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Find all the substrings",
+        "tmc_name": "part03-21_find_all_substrings",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0090",
+      "type": "exercise",
+      "order": 90,
+      "source_hash": "7b9f8cb051e9ce73c009ee0b4f95d0ff403ab9cac6d0f341cf1e9c5b334cf2e5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which finds the _second_ occurrence of a substring. If there is no second (or first) occurrence, the program should print out a message accordingly.\n\nIn this exercise the occurrences _cannot_ overlap. For example, in the string `aaaa` the second occurrence of the substring `aa` is at index 2.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nPlease type in a string: **abcabc**\nPlease type in a substring: **ab**\nThe second occurrence of the substring is at index 3.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a string: **methodology**\nPlease type in a substring: **o**\nThe second occurrence of the substring is at index 6.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a string: **aybabtu**\nPlease type in a substring: **ba**\nThe substring does not occur twice in the string.\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-22_second_occurrence",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "The second occurrence",
+        "tmc_name": "part03-22_second_occurrence",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0091",
+      "type": "paragraph",
+      "order": 91,
+      "source_hash": "b97eebcf5a0222c688482a2c1f8f4510ba0c7934c136e1f60999bbcc47c2ab75",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!---\nA quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0092",
+      "type": "quiz",
+      "order": 92,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "6bfa7eab-80de-52e2-afe5-285af914099f",
+        "attributes": {
+          "id": "6bfa7eab-80de-52e2-afe5-285af914099f"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-2-working-with-strings-0093",
+      "type": "paragraph",
+      "order": 93,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    }
+  ]
+}

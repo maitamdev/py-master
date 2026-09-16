@@ -1,0 +1,682 @@
+{
+  "id": "part09-5-class-attributes",
+  "part": 9,
+  "part_slug": "part-9",
+  "slug": "5-class-attributes",
+  "is_part_index": false,
+  "title_original": "Class attributes",
+  "title_vi": "Thuộc tính lớp",
+  "path": "/part-9/5-class-attributes",
+  "source_path": "data/part-9/5-class-attributes.md",
+  "source_hash": "ea1cbe59c3e8801eaf7c08e6199a0286f0ba26afb786fbe356bda82d5088723a",
+  "order": 1,
+  "blocks_count": 37,
+  "blocks": [
+    {
+      "id": "blk-part09-5-class-attributes-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "13511fd70b986b97cd4daff8024c574445a83ec4598a72d7895741ff96837387",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be familiar with the terms class variable and class method\n- You will know how static traits are different from the traits of instances\n- You will be able to add static traits to your own classes"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ làm quen với các thuật ngữ biến lớp và phương thức lớp\n- Bạn sẽ biết đặc điểm tĩnh khác với đặc điểm của thể hiện như thế nào\n- Bạn sẽ có thể thêm các đặc điểm tĩnh vào lớp của riêng mình"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "7f788b7c2c97a0ed67ea1945d0dcf0b3c9fc1fedb77c67f5d11400864acc2495",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The _traits_ of objects are a central concept in object oriented programming. The term encompasses the methods and variables defined in the class definition. Again, not all Python programmers use the term \"traits\", some preferring _attributes_, _features_ or _members_. Traits is quite accepted in the wider object oriented programming world, so that is the term we use here."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "_Đặc điểm_ của đối tượng là khái niệm trung tâm trong lập trình hướng đối tượng. Thuật ngữ này bao gồm các phương thức và biến được xác định trong định nghĩa lớp. Một lần nữa, không phải tất cả các lập trình viên Python đều sử dụng thuật ngữ \"đặc điểm\", một số thích _attributes_, _features_ hoặc _members_. Các đặc điểm được chấp nhận rộng rãi trong thế giới lập trình hướng đối tượng rộng hơn, vì vậy đó là thuật ngữ chúng tôi sử dụng ở đây."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "a5efe82301de4904e35e11fbaa925bd689dda05d6f4935938e11596920459e31",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Thus far we have dealt mostly with _traits of objects_. These include the methods and attributes accessible in any instance of a class. In fact, classes _themselves_ can also have traits, which are sometimes called _static traits_, or more specifically _class variables_ and _class methods_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cho đến nay chúng ta đã đề cập chủ yếu đến _đặc điểm của đồ vật_. Chúng bao gồm các phương thức và thuộc tính có thể truy cập được trong bất kỳ phiên bản nào của một lớp. Trong thực tế, bản thân các lớp cũng có thể có các đặc điểm, đôi khi được gọi là _đặc điểm tĩnh_, hoặc cụ thể hơn là _biến lớp_ và _phương thức lớp_."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0004",
+      "type": "heading",
+      "order": 4,
+      "source_hash": "408b3adb8a48b87c38e10e7684a21f10d5c7468300fb8a62b68b4a2d7df4c3c3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Class variables"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Biến lớp"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "ba9fae663d2b3f3abc8112af16b050b37a9baac9a6fe8c3984221927f2a2dcd4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Each instance of a class has its own specific values for each attribute defined in the class, as we've seen in the examples in the previous sections. But what if we wanted to have some data that is shared by the different instances? Enter _class variables_, also known as static variables. A class variable is a variable which is accessed through the class itself, not through the instances created based on the class. At any given time during the execution of the program a class variable has one single value, no matter how many instances of the class are created."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mỗi phiên bản của một lớp có các giá trị cụ thể riêng cho từng thuộc tính được xác định trong lớp đó, như chúng ta đã thấy trong các ví dụ ở phần trước. Nhưng điều gì sẽ xảy ra nếu chúng ta muốn có một số dữ liệu được chia sẻ bởi các phiên bản khác nhau? Nhập _biến lớp_, còn được gọi là biến tĩnh. Biến lớp là một biến được truy cập thông qua chính lớp đó, không phải thông qua các thể hiện được tạo dựa trên lớp đó. Tại bất kỳ thời điểm nào trong quá trình thực thi chương trình, một biến lớp có một giá trị duy nhất, bất kể có bao nhiêu phiên bản của lớp được tạo."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "572ff36d89b1ce415954811e73114501bf9c1457f30b8d2768813269a738e0ae",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A class variable is declared without the `self` prefix, and usually outside any method definition as it should be accessible from anywhere within the class, or even from outside the class."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một biến lớp được khai báo mà không có tiền tố `self` và thường nằm ngoài bất kỳ định nghĩa phương thức nào vì nó có thể truy cập được từ bất kỳ đâu trong lớp hoặc thậm chí từ bên ngoài lớp."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0007",
+      "type": "code",
+      "order": 7,
+      "source_hash": "235d3a4256fa05670aa8f84ff9f898538f1e06b7bfede4032ed3f3a4af0f9f4f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class SavingsAccount:\n    general_rate = 0.03\n\n    def __init__(self, account_number: str, balance: float, interest_rate: float):\n        self.__account_number = account_number\n        self.__balance = balance\n        self.__interest_rate = interest_rate\n\n    def add_interest(self):\n        # The total interest rate equals \n        # the general rate + the interest rate of the account\n        total_interest = SavingsAccount.general_rate + self.__interest_rate\n        self.__balance += self.__balance * total_interest\n\n    @property\n    def balance(self):\n        return self.__balance"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class SavingsAccount:\n    general_rate = 0.03\n\n    def __init__(self, account_number: str, balance: float, interest_rate: float):\n        self.__account_number = account_number\n        self.__balance = balance\n        self.__interest_rate = interest_rate\n\n    def add_interest(self):\n        # The total interest rate equals \n        # the general rate + the interest rate of the account\n        total_interest = SavingsAccount.general_rate + self.__interest_rate\n        self.__balance += self.__balance * total_interest\n\n    @property\n    def balance(self):\n        return self.__balance"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "235d3a4256fa05670aa8f84ff9f898538f1e06b7bfede4032ed3f3a4af0f9f4f",
+        "length_lines": 17
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "617fccbb2d2f6828ad1726cc3f5a3c7063de37d7729c8098388be3d2d3dae534",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "As the variable `general_rate` is defined within the class but outside any method definitions, and it does not use the `self` prefix, it is a class variable."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vì biến `general_rate` được định nghĩa trong lớp nhưng nằm ngoài bất kỳ định nghĩa phương thức nào và nó không sử dụng tiền tố `self` nên nó là một biến lớp."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "2024fba186140457458ecb8ad6f270d6fa97d513ef623c6e8595c89f6b1b8cc9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A class variable is accessed through the name of the class, for example like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một biến lớp được truy cập thông qua tên của lớp, ví dụ như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0010",
+      "type": "code",
+      "order": 10,
+      "source_hash": "af9473da16656fb300c907e548fcf9d8b1ef547624116aae67e681dfd6935d1b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# The general rate exists independently of any object instances\nprint(\"The general interest rate is\", SavingsAccount.general_rate)\n\naccount = SavingsAccount(\"12345\", 1000, 0.05)\n# Add the total interest accrued to the balance on the account\naccount.add_interest()\nprint(account.balance)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# The general rate exists independently of any object instances\nprint(\"The general interest rate is\", SavingsAccount.general_rate)\n\naccount = SavingsAccount(\"12345\", 1000, 0.05)\n# Add the total interest accrued to the balance on the account\naccount.add_interest()\nprint(account.balance)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "af9473da16656fb300c907e548fcf9d8b1ef547624116aae67e681dfd6935d1b",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0011",
+      "type": "sample_output",
+      "order": 11,
+      "source_hash": "b343aacb5d074405e2dbe68af0d8eecfd4187af30c3e64cae84a2600fdd793a4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The general interest rate is 0.03\n1080.0"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The general interest rate is 0.03\n1080.0"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe general interest rate is 0.03\n1080.0\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "24571146c6a22385305d55b8c63685101cee43e21ddb6c61e62fa83c5e7afca0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "So, the class variables are accessed through the name of the class, for instance with `SavingsAccount.general_rate`, while instance variables are accessed through the name of the object variable, such as `account.balance`. An instance variable naturally only exists when an instance of the class has been created, but a class variable is available everywhere and at any point in time where the class itself is available."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vì vậy, các biến lớp được truy cập thông qua tên của lớp, chẳng hạn như `SavingsAccount.general_rate`, trong khi các biến thể hiện được truy cập thông qua tên của biến đối tượng, chẳng hạn như `account.balance`. Một biến đối tượng đương nhiên chỉ tồn tại khi một thể hiện của lớp đã được tạo, nhưng một biến lớp có sẵn ở mọi nơi và tại bất kỳ thời điểm nào mà chính lớp đó có sẵn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "53958baab12fdabb7f38ae64dbccf56b64d79ee6a2e120611fb6dfe1c4a492a6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Class variables are useful when there is need for values which are shared by all instances of the class. In the example above we assumed the total interest rate of all savings accounts is formed from two components: the general rate of interest is shared by all accounts, but each account also has it's own interest rate in an instance variable. The general rate may also change, but the change will then affect all instances of the class equally."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các biến lớp rất hữu ích khi có nhu cầu về các giá trị được chia sẻ bởi tất cả các phiên bản của lớp. Trong ví dụ trên, chúng tôi giả định tổng lãi suất của tất cả các tài khoản tiết kiệm được hình thành từ hai thành phần: lãi suất chung được chia sẻ cho tất cả các tài khoản, nhưng mỗi tài khoản cũng có lãi suất riêng trong một biến thể hiện. Tỷ lệ chung cũng có thể thay đổi, nhưng sự thay đổi đó sẽ ảnh hưởng như nhau đến tất cả các phiên bản của lớp."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "84d7264a4195def2094a52ee92806aabe0729156ac0f7644a249f4c092bb7d62",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class SavingsAccount:\n    general_rate = 0.03\n\n    def __init__(self, account_number: str, balance: float, interest_rate: float):\n        self.__account_number = account_number\n        self.__balance = balance\n        self.__interest_rate = interest_rate\n\n    def add_interest(self):\n        # The total interest rate equals \n        # the general rate + the interest rate of the account\n        total_interest = SavingsAccount.general_rate + self.__interest_rate\n        self.__balance += self.__balance * total_interest\n\n    @property\n    def balance(self):\n        return self.__balance\n\n    @property\n    def total_interest(self):\n        return self.__interest_rate + SavingsAccount.general_rate"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class SavingsAccount:\n    general_rate = 0.03\n\n    def __init__(self, account_number: str, balance: float, interest_rate: float):\n        self.__account_number = account_number\n        self.__balance = balance\n        self.__interest_rate = interest_rate\n\n    def add_interest(self):\n        # The total interest rate equals \n        # the general rate + the interest rate of the account\n        total_interest = SavingsAccount.general_rate + self.__interest_rate\n        self.__balance += self.__balance * total_interest\n\n    @property\n    def balance(self):\n        return self.__balance\n\n    @property\n    def total_interest(self):\n        return self.__interest_rate + SavingsAccount.general_rate"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "84d7264a4195def2094a52ee92806aabe0729156ac0f7644a249f4c092bb7d62",
+        "length_lines": 21
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0015",
+      "type": "code",
+      "order": 15,
+      "source_hash": "25d8feb25c5ff38ab855390e9049ee48c99cf22f792bc0ab78e46c88430b0703",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "account1 = SavingsAccount(\"12345\", 100, 0.03)\naccount2 = SavingsAccount(\"54321\", 200, 0.06)\n\nprint(\"General interest rate:\", SavingsAccount.general_rate)\nprint(account1.total_interest)\nprint(account2.total_interest)\n\n# The general rate of interest is now 10 percent\nSavingsAccount.general_rate = 0.10\n\nprint(\"General interest rate:\", SavingsAccount.general_rate)\nprint(account1.total_interest)\nprint(account2.total_interest)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "account1 = SavingsAccount(\"12345\", 100, 0.03)\naccount2 = SavingsAccount(\"54321\", 200, 0.06)\n\nprint(\"General interest rate:\", SavingsAccount.general_rate)\nprint(account1.total_interest)\nprint(account2.total_interest)\n\n# The general rate of interest is now 10 percent\nSavingsAccount.general_rate = 0.10\n\nprint(\"General interest rate:\", SavingsAccount.general_rate)\nprint(account1.total_interest)\nprint(account2.total_interest)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "25d8feb25c5ff38ab855390e9049ee48c99cf22f792bc0ab78e46c88430b0703",
+        "length_lines": 13
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0016",
+      "type": "sample_output",
+      "order": 16,
+      "source_hash": "a8dbe9f107e231813afbe62a7298cf6c0b4113571ea738abc9abee89d886e340",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "General interest rate: 0.03\n0.06\n0.09\nGeneral interest rate: 0.1\n0.13\n0.16"
+      },
+      "translation": {
+        "language": "text",
+        "content": "General interest rate: 0.03\n0.06\n0.09\nGeneral interest rate: 0.1\n0.13\n0.16"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nGeneral interest rate: 0.03\n0.06\n0.09\nGeneral interest rate: 0.1\n0.13\n0.16\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "5dbc721bad34e788077e37557cf12e12d3c3a9bd1a8a4623f04db089c251e825",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "When the general rate of interest changes, the total interest rate for all instances of the class changes. As you can see above, it is possible to add a getter method with the `@property` decorator even though there isn't an attribute of the same name in the class. This method returns the sum of the general rate of interest and the account specific interest rate."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khi lãi suất chung thay đổi, tổng lãi suất cho tất cả các trường hợp của lớp cũng thay đổi. Như bạn có thể thấy ở trên, có thể thêm phương thức getter bằng trình trang trí `@property` mặc dù không có thuộc tính cùng tên trong lớp. Phương thức này trả về tổng lãi suất chung và lãi suất cụ thể của tài khoản."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "2d23ce07a276401fda9a2baa4c9255d30dda4e46b3578b029a6da41841a701f5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at another example. The class `PhoneNumber` is used to define a single phone number, but it also contains some country codes in a dictionary. This dictionary is a class variable, and as such is shared by all the instances of the class, because the country code for phone numbers from a single country is always the same."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy xem một ví dụ khác. Lớp `PhoneNumber` được sử dụng để xác định một số điện thoại nhưng nó cũng chứa một số mã quốc gia trong từ điển. Từ điển này là một biến lớp và do đó được chia sẻ bởi tất cả các phiên bản của lớp, vì mã quốc gia cho các số điện thoại từ một quốc gia luôn giống nhau."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0019",
+      "type": "code",
+      "order": 19,
+      "source_hash": "003f8a37fe959549879893b8ce8a807b588f4f92bbc2512d0f177428762e1799",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class PhoneNumber:\n    country_codes = {\"Finland\": \"+358\", \"Sweden\": \"+46\", \"United States\": \"+1\"}\n\n    def __init__(self, name: str, phone_number: str, country: str):\n        self.__name = name\n        self.__phone_number = phone_number\n        self.__country = country\n\n    @property\n    def phone_number(self):\n        # When the country code prefix is added \n        # the initial zero is removed from the phone number\n        return PhoneNumber.country_codes[self.__country] + \" \" + self.__phone_number[1:]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class PhoneNumber:\n    country_codes = {\"Finland\": \"+358\", \"Sweden\": \"+46\", \"United States\": \"+1\"}\n\n    def __init__(self, name: str, phone_number: str, country: str):\n        self.__name = name\n        self.__phone_number = phone_number\n        self.__country = country\n\n    @property\n    def phone_number(self):\n        # When the country code prefix is added \n        # the initial zero is removed from the phone number\n        return PhoneNumber.country_codes[self.__country] + \" \" + self.__phone_number[1:]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "003f8a37fe959549879893b8ce8a807b588f4f92bbc2512d0f177428762e1799",
+        "length_lines": 13
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0020",
+      "type": "code",
+      "order": 20,
+      "source_hash": "f9fdcba8181afd4b0ce1fecded732b053db40fcb80b50e6b42f5d401a25ff684",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "paulas_no = PhoneNumber(\"Paula Pythons\", \"050 1234 567\", \"Finland\")\nprint(paulas_no.phone_number)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "paulas_no = PhoneNumber(\"Paula Pythons\", \"050 1234 567\", \"Finland\")\nprint(paulas_no.phone_number)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f9fdcba8181afd4b0ce1fecded732b053db40fcb80b50e6b42f5d401a25ff684",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0021",
+      "type": "sample_output",
+      "order": 21,
+      "source_hash": "2a115bcc80e1e383a62ca5e232a827ffbe41ed40801ee68fff725070bf2e5a33",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "+358 50 1234 567"
+      },
+      "translation": {
+        "language": "text",
+        "content": "+358 50 1234 567"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n+358 50 1234 567\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "55869c7d3029098d28143432159a6f1c8a9be8740932f3ab1f6ac8ed16a8894f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Each PhoneNumber object contains the name of the owner, the number itself, and the country of the phone number. When the attribute containing the phone number is accessed with the getter method, the appropriate country code is retrieved from the class variable dictionary based on the country attribute, and the result is prefixed to the number."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mỗi đối tượng PhoneNumber chứa tên chủ sở hữu, số điện thoại và quốc gia của số điện thoại. Khi thuộc tính chứa số điện thoại được truy cập bằng phương thức getter, mã quốc gia thích hợp sẽ được lấy từ từ điển biến lớp dựa trên thuộc tính quốc gia và kết quả được đặt trước số."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "7311a6afea561c69bd3176e61c809514cea00dae4a3b17399b2935b9814930e1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The example implementation above is not yet very functional otherwise. In the following example we've added getter and setters for all attributes:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Việc triển khai ví dụ ở trên vẫn chưa có nhiều chức năng. Trong ví dụ sau, chúng tôi đã thêm getter và setters cho tất cả các thuộc tính:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0024",
+      "type": "code",
+      "order": 24,
+      "source_hash": "4702e30c24a470889de8cf0af4d50eab15ecda5a45c1a704d47dfd4c17b93483",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class PhoneNumber:\n    country_codes = {\"Finland\": \"+358\", \"Sweden\": \"+46\", \"United States\": \"+1\"}\n\n    def __init__(self, name: str, phone_number: str, country: str):\n        self.__name = name\n        # This is a call to the phone_number.setter method\n        self.phone_number = phone_number\n        # This is a call to the country.setter method\n        self.country = country\n\n    # the getter method for phone_number combines the country code \n    # and the attribute phone_number\n    @property\n    def phone_number(self):\n        # the initial zero is removed as the country code is prefixed\n        return PhoneNumber.country_codes[self.__country] + \" \" + self.__phone_number[1:]\n\n    @phone_number.setter\n    def phone_number(self, number):\n        # Making sure the number contains only numbers and space characters\n        for character in number:\n            if character not in \"1234567890 \":\n                raise ValueError(\"A phone number can only contain numbers and spaces\")\n        self.__phone_number = number\n\n    # a getter for only the number itself without the country code\n    @property\n    def local_number(self):\n        return self.__phone_number\n\n    @property\n    def country(self):\n        return self.__country\n\n    @country.setter\n    def country(self, country):\n        # Making sure the country is a key in the dictionary of country codes\n        if country not in PhoneNumber.country_codes:\n            raise ValueError(\"This country is not on the list.\")\n        self.__country = country\n\n    @property\n    def name(self):\n        return self.__name\n\n    @name.setter\n    def name(self, name):\n        self.__name = name\n\n    def __str__(self):\n        return f\"{self.phone_number} ({self.__name})\""
+      },
+      "translation": {
+        "language": "code",
+        "content": "class PhoneNumber:\n    country_codes = {\"Finland\": \"+358\", \"Sweden\": \"+46\", \"United States\": \"+1\"}\n\n    def __init__(self, name: str, phone_number: str, country: str):\n        self.__name = name\n        # This is a call to the phone_number.setter method\n        self.phone_number = phone_number\n        # This is a call to the country.setter method\n        self.country = country\n\n    # the getter method for phone_number combines the country code \n    # and the attribute phone_number\n    @property\n    def phone_number(self):\n        # the initial zero is removed as the country code is prefixed\n        return PhoneNumber.country_codes[self.__country] + \" \" + self.__phone_number[1:]\n\n    @phone_number.setter\n    def phone_number(self, number):\n        # Making sure the number contains only numbers and space characters\n        for character in number:\n            if character not in \"1234567890 \":\n                raise ValueError(\"A phone number can only contain numbers and spaces\")\n        self.__phone_number = number\n\n    # a getter for only the number itself without the country code\n    @property\n    def local_number(self):\n        return self.__phone_number\n\n    @property\n    def country(self):\n        return self.__country\n\n    @country.setter\n    def country(self, country):\n        # Making sure the country is a key in the dictionary of country codes\n        if country not in PhoneNumber.country_codes:\n            raise ValueError(\"This country is not on the list.\")\n        self.__country = country\n\n    @property\n    def name(self):\n        return self.__name\n\n    @name.setter\n    def name(self, name):\n        self.__name = name\n\n    def __str__(self):\n        return f\"{self.phone_number} ({self.__name})\""
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4702e30c24a470889de8cf0af4d50eab15ecda5a45c1a704d47dfd4c17b93483",
+        "length_lines": 51
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0025",
+      "type": "code",
+      "order": 25,
+      "source_hash": "466eba57853ccb00c16f9b9be7342ec3ad111b0431234e29fd9fb6c7e476e440",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    pn = PhoneNumber(\"Peter Pythons\", \"040 111 1111\", \"Sweden\")\n    print(pn)\n    print(pn.phone_number)\n    print(pn.local_number)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    pn = PhoneNumber(\"Peter Pythons\", \"040 111 1111\", \"Sweden\")\n    print(pn)\n    print(pn.phone_number)\n    print(pn.local_number)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "466eba57853ccb00c16f9b9be7342ec3ad111b0431234e29fd9fb6c7e476e440",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0026",
+      "type": "sample_output",
+      "order": 26,
+      "source_hash": "ee2ced92840e3280c275bfa3a010e841a4291ca815d8b3e0095fa9db0149f0ef",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "+46 40 111 1111 (Peter Pythons)\n+46 40 111 1111\n040 111 1111"
+      },
+      "translation": {
+        "language": "text",
+        "content": "+46 40 111 1111 (Peter Pythons)\n+46 40 111 1111\n040 111 1111"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n+46 40 111 1111 (Peter Pythons)\n+46 40 111 1111\n040 111 1111\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0027",
+      "type": "exercise",
+      "order": 27,
+      "source_hash": "12960cf4b53f0cd6a3c4ac85deeef3af0707e0bb6d7fa3455e1292d2022faa51",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains the class definition `City` which is a model for a single city.\n\nPlease add a class variable named `postcodes` which refers to a dictionary. The keys of the dictionary are names of cities, and the values attached are the postcodes for those cities. Both are strings.\n\nThe dictionary should contain (at least) the following postcodes:\n\n* Helsinki 00100\n* Turku 20100\n* Tampere 33100\n* Rovaniemi 96100\n* Oulu 90100\n\nYou do not need to implement any other functionality."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mẫu bài tập chứa định nghĩa lớp `City` là mô hình cho một thành phố.\n\nVui lòng thêm một biến lớp có tên `postcodes` để tham chiếu đến từ điển. Khóa của từ điển là tên của các thành phố và các giá trị đính kèm là mã bưu điện của các thành phố đó. Cả hai đều là chuỗi.\n\nTừ điển phải chứa (ít nhất) các mã bưu điện sau:\n\n* Helsinki 00100\n* Thổ Nhĩ Kỳ 20100\n* Tampere 33100\n* Rovaniemi 96100\n* Oulu 90100\n\nBạn không cần phải thực hiện bất kỳ chức năng nào khác."
+      },
+      "metadata": {
+        "exercise_id": "ex-part09-13_postcodes",
+        "exercise_type": "programming-exercise",
+        "name": "Postcodes",
+        "tmc_name": "part09-13_postcodes",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0028",
+      "type": "heading",
+      "order": 28,
+      "source_hash": "d427c3ba63c0452fd9dfa571a768edcfbd625c0f096baacf802e23acc881b6d6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Class methods"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương thức lớp"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "da717732e66fe1d1543117e8464c3798142032cee9a402bd0f5d854cbbd0b236",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A class method, also called a static method, is a method which is not attached to any single instance of the class. A class method can be called without creating any instances of the class."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một phương thức lớp, còn được gọi là phương thức tĩnh, là một phương thức không được gắn vào bất kỳ phiên bản đơn lẻ nào của lớp. Một phương thức lớp có thể được gọi mà không cần tạo bất kỳ phiên bản nào của lớp đó."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "a6590b98c2366c746d98c5d8969d65fe183348acfa68bce312ac1c024ffcdae8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Class methods are usually tools which have something to do with the purpose of the class, but which are detached in the sense that it should not be necessary to create instances of the class in order to be able to call them. Class methods are usually public, so that they can be called both from outside the class and from within the class, including from within instances of the class."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các phương thức lớp thường là các công cụ có liên quan đến mục đích của lớp, nhưng được tách ra theo nghĩa là không cần thiết phải tạo các thể hiện của lớp để có thể gọi chúng. Các phương thức của lớp thường là công khai, do đó chúng có thể được gọi cả từ bên ngoài lớp và từ bên trong lớp, kể cả từ bên trong các thể hiện của lớp."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "b393f91a83b0f563bf2f3b9b8a3f560d919726299d41473618c452470502b2f8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A class method is defined with the `@classmethod` annotation. The first parameter is always `cls`. The variable name `cls` is similar to the `self` parameter. The difference is that `cls` points to the class while `self` point to an instance of the class. Neither parameter is included in the argument list when the function is called; Python fills in the appropriate value automatically."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một phương thức lớp được định nghĩa bằng chú thích `@classmethod`. Tham số đầu tiên luôn là `cls`. Tên biến `cls` giống với tham số `self`. Sự khác biệt là `cls` trỏ đến lớp trong khi `self` trỏ đến một phiên bản của lớp. Không có tham số nào được đưa vào danh sách đối số khi hàm được gọi; Python tự động điền giá trị thích hợp."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "bfed3b87e73a113e5414f898546f62e9ea7bbd0880d30b7e36ea42b628bac6ac",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the following example we have a class modelling vehicle registrations. The `Registration` class contains a static method for checking whether a license plate is valid. The method is a static class method because it is useful to be able to check if a license plate is valid even before a single Registration object is created:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong ví dụ sau chúng ta có một lớp mô hình đăng ký xe. Lớp `Registration` chứa một phương thức tĩnh để kiểm tra xem biển số xe có hợp lệ hay không. Phương thức này là một phương thức lớp tĩnh vì nó rất hữu ích khi có thể kiểm tra xem biển số xe có hợp lệ hay không ngay cả trước khi một đối tượng Đăng ký duy nhất được tạo:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0033",
+      "type": "code",
+      "order": 33,
+      "source_hash": "d4607c533fe010e30023c8cc8ba86f938757de13c0f23e541ca7d3cb065c278c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Registration:\n    def __init__(self, owner: str, make: str, year: int, license_plate: str):\n        self.__owner = owner\n        self.__make = make\n        self.__year = year\n\n        # Call the license_plate.setter method\n        self.license_plate = license_plate\n\n    @property\n    def license_plate(self):\n        return self.__license_plate\n\n    @license_plate.setter\n    def license_plate(self, plate):\n        if Registration.license_plate_valid(plate):\n            self.__license_plate = plate\n        else:\n            raise ValueError(\"The license plate is not valid\")\n\n    # A class method for validating the license plate\n    @classmethod\n    def license_plate_valid(cls, plate: str):\n        if len(plate) < 3 or \"-\" not in plate:\n            return False\n\n        # Check the beginning and end sections of the plate separately\n        letters, numbers = plate.split(\"-\")\n\n        # the beginning section can have only letters\n        for character in letters:\n            if character.lower() not in \"abcdefghijklmnopqrstuvwxyzåäö\":\n                return False\n\n        # the end section can have only numbers\n        for character in numbers:\n            if character not in \"1234567890\":\n                return False\n\n        return True"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Registration:\n    def __init__(self, owner: str, make: str, year: int, license_plate: str):\n        self.__owner = owner\n        self.__make = make\n        self.__year = year\n\n        # Call the license_plate.setter method\n        self.license_plate = license_plate\n\n    @property\n    def license_plate(self):\n        return self.__license_plate\n\n    @license_plate.setter\n    def license_plate(self, plate):\n        if Registration.license_plate_valid(plate):\n            self.__license_plate = plate\n        else:\n            raise ValueError(\"The license plate is not valid\")\n\n    # A class method for validating the license plate\n    @classmethod\n    def license_plate_valid(cls, plate: str):\n        if len(plate) < 3 or \"-\" not in plate:\n            return False\n\n        # Check the beginning and end sections of the plate separately\n        letters, numbers = plate.split(\"-\")\n\n        # the beginning section can have only letters\n        for character in letters:\n            if character.lower() not in \"abcdefghijklmnopqrstuvwxyzåäö\":\n                return False\n\n        # the end section can have only numbers\n        for character in numbers:\n            if character not in \"1234567890\":\n                return False\n\n        return True"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d4607c533fe010e30023c8cc8ba86f938757de13c0f23e541ca7d3cb065c278c",
+        "length_lines": 40
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0034",
+      "type": "code",
+      "order": 34,
+      "source_hash": "e8122e7c933350175d5b9058bdabf1fe5da8b71981fc0fc8d8676ac0dd740bfd",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "registration = Registration(\"Mary Motorist\", \"Volvo\", \"1992\", \"abc-123\")\n\nif Registration.license_plate_valid(\"xyz-789\"):\n    print(\"This is a valid license plate!\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "registration = Registration(\"Mary Motorist\", \"Volvo\", \"1992\", \"abc-123\")\n\nif Registration.license_plate_valid(\"xyz-789\"):\n    print(\"This is a valid license plate!\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e8122e7c933350175d5b9058bdabf1fe5da8b71981fc0fc8d8676ac0dd740bfd",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0035",
+      "type": "sample_output",
+      "order": 35,
+      "source_hash": "1fe35ee2e407071433299820e8c37c35aef56791d0296af12ad18b0fed505390",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "This is a valid license plate!"
+      },
+      "translation": {
+        "language": "text",
+        "content": "This is a valid license plate!"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThis is a valid license plate!\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "760a4463f9da335c85258d37031a7f8fc0e33ab2c7c2fa77ca4e9c20edc849fc",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The validity of a license plate can be checked even without creating a single instance of the class, for example with `Registration.license_plate_valid(\"xyz-789\")`. The same method is called within the constructor of the class. NB: even within the constructor this method is accessed through the name of the class, not `self`!"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tính hợp lệ của biển số xe có thể được kiểm tra ngay cả khi không tạo một phiên bản duy nhất của lớp, ví dụ như với `Registration.license_plate_valid(\"xyz-789\")`. Phương thức tương tự được gọi trong hàm tạo của lớp. Lưu ý: ngay cả trong hàm tạo, phương thức này được truy cập thông qua tên của lớp chứ không phải `self`!"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-5-class-attributes-0037",
+      "type": "exercise",
+      "order": 37,
+      "source_hash": "526d6a12dff001c4e9b73192249662965fe71c56c485ce20d6064d6926014c5b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please create a class named `ListHelper` which contains the following two class methods.\n\n* `greatest_frequency(my_list: list)` returns the most common item on the list\n* `doubles(my_list: list)` returns the number of unique items which appear at least twice on the list\n\nIt should be possible to use these methods without creating an instance of the class. An example of how the methods could be used:\n\n```python\nnumbers = [1, 1, 2, 1, 3, 3, 4, 5, 5, 5, 6, 5, 5, 5]\nprint(ListHelper.greatest_frequency(numbers))\nprint(ListHelper.doubles(numbers))\n```\n\n<sample-output>\n\n5\n3\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng tạo một lớp có tên `ListHelper` chứa hai phương thức lớp sau.\n\n* `greatest_frequency(my_list: list)` trả về mục phổ biến nhất trong danh sách\n* `doubles(my_list: list)` trả về số lượng mục duy nhất xuất hiện ít nhất hai lần trong danh sách\n\nCó thể sử dụng các phương thức này mà không cần tạo một thể hiện của lớp. Một ví dụ về cách sử dụng các phương thức:\n\n```python\nnumbers = [1, 1, 2, 1, 3, 3, 4, 5, 5, 5, 6, 5, 5, 5]\nprint(ListHelper.greatest_frequency(numbers))\nprint(ListHelper.doubles(numbers))\n```\n\n<sample-output>\n\n5\n3\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part09-14_list_helper",
+        "exercise_type": "programming-exercise",
+        "name": "List helper",
+        "tmc_name": "part09-14_list_helper",
+        "height": null
+      }
+    }
+  ]
+}

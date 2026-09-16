@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-27_sum_of_lists",
+  "lesson_id": "part04-4-definite-iteration",
+  "part": 4,
+  "tmc_name": "part04-27_sum_of_lists",
+  "title_original": "The sum of lists",
+  "title_vi": "Tổng hợp các danh sách",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `list_sum` which takes two lists of integers as arguments. The function returns a new list which contains the sums of the items at each index in the two original lists. You may assume both lists have the same number of items. \n\nAn example of the function at work:\n\n```python\na = [1, 2, 3]\nb = [7, 8, 9]\nprint(list_sum(a, b)) # [8, 10, 12]\n```",
+  "description_vi": "Hãy viết một hàm có tên `list_sum` lấy hai danh sách số nguyên làm đối số. Hàm trả về một danh sách mới chứa tổng của các mục ở mỗi chỉ mục trong hai danh sách ban đầu. Bạn có thể cho rằng cả hai danh sách đều có cùng số lượng mục. \n\nMột ví dụ về chức năng tại nơi làm việc:\n\n```python\na = [1, 2, 3]\nb = [7, 8, 9]\nprint(list_sum(a, b)) # [8, 10, 12]\n```",
+  "starter_code": "a = [1, 2, 3]\nb = [7, 8, 9]\nprint(list_sum(a, b)) # [8, 10, 12]",
+  "grading_data_available": false,
+  "source_hash": "2236bf6518b0a2ccd7d8d7876c7ff937180fc4861a1e5fcd3fa73e9c6bc1fb59",
+  "order": 54
+}

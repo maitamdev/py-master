@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-07_shape",
+  "lesson_id": "part04-2-more-functions",
+  "part": 4,
+  "tmc_name": "part04-07_shape",
+  "title_original": "A shape",
+  "title_vi": "Một hình dạng",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `shape`, which takes four arguments. The first two parameters specify a triangle, as above, and the character used to draw it. The first parameter also specifies the width of a rectangle, while the third parameter specifies its height. The fourth parameter specifies the filler character of the rectangle. The function prints first the triangle, and then the rectangle below it.\n\nThe function should call the function `line` from the exercise above for the actual printing out. Copy your solution to that exercise above the code for this exercise. Please don't change anything in the `line` function.\n\nSome examples:\n\n```python\nshape(5, \"X\", 3, \"*\")\nprint()\nshape(2, \"o\", 4, \"+\")\nprint()\nshape(3, \".\", 0, \",\")\n```\n\n<sample-output>\n\n<pre>\nX\nXX\nXXX\nXXXX\nXXXXX\n*****\n*****\n*****\n\no\noo\n++\n++\n++\n++\n\n.\n..\n...\n</pre>\n\n</sample-output>\n\n**Hint**\n\nDon't try and solve this exercise \"all at once\". A good first step would be to make sure you can print the triangle reliably. Then you can try adding the rectangle.\n\nThis is one of the most important skills of a programmer: **concentrate on small, tangible sections of the problem at a time**. Solve and verify partial solutions, and use them to build towards a complete solution.",
+  "description_vi": "Hãy viết một hàm có tên `shape`, hàm này nhận bốn đối số. Hai tham số đầu tiên chỉ định một hình tam giác như trên và ký tự được sử dụng để vẽ hình tam giác đó. Tham số đầu tiên cũng chỉ định chiều rộng của hình chữ nhật, trong khi tham số thứ ba chỉ định chiều cao của nó. Tham số thứ tư chỉ định ký tự phụ của hình chữ nhật. Hàm in đầu tiên là hình tam giác, sau đó là hình chữ nhật bên dưới nó.\n\nHàm sẽ gọi hàm `line` từ bài tập trên để in ra thực tế. Sao chép lời giải của bạn cho bài tập đó ở phía trên mã của bài tập này. Vui lòng không thay đổi bất cứ điều gì trong chức năng `line`.\n\nMột số ví dụ:\n\n```python\nshape(5, \"X\", 3, \"*\")\nprint()\nshape(2, \"o\", 4, \"+\")\nprint()\nshape(3, \".\", 0, \",\")\n```\n\n<sample-output>\n\n<pre>\nX\nXX\nXXX\nXXXX\nXXXXX\n*****\n*****\n*****\n\nồ\nồ\n++\n++\n++\n++\n\n.\n..\n...\n</pre>\n\n</sample-output>\n\n**Gợi ý**\n\nĐừng cố gắng giải bài tập này \"tất cả cùng một lúc\". Bước đầu tiên tốt nhất là đảm bảo bạn có thể in hình tam giác một cách đáng tin cậy. Sau đó, bạn có thể thử thêm hình chữ nhật.\n\nĐây là một trong những kỹ năng quan trọng nhất của lập trình viên: **tập trung vào các phần nhỏ, hữu hình của vấn đề tại một thời điểm**. Giải quyết và xác minh các giải pháp từng phần và sử dụng chúng để xây dựng hướng tới một giải pháp hoàn chỉnh.",
+  "starter_code": "shape(5, \"X\", 3, \"*\")\nprint()\nshape(2, \"o\", 4, \"+\")\nprint()\nshape(3, \".\", 0, \",\")",
+  "grading_data_available": false,
+  "source_hash": "cec0c335c30ac3e89c22fb22df789ea69f9ecc238eed17783c71f449551fd5e7",
+  "order": 33
+}

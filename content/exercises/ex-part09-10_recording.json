@@ -1,0 +1,16 @@
+{
+  "id": "ex-part09-10_recording",
+  "lesson_id": "part09-3-encapsulation",
+  "part": 9,
+  "tmc_name": "part09-10_recording",
+  "title_original": "Recording",
+  "title_vi": "Ghi âm",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please create a class named `Recording` which models a single recording. The class should have one private variable: `__length` of type integer.\n\nPlease implement the following:\n\n* a constructor which takes the length as an argument\n* a getter method `length` which returns the length of the recording\n* a setter method which sets the length of the recording\n\nIt should be possible to make use of the class as follows:\n\n```python\nthe_wall = Recording(43)\nprint(the_wall.length)\nthe_wall.length = 44\nprint(the_wall.length)\n```\n\n<sample-output>\n\n43\n44\n\n</sample-output>\n\n\nIf the argument for either the constructor or the setter method is below zero, this should raise a `ValueError`.\n\nIf you need a refresher on raising exceptions, please see [part 6](/part-6/3-errors#raising-exceptions) of the course materials.",
+  "description_vi": "Vui lòng tạo một lớp có tên `Recording` để mô hình hóa một bản ghi. Lớp nên có một biến riêng: `__length` có kiểu số nguyên.\n\nHãy thực hiện những điều sau:\n\n* một hàm tạo lấy độ dài làm đối số\n* một phương thức getter `length` trả về độ dài của bản ghi\n* một phương thức setter đặt thời lượng của bản ghi\n\nCó thể sử dụng lớp như sau:\n\n```python\nthe_wall = Recording(43)\nprint(the_wall.length)\nthe_wall.length = 44\nprint(the_wall.length)\n```\n\n<sample-output>\n\n43\n44\n\n</sample-output>\n\n\nNếu đối số cho hàm tạo hoặc phương thức setter nhỏ hơn 0 thì điều này sẽ tăng `ValueError`.\n\nNếu bạn cần xem lại cách nêu ngoại lệ, vui lòng xem [phần 6](/part-6/3-errors#raising-exceptions) của tài liệu khóa học.",
+  "starter_code": "the_wall = Recording(43)\nprint(the_wall.length)\nthe_wall.length = 44\nprint(the_wall.length)",
+  "grading_data_available": false,
+  "source_hash": "6e68647ed344626a2e1e28afa14360464aef1e97a62febc717226547df311fe8",
+  "order": 48
+}

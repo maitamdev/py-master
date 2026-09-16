@@ -1,0 +1,56 @@
+{
+  "part": 8,
+  "slug": "part-8",
+  "title_original": "Part 8",
+  "title_vi": "Phần 8",
+  "lessons": [
+    {
+      "id": "part08-1-objects-and-methods",
+      "slug": "1-objects-and-methods",
+      "is_index": false,
+      "title_original": "Objects and methods",
+      "path": "/part-8/1-objects-and-methods",
+      "blocks_count": 25
+    },
+    {
+      "id": "part08-2-classes-and-objects",
+      "slug": "2-classes-and-objects",
+      "is_index": false,
+      "title_original": "Classes and objects",
+      "path": "/part-8/2-classes-and-objects",
+      "blocks_count": 43
+    },
+    {
+      "id": "part08-3-defining-classes",
+      "slug": "3-defining-classes",
+      "is_index": false,
+      "title_original": "Defining classes",
+      "path": "/part-8/3-defining-classes",
+      "blocks_count": 49
+    },
+    {
+      "id": "part08-4-defining-methods",
+      "slug": "4-defining-methods",
+      "is_index": false,
+      "title_original": "Defining methods",
+      "path": "/part-8/4-defining-methods",
+      "blocks_count": 37
+    },
+    {
+      "id": "part08-5-more-examples-of-classes",
+      "slug": "5-more-examples-of-classes",
+      "is_index": false,
+      "title_original": "More examples of classes",
+      "path": "/part-8/5-more-examples-of-classes",
+      "blocks_count": 39
+    },
+    {
+      "id": "part08-index",
+      "slug": "index",
+      "is_index": true,
+      "title_original": "Part 8",
+      "path": "/part-8",
+      "blocks_count": 2
+    }
+  ]
+}

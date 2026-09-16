@@ -1,0 +1,1256 @@
+{
+  "id": "part04-4-definite-iteration",
+  "part": 4,
+  "part_slug": "part-4",
+  "slug": "4-definite-iteration",
+  "is_part_index": false,
+  "title_original": "Definite iteration",
+  "title_vi": "Lặp lại xác định",
+  "path": "/part-4/4-definite-iteration",
+  "source_path": "data/part-4/4-definite-iteration.md",
+  "source_hash": "dd66acb714681137b1777c3ea81c347f498d959110a587d74fc218586dd3c709",
+  "order": 1,
+  "blocks_count": 67,
+  "blocks": [
+    {
+      "id": "blk-part04-4-definite-iteration-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "d1f077a16d022f9c20bc813b27a0f7e05b35472c654f281168b9be00525c6aa0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know the difference between definite and indefinite iteration \n- You will know how a Python `for` loop works\n- You will be able to use a `for` loop to iterate through lists and strings"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ biết sự khác biệt giữa lặp lại xác định và không xác định \n- Bạn sẽ biết vòng lặp Python `for` hoạt động như thế nào\n- Bạn sẽ có thể sử dụng vòng lặp `for` để lặp qua danh sách và chuỗi"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "3e8b742d0a2a3c05570d5816dddf2a70902474e0bda0015fafbf728c096f8e86",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You can use a `while` loop to go through the items in a list, just like we used while loops to go through strings. The following program prints out the items in the list, each on a separate line:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn có thể sử dụng vòng lặp `while` để duyệt qua các mục trong danh sách, giống như chúng ta đã sử dụng vòng lặp `while` để duyệt qua các chuỗi. Chương trình sau in ra các mục trong danh sách, mỗi mục trên một dòng riêng biệt:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0003",
+      "type": "code",
+      "order": 3,
+      "source_hash": "03a09f4e653ed496cc581d6ce57982f2bd716a0356d956e451ce70fad99f0df0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [3, 2, 4, 5, 2]\n\nindex = 0\nwhile index < len(my_list):\n    print(my_list[index])\n    index += 1"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [3, 2, 4, 5, 2]\n\nindex = 0\nwhile index < len(my_list):\n    print(my_list[index])\n    index += 1"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "03a09f4e653ed496cc581d6ce57982f2bd716a0356d956e451ce70fad99f0df0",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0004",
+      "type": "sample_output",
+      "order": 4,
+      "source_hash": "b01994d6593a47cddd0ae4c352a7c35256eea6afd04f811d16a619bce3efed60",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "3\n2\n4\n5\n2"
+      },
+      "translation": {
+        "language": "text",
+        "content": "3\n2\n4\n5\n2"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n3\n2\n4\n5\n2\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "4e1178658a2cfc67350d88754b8f7441bf3bc16351035613dadf4d75e0be4df7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This obviously works, but it is a rather complicated way of going through a list, as you have to use a helper variable `index` to remember which item in the list you're at. Fortunately, Python offers a more intuitive way of traversing through lists, strings and other similar structures."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điều này rõ ràng là có hiệu quả, nhưng đó là một cách khá phức tạp để xem qua danh sách, vì bạn phải sử dụng biến trợ giúp `index` để ghi nhớ mục nào trong danh sách bạn đang ở. May mắn thay, Python cung cấp một cách trực quan hơn để duyệt qua các danh sách, chuỗi và các cấu trúc tương tự khác."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0006",
+      "type": "heading",
+      "order": 6,
+      "source_hash": "da05f91dfaa257d1fff62c7a4b1f6ba49fd39c9fbe4a3f20235eb8aa1808e2af",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The for loop"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "vòng lặp `for`"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "b45dd94260d0cc8e51e2e9b77cd79265db53f7680aa620afe3c2b88af5f4300f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "When you want to go through some ready collection of items, the Python `for` loop will do this for you. For instance, the loop can go through all items in a list from first to last."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khi bạn muốn xem qua một số bộ sưu tập mục đã có sẵn, vòng lặp Python `for` sẽ thực hiện việc này cho bạn. Chẳng hạn, vòng lặp có thể đi qua tất cả các mục trong danh sách từ đầu đến cuối."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "dc658ac4a6aef10bf2fa452ea941087611f1ffab46934b5b0974bfc4a2d375e1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "When using a `while` loop the program doesn't \"know\" beforehand how many iterations the loop will perform. It will repeat until the condition becomes false, or the loop is otherwise broken out of. That is why it falls under _indefinite iteration_. With a for loop the number of iterations is determined when the loop is set up, and so it falls under _definite iteration_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khi sử dụng vòng lặp `while`, chương trình không \"biết trước\" số lần lặp mà vòng lặp sẽ thực hiện. Nó sẽ lặp lại cho đến khi điều kiện trở thành sai hoặc vòng lặp bị phá vỡ. Đó là lý do tại sao nó rơi vào _lặp lại không xác định_. Với vòng lặp `for`, số lần lặp được xác định khi vòng lặp được thiết lập và do đó nó nằm trong _lặp lại xác định_."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "d221fcc532615f74e6c9f60bbdbce392c1fae46611d0ad7f905f616ac74f3bde",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The idea is that the `for` loop takes the items in the collection one by one and performs the same actions on each. The programmer does not have to worry about which item is being handled when. The syntax of the for loop is as follows:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ý tưởng là vòng lặp `for` lấy từng mục trong bộ sưu tập và thực hiện các hành động tương tự trên từng mục. Người lập trình không phải lo lắng về việc mục nào sẽ được xử lý khi nào. Cú pháp của vòng lặp `for` như sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0010",
+      "type": "code",
+      "order": 10,
+      "source_hash": "5376ecc023c6ca9ff05d219d24467e161e405b8457600f1b21aef766cb03c3e4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "for <variable> in <collection>:\n    <block>"
+      },
+      "translation": {
+        "language": "code",
+        "content": "for <variable> in <collection>:\n    <block>"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5376ecc023c6ca9ff05d219d24467e161e405b8457600f1b21aef766cb03c3e4",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "12f2769c46a76fb2b5970ede390fa3afdf39081cff0ceec9946cf6e4e3d6510d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The `for` loop takes an item in the collection, assigns it to the variable, processes the block of code, and moves on to the next item. When all items in the collection have been processed, execution of the program continues from the line after the loop."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vòng lặp `for` lấy một mục trong bộ sưu tập, gán nó cho biến, xử lý khối mã và chuyển sang mục tiếp theo. Khi tất cả các mục trong bộ sưu tập đã được xử lý, việc thực thi chương trình sẽ tiếp tục từ dòng sau vòng lặp."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0012",
+      "type": "image",
+      "order": 12,
+      "source_hash": "f43f25248439ddea8d257976f589d0ecdf4ac208ea41604484911420a4bd09a3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Iterating through a list"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lặp lại qua một danh sách"
+      },
+      "metadata": {
+        "src": "4_4_1.png",
+        "alt": "Iterating through a list",
+        "attributes": {
+          "src": "4_4_1.png",
+          "alt": "Iterating through a list"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "74a7a62e8f50e4e5bc715584e0406c1ce26aa6d63fefcab933ffc7aeae3b5a07",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following program prints out all the items in a list using a `for` loop:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình sau in ra tất cả các mục trong danh sách bằng vòng lặp `for`:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "336cbd3e8d7de6ad28a8c8284d31ec37024ab0c018cc21832fd55073211c384f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [3, 2, 4, 5, 2]\n\nfor item in my_list:\n    print(item)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [3, 2, 4, 5, 2]\n\nfor item in my_list:\n    print(item)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "336cbd3e8d7de6ad28a8c8284d31ec37024ab0c018cc21832fd55073211c384f",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0015",
+      "type": "sample_output",
+      "order": 15,
+      "source_hash": "b01994d6593a47cddd0ae4c352a7c35256eea6afd04f811d16a619bce3efed60",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "3\n2\n4\n5\n2"
+      },
+      "translation": {
+        "language": "text",
+        "content": "3\n2\n4\n5\n2"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n3\n2\n4\n5\n2\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "2e42616de9a0bf2112169fc95fc16ced27ce9762f0e624484374529592c32c2a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Compared to the example at the beginning of this section, the structure is much easier to understand. A `for` loop makes straightforward traversal through a collection of items very simple."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "So với ví dụ ở đầu phần này, cấu trúc dễ hiểu hơn nhiều. Vòng lặp `for` giúp việc duyệt qua một bộ sưu tập các mục trở nên rất đơn giản."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "2f1f30fc5af5d46c3feb88068f662566680914daf81ccdb2974e226803af710e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The same principle applies to characters in a string:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nguyên tắc tương tự áp dụng cho các ký tự trong chuỗi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0018",
+      "type": "code",
+      "order": 18,
+      "source_hash": "0315890a1b54e7c7e325265114498fa8aadb42c756905052994639f740bc4cfd",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "name = input(\"Please type in your name: \")\n\nfor character in name:\n    print(character)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "name = input(\"Please type in your name: \")\n\nfor character in name:\n    print(character)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "0315890a1b54e7c7e325265114498fa8aadb42c756905052994639f740bc4cfd",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0019",
+      "type": "sample_output",
+      "order": 19,
+      "source_hash": "78f7a1581334fb9f4bd750aebca97306e2313bbd04cd98109ccf9dd046e75220",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in your name: **Grace**\nG\nr\na\nc\ne"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in your name: **Grace**\nG\nr\na\nc\ne"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in your name: **Grace**\nG\nr\na\nc\ne\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0020",
+      "type": "exercise",
+      "order": 20,
+      "source_hash": "184e0c9024f7c96e97a8de3e64a0ecc3eda7719290ef99bd3af31fb1cff4bb30",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user to type in a string. The program then prints each input character on a separate line. After each character there should be a star (*) printed on its own line.\n\nThis is how it should work:\n\n<sample-output>\n\nPlease type in a string: **Python**\nP\n*\ny\n*\nt\n*\nh\n*\no\n*\nn\n*\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình yêu cầu người dùng nhập một chuỗi. Sau đó chương trình sẽ in từng ký tự đầu vào trên một dòng riêng biệt. Sau mỗi ký tự phải có dấu sao (*) in trên dòng riêng.\n\nĐây là cách nó sẽ hoạt động:\n\n<sample-output>\n\nVui lòng nhập một chuỗi: **Python**\nP\n*\ny\n*\nt\n*\nh\n*\nồ\n*\nn\n*\n\n</sample-output>\n\n**NB:** bài tập này không yêu cầu bạn viết bất kỳ hàm nào, vì vậy bạn nên __không__ đặt bất kỳ mã nào trong khối `if __name__ == \"__main__\"`."
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-20_star_studded",
+        "exercise_type": "programming-exercise",
+        "name": "Star-studded",
+        "tmc_name": "part04-20_star_studded",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0021",
+      "type": "heading",
+      "order": 21,
+      "source_hash": "b0e1eca2b7f8962bcc2384c44dc51a385c9d6cfdc6f649ac21d8d569f699ad98",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The function `range`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm `range`"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "6ecc2b7c5d11db3acb773d0fcae060ba82781498e2bc76e4929316249b01c132",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Often you know how many times you want to repeat a certain bit of code. You might, for example, wish to go through all the numbers between 1 and 100. The `range` function plugged into a `for` loop will do this for you."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thường thì bạn biết bạn muốn lặp lại một đoạn mã nào đó bao nhiêu lần. Ví dụ: bạn có thể muốn xem qua tất cả các số từ 1 đến 100. Hàm `range` được cắm vào vòng lặp `for` sẽ thực hiện việc này cho bạn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "7baa84ff25f740e26fc0b9d873ecf80791ead0734a1f0462aab756f6a93c1665",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "There are a few different ways to call the range function. The simplest way is to give the function just one argument, which signifies the end-point of the range. The end-point itself is excluded, just like with string slices. In other words, the function call `range(n)` provides a loop with a range from 0 to `n-1`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Có một số cách khác nhau để gọi hàm phạm vi. Cách đơn giản nhất là chỉ cung cấp cho hàm một đối số, biểu thị điểm cuối của phạm vi. Bản thân điểm cuối bị loại trừ, giống như với các lát cắt chuỗi. Nói cách khác, lệnh gọi hàm `range(n)` cung cấp một vòng lặp có phạm vi từ 0 đến `n-1`:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0024",
+      "type": "code",
+      "order": 24,
+      "source_hash": "fc3ef44c3e513c00482de5efe95899b523ed6b8aee90bf0b3e32049d87fbd860",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "for i in range(5):\n    print(i)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "for i in range(5):\n    print(i)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "fc3ef44c3e513c00482de5efe95899b523ed6b8aee90bf0b3e32049d87fbd860",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0025",
+      "type": "sample_output",
+      "order": 25,
+      "source_hash": "2965d24b80b4f692ecd619cf932ebd8bcefbf39e062b0fbb079eaa01b0e2b00a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "0\n1\n2\n3\n4"
+      },
+      "translation": {
+        "language": "text",
+        "content": "0\n1\n2\n3\n4"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n0\n1\n2\n3\n4\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "65521f506cfdbd8a33ac92f1b4f2fab0431f419b71b104bc2bf60a07066d063a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "With two arguments, the function will return a range between the two numbers. The function `range(a,b)` provides a range starting from `a` and ending at `b-1`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Với hai đối số, hàm sẽ trả về một phạm vi giữa hai số. Hàm `range(a,b)` cung cấp phạm vi bắt đầu từ `a` và kết thúc tại `b-1`:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0027",
+      "type": "code",
+      "order": 27,
+      "source_hash": "5321157ca2f3264643178c0ee1d452ee2518ee79942d3beb9951ae39f7a55d7a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "for i in range(3, 7):\n    print(i)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "for i in range(3, 7):\n    print(i)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5321157ca2f3264643178c0ee1d452ee2518ee79942d3beb9951ae39f7a55d7a",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0028",
+      "type": "sample_output",
+      "order": 28,
+      "source_hash": "3b6460ea572ffdbefc65a611f6217f4c3b339d0013e29747ad1f1b5eb7346f0b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "3\n4\n5\n6"
+      },
+      "translation": {
+        "language": "text",
+        "content": "3\n4\n5\n6"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n3\n4\n5\n6\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "218db5cfd7fbd67b12d363edfe3f6c9ff219629b04ee5cb862bda140dacaf9ea",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Finally, with a third argument you can also specify the size of the _step_ the range takes between each value. The function call `range(a, b, c)` provides a range starting from `a`, ending at `b-1`, and changing by `c` with every step:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cuối cùng, với đối số thứ ba, bạn cũng có thể chỉ định kích thước của _step_ mà phạm vi chiếm giữa mỗi giá trị. Lệnh gọi hàm `range(a, b, c)` cung cấp phạm vi bắt đầu từ `a`, kết thúc ở `b-1` và thay đổi bởi `c` theo từng bước:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0030",
+      "type": "code",
+      "order": 30,
+      "source_hash": "b82cb17242fe3a33894349cf3301910c51c3eab0fbbd378c8b5f6e8d3b53df7c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "for i in range(1, 9, 2):\n    print(i)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "for i in range(1, 9, 2):\n    print(i)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b82cb17242fe3a33894349cf3301910c51c3eab0fbbd378c8b5f6e8d3b53df7c",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0031",
+      "type": "sample_output",
+      "order": 31,
+      "source_hash": "1ba56b8c5b58cb997daca4044e8c757ab02b345ec4863dc9a9bad1f18cb5811b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "1\n3\n5\n7"
+      },
+      "translation": {
+        "language": "text",
+        "content": "1\n3\n5\n7"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n1\n3\n5\n7\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "e35d45fc5fc48ff75493b32e7de2d87c1e3c801f9cfe562a852b6ab5e06770db",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A step can also be negative. Then the range will be in reversed orded. Notice the first two arguments are also flipped here:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một bước cũng có thể âm. Sau đó, phạm vi sẽ được sắp xếp theo thứ tự đảo ngược. Lưu ý hai đối số đầu tiên cũng được đảo ngược ở đây:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0033",
+      "type": "code",
+      "order": 33,
+      "source_hash": "2b0d8e74e4ca4d79e56a6d782c37e1b360cff22db680f23d3e74f14413bdb126",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "for i in range(6, 2, -1):\n    print(i)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "for i in range(6, 2, -1):\n    print(i)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2b0d8e74e4ca4d79e56a6d782c37e1b360cff22db680f23d3e74f14413bdb126",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0034",
+      "type": "sample_output",
+      "order": 34,
+      "source_hash": "fafa2457113d52160698e06006e61f7800ae177ec52253642061c8861d6e9b61",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "6\n5\n4\n3"
+      },
+      "translation": {
+        "language": "text",
+        "content": "6\n5\n4\n3"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n6\n5\n4\n3\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0035",
+      "type": "exercise",
+      "order": 35,
+      "source_hash": "c07b07f45938cbed808a44197cb4f2a562c27322f8f649984910bb62d272d50b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for a positive integer N. The program then prints out all numbers between -N and N inclusive, but _leaves out the number 0_. Each number should be printed on a separate line.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nPlease type in a positive integer: **4**\n-4\n-3\n-2\n-1\n1\n2\n3\n4\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một chương trình yêu cầu người dùng nhập số nguyên dương N. Sau đó, chương trình sẽ in ra tất cả các số nằm trong khoảng từ -N đến N, nhưng _để lại số 0_. Mỗi số phải được in trên một dòng riêng biệt.\n\nMột ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nVui lòng nhập số nguyên dương: **4**\n-4\n-3\n-2\n-1\n1\n2\n3\n4\n\n</sample-output>\n\n**NB:** bài tập này không yêu cầu bạn viết bất kỳ hàm nào, vì vậy bạn nên __không__ đặt bất kỳ mã nào trong khối `if __name__ == \"__main__\"`."
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-21_negative_to_positive",
+        "exercise_type": "programming-exercise",
+        "name": "From negative to positive",
+        "tmc_name": "part04-21_negative_to_positive",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0036",
+      "type": "heading",
+      "order": 36,
+      "source_hash": "0a1bed8d996cbea3462eeb2f327f84bd470ab38056c28daef906f3afa8c78f38",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "From a range to a list"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Từ một phạm vi đến một danh sách"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "e4d049886e2301065cd54cb214ba72b4d3a733b7e0dc91a109e0fd02c2646657",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The function `range` returns a range object, which in many ways behaves like a list, but isn't actually one. If you try printing out the value the function returns, you will only see a description of a range object:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm `range` trả về một đối tượng phạm vi, theo nhiều cách, đối tượng này hoạt động giống như một danh sách nhưng thực tế không phải là một danh sách. Nếu bạn thử in ra giá trị mà hàm trả về, bạn sẽ chỉ thấy mô tả về đối tượng phạm vi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0038",
+      "type": "code",
+      "order": 38,
+      "source_hash": "951a2d1dd276b4b8b997c0653168854debbccb4ccb474d1091ead7026f81c400",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "numbers = range(2, 7)\nprint(numbers)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "numbers = range(2, 7)\nprint(numbers)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "951a2d1dd276b4b8b997c0653168854debbccb4ccb474d1091ead7026f81c400",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0039",
+      "type": "sample_output",
+      "order": 39,
+      "source_hash": "4d521df07cb297163018de7e5bb910ee534e2cac1ae1b438095f378c14e9bb2b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "range(2, 7)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "range(2, 7)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nrange(2, 7)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "9d9ccc099f0987caade45f8470d3e0da20172cd304475da9e76eb2b4f2a0f289",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The function `list` will convert a range into a list. The list will contain all the values that are in the range. The Advanced Course in Programming course, which follows this one, will shed more light on this subject."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm `list` sẽ chuyển đổi một phạm vi thành danh sách. Danh sách sẽ chứa tất cả các giá trị nằm trong phạm vi. Khóa học lập trình nâng cao tiếp theo khóa học này sẽ làm sáng tỏ hơn về chủ đề này."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0041",
+      "type": "code",
+      "order": 41,
+      "source_hash": "a0586421a31a1eaea2b48a1686ccf4dad795cb76f03b8e65910235d1eaebf12e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "numbers = list(range(2, 7))\nprint(numbers)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "numbers = list(range(2, 7))\nprint(numbers)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a0586421a31a1eaea2b48a1686ccf4dad795cb76f03b8e65910235d1eaebf12e",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0042",
+      "type": "sample_output",
+      "order": 42,
+      "source_hash": "ae5d296d532a2908d0084eaaa468c45ab84d3df3f833188e846ec09223a0e761",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[2, 3, 4, 5, 6]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[2, 3, 4, 5, 6]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[2, 3, 4, 5, 6]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0043",
+      "type": "heading",
+      "order": 43,
+      "source_hash": "429a9e02f1da6db15a1d076d90306af84698648dce029506979f5cc3f4579833",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A reminder of the demands of the automatic tests"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "dấu nhắc (prompt) nhở về nhu cầu của các bài kiểm tra tự động"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "87be9f2fdadfac738b2d4013ab75216d74721f0e9061698d071761f11e3ffa1d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "So far, when the exercises have asked you to write functions, the templates have looked like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cho đến nay, khi các bài tập yêu cầu bạn viết hàm, các mẫu sẽ trông như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0045",
+      "type": "code",
+      "order": 45,
+      "source_hash": "59aa6b5f206656b7eefc417a38d20e171d0d8475dc8b4187695d940545a97bde",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# Write your solution here\n# You can test your function by calling it within the following block\nif __name__ == \"__main__\":\n    sentence = \"it was a dark and stormy python\"\n    print(first_word(sentence))\n    print(second_word(sentence))\n    print(last_word(sentence))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# Write your solution here\n# You can test your function by calling it within the following block\nif __name__ == \"__main__\":\n    sentence = \"it was a dark and stormy python\"\n    print(first_word(sentence))\n    print(second_word(sentence))\n    print(last_word(sentence))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "59aa6b5f206656b7eefc417a38d20e171d0d8475dc8b4187695d940545a97bde",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0046",
+      "type": "paragraph",
+      "order": 46,
+      "source_hash": "f99156f5604c46ed86181cc6a87c29a7320bce1efda701d45589dc5603d3e6d8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "From now on there will be no more reminders in the templates to use the `if __name__ == \"__main__\"` block. However, the automatic tests will still demand its use, so you will have to add the block yourself when you test your function within the main function of your program."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Từ giờ trở đi sẽ không còn dấu nhắc (prompt) nào trong các mẫu sử dụng khối `if __name__ == \"__main__\"` nữa. Tuy nhiên, các bài kiểm tra tự động vẫn sẽ yêu cầu sử dụng nó, vì vậy bạn sẽ phải tự thêm khối khi kiểm tra chức năng của mình trong chức năng chính của chương trình."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0047",
+      "type": "paragraph",
+      "order": 47,
+      "source_hash": "73e061ed9a923144b620407722742b8b2b5a5a4b574711039b641ad42519731a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "**NB:** some exercises, like the _Palindromes_ exercise coming up in this section, expect you to also write code which calls the function you wrote. This code should _not_ be placed within an `if __name__ == \"__main__\"` block. The automatic tests will not execute any code within that block, so your solution will not be complete if you place your function calls there."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "**NB:** một số bài tập, chẳng hạn như bài tập _Palindromes_ sắp xuất hiện trong phần này, mong bạn cũng viết mã gọi hàm bạn đã viết. Mã này _không_ được đặt trong khối `if __name__ == \"__main__\"`. Các thử nghiệm tự động sẽ không thực thi bất kỳ mã nào trong khối đó, vì vậy giải pháp của bạn sẽ không hoàn chỉnh nếu bạn đặt lệnh gọi hàm ở đó."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0048",
+      "type": "exercise",
+      "order": 48,
+      "source_hash": "938a703d46665aff79025880e0b564bc3033c33fc979e553e51f6f390bc77088",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `list_of_stars`, which takes a list of integers as its argument. The function should print out lines of star characters. The numbers in the list specify how many stars each line should contain.\n\nFor example, with the function call `list_of_stars([3, 7, 1, 1, 2])` the following should be printed out:\n\n<sample-output>\n\n<pre>\n***\n*******\n*\n*\n**\n</pre>\n\n</sample-output>\n\n<!-- **Huomaa** että tällä hetkellä Windowsissa on ongelmia joidenkin tehtävien testien suorittamisessa. Jos törmäät seuraavaan virheilmoitukseen\n\n<img src=\"4_3_2.png\" alt=\"Listan iterointi\">\n\nvoit suorittaa testit lähettämällä ne palvelimelle valitsemalla testien suoritusnapin oikealla puolella olevasta symbolista avautuvasta TMC-valikosta _Submit solutions_.\n\nOngelman saa korjattua menemällä laajennuksen asennusvalikkoon ja muuttamalla \"TMC Data\" -kohdassa tehtävien sijainnin johonkin toiseen sijaintiin, jonka tiedostopolku on lyhempi, allaolevassa kuvassa nappi _change path_. Siirrossa saattaa kestää hetken, joten odotathan operaation päättymistä.\n\n<img src=\"4_3_3.png\" alt=\"Listan iterointi\">\n\nOngelmaan pyritään saamaan parempi ratkaisu lähipäivinä. -->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `list_of_stars`, hàm này lấy danh sách các số nguyên làm đối số. Hàm sẽ in ra các dòng ký tự ngôi sao. Các con số trong danh sách xác định mỗi dòng sẽ chứa bao nhiêu ngôi sao.\n\nVí dụ: với hàm gọi `list_of_stars([3, 7, 1, 1, 2])`, nội dung sau sẽ được in ra:\n\n<sample-output>\n\n<pre>\n***\n*******\n*\n*\n**\n</pre>\n\n</sample-output>\n\n<!-- **Huomaa** että tällä hetkellä Windowsissa on ongelmia joidenkin tehtävien testien suorittamisessa. Jos törmäät seuraavaan virheilmoituksen\n\n<img src=\"4_3_2.png\" alt=\"Listan iterointi\">\n\nvoit suorittaa testit lähettämällä ne palvelimelle valitsemalla testien suoritusnapin oikealla puolella olevasta biểu tượng avautuvasta TMC-valikosta _Gửi giải pháp_.\n\nOngelman saa korjattua menemällä laajennuksen asennusvalikkoon ja muuttamalla \"TMC Data\" -kohdassa tehtävien sijainnin johonkin toiseen sijaintiin, jonka tieostopolku on lyhempi, allaolevassa kuvassa nappi _change path_. Siirrossa saattaa kestää hetken, joten odotathan operaation päättymistä.\n\n<img src=\"4_3_3.png\" alt=\"Listan iterointi\">\n\nOngelmaan pyritään saamaan parempi ratkaisu lähipäivinä. -->"
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-22_list_of_stars",
+        "exercise_type": "programming-exercise",
+        "name": "List of stars",
+        "tmc_name": "part04-22_list_of_stars",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0049",
+      "type": "exercise",
+      "order": 49,
+      "source_hash": "4b0122430d0c2d060f65492685527dd0a732f4b27bbe2e6dae4e2c445a3f13de",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `anagrams`, which takes two strings as arguments. The function returns `True` if the strings are anagrams of each other. Two words are anagrams if they contain exactly the same characters.\n\nSome examples of how the function should work:\n\n```python\nprint(anagrams(\"tame\", \"meta\")) # True\nprint(anagrams(\"tame\", \"mate\")) # True\nprint(anagrams(\"tame\", \"team\")) # True\nprint(anagrams(\"tabby\", \"batty\")) # False\nprint(anagrams(\"python\", \"java\")) # False\n```\n\nHint: the function `sorted` can be used on strings as well."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `anagrams`, hàm này lấy hai chuỗi làm đối số. Hàm trả về `True` nếu các chuỗi là đảo chữ cái của nhau. Hai từ được gọi là đảo chữ nếu chúng chứa các ký tự giống hệt nhau.\n\nMột số ví dụ về cách hoạt động của hàm:\n\n```python\nprint(anagrams(\"tame\", \"meta\")) # True\nprint(anagrams(\"tame\", \"mate\")) # True\nprint(anagrams(\"tame\", \"team\")) # True\nprint(anagrams(\"tabby\", \"batty\")) # False\nprint(anagrams(\"python\", \"java\")) # False\n```\n\nGợi ý: hàm `sorted` cũng có thể được sử dụng trên chuỗi."
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-23_anagrams",
+        "exercise_type": "programming-exercise",
+        "name": "Anagrams",
+        "tmc_name": "part04-23_anagrams",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0050",
+      "type": "exercise",
+      "order": 50,
+      "source_hash": "a40db0ff4c581769dbd2f4c8a62b015a1fb267ce22a2fb5bcd0e90f3e7528598",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `palindromes`, which takes a string argument and returns `True` if the string is a palindrome. Palindromes are words which are spelled exactly the same backwards and forwards.\n\nPlease also write a main program which asks the user to type in words until they type in a palindrome:\n\n<sample-output>\n\nPlease type in a palindrome: **python**\nthat wasn't a palindrome\nPlease type in a palindrome: **java**\nthat wasn't a palindrome\nPlease type in a palindrome: **oddoreven**\nthat wasn't a palindrome\nPlease type in a palindrome: **neveroddoreven**\nneveroddoreven is a palindrome!\n\n</sample-output>\n\n**NB:**, the main program **should not be** within an `if __name__ == \"__main__\":` block"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `palindromes`, hàm này nhận một đối số chuỗi và trả về `True` nếu chuỗi đó là một bảng màu. Palindromes là những từ được đánh vần ngược và xuôi giống hệt nhau.\n\nNgoài ra, hãy viết một chương trình chính yêu cầu người dùng nhập các từ cho đến khi họ nhập vào một bảng màu:\n\n<sample-output>\n\nVui lòng nhập một bảng màu: **python**\nđó không phải là một bảng màu\nVui lòng nhập một bảng màu: **java**\nđó không phải là một bảng màu\nVui lòng nhập một bảng màu: **oddoreven**\nđó không phải là một bảng màu\nVui lòng nhập một bảng màu: **neveroddoreven**\nneveroddoreven là một bảng màu!\n\n</sample-output>\n\n**NB:**, chương trình chính **không được** nằm trong khối `if __name__ == \"__main__\":`"
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-24_palindromes",
+        "exercise_type": "programming-exercise",
+        "name": "Palindromes",
+        "tmc_name": "part04-24_palindromes",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0051",
+      "type": "exercise",
+      "order": 51,
+      "source_hash": "b4f068fd068b84e380bb651b188870ac8de9b08cbc139e70b058b0a9b125d7c5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `sum_of_positives`, which takes a list of integers as its argument. The function returns the sum of the positive values in the list.\n\n```python\nmy_list = [1, -2, 3, -4, 5]\nresult = sum_of_positives(my_list)\nprint(\"The result is\", result)\n```\n\n<sample-output>\n\nThe result is 9\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `sum_of_positives`, hàm này lấy danh sách các số nguyên làm đối số. Hàm trả về tổng các giá trị dương trong danh sách.\n\n```python\nmy_list = [1, -2, 3, -4, 5]\nresult = sum_of_positives(my_list)\nprint(\"The result is\", result)\n```\n\n<sample-output>\n\nKết quả là 9\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-25_sum_of_positives",
+        "exercise_type": "programming-exercise",
+        "name": "The sum of positive numbers",
+        "tmc_name": "part04-25_sum_of_positives",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0052",
+      "type": "paragraph",
+      "order": 52,
+      "source_hash": "ccde6a494a6a27bca91da8f2015d917346ff5751c68434d075570c41f306bacd",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In these exercises we will be using lists as arguments and return values. This was covered in the [previous section](/part-4/3-lists#a-list-as-an-argument-or-a-return-value), if you need a refresher."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong các bài tập này, chúng ta sẽ sử dụng danh sách làm đối số và giá trị trả về. Điều này đã được đề cập trong [phần trước](/part-4/3-lists#a-list-as-an-argument-or-a-return-value), nếu bạn cần ôn lại."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0053",
+      "type": "exercise",
+      "order": 53,
+      "source_hash": "827ba538312de2e7d4a276975c733170c0166352cb9d9d9fec85f9f99fa509ec",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `even_numbers`, which takes a list of integers as an argument. The function returns a new list containing the even numbers from the original list.\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nnew_list = even_numbers(my_list)\nprint(\"original\", my_list)\nprint(\"new\", new_list)\n```\n\n<sample-output>\n\noriginal [1, 2, 3, 4, 5]\nnew [2, 4]\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `even_numbers`, hàm này lấy danh sách các số nguyên làm đối số. Hàm trả về một danh sách mới chứa các số chẵn từ danh sách ban đầu.\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nnew_list = even_numbers(my_list)\nprint(\"original\", my_list)\nprint(\"new\", new_list)\n```\n\n<sample-output>\n\nbản gốc [1, 2, 3, 4, 5]\nmới [2, 4]\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-26_even_numbers",
+        "exercise_type": "programming-exercise",
+        "name": "Even numbers",
+        "tmc_name": "part04-26_even_numbers",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0054",
+      "type": "exercise",
+      "order": 54,
+      "source_hash": "2236bf6518b0a2ccd7d8d7876c7ff937180fc4861a1e5fcd3fa73e9c6bc1fb59",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `list_sum` which takes two lists of integers as arguments. The function returns a new list which contains the sums of the items at each index in the two original lists. You may assume both lists have the same number of items. \n\nAn example of the function at work:\n\n```python\na = [1, 2, 3]\nb = [7, 8, 9]\nprint(list_sum(a, b)) # [8, 10, 12]\n```"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `list_sum` lấy hai danh sách số nguyên làm đối số. Hàm trả về một danh sách mới chứa tổng của các mục ở mỗi chỉ mục trong hai danh sách ban đầu. Bạn có thể cho rằng cả hai danh sách đều có cùng số lượng mục. \n\nMột ví dụ về chức năng tại nơi làm việc:\n\n```python\na = [1, 2, 3]\nb = [7, 8, 9]\nprint(list_sum(a, b)) # [8, 10, 12]\n```"
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-27_sum_of_lists",
+        "exercise_type": "programming-exercise",
+        "name": "The sum of lists",
+        "tmc_name": "part04-27_sum_of_lists",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0055",
+      "type": "exercise",
+      "order": 55,
+      "source_hash": "d20375811daee12b56ccddd0c94a01413146438399ee1c54264e8e18383d9f63",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `distinct_numbers`, which takes a list of integers as its argument. The function returns a new list containing the numbers from the original list in order of magnitude, and so that each distinct number is present only once.\n\n```python\nmy_list = [3, 2, 2, 1, 3, 3, 1]\nprint(distinct_numbers(my_list)) # [1, 2, 3]\n```"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `distinct_numbers`, hàm này lấy danh sách các số nguyên làm đối số. Hàm trả về một danh sách mới chứa các số từ danh sách ban đầu theo thứ tự độ lớn và sao cho mỗi số riêng biệt chỉ xuất hiện một lần.\n\n```python\nmy_list = [3, 2, 2, 1, 3, 3, 1]\nprint(distinct_numbers(my_list)) # [1, 2, 3]\n```"
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-28_distinct_numbers",
+        "exercise_type": "programming-exercise",
+        "name": "Distinct numbers",
+        "tmc_name": "part04-28_distinct_numbers",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0056",
+      "type": "heading",
+      "order": 56,
+      "source_hash": "61f2959a18dc6025dc707278eb9df9f45628eb62e379bd99f95e9aa3691c386c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Finding the best or the worst item in a list"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tìm mục tốt nhất hoặc tệ nhất trong danh sách"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0057",
+      "type": "paragraph",
+      "order": 57,
+      "source_hash": "47587d1abf24030ea6f0dbcadaebd66f1d06cee6ed3938694bf466edddf718d4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A very common programming task is finding the best or worst item in a list, according to some criteria. A simple solution is using a helper variable to \"remember\" which of the items processed so far was the most suitable. This temporary best choice is then compared to each item in turn, and at the end of the iteration the variable contains the best of the bunch."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một nhiệm vụ lập trình rất phổ biến là tìm mục tốt nhất hoặc tệ nhất trong danh sách, theo một số tiêu chí. Một giải pháp đơn giản là sử dụng biến trợ giúp để \"ghi nhớ\" mục nào được xử lý cho đến nay là phù hợp nhất. Lựa chọn tốt nhất tạm thời này sau đó được so sánh lần lượt với từng mục và ở cuối vòng lặp, biến chứa mục tốt nhất trong nhóm."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0058",
+      "type": "paragraph",
+      "order": 58,
+      "source_hash": "90aacdf98a274436dc504000f25f6aa1b52535643333b3745d43a0bdbd03200b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A rough draft which doesn't quite compile yet:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một bản nháp thô chưa được biên dịch hoàn chỉnh:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0059",
+      "type": "code",
+      "order": 59,
+      "source_hash": "1487df075992538a68c5ef2d25659fd8175a9508c136d409e52c6c3afe1ae8ff",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "best = initial_value # The initial value depends on the situation\nfor item in my_list:\n    if item is better than best:\n        best = item\n\n# We now have the best one figured out!"
+      },
+      "translation": {
+        "language": "code",
+        "content": "best = initial_value # The initial value depends on the situation\nfor item in my_list:\n    if item is better than best:\n        best = item\n\n# We now have the best one figured out!"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "1487df075992538a68c5ef2d25659fd8175a9508c136d409e52c6c3afe1ae8ff",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0060",
+      "type": "paragraph",
+      "order": 60,
+      "source_hash": "7395d53d6db46f45a16e2b7a5f0f03ad57c2146b124ae97e84fc8e63c9c78fb4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The details of the final program code depend on the type of the items in the list, and also on the criteria for choosing the best (or worst) item. Sometimes you may need more than one helper variable."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chi tiết của mã chương trình cuối cùng phụ thuộc vào loại mục trong danh sách cũng như tiêu chí chọn mục tốt nhất (hoặc tệ nhất). Đôi khi bạn có thể cần nhiều hơn một biến trợ giúp."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0061",
+      "type": "paragraph",
+      "order": 61,
+      "source_hash": "a56989620ddfd9a42758d12bb4642af02cfc5dd238686ed64904c18bdfee3ce3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's practice this method a little."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy thực hành phương thức này một chút."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0062",
+      "type": "exercise",
+      "order": 62,
+      "source_hash": "8cce1a23bc8b56bef4c011c5c6a588f24da51d9e2c1966257f127c360bb93f49",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `length_of_longest`, which takes a list of strings as its argument. The function returns the length of the longest string.\n\n```python\nmy_list = [\"first\", \"second\", \"fourth\", \"eleventh\"]\n\nresult = length_of_longest(my_list)\nprint(result)\n```\n\n```python\nmy_list = [\"adele\", \"mark\", \"dorothy\", \"tim\", \"hedy\", \"richard\"]\n\nresult = length_of_longest(my_list)\nprint(result)\n```\n\n<sample-output>\n\n8\n7\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `length_of_longest`, hàm này lấy danh sách các chuỗi làm đối số. Hàm trả về độ dài của chuỗi dài nhất.\n\n```python\nmy_list = [\"first\", \"second\", \"fourth\", \"eleventh\"]\n\nresult = length_of_longest(my_list)\nprint(result)\n```\n\n```python\nmy_list = [\"adele\", \"mark\", \"dorothy\", \"tim\", \"hedy\", \"richard\"]\n\nresult = length_of_longest(my_list)\nprint(result)\n```\n\n<sample-output>\n\n8\n7\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-29_length_of_longest",
+        "exercise_type": "programming-exercise",
+        "name": "The length of the longest in the list",
+        "tmc_name": "part04-29_length_of_longest",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0063",
+      "type": "exercise",
+      "order": 63,
+      "source_hash": "2296dfe8522a97dc6194f87eee0c5339782aecceab5ad078801c98c5256e1c7d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `shortest`, which takes a list of strings as its argument. The function returns whichever of the strings is the shortest. If more than one are equally short, the function can return any of the shortest strings (there will be no such situation in the tests). You may assume there will be no empty strings in the list.\n\n\n```python\nmy_list = [\"first\", \"second\", \"fourth\", \"eleventh\"]\n\nresult = shortest(my_list)\nprint(result)\n```\n\n```python\nmy_list = [\"adele\", \"mark\", \"dorothy\", \"tim\", \"hedy\", \"richard\"]\n\nresult = shortest(my_list)\nprint(result)\n```\n\n<sample-output>\n\nfirst\ntim\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `shortest`, hàm này lấy danh sách các chuỗi làm đối số. Hàm trả về chuỗi nào ngắn nhất. Nếu có nhiều hơn một chuỗi có độ ngắn bằng nhau, hàm có thể trả về bất kỳ chuỗi nào ngắn nhất (sẽ không có trường hợp nào như vậy trong các thử nghiệm). Bạn có thể cho rằng sẽ không có chuỗi trống nào trong danh sách.\n\n\n```python\nmy_list = [\"first\", \"second\", \"fourth\", \"eleventh\"]\n\nresult = shortest(my_list)\nprint(result)\n```\n\n```python\nmy_list = [\"adele\", \"mark\", \"dorothy\", \"tim\", \"hedy\", \"richard\"]\n\nresult = shortest(my_list)\nprint(result)\n```\n\n<sample-output>\n\nđầu tiên\ntim\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-30_shortest_in_list",
+        "exercise_type": "programming-exercise",
+        "name": "The shortest in the list",
+        "tmc_name": "part04-30_shortest_in_list",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0064",
+      "type": "exercise",
+      "order": 64,
+      "source_hash": "a749a2b618951c4201bf371760edae3bbd05203009ddafe645d5907c0439b78b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `all_the_longest`, which takes a list of strings as its argument. The function should return a new list containing the longest string in the original list. If more than one are equally long, the function should return all of the longest strings.\n\nThe order of the strings in the returned list should be the same as in the original.\n\n```python\nmy_list = [\"first\", \"second\", \"fourth\", \"eleventh\"]\n\nresult = all_the_longest(my_list)\nprint(result) # ['eleventh']\n```\n\n```python\nmy_list = [\"adele\", \"mark\", \"dorothy\", \"tim\", \"hedy\", \"richard\"]\n\nresult = all_the_longest(my_list)\nprint(result) # ['dorothy', 'richard']\n```"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `all_the_longest`, hàm này lấy danh sách các chuỗi làm đối số. Hàm sẽ trả về một danh sách mới chứa chuỗi dài nhất trong danh sách ban đầu. Nếu có nhiều hơn một chuỗi có độ dài bằng nhau thì hàm sẽ trả về tất cả các chuỗi dài nhất.\n\nThứ tự của các chuỗi trong danh sách trả về phải giống như trong danh sách gốc.\n\n```python\nmy_list = [\"first\", \"second\", \"fourth\", \"eleventh\"]\n\nresult = all_the_longest(my_list)\nprint(result) # ['eleventh']\n```\n\n```python\nmy_list = [\"adele\", \"mark\", \"dorothy\", \"tim\", \"hedy\", \"richard\"]\n\nresult = all_the_longest(my_list)\nprint(result) # ['dorothy', 'richard']\n```"
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-31_all_longest_in_list",
+        "exercise_type": "programming-exercise",
+        "name": "All the longest in the list",
+        "tmc_name": "part04-31_all_longest_in_list",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0065",
+      "type": "paragraph",
+      "order": 65,
+      "source_hash": "b97eebcf5a0222c688482a2c1f8f4510ba0c7934c136e1f60999bbcc47c2ab75",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!---\nA quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!---\nMột bài kiểm tra để ôn lại nội dung của phần này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0066",
+      "type": "quiz",
+      "order": 66,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "b1a91143-3137-5833-a771-6801f541a43b",
+        "attributes": {
+          "id": "b1a91143-3137-5833-a771-6801f541a43b"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-4-definite-iteration-0067",
+      "type": "paragraph",
+      "order": 67,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "-->"
+      },
+      "metadata": {}
+    }
+  ]
+}

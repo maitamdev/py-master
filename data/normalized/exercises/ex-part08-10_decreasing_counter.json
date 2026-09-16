@@ -1,0 +1,16 @@
+{
+  "id": "ex-part08-10_decreasing_counter",
+  "lesson_id": "part08-4-defining-methods",
+  "part": 8,
+  "tmc_name": "part08-10_decreasing_counter",
+  "title_original": "Decreasing counter",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "This exercise has multiple parts. You can submit the parts separately. Each part is worth one exercise point.\n\nThe exercise template contains a partially completed class `DecreasingCounter`:\n\n```python\nclass DecreasingCounter:\n    def __init__(self, initial_value: int):\n        self.value = initial_value\n\n    def print_value(self):\n        print(\"value:\", self.value)\n\n    def decrease(self):\n        pass\n\n    # define the rest of your methods here\n```\n\nThe class can now be used as shown below, and should produce the following printout after completing the first part of the exercise:\n\n```python\ncounter = DecreasingCounter(10)\ncounter.print_value()\ncounter.decrease()\ncounter.print_value()\ncounter.decrease()\ncounter.print_value()\n```\n\n<sample-output>\n\nvalue: 10\nvalue: 9\nvalue: 8\n\n</sample-output>\n\n\n### Decreasing the value of the counter\n\nPlease complete the method `decrease` defined in the template, so that it decreases the value stored in the counter by one. See the example above for expected behaviour.\n\n### The counter must not have a negative value\n\nPlease add functionality to your `decrease` method, so that the value of the counter will never reach negative values. If the value of the counter is 0, it will not be further decreased.\n\n```python\ncounter = DecreasingCounter(2)\ncounter.print_value()\ncounter.decrease()\ncounter.print_value()\ncounter.decrease()\ncounter.print_value()\ncounter.decrease()\ncounter.print_value()\n```\n\n<sample-output>\n\nvalue: 2\nvalue: 1\nvalue: 0\nvalue: 0\n\n</sample-output>\n\n### Setting the value to zero\n\nPlease add a method `set_to_zero` which sets the value of the counter to 0:\n\n```python\ncounter = DecreasingCounter(100)\ncounter.print_value()\ncounter.set_to_zero()\ncounter.print_value()\n```\n\n<sample-output>\n\nvalue: 100\nvalue: 0\n\n</sample-output>\n\n### Resetting the counter\n\nPlease add a method `reset_original_value()` which resets the counter to its initial state:\n\n```python\ncounter = DecreasingCounter(55)\ncounter.decrease()\ncounter.decrease()\ncounter.decrease()\ncounter.decrease()\ncounter.print_value()\ncounter.reset_original_value()\ncounter.print_value()\n```\n\n<sample-output>\n\nvalue: 51\nvalue: 55\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "class DecreasingCounter:\n    def __init__(self, initial_value: int):\n        self.value = initial_value\n\n    def print_value(self):\n        print(\"value:\", self.value)\n\n    def decrease(self):\n        pass\n\n    # define the rest of your methods here",
+  "grading_data_available": false,
+  "source_hash": "f77d76d5145a6af69b9c7b0be9323cb7c1ed5ed0617e0b4ebd504250f68e69aa",
+  "order": 27
+}

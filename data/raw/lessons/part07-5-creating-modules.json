@@ -1,0 +1,243 @@
+{
+  "id": "part07-5-creating-modules",
+  "part": 7,
+  "part_slug": "part-7",
+  "slug": "5-creating-modules",
+  "is_part_index": false,
+  "title_original": "Creating your own modules",
+  "path": "/part-7/5-creating-modules",
+  "source_path": "data/part-7/5-creating-modules.md",
+  "source_hash": "cc116845b0ac3d783924d6558cc346c299159d40ecb9a7d8f9dd2186a9656d52",
+  "frontmatter": {
+    "path": "/part-7/5-creating-modules",
+    "title": "Creating your own modules",
+    "hidden": false
+  },
+  "chunks_count": 37,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will be able to write your own modules\n- You will know what the Python variable `__name__` and the value `__main__` signify",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will be able to write your own modules\n- You will know what the Python variable `__name__` and the value `__main__` signify\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Writing your own Python modules is easy. Any file containing valid Python code can be imported as a module. Let's assume we have a file named `words.py` with the following contents:",
+      "raw_source": "Writing your own Python modules is easy. Any file containing valid Python code can be imported as a module. Let's assume we have a file named `words.py` with the following contents:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def first_word(my_string: str):\n    parts = my_string.split(\" \")\n    return parts[0]\n\ndef last_word(my_string: str):\n    parts = my_string.split(\" \")\n    return parts[-1]\n\ndef number_of_words(my_string: str):\n    parts = my_string.split(\" \")\n    return len(parts)",
+      "raw_source": "```python\ndef first_word(my_string: str):\n    parts = my_string.split(\" \")\n    return parts[0]\n\ndef last_word(my_string: str):\n    parts = my_string.split(\" \")\n    return parts[-1]\n\ndef number_of_words(my_string: str):\n    parts = my_string.split(\" \")\n    return len(parts)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The functions defined in the file can be accessed by importing the file:",
+      "raw_source": "The functions defined in the file can be accessed by importing the file:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import words\n\nmy_string = \"Sheila sells seashells by the seashore\"\n\nprint(words.first_word(my_string))\nprint(words.last_word(my_string))\nprint(words.number_of_words(my_string))",
+      "raw_source": "```python\nimport words\n\nmy_string = \"Sheila sells seashells by the seashore\"\n\nprint(words.first_word(my_string))\nprint(words.last_word(my_string))\nprint(words.number_of_words(my_string))\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Sheila\nseashore\n6",
+      "raw_source": "<sample-output>\n\nSheila\nseashore\n6\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "NB: the file containing the Python module must be located either in the same directory with the program importing it, or in one of the default Python directories, or else the Python interpreter will not find it when the `import` statement is executed.",
+      "raw_source": "NB: the file containing the Python module must be located either in the same directory with the program importing it, or in one of the default Python directories, or else the Python interpreter will not find it when the `import` statement is executed."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We can use our own modules just as we have learnt to use the modules from the Python standard library:",
+      "raw_source": "We can use our own modules just as we have learnt to use the modules from the Python standard library:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from words import first_word, last_word\n\nsentence = input(\"Please type in a sentence: \")\n\nprint(\"The first word was: \" + first_word(sentence))\nprint(\"The last word was: \" + last_word(sentence))",
+      "raw_source": "```python\nfrom words import first_word, last_word\n\nsentence = input(\"Please type in a sentence: \")\n\nprint(\"The first word was: \" + first_word(sentence))\nprint(\"The last word was: \" + last_word(sentence))\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in a sentence: **Python is a swell programming language**\nThe first word was: Python\nThe last word was: language",
+      "raw_source": "<sample-output>\n\nPlease type in a sentence: **Python is a swell programming language**\nThe first word was: Python\nThe last word was: language\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Putting type hints to use",
+      "raw_source": "## Putting type hints to use"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When using modules, type hinting becomes especially useful. If you are using an editor which has built-in support for type hinting, using different modules becomes much easier.",
+      "raw_source": "When using modules, type hinting becomes especially useful. If you are using an editor which has built-in support for type hinting, using different modules becomes much easier."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "For example, Visual Studio Code will display the type hints when you are writing code:",
+      "raw_source": "For example, Visual Studio Code will display the type hints when you are writing code:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "7_vihje.png"
+      },
+      "raw_source": "<img src=\"7_vihje.png\">"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Main function code in a module",
+      "raw_source": "## Main function code in a module"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If a module contains any code which is not contained within a function definition (that is, if the module contains code in the main function of the module), this code is executed automatically whenever the module is imported.",
+      "raw_source": "If a module contains any code which is not contained within a function definition (that is, if the module contains code in the main function of the module), this code is executed automatically whenever the module is imported."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's assume our `words.py` file also contained some test cases:",
+      "raw_source": "Let's assume our `words.py` file also contained some test cases:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def first_word(my_string: str):\n    parts = my_string.split(\" \")\n    return parts[0]\n\ndef last_word(my_string: str):\n    parts = my_string.split(\" \")\n    return parts[-1]\n\ndef number_of_words(my_string: str):\n    parts = my_string.split(\" \")\n    return len(parts)\n\nprint(first_word(\"This is a test\"))\nprint(last_word(\"Here we are still testing\"))\nprint(number_of_words(\"One two three four five\"))",
+      "raw_source": "```python\ndef first_word(my_string: str):\n    parts = my_string.split(\" \")\n    return parts[0]\n\ndef last_word(my_string: str):\n    parts = my_string.split(\" \")\n    return parts[-1]\n\ndef number_of_words(my_string: str):\n    parts = my_string.split(\" \")\n    return len(parts)\n\nprint(first_word(\"This is a test\"))\nprint(last_word(\"Here we are still testing\"))\nprint(number_of_words(\"One two three four five\"))\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Now, if we import the module with an `import` statement, all the code in the module which is outside the defined functions is automatically executed:",
+      "raw_source": "Now, if we import the module with an `import` statement, all the code in the module which is outside the defined functions is automatically executed:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import words\n\nmy_string = \"Sheila sells seashells by the seashore\"\n\nprint(words.first_word(my_string))\nprint(words.last_word(my_string))\nprint(words.number_of_words(my_string))",
+      "raw_source": "```python\nimport words\n\nmy_string = \"Sheila sells seashells by the seashore\"\n\nprint(words.first_word(my_string))\nprint(words.last_word(my_string))\nprint(words.number_of_words(my_string))\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "This\ntesting\n5\nSheila\nseashore\n6",
+      "raw_source": "<sample-output>\n\nThis\ntesting\n5\nSheila\nseashore\n6\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As you can see above, this is not a good outcome, because the program we are trying to write is messed with by the test cases from the module itself.",
+      "raw_source": "As you can see above, this is not a good outcome, because the program we are trying to write is messed with by the test cases from the module itself."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Luckily, there is a solution, and it is one which you have used many times before in the exercises on this course. We just need to test if the program is being executed on its own, or if the code has been imported with an `import` statement. Python has a built-in variable `__name__`, which contains the name of the program being executed. If the program is being executed on its own, the value of the variable is `__main__`. If the program has been imported, the value of the variable is the name of the imported module (in this case, `words`).",
+      "raw_source": "Luckily, there is a solution, and it is one which you have used many times before in the exercises on this course. We just need to test if the program is being executed on its own, or if the code has been imported with an `import` statement. Python has a built-in variable `__name__`, which contains the name of the program being executed. If the program is being executed on its own, the value of the variable is `__main__`. If the program has been imported, the value of the variable is the name of the imported module (in this case, `words`)."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Knowing this, we can add a conditional statement, which lets us only execute the text cases if the program is executed on its own. As you can see below, the structure looks familiar:",
+      "raw_source": "Knowing this, we can add a conditional statement, which lets us only execute the text cases if the program is executed on its own. As you can see below, the structure looks familiar:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def first_word(my_string: str) -> str:\n    parts = my_string.split(\" \")\n    return parts[0]\n\ndef last_word(my_string: str) -> str:\n    parts = my_string.split(\" \")\n    return parts[-1]\n\ndef number_of_words(my_string: str) -> int:\n    parts = my_string.split(\" \")\n    return len(parts)\n\nif __name__ == \"__main__\":\n    # testing functionality\n    print(first_word(\"This is a test\"))\n    print(last_word(\"Here we are still testing\"))\n    print(number_of_words(\"One two three four five\"))",
+      "raw_source": "```python\ndef first_word(my_string: str) -> str:\n    parts = my_string.split(\" \")\n    return parts[0]\n\ndef last_word(my_string: str) -> str:\n    parts = my_string.split(\" \")\n    return parts[-1]\n\ndef number_of_words(my_string: str) -> int:\n    parts = my_string.split(\" \")\n    return len(parts)\n\nif __name__ == \"__main__\":\n    # testing functionality\n    print(first_word(\"This is a test\"))\n    print(last_word(\"Here we are still testing\"))\n    print(number_of_words(\"One two three four five\"))\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If you execute the module on its own, the test cases are printed out:",
+      "raw_source": "If you execute the module on its own, the test cases are printed out:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "This\ntesting\n5",
+      "raw_source": "<sample-output>\n\nThis\ntesting\n5\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When the module is imported into another program, the test cases are not executed:",
+      "raw_source": "When the module is imported into another program, the test cases are not executed:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import words\n\nmy_string = \"Sheila sells seashells by the seashore\"\n\nprint(words.first_word(my_string))\nprint(words.last_word(my_string))\nprint(words.number_of_words(my_string))",
+      "raw_source": "```python\nimport words\n\nmy_string = \"Sheila sells seashells by the seashore\"\n\nprint(words.first_word(my_string))\nprint(words.last_word(my_string))\nprint(words.number_of_words(my_string))\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Sheila\nseashore\n6",
+      "raw_source": "<sample-output>\n\nSheila\nseashore\n6\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the exercises on this course, whenever you were asked to write functions, you were usually also expected to wrap test cases in an `if __name__ == \"__main__\"` block exactly like the one above. Now you know why.",
+      "raw_source": "In the exercises on this course, whenever you were asked to write functions, you were usually also expected to wrap test cases in an `if __name__ == \"__main__\"` block exactly like the one above. Now you know why."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "String helper",
+        "tmcname": "part07-17_string_helper"
+      },
+      "inner_content": "Please write a module named `string_helper`, which contains the following functions:\n\nThe function `change_case(orig_string: str)` creates and returns a new version of the parameter string. The lowercase letters in the original should be uppercase, and uppercase letters should be lowercase.\n\nThe function `split_in_half(orig_string: str)` splits the parameter string in half, and returns the results in a tuple. If the original has an odd number of characters, the first half should be shorter.\n\nThe function `remove_special_characters(orig_string: str)` returns a new version of the parameter string, with all special characters removed. Only lowercase and uppercase letters, numbers and spaces are allowed in the returned string.\n\nSome examples of how the module would be used:\n\n```python\nimport string_helper\n\nmy_string = \"Well hello there!\"\n\nprint(string_helper.change_case(my_string))\n\np1, p2 = string_helper.split_in_half(my_string)\n\nprint(p1)\nprint(p2)\n\nm2 = string_helper.remove_special_characters(\"This is a test, lets see how it goes!!!11!\")\nprint(m2)\n```\n\n<sample-output>\n\nwELL HELLO THERE!\nWell hel\nlo there!\nThis is a test lets see how it goes11\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='String helper' tmcname='part07-17_string_helper'>\n\nPlease write a module named `string_helper`, which contains the following functions:\n\nThe function `change_case(orig_string: str)` creates and returns a new version of the parameter string. The lowercase letters in the original should be uppercase, and uppercase letters should be lowercase.\n\nThe function `split_in_half(orig_string: str)` splits the parameter string in half, and returns the results in a tuple. If the original has an odd number of characters, the first half should be shorter.\n\nThe function `remove_special_characters(orig_string: str)` returns a new version of the parameter string, with all special characters removed. Only lowercase and uppercase letters, numbers and spaces are allowed in the returned string.\n\nSome examples of how the module would be used:\n\n```python\nimport string_helper\n\nmy_string = \"Well hello there!\"\n\nprint(string_helper.change_case(my_string))\n\np1, p2 = string_helper.split_in_half(my_string)\n\nprint(p1)\nprint(p2)\n\nm2 = string_helper.remove_special_characters(\"This is a test, lets see how it goes!!!11!\")\nprint(m2)\n```\n\n<sample-output>\n\nwELL HELLO THERE!\nWell hel\nlo there!\nThis is a test lets see how it goes11\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!---",
+      "raw_source": "<!---"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "2203412c-628c-54a3-bd77-edebd5ce4f67"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"2203412c-628c-54a3-bd77-edebd5ce4f67\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Please respond to a quick questionnaire on this week's materials.",
+      "raw_source": "Please respond to a quick questionnaire on this week's materials."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "953a13c1-b365-557e-b3f5-da39f8814f3e"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"953a13c1-b365-557e-b3f5-da39f8814f3e\"></quiz>"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-03_go",
+  "lesson_id": "part05-1-more-lists",
+  "part": 5,
+  "tmc_name": "part05-03_go",
+  "title_original": "Go",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "In a game of Go two players take turns to place black and white stones on a game board. The winner is the player who manages to encircle a bigger area on the board with their own game pieces. \n\nPlease write a function named `who_won(game_board: list)`, which takes a two-dimensional array as its argument. The array consists of integer values, which represent the following situations:\n\n* 0: empty square\n* 1: player 1 game piece\n* 2: player 2 game piece\n\nThe scoring rules of Go can be quite complex, but in this exercise it is enough to compare the number of pieces each player has on the game board. Also, the size of the game board is not limited.\n\nThe function should return the value 1 if player 1 won, and the value 2 if player 2 won. If both players have the same number of pieces on the board, the function should return the value 0.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "20c76a74302868db729752917960fb5588b14977e906a02c1ea244a1550bb691",
+  "order": 99
+}

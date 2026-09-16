@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-34_word_squared",
+  "lesson_id": "part03-4-defining-functions",
+  "part": 3,
+  "tmc_name": "part03-34_word_squared",
+  "title_original": "A word squared",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `squared`, which takes a string argument and an integer argument, and prints out a square of characters as specified by the examples below.\n\n```python\nsquared(\"ab\", 3)\nprint()\nsquared(\"aybabtu\", 5)\n```\n\n<sample-output>\n\n<pre>\naba\nbab\naba\n\naybab\ntuayb\nabtua\nybabt\nuayba\n</pre>\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "squared(\"ab\", 3)\nprint()\nsquared(\"aybabtu\", 5)",
+  "grading_data_available": false,
+  "source_hash": "1b6cd7702cf1ee4f1ac978460f52eb6efc4c3ba5da3aafd9645c5a1c379421a1",
+  "order": 72
+}

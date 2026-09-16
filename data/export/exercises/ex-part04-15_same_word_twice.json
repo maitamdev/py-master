@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-15_same_word_twice",
+  "lesson_id": "part04-3-lists",
+  "part": 4,
+  "tmc_name": "part04-15_same_word_twice",
+  "title_original": "Same word twice",
+  "title_vi": "Cùng một từ hai lần",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for words. If the user types in a word for the second time, the program should print out the number of different words typed in, and exit.\n\n<sample-output>\n\nWord: **once**\nWord: **upon**\nWord: **a**\nWord: **time**\nWord: **upon**\nYou typed in 4 different words\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+  "description_vi": "Hãy viết một chương trình yêu cầu người dùng nhập từ. Nếu người dùng nhập một từ lần thứ hai, chương trình sẽ in ra số lượng từ khác nhau đã nhập và thoát.\n\n<sample-output>\n\nLời: **một lần**\nTừ: **trên**\nTừ: **a**\nTừ: **thời gian**\nTừ: **trên**\nBạn đã gõ 4 từ khác nhau\n\n</sample-output>\n\n**NB:** bài tập này không yêu cầu bạn viết bất kỳ hàm nào, vì vậy bạn nên __không__ đặt bất kỳ mã nào trong khối `if __name__ == \"__main__\"`.",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "b7457a2f61f567ef577dcd3c9d04c2dcf3ba249f94c64f918c26189ce252a432",
+  "order": 60
+}

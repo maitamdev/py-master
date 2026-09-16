@@ -1,0 +1,16 @@
+{
+  "id": "ex-part11-08_filter_forbidden",
+  "lesson_id": "part11-2-more-comprehensions",
+  "part": 11,
+  "tmc_name": "part11-08_filter_forbidden",
+  "title_original": "Filter forbidden",
+  "title_vi": "Bộ lọc bị cấm",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `filter_forbidden(string: str, forbidden: str)` which takes two strings as its arguments. The function should return a new version of the first string. It should not contain any characters from the second string.\n\nThe function should be implemented using list comprehensions. The maximum length of the function is three lines of code, including the header line beginning with the `def` keyword.\n\nPlease have a look at the example below.\n\n```python\nsentence = \"Once! upon, a time: there was a python!??!?!\"\nfiltered = filter_forbidden(sentence, \"!?:,.\")\nprint(filtered)\n```\n\n<sample-output>\n\nOnce upon a time there was a python\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `filter_forbidden(string: str, forbidden: str)` lấy hai chuỗi làm đối số. Hàm sẽ trả về phiên bản mới của chuỗi đầu tiên. Nó không được chứa bất kỳ ký tự nào từ chuỗi thứ hai.\n\nChức năng này nên được thực hiện bằng cách hiểu danh sách. Độ dài tối đa của hàm là ba dòng mã, bao gồm dòng tiêu đề bắt đầu bằng từ khóa `def`.\n\nXin vui lòng xem ví dụ dưới đây.\n\n```python\nsentence = \"Once! upon, a time: there was a python!??!?!\"\nfiltered = filter_forbidden(sentence, \"!?:,.\")\nprint(filtered)\n```\n\n<sample-output>\n\nNgày xửa ngày xưa có một con trăn\n\n</sample-output>",
+  "starter_code": "sentence = \"Once! upon, a time: there was a python!??!?!\"\nfiltered = filter_forbidden(sentence, \"!?:,.\")\nprint(filtered)",
+  "grading_data_available": false,
+  "source_hash": "77cd92f3c33a5d8ab773fd9ebbd980941ab95793b1e83dd56a9d6600191f1fce",
+  "order": 20
+}

@@ -1,0 +1,349 @@
+{
+  "id": "part11-3-recursion",
+  "part": 11,
+  "part_slug": "part-11",
+  "slug": "3-recursion",
+  "is_part_index": false,
+  "title_original": "Recursion",
+  "path": "/part-11/3-recursion",
+  "source_path": "data/part-11/3-recursion.md",
+  "source_hash": "095c7bad140052a9c2db020a11499eebb8133bbe0b7e785ea21c874454390498",
+  "frontmatter": {
+    "path": "/part-11/3-recursion",
+    "title": "Recursion",
+    "hidden": false
+  },
+  "chunks_count": 56,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know what recursion means\n- You will be able to write a simple recursive function",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know what recursion means\n- You will be able to write a simple recursive function\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As we have seen many times before, functions can call other functions. For example:",
+      "raw_source": "As we have seen many times before, functions can call other functions. For example:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def hello(name : str):\n    print(\"Hello\", name)\n\ndef hello_many_times(name : str, times : int):\n    for i in range(times):\n        hello(name)",
+      "raw_source": "```python\ndef hello(name : str):\n    print(\"Hello\", name)\n\ndef hello_many_times(name : str, times : int):\n    for i in range(times):\n        hello(name)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A function can also call itself, but we as programmers have to be careful when we do that. It is easy to fall into an endless loop of function calls, just like we fell into an infinite loop of repetitions with `while` loops if we left out the appropriate break conditions. So, trying to call a `hello` function with the following definition",
+      "raw_source": "A function can also call itself, but we as programmers have to be careful when we do that. It is easy to fall into an endless loop of function calls, just like we fell into an infinite loop of repetitions with `while` loops if we left out the appropriate break conditions. So, trying to call a `hello` function with the following definition"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def hello(name : str):\n    print(\"Hello\", name)\n    hello(name) # function calls itself",
+      "raw_source": "```python\ndef hello(name : str):\n    print(\"Hello\", name)\n    hello(name) # function calls itself\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "would cause a new kind of error:",
+      "raw_source": "would cause a new kind of error:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "RecursionError: maximum recursion depth exceeded",
+      "raw_source": "<sample-output>\n\nRecursionError: maximum recursion depth exceeded\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "What does recursion mean?",
+      "raw_source": "## What does recursion mean?"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The _recursion_ mentioned in the error above refers to _defining something in terms of itself_. In a programming context it usually refers to a function which calls itself. For this to work without causing any infinite loops, the arguments passed to the function must change each time, so that the nested function calls will stop at some point. The basic principle here is the same as in `while` loops: there must always be a stop condition of some kind, and that condition must be triggered at some point in the execution.",
+      "raw_source": "The _recursion_ mentioned in the error above refers to _defining something in terms of itself_. In a programming context it usually refers to a function which calls itself. For this to work without causing any infinite loops, the arguments passed to the function must change each time, so that the nested function calls will stop at some point. The basic principle here is the same as in `while` loops: there must always be a stop condition of some kind, and that condition must be triggered at some point in the execution."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's have a look at a simple function which adds zeroes to a list as long as there are less than 10 items in the list. This time we are not using a loop, however. If the condition is not yet met, the function calls itself:",
+      "raw_source": "Let's have a look at a simple function which adds zeroes to a list as long as there are less than 10 items in the list. This time we are not using a loop, however. If the condition is not yet met, the function calls itself:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def fill_list(numbers: list):\n    \"\"\" If the length of the list is less than 10, add items to the list \"\"\"\n    if len(numbers) < 10:\n        numbers.append(0)\n        # call the function again\n        fill_list(numbers)\n\n\nif __name__ == \"__main__\":\n    test_list = [1,2,3,4]\n    fill_list(test_list)\n    print(test_list)",
+      "raw_source": "```python\ndef fill_list(numbers: list):\n    \"\"\" If the length of the list is less than 10, add items to the list \"\"\"\n    if len(numbers) < 10:\n        numbers.append(0)\n        # call the function again\n        fill_list(numbers)\n\n\nif __name__ == \"__main__\":\n    test_list = [1,2,3,4]\n    fill_list(test_list)\n    print(test_list)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[1, 2, 3, 4, 0, 0, 0, 0, 0, 0]",
+      "raw_source": "<sample-output>\n\n[1, 2, 3, 4, 0, 0, 0, 0, 0, 0]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This functionality could just as well be achieved with a regular `while` loop:",
+      "raw_source": "This functionality could just as well be achieved with a regular `while` loop:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def fill_list(numbers: list):\n    \"\"\" If the length of the list is less than 10, add items to the list \"\"\"\n    while len(numbers) < 10:\n        numbers.append(0)\n\nif __name__ == \"__main__\":\n    test_list = [1,2,3,4]\n    fill_list(test_list)\n    print(test_list)",
+      "raw_source": "```python\ndef fill_list(numbers: list):\n    \"\"\" If the length of the list is less than 10, add items to the list \"\"\"\n    while len(numbers) < 10:\n        numbers.append(0)\n\nif __name__ == \"__main__\":\n    test_list = [1,2,3,4]\n    fill_list(test_list)\n    print(test_list)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The more traditional iterative approach produces a shorter program which is arguably also easier to understand. With the recursive version it is not as clear that throughout the process we are working on the very same list. That is, however, the case, and that is why the recursive function works just as well.",
+      "raw_source": "The more traditional iterative approach produces a shorter program which is arguably also easier to understand. With the recursive version it is not as clear that throughout the process we are working on the very same list. That is, however, the case, and that is why the recursive function works just as well."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "hint",
+        "name": "Iterative or recursive?"
+      },
+      "inner_content": "Computer science theory often differentiates between _iterative_ and _recursive_ algorithms, so it is best to become familiar with these terms right from the start. Iterative solutions are ones that are based on sequential processing of items, often using loops. So far we have dealt with iterative methods quite exclusively. Recursive, on the other hand, refers to a method where the function calls itself with changing parameter values.\n\nIn principle it should be possible to solve any problem with either iterative or recursive methods. In practice, however, one or the other is usually clearly better suited to each problem. The ability to determine which is better comes largely with practice.",
+      "raw_source": "<text-box variant=\"hint\" name=\"Iterative or recursive?\">\n\nComputer science theory often differentiates between _iterative_ and _recursive_ algorithms, so it is best to become familiar with these terms right from the start. Iterative solutions are ones that are based on sequential processing of items, often using loops. So far we have dealt with iterative methods quite exclusively. Recursive, on the other hand, refers to a method where the function calls itself with changing parameter values.\n\nIn principle it should be possible to solve any problem with either iterative or recursive methods. In practice, however, one or the other is usually clearly better suited to each problem. The ability to determine which is better comes largely with practice.\n\n</text-box>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Add numbers to a list",
+        "tmcname": "part11-13_add_numbers_to_list"
+      },
+      "inner_content": "Please write a _recursive function_ named `add_numbers_to_list(numbers: list)`. The function takes a list of numbers as its argument, and adds new numbers to the list until the length of the list is divisible by five. Each number added to the list should be one greater than the last number in the list.\n\nThe function must call itself recursively. Please see the example below.\n\n```python\nnumbers = [1,3,4,5,10,11]\nadd_numbers_to_list(numbers)\nprint(numbers)\n```\n\n<sample-output>\n\n[1, 3, 4, 5, 10, 11, 12, 13, 14, 15]\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Add numbers to a list' tmcname='part11-13_add_numbers_to_list'>\n\nPlease write a _recursive function_ named `add_numbers_to_list(numbers: list)`. The function takes a list of numbers as its argument, and adds new numbers to the list until the length of the list is divisible by five. Each number added to the list should be one greater than the last number in the list.\n\nThe function must call itself recursively. Please see the example below.\n\n```python\nnumbers = [1,3,4,5,10,11]\nadd_numbers_to_list(numbers)\nprint(numbers)\n```\n\n<sample-output>\n\n[1, 3, 4, 5, 10, 11, 12, 13, 14, 15]\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Recursion and return values",
+      "raw_source": "## Recursion and return values"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Recursive functions can also have return values. In the last few sections we've worked with factorials, so let's write a recursive factorial function:",
+      "raw_source": "Recursive functions can also have return values. In the last few sections we've worked with factorials, so let's write a recursive factorial function:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "\ndef factorial(n: int):\n    \"\"\" The function calculates the factorial n! for n >= 0 \"\"\"\n    if n < 2:\n        # The factorial for 0 and 1 is 1\n        return 1\n\n    # Call the function again with an argument that is one smaller\n    return n * factorial(n - 1)\n\nif __name__ == \"__main__\":\n    # Tesing our function\n    for i in range(1, 7):\n        print(f\"The factorial of {i} is {factorial(i)}\")\n",
+      "raw_source": "```python\n\ndef factorial(n: int):\n    \"\"\" The function calculates the factorial n! for n >= 0 \"\"\"\n    if n < 2:\n        # The factorial for 0 and 1 is 1\n        return 1\n\n    # Call the function again with an argument that is one smaller\n    return n * factorial(n - 1)\n\nif __name__ == \"__main__\":\n    # Tesing our function\n    for i in range(1, 7):\n        print(f\"The factorial of {i} is {factorial(i)}\")\n\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The factorial of 1 is 1\nThe factorial of 2 is 2\nThe factorial of 3 is 6\nThe factorial of 4 is 24\nThe factorial of 5 is 120\nThe factorial of 6 is 720",
+      "raw_source": "<sample-output>\n\nThe factorial of 1 is 1\nThe factorial of 2 is 2\nThe factorial of 3 is 6\nThe factorial of 4 is 24\nThe factorial of 5 is 120\nThe factorial of 6 is 720\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the parameter of the recursive factorial function is 0 or 1, the function returns 1, because this is how the factorial operation is defined. In any other case the function returns the value `n * factorial(n - 1)`, which is the value of its parameter `n` multiplied by the return value of the function call `factorial(n - 1)`.",
+      "raw_source": "If the parameter of the recursive factorial function is 0 or 1, the function returns 1, because this is how the factorial operation is defined. In any other case the function returns the value `n * factorial(n - 1)`, which is the value of its parameter `n` multiplied by the return value of the function call `factorial(n - 1)`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The crucial part here is that the function definition contains a stop condition. If this is met, the recursion ends. In this case that condition is `n < 2`. We know it will be reached eventually, beacuse the value passed as the argument to the function is decreased by one on each level of the recursion.",
+      "raw_source": "The crucial part here is that the function definition contains a stop condition. If this is met, the recursion ends. In this case that condition is `n < 2`. We know it will be reached eventually, beacuse the value passed as the argument to the function is decreased by one on each level of the recursion."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit) can be a great help in making sense of recursive programs.",
+      "raw_source": "The [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit) can be a great help in making sense of recursive programs."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It might make the above example a little clearer if we used helper variables:",
+      "raw_source": "It might make the above example a little clearer if we used helper variables:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def factorial(n: int):\n    if n < 2:\n        return 1\n\n    factorial_one_level_down = factorial(n - 1)\n    factorial_now = n * factorial_one_level_down\n    return factorial_now\n    \nfactorial(5)",
+      "raw_source": "```python\ndef factorial(n: int):\n    if n < 2:\n        return 1\n\n    factorial_one_level_down = factorial(n - 1)\n    factorial_now = n * factorial_one_level_down\n    return factorial_now\n    \nfactorial(5)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Take a look at how the [visualisation tool](http://www.pythontutor.com/visualize.html#code=def%20factorial%28n%3A%20int%29%3A%0A%20%20%20%20if%20n%20%3C%202%3A%0A%20%20%20%20%20%20%20%20return%201%0A%0A%20%20%20%20factorial_one_level_down%20%3D%20factorial%28n%20-%201%29%0A%20%20%20%20factorial_now%20%3D%20n%20*%20factorial_one_level_down%0A%20%20%20%20return%20factorial_now%0A%20%20%20%20%0Afactorial%285%29&cumulative=false&curInstr=5&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false) demonstrates the progress of the recursion.",
+      "raw_source": "Take a look at how the [visualisation tool](http://www.pythontutor.com/visualize.html#code=def%20factorial%28n%3A%20int%29%3A%0A%20%20%20%20if%20n%20%3C%202%3A%0A%20%20%20%20%20%20%20%20return%201%0A%0A%20%20%20%20factorial_one_level_down%20%3D%20factorial%28n%20-%201%29%0A%20%20%20%20factorial_now%20%3D%20n%20*%20factorial_one_level_down%0A%20%20%20%20return%20factorial_now%0A%20%20%20%20%0Afactorial%285%29&cumulative=false&curInstr=5&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false) demonstrates the progress of the recursion."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The visualisation tool has a small quirk in the way it handles the call stack, as it seems to \"grow\" downwards. Usually call stacks are depicted as just that: stacks, where the new calls are placed on top. In the visualisation tool, the currently active function call is the shaded block at the bottom, which has its own copies of the variables visible.",
+      "raw_source": "The visualisation tool has a small quirk in the way it handles the call stack, as it seems to \"grow\" downwards. Usually call stacks are depicted as just that: stacks, where the new calls are placed on top. In the visualisation tool, the currently active function call is the shaded block at the bottom, which has its own copies of the variables visible."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When the recursive factorial function is called, the call stack is built until the limit posed by `n < 2` is reached. Then the final function call in the stack returns with a value - it is `1`, as `n` is now less than 2. This return value is passed to the previous function call in the stack, where it is used to calculate that function call's return value, and so forth back out of the stack.",
+      "raw_source": "When the recursive factorial function is called, the call stack is built until the limit posed by `n < 2` is reached. Then the final function call in the stack returns with a value - it is `1`, as `n` is now less than 2. This return value is passed to the previous function call in the stack, where it is used to calculate that function call's return value, and so forth back out of the stack."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The return value of each function call is stored in the helper variable `factorial_now`. Please go through the visualisation carefully until you understand what happens at each step, and pay special attention to the value returned at each step.",
+      "raw_source": "The return value of each function call is stored in the helper variable `factorial_now`. Please go through the visualisation carefully until you understand what happens at each step, and pay special attention to the value returned at each step."
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "11_1_1.png"
+      },
+      "raw_source": "<img src=\"11_1_1.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's have a look at another common recursive example: the Fibonacci number. In a Fibonacci sequence each number is the sum of the two preceding numbers. The first two numbers are here defined as 1 and 1, and the sequence then begins like this: 1, 1, 2, 3, 5, 8, 13, 21, 34.",
+      "raw_source": "Let's have a look at another common recursive example: the Fibonacci number. In a Fibonacci sequence each number is the sum of the two preceding numbers. The first two numbers are here defined as 1 and 1, and the sequence then begins like this: 1, 1, 2, 3, 5, 8, 13, 21, 34."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def fibonacci(n: int):\n    \"\"\" The function returns the nth number in the Fibonacci sequence (1, 1, 2, 3, 5, 8 etc.); n > 0\"\"\"\n\n    if n <= 2:\n        # the first two are ones\n        return 1\n\n    # All other numbers equal the sum of the two preceding numbers in the sequence\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\n# Test that everything works\nif __name__ == \"__main__\":\n    for i in range(1, 11):\n        print(f\"The {i}. number in the Fibonacci sequence is {fibonacci(i)}\")",
+      "raw_source": "```python\ndef fibonacci(n: int):\n    \"\"\" The function returns the nth number in the Fibonacci sequence (1, 1, 2, 3, 5, 8 etc.); n > 0\"\"\"\n\n    if n <= 2:\n        # the first two are ones\n        return 1\n\n    # All other numbers equal the sum of the two preceding numbers in the sequence\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\n# Test that everything works\nif __name__ == \"__main__\":\n    for i in range(1, 11):\n        print(f\"The {i}. number in the Fibonacci sequence is {fibonacci(i)}\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The 1. number in the Fibonacci sequence is 1\nThe 2. number in the Fibonacci sequence is 1\nThe 3. number in the Fibonacci sequence is 2\nThe 4. number in the Fibonacci sequence is 3\nThe 5. number in the Fibonacci sequence is 5\nThe 6. number in the Fibonacci sequence is 8\nThe 7. number in the Fibonacci sequence is 13\nThe 8. number in the Fibonacci sequence is 21\nThe 9. number in the Fibonacci sequence is 34\nThe 10. number in the Fibonacci sequence is 55",
+      "raw_source": "<sample-output>\n\nThe 1. number in the Fibonacci sequence is 1\nThe 2. number in the Fibonacci sequence is 1\nThe 3. number in the Fibonacci sequence is 2\nThe 4. number in the Fibonacci sequence is 3\nThe 5. number in the Fibonacci sequence is 5\nThe 6. number in the Fibonacci sequence is 8\nThe 7. number in the Fibonacci sequence is 13\nThe 8. number in the Fibonacci sequence is 21\nThe 9. number in the Fibonacci sequence is 34\nThe 10. number in the Fibonacci sequence is 55\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This time the stop condition is that the parameter is less than or equal to 2, because the entire sequence is defined from the first two numbers onwards, and we defined the first two numbers to be equal to 1.",
+      "raw_source": "This time the stop condition is that the parameter is less than or equal to 2, because the entire sequence is defined from the first two numbers onwards, and we defined the first two numbers to be equal to 1."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "So, how does this function work in practice?",
+      "raw_source": "So, how does this function work in practice?"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the function is called with 1 or 2 as its argument, it returns 1, as dictated by the condition `n <= 2`.",
+      "raw_source": "If the function is called with 1 or 2 as its argument, it returns 1, as dictated by the condition `n <= 2`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the argument is 3 or greater, the function returns the value of `fibonacci(n - 1) + fibonacci(n - 2)`. If the argument is 3 exactly, this value is equal to `fibonacci(2) + fibonacci(1)`, and we already know the result of both of those from the previous step. `1 + 1` equals 2, which is indeed the third number in the Fibonacci sequence.",
+      "raw_source": "If the argument is 3 or greater, the function returns the value of `fibonacci(n - 1) + fibonacci(n - 2)`. If the argument is 3 exactly, this value is equal to `fibonacci(2) + fibonacci(1)`, and we already know the result of both of those from the previous step. `1 + 1` equals 2, which is indeed the third number in the Fibonacci sequence."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the argument is 4, the return value is `fibonacci(3) + fibonacci(2)`, which we now know to be `2 + 1`, which equals 3.",
+      "raw_source": "If the argument is 4, the return value is `fibonacci(3) + fibonacci(2)`, which we now know to be `2 + 1`, which equals 3."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the argument is 5, the return value is `fibonacci(4) + fibonacci(3)`, which we now know to be `3 + 2`, which equals 5.",
+      "raw_source": "If the argument is 5, the return value is `fibonacci(4) + fibonacci(3)`, which we now know to be `3 + 2`, which equals 5."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "And so forth, and so forth.",
+      "raw_source": "And so forth, and so forth."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We can verify at every step that the function produces the correct results, which is often enough in basic programming tasks. The formal verifiability of algorithms is a topic for more advanced courses, such as [Data Structures and Algorithms](https://studies.helsinki.fi/courses/cur/hy-opt-cur-2122-808d3413-3db0-4ab9-89d9-e816e94bf51d).",
+      "raw_source": "We can verify at every step that the function produces the correct results, which is often enough in basic programming tasks. The formal verifiability of algorithms is a topic for more advanced courses, such as [Data Structures and Algorithms](https://studies.helsinki.fi/courses/cur/hy-opt-cur-2122-808d3413-3db0-4ab9-89d9-e816e94bf51d)."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Recursive sum",
+        "tmcname": "part11-14_recursive_sum"
+      },
+      "inner_content": "Please write a recursive function named `recursive_sum(number: int)` which calculates the sum `1 + 2 + ... + number`. The exercise template contains the following outline:\n\n```python\ndef recursive_sum(number: int):\n    # if the number is 1, there is nothing else to add\n    if number <= 1:\n        return number\n\n    # fill in the rest of the function\n```\n\nSome examples:\n\n```python\nresult = recursive_sum(3)\nprint(result)\n\nprint(recursive_sum(5))\nprint(recursive_sum(10))\n```\n\n<sample-output>\n\n6\n15\n55\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Recursive sum' tmcname='part11-14_recursive_sum'>\n\nPlease write a recursive function named `recursive_sum(number: int)` which calculates the sum `1 + 2 + ... + number`. The exercise template contains the following outline:\n\n```python\ndef recursive_sum(number: int):\n    # if the number is 1, there is nothing else to add\n    if number <= 1:\n        return number\n\n    # fill in the rest of the function\n```\n\nSome examples:\n\n```python\nresult = recursive_sum(3)\nprint(result)\n\nprint(recursive_sum(5))\nprint(recursive_sum(10))\n```\n\n<sample-output>\n\n6\n15\n55\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Balance all the brackets",
+        "tmcname": "part11-15_balanced_brackets"
+      },
+      "inner_content": "The exercise template contains the function `balanced_brackets` which takes a string as its argument. It checks if the _round_ brackets, or parentheses, within the string are balanced. That is, for each opening bracket `(` there should be a closing bracket `)`, and all pairs of brackets should be matched in order, i.e. the bracket pairs must not be crossed.\n\n```python\ndef balanced_brackets(my_string: str):\n    if len(my_string) == 0:\n        return True\n    if not (my_string[0] == '(' and my_string[-1] == ')'):\n        return False\n\n    # remove first and last character\n    return balanced_brackets(my_string[1:-1])\n\nok = balanced_brackets(\"(((())))\")\nprint(ok)\n\n# there is one closing bracket too many, so this produces False\nok = balanced_brackets(\"()())\")\nprint(ok)\n\n# this one starts with a closing bracket, False again\nok = balanced_brackets(\")()\")\nprint(ok)\n\n# this produces False because the function only handles entirely nested brackets\nok = balanced_brackets(\"()(())\")\nprint(ok)\n```\n\n<sample-output>\n\nTrue\nFalse\nFalse\nFalse\n\n</sample-output>\n\nPlease expand the function so that it also works with square brackets `[]`. The function should also ignore all characters which are not brackets `()` or `[]`. The different types of brackets must be matched correctly in order.\n\nPlease have a look at the examples below::\n\n```python\nok = balanced_brackets(\"([([])])\")\nprint(ok)\n\nok = balanced_brackets(\"(python version [3.7]) please use this one!\")\nprint(ok)\n\n# this is no good, the closing bracket doesn't match\nok = balanced_brackets(\"(()]\")\nprint(ok)\n\n# different types of brackets are mismatched\nok = balanced_brackets(\"([bad egg)]\")\nprint(ok)\n```\n\nNB: the function only needs to handle entirely nested brackets. The string `(x + 1)(y + 1)` should produce `False` as the brackets are not nested within each other.\n\n<sample-output>\n\nTrue\nTrue\nFalse\nFalse\n\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Balance all the brackets' tmcname='part11-15_balanced_brackets'>\n\nThe exercise template contains the function `balanced_brackets` which takes a string as its argument. It checks if the _round_ brackets, or parentheses, within the string are balanced. That is, for each opening bracket `(` there should be a closing bracket `)`, and all pairs of brackets should be matched in order, i.e. the bracket pairs must not be crossed.\n\n```python\ndef balanced_brackets(my_string: str):\n    if len(my_string) == 0:\n        return True\n    if not (my_string[0] == '(' and my_string[-1] == ')'):\n        return False\n\n    # remove first and last character\n    return balanced_brackets(my_string[1:-1])\n\nok = balanced_brackets(\"(((())))\")\nprint(ok)\n\n# there is one closing bracket too many, so this produces False\nok = balanced_brackets(\"()())\")\nprint(ok)\n\n# this one starts with a closing bracket, False again\nok = balanced_brackets(\")()\")\nprint(ok)\n\n# this produces False because the function only handles entirely nested brackets\nok = balanced_brackets(\"()(())\")\nprint(ok)\n```\n\n<sample-output>\n\nTrue\nFalse\nFalse\nFalse\n\n</sample-output>\n\nPlease expand the function so that it also works with square brackets `[]`. The function should also ignore all characters which are not brackets `()` or `[]`. The different types of brackets must be matched correctly in order.\n\nPlease have a look at the examples below::\n\n```python\nok = balanced_brackets(\"([([])])\")\nprint(ok)\n\nok = balanced_brackets(\"(python version [3.7]) please use this one!\")\nprint(ok)\n\n# this is no good, the closing bracket doesn't match\nok = balanced_brackets(\"(()]\")\nprint(ok)\n\n# different types of brackets are mismatched\nok = balanced_brackets(\"([bad egg)]\")\nprint(ok)\n```\n\nNB: the function only needs to handle entirely nested brackets. The string `(x + 1)(y + 1)` should produce `False` as the brackets are not nested within each other.\n\n<sample-output>\n\nTrue\nTrue\nFalse\nFalse\n\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Binary search",
+      "raw_source": "## Binary search"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In a binary search we have a sorted list of items and we are trying to find a certain item within. The order of the items could be, for example, numbers from smallest to greatest, or strings from alphabetically first to last. The method of sorting doesn't matter, as long as it is known and relevant to the item we are trying to find.",
+      "raw_source": "In a binary search we have a sorted list of items and we are trying to find a certain item within. The order of the items could be, for example, numbers from smallest to greatest, or strings from alphabetically first to last. The method of sorting doesn't matter, as long as it is known and relevant to the item we are trying to find."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The idea of a binary search is to always look at the item at the very centre of the list. We then have three possible scenarios. If the item at the centre is \n- the one we are looking for: we can return an indication that we found the item\n- smaller than the one we are looking for: we can re-do the search in the greater half of the list\n- greater than the one we are looking for: we can re-do the search in the smaller half of the list.",
+      "raw_source": "The idea of a binary search is to always look at the item at the very centre of the list. We then have three possible scenarios. If the item at the centre is \n- the one we are looking for: we can return an indication that we found the item\n- smaller than the one we are looking for: we can re-do the search in the greater half of the list\n- greater than the one we are looking for: we can re-do the search in the smaller half of the list."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the list is empty, we can determine that the item was not found, and return an indication of that.",
+      "raw_source": "If the list is empty, we can determine that the item was not found, and return an indication of that."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the following image we can see how a binary search progresses as it looks for the number 24:",
+      "raw_source": "In the following image we can see how a binary search progresses as it looks for the number 24:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "11_3_1.png"
+      },
+      "raw_source": "<img src=\"11_3_1.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here is a recursive algorithm for a binary search:",
+      "raw_source": "Here is a recursive algorithm for a binary search:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def binary_search(target: list, item: int, left : int, right : int):\n    \"\"\" The function returns True if the item is contained in the target list, False otherwise \"\"\"\n    # If the search area is empty, item was not found\n    if left > right:\n        return False\n\n    # Calculate the centre of the search area, integer result\n    centre = (left+right)//2\n\n    # If the item is found at the centre, return\n    if target[centre] == item:\n        return True\n\n    # If the item is greater, search the greater half\n    if target[centre] < item:\n        return binary_search(target, item, centre+1, right)\n    # Else the item is smaller, search the smaller half\n    else:\n        return binary_search(target, item, left, centre-1)\n\n\nif __name__ == \"__main__\":\n    # Test your function\n    target = [1, 2, 4, 5, 7, 8, 11, 13, 14, 18]\n    print(binary_search(target, 2, 0, len(target)-1))\n    print(binary_search(target, 13, 0, len(target)-1))\n    print(binary_search(target, 6, 0, len(target)-1))\n    print(binary_search(target, 15, 0, len(target)-1))",
+      "raw_source": "```python\ndef binary_search(target: list, item: int, left : int, right : int):\n    \"\"\" The function returns True if the item is contained in the target list, False otherwise \"\"\"\n    # If the search area is empty, item was not found\n    if left > right:\n        return False\n\n    # Calculate the centre of the search area, integer result\n    centre = (left+right)//2\n\n    # If the item is found at the centre, return\n    if target[centre] == item:\n        return True\n\n    # If the item is greater, search the greater half\n    if target[centre] < item:\n        return binary_search(target, item, centre+1, right)\n    # Else the item is smaller, search the smaller half\n    else:\n        return binary_search(target, item, left, centre-1)\n\n\nif __name__ == \"__main__\":\n    # Test your function\n    target = [1, 2, 4, 5, 7, 8, 11, 13, 14, 18]\n    print(binary_search(target, 2, 0, len(target)-1))\n    print(binary_search(target, 13, 0, len(target)-1))\n    print(binary_search(target, 6, 0, len(target)-1))\n    print(binary_search(target, 15, 0, len(target)-1))\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "True\nTrue\nFalse\nFalse",
+      "raw_source": "<sample-output>\n\nTrue\nTrue\nFalse\nFalse\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `binary_search` function takes four arguments: the target list, the item being searched for, and the left and right edges of the search area. When the function is first called, the search area covers the entire target list. The left edge is at index `0` and the right edge is at index `len(target)-1`. The function calculates the central index and checks that position on the list. Either the item was found, or the search continues to the smaller or greater half of the target list.",
+      "raw_source": "The `binary_search` function takes four arguments: the target list, the item being searched for, and the left and right edges of the search area. When the function is first called, the search area covers the entire target list. The left edge is at index `0` and the right edge is at index `len(target)-1`. The function calculates the central index and checks that position on the list. Either the item was found, or the search continues to the smaller or greater half of the target list."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's compare this to a simple linear search. In a linear search, the search area is traversed from the beginning onwards, until either the item is found, or we run out of search area. The number of steps needed to cover the entire search area grows _linearly_ at the same pace as the size of the search area. Each search step covers only one search candidate from the beginning of the search area. Let's assume the item searched for is _not_ found. If the search area is a million items long, we would have to take a million search steps to make sure the item is not in the search area.",
+      "raw_source": "Let's compare this to a simple linear search. In a linear search, the search area is traversed from the beginning onwards, until either the item is found, or we run out of search area. The number of steps needed to cover the entire search area grows _linearly_ at the same pace as the size of the search area. Each search step covers only one search candidate from the beginning of the search area. Let's assume the item searched for is _not_ found. If the search area is a million items long, we would have to take a million search steps to make sure the item is not in the search area."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In a binary search, on the other hand, the number of steps needed grows _logarithmically_. Let's assume again that the item searched for is _not_ found. The search area is cut in half with each step, as we know that the item is either smaller or greater than the current search candidate at the centre. 2 to the power of 20 (2^20) is already well over 1 million, so it will take at most 20 steps to cover the entire search area with a binary search. So, when we are dealing with sorted search areas, as we often are when dealing with computers and materials that are meant to be automatically processed, a binary search is much more efficient than a linear search.",
+      "raw_source": "In a binary search, on the other hand, the number of steps needed grows _logarithmically_. Let's assume again that the item searched for is _not_ found. The search area is cut in half with each step, as we know that the item is either smaller or greater than the current search candidate at the centre. 2 to the power of 20 (2^20) is already well over 1 million, so it will take at most 20 steps to cover the entire search area with a binary search. So, when we are dealing with sorted search areas, as we often are when dealing with computers and materials that are meant to be automatically processed, a binary search is much more efficient than a linear search."
+    }
+  ]
+}

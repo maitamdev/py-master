@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-34_most_common_character",
+  "lesson_id": "part04-6-strings-and-lists",
+  "part": 4,
+  "tmc_name": "part04-34_most_common_character",
+  "title_original": "Most common character",
+  "title_vi": "Nhân vật phổ biến nhất",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `most_common_character`, which takes a string argument. The function returns the character which has the most occurrences within the string. If there are many characters with equally many occurrences, the one which appears first in the string should be returned.\n\nAn example of expected behaviour:\n\n```python\nfirst_string = \"abcdbde\"\nprint(most_common_character(first_string))\n\nsecond_string = \"exemplaryelementary\"\nprint(most_common_character(second_string))\n```\n\n<sample-output>\n\nb\ne\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `most_common_character`, hàm này nhận đối số chuỗi. Hàm trả về ký tự xuất hiện nhiều nhất trong chuỗi. Nếu có nhiều ký tự có số lần xuất hiện bằng nhau thì ký tự xuất hiện đầu tiên trong chuỗi sẽ được trả về.\n\nMột ví dụ về hành vi dự kiến:\n\n```python\nfirst_string = \"abcdbde\"\nprint(most_common_character(first_string))\n\nsecond_string = \"exemplaryelementary\"\nprint(most_common_character(second_string))\n```\n\n<sample-output>\n\nb\ne\n\n</sample-output>",
+  "starter_code": "first_string = \"abcdbde\"\nprint(most_common_character(first_string))\n\nsecond_string = \"exemplaryelementary\"\nprint(most_common_character(second_string))",
+  "grading_data_available": false,
+  "source_hash": "85fdfe6a575eca76183192c89247acdfaa5a29d46fa334b3846b4a1b01e40e52",
+  "order": 58
+}

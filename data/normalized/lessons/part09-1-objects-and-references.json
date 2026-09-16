@@ -1,0 +1,1354 @@
+{
+  "id": "part09-1-objects-and-references",
+  "part": 9,
+  "part_slug": "part-9",
+  "slug": "1-objects-and-references",
+  "is_part_index": false,
+  "title_original": "Objects and references",
+  "title_vi": "",
+  "path": "/part-9/1-objects-and-references",
+  "source_path": "data/part-9/1-objects-and-references.md",
+  "source_hash": "c039cc6a4c75f6c88b903449c1b7c6c9433b095bd2bd4511bf24b534201b2d43",
+  "order": 1,
+  "blocks_count": 74,
+  "blocks": [
+    {
+      "id": "blk-part09-1-objects-and-references-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "ce480654e9d02d30306d96d29cf492c382334f07d997d65d20ce32794aecb2a1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be able to use different data structures for handling objects\n- You will know how objects can be passed as arguments"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "bf7227f1a8a7c71758c9dda89c234c3dcdfa99de5bd25ca25d29df89297a0ea2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Every value in Python is an object. Any object you create based on a class you've defined yourself works exactly the same as any \"regular\" Python object. For example, objects can be stored in a list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0003",
+      "type": "code",
+      "order": 3,
+      "source_hash": "40f07c4ab9eb804bd5e41b05ff9b262e71b07cdce8f244846147f76b46b0d8ea",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from datetime import date\n\nclass CompletedCourse:\n\n    def __init__(self, course_name: str, credits: int, completion_date: date):\n        self.name = course_name\n        self.credits = credits\n        self.completion_date = completion_date\n\n\nif __name__ == \"__main__\":\n    # Here we create some completed courses and add these to a list \n    completed = []\n\n    maths1 = CompletedCourse(\"Mathematics 1\", 5, date(2020, 3, 11))\n    prog1 = CompletedCourse(\"Programming 1\", 6, date(2019, 12, 17))\n\n    completed.append(maths1)\n    completed.append(prog1)\n\n    # Let's add a couple more straight to the list\n    completed.append(CompletedCourse(\"Physics 2\", 4, date(2019, 11, 10)))\n    completed.append(CompletedCourse(\"Programming 2\", 5, date(2020, 5, 19)))\n\n    # Go through all the completed courses, print out their names \n    # and sum up the credits received\n    credits = 0\n    for course in completed:\n        print(course.name)\n        credits += course.credits\n\n    print(\"Total credits received:\", credits)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from datetime import date\n\nclass CompletedCourse:\n\n    def __init__(self, course_name: str, credits: int, completion_date: date):\n        self.name = course_name\n        self.credits = credits\n        self.completion_date = completion_date\n\n\nif __name__ == \"__main__\":\n    # Here we create some completed courses and add these to a list \n    completed = []\n\n    maths1 = CompletedCourse(\"Mathematics 1\", 5, date(2020, 3, 11))\n    prog1 = CompletedCourse(\"Programming 1\", 6, date(2019, 12, 17))\n\n    completed.append(maths1)\n    completed.append(prog1)\n\n    # Let's add a couple more straight to the list\n    completed.append(CompletedCourse(\"Physics 2\", 4, date(2019, 11, 10)))\n    completed.append(CompletedCourse(\"Programming 2\", 5, date(2020, 5, 19)))\n\n    # Go through all the completed courses, print out their names \n    # and sum up the credits received\n    credits = 0\n    for course in completed:\n        print(course.name)\n        credits += course.credits\n\n    print(\"Total credits received:\", credits)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "40f07c4ab9eb804bd5e41b05ff9b262e71b07cdce8f244846147f76b46b0d8ea",
+        "length_lines": 32
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0004",
+      "type": "sample_output",
+      "order": 4,
+      "source_hash": "d135bc11b9c5885836c3be4c85c7421bbf86ab782c888b6b22ed26b9cf97bd11",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Mathematics 1\nProgramming 1\nPhysics 2\nProgramming 2\nTotal credits received: 20"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Mathematics 1\nProgramming 1\nPhysics 2\nProgramming 2\nTotal credits received: 20"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nMathematics 1\nProgramming 1\nPhysics 2\nProgramming 2\nTotal credits received: 20\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0005",
+      "type": "exercise",
+      "order": 5,
+      "source_hash": "5210f5f37a5b65662a5e953d322ab2df2a006202cf590b65fe1fc0351c5f6f4d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains a class named `Car` which represents the features of a car through two attributes: `make (str)` and `top_speed (int)`.\n\nPlease write a function named `fastest_car(cars: list)` which takes a list of `Car` objects as its argument.\n\nThe function should return the make of the fastest car. You may assume there will always be a single car with the highest top speed. Do not change the list given as an argument, or make any changes to the `Car` class definition.\n\nYou may use the following code to test your function:\n\n```python\nif __name__ == \"__main__\":\n    car1 = Car(\"Saab\", 195)\n    car2 = Car(\"Lada\", 110)\n    car3 = Car(\"Ferrari\", 280)\n    car4 = Car(\"Trabant\", 85)\n\n    cars = [car1, car2, car3, car4]\n    print(fastest_car(cars))\n```\n\n<sample-output>\n\nFerrari\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part09-01_fastest_car",
+        "exercise_type": "programming-exercise",
+        "name": "The fastest car",
+        "tmc_name": "part09-01_fastest_car",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0006",
+      "type": "exercise",
+      "order": 6,
+      "source_hash": "0e5a4b2e97858fe8258656b3a5e4c38ca728b64b2251ed35b4d2657447bb4ae7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains a class named `ExamSubmission` which, as the name implies, models an examinee's submission in an exam. The class has two attributes defined: `examinee (str)` and `points (int)`.\n\nPlease write a function named `passed(submissions: list, lowest_passing: int)` which takes a list of exam submissions and an integer number representing the lowest passing grade as its arguments.\n\nThe function should create and return a new list, which contains only the passed submissions from the original list. Please do not change the list given as an argument, or make any changes to the `ExamSubmission` class definition.\n\nYou may use the following code to test your function:\n\n```python\nif __name__ == \"__main__\":\n    s1 = ExamSubmission(\"Peter\", 12)\n    s2 = ExamSubmission(\"Pippa\", 19)\n    s3 = ExamSubmission(\"Paul\", 15)\n    s4 = ExamSubmission(\"Phoebe\", 9)\n    s5 = ExamSubmission(\"Persephone\", 17)\n\n    passes = passed([s1, s2, s3, s4, s5], 15)\n    for passing in passes:\n        print(passing)\n```\n\n<sample-output>\n\nExamSubmission (examinee: Pippa, points: 19)\nExamSubmission (examinee: Paul, points: 15)\nExamSubmission (examinee: Persephone, points: 17)"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part09-02_passing_submissions",
+        "exercise_type": "programming-exercise",
+        "name": "Passing submissions",
+        "tmc_name": "part09-02_passing_submissions",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "ad2a38d6c36974ea94c7dc67455ccabaa9717a680b888d7b7a0dc3e17ec9f251",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You may remember that lists do not contain any objects themselves. They contain _references to objects_. The exact same object can appear multiple times in a single list, and it can be referred to multiple times within the list or outside it. Let's have a look at an example:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0008",
+      "type": "code",
+      "order": 8,
+      "source_hash": "68c178933ed907fd8649327a732c23a8a4eab0078eb8a2086e1d049f1055b0b0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Product:\n    def __init__(self, name: str, unit: str):\n        self.name = name\n        self.unit = unit\n\n\nif __name__ == \"__main__\":\n    shopping_list = []\n    milk = Product(\"Milk\", \"litre\")\n\n    shopping_list.append(milk)\n    shopping_list.append(milk)\n    shopping_list.append(Product(\"Cucumber\", \"piece\"))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Product:\n    def __init__(self, name: str, unit: str):\n        self.name = name\n        self.unit = unit\n\n\nif __name__ == \"__main__\":\n    shopping_list = []\n    milk = Product(\"Milk\", \"litre\")\n\n    shopping_list.append(milk)\n    shopping_list.append(milk)\n    shopping_list.append(Product(\"Cucumber\", \"piece\"))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "68c178933ed907fd8649327a732c23a8a4eab0078eb8a2086e1d049f1055b0b0",
+        "length_lines": 13
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0009",
+      "type": "image",
+      "order": 9,
+      "source_hash": "1f72a53209a87e77033a20d265389ad1b7d46e4e921297a635d282a714d7a08f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "9_1_1.png",
+        "alt": "",
+        "attributes": {
+          "src": "9_1_1.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "1d0a1c5575c4c1bf52c94f20615d011e2be667bcfd51e8c4087df763f1427a9b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If there is more than one reference to the same object, it makes no difference which one of the references is used:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0011",
+      "type": "code",
+      "order": 11,
+      "source_hash": "599c604d6e086944d7444fad2284f7b2db89f6ae4c39590fc98c3922af00de97",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Dog:\n    def __init__(self, name):\n        self.name = name\n\n    def __str__(self):\n        return self.name\n\ndogs = []\nfluffy = Dog(\"Fluffy\")\ndogs.append(fluffy)\ndogs.append(fluffy)\ndogs.append(Dog(\"Fluffy\"))\n\nprint(\"Dogs initially:\")\nfor dog in dogs:\n    print(dog)\n\nprint(\"The dog at index 0 is renamed:\")\ndogs[0].name = \"Pooch\"\nfor dog in dogs:\n    print(dog)\n\nprint(\"The dog at index 2 is renamed:\")\ndogs[2].name = \"Fifi\"\nfor dog in dogs:\n    print(dog)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Dog:\n    def __init__(self, name):\n        self.name = name\n\n    def __str__(self):\n        return self.name\n\ndogs = []\nfluffy = Dog(\"Fluffy\")\ndogs.append(fluffy)\ndogs.append(fluffy)\ndogs.append(Dog(\"Fluffy\"))\n\nprint(\"Dogs initially:\")\nfor dog in dogs:\n    print(dog)\n\nprint(\"The dog at index 0 is renamed:\")\ndogs[0].name = \"Pooch\"\nfor dog in dogs:\n    print(dog)\n\nprint(\"The dog at index 2 is renamed:\")\ndogs[2].name = \"Fifi\"\nfor dog in dogs:\n    print(dog)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "599c604d6e086944d7444fad2284f7b2db89f6ae4c39590fc98c3922af00de97",
+        "length_lines": 26
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0012",
+      "type": "sample_output",
+      "order": 12,
+      "source_hash": "40727d177b5b989f2c93f9053e4aea52a1a98d930f70399bf34aff22c7022d10",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Dogs initially:\nFluffy\nFluffy\nFluffy\nThe dog at index 0 is renamed:\nPooch\nPooch\nFluffy\nThe dog at index 2 is renamed:\nPooch\nPooch\nFifi"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Dogs initially:\nFluffy\nFluffy\nFluffy\nThe dog at index 0 is renamed:\nPooch\nPooch\nFluffy\nThe dog at index 2 is renamed:\nPooch\nPooch\nFifi"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nDogs initially:\nFluffy\nFluffy\nFluffy\nThe dog at index 0 is renamed:\nPooch\nPooch\nFluffy\nThe dog at index 2 is renamed:\nPooch\nPooch\nFifi\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "7e5abfc81f630b69931ade840b9fbbdf8c98b204f2babdc440d32a50c1a8a301",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The references at indexes 0 and 1 in the list refer to the same object. Either one of the references can be used to access the object. The reference at index 2 refers to a different object, albeit with seemingly the same contents. Changing the contents of this latter object does not affect the other one."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "e350b4e0f4d8158cab98e703df3ba9831cdf71a8e992236b254610d89d7e09f6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The operator `is` is used for checking if the two references refer to the exact same object, while the operator `==` will tell you if the contents of the objects are the same. The following example hopefully makes the difference clear:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0015",
+      "type": "code",
+      "order": 15,
+      "source_hash": "596df0deb9531e777aa365f5f0ba083f5e804d50f0ee9df197330061f9a04ec7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "list1 = [1, 2, 3]\nlist2 = [1, 2, 3]\nlist3 = list1\n\nprint(list1 is list2)\nprint(list1 is list3)\nprint(list2 is list3)\n\nprint()\n\nprint(list1 == list2)\nprint(list1 == list3)\nprint(list2 == list3)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "list1 = [1, 2, 3]\nlist2 = [1, 2, 3]\nlist3 = list1\n\nprint(list1 is list2)\nprint(list1 is list3)\nprint(list2 is list3)\n\nprint()\n\nprint(list1 == list2)\nprint(list1 == list3)\nprint(list2 == list3)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "596df0deb9531e777aa365f5f0ba083f5e804d50f0ee9df197330061f9a04ec7",
+        "length_lines": 13
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0016",
+      "type": "sample_output",
+      "order": 16,
+      "source_hash": "ed29562401dff9bdf71f06f113774a5723d217dedb25ceee0acd2f34c651ca21",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "False\nTrue\nFalse\n\nTrue\nTrue\nTrue"
+      },
+      "translation": {
+        "language": "text",
+        "content": "False\nTrue\nFalse\n\nTrue\nTrue\nTrue"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nFalse\nTrue\nFalse\n\nTrue\nTrue\nTrue\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "c3822d3fc215753820a00f9eab9f3cacd0d4447f8470cc0abb0b2dbb3b780cd1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Any Python object can also be stored in a dictionary or any other data structure. This also applies to objects created based on a class you've defined yourself."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0018",
+      "type": "code",
+      "order": 18,
+      "source_hash": "ce19efcd4b38ca5780673b393c8e1e415bdb13e6dc8f7e0b7aa1871083beb900",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Student:\n    def __init__(self, name: str, cr: int):\n        self.name = name\n        self.cr = cr\n\nif __name__ == \"__main__\":\n    # The key in this dictionary is the student number, \n    # and the value is an object of type Student\n    students = {}\n    students[\"12345\"] = Student(\"Saul Student\", 10)\n    students[\"54321\"] = Student(\"Sally Student\", 67)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Student:\n    def __init__(self, name: str, cr: int):\n        self.name = name\n        self.cr = cr\n\nif __name__ == \"__main__\":\n    # The key in this dictionary is the student number, \n    # and the value is an object of type Student\n    students = {}\n    students[\"12345\"] = Student(\"Saul Student\", 10)\n    students[\"54321\"] = Student(\"Sally Student\", 67)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ce19efcd4b38ca5780673b393c8e1e415bdb13e6dc8f7e0b7aa1871083beb900",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "003674c9711569dabdcda4ac2160670dd84f934ffddc8179418890bcdb1c7295",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit) can help in making sense of the above example:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0020",
+      "type": "image",
+      "order": 20,
+      "source_hash": "5bc5d84b7bd8b23e67ec9ed876153e6b1901961bca2a649eaecd42679b47ae66",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "9_1_2.png",
+        "alt": "",
+        "attributes": {
+          "src": "9_1_2.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0021",
+      "type": "heading",
+      "order": 21,
+      "source_hash": "71ee373e0b96d21de85b3b36783e7f3ff2c61600012f5dc43eb0ab7509868ff3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Self or no self?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "63550f3801ef4fd9f9c8f275e825331e32819903e2992d5bf8d5533b17456312",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Thus far we've only touched upon the surface of using the `self` parameter name. Let's have a closer look at when it should or should not be used."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "01ec2dc84632672b3e95056bca4dae3796bc7bac6bc720da0080edf639fb5444",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Below we have a simple class which lets us create a vocabulary object containing some words:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0024",
+      "type": "code",
+      "order": 24,
+      "source_hash": "9cdac906327eb7d39f97e1cc0a07f555a2fd59624963706c79fe3dc16281a1a9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Vocabulary:\n    def __init__(self):\n        self.words = []\n\n    def add_word(self, word: str):\n        if not word in self.words:\n            self.words.append(word)\n\n    def print_vocabulary(self):\n        for word in sorted(self.words):\n            print(word)\n\nvocab = Vocabulary()\nvocab.add_word(\"python\")\nvocab.add_word(\"object\")\nvocab.add_word(\"object-oriented programming\")\nvocab.add_word(\"object\")\nvocab.add_word(\"nerd\")\n\nvocab.print_vocabulary()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Vocabulary:\n    def __init__(self):\n        self.words = []\n\n    def add_word(self, word: str):\n        if not word in self.words:\n            self.words.append(word)\n\n    def print_vocabulary(self):\n        for word in sorted(self.words):\n            print(word)\n\nvocab = Vocabulary()\nvocab.add_word(\"python\")\nvocab.add_word(\"object\")\nvocab.add_word(\"object-oriented programming\")\nvocab.add_word(\"object\")\nvocab.add_word(\"nerd\")\n\nvocab.print_vocabulary()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "9cdac906327eb7d39f97e1cc0a07f555a2fd59624963706c79fe3dc16281a1a9",
+        "length_lines": 20
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0025",
+      "type": "sample_output",
+      "order": 25,
+      "source_hash": "fe3c504d6e566ba878c50506f27889a4f28ded636c55e667702356e8ec15ea02",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "nerd\nobject\nobject-oriented programming\npython"
+      },
+      "translation": {
+        "language": "text",
+        "content": "nerd\nobject\nobject-oriented programming\npython"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nnerd\nobject\nobject-oriented programming\npython\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "24b0759cc7e7836774fb30b2b26586915a8489068bdd331bb63ca43dd7afe161",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The list of words is stored in an attribute named `self.words`. In this case the `self` parameter name is mandatory in both the constructor method of the class and in any other method accessing that variable. If `self` is left out, the different methods will not access the same list of words."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "67898eedb1712ed5738430b23261ca60ce96c826533852c820f731046949757a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's add a new method to our class definition. The method `longest_word(self)` returns (one of) the longest words in the vocabulary."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "b69e8ce15c71347a97f2c576e4562268aa45c9781c3b1898acb9eaf0baa754e3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The following is one way of completing this task, but we will soon see it is not a very good way:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0029",
+      "type": "code",
+      "order": 29,
+      "source_hash": "5989bf31fcc070fc84370528670a397852b7475787d9581692b3e8efef45da6f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Vocabulary:\n    def __init__(self):\n        self.words = []\n\n    # ...\n\n    def longest_word(self):\n        # define two helper variables\n        self.longest = \"\"\n        self.length_of_longest = 0\n\n        for word in self.words:\n            if len(word) > self.length_of_longest:\n                self.length_of_longest = len(word)\n                self.longest = word\n\n        return self.longest"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Vocabulary:\n    def __init__(self):\n        self.words = []\n\n    # ...\n\n    def longest_word(self):\n        # define two helper variables\n        self.longest = \"\"\n        self.length_of_longest = 0\n\n        for word in self.words:\n            if len(word) > self.length_of_longest:\n                self.length_of_longest = len(word)\n                self.longest = word\n\n        return self.longest"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5989bf31fcc070fc84370528670a397852b7475787d9581692b3e8efef45da6f",
+        "length_lines": 17
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "2cf660c25b09ef83c5882e1217166124bd5d7fbb34978c5a20eae93d66b7fd3b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This method uses two helper variables which are declared with the `self` parameter name. Remember, the names of variables do not matter in the functional sense, so these variables could also be named more confusingly as, for example, `helper` and `helper2`. The code begins to look a bit cryptic:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0031",
+      "type": "code",
+      "order": 31,
+      "source_hash": "c2a903fbc687d0d5a67cd0acebfbe516a4d45e6ef474242fccd7b9752c84bed0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Vocabulary:\n    def __init__(self):\n        self.words = []\n\n    # ...\n\n    def longest_word(self):\n        # define two helper variables\n        self.helper = \"\"\n        self.helper2 = 0\n\n        for word in self.words:\n            if len(word) > self.helper2:\n                self.helper2 = len(word)\n                self.helper = word\n\n        return self.helper"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Vocabulary:\n    def __init__(self):\n        self.words = []\n\n    # ...\n\n    def longest_word(self):\n        # define two helper variables\n        self.helper = \"\"\n        self.helper2 = 0\n\n        for word in self.words:\n            if len(word) > self.helper2:\n                self.helper2 = len(word)\n                self.helper = word\n\n        return self.helper"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c2a903fbc687d0d5a67cd0acebfbe516a4d45e6ef474242fccd7b9752c84bed0",
+        "length_lines": 17
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "c2241bd7b97a4acf8314817348a84c658f20d0efdd9a853b6a16c011372cd930",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When a variable is declared with the `self` parameter name, it becomes an attribute of the object. This means that the variable will exist for as long as the object exists. Specifically, the variable will continue existing also after the method declaring it has finished its execution. In the example above this is quite unnecessary, as the helper variables are meant to be used only within the method `longest_word(self)`. So, declaring helper variables with the `self` parameter name is not a very good idea here."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "f381d5710b2d24ca536b1747ffa80df856dfee97b130bddc9fbcdaf2c294a8f7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Besides causing variables to exist beyond their \"expiration date\", using `self` to create new attributes where they aren't necessary can cause difficult bugs in your code. Especially generically named attributes such as `self.helper`, which are then used in various different methods, can cause unexpected behaviour which is hard to trace."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "03e1cd914bca37010fb2c2d9b68146b88b0e67e2f5332dac472838994a88600d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "For example, if a helper variable is declared as an attribute and assigned an initial value in the constructor, but the variable is then used in an unrelated context in another method, the results are often unpredictable:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0035",
+      "type": "code",
+      "order": 35,
+      "source_hash": "1a6445efaee46cd1e9425947254ffed9ac5c381c221eb928de1267b487d4c5c5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Vocabulary:\n    def __init__(self):\n        self.words = []\n        # define helper variables\n        self.helper = \"\"\n        self.helper2 = \"\"\n        self.helper3 = \"\"\n        self.helper4 = \"\"\n\n    # ...\n\n    def longest_word(self):\n        for word in self.words:\n            # above the helper variables were all assigned string values\n            # the following will not work because the type of helper2 is wrong\n            if len(word) > self.helper2:\n                self.helper2 = len(word)\n                self.helper = word\n\n        return self.helper"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Vocabulary:\n    def __init__(self):\n        self.words = []\n        # define helper variables\n        self.helper = \"\"\n        self.helper2 = \"\"\n        self.helper3 = \"\"\n        self.helper4 = \"\"\n\n    # ...\n\n    def longest_word(self):\n        for word in self.words:\n            # above the helper variables were all assigned string values\n            # the following will not work because the type of helper2 is wrong\n            if len(word) > self.helper2:\n                self.helper2 = len(word)\n                self.helper = word\n\n        return self.helper"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "1a6445efaee46cd1e9425947254ffed9ac5c381c221eb928de1267b487d4c5c5",
+        "length_lines": 20
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "5df56d668db21df2041353eb4ec49aaaf81eff8573e30e1623969f24927f7f3a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You might think this would be solved by just declaring attributes where they are used, _outside_ the constructor, but this results in a situation where the attributes accessible through an object are dependent on _which methods have been executed_. In the previous part we saw that the advantage of declaring attributes in the constructor is that all instances of the class will then have the exact same attributes. If this is not the case, using different instances of the class can easily lead to errors."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "84ca72601ac886479d04dbd813f5c16479663a10b38874dc60e5cc71ab974e55",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In conclusion, if you need helper variables for use within a single method, the correct way to do it is _without_ `self`. To make your code easier to understand, also use informative variable names:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0038",
+      "type": "code",
+      "order": 38,
+      "source_hash": "66e92b505d25c66d46ee61d435371d90605d592b0c416a9b711ccf1e9d2af8c6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Vocabulary:\n    def __init__(self):\n        self.words = []\n\n    # ...\n\n    def longest_word(self):\n        # the correct way of declaring helper variables \n        # for use within a single method\n        longest = \"\"\n        length_of_longest = 0\n\n        for word in self.words:\n            if len(word) > length_of_longest:\n                length_of_longest = len(word)\n                longest = word\n\n        return longest"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Vocabulary:\n    def __init__(self):\n        self.words = []\n\n    # ...\n\n    def longest_word(self):\n        # the correct way of declaring helper variables \n        # for use within a single method\n        longest = \"\"\n        length_of_longest = 0\n\n        for word in self.words:\n            if len(word) > length_of_longest:\n                length_of_longest = len(word)\n                longest = word\n\n        return longest"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "66e92b505d25c66d46ee61d435371d90605d592b0c416a9b711ccf1e9d2af8c6",
+        "length_lines": 18
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "42eaa3eb2819217adcb2ac72599d229b72d2731436c78bf03f0e0326f6ee4328",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the above implementation the helper variables are only accessible while the method is being executed. The values stored within cannot cause complications in other parts of the program."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0040",
+      "type": "heading",
+      "order": 40,
+      "source_hash": "79bdb1ca0da592c5e789e54d3d0895f6f3d1c84fda335db58c8f9732170430ae",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Objects as arguments to functions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "5b48870012894d5c7b415e850c136825a21f43d7ac950465c535a3039912b761",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The objects created based on our own classes are usually mutable. You may remember that, for instance, Python lists are mutable: when passed as arguments to functions, their contents can change as a result of the execution."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "2eec7c164e58bff23a27d5f17e0f700b4ebfc417409452f278cc09960004e1a2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at a simple example where a function receives a reference to an object of type `Student` as its argument. The function then changes the name of the student. Both the function and the main function calling it access the same object, so the change is apparent in the main function as well."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0043",
+      "type": "code",
+      "order": 43,
+      "source_hash": "fe0d56022fe399baeeb3786d5479e6353d7fe11b243d1d8f5ed9e01cca985b61",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Student:\n    def __init__(self, name: str, student_number: str):\n        self.name = name\n        self.student_number = student_number\n\n    def __str__(self):\n        return f\"{self.name} ({self.student_number})\"\n\n# the type hint here uses the name of the class defined above\ndef change_name(student: Student):\n    student.name = \"Saul Student\"\n\n# create a Student object\nsteve = Student(\"Steve Student\", \"12345\")\n\nprint(steve)\nchange_name(steve)\nprint(steve)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Student:\n    def __init__(self, name: str, student_number: str):\n        self.name = name\n        self.student_number = student_number\n\n    def __str__(self):\n        return f\"{self.name} ({self.student_number})\"\n\n# the type hint here uses the name of the class defined above\ndef change_name(student: Student):\n    student.name = \"Saul Student\"\n\n# create a Student object\nsteve = Student(\"Steve Student\", \"12345\")\n\nprint(steve)\nchange_name(steve)\nprint(steve)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "fe0d56022fe399baeeb3786d5479e6353d7fe11b243d1d8f5ed9e01cca985b61",
+        "length_lines": 18
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0044",
+      "type": "sample_output",
+      "order": 44,
+      "source_hash": "76703c5dfc5113ef4e991279511211da1b7cb74829107bf04dd94d22010708c1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Steve Student (12345)\nSaul Student (12345)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Steve Student (12345)\nSaul Student (12345)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nSteve Student (12345)\nSaul Student (12345)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0045",
+      "type": "paragraph",
+      "order": 45,
+      "source_hash": "cb498482ef74b648e236211068c51ff8d6f121bbb792e48ab039f28653261af3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "It is also possible to create objects within functions. If a function returns a reference to the newly created object, it is also accessible within the main function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0046",
+      "type": "code",
+      "order": 46,
+      "source_hash": "ce5c0a33ceee0fdd1d56475ec42ffcfa6f15f68317cc8da885f0654d720d9ee3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from random import randint, choice\n\nclass Student:\n    def __init__(self, name: str, student_number: str):\n        self.name = name\n        self.student_number = student_number\n\n    def __str__(self):\n        return f\"{self.name} ({self.student_number})\"\n\n# This function creates and returns a new Student object.\n# It randomly selects values for the name and the student number.\ndef new_student():\n    first_names = [\"Mark\",\"Mindy\",\"Mary\",\"Mike\"]\n    last_names = [\"Javanese\", \"Rusty\", \"Scriptor\", \"Pythons\"]\n\n    # randomly determine the name\n    name = choice(first_names) + \" \" + choice(last_names)\n\n    # randomly determine the student number\n    student_number = str(randint(10000,99999))\n\n    # Create and return a Student object\n    return Student(name, student_number)\n\nif __name__ == \"__main__\":\n    # Call the function five times and store the results in a list\n    students = []\n    for i in range(5):\n        students.append(new_student())\n\n    # Print out the results\n    for student in students :\n        print(student)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from random import randint, choice\n\nclass Student:\n    def __init__(self, name: str, student_number: str):\n        self.name = name\n        self.student_number = student_number\n\n    def __str__(self):\n        return f\"{self.name} ({self.student_number})\"\n\n# This function creates and returns a new Student object.\n# It randomly selects values for the name and the student number.\ndef new_student():\n    first_names = [\"Mark\",\"Mindy\",\"Mary\",\"Mike\"]\n    last_names = [\"Javanese\", \"Rusty\", \"Scriptor\", \"Pythons\"]\n\n    # randomly determine the name\n    name = choice(first_names) + \" \" + choice(last_names)\n\n    # randomly determine the student number\n    student_number = str(randint(10000,99999))\n\n    # Create and return a Student object\n    return Student(name, student_number)\n\nif __name__ == \"__main__\":\n    # Call the function five times and store the results in a list\n    students = []\n    for i in range(5):\n        students.append(new_student())\n\n    # Print out the results\n    for student in students :\n        print(student)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ce5c0a33ceee0fdd1d56475ec42ffcfa6f15f68317cc8da885f0654d720d9ee3",
+        "length_lines": 34
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0047",
+      "type": "paragraph",
+      "order": 47,
+      "source_hash": "476a076bd3060c7210a774ff93fb78ce5e7ea2315caf367dbe615549dc716fd3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Executing the above could result in the following printout (NB: as randomness is involved, if you try the code yourself, the results will likely be different)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0048",
+      "type": "sample_output",
+      "order": 48,
+      "source_hash": "3d900354ccfb0e11901fe4aca85b4e489771d0a60ed65d77a7e64a5e3907dd45",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Mary Rusty (78218)\nMindy Rusty (80068)\nMike Pythons (70396)\nMark Javanese (83307)\nMary Pythons (45149)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Mary Rusty (78218)\nMindy Rusty (80068)\nMike Pythons (70396)\nMark Javanese (83307)\nMary Pythons (45149)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nMary Rusty (78218)\nMindy Rusty (80068)\nMike Pythons (70396)\nMark Javanese (83307)\nMary Pythons (45149)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0049",
+      "type": "heading",
+      "order": 49,
+      "source_hash": "c5be7a1afbfb11ee4d8f0d5fabce0003e16796288e46aeedb5c8d3bf8ae970a3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Objects as arguments to methods"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0050",
+      "type": "paragraph",
+      "order": 50,
+      "source_hash": "590b7985d16df96be132a2be90490f1440e472da1ea956f64abb22a3b24ad9e2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Similarly, objects can act as arguments to methods. Let's have a look at an example from an amusement park:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0051",
+      "type": "code",
+      "order": 51,
+      "source_hash": "93b828130b0706e7337f893b6c4870874942c48daa096994024d3f8b8d77bd39",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Person:\n    def __init__(self, name: str, height: int):\n        self.name = name\n        self.height = height\n\nclass Attraction:\n    def __init__(self, name: str, min_height: int):\n        self.visitors = 0\n        self.name = name\n        self.min_height = min_height\n\n    def admit_visitor(self, person: Person):\n        if person.height >= self.min_height:\n            self.visitors += 1\n            print(f\"{person.name} got on board\")\n        else:\n            print(f\"{person.name} was too short :(\")\n\n    def __str__(self):\n        return f\"{self.name} ({self.visitors} visitors)\""
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Person:\n    def __init__(self, name: str, height: int):\n        self.name = name\n        self.height = height\n\nclass Attraction:\n    def __init__(self, name: str, min_height: int):\n        self.visitors = 0\n        self.name = name\n        self.min_height = min_height\n\n    def admit_visitor(self, person: Person):\n        if person.height >= self.min_height:\n            self.visitors += 1\n            print(f\"{person.name} got on board\")\n        else:\n            print(f\"{person.name} was too short :(\")\n\n    def __str__(self):\n        return f\"{self.name} ({self.visitors} visitors)\""
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "93b828130b0706e7337f893b6c4870874942c48daa096994024d3f8b8d77bd39",
+        "length_lines": 20
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0052",
+      "type": "paragraph",
+      "order": 52,
+      "source_hash": "4801a21e8084eb09120d2e6c19fea8da2d709ad61de76ea4d407029fe1b0a3a1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The Attraction contains a method `admit_visitor`, which takes an object of type `Person` as an argument. If the visitor is tall enough, they are admitted on board and the number of visitors is increased. The classes can be tested as follows:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0053",
+      "type": "code",
+      "order": 53,
+      "source_hash": "8243af3fdfc9e2360c93a3d359df6aec45791dfa966ca37a503cdce15d8be7e5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "rollercoaster = Attraction(\"Rollercoaster\", 120)\njared = Person(\"Jared\", 172)\nalice = Person(\"Alice\", 105)\n\nrollercoaster.admit_visitor(jared)\nrollercoaster.admit_visitor(alice)\n\nprint(rollercoaster)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "rollercoaster = Attraction(\"Rollercoaster\", 120)\njared = Person(\"Jared\", 172)\nalice = Person(\"Alice\", 105)\n\nrollercoaster.admit_visitor(jared)\nrollercoaster.admit_visitor(alice)\n\nprint(rollercoaster)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8243af3fdfc9e2360c93a3d359df6aec45791dfa966ca37a503cdce15d8be7e5",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0054",
+      "type": "sample_output",
+      "order": 54,
+      "source_hash": "a7557cb92fb3117d74da2f8d7509a997314262bbdc0c8f54a44f927ccb4c06df",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Jared got on board\nAlice was too short :(\nRollercoaster (1 visitors)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Jared got on board\nAlice was too short :(\nRollercoaster (1 visitors)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nJared got on board\nAlice was too short :(\nRollercoaster (1 visitors)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0055",
+      "type": "exercise",
+      "order": 55,
+      "source_hash": "7c66f819754b3009bf3ec944d026865860bbdbeb59bc42be1cabedc0f4d3db9d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains a class named `Person` and a skeleton implementation for the class `BabyCentre`. A `BabyCentre` object performs various actions on a `Person` object. It may, for example, weigh or feed the person. In this exercise you will implement the rest of the `BabyCentre` class. Please do not change the class definition of `Person` in any way.\n\n## Weighing persons\n\nThe `BabyCentre` class definition contains an outline for the function `weigh`:\n\n```python\nclass BabyCentre:\n    def weigh(self, person: Person):\n        # return the weight of the person passed as an argument\n        return -1\n```\n\nThe method takes a `Person` object as its argument. It should return the weight of the person. You can access the weight of a person through the appropriate attribute defined in the `Person` class. Please fill in the rest of the implementation for the method `weigh`.\n\nBelow is an example of a main function where a `BabyCentre` weighs two separate `Person` objects:\n\n```python\nbaby_centre = BabyCentre()\n\neric = Person(\"Eric\", 1, 110, 7)\npeter = Person(\"Peter\", 33, 176, 85)\n\nprint(f\"{eric.name} weighs {baby_centre.weigh(eric)} kg\")\nprint(f\"{peter.name} weighs {baby_centre.weigh(peter)} kg\")\n```\n\n<sample-output>\n\nEric weighs 7 kg\nPeter weighs 85 kg\n\n</sample-output>\n\n## Feeding\n\nIt is possible to change the state of an object passed as an argument. Please implement the method `feed(person: Person)` which increases by one the weight of the person passed as an argument.\n\nIn the following example two persons are weighed, and then one of them is fed three times. Then the persons are weighed again:\n\n```python\nbaby_centre = BabyCentre()\n\neric = Person(\"Eric\", 1, 110, 7)\npeter = Person(\"Peter\", 33, 176, 85)\n\nprint(f\"{eric.name} weighs {baby_centre.weigh(eric)} kg\")\nprint(f\"{peter.name} weighs {baby_centre.weigh(peter)} kg\")\nprint() \n\nbaby_centre.feed(eric)\nbaby_centre.feed(eric)\nbaby_centre.feed(eric)\n\nprint(f\"{eric.name} weighs {baby_centre.weigh(eric)} kg\")\nprint(f\"{peter.name} weighs {baby_centre.weigh(peter)} kg\")\n```\n\nThe printout should reveal that Eric's weight has increased by three:\n\n<sample-output>\n\nEric weighs 7 kg\nPeter weighs 85 kg\n\nEric weighs 10 kg\nPeter weighs 85 kg\n\n</sample-output>\n\n## Counting weigh-ins\n\nPlease implement the method `weigh_ins()` which returns the total number of weigh-ins a `BabyCentre` object has performed. NB: you will need a new attribute for keeping track of the number of weigh-ins. You can use the following code to test your method:\n\n```python\nbaby_centre = BabyCentre()\n\neric = Person(\"Eric\", 1, 110, 7)\npeter = Person(\"Peter\", 33, 176, 85)\n\nprint(f\"Total number of weigh-ins is {baby_centre.weigh_ins()}\")\n\nbaby_centre.weigh(eric)\nbaby_centre.weigh(eric)\n\nprint(f\"Total number of weigh-ins is {baby_centre.weigh_ins()}\")\n\nbaby_centre.weigh(eric)\nbaby_centre.weigh(eric)\nbaby_centre.weigh(eric)\nbaby_centre.weigh(eric)\n\nprint(f\"Total number of weigh-ins is {baby_centre.weigh_ins()}\")\n```\n\n<sample-output>\n\nTotal number of weigh-ins is 0\nTotal number of weigh-ins is 2\nTotal number of weigh-ins is 6\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part09-03_baby_centre",
+        "exercise_type": "programming-exercise",
+        "name": "Baby Centre",
+        "tmc_name": "part09-03_baby_centre",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0056",
+      "type": "exercise",
+      "order": 56,
+      "source_hash": "2b0b01156445b87f63fe6a3efab3a769f97b376a599dd95cd55e04180bd00629",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the previous part there was an [exercise](/part-8/5-more-examples-of-classes#programming-exercise-lunchcard) where you implemented the class `LunchCard`. The card had separate methods for eating a regular and a special lunch, along with a method for depositing money on the card.\n\nThe `LunchCard` class, as you were asked to implement it, has some problems, however. The card itself had knowledge of the prices of the different lunch options, and knew to subtract the right amount of money from the balance based on these. But imagine the prices changed, or there were new items introduced to the system, but several cards were already registered in the system. This would mean all existing cards would need to be replaced by versions with knowledge of the new prices.\n\nA better solution would be to make the cards \"stupid\", ignorant of the prices of different products. The purpose of the card would be to simply keep track of the available balance. All more complicated features should be contained within another class: the payment terminal.\n\n## A simpler LunchCard\n\nLet's first implement a simpler version of the `LunchCard` class. The card should contain functionality only for finding out the current balance, depositing money on the card, and subtracting from the balance. Please fill in the `subtract_from_balance(amount)` method in the exercise template according to the instructions in the comments:\n\n```python\nclass LunchCard:\n    def __init__(self, balance: float):\n        self.balance = balance\n\n    def deposit_money(self, amount: float):\n        self.balance += amount\n\n    def subtract_from_balance(self, amount: float):\n        pass\n        # The amount should be subtracted from the balance only if\n        # there is enough money on the card.\n        # If the payment is successful, the method returns True. \n        # Otherwise it returns False.\n```\n\nYou may use the following code to test your function:\n\n```python\nif __name__ == \"__main__\":\n    card = LunchCard(10)\n    print(\"Balance\", card.balance)\n    result = card.subtract_from_balance(8)\n    print(\"Payment successful:\", result)\n    print(\"Balance\", card.balance)\n    result = card.subtract_from_balance(4)\n    print(\"Payment successful:\", result)\n    print(\"Balance\", card.balance)\n```\n\n<sample-output>\n\nBalance 10\nPayment successful: True\nBalance 2\nPayment successful: False\nBalance 2\n\n</sample-output>\n\n## The payment terminal and dealing with cash payments\n\nIn the student cafeteria it is possible to pay with either cash or a LunchCard. A payment terminal is used to handle both cash and card transactions. Let's start with the cash transactions.\n\nHere we have a skeleton implementation for a `PaymentTerminal` class. Please implement the methods as described in the comments:\n\n```python\nclass PaymentTerminal:\n    def __init__(self):\n        # Initially there is 1000 euros in cash available at the terminal\n        self.funds = 1000\n        self.lunches = 0\n        self.specials = 0\n\n    def eat_lunch(self, payment: float):\n        # A regular lunch costs 2.50 euros.\n        # Increase the value of the funds at the terminal by the \n        # price of the lunch, increase the number of lunches sold, \n        # and return the appropriate change.\n        # If the payment passed as an argument is not large enough to cover\n        # the price, the lunch is not sold, and the entire sum is returned.\n\n    def eat_special(self, payment: float):\n        # A special lunch costs 4.30 euros.\n        # Increase the value of the funds at the terminal by the \n        # price of the lunch, increase the number of lunches sold, \n        # and return the appropriate change.\n        # If the payment passed as an argument is not large enough to cover\n        # the price, the lunch is not sold, and the entire sum is returned.\n```\n\nYou may use the following code to test your class:\n\n```python\nexactum = PaymentTerminal()\n\nchange = exactum.eat_lunch(10)\nprint(\"The change returned was\", change)\n\nchange = exactum.eat_lunch(5)\nprint(\"The change returned was\", change)\n\nchange = exactum.eat_special(4.3)\nprint(\"The change returned was\", change)\n\nprint(\"Funds available at the terminal:\", exactum.funds)\nprint(\"Regular lunches sold:\", exactum.lunches)\nprint(\"Special lunches sold:\", exactum.specials)\n```\n\n<sample-output>\n\nThe change returned was 7.5\nThe change returned was 2.5\nThe change returned was 0.0\nFunds available at the terminal: 1009.3\nRegular lunches sold: 2\nSpecial lunches sold: 1\n\n</sample-output>\n\n## Dealing with card transactions\n\nNow let's implement card transactions. We will need methods which take a `LunchCard` as an argument, and reduce the balance on the card by the price of the lunch. Below you will find the outlines of these functions. Please fill in the methods as described in the comments:\n\n```python\nclass PaymentTerminal:\n    # ...\n\n    def eat_lunch_lunchcard(self, card: LunchCard):\n        # A regular lunch costs 2.50 euros.\n        # If there is enough money on the card, \n        # subtract the price of the lunch from the balance\n        # and return True. If not, return False.\n\n\n    def eat_special_lunchcard(self, card: LunchCard):\n        # A special lunch costs 4.30 euros.\n        # If there is enough money on the card, \n        # subtract the price of the lunch from the balance\n        # and return True. If not, return False.\n```\n\n**NB:** when paying with a LunchCard the cash funds available at the terminal do not change. However, the lunches are still sold whenever there is the required balance available, so remember to increase the number of lunches sold appropriately.\n\nYou may use the following code to test your class:\n\n```python\nexactum = PaymentTerminal()\n\nchange = exactum.eat_lunch(10)\nprint(\"The change returned was\", change)\n\ncard = LunchCard(7)\n\nresult = exactum.eat_special_lunchcard(card)\nprint(\"Payment successful:\", result)\nresult = exactum.eat_special_lunchcard(card)\nprint(\"Payment successful:\", result)\nresult = exactum.eat_lunch_lunchcard(card)\nprint(\"Payment successful:\", result)\n\nprint(\"Funds available at the terminal:\", exactum.funds)\nprint(\"Regular lunches sold:\", exactum.lunches)\nprint(\"Special lunches sold:\", exactum.specials)\n```\n\n<sample-output>\n\nThe change returned was 7.5\nPayment successful: True\nPayment successful: False\nPayment successful: True\nFunds available at the terminal: 1002.5\nRegular lunches sold: 2\nSpecial lunches sold: 1\n\n</sample-output>\n\n## Depositing money on the card\n\nFinally, let's add a method which lets you deposit money on the card. The card owner pays this by cash, so the deposited sum is added to the funds available at the terminal. Here is an outline for the method:\n\n```python\ndef deposit_money_on_card(self, card: LunchCard, amount: float):\n    pass\n```\n\nYou may use the following code to test your method:\n\n```python\nexactum = PaymentTerminal()\n\ncard = LunchCard(2)\nprint(f\"Card balance is {card.balance} euros\")\n\nresult = exactum.eat_special_lunchcard(card)\nprint(\"Payment successful:\", result)\n\nexactum.deposit_money_on_card(card, 100)\nprint(f\"Card balance is {card.balance} euros\")\n\nresult = exactum.eat_special_lunchcard(card)\nprint(\"Payment successful:\", result)\nprint(f\"Card balance is {card.balance} euros\")\n\nprint(\"Funds available at the terminal:\", exactum.funds)\nprint(\"Regular lunches sold:\", exactum.lunches)\nprint(\"Special lunches sold:\", exactum.specials)\n```\n\n<sample-output>\n\nCard balance is 2 euros\nPayment successful: False\nCard balance is 102 euros\nPayment successful: True\nCard balance is 97.7 euros\nFunds available at the terminal: 1100\nRegular lunches sold: 0\nSpecial lunches sold: 1\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part09-04_lunchcard_and_paymentterminal",
+        "exercise_type": "programming-exercise",
+        "name": "LunchCard and PaymentTerminal",
+        "tmc_name": "part09-04_lunchcard_and_paymentterminal",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0057",
+      "type": "heading",
+      "order": 57,
+      "source_hash": "fb8343ec67a658f6de1fe0b40e5196d63ba54e2ef4abf70f9e327ed17371834c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "An instance of the same class as an argument to a method"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0058",
+      "type": "paragraph",
+      "order": 58,
+      "source_hash": "16666ad71f614c36cd67bf224f97dc3170982f440e6ca14a69b9de24bcf7747b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Below we have yet another version of the class `Person`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0059",
+      "type": "code",
+      "order": 59,
+      "source_hash": "b2f1d24d74e08432b7cc49cf2bb769d2710e0024cc3c1496455f6623b1f30155",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Person:\n    def __init__(self, name: str, year_of_birth: int):\n        self.name = name\n        self.year_of_birth = year_of_birth"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Person:\n    def __init__(self, name: str, year_of_birth: int):\n        self.name = name\n        self.year_of_birth = year_of_birth"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b2f1d24d74e08432b7cc49cf2bb769d2710e0024cc3c1496455f6623b1f30155",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0060",
+      "type": "paragraph",
+      "order": 60,
+      "source_hash": "513d661bb0172f31697fc9df8faf4fb437a29c46dc3dd6947bde26a68a04b481",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's assume we want to write a program which compares the ages of objects of type Person. We could write a separate function for this purpose:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0061",
+      "type": "code",
+      "order": 61,
+      "source_hash": "421e3d2599e6411b86e07648c2aee74a6fd214a5f5eca057cea6dbed512a4908",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def older_than(person1: Person, person2: Person):\n    if person1.year_of_birth < person2.year_of_birth:\n        return True\n    else:\n        return False\n\nmuhammad = Person(\"Muhammad ibn Musa al-Khwarizmi\", 780)\npascal = Person(\"Blaise Pascal\", 1623)\ngrace = Person(\"Grace Hopper\", 1906)\n\nif older_than(muhammad, pascal):\n    print(f\"{muhammad.name} is older than {pascal.name}\")\nelse:\n    print(f\"{muhammad.name} is not older than {pascal.name}\")\n\nif older_than(grace, pascal):\n    print(f\"{grace.name} is older than {pascal.name}\")\nelse:\n    print(f\"{grace.name} is not older than {pascal.name}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def older_than(person1: Person, person2: Person):\n    if person1.year_of_birth < person2.year_of_birth:\n        return True\n    else:\n        return False\n\nmuhammad = Person(\"Muhammad ibn Musa al-Khwarizmi\", 780)\npascal = Person(\"Blaise Pascal\", 1623)\ngrace = Person(\"Grace Hopper\", 1906)\n\nif older_than(muhammad, pascal):\n    print(f\"{muhammad.name} is older than {pascal.name}\")\nelse:\n    print(f\"{muhammad.name} is not older than {pascal.name}\")\n\nif older_than(grace, pascal):\n    print(f\"{grace.name} is older than {pascal.name}\")\nelse:\n    print(f\"{grace.name} is not older than {pascal.name}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "421e3d2599e6411b86e07648c2aee74a6fd214a5f5eca057cea6dbed512a4908",
+        "length_lines": 19
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0062",
+      "type": "sample_output",
+      "order": 62,
+      "source_hash": "62ea678999b6ada48ec13d0236b99806c4310dcf782eceb94b35b06d3863976d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Muhammad ibn Musa al-Khwarizmi is older than Blaise Pascal\nGrace Hopper is not older than Blaise Pascal"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Muhammad ibn Musa al-Khwarizmi is older than Blaise Pascal\nGrace Hopper is not older than Blaise Pascal"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nMuhammad ibn Musa al-Khwarizmi is older than Blaise Pascal\nGrace Hopper is not older than Blaise Pascal\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0063",
+      "type": "paragraph",
+      "order": 63,
+      "source_hash": "67b6aa745a5da8f319af09d6f1daf67fbcdf58a3bb59a71933fcefb698a28fa4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "One of the principles of object oriented programming is to include any functionality which handles objects of a certain type in the class definition, as methods. So instead of a function we could write a _method_ which allows us to compare the age of a Person object to _another_ Person object:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0064",
+      "type": "code",
+      "order": 64,
+      "source_hash": "b38c1f5c2e92fb32ba4e9ff2b0704eb093bf71e81d62f1e046c24ba39a92597d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Person:\n    def __init__(self, name: str, year_of_birth: int):\n        self.name = name\n        self.year_of_birth = year_of_birth\n\n    # NB: type hints must be enclosed in quotation marks if the parameter\n    # is of the same type as the class itself!\n    def older_than(self, another: \"Person\"):\n        if self.year_of_birth < another.year_of_birth:\n            return True\n        else:\n            return False"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Person:\n    def __init__(self, name: str, year_of_birth: int):\n        self.name = name\n        self.year_of_birth = year_of_birth\n\n    # NB: type hints must be enclosed in quotation marks if the parameter\n    # is of the same type as the class itself!\n    def older_than(self, another: \"Person\"):\n        if self.year_of_birth < another.year_of_birth:\n            return True\n        else:\n            return False"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b38c1f5c2e92fb32ba4e9ff2b0704eb093bf71e81d62f1e046c24ba39a92597d",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0065",
+      "type": "paragraph",
+      "order": 65,
+      "source_hash": "87244b091ee15e8c9aca24897e1343ebd535118834a7d62f7b336d9d69f1edfd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Here the object which the method is called on is referred to as `self`, while the other Person object is `another`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0066",
+      "type": "paragraph",
+      "order": 66,
+      "source_hash": "5e55c87ce942c79973861ed0633fcbe26fee24b54e2b8b4d0e2a76974bdf986d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Remember, calling a method differs from calling a function. A method is attached to an object with the dot notation:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0067",
+      "type": "code",
+      "order": 67,
+      "source_hash": "eb780ff8b39932269b50252a8f889b57b1ffcaf61196852f9c38e5687f4fda40",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "muhammad = Person(\"Muhammad ibn Musa al-Khwarizmi\", 780)\npascal = Person(\"Blaise Pascal\", 1623)\ngrace = Person(\"Grace Hopper\", 1906)\n\nif muhammad.older_than(pascal):\n    print(f\"{muhammad.name} is older than {pascal.name}\")\nelse:\n    print(f\"{muhammad.name} is not older than {pascal.name}\")\n\nif grace.older_than(pascal):\n    print(f\"{grace.name} is older than {pascal.name}\")\nelse:\n    print(f\"{grace.name} is not older than {pascal.name}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "muhammad = Person(\"Muhammad ibn Musa al-Khwarizmi\", 780)\npascal = Person(\"Blaise Pascal\", 1623)\ngrace = Person(\"Grace Hopper\", 1906)\n\nif muhammad.older_than(pascal):\n    print(f\"{muhammad.name} is older than {pascal.name}\")\nelse:\n    print(f\"{muhammad.name} is not older than {pascal.name}\")\n\nif grace.older_than(pascal):\n    print(f\"{grace.name} is older than {pascal.name}\")\nelse:\n    print(f\"{grace.name} is not older than {pascal.name}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "eb780ff8b39932269b50252a8f889b57b1ffcaf61196852f9c38e5687f4fda40",
+        "length_lines": 13
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0068",
+      "type": "paragraph",
+      "order": 68,
+      "source_hash": "6cf9a4cfe0ae58e7852609fa06a779cf2d545540f25beb40837850b96e4c6141",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "To the left of the dot is the object itself, which is referred to as `self` within the method definition. In parentheses is the argument to the method, which is the object referred to as `another`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0069",
+      "type": "paragraph",
+      "order": 69,
+      "source_hash": "139e2fd00da8f4f7d9acda236d2e0cd93ec266fae8968186331a0a7517bbbfe4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The printout from the program is exactly the same as with the function implementation above."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0070",
+      "type": "paragraph",
+      "order": 70,
+      "source_hash": "3ef63505e0026a51b809be0481ceb2ba72e8a134f3217dd443377e85d8b461f1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A rather cosmetic point to finish off: the `if...else` structure in the method `older_than` is by and large unneccessary. The value of the Boolean expression in the condition is already the exact same truth value which is returned. The method can thus be simplified:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0071",
+      "type": "code",
+      "order": 71,
+      "source_hash": "90c4ae8afcff2f690ac1f6fb7916ff774065278548eba44e4156bd5bddc2af86",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Person:\n    def __init__(self, name: str, year_of_birth: int):\n        self.name = name\n        self.year_of_birth = year_of_birth\n\n    # NB: type hints must be enclosed in quotation marks if the parameter \n    # is of the same type as the class itself!\n    def older_than(self, another: \"Person\"):\n        return self.year_of_birth < another.year_of_birth"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Person:\n    def __init__(self, name: str, year_of_birth: int):\n        self.name = name\n        self.year_of_birth = year_of_birth\n\n    # NB: type hints must be enclosed in quotation marks if the parameter \n    # is of the same type as the class itself!\n    def older_than(self, another: \"Person\"):\n        return self.year_of_birth < another.year_of_birth"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "90c4ae8afcff2f690ac1f6fb7916ff774065278548eba44e4156bd5bddc2af86",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0072",
+      "type": "paragraph",
+      "order": 72,
+      "source_hash": "b511e552049a1e97e39cffccbde029c759c8980000fed8740a9aa59629b76cdd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As stated in the comments in the examples above, if the parameter in a method definition is of the same type as the class itself, the type hint must be enclosed in quotation marks. Leaving the quotation marks out causes an error, which you will see if you try the following:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0073",
+      "type": "code",
+      "order": 73,
+      "source_hash": "256c39fa0c8e88ffdf27a0e984daaf06aa9d9e48ceb028bc626a3bb7341dcf83",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Person:\n    # ...\n\n    # this would cause an error, as Person must be enclosed in quotation marks\n    def older_than(self, another: Person):\n        return self.year_of_birth < another.year_of_birth:"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Person:\n    # ...\n\n    # this would cause an error, as Person must be enclosed in quotation marks\n    def older_than(self, another: Person):\n        return self.year_of_birth < another.year_of_birth:"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "256c39fa0c8e88ffdf27a0e984daaf06aa9d9e48ceb028bc626a3bb7341dcf83",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part09-1-objects-and-references-0074",
+      "type": "exercise",
+      "order": 74,
+      "source_hash": "27b2f820f1c7d4c2e7a83a8f24b4977a68f71c928be5102330986038ec6e0531",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The database of a real estate agency keeps records of available properties with objects defined by the following class:\n\n```python\nclass RealProperty:\n    def __init__(self, rooms: int, square_metres: int, price_per_sqm: int):\n        self.rooms = rooms\n        self.square_metres = square_metres\n        self.price_per_sqm = price_per_sqm\n```\n\nYour task is to implement methods which allow for comparison between available properties.\n\n## Is it bigger?\n\nPlease write a method named `bigger(self, compared_to)` which returns `True` if the `RealProperty` object itself is bigger than the one it is compared to.\n\nAn example of how the function should work:\n\n```python\ncentral_studio = RealProperty(1, 16, 5500)\ndowntown_two_bedroom = RealProperty(2, 38, 4200)\nsuburbs_three_bedroom = RealProperty(3, 78, 2500)\n\nprint(central_studio.bigger(downtown_two_bedroom))\nprint(suburbs_three_bedroom.bigger(downtown_two_bedroom))\n```\n\n<sample-output>\n\nFalse\nTrue\n\n</sample-output>\n\n## Price difference\n\nPlease write a method named `price_difference(self, compared_to)` which returns the difference in price between the `RealProperty` object itself and the one it is compared to. The price difference is the absolute value of the difference between the total prices of the two properties. The total price of a property is its price per square metre multiplied by the amount of square metres in the property.\n\nAn example of how the function should work:\n\n```python\ncentral_studio = RealProperty(1, 16, 5500)\ndowntown_two_bedroom = RealProperty(2, 38, 4200)\nsuburbs_three_bedroom = RealProperty(3, 78, 2500)\n\nprint(central_studio.price_difference(downtown_two_bedroom))\nprint(suburbs_three_bedroom.price_difference(downtown_two_bedroom))\n```\n\n<sample-output>\n\n71600\n35400\n\n</sample-output>\n\n## Is it more expensive?\n\nPlease write a method named `more_expensive(self, compared_to)` which returns `True` if the `RealProperty` object itself is more expensive that the one it is compared to.\n\nAn example of how the function should work:\n\n```python\ncentral_studio = RealProperty(1, 16, 5500)\ndowntown_two_bedroom = RealProperty(2, 38, 4200)\nsuburbs_three_bedroom = RealProperty(3, 78, 2500)\n\nprint(central_studio.more_expensive(downtown_two_bedroom))\nprint(suburbs_three_bedroom.more_expensive(downtown_two_bedroom))\n```\n\n<sample-output>\n\nFalse\nTrue\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part09-05_comparing_properties",
+        "exercise_type": "programming-exercise",
+        "name": "Comparing properties",
+        "tmc_name": "part09-05_comparing_properties",
+        "height": null
+      }
+    }
+  ]
+}

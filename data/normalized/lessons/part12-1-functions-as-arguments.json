@@ -1,0 +1,1222 @@
+{
+  "id": "part12-1-functions-as-arguments",
+  "part": 12,
+  "part_slug": "part-12",
+  "slug": "1-functions-as-arguments",
+  "is_part_index": false,
+  "title_original": "Functions as arguments",
+  "title_vi": "",
+  "path": "/part-12/1-functions-as-arguments",
+  "source_path": "data/part-12/1-functions-as-arguments.md",
+  "source_hash": "794b2f802417c1fa192ed5976604aa978ce6547ea73a9dea0eb46a2c4f3f7419",
+  "order": 1,
+  "blocks_count": 67,
+  "blocks": [
+    {
+      "id": "blk-part12-1-functions-as-arguments-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "506bd39d431e118347ee149fc8ee5f4498c49791e6833abe8a1454ba2b488246",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be able to sort lists according to different criteria\n- You will know what a lambda expression is\n- You will be able to use lambda expression with other Python functions\n- You will know how a function is passed as an argument to another function"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "bcdcb0e4984f430cade47941f8dcca529d25afd528a0f1af74683a4876f550af",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We are already familiar with the method `sort` and the function `sorted`, which are used to sort lists into their natural order. For numbers and strings this usually works just fine. For anything more complicated than that, however, what Python deems to be the natural order of items is not always what was intended by us as programmers."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "141336e540db6465f42baf26d4b25c9adc78e151564387580195a09fc1599024",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "For example, a list of tuples is, by default, sorted based on the first item of each tuple:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0004",
+      "type": "code",
+      "order": 4,
+      "source_hash": "17216ba1a0ccada94bf22d0c79766e22b31af85c94e8b80ce9b31460fbb168be",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "products = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\nproducts.sort()\n\nfor product in products:\n    print(product)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "products = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\nproducts.sort()\n\nfor product in products:\n    print(product)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "17216ba1a0ccada94bf22d0c79766e22b31af85c94e8b80ce9b31460fbb168be",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0005",
+      "type": "sample_output",
+      "order": 5,
+      "source_hash": "3ebbc8994d8c8bad908c2e253cbb1b77a6760272ded11af2144681951837b099",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "('apple', 3.95)\n('banana', 5.95)\n('orange', 4.5)\n('watermelon', 4.95)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "('apple', 3.95)\n('banana', 5.95)\n('orange', 4.5)\n('watermelon', 4.95)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n('apple', 3.95)\n('banana', 5.95)\n('orange', 4.5)\n('watermelon', 4.95)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "0424d5099be0efbe4c5f0f440a8b8bc05c8d3ff22d9c42bd323f35d63edf2407",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "But what if we wanted to sort the list based on the price?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0007",
+      "type": "heading",
+      "order": 7,
+      "source_hash": "ed59108c26df79279f632aba33a8b8f32fe9b07c54abac4e7a4d7aeb4f5696ed",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Functions as arguments"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "f2c77b2408c84c7ad886844ea8ac46a151d9a8e544080aa36a95f4293d402f41",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A sorting method or function usually accepts an optional second argument which allows you to bypass the default sorting criteria. This second argument is a function which defines how the value of each item on the list is determined. As the list is sorted, Python calls this function when it compares the items to each other."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "1171556ae18c0aeb4347954de1822efcd639b7dd555199b35fc8053ee4526cfe",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's take a look at an example:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0010",
+      "type": "code",
+      "order": 10,
+      "source_hash": "cd0f9f3d083a54fb61f4956ed7de93c192c9e7b3c6e2efd081944f9cb60c0788",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def order_by_price(item: tuple):\n    # Return the price, which is the second item within the tuple\n    return item[1]\n\nif __name__ == \"__main__\":\n    products = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\n    # Use the function order_by_price for sorting\n    products.sort(key=order_by_price)\n\n    for product in products:\n        print(product)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def order_by_price(item: tuple):\n    # Return the price, which is the second item within the tuple\n    return item[1]\n\nif __name__ == \"__main__\":\n    products = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\n    # Use the function order_by_price for sorting\n    products.sort(key=order_by_price)\n\n    for product in products:\n        print(product)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "cd0f9f3d083a54fb61f4956ed7de93c192c9e7b3c6e2efd081944f9cb60c0788",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0011",
+      "type": "sample_output",
+      "order": 11,
+      "source_hash": "7eeae16db8913030d2897ce678106f5f2d0c2976ea25d8cbdcf6876852991196",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "('apple', 3.95)\n('orange', 4.5)\n('watermelon', 4.95)\n('banana', 5.95)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "('apple', 3.95)\n('orange', 4.5)\n('watermelon', 4.95)\n('banana', 5.95)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n('apple', 3.95)\n('orange', 4.5)\n('watermelon', 4.95)\n('banana', 5.95)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "86ab68aa3bf23325c53fafe47db1f545f9cb96c86d5d0eb6af358a4d617df07c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Now the list is sorted based on the prices of the items, but what really happens in the program?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "f36102dfe520345572228f0532e7d39ee39c6639cd500b03255ea9dc12cc0686",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The function `order_by_price` is actually pretty simple. It takes one item as its argument and returns a value for that item. More specifically, it returns the second item in the tuple, which represents the price. But then we have this line of code, where the `sort` method is called:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "ef8c45463469ee46a5d7d1c00326dbbf88d0202b7d42e560fdec86a8654ebf7f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "`products.sort(key=order_by_price)`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "28bc0e72e2f4f5bb88a4f69a667f72223844dbe263b6fc7e79d1f73e5a974010",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Here the `sort` method is called with a function as its argument. This is not a reference to the return value of the function, but a reference to _the function itself_. The `sort` method calls this function multiple times, using each item on the list as the argument in turn."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "d5898ab39befaed60463a014f2f986ec4a2886725aae3133868db7d2b7ed88bc",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If we include an extra print statement in the function definition of `order_by_price`, we can verify that the function does indeed get called once per each item on the list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0017",
+      "type": "code",
+      "order": 17,
+      "source_hash": "017e04ee526ce915bd9e6bdee67476f2bb87c47192e3deb2923e376f4e170657",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def order_by_price(item: tuple):\n    # Print the item\n    print(f\"Function call: order_by_price({item})\")\n\n    # Return the price, which is the second item within the tuple\n    return item[1]\n\n\nproducts = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\n# Use the function order_by_price for sorting\nproducts.sort(key=order_by_price)\n\nfor product in products:\n    print(product)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def order_by_price(item: tuple):\n    # Print the item\n    print(f\"Function call: order_by_price({item})\")\n\n    # Return the price, which is the second item within the tuple\n    return item[1]\n\n\nproducts = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\n# Use the function order_by_price for sorting\nproducts.sort(key=order_by_price)\n\nfor product in products:\n    print(product)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "017e04ee526ce915bd9e6bdee67476f2bb87c47192e3deb2923e376f4e170657",
+        "length_lines": 15
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0018",
+      "type": "sample_output",
+      "order": 18,
+      "source_hash": "504b7a8838c2e6ba78328468ba2ac641c47e316d1901cb23f85e938516933c6d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Function call: order_by_price(('banana', 5.95))\nFunction call: order_by_price(('apple', 3.95))\nFunction call: order_by_price(('orange', 4.5))\nFunction call: order_by_price(('watermelon', 4.95))\n('apple', 3.95)\n('orange', 4.5)\n('watermelon', 4.95)\n('banana', 5.95)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Function call: order_by_price(('banana', 5.95))\nFunction call: order_by_price(('apple', 3.95))\nFunction call: order_by_price(('orange', 4.5))\nFunction call: order_by_price(('watermelon', 4.95))\n('apple', 3.95)\n('orange', 4.5)\n('watermelon', 4.95)\n('banana', 5.95)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nFunction call: order_by_price(('banana', 5.95))\nFunction call: order_by_price(('apple', 3.95))\nFunction call: order_by_price(('orange', 4.5))\nFunction call: order_by_price(('watermelon', 4.95))\n('apple', 3.95)\n('orange', 4.5)\n('watermelon', 4.95)\n('banana', 5.95)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "6e4920053251af7ec617618ac97b0766364d7686fa77c838e917494e286907be",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The order can be _reversed_ with another keyword argument; `reverse`, which is available with both the `sort` method and the `sorted` function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0020",
+      "type": "code",
+      "order": 20,
+      "source_hash": "e7a4bac371a2992f375f80deee9f14c8559803867fa24a54c9dfed95c7a49067",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "products.sort(key=order_by_price, reverse=True)\n\nt2 = sorted(products, key=order_by_price, reverse=True)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "products.sort(key=order_by_price, reverse=True)\n\nt2 = sorted(products, key=order_by_price, reverse=True)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e7a4bac371a2992f375f80deee9f14c8559803867fa24a54c9dfed95c7a49067",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0021",
+      "type": "heading",
+      "order": 21,
+      "source_hash": "e4e1cb8a70440e45c3f39b4f5c903a4630cbc418a162162c8eec82fd6ddf3918",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A function definition within a function definition"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "5b2ace562f820f95dcada1cca7e1344aad6e40d40a3248bc3a7495d3af0b0e48",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We could also include a named function for this new price-based sort functionality we created. Let's add a function named `sort_by_price`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0023",
+      "type": "code",
+      "order": 23,
+      "source_hash": "738e752063f91d85ea0bd01423370eaa3f2be3a854d8830cb42a05b3ec9a5742",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def order_by_price(item: tuple):\n    return item[1]\n\ndef sort_by_price(items: list):\n    # use the order_by_price function here\n    return sorted(items, key=order_by_price)\n\nproducts = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\nfor product in sort_by_price(products):\n    print(product)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def order_by_price(item: tuple):\n    return item[1]\n\ndef sort_by_price(items: list):\n    # use the order_by_price function here\n    return sorted(items, key=order_by_price)\n\nproducts = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\nfor product in sort_by_price(products):\n    print(product)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "738e752063f91d85ea0bd01423370eaa3f2be3a854d8830cb42a05b3ec9a5742",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "1b5ba505897567b854d010b8d1f78e3649b5446c1f2262a2204990c9bdf9134b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If we know that the helper function `order_by_price` is not used anywhere outside the `sort_by_price` function, we can place the former function definition within the latter function definition:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0025",
+      "type": "code",
+      "order": 25,
+      "source_hash": "abec59477005684fee366e28dc047f1891daed8111293b3b3ebcf89032049bf1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def sort_by_price(items: list):\n    # helper function defined within the function\n    def order_by_price(item: tuple):\n        return item[1]\n\n    return sorted(items, key=order_by_price)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def sort_by_price(items: list):\n    # helper function defined within the function\n    def order_by_price(item: tuple):\n        return item[1]\n\n    return sorted(items, key=order_by_price)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "abec59477005684fee366e28dc047f1891daed8111293b3b3ebcf89032049bf1",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0026",
+      "type": "exercise",
+      "order": 26,
+      "source_hash": "9bcdf4c733eabb2adba4aaecb6795a54d7b7a52000a171358c7e229451cd5d9f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `sort_by_remaining_stock(items: list)`. The function takes a list of tuples as its argument. The tuples consist of the name, price and remaining stock of a product. The function should return a new list, where the items are sorted according to the stock remaining, lowest value first. The original list should not be changed.\n\nThe function should work as follows:\n\n```python\nproducts = [(\"banana\", 5.95, 12), (\"apple\", 3.95, 3), (\"orange\", 4.50, 2), (\"watermelon\", 4.95, 22)]\n\nfor product in sort_by_remaining_stock(products):\n    print(f\"{product[0]} {product[2]} pcs\")\n```\n\n<sample-output>\norange 2 pcs\napple 3 pcs\nbanana 12 pcs\nwatermelon 22 pcs\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part12-01_remaining_stock",
+        "exercise_type": "programming-exercise",
+        "name": "Sort by remaining stock",
+        "tmc_name": "part12-01_remaining_stock",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0027",
+      "type": "exercise",
+      "order": 27,
+      "source_hash": "b52b0c6b42d58f841c23d82f265010cf4d204497a23641fc99137ec4f99c359f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `sort_by_seasons(items: list)` which takes a list of dictionaries as its argument. Each dictionary contains the information of a single TV show. The function should sort this list by the number of seasons each show has, in ascending order. The function should not change the original list, but return a new list instead.\n\nThe function should work as follows:\n\n```python\nshows = [{ \"name\": \"Dexter\", \"rating\" : 8.6, \"seasons\":9 }, { \"name\": \"Friends\", \"rating\" : 8.9, \"seasons\":10 },  { \"name\": \"Simpsons\", \"rating\" : 8.7, \"seasons\":32 }  ]\n\nfor show in sort_by_seasons(shows):\n    print(f\"{show['name']} {show['seasons']} seasons\")\n```\n\n<sample-output>\nDexter 9 seasons\nFriends 10 seasons\nSimpsons 32 seasons\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part12-02_seasons",
+        "exercise_type": "programming-exercise",
+        "name": "Sort by number of seasons",
+        "tmc_name": "part12-02_seasons",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0028",
+      "type": "exercise",
+      "order": 28,
+      "source_hash": "936d5c2c49884e0e40f0435766350769d15a264d13956cb1f274f603e48eb5f7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `sort_by_ratings(items: list)` which takes a list of dictionaries as its argument. The structure of the dictionaries is identical to the previous exercise. This function should sort the dictionaries in _descending order based on the shows' ratings_. The function should not change the original list, but return a new list instead.\n\n```python\nshows = [{ \"name\": \"Dexter\", \"rating\" : 8.6, \"seasons\":9 }, { \"name\": \"Friends\", \"rating\" : 8.9, \"seasons\":10 },  { \"name\": \"Simpsons\", \"rating\" : 8.7, \"seasons\":32 }  ]\n\nprint(\"Rating according to IMDB\")\nfor show in sort_by_ratings(shows):\n    print(f\"{show['name']}  {show['rating']}\")\n```\n\n<sample-output>\n\nRating according to IMDB\nFriends 8.9\nSimpsons 8.7\nDexter 8.6\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part12-03_ratings",
+        "exercise_type": "programming-exercise",
+        "name": "Sort by ratings",
+        "tmc_name": "part12-03_ratings",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0029",
+      "type": "heading",
+      "order": 29,
+      "source_hash": "b021192167bc8c2a7ad017f24d619b9b0183d4f55f419f40a69542e41552e9e7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Sorting collections of your own objects"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "b936d02d593dbd9e7147730313cdac0c430c6e3461ff92d073ec66d865a022b2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Using the same principle, let's write a program which sorts a list of objects from our own `Student` class in two different ways:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0031",
+      "type": "code",
+      "order": 31,
+      "source_hash": "a213c72e3c681665695eddf643ce532114282a98180b98bc4daefdee15875099",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Student:\n    \"\"\" The class models a single student \"\"\"\n    def __init__(self, name: str, id: str, credits: int):\n        self.name = name\n        self.id = id\n        self.credits = credits\n\n    def __str__(self):\n        return f\"{self.name} ({self.id}), {self.credits} cr.\"\n\n\ndef by_id(item: Student):\n    return item.id\n\ndef by_credits(item: Student):\n    return item.credits\n\n\nif __name__ == \"__main__\":\n    o1 = Student(\"Archie\", \"a123\", 220)\n    o2 = Student(\"Marvin\", \"m321\", 210)\n    o3 = Student(\"Anna\", \"a999\", 131)\n\n    students = [o1, o2, o3]\n\n    print(\"Sort by id:\")\n    for student in sorted(students, key=by_id):\n        print(student)\n\n    print()\n\n    print(\"Sort by credits:\")\n    for student in sorted(students, key=by_credits):\n        print(student)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Student:\n    \"\"\" The class models a single student \"\"\"\n    def __init__(self, name: str, id: str, credits: int):\n        self.name = name\n        self.id = id\n        self.credits = credits\n\n    def __str__(self):\n        return f\"{self.name} ({self.id}), {self.credits} cr.\"\n\n\ndef by_id(item: Student):\n    return item.id\n\ndef by_credits(item: Student):\n    return item.credits\n\n\nif __name__ == \"__main__\":\n    o1 = Student(\"Archie\", \"a123\", 220)\n    o2 = Student(\"Marvin\", \"m321\", 210)\n    o3 = Student(\"Anna\", \"a999\", 131)\n\n    students = [o1, o2, o3]\n\n    print(\"Sort by id:\")\n    for student in sorted(students, key=by_id):\n        print(student)\n\n    print()\n\n    print(\"Sort by credits:\")\n    for student in sorted(students, key=by_credits):\n        print(student)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a213c72e3c681665695eddf643ce532114282a98180b98bc4daefdee15875099",
+        "length_lines": 34
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0032",
+      "type": "sample_output",
+      "order": 32,
+      "source_hash": "166c2a14e7480fc77224b53d15ac582b38ec788e6afbe34ed49ae6bc6e0ffcbe",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Sort by id:\nArchie (a123), 220 cr.\nAnna (a999), 131 cr.\nMarvin (m321), 210 cr.\n\nSort by credits:\nAnna (a999), 131 cr.\nMarvin (m321), 210 cr.\nArchie (a123), 220 cr."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Sort by id:\nArchie (a123), 220 cr.\nAnna (a999), 131 cr.\nMarvin (m321), 210 cr.\n\nSort by credits:\nAnna (a999), 131 cr.\nMarvin (m321), 210 cr.\nArchie (a123), 220 cr."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nSort by id:\nArchie (a123), 220 cr.\nAnna (a999), 131 cr.\nMarvin (m321), 210 cr.\n\nSort by credits:\nAnna (a999), 131 cr.\nMarvin (m321), 210 cr.\nArchie (a123), 220 cr.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "30741e96f6d73749f6e61e26f81e9bdbcfd1b038506182ef3d88d307aa7b15ce",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As you can see above, sorting by different criteria works exactly as intended. If the functions `by_id` and `by_credits` are not needed elsewhere, there are ways of making the implementation simpler. We will return to this topic after these exercises."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0034",
+      "type": "exercise",
+      "order": 34,
+      "source_hash": "3eb2894e13d515432c070d870b03d59058ea44fd83aceb8ac1037666ff2ea732",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains the class definition for a `ClimbingRoute`. It works as follows:\n\n```python\nroute1 = ClimbingRoute(\"Edge\", 38, \"6A+\")\nroute2 = ClimbingRoute(\"Smooth operator\", 11, \"7A\")\nroute3 = ClimbingRoute(\"Synchro\", 14, \"8C+\")\n\n\nprint(route1)\nprint(route2)\nprint(route3.name, route3.length, route3.grade)\n```\n\n<sample-output>\n\nEdge, length 38 metres, grade 6A+\nSmooth operator, length 11 metres, grade 7A\nSynchro 14 8C+\n\n</sample-output>\n\n## Sort by length\n\nPlease write a function named `sort_by_length(routes: list)` which returns a new list of routes, sorted by length from longest to shortest.\n\nThe function should work as follows:\n\n```python\nr1 = ClimbingRoute(\"Edge\", 38, \"6A+\")\nr2 = ClimbingRoute(\"Smooth operator\", 11, \"7A\")\nr3 = ClimbingRoute(\"Synchro\", 14, \"8C+\")\nr4 = ClimbingRoute(\"Small steps\", 12, \"6A+\")\n\nroutes = [r1, r2, r3, r4]\n\nfor route in sort_by_length(routes):\n    print(route)\n```\n\n<sample-output>\n\nEdge, length 38 metres, grade 6A+\nSynchro, length 14 metres, grade 8C+\nSmall steps, length 12 metres, grade 6A+\nSmooth operator, length 11 metres, grade 7A\n\n</sample-output>\n\n## Sort by difficulty\n\nPlease write a function named `sort_by_difficulty(routes: list)` which returns a new list of routes, sorted by difficulty, i.e. grade, from hardest to easiest. For routes with the same grade, the longer one is more difficult. The scale of climbing route grades is _4, 4+, 5, 5+, 6A, 6A+, ..._, which in practice works out as the alphabetical order for strings.\n\nThe function should work as follows:\n\n```python\nr1 = ClimbingRoute(\"Edge\", 38, \"6A+\")\nr2 = ClimbingRoute(\"Smooth operator\", 11, \"7A\")\nr3 = ClimbingRoute(\"Synchro\", 14, \"8C+\")\nr4 = ClimbingRoute(\"Small steps\", 12, \"6A+\")\n\nroutes = [r1, r2, r3, r4]\nfor route in sort_by_difficulty(routes):\n    print(route)\n```\n\n<sample-output>\n\nSynchro, length 14 metres, grade 8C+\nSmooth operator, length 11 metres, grade 7A\nEdge, length 38 metres, grade 6A+\nSmall steps, length 12 metres, grade 6A+\n\n</sample-output>\n\n**Hint:** if the order is based on a list or a tuple, by default Python sorts the items first based on the first item, next based on the second item, and so forth:\n\n```python\nmy_list = [(\"a\", 4),(\"a\", 2),(\"b\", 30), (\"b\", 0) ]\nprint(sorted(my_list))\n```\n\n<sample-output>\n\n[('a', 2), ('a', 4), ('b', 0), ('b', 30)]\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part12-04_climbing_route",
+        "exercise_type": "programming-exercise",
+        "name": "ClimbingRoute",
+        "tmc_name": "part12-04_climbing_route",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0035",
+      "type": "exercise",
+      "order": 35,
+      "source_hash": "dc50e35184c7ab9a6247a3e04d17778504fa123be426d11de9a6ca37e8f186f3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In addition to the `ClimbingRoute` from the previous exercise, the exercise template contains the class definition for a `ClimbingArea`.\n\n```python\nca1 = ClimbingArea(\"Olhava\")\nca1.add_route(ClimbingRoute(\"Edge\", 38, \"6A+\"))\nca1.add_route(ClimbingRoute(\"Great cut\", 36, \"6B\"))\nca1.add_route(ClimbingRoute(\"Swedish route\", 42, \"5+\"))\n\nca2 = ClimbingArea(\"Nummi\")\nca2.add_route(ClimbingRoute(\"Synchro\", 14, \"8C+\"))\n\nca3 = ClimbingArea(\"Nalkkila slab\")\nca3.add_route(ClimbingRoute(\"Small steps\", 12, \"6A+\"))\nca3.add_route(ClimbingRoute(\"Smooth operator\", 11, \"7A\"))\nca3.add_route(ClimbingRoute(\"Piggy not likey\", 12 , \"6B+\"))\nca3.add_route(ClimbingRoute(\"Orchard\", 8, \"6A\"))\n\nprint(ca1)\nprint(ca3.name, ca3.routes())\nprint(ca3.hardest_route())\n```\n\n<sample-output>\n\nOlhava, 3 routes, hardest 6B\nNalkkila slab 4\nSmooth operator, length 9 metres, grade 7A\n\n</sample-output>\n\n## Sort by number of routes\n\nPlease write a function named `sort_by_number_of_routes` which sorts climbing areas in ascending order based on the number of routes they each have.\n\n```python\n# ca1, ca2 and ca3 declared as above\nareas = [ca1, ca2, ca3]\nfor area in sort_by_number_of_routes(areas):\n    print(area)\n\n```\n\n<sample-output>\n\nNummi, 1 routes, hardest 8C+\nOlhava, 3 routes, hardest 6B\nNalkkila slab, 4 routes, hardest 7A\n\n</sample-output>\n\n## Sort by the most difficult route\n\nPlease write a function named `sort_by_most_difficult` which sorts climbing areas in _descending_ order based on the most difficult route in each area.\n\n```python\n# ca1, ca2 and ca3 declared as above\nareas = [ca1, ca2, ca3]\nfor area in sort_by_most_difficult(areas):\n    print(area)\n```\n\n<sample-output>\n\nNummi, 1 routes, hardest 8C+\nNalkkila slab, 4 routes, hardest 7A\nOlhava, 3 routes, hardest 6B\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part12-05_climbing_areas",
+        "exercise_type": "programming-exercise",
+        "name": "Climbing areas",
+        "tmc_name": "part12-05_climbing_areas",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0036",
+      "type": "heading",
+      "order": 36,
+      "source_hash": "20c0228c0b5c5c5c31977f64cb3bf52c78111851f3f6f299b3d2ee1907cf8833",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Lambda expressions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "7444de458abd5c6872e8f27bc10f37c76cd58e0117df6c36666a5dbb07f986d6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We have mostly worked with functions from the viewpoint of modularity. It is true that functions play an important role in managing the complexity of your programs and avoiding code repetition. Functions are usually written so that they can be used many times."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "eefee20893acd62ec8d4a8181648886cb9d16b3870c1ffa724d3044d55b0c8a5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "But sometimes you need something resembling a function that you will use just once. Lambda expressions allow you to create small, anonymous functions which are created (and discarded) as they are needed in the code. The general syntax is as follows:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "7496a22949273ef97ec4a21215015c2af7c8706d2191cd6c29b824512965062e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "`lambda <parameters> : <expression>`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "77b4cc902eff7a28083f07a2a383e4d1eb3242a52f31026e6c9108bb3e64f4ae",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Sorting a list of tuples by the second item in each tuple would look like this implemented with a lambda expression:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0041",
+      "type": "code",
+      "order": 41,
+      "source_hash": "8322c11c71c355929d6088a8c5f9ed5765740df01febf5c460d4f1429a4b7771",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "products = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\n# Function is created \"on the fly\" with a lambda expression:\nproducts.sort(key=lambda item: item[1])\n\nfor product in products:\n    print(product)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "products = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\n# Function is created \"on the fly\" with a lambda expression:\nproducts.sort(key=lambda item: item[1])\n\nfor product in products:\n    print(product)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8322c11c71c355929d6088a8c5f9ed5765740df01febf5c460d4f1429a4b7771",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0042",
+      "type": "sample_output",
+      "order": 42,
+      "source_hash": "7eeae16db8913030d2897ce678106f5f2d0c2976ea25d8cbdcf6876852991196",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "('apple', 3.95)\n('orange', 4.5)\n('watermelon', 4.95)\n('banana', 5.95)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "('apple', 3.95)\n('orange', 4.5)\n('watermelon', 4.95)\n('banana', 5.95)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n('apple', 3.95)\n('orange', 4.5)\n('watermelon', 4.95)\n('banana', 5.95)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0043",
+      "type": "paragraph",
+      "order": 43,
+      "source_hash": "47c02529e960a62496e141a0ed6c082d6903ca78901bfd22e9152b782997fa56",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The expression"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "87fb3584ecefd81c308ce357c42616de313495a06c6b51fc12746f58e897ba00",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "`lambda item: item[1]`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0045",
+      "type": "paragraph",
+      "order": 45,
+      "source_hash": "e032d87d9b9135504e9a7dd17d982c0668a4561cdc731b372b1a94fca6965ba7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "is equivalent to the function definition"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0046",
+      "type": "code",
+      "order": 46,
+      "source_hash": "bae6132056e8122c54cc96db10c3a9fe669a9ef9e924339f722d312a96bb7fea",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def price(item):\n    return item[1]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def price(item):\n    return item[1]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "bae6132056e8122c54cc96db10c3a9fe669a9ef9e924339f722d312a96bb7fea",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0047",
+      "type": "paragraph",
+      "order": 47,
+      "source_hash": "f453dd9c502704b126682360485673921b3fcc02681752e380586a0217862027",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "except for the fact that a lambda function doesn't have a name. This is why lambda functions are called anonymous functions."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0048",
+      "type": "paragraph",
+      "order": 48,
+      "source_hash": "6d8006d673df38aeee77fab771e41cca72d4ce6e1981c393efe3642219172964",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In every other respect a lambda function is no different from any other function, and they can be used in all the same contexts as any equivalent named function. For example, the following program sorts a list of strings alphabetically by the _last_ character in each string:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0049",
+      "type": "code",
+      "order": 49,
+      "source_hash": "f222ede17b6f27622cf3c433d2e79fae0cc883a99ee32442e8c8404d0ab39c68",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "strings = [\"Mickey\", \"Mack\", \"Marvin\", \"Minnie\", \"Merl\"]\n\nfor word in sorted(strings, key=lambda word: word[-1]):\n    print(word)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "strings = [\"Mickey\", \"Mack\", \"Marvin\", \"Minnie\", \"Merl\"]\n\nfor word in sorted(strings, key=lambda word: word[-1]):\n    print(word)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f222ede17b6f27622cf3c433d2e79fae0cc883a99ee32442e8c8404d0ab39c68",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0050",
+      "type": "sample_output",
+      "order": 50,
+      "source_hash": "cd306733cf471ded11c202ed5636154276372f140f5d2f5f87d3cf73a911be6d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Minnie\nMack\nMerl\nMarvin\nMickey"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Minnie\nMack\nMerl\nMarvin\nMickey"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nMinnie\nMack\nMerl\nMarvin\nMickey\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0051",
+      "type": "paragraph",
+      "order": 51,
+      "source_hash": "6e9354c6229e25da3039b411b694d878c5dde459db35d1d334115ab4fd400aa8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We can also combine list comprehensions, the `join` method and lambda expressions. For example, we could sort strings based on just the vowels in them, ignoring all other characters:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0052",
+      "type": "code",
+      "order": 52,
+      "source_hash": "39c1b6f545018519609f6e6116ba770bae15cf877e8ae5a8ac25758e2303aea6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "strings = [\"Mickey\", \"Mack\", \"Marvin\", \"Minnie\", \"Merl\"]\n\nfor word in sorted(strings, key=lambda word: \"\".join([c for c in word if c in \"aeiou\"])):\n    print(word)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "strings = [\"Mickey\", \"Mack\", \"Marvin\", \"Minnie\", \"Merl\"]\n\nfor word in sorted(strings, key=lambda word: \"\".join([c for c in word if c in \"aeiou\"])):\n    print(word)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "39c1b6f545018519609f6e6116ba770bae15cf877e8ae5a8ac25758e2303aea6",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0053",
+      "type": "sample_output",
+      "order": 53,
+      "source_hash": "55d2710a51aa737b8af08047ce844068d4b54b1c8e4dba7e757a1822340934a1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Mack\nMarvin\nMerl\nMickey\nMinnie"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Mack\nMarvin\nMerl\nMickey\nMinnie"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nMack\nMarvin\nMerl\nMickey\nMinnie\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0054",
+      "type": "paragraph",
+      "order": 54,
+      "source_hash": "0bec7969e703dcd272d3f1c50411c5c878a04ca7a27f6647249756b4348d2ca1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Anonymous functions can also be used with other built in Python functions, not just those used for sorting. For example, the `min` and `max` functions also take a keyword argument named `key`. It is used as the criteria for comparing the items when selecting the minimum or maximum value."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0055",
+      "type": "paragraph",
+      "order": 55,
+      "source_hash": "a440fed176b5cdb9b6ecffa46770762780ac75f2316420649d7760d7a4895e97",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the following example we are dealing with audio recordings. First we select the oldest recording, and then the longest:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0056",
+      "type": "code",
+      "order": 56,
+      "source_hash": "a44274f84216f9f0b9b305162d6d1bb4d9683f599b295a51b751fd91f6277f60",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\nclass Recording:\n    \"\"\" The class models a single audio recording \"\"\"\n    def __init__(self, name: str, performer: str, year: int, runtime: int):\n        self.name = name\n        self.performer = performer\n        self.year = year\n        self.runtime = runtime\n\n\n    def __str__(self):\n        return f\"{self.name} ({self.performer}), {self.year}. {self.runtime} min.\"\n\nif __name__ == \"__main__\":\n    r1 = Recording(\"Nevermind\", \"Nirvana\", 1991, 43)\n    r2 = Recording(\"Let It Be\", \"Beatles\", 1969, 35)\n    r3 = Recording(\"Joshua Tree\", \"U2\", 1986, 50)\n\n    recordings = [r1, r2, r3]\n\n\n    print(\"The oldest recording:\")\n    print(min(recordings, key=lambda rec: rec.year))\n\n    print(\"The longest recording:\")\n    print(max(recordings, key=lambda rec: rec.runtime))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "\nclass Recording:\n    \"\"\" The class models a single audio recording \"\"\"\n    def __init__(self, name: str, performer: str, year: int, runtime: int):\n        self.name = name\n        self.performer = performer\n        self.year = year\n        self.runtime = runtime\n\n\n    def __str__(self):\n        return f\"{self.name} ({self.performer}), {self.year}. {self.runtime} min.\"\n\nif __name__ == \"__main__\":\n    r1 = Recording(\"Nevermind\", \"Nirvana\", 1991, 43)\n    r2 = Recording(\"Let It Be\", \"Beatles\", 1969, 35)\n    r3 = Recording(\"Joshua Tree\", \"U2\", 1986, 50)\n\n    recordings = [r1, r2, r3]\n\n\n    print(\"The oldest recording:\")\n    print(min(recordings, key=lambda rec: rec.year))\n\n    print(\"The longest recording:\")\n    print(max(recordings, key=lambda rec: rec.runtime))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a44274f84216f9f0b9b305162d6d1bb4d9683f599b295a51b751fd91f6277f60",
+        "length_lines": 26
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0057",
+      "type": "sample_output",
+      "order": 57,
+      "source_hash": "30660b8c4e4a77d74c5a9028958088913125f71205da9b0b11dc5a0df2d8949b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The oldest recording:\nLet It Be (Beatles), 1969. 35 min.\nThe longest recording:\nU2 (Joshua Tree), 1986. 50 min."
+      },
+      "translation": {
+        "language": "text",
+        "content": "The oldest recording:\nLet It Be (Beatles), 1969. 35 min.\nThe longest recording:\nU2 (Joshua Tree), 1986. 50 min."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe oldest recording:\nLet It Be (Beatles), 1969. 35 min.\nThe longest recording:\nU2 (Joshua Tree), 1986. 50 min.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0058",
+      "type": "exercise",
+      "order": 58,
+      "source_hash": "88629567abcd511f89834793211ce161f44fbb45cd3c6f3c79ffa25598db4c34",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains the definition for a class named `BallPlayer`. It has the following public attributes:\n\n* name\n* shirt number `number`\n* scored goals `goals`\n* assists completed `assists`\n* minutes played `minutes`\n\nPlease implement the following functions. NB: each function has a different type of return value.\n\n## Most goals\n\nPlease write a function named `most_goals` which takes a list of ball players as its argument.\n\nThe function should return the name of the player who scored the most goals, in string format.\n\n## Most points\n\nPlease write a function named `most_points`, which takes a list of ball players as its argument.\n\nThe function should return a tuple containing the name and shirt number of the player who has scored the most points. The total number of points is the number of goals and the number of assists combined.\n\n## Least minutes\n\nPlease write a function named `least_minutes`, which takes a list of ball players as its argument.\n\nThe function should return the `BallPlayer` object which has the smallest value of minutes played.\n\nYou can test your functions with the following program:\n\n```python\nif __name__ == \"__main__\":\n    player1 = BallPlayer(\"Archie Bonkers\", 13, 5, 12, 46)\n    player2 = BallPlayer(\"Speedy Tickets\", 7, 2, 26, 55)\n    player3 = BallPlayer(\"Cruella De Hill\", 9, 1, 32, 26)\n    player4 = BallPlayer(\"Devilled Tasmanian\", 12, 1, 11, 41)\n    player5 = BallPlayer(\"Donald Quack\", 4, 3, 9, 12)\n    \n    team = [player1, player2, player3, player4, player5]\n    print(most_goals(team))\n    print(most_points(team))\n    print(least_minutes(team))\n```\n\nThis should print out:\n\n<sample-output>\n\nArchie Bonkers\n('Cruella De Hill', 9)\nBallPlayer(name=Donald Quack, number=4, goals=3, passes=9, minutes=12)\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part12-06_ballplayers",
+        "exercise_type": "programming-exercise",
+        "name": "BallPlayers",
+        "tmc_name": "part12-06_ballplayers",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0059",
+      "type": "heading",
+      "order": 59,
+      "source_hash": "a4d4a85e3562c27b3f9d87b83c84c63010380eb828a25e4c76c33a6d24c90461",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Functions as arguments within your own functions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0060",
+      "type": "paragraph",
+      "order": 60,
+      "source_hash": "bb643429d9f2c3ac2938915e95a7ca197aee123570061d0404943c82bf241af7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We established above that it is possible to pass a reference to a function as an argument to another function. To wrap this section up, let's write our very own function which takes a function as its argument."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0061",
+      "type": "code",
+      "order": 61,
+      "source_hash": "17a4c8fc2155812677b1a147c524ef9b145029ee6da48f722454c9f1b3f4f8cd",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# the type hint \"callable\" refers to a function\ndef perform_operation(operation: callable):\n    # Call the function which was passed as an argument\n    return operation(10, 5)\n\ndef my_sum(a: int, b: int):\n    return a + b\n\ndef my_product(a: int, b: int):\n    return a * b\n\n\nif __name__ == \"__main__\":\n    print(perform_operation(my_sum))\n    print(perform_operation(my_product))\n    print(perform_operation(lambda x,y: x - y))\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# the type hint \"callable\" refers to a function\ndef perform_operation(operation: callable):\n    # Call the function which was passed as an argument\n    return operation(10, 5)\n\ndef my_sum(a: int, b: int):\n    return a + b\n\ndef my_product(a: int, b: int):\n    return a * b\n\n\nif __name__ == \"__main__\":\n    print(perform_operation(my_sum))\n    print(perform_operation(my_product))\n    print(perform_operation(lambda x,y: x - y))\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "17a4c8fc2155812677b1a147c524ef9b145029ee6da48f722454c9f1b3f4f8cd",
+        "length_lines": 16
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0062",
+      "type": "sample_output",
+      "order": 62,
+      "source_hash": "cca5272979df7160e545ce9179c532e7b359a3d554dcb73cc7e10d04e4bd9ea2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "15\n50\n5"
+      },
+      "translation": {
+        "language": "text",
+        "content": "15\n50\n5"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n15\n50\n5\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0063",
+      "type": "paragraph",
+      "order": 63,
+      "source_hash": "0d4085c48793f196f5bb5390d03c551d97ce382c993356399df05daa1ed73616",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The value returned by the function `perform_operation` depends on which function was passed as an argument. Any function which accepts two arguments would do, no matter whether it is anonymous or named."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0064",
+      "type": "paragraph",
+      "order": 64,
+      "source_hash": "0a52ea65a5b3d737f5dfec39db897c67e27d99a32c575083a86217edb0024686",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Passing references to functions as arguments to other functions might not be something you will end up doing on a daily basis in your programming career, but it can be a useful technique. This following program selects some lines from one file and writes them to another file. The way the lines are selected is determined by a function which returns `True` only if the lines should be copied:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0065",
+      "type": "code",
+      "order": 65,
+      "source_hash": "06332aecd6fd5cf63702fbb09bce807f76e9085e56304cf9dbf26c24687503ea",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def copy_lines(source_file: str, target_file: str, criterion= lambda x: True):\n    with open(source_file) as source, open(target_file, \"w\") as target:\n        for line in source:\n            # Remove any whitespace from beginning and end of line\n            line = line.strip()\n\n            if criterion(line):\n                target.write(line + \"\\n\")\n\n# Some examples\nif __name__ == \"__main__\":\n    # If the third parameter is not given, copy all lines\n    copy_lines(\"first.txt\", \"second.txt\")\n\n    # Copy all non-empty lines\n    copy_lines(\"first.txt\", \"second.txt\", lambda line: len(line) > 0)\n\n    # Copy all lines which contain the word \"Python\"\n    copy_lines(\"first.txt\", \"second.txt\", lambda line: \"Python\" in line)\n\n    # Copy all lines which do not end in a full stop\n    copy_lines(\"first.txt\", \"second.txt\", lambda line: line[-1] != \".\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def copy_lines(source_file: str, target_file: str, criterion= lambda x: True):\n    with open(source_file) as source, open(target_file, \"w\") as target:\n        for line in source:\n            # Remove any whitespace from beginning and end of line\n            line = line.strip()\n\n            if criterion(line):\n                target.write(line + \"\\n\")\n\n# Some examples\nif __name__ == \"__main__\":\n    # If the third parameter is not given, copy all lines\n    copy_lines(\"first.txt\", \"second.txt\")\n\n    # Copy all non-empty lines\n    copy_lines(\"first.txt\", \"second.txt\", lambda line: len(line) > 0)\n\n    # Copy all lines which contain the word \"Python\"\n    copy_lines(\"first.txt\", \"second.txt\", lambda line: \"Python\" in line)\n\n    # Copy all lines which do not end in a full stop\n    copy_lines(\"first.txt\", \"second.txt\", lambda line: line[-1] != \".\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "06332aecd6fd5cf63702fbb09bce807f76e9085e56304cf9dbf26c24687503ea",
+        "length_lines": 22
+      }
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0066",
+      "type": "paragraph",
+      "order": 66,
+      "source_hash": "a8087c0ff16943c3256c1493fc98956af92dca79f36ddc527388034e84397ccc",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The function definition contains a default value for the keyword parameter `criterion`: `lambda x: True`. This anonymous function always returns `True` regardless of the input. So, the default behaviour is to copy all lines. As usual, if a value is given for a parameter with a default value, the new value replaces the default value."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-1-functions-as-arguments-0067",
+      "type": "exercise",
+      "order": 67,
+      "source_hash": "a31990d4cb29f74beb9b14f964e7b4f28f7131b09b10acab803c766a1fd52474",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This exercise deals with products which are stored in tuples. The examples all assume a variable named `products`, which is assigned the following value:\n\n```python\nproducts = [(\"banana\", 5.95, 12), (\"apple\", 3.95, 3), (\"orange\", 4.50, 2), (\"watermelon\", 4.95, 22), (\"kale\", 0.99, 1)]\n```\n\nEach tuple contains three items: name, price and amount.\n\nPlease write a function named `search(products: list, criterion: callable)`. The second argument to the function is a function itself, and it should be able to process a tuple as defined above, and return a Boolean value. The search function should return a new list containing those tuples from the original which fulfil the criterion.\n\nIf we wanted to include only products whose price was under 4 euros, we could use the following criterion function:\n\n```python\ndef price_under_4_euros(product):\n    return product[1] < 4\n```\n\nThe function returns `True` if the second item in the tuple is less than four in value.\n\nAn example of the `search` function in use:\n\n```python\nfor product in search(products, price_under_4_euros):\n    print(product)\n```\n\n<sample-output>\n\n('apple', 3.95, 3)\n('kale', 0.99, 1)\n\n</sample-output>\n\nThe criterion function can also be a lambda function. If we wanted to search for only those products whose amount was at least 11, we could write the following:\n\n```python\nfor product in search(products, lambda t: t[2]>10):\n    print(product)\n```\n\n<sample-output>\n\n('banana', 5.95, 12)\n('watermelon', 4.95, 22)\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part12-07_product_search",
+        "exercise_type": "programming-exercise",
+        "name": "Product search",
+        "tmc_name": "part12-07_product_search",
+        "height": null
+      }
+    }
+  ]
+}

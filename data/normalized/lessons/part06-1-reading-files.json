@@ -1,0 +1,2031 @@
+{
+  "id": "part06-1-reading-files",
+  "part": 6,
+  "part_slug": "part-6",
+  "slug": "1-reading-files",
+  "is_part_index": false,
+  "title_original": "Reading files",
+  "title_vi": "",
+  "path": "/part-6/1-reading-files",
+  "source_path": "data/part-6/1-reading-files.md",
+  "source_hash": "5014299636c3edc646085d6127f6b43d9d7185a5bf9ae001ccabbac264e3ecdb",
+  "order": 1,
+  "blocks_count": 112,
+  "blocks": [
+    {
+      "id": "blk-part06-1-reading-files-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "e00bd076d32a87b911db6598bcd8669c397668c1ceb1fc60e91382f35c5e29ae",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know how to read the contents of files with Python\n- You will know what a text file and a CSV file are\n- You will be able to process the contents of a CSV file in your programs"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "ff4331630b07fc4e385ca6782e0294a3e8e66bc95990131ed7c224e5bc5e406f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!--the same text is in sections 3-1, 5-1 and 6-1, check them all if you're changing this-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0003",
+      "type": "text_box",
+      "order": 3,
+      "source_hash": "0b66c1030fa3f5d41e87182aeeb9f53489c8341f9e3cf8490b8a76c61bbdb34f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Becoming a proficient programmer requires a lot of practice, sometimes even quite mechanical practice. It also involves developing problem solving skills and applying intuition. This is why there are a lot of exercises of different kinds on this course. Some of them ask you to quite straightforwardly apply what you have learnt in the material, but some of them are intentionally more challenging and open-ended.\n\nSome of the exercises might at first seem overwhelming, but this is nothing to worry about. None of the exercises is strictly mandatory, and in fact _only 25 % of the points in each part is required to pass the course._ You can find more details about passing the course on the [page on grading](/grading-and-exams).\n\n**The exercises are not in any specific order of difficulty.** Each section usually introduces some new programming concepts, and these are then practised with both simpler and more complicated exercises. **If you come across an exercise that feels too difficult, move on to the next one.** You can always come back to the more difficult exercises if you have time later.\n\nWhen the going inevitably gets tough, a word of consolation: a task that seems impossibly difficult this week will likely feel rather easy in about four weeks' time."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "hint",
+        "name_original": "About the exercises on this course",
+        "name_vi": "",
+        "attributes": {
+          "variant": "hint",
+          "name": "About the exercises on this course"
+        }
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "e6f50002679bd5ce9e3b9d5e00cabac7e7ee8f5caebb4d8a31252bef5b197d13",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A very common use case for programming is handling data stored in files. Programs can read data from files and write the computed results to files. Even large amounts of data become easy to process automatically when files are used."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "49dbe40e0d4ab2b0a7f2697113a931a0a78942c5dcacff3b033c20311682e343",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "On this course we only deal with _text files_. All the files used will consist of lines of text. As an example, the Visual Studio Code editor we use on this course works with text files. NB: even though word processors such as Microsoft Word are usually used with files that contain text, Word documents themselves aren't text files. They also contain formatting information, and are encoded in a way that makes handling them in a program more complicated."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0006",
+      "type": "heading",
+      "order": 6,
+      "source_hash": "e1383df71797a953ca2044b7f10b6696d05d746ed23d8ae20cf34b20b856aaae",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Reading data from a file"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "f217f3270cf73ecc6ae5b79d203bb5eb565677ecd2c48b86ec4cedad32dd0085",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's first work with a file called `example.txt`, with the following contents:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0008",
+      "type": "sample_data",
+      "order": 8,
+      "source_hash": "8f7c848df00de6d8cde739d1dc446cefcda336e68f490cc1b735484761130ad5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hello there!\nThis example file contains three lines of text.\nThis is the last line."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hello there!\nThis example file contains three lines of text.\nThis is the last line."
+      },
+      "metadata": {
+        "raw_source": "<sample-data>\n\nHello there!\nThis example file contains three lines of text.\nThis is the last line.\n\n</sample-data>"
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "9349f3dfb2092be3faf123faee58401e8f94fdcecf8d041d4f912423055aab27",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A simple way to include files in a Python program is to use the `with` statement. The header line opens the file, and the block where the file can be accessed follows. After the block the file is automatically closed, and can no longer be accessed."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "4da978f177260096c4e8f8bef487cd1358111a52407ae2fa037dae0e6f26d40a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "So, the following code opens the file, reads the contents, prints them out, and then closes the file:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0011",
+      "type": "code",
+      "order": 11,
+      "source_hash": "3eea03a740f79f0175c76bcc300d982abe966d4fdfd14658d8212ebf54bca1b8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "with open(\"example.txt\") as new_file:\n    contents = new_file.read()\n    print(contents)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "with open(\"example.txt\") as new_file:\n    contents = new_file.read()\n    print(contents)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3eea03a740f79f0175c76bcc300d982abe966d4fdfd14658d8212ebf54bca1b8",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0012",
+      "type": "sample_output",
+      "order": 12,
+      "source_hash": "8f7c848df00de6d8cde739d1dc446cefcda336e68f490cc1b735484761130ad5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hello there!\nThis example file contains three lines of text.\nThis is the last line."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hello there!\nThis example file contains three lines of text.\nThis is the last line."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHello there!\nThis example file contains three lines of text.\nThis is the last line.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "011d01a6beffabfda9015a2bd2e2cd5e50e2e3899accb7f2c166828157dc0480",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The variable `new_file` above is a _file handle_. Through it the file can accessed while it is still open. Here we used the method `read`, which returns the contents of the file as a single string. So, in this case the string returned by `read` would be"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "f4863fce60b286ad12933c4ef821d8d833ed757f9957ce6d13269232eb92d018",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\"Hello there!\\nThis example file contains three lines of text.\\nThis is the last line.\""
+      },
+      "translation": {
+        "language": "code",
+        "content": "\"Hello there!\\nThis example file contains three lines of text.\\nThis is the last line.\""
+      },
+      "metadata": {
+        "language": "",
+        "code_hash": "f4863fce60b286ad12933c4ef821d8d833ed757f9957ce6d13269232eb92d018",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0015",
+      "type": "heading",
+      "order": 15,
+      "source_hash": "3ebabb2ea9549d692ee130a5432c0a4445ef34d821a863deca38472f640d2ad4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Going through the contents of a file"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "6829d8febcec96018ba34b6a2696c2a9b663f370a835229bfae6350fb648b316",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `read` method is useful for printing out the contents of the entire file, but more often we will want to go through the file line by line."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "ec0b94c28b13be7f7eef3bf1515cae8829e115c1e16d43ca17516b3bc5c2f688",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Text files can be thought of as lists of strings, each string representing a single line in the file. We can go through the list with a `for` loop."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "198895e639f07105eb118b09dc2439b0ddca55fbd04b9e2f1dacdf0091bc9797",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The following example reads our example file using a `for` loop, removes line breaks from the end of each line, counts the number of lines, and prints each line with its line number. It also keeps track of the length of the lines:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0019",
+      "type": "code",
+      "order": 19,
+      "source_hash": "e8b283ab7b36834e229e7c3915f14ca7b488c3c569981ad5d579c0d7b7c9710a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "with open(\"example.txt\") as new_file:\n    count = 0\n    total_length = 0\n\n    for line in new_file:\n        line = line.replace(\"\\n\", \"\")\n        count += 1\n        print(\"Line\", count, line)\n        length = len(line)\n        total_length += length\n\nprint(\"Total length of lines:\", total_length)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "with open(\"example.txt\") as new_file:\n    count = 0\n    total_length = 0\n\n    for line in new_file:\n        line = line.replace(\"\\n\", \"\")\n        count += 1\n        print(\"Line\", count, line)\n        length = len(line)\n        total_length += length\n\nprint(\"Total length of lines:\", total_length)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e8b283ab7b36834e229e7c3915f14ca7b488c3c569981ad5d579c0d7b7c9710a",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0020",
+      "type": "sample_output",
+      "order": 20,
+      "source_hash": "7f17467223255403130a1c99d0ff7c24acb8154f16b279ec02a374de48753c9b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Line 1 Hello there!\nLine 2 This example file contains three lines of text.\nLine 3 This is the last line.\nTotal length of lines: 81"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Line 1 Hello there!\nLine 2 This example file contains three lines of text.\nLine 3 This is the last line.\nTotal length of lines: 81"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nLine 1 Hello there!\nLine 2 This example file contains three lines of text.\nLine 3 This is the last line.\nTotal length of lines: 81\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "a8b389600bc76e5886c76fb7d197a07ac39594d309c061087a18bb1e18614181",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "There is a line break `\\n` at the end of each line in the file, but the `print` function also adds a line break by default. There are no extra line breaks in the printout above, because the line breaks at the ends of the lines are removed with the `replace` method. It replaces each line break character with an empty string. This way the lengths of the lines are also calculated correctly."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0022",
+      "type": "exercise",
+      "order": 22,
+      "source_hash": "3b7bae78c3ce88f98c29ead171167c080e5c229b5c5eee9aa2b481a66cc68148",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The file `numbers.txt` contains integer numbers, one number per line. The contents could look like this:\n\n```sh\n2\n45\n108\n3\n-10\n1100\n...etc...\n```\n\nPlease write a function named `largest`, which reads the file and returns the largest number in the file.\n\nNotice that the function does not take any arguments. The file you are working with is always named `numbers.txt`.\n\n**NB:** If Visual Studio Code can't find the file and you have checked that there are no spelling errors, take a look at the instructions following this exercise."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-01_largest_number",
+        "exercise_type": "programming-exercise",
+        "name": "Largest number",
+        "tmc_name": "part06-01_largest_number",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0023",
+      "type": "heading",
+      "order": 23,
+      "source_hash": "9a82715866491d66e62c7ad0c452a9b7ee63b8e448c814e833492f90269e7587",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "What if Visual Studio Code cannot find my file?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "d824d06cf2c5110547b3999b858a177cf2ab2a74bf285bd9c422028e3c000647",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When you execute your code, Visual Studio Code might complain about not finding the file, even though you have checked and double-checked the file name was written correctly, and the file exists. Changing the following setting may fix the problem:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0025",
+      "type": "list",
+      "order": 25,
+      "source_hash": "52069b16db10b1c36d3e602ff4cad22196fa01f91caba8ec3865b6c7fa7372cb",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* Open the settings from the menu bar: _File_ -> _Preferences_ -> _Settings_\n* Find the relevant setting with the search term \"executeinfile\"\n* Choose the tab _Workspace_\n* Select the option under _Python_ -> _Terminal_ -> _Execute In File Dir_"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "872bc8ec0740cfa0ffb466a24cd037d358f68a2ec39bc3d2ad2d18c594440857",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Your settings window should now look somewhat like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0027",
+      "type": "image",
+      "order": 27,
+      "source_hash": "da21512b7ebf91d816c49fe583d7531e8c1a0a6324ed0e22610fc7e249d401c7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "6_1_1.png",
+        "alt": "",
+        "attributes": {
+          "src": "6_1_1.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "9f9e391c9e69ddb334fb1cecc52eca5851ddb726795fe96def9a6a7436f213e3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If this doesn't help, you can copy the file in the _src_ directory"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0029",
+      "type": "image",
+      "order": 29,
+      "source_hash": "782cac4b9a9cbc5128f5396d3ca0351b457250e8791ddafc91ffc08c85fd4d34",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "6_1_2.png",
+        "alt": "",
+        "attributes": {
+          "src": "6_1_2.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "6745cb42ae56e156bbbe3d143067473ef8b19f45667695b8a41c588aedda9164",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "directly to the root of the exercise directory"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0031",
+      "type": "image",
+      "order": 31,
+      "source_hash": "5e2021998f824af95a83aa9e7d1ce582bcfc5f0b5f4a0f2bcb5a1182ea4fcf85",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "6_1_3.png",
+        "alt": "",
+        "attributes": {
+          "src": "6_1_3.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0032",
+      "type": "heading",
+      "order": 32,
+      "source_hash": "0a9638186ad6d183f68549c10757a0be3549dace80a6c4aae74b8971820cbad0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Debugging code which handles files"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "e06a9715e16e3ac0b722bb6b6b8ecc65fbb38a2a2e906afe94d988e617574775",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Using the Visual Studio Code [debugger](/part-4/1-vscode#the-built-in-debugger) with programs which handle files will often result in a nasty looking error message:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0034",
+      "type": "image",
+      "order": 34,
+      "source_hash": "74b62d255e2d2e64f8febe99c349d4782a82c552755d62a417c2e7ff9acb8df5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "6_1_4.png",
+        "alt": "",
+        "attributes": {
+          "src": "6_1_4.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "c73acf2419746db5c98395b8357edda8b2701b44f45fbb3c1b79627e28638eb1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The reason is that the debugger will always look for files in the root of the exercise directory. The _Execute In File Dir_ setting mentioned above will have no effect on this. The easiest solution is to just copy the file to the root of the directory."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "e0c18826ef3015e5c33e289c27f00ac2b7bb59be222d2b5753f89c1fde5f4522",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You may need to restart Visual Studio Code after copying all the necessary files."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0037",
+      "type": "heading",
+      "order": 37,
+      "source_hash": "808e9d3fe85b48319f27bcd4d38b0e705ddb94d9c4fbcaebff40201bce28c165",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Reading CSV files"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "2a4a3974577bfd8ad30b8e1ee1ccbc62e9c7e46d5d23684c6be33c02fc1d7207",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A CSV file, short for _comma-separated Values_, is a text file which contains data separated by a predetermined character. The most common characters used for this purpose are the comma `,` and the semicolon `;`, but any character is, in principle, possible."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "b42b96f587c8b567329ea039812834184da23032e3419c13a7aaa22a8b349a32",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "CSV files are commonly used to store records of different kinds. Many database and spreadsheet programs, such as Excel, can import and export data in CSV format, which makes data exchange between different systems easy."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "77d1e5dd2d9249529abac4696257139818612a2d5d5a021288635b11658e8242",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We already learnt we can go through the lines in a file with a `for` loop, but how can we separate the different fields on a single line? Python has a string method `split` for just this purpose. The method takes the separator character(s) as a string argument, and returns the contents of the target string as a list of strings, separated at the separator."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "863555e1d9de7b56696e55602b3945e412ac284d8e6533f26a99026109634ccb",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "An example of how the method works:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0042",
+      "type": "code",
+      "order": 42,
+      "source_hash": "b14d75dfdccc3da3fa7e2931c1bd18279ba10d1a2a620021afff44490a3f211b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "text = \"monkey,banana,harpsichord\"\nwords = text.split(\",\")\nfor word in words:\n    print(word)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "text = \"monkey,banana,harpsichord\"\nwords = text.split(\",\")\nfor word in words:\n    print(word)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b14d75dfdccc3da3fa7e2931c1bd18279ba10d1a2a620021afff44490a3f211b",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0043",
+      "type": "sample_output",
+      "order": 43,
+      "source_hash": "10cca08264b41a702b55a57279012e85fd327d607701558ddc42f4c17e7fb1ab",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "monkey\nbanana\nharpsichord"
+      },
+      "translation": {
+        "language": "text",
+        "content": "monkey\nbanana\nharpsichord"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nmonkey\nbanana\nharpsichord\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "e0254adc35a87752ef4045b4a139924175b9776f69870174512d3fa2add60409",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's assume we have a file `grades.csv`, which contains names of students and the grades they received on some courses. Each line has the data of a single student, and the data is separated by a semicolon."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0045",
+      "type": "sample_data",
+      "order": 45,
+      "source_hash": "6ac5731b7a980e80d6990bc6bfbf646b8bb3565c10823ff3ea09c5f872ef18c1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Paul;5;4;5;3;4;5;5;4;2;4\nBeth;3;4;2;4;4;2;3;1;3;3\nRuth;4;5;5;4;5;5;4;5;4;4"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Paul;5;4;5;3;4;5;5;4;2;4\nBeth;3;4;2;4;4;2;3;1;3;3\nRuth;4;5;5;4;5;5;4;5;4;4"
+      },
+      "metadata": {
+        "raw_source": "<sample-data>\n\nPaul;5;4;5;3;4;5;5;4;2;4\nBeth;3;4;2;4;4;2;3;1;3;3\nRuth;4;5;5;4;5;5;4;5;4;4\n\n</sample-data>"
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0046",
+      "type": "paragraph",
+      "order": 46,
+      "source_hash": "ba24576278ffc19d4480866e5b377b77930d8be82a7d862cd177432ff340919f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The following program goes through the file line by line, splits each line into its separate parts, and prints out the name and grades of each student."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0047",
+      "type": "code",
+      "order": 47,
+      "source_hash": "63395e2a85be0f342979565ef605d2cd606c61485ad94766c879a6f46280bf1a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "with open(\"grades.csv\") as new_file:\n    for line in new_file:\n        line = line.replace(\"\\n\", \"\")\n        parts = line.split(\";\")\n        name = parts[0]\n        grades = parts[1:]\n        print(\"Name:\", name)\n        print(\"Grades:\", grades)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "with open(\"grades.csv\") as new_file:\n    for line in new_file:\n        line = line.replace(\"\\n\", \"\")\n        parts = line.split(\";\")\n        name = parts[0]\n        grades = parts[1:]\n        print(\"Name:\", name)\n        print(\"Grades:\", grades)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "63395e2a85be0f342979565ef605d2cd606c61485ad94766c879a6f46280bf1a",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0048",
+      "type": "sample_output",
+      "order": 48,
+      "source_hash": "4ef3486e86cbc2d57ef3f9b2f20a2738b5f74fb5a94ced14fda32c6ff175eb68",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Name: Paul\nGrades: ['5', '4', '5', '3', '4', '5', '5', '4', '2', '4']\nName: Beth\nGrades: ['3', '4', '2', '4', '4', '2', '3', '1', '3', '3']\nName: Ruth\nGrades: ['4', '5', '5', '4', '5', '5', '4', '5', '4', '4']"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Name: Paul\nGrades: ['5', '4', '5', '3', '4', '5', '5', '4', '2', '4']\nName: Beth\nGrades: ['3', '4', '2', '4', '4', '2', '3', '1', '3', '3']\nName: Ruth\nGrades: ['4', '5', '5', '4', '5', '5', '4', '5', '4', '4']"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nName: Paul\nGrades: ['5', '4', '5', '3', '4', '5', '5', '4', '2', '4']\nName: Beth\nGrades: ['3', '4', '2', '4', '4', '2', '3', '1', '3', '3']\nName: Ruth\nGrades: ['4', '5', '5', '4', '5', '5', '4', '5', '4', '4']\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0049",
+      "type": "exercise",
+      "order": 49,
+      "source_hash": "aaf111ef3e48f2547eb20156d719f0cb1ac33ddde8d0bfd1c0c13fb2b7794ffa",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The file `fruits.csv` contains names of fruits, and their prices, in the format specified in this example:\n\n```sh\nbanana;6.50\napple;4.95\norange;8.0\n...etc...\n```\n\nPlease write a function named `read_fruits`, which reads the file and returns a dictionary based on the contents. In the dictionary, the name of the fruit should be the key, and the value should be its price. Prices should be of type `float`.\n\nNB: the function does not take any arguments. The file you are working with is always named `fruits.csv`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-02_fruit_market",
+        "exercise_type": "programming-exercise",
+        "name": "Fruit market",
+        "tmc_name": "part06-02_fruit_market",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0050",
+      "type": "exercise",
+      "order": 50,
+      "source_hash": "8012f06105b5ce514c0de2631718cdc8bedd6076f5c054ed9b1be645eadc2b43",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The file `matrix.txt` contains a matrix in the format specified in the example below:\n\n```sh\n1,0,2,8,2,1,3,2,5,2,2,2\n9,2,4,5,2,4,2,4,1,10,4,2\n...etc...\n```\n\nPlease write two functions, named `matrix_sum` and `matrix_max`. Both go through the matrix in the file, and then return the sum of the elements or the element with the greatest value, as the names of the functions imply.\n\nPlease also write the function `row_sums`, which returns a list containing the sum of each row in the matrix. For example, calling `row_sums` when the matrix in the file is defined as\n\n```sh\n1,2,3\n2,3,4\n```\n\nthe function should return the list `[6, 9]`.\n\nHint: you can also include other helper functions in your program. It is very worthwhile to spend a moment considering which functionalities are shared by the three functions you are asked to write. Notice that the three functions named above do not take any arguments, but any helper functions you write may take arguments. The file you are working with is always named `matrix.txt`.\n\n**NB:** If Visual Studio Code can't find the file and you have checked that there are no spelling errors, take a look at the instructions before this exercise."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-03_matrix",
+        "exercise_type": "programming-exercise",
+        "name": "Matrix",
+        "tmc_name": "part06-03_matrix",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0051",
+      "type": "heading",
+      "order": 51,
+      "source_hash": "229cac1ab69fd3b7907c69f31018255719998bbcb91a4b60376536e07a751fad",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Reading the same file multiple times"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0052",
+      "type": "paragraph",
+      "order": 52,
+      "source_hash": "967c6ada5e8fb15af5f156a0e00ee8e719a01ef616fd36b2ef063d9d9a83c031",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Sometimes it is necessary to process the contents of a file more than once in a single program. Let's have a look at a program which works with some personal data stored in a CSV file:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0053",
+      "type": "sample_data",
+      "order": 53,
+      "source_hash": "528e159b16109278c9893ceff111f9c1560b7b86629ac70523149daa6895531a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Peter;40;Helsinki\nEmily;34;Espoo\nEric;42;London\nAdam;100;Amsterdam\nAlice;58;Paris"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Peter;40;Helsinki\nEmily;34;Espoo\nEric;42;London\nAdam;100;Amsterdam\nAlice;58;Paris"
+      },
+      "metadata": {
+        "raw_source": "<sample-data>\nPeter;40;Helsinki\nEmily;34;Espoo\nEric;42;London\nAdam;100;Amsterdam\nAlice;58;Paris\n</sample-data>"
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0054",
+      "type": "code",
+      "order": 54,
+      "source_hash": "78f4309d464316e4a5f41efd98cfdc802ab659b5c571e57d7e7ee8f74736aedf",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "with open(\"people.csv\") as new_file:\n    # print out the names\n    for line in new_file:\n        parts = line.split(\";\")\n        print(\"Name:\", parts[0])\n\n    # find the oldest\n    age_of_oldest = -1\n    for line in new_file:\n        parts = line.split(\";\")\n        name = parts[0]\n        age = int(parts[1])\n        if age > age_of_oldest:\n            age_of_oldest = age\n            oldest = name\n    print(\"the oldest is\", oldest)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "with open(\"people.csv\") as new_file:\n    # print out the names\n    for line in new_file:\n        parts = line.split(\";\")\n        print(\"Name:\", parts[0])\n\n    # find the oldest\n    age_of_oldest = -1\n    for line in new_file:\n        parts = line.split(\";\")\n        name = parts[0]\n        age = int(parts[1])\n        if age > age_of_oldest:\n            age_of_oldest = age\n            oldest = name\n    print(\"the oldest is\", oldest)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "78f4309d464316e4a5f41efd98cfdc802ab659b5c571e57d7e7ee8f74736aedf",
+        "length_lines": 16
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0055",
+      "type": "paragraph",
+      "order": 55,
+      "source_hash": "ecaaa35dbe6e0d28f66490d9bd04d7746cdb70ab618cf07d47d681afebba77cf",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Running this will result in a somewhat cryptic error message:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0056",
+      "type": "code",
+      "order": 56,
+      "source_hash": "84040d23a5d8dfa129425bd095dbb1b5a1728832608189276a0fb29a4aec01ab",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "Traceback (most recent call last):\n    print(\"the oldest is\"; oldest)\nUnboundLocalError: local variable 'oldest' referenced before assignment"
+      },
+      "translation": {
+        "language": "code",
+        "content": "Traceback (most recent call last):\n    print(\"the oldest is\"; oldest)\nUnboundLocalError: local variable 'oldest' referenced before assignment"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "84040d23a5d8dfa129425bd095dbb1b5a1728832608189276a0fb29a4aec01ab",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0057",
+      "type": "paragraph",
+      "order": 57,
+      "source_hash": "84ef0626f1fba704f3e7dd1eaafd5a7884a020cb1b37507cd05f8c0e361e8344",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The reason this happens is that the latter `for` loop is not executed at all, beacuse the file can only be processed once. Once the last line is read, the file handle rests at the end of the file, and the data in the file can no longer be accessed."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0058",
+      "type": "paragraph",
+      "order": 58,
+      "source_hash": "2741daa57f92cb0af7f37225cf3d733d3871ded6b1373e77047f5725d06d35cb",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If we want to access the contents in the second `for` loop, we will have to `open` the file a second time:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0059",
+      "type": "code",
+      "order": 59,
+      "source_hash": "d21f71174aa59c9fd67f90420c4e956db29a67b16325dd8794d1ff279154e66e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "with open(\"people.csv\") as new_file:\n    # print out the names\n    for line in new_file:\n        parts = line.split(\";\")\n        print(\"Name:\", parts[0])\n\nwith open(\"people.csv\") as new_file:\n    # find the oldest\n    age_of_oldest = -1\n    for line in new_file:\n        parts = line.split(\";\")\n        name = parts[0]\n        age = int(parts[1])\n        if age > age_of_oldest:\n            age_of_oldest = age\n            oldest = name\n    print(\"the oldest is\", oldest)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "with open(\"people.csv\") as new_file:\n    # print out the names\n    for line in new_file:\n        parts = line.split(\";\")\n        print(\"Name:\", parts[0])\n\nwith open(\"people.csv\") as new_file:\n    # find the oldest\n    age_of_oldest = -1\n    for line in new_file:\n        parts = line.split(\";\")\n        name = parts[0]\n        age = int(parts[1])\n        if age > age_of_oldest:\n            age_of_oldest = age\n            oldest = name\n    print(\"the oldest is\", oldest)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d21f71174aa59c9fd67f90420c4e956db29a67b16325dd8794d1ff279154e66e",
+        "length_lines": 17
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0060",
+      "type": "paragraph",
+      "order": 60,
+      "source_hash": "93d931f94d56b095b5536df8fe2e713d82872563959a850da9bf558cb194b33c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "While the above code would work, it contains unnecessary repetition. It is usually best to read the file just once, and store its contents in an appropriate format for further processing:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0061",
+      "type": "code",
+      "order": 61,
+      "source_hash": "abfb6ce85998fab71ffa7369ef3eb82a7d7835b76671d37ef42459885d166395",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "people = []\n# read the contents of the file and store it in a list\nwith open(\"people.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(\";\")\n        people.append((parts[0], int(parts[1]), parts[2]))\n\n# print out the names\nfor person in people:\n    print(\"Name:\", person[0])\n\n# find the oldest\nage_of_oldest = -1\nfor person in people:\n    name = person[0]\n    age = person[1]\n    if age > age_of_oldest:\n        age_of_oldest = age\n        oldest = name\nprint(\"the oldest is\", oldest)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "people = []\n# read the contents of the file and store it in a list\nwith open(\"people.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(\";\")\n        people.append((parts[0], int(parts[1]), parts[2]))\n\n# print out the names\nfor person in people:\n    print(\"Name:\", person[0])\n\n# find the oldest\nage_of_oldest = -1\nfor person in people:\n    name = person[0]\n    age = person[1]\n    if age > age_of_oldest:\n        age_of_oldest = age\n        oldest = name\nprint(\"the oldest is\", oldest)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "abfb6ce85998fab71ffa7369ef3eb82a7d7835b76671d37ef42459885d166395",
+        "length_lines": 20
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0062",
+      "type": "heading",
+      "order": 62,
+      "source_hash": "063a1c6a7e2657eac31b043ba222b9cb0d950fdb5c782b3559f963983ae2f348",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "More CSV file processing"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0063",
+      "type": "paragraph",
+      "order": 63,
+      "source_hash": "a07cd851d373477edaf88356efad65dfe467129daf21ca8bc364aed6a1208ea6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's continue with the file `grades.csv`, which has the following contents:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0064",
+      "type": "sample_data",
+      "order": 64,
+      "source_hash": "6ac5731b7a980e80d6990bc6bfbf646b8bb3565c10823ff3ea09c5f872ef18c1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Paul;5;4;5;3;4;5;5;4;2;4\nBeth;3;4;2;4;4;2;3;1;3;3\nRuth;4;5;5;4;5;5;4;5;4;4"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Paul;5;4;5;3;4;5;5;4;2;4\nBeth;3;4;2;4;4;2;3;1;3;3\nRuth;4;5;5;4;5;5;4;5;4;4"
+      },
+      "metadata": {
+        "raw_source": "<sample-data>\n\nPaul;5;4;5;3;4;5;5;4;2;4\nBeth;3;4;2;4;4;2;3;1;3;3\nRuth;4;5;5;4;5;5;4;5;4;4\n\n</sample-data>"
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0065",
+      "type": "paragraph",
+      "order": 65,
+      "source_hash": "0de761b52df056825502398f6d0b94b9537569d15741f82f558b35aad4f49fbd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This following program creates a dictionary `grades` based on the contents of the file. The keys are the names of the students, and the value attached to each key is the list of grades attained by the student. The program converts the grades to integer values, so they can be processed easier."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0066",
+      "type": "code",
+      "order": 66,
+      "source_hash": "2ec2c37de965365faff7bc5f093a0b225ab1db02d19b325aafb5874859adc8f8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "grades = {}\nwith open(\"grades.csv\") as new_file:\n    for line in new_file:\n        line = line.replace(\"\\n\", \"\")\n        parts = line.split(\";\")\n        name = parts[0]\n        grades[name] = []\n        for grade in parts[1:]:\n            grades[name].append(int(grade))\n\nprint(grades)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "grades = {}\nwith open(\"grades.csv\") as new_file:\n    for line in new_file:\n        line = line.replace(\"\\n\", \"\")\n        parts = line.split(\";\")\n        name = parts[0]\n        grades[name] = []\n        for grade in parts[1:]:\n            grades[name].append(int(grade))\n\nprint(grades)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2ec2c37de965365faff7bc5f093a0b225ab1db02d19b325aafb5874859adc8f8",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0067",
+      "type": "sample_output",
+      "order": 67,
+      "source_hash": "c2844ca16131154dd0fc6200203de336a1c20c9a0a3b612a6fae17981ba759b3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "{'Paul': [5, 4, 5, 3, 4, 5, 5, 4, 2, 4], 'Beth': [3, 4, 2, 4, 4, 2, 3, 1, 3, 3], 'Ruth': [4, 5, 5, 4, 5, 5, 4, 5, 4, 4]}"
+      },
+      "translation": {
+        "language": "text",
+        "content": "{'Paul': [5, 4, 5, 3, 4, 5, 5, 4, 2, 4], 'Beth': [3, 4, 2, 4, 4, 2, 3, 1, 3, 3], 'Ruth': [4, 5, 5, 4, 5, 5, 4, 5, 4, 4]}"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n{'Paul': [5, 4, 5, 3, 4, 5, 5, 4, 2, 4], 'Beth': [3, 4, 2, 4, 4, 2, 3, 1, 3, 3], 'Ruth': [4, 5, 5, 4, 5, 5, 4, 5, 4, 4]}\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0068",
+      "type": "paragraph",
+      "order": 68,
+      "source_hash": "108e2bdf72fd8dabc930bd3121fcc122df08a3e9393d6b5a289e6c44753b388c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Now we can print out some statistics on each student based on the contents of the dictionary `grades`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0069",
+      "type": "code",
+      "order": 69,
+      "source_hash": "f796649726199ca55cfd3d13a703dbc6a3ba1002af795b378d5e5d92a6922348",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "for name, grade_list in grades.items():\n    best = max(grade_list)\n    average = sum(grade_list) / len(grade_list)\n    print(f\"{name}: best grade {best}, average {average:.2f}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "for name, grade_list in grades.items():\n    best = max(grade_list)\n    average = sum(grade_list) / len(grade_list)\n    print(f\"{name}: best grade {best}, average {average:.2f}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f796649726199ca55cfd3d13a703dbc6a3ba1002af795b378d5e5d92a6922348",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0070",
+      "type": "sample_output",
+      "order": 70,
+      "source_hash": "5f4d5ea4acadfe972a9260276a1e2ac3b3fb324d1ae254281f83aba33503fa8c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Paul: best grade 5, average 4.10\nBeth: best grade 4, average 2.90\nRuth: best grade 5, average 4.50"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Paul: best grade 5, average 4.10\nBeth: best grade 4, average 2.90\nRuth: best grade 5, average 4.50"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPaul: best grade 5, average 4.10\nBeth: best grade 4, average 2.90\nRuth: best grade 5, average 4.50\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0071",
+      "type": "paragraph",
+      "order": 71,
+      "source_hash": "9c3815586875d175d11f69104d959ae459128776ccca36f6ddf791eb56d0fd3f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please take a careful look at the program in the example above. It may seem a bit complicated at first, but the technique can be used on files containing many different types of data."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0072",
+      "type": "heading",
+      "order": 72,
+      "source_hash": "a80141a1485df7f7364b819c3ecb936e07e1841dcf13b446a2a35e3a81288352",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Removing unnecessary lines, spaces and line breaks"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0073",
+      "type": "paragraph",
+      "order": 73,
+      "source_hash": "b3ef8c29508fa02c9443cfdbeb752748bfc2ab93c47ff5f6ffdda52395779ef6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's assume we have a CSV file containing some names, which has been exported from Excel:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0074",
+      "type": "code",
+      "order": 74,
+      "source_hash": "574ef973f1073029363822bcbf85656dc01c2e19267fc782fe7e8076f8ea5c7e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "first; last\nPaul; Python\nJean; Java\nHarry; Haskell"
+      },
+      "translation": {
+        "language": "code",
+        "content": "first; last\nPaul; Python\nJean; Java\nHarry; Haskell"
+      },
+      "metadata": {
+        "language": "sh",
+        "code_hash": "574ef973f1073029363822bcbf85656dc01c2e19267fc782fe7e8076f8ea5c7e",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0075",
+      "type": "paragraph",
+      "order": 75,
+      "source_hash": "1903d8c7c96cba93fa13d55ee984e2bf7dc153fc0d5a8c57602ca08b3d467965",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Excel is notorious for adding extra whitespace. Here we have an extra space character between the items, after each semicolon."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0076",
+      "type": "paragraph",
+      "order": 76,
+      "source_hash": "78750daff6ca169d344279d46b76a67c8f838fb858a89327e59bfc7c0c41a447",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We would like to print out the last names of each person on the list. The first line contains the headers for the data, and it can be safely ignored:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0077",
+      "type": "code",
+      "order": 77,
+      "source_hash": "a6274951d62cc50237d21ca294a73d88b61aabadbe98a13c46a1667eea5eff1b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "last_names = []\nwith open(\"people.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(\";\")\n        # ignore the header line\n        if parts[0] == \"first\":\n            continue\n        last_names.append(parts[1])\n\nprint(last_names)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "last_names = []\nwith open(\"people.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(\";\")\n        # ignore the header line\n        if parts[0] == \"first\":\n            continue\n        last_names.append(parts[1])\n\nprint(last_names)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a6274951d62cc50237d21ca294a73d88b61aabadbe98a13c46a1667eea5eff1b",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0078",
+      "type": "paragraph",
+      "order": 78,
+      "source_hash": "791662c780552f1bdae36f13804153693875dbfb276889f2b42726c9fac4c03c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Exectuing this would print out"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0079",
+      "type": "sample_output",
+      "order": 79,
+      "source_hash": "0690b1b763d4cc2454ae470cdcfb652b541d348fb8d1b2b4a9cab95cc7c52851",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[' Python\\n', ' Java\\n', ' Haskell']"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[' Python\\n', ' Java\\n', ' Haskell']"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[' Python\\n', ' Java\\n', ' Haskell']\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0080",
+      "type": "paragraph",
+      "order": 80,
+      "source_hash": "ad6c9f3a207e6481b50fcef4f219972393689a748ecb3db84c87645e574ab882",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The first two items have a line break character at the end, and all three have an extra leading space character."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0081",
+      "type": "paragraph",
+      "order": 81,
+      "source_hash": "7f7ee782324544f8db1a27a4b4f543cffe0c5f41827860a14f256c02292797ea",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We have already used the `replace` method to remove extra whitespace, but a more efficient solution is to use the Python string method `strip`, which removes whitespace from the beginning and end of a string. It removes all spaces, line breaks, tabs and other characters which would not normally be printed out."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0082",
+      "type": "paragraph",
+      "order": 82,
+      "source_hash": "c02966cd0e549b0ce38d9fe0dffccc3ffe84dc6074b3076eea0425f6e1da44ae",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You can try it out in the Python console:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0083",
+      "type": "code",
+      "order": 83,
+      "source_hash": "5705631e396d3d4878abc4623f200b23e9ad21bc0e8afa45da1a8160104690c2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": ">>> \" tryout \".strip()\n'tryout'\n>>> \"\\n\\ntest\\n\".strip()\n'test'\n>>>"
+      },
+      "translation": {
+        "language": "code",
+        "content": ">>> \" tryout \".strip()\n'tryout'\n>>> \"\\n\\ntest\\n\".strip()\n'test'\n>>>"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5705631e396d3d4878abc4623f200b23e9ad21bc0e8afa45da1a8160104690c2",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0084",
+      "type": "paragraph",
+      "order": 84,
+      "source_hash": "982fd379609b7a74dc766f71d9ae92354d8fd03af8da3884198956a9802ba9d2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Stripping the string requires only a small change to the program:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0085",
+      "type": "code",
+      "order": 85,
+      "source_hash": "03d8b8a457243298a228974091b1d99d620d9047d51dd240c7479a7c09010a0e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "last_names = []\nwith open(\"people.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(';')\n        if parts[0] == \"first\":\n            continue # this was the header line, so it is ignored\n        last_names.append(parts[1].strip())\nprint(last_names)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "last_names = []\nwith open(\"people.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(';')\n        if parts[0] == \"first\":\n            continue # this was the header line, so it is ignored\n        last_names.append(parts[1].strip())\nprint(last_names)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "03d8b8a457243298a228974091b1d99d620d9047d51dd240c7479a7c09010a0e",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0086",
+      "type": "paragraph",
+      "order": 86,
+      "source_hash": "7ef11d14bcbb194b5bd5e05b561129ec1d9b75e6c16555d638c82a84a5ef8ad8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Now we have the desired tidy printout:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0087",
+      "type": "sample_output",
+      "order": 87,
+      "source_hash": "e1f0f53185bdc43f021764418e489d9bb1535e358c850bcd48174332182ec69d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "['Python', 'Java', 'Haskell']"
+      },
+      "translation": {
+        "language": "text",
+        "content": "['Python', 'Java', 'Haskell']"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n['Python', 'Java', 'Haskell']\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0088",
+      "type": "paragraph",
+      "order": 88,
+      "source_hash": "1c865c0e810c7874708d52101592771070ffa15b66784073bfef2e9932b3ce12",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "There are also the related string methods `lstrip` and `rstrip`. They remove only the leading or trailing unprintable characters, l for the left edge of the string and r for the right:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0089",
+      "type": "code",
+      "order": 89,
+      "source_hash": "7fcbc6599fcbd28662147e53f1b80041fb98b7609dacd441f6522cb8120661aa",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": ">>> \" teststring  \".rstrip()\n' teststring'\n>>> \" teststring  \".lstrip()\n'teststring  '"
+      },
+      "translation": {
+        "language": "code",
+        "content": ">>> \" teststring  \".rstrip()\n' teststring'\n>>> \" teststring  \".lstrip()\n'teststring  '"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "7fcbc6599fcbd28662147e53f1b80041fb98b7609dacd441f6522cb8120661aa",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0090",
+      "type": "heading",
+      "order": 90,
+      "source_hash": "5e1fbf290cfec98973ba9f5d2529659b5cc9ef0acbb029a35ee46fc1f9431329",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Combining data from different files"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0091",
+      "type": "paragraph",
+      "order": 91,
+      "source_hash": "17efb8f4169442173e0eed5ad1d8d3c1771a448aa1e057944cfeeb536db2ddd4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "It is very common for the data processed by a program to be scattered in multiple files. Lets have a look at a situation where the personal details of the personnel of a company are stored in a file called `employees.csv`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0092",
+      "type": "code",
+      "order": 92,
+      "source_hash": "25934d6e102a87ed4cfe163216158cf5f58280463fe7d496bbc5e8ad894503a9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "pic;name;address;city\n080488-123X;Pekka Mikkola;Vilppulantie 7;00700 Helsinki\n290274-044S;Liisa Marttinen;Mannerheimintie 100 A 10;00100 Helsinki\n010479-007Z;Arto Vihavainen;Pihapolku 4;01010 Kerava\n010499-345K;Leevi Hellas;Tapiolantie 11 B;02000 Espoo"
+      },
+      "translation": {
+        "language": "code",
+        "content": "pic;name;address;city\n080488-123X;Pekka Mikkola;Vilppulantie 7;00700 Helsinki\n290274-044S;Liisa Marttinen;Mannerheimintie 100 A 10;00100 Helsinki\n010479-007Z;Arto Vihavainen;Pihapolku 4;01010 Kerava\n010499-345K;Leevi Hellas;Tapiolantie 11 B;02000 Espoo"
+      },
+      "metadata": {
+        "language": "csv",
+        "code_hash": "25934d6e102a87ed4cfe163216158cf5f58280463fe7d496bbc5e8ad894503a9",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0093",
+      "type": "paragraph",
+      "order": 93,
+      "source_hash": "e76aa97ec76e1af47b7b7696f50d562f7ec7cc48511d71f15afe6eff116b2db6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The salaries are stored in a separate file `salaries.csv`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0094",
+      "type": "code",
+      "order": 94,
+      "source_hash": "6f0b3131f56c07eb996178c443481851ced3ee6188962703b2588e5a24bbd0cc",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "pic;salary;bonus\n080488-123X;3300;0\n290274-044S;4150;200\n010479-007Z;1300;1200"
+      },
+      "translation": {
+        "language": "code",
+        "content": "pic;salary;bonus\n080488-123X;3300;0\n290274-044S;4150;200\n010479-007Z;1300;1200"
+      },
+      "metadata": {
+        "language": "csv",
+        "code_hash": "6f0b3131f56c07eb996178c443481851ced3ee6188962703b2588e5a24bbd0cc",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0095",
+      "type": "paragraph",
+      "order": 95,
+      "source_hash": "8138d9ad139896a79fb39362404f6b2f128d5f3e1fba80a8862c34fc796f2836",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Each data line in both files contains the _personal identity code_, which identifies whose data we are dealing with. Using the personal identity code as a common factor, it is easy to connect the names and salaries of each employee. We can, for example, print out the following list of monthly incomes:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0096",
+      "type": "sample_output",
+      "order": 96,
+      "source_hash": "4133c98c2422adf2a38aea27f8e52ef3d8117aa8227b1795e9ac1e3e16bbcbda",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "<pre>\nincomes:\nPekka Mikkola    3300 euros\nLiisa Marttinen  4350 euros\nArto Vihavainen  2500 euros\n</pre>"
+      },
+      "translation": {
+        "language": "text",
+        "content": "<pre>\nincomes:\nPekka Mikkola    3300 euros\nLiisa Marttinen  4350 euros\nArto Vihavainen  2500 euros\n</pre>"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n<pre>\nincomes:\nPekka Mikkola    3300 euros\nLiisa Marttinen  4350 euros\nArto Vihavainen  2500 euros\n</pre>\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0097",
+      "type": "paragraph",
+      "order": 97,
+      "source_hash": "1ffaadb203a62fbc1b21615fc8a68fc5af1507affd3f5ea7fe37cd1b6864fd7f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This program uses two dictionaries as helper data structures: `names` and `salaries`. Both use the PIC as key:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0098",
+      "type": "code",
+      "order": 98,
+      "source_hash": "dded9a21c3d9e3711cd1d48176b47f47aded6658c1b26658040c79681831aceb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "names = {}\n\nwith open(\"employees.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(';')\n        if parts[0] == \"pic\":\n            continue\n        names[parts[0]] = parts[1]\n\nsalaries = {}\n\nwith open(\"salaries.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(';')\n        if parts[0] == \"pic\":\n            continue\n        salaries[parts[0]] = int(parts[1]) +int(parts[2])\n\nprint(\"incomes:\")\n\nfor pic, name in names.items():\n    if pic in salaries:\n        salary = salaries[pic]\n        print(f\"{name:16} {salary} euros\")\n    else:\n        print(f\"{name:16} 0 euros\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "names = {}\n\nwith open(\"employees.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(';')\n        if parts[0] == \"pic\":\n            continue\n        names[parts[0]] = parts[1]\n\nsalaries = {}\n\nwith open(\"salaries.csv\") as new_file:\n    for line in new_file:\n        parts = line.split(';')\n        if parts[0] == \"pic\":\n            continue\n        salaries[parts[0]] = int(parts[1]) +int(parts[2])\n\nprint(\"incomes:\")\n\nfor pic, name in names.items():\n    if pic in salaries:\n        salary = salaries[pic]\n        print(f\"{name:16} {salary} euros\")\n    else:\n        print(f\"{name:16} 0 euros\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "dded9a21c3d9e3711cd1d48176b47f47aded6658c1b26658040c79681831aceb",
+        "length_lines": 26
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0099",
+      "type": "paragraph",
+      "order": 99,
+      "source_hash": "d209cc2ecf81fd2bd8e1fb91875e9fe60c7c1d4956a57b755d7002fb4c442233",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "First the program produces the dictionaries `names` and `salaries`. They have the following contents:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0100",
+      "type": "code",
+      "order": 100,
+      "source_hash": "4e55635a2ee4c5e0d7699284e836561f6f46f084599ddb2cf52cbf40e978359f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "{\n    '080488-123X': 'Pekka Mikkola',\n    '290274-044S': 'Liisa Marttinen',\n    '010479-007Z': 'Arto Vihavainen',\n    '010499-345K': 'Leevi Hellas'\n}\n\n{\n    '080488-123X': 3300,\n    '290274-044S': 4350,\n    '010479-007Z': 2500\n}"
+      },
+      "translation": {
+        "language": "code",
+        "content": "{\n    '080488-123X': 'Pekka Mikkola',\n    '290274-044S': 'Liisa Marttinen',\n    '010479-007Z': 'Arto Vihavainen',\n    '010499-345K': 'Leevi Hellas'\n}\n\n{\n    '080488-123X': 3300,\n    '290274-044S': 4350,\n    '010479-007Z': 2500\n}"
+      },
+      "metadata": {
+        "language": "sh",
+        "code_hash": "4e55635a2ee4c5e0d7699284e836561f6f46f084599ddb2cf52cbf40e978359f",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0101",
+      "type": "paragraph",
+      "order": 101,
+      "source_hash": "88072555860814351caf6e95004636669af10bccb8402a8876c641cb6d8e51ae",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `for` loop at the end of the program combines the names of the employees with their respective salaries."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0102",
+      "type": "paragraph",
+      "order": 102,
+      "source_hash": "7ce32a580a63f72e5a3dbf569ff9f3db27fbeab4dae3b3545c451c590c37fa92",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The program also takes care of situations where the employee's pic is not present in the salary file."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0103",
+      "type": "paragraph",
+      "order": 103,
+      "source_hash": "03e997ed14ca02f509e3813368c8b467ad5264b3484e646be9a76e9dee4a5c7f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Remember, the order in which items are stored in a dictionary does not matter, as the keys are processed based on hash values."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0104",
+      "type": "exercise",
+      "order": 104,
+      "source_hash": "bfaf22456bdf9fda6dfb49e26d7a612985a664e6e03d189c88a7bcd99080db1f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This program works with two CSV files. One of them contains information about some students on a course:\n\n```csv\nid;first;last\n12345678;peter;pythons\n12345687;jean;javanese\n12345699;alice;adder\n```\n\nThe other contains the number of exercises each student has completed each week:\n\n```csv\nid;e1;e2;e3;e4;e5;e6;e7\n12345678;4;1;1;4;5;2;4\n12345687;3;5;3;1;5;4;6\n12345699;10;2;2;7;10;2;2\n```\n\nAs you can see above, both CSV files also have a header row, which tells you what each column contains.\n\nPlease write a program which asks the user for the names of these two files, reads the files, and then prints out the total number of exercises completed by each student. If the files have the contents in the examples above, the program should print out the following:\n\n<sample-output>\n\nStudent information: **students1.csv**\nExercises completed: **exercises1.csv**\npekka peloton 21\njaana javanainen 27\nliisa virtanen 35\n\n</sample-output>\n\nHint: while testing your program, you may quickly run out of patience if you always have to type in the file names at the prompt. You might want to hard-code the user input, like so:\n\n```python\nif False:\n    # this is never executed\n    student_info = input(\"Student information: \")\n    exercise_data = input(\"Exercises completed: \")\nelse:\n    # hard-coded input\n    student_info = \"students1.csv\"\n    exercise_data = \"exercises1.csv\"\n```\n\nThe actual functionality of the program is now \"hidden\" in the `False` branch of an `if` statement. It will never be executed.\n\nNow, if you want to quickly verify the program works correctly also with user input, you can just replace `False` with `True`:\n\n```python\n\nif True:\n    student_info = input(\"Student information: \")\n    exercise_data = input(\"Exercises completed: \")\nelse:\n    # now this is the False branch, and is never executed\n    student_info = \"students1.csv\"\n    exercise_data = \"exercises1.csv\"\n```\n\nWhen you have verified your program works correctly, you can remove the `if` structure, keeping the commands asking for input.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.\n\n**NB2:** If Visual Studio can't find the file and you have checked that there are no spelling errors, take a look at [these instructions](/part-6/1-reading-files#what-if-visual-studio-code-cannot-find-my-file)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-04_course_grading_part_1",
+        "exercise_type": "programming-exercise",
+        "name": "Course grading, part 1",
+        "tmc_name": "part06-04_course_grading_part_1",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0105",
+      "type": "exercise",
+      "order": 105,
+      "source_hash": "e5f6ba3d79ba9766914c71f891ebdb70ce7dba0a1386856c6d885e9ebd1fb5f0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's expand the program created in the previous exercise. Now also the exam points awarded to each student are contained in a CSV file. The contents of the file follow this format:\n\n```csv\nid;e1;e2;e3\n12345678;4;1;4\n12345687;3;5;3\n12345699;10;2;2\n```\n\nIn the above example the student whose student number is 12345678 was awarded 4+1+4 points in the exam, which equals a total of 9 points. \n\nThe program should again ask the user for the names of the files. Then the program should process the files and print out a grade for each student.\n\n<sample-output>\n\nStudent information: **students1.csv**\nExercises completed: **exercises1.csv**\nExam points: **exam_points1.csv**\npekka peloton 0\njaana javanainen 1\nliisa virtanen 3\n\n</sample-output>\n\nEach completed exercise is counted towards _exercise points_, so that completing at least 10 % of the total exercices awards 1 point, completing at least 20 % awards 2 points, etc. Completing all 40 exercises awards 10 points. The number of points awarded is always an integer number.\n\nThe final grade for the course is determined based on the sum of exam and exercise points according to the following table:\n\nexam points + exercise points   | grade\n:--:|:----:\n0-14 | 0 (fail)\n15-17 | 1\n18-20 | 2\n21-23 | 3\n24-27 | 4\n28- | 5\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-05_course_grading_part_2",
+        "exercise_type": "programming-exercise",
+        "name": "Course grading, part 2",
+        "tmc_name": "part06-05_course_grading_part_2",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0106",
+      "type": "exercise",
+      "order": 106,
+      "source_hash": "319832e396ec4d477df14451149b797a11ac92430fcd7c462054204b12751ee4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This exercise will continue from the previous one. Now we shall print out some statistics based on the CSV files.\n\n<sample-output>\n\nStudent information: **students1.csv**\nExercises completed: **exercises1.csv**\nExam points: **exam_points1.csv**\n<pre>\nname                          exec_nbr  exec_pts. exm_pts.  tot_pts.  grade\npekka peloton                 21        5         9         14        0\njaana javanainen              27        6         11        17        1\nliisa virtanen                35        8         14        22        3\n</pre>\n\n</sample-output>\n\nEach row contains the information for a single student. The number of exercises completed, the number of exercise points awarded, the number of exam points awarded, the total number of points awarded, and the grade are all displayed in tidy columns. The width of the column for the name should be 30 characters, while the other columns should be 10 characters wide.\n\nYou might find the f-strings covered in [part 4](/part-4/5-print-statement-formatting) useful here.\n\nF-strings differentiate between strings and numbers when it comes to justifying columns:\n\n```python\nword = \"python\"\nprint(f\"{word:10}continues\")\nprint(f\"{word:>10}continues\")\n```\n\n<sample-output>\n\n<pre>\npython    continues\n    pythoncontinues\n</pre>\n\n</sample-output>\n\nAs you can see above, by default strings are justified to the _left_ edge of the area specified for them. The `>` symbol can be used to justify to the right edge.\n\nWith number values the logic is reversed:\n\n```python\nnumber = 42\nprint(f\"{number:10}continues\")\nprint(f\"{number:<10}continues\")\n```\n\n<sample-output>\n\n<pre>\n        42continues\n42        continues\n</pre>\n\n</sample-output>\n\nWith numbers the default behaviour is to justify to the _right_ edge. The symbol `<` can be used to justify to the left edge.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-06_course_grading_part_3",
+        "exercise_type": "programming-exercise",
+        "name": "Course grading, part 3",
+        "tmc_name": "part06-06_course_grading_part_3",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0107",
+      "type": "exercise",
+      "order": 107,
+      "source_hash": "0d76b236dacf28a1b3d42b4a36a5540c7da55351fadb1add3353c9b2e718df2b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user to type in some text. Your program should then perform a spell check, and print out feedback to the user, so that all misspelled words have stars around them. Please see the two examples below:\n\n<sample-output>\n\nWrite text: **We use ptython to make a spell checker**\n<pre>\nWe use *ptython* to make a spell checker\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nWrite text: **This is acually a good and usefull program**\n<pre>\nThis is *acually* good and *usefull* program\n</pre>\n\n</sample-output>\n\nThe case of the letters should be irrelevant to the functioning of your program.\n\nThe exercise template includes the file `wordlist.txt`, which contains all the words the spell checker should accept as correct.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.\n\n**NB2** If Visual Studio can't find the file and you have checked that there are no spelling errors, take a look at [these instructions](/part-6/1-reading-files#what-if-visual-studio-code-cannot-find-my-file)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-07_spellchecker",
+        "exercise_type": "programming-exercise",
+        "name": "Spell checker",
+        "tmc_name": "part06-07_spellchecker",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0108",
+      "type": "exercise",
+      "order": 108,
+      "source_hash": "2ba5bc3a2534e1b5f60301d2bbec3aa978fb4e87cf4add269b2a5b4a6fcc9ac8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This exercise is about creating a program which allows the user to search for recipes based on their names, preparation times, or ingredients used. The program should read the recipes from a file submitted by the user.\n\nEach recipe consists of three or more lines. The first line has the name of the recipe, the second line contains an integer number representing the preparation time in minutes, and the remaining line or lines contain the ingredients used, one on each line. The recipe ends with an empty line, with the exception of the final recipe in the file which just ends with the end of the file. So, there can be more than one recipe in a single file, like in the example below.\n\n```sh\nPancakes\n15\nmilk\neggs\nflour\nsugar\nsalt\nbutter\n\nMeatballs\n45\nmince\neggs\nbreadcrumbs\n\nTofu rolls\n30\ntofu\nrice\nwater\ncarrot\ncucumber\navocado\nwasabi\n\nCake pops\n60\nmilk\nbicarbonate\neggs\nsalt\nsugar\ncardamom\nbutter\n```\n\n**Hint:** it might be best to first read through all the lines in the file and pop them into a list, which is then easier to manipulate in the way described in the exercise.\n\n#### Search for recipes based on the name of the recipe \n\nPlease write a function named `search_by_name(filename: str, word: str)`, which takes a filename and a search string as its arguments. The function should go through the file and select all recipes whose _name_ contains the given search string. The names of these recipes are then returned in a list.\n\nAn example of the function in action:\n\n```python\nfound_recipes = search_by_name(\"recipes1.txt\", \"cake\")\n\nfor recipe in found_recipes:\n    print(recipe)\n```\n\n<sample-output>\n\nPancakes\nCake pops\n\n</sample-output>\n\nAs you can see in the example above, the case of the letters is irrelevant. The search term _cake_ returns both _Pancakes_ and _Cake pops_, even though the latter is capitalized.\n\n**NB:** If Visual Studio can't find the file and you have checked that there are no spelling errors, take a look at [these instructions](/part-6/1-reading-files#what-if-visual-studio-code-cannot-find-my-file).\n\n#### Search for recipes based on the preparation time\n\nPlease write a function named `search_by_time(filename: str, prep_time: int)`, which takes a filename and an integer as its arguments. The function should go through the file and select all recipes whose preparation time is at most the number given.\n\nThe names of these recipes are again returned in a list, but the preparation time should be appended to each name. Please have a look at the example below.\n\n```python\nfound_recipes = search_by_time(\"recipes1.txt\", 20)\n\nfor recipe in found_recipes:\n    print(recipe)\n```\n\n<sample-output>\n\nPancakes, preparation time 15 min\n\n</sample-output>\n\n#### Search for recipes based on the ingredients\n\n**A word of caution:** this third part of the exercise is considerably more demanding than the previous two. If you feel like you aren't making headway, it may be worth your while to move on, complete the other exercises in this part of the material, and then come back to this exercise if you have time later. Remember, you can submit and receive points for the first two parts of this exercise even if you haven't completed the third part.\n\nPlease write a function named `search_by_ingredient(filename: str, ingredient: str)`, which takes a filename and a search string as its arguments. The function should go through the file and select all recipes whose _ingredients_ contain the given search string.\n\nThe names of these recipes are returned in a list just like in the second part, with the preparation time appended. Please have a look at the example below.\n\n```python\nfound_recipes = search_by_ingredient(\"recipes1.txt\", \"eggs\")\n\nfor recipe in found_recipes:\n    print(recipe)\n```\n\n<sample-output>\n\nPancakes, preparation time 15 min\nMeatballs, preparation time 45 min\nCake pops, preparation time 60 min\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-08_recipe_search",
+        "exercise_type": "programming-exercise",
+        "name": "Recipe search",
+        "tmc_name": "part06-08_recipe_search",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0109",
+      "type": "exercise",
+      "order": 109,
+      "source_hash": "3bd6c5bb98dc1a8a5751d989e4e3657a6aab6c01d9d37c18bef03aef937adda0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In this exercise we will write some functions for working on a file containing location data from the stations for [city bikes in Helsinki](https://www.hsl.fi/en/citybikes).\n\nEach file will follow this format:\n\n```csv\nLongitude;Latitude;FID;name;total_slot;operative;id\n24.950292890004903;60.155444793742276;1;Kaivopuisto;30;Yes;001\n24.956347471358754;60.160959093887129;2;Laivasillankatu;12;Yes;002\n24.944927399779715;60.158189199971673;3;Kapteeninpuistikko;16;Yes;003\n```\n\nEach station has a single line in the file. The line contains the coordinates, name, and other identifying information for the station.\n\n#### Distance between stations\n\nFirst, write a function named `get_station_data(filename: str)`. This function should read the names and locations of all the stations in the file, and return them in a dictionary with the following format:\n\n<sample-output>\n\n<pre>\n{\n  \"Kaivopuisto\": (24.950292890004903, 60.155444793742276),\n  \"Laivasillankatu\": (24.956347471358754, 60.160959093887129),\n  \"Kapteeninpuistikko\": (24.944927399779715, 60.158189199971673)\n}\n</pre>\n\n</sample-output>\n\nDictionary keys are the names of the stations, and the value attached is a tuple containing the location coordinates of the station. The first element in the tuple is the _Longitude_ field, and the second is the _Latitude_ field.\n\nNext, write a function named `distance(stations: dict, station1: str, station2: str)`, which returns the distance between the two stations given as arguments.\n\nThe distance is calculated using the Pythagorean theorem. The multiplication factors below are approximate values for converting latitudes and longitudes to distances in kilometres in the Helsinki region.\n\n```python\n# we will need the function sqrt from the math module \nimport math\n\nx_km = (longitude1 - longitude2) * 55.26\ny_km = (latitude1 - latitude2) * 111.2\ndistance_km = math.sqrt(x_km**2 + y_km**2)\n```\n\nSome examples of the function in action:\n\n```python\nstations = get_station_data('stations1.csv')\nd = distance(stations, \"Designmuseo\", \"Hietalahdentori\")\nprint(d)\nd = distance(stations, \"Viiskulma\", \"Kaivopuisto\")\nprint(d)\n```\n\n<sample-output>\n\n0.9032737292463177\n0.7753594392019532\n\n</sample-output>\n\n**NB:** If Visual Studio can't find the file and you have checked that there are no spelling errors, take a look at [these instructions](/part-6/1-reading-files#what-if-visual-studio-code-cannot-find-my-file).\n\n#### The greatest distance\n\nPlease write a function named `greatest_distance(stations: dict)`, which works out the two stations on the list with the greatest distance from each other. The function should return a tuple, where the first two elements are the names of the two stations, and the third element is the distance between the two.\n\n```python\nstations = get_station_data('stations1.csv')\nstation1, station2, greatest = greatest_distance(stations)\nprint(station1, station2, greatest)\n```\n\n<sample-output>\n\nLaivasillankatu Hietalahdentori 1.478708873076181\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-09_city_bikes",
+        "exercise_type": "programming-exercise",
+        "name": "City bikes",
+        "tmc_name": "part06-09_city_bikes",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0110",
+      "type": "paragraph",
+      "order": 110,
+      "source_hash": "b97eebcf5a0222c688482a2c1f8f4510ba0c7934c136e1f60999bbcc47c2ab75",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!---\nA quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-1-reading-files-0111",
+      "type": "quiz",
+      "order": 111,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "69694e01-4c47-5b9d-8a00-b0d96a477dc7",
+        "attributes": {
+          "id": "69694e01-4c47-5b9d-8a00-b0d96a477dc7"
+        }
+      }
+    },
+    {
+      "id": "blk-part06-1-reading-files-0112",
+      "type": "paragraph",
+      "order": 112,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-13_add_items_to_list",
+  "lesson_id": "part04-3-lists",
+  "part": 4,
+  "tmc_name": "part04-13_add_items_to_list",
+  "title_original": "Add items to a list",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which first asks the user for the number of items to be added. Then the program should ask for the given number of values, one by one, and add them to a list in the order they were typed in. Finally, the list is printed out.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nHow many items: **3**\nItem 1: **10**\nItem 2: **250**\nItem 3: **34**\n[10, 250, 34]\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "67db5ff886ff5fa6b1d6aa83ea96463a77ba678f7ee170782e06ee4484fae692",
+  "order": 32
+}

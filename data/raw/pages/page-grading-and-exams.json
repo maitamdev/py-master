@@ -1,0 +1,165 @@
+{
+  "id": "page-grading-and-exams",
+  "slug": "grading-and-exams",
+  "title_original": "Grading and exams",
+  "path": "/grading-and-exams",
+  "source_path": "data/grading-and-exams.md",
+  "source_hash": "d11a94b72fc25af9787b7e7ef4a47e33add151119ca843b16311ba0edd71ec9a",
+  "frontmatter": {
+    "path": "/grading-and-exams",
+    "title": "Grading and exams",
+    "hidden": false,
+    "information_page": true,
+    "sidebar_priority": 6000
+  },
+  "chunks_count": 27,
+  "raw_chunks": [
+    {
+      "raw_type": "paragraph",
+      "content": "To pass the Python Programming MOOC courses, you are expected to both complete exercises and take part in an exam.",
+      "raw_source": "To pass the Python Programming MOOC courses, you are expected to both complete exercises and take part in an exam."
+    },
+    {
+      "raw_type": "heading",
+      "level": 3,
+      "content": "Upcoming exams",
+      "raw_source": "### Upcoming exams"
+    },
+    {
+      "raw_type": "heading",
+      "level": 4,
+      "content": "Introduction to Programming",
+      "raw_source": "#### Introduction to Programming"
+    },
+    {
+      "raw_type": "list",
+      "content": "* ~~Saturday 07.03.2026~~\n* ~~Saturday 02.05.2026~~\n* ~~Saturday 06.06.2026~~\n* ~~Saturday 18.07.2026~~\n* Saturday 05.09.2026\n* Tuesday 27.10.2026\n* Saturday 5.12.2026\n* Saturday 16.1.2027",
+      "raw_source": "* ~~Saturday 07.03.2026~~\n* ~~Saturday 02.05.2026~~\n* ~~Saturday 06.06.2026~~\n* ~~Saturday 18.07.2026~~\n* Saturday 05.09.2026\n* Tuesday 27.10.2026\n* Saturday 5.12.2026\n* Saturday 16.1.2027"
+    },
+    {
+      "raw_type": "heading",
+      "level": 4,
+      "content": "Advanced Course in Programming",
+      "raw_source": "#### Advanced Course in Programming"
+    },
+    {
+      "raw_type": "list",
+      "content": "* ~~Saturday 14.03.2026~~\n* ~~Saturday 09.05.2026~~\n* ~~Saturday 13.06.2026~~\n* ~~Saturday 15.08.2026~~\n* Tuesday 20.10.2026\n* Saturday 15.12.2026\n* Saturday 23.01.2027\n* Saturday 27.02.2027",
+      "raw_source": "* ~~Saturday 14.03.2026~~\n* ~~Saturday 09.05.2026~~\n* ~~Saturday 13.06.2026~~\n* ~~Saturday 15.08.2026~~\n* Tuesday 20.10.2026\n* Saturday 15.12.2026\n* Saturday 23.01.2027\n* Saturday 27.02.2027"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Taking a programming exam",
+      "raw_source": "## Taking a programming exam"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Once you have completed the required number of exercises for either of the courses, you may take the relevant course exam at any of the times listed above. Specifically, you must have received at least 25% of the exercise points for each of the seven parts of the course by 8 AM on the morning of the exam. If you are taking the advanced course exam, part 14 must be fully completed. If any of the seven point totals fall short of this limit, your exam submission will not be graded.",
+      "raw_source": "Once you have completed the required number of exercises for either of the courses, you may take the relevant course exam at any of the times listed above. Specifically, you must have received at least 25% of the exercise points for each of the seven parts of the course by 8 AM on the morning of the exam. If you are taking the advanced course exam, part 14 must be fully completed. If any of the seven point totals fall short of this limit, your exam submission will not be graded."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Submissions are assessed separately for the Introduction to Programming course (parts 1-7) and the Advanced Course in Programming (parts 8-14).",
+      "raw_source": "Submissions are assessed separately for the Introduction to Programming course (parts 1-7) and the Advanced Course in Programming (parts 8-14)."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You may take part in any number of the exams listed above. The highest grade achieved will be your final grade.",
+      "raw_source": "You may take part in any number of the exams listed above. The highest grade achieved will be your final grade."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Information about exam arrangements",
+      "raw_source": "## Information about exam arrangements"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "notice",
+      "attributes": {},
+      "inner_content": "All times are local time in Helsinki, Finland",
+      "raw_source": "<notice>All times are local time in Helsinki, Finland</notice>"
+    },
+    {
+      "raw_type": "list",
+      "content": "* You do not need to enroll for the exam.\n* The course exam can be taken on exam date **between 10:00 AM and 10:00 PM**.\n* The exam ends at 10:00 PM at the latest. If you want to be able to spend the maximum time allowed on the exam, you should **start at 6:00 PM at the latest**.\n* You will have **four hours** to complete the exam. If you have been granted extra time through special arrangements, you will have five hours to complete the exam, and should start at 5:00 PM at the latest.\n* Your solutions to the programming tasks in the exam are submitted in the same manner as your solutions to the programming exercises on the course.",
+      "raw_source": "* You do not need to enroll for the exam.\n* The course exam can be taken on exam date **between 10:00 AM and 10:00 PM**.\n* The exam ends at 10:00 PM at the latest. If you want to be able to spend the maximum time allowed on the exam, you should **start at 6:00 PM at the latest**.\n* You will have **four hours** to complete the exam. If you have been granted extra time through special arrangements, you will have five hours to complete the exam, and should start at 5:00 PM at the latest.\n* Your solutions to the programming tasks in the exam are submitted in the same manner as your solutions to the programming exercises on the course."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "More detailed instructions will be published on these pages before the exam date.",
+      "raw_source": "More detailed instructions will be published on these pages before the exam date."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Exercise points",
+      "raw_source": "## Exercise points"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Each programming exercise and quiz in each part is worth a number of exercise points. You can find a list of all the exercises in a specific part by clicking the \"List of exercises in this part\" menu on the index page of that part. You can see your current exercise points total by clicking the blue blob in the bottom right corner of any page in the course material. The percentage in the \"Total points\" section for each part is the critical one for passing the course.",
+      "raw_source": "Each programming exercise and quiz in each part is worth a number of exercise points. You can find a list of all the exercises in a specific part by clicking the \"List of exercises in this part\" menu on the index page of that part. You can see your current exercise points total by clicking the blue blob in the bottom right corner of any page in the course material. The percentage in the \"Total points\" section for each part is the critical one for passing the course."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Grading guidelines",
+      "raw_source": "## Grading guidelines"
+    },
+    {
+      "raw_type": "heading",
+      "level": 3,
+      "content": "Grading scale",
+      "raw_source": "### Grading scale"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "MOOC is divided into two courses: Introduction to Programming (parts 1 to 7) and Advanced Course in Programming (parts 8 to 14).\nBoth courses are graded on the following scale:",
+      "raw_source": "MOOC is divided into two courses: Introduction to Programming (parts 1 to 7) and Advanced Course in Programming (parts 8 to 14).\nBoth courses are graded on the following scale:"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<table>\n    <thead>\n    <tr>\n        <th>Total points</th>\n        <th>Final grade</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr>\n        <td>90 % or more</td>\n        <td>5 (Excellent)</td>\n    </tr>\n    <tr>\n        <td>80 % or more, less than 90 %</td>\n        <td>4 (Very good)</td>\n    </tr>\n    <tr>\n        <td>70 % or more, less than 80 %</td>\n        <td>3 (Good)</td>\n    </tr>\n    <tr>\n        <td>60 % or more, less than 70 %</td>\n        <td>2 (Satisfactory)</td>\n    </tr>\n    <tr>\n        <td>50 % or more, less than 60 %</td>\n        <td>1 (Sufficient)</td>\n    </tr>\n    <tr>\n        <td>less than 50 %</td>\n        <td>Fail</td>\n    </tr>\n    </tbody>\n</table>",
+      "raw_source": "<table>\n    <thead>\n    <tr>\n        <th>Total points</th>\n        <th>Final grade</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr>\n        <td>90 % or more</td>\n        <td>5 (Excellent)</td>\n    </tr>\n    <tr>\n        <td>80 % or more, less than 90 %</td>\n        <td>4 (Very good)</td>\n    </tr>\n    <tr>\n        <td>70 % or more, less than 80 %</td>\n        <td>3 (Good)</td>\n    </tr>\n    <tr>\n        <td>60 % or more, less than 70 %</td>\n        <td>2 (Satisfactory)</td>\n    </tr>\n    <tr>\n        <td>50 % or more, less than 60 %</td>\n        <td>1 (Sufficient)</td>\n    </tr>\n    <tr>\n        <td>less than 50 %</td>\n        <td>Fail</td>\n    </tr>\n    </tbody>\n</table>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The final grade is calculated based on the number of exercise points received during the course (50 % of the final grade) and points received in the exam (50 % of the final grade). Your exercise points percentage equals `([all received exercise points] / [number of exercise points available on course]) * 100`. We are working on including this percentage in the visualization in the bottom right corner of each page.",
+      "raw_source": "The final grade is calculated based on the number of exercise points received during the course (50 % of the final grade) and points received in the exam (50 % of the final grade). Your exercise points percentage equals `([all received exercise points] / [number of exercise points available on course]) * 100`. We are working on including this percentage in the visualization in the bottom right corner of each page."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "For example, if your total points percentage for the exercises for the whole course is 42 %, and you receive 79 % of the points in the exam, your final points percentage will be (42 % + 79 %) / 2 = 60.5 %, which equals grade 2 (Satisfactory).",
+      "raw_source": "For example, if your total points percentage for the exercises for the whole course is 42 %, and you receive 79 % of the points in the exam, your final points percentage will be (42 % + 79 %) / 2 = 60.5 %, which equals grade 2 (Satisfactory)."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "To pass the course, you must have received at least 25% of the exercise points for each part of the course, regardless of the above calculation.",
+      "raw_source": "To pass the course, you must have received at least 25% of the exercise points for each part of the course, regardless of the above calculation."
+    },
+    {
+      "raw_type": "heading",
+      "level": 4,
+      "content": "Exam points cutoff",
+      "raw_source": "#### Exam points cutoff"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "To pass the course, you must receive at least 50% of the total points available in the exam.",
+      "raw_source": "To pass the course, you must receive at least 50% of the total points available in the exam."
+    },
+    {
+      "raw_type": "heading",
+      "level": 4,
+      "content": "Suspected cheating",
+      "raw_source": "#### Suspected cheating"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If, during the examination of exam papers, there is reason to suspect cheating based on either the exam answers or MOOC answers, the exam taker will be sent a request for a response. If the response is acceptable, a short remote interview will be arranged, during which the exam taker will explain their solutions to the tasks assigned by the teacher. If there is reason to believe that the solutions were made independently, the student will receive a normal grade for the course, and no suspicion will be noted anywhere. If the student is unable to provide an acceptable explanation or explain their solutions in an acceptable manner, the exam and course performance will be rejected and the matter will be referred for further consideration in accordance with the University of Helsinki's exam cheating rules.",
+      "raw_source": "If, during the examination of exam papers, there is reason to suspect cheating based on either the exam answers or MOOC answers, the exam taker will be sent a request for a response. If the response is acceptable, a short remote interview will be arranged, during which the exam taker will explain their solutions to the tasks assigned by the teacher. If there is reason to believe that the solutions were made independently, the student will receive a normal grade for the course, and no suspicion will be noted anywhere. If the student is unable to provide an acceptable explanation or explain their solutions in an acceptable manner, the exam and course performance will be rejected and the matter will be referred for further consideration in accordance with the University of Helsinki's exam cheating rules."
+    }
+  ]
+}

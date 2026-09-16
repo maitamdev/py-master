@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-35_no_vowels_allowed",
+  "lesson_id": "part04-6-strings-and-lists",
+  "part": 4,
+  "tmc_name": "part04-35_no_vowels_allowed",
+  "title_original": "No vowels allowed",
+  "title_vi": "Không cho phép nguyên âm",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `no_vowels`, which takes a string argument. The function returns a new string, which should be the same as the original but with all vowels removed.\n\nYou can assume the string will contain only characters from the lowercase English alphabet a...z.\n\nAn example of expected behaviour:\n\n```python\nmy_string = \"this is an example\"\nprint(no_vowels(my_string))\n```\n\n<sample-output>\n\nths s n xmpl\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `no_vowels`, hàm này nhận đối số chuỗi. Hàm trả về một chuỗi mới, chuỗi này phải giống với chuỗi ban đầu nhưng đã loại bỏ tất cả các nguyên âm.\n\nBạn có thể giả sử chuỗi sẽ chỉ chứa các ký tự từ bảng chữ cái tiếng Anh viết thường a...z.\n\nMột ví dụ về hành vi dự kiến:\n\n```python\nmy_string = \"this is an example\"\nprint(no_vowels(my_string))\n```\n\n<sample-output>\n\nđó là xmpl\n\n</sample-output>",
+  "starter_code": "my_string = \"this is an example\"\nprint(no_vowels(my_string))",
+  "grading_data_available": false,
+  "source_hash": "6139fd0ea9f4471adca14b30783104f488ba8480db61d327f285962ac5a5e10c",
+  "order": 59
+}

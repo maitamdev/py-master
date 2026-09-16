@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-01_fix_syntax",
+  "lesson_id": "part02-1-programming_terminology",
+  "part": 2,
+  "tmc_name": "part02-01_fix_syntax",
+  "title_original": "Fix the syntax",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": "400px",
+  "description_original": "The following program contains several _syntactic errors_. Please fix the program so that the syntax is in order and the program works as specified by the examples below.\n\n```python\n  number = input(\"Please type in a number: \")\n  if number>100\n    print(\"The number was greater than one hundred\")\n    number - 100\n    print(\"Now its value has decreased by one hundred)\n     print(\"Its value is now\"+ number)\n print(number + \" must be my lucky number!\")\n print(\"Have a nice day!)\n```\n\n<sample-output>\n\nPlease type in a number: **13**\n13 must be my lucky number!\nHave a nice day!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **101**\nThe number was greater than one hundred\nNow its value has decreased by one hundred\nIts value is now 1\n1 must be my lucky number!\nHave a nice day!\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "  number = input(\"Please type in a number: \")\n  if number>100\n    print(\"The number was greater than one hundred\")\n    number - 100\n    print(\"Now its value has decreased by one hundred)\n     print(\"Its value is now\"+ number)\n print(number + \" must be my lucky number!\")\n print(\"Have a nice day!)",
+  "grading_data_available": false,
+  "source_hash": "0406408baec532c078ec41f5d856575e2be81ad71fbff7337466a464cf4e3b7b",
+  "order": 81
+}

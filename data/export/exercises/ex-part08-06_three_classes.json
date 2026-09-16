@@ -1,0 +1,16 @@
+{
+  "id": "ex-part08-06_three_classes",
+  "lesson_id": "part08-3-defining-classes",
+  "part": 8,
+  "tmc_name": "part08-06_three_classes",
+  "title_original": "Three classes",
+  "title_vi": "Ba lớp",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write the three classes specified below. Each class should have exactly the same names and types of attributes as listed.\n\nPlease also include a constructor in each class. The constructor should take the initial values of the attributes as its arguments, in the order listed below.\n\n1. Class Checklist\n- attribute header (string)\n- attribute entries (list)\n\n2. Class Customer\n- attribute id (string)\n- attribute balance (float)\n- attribute discount (integer)\n\n3. Class Cable\n- attribute model (string)\n- attribute length (float)\n- attribute max_speed (integer)\n- attribute bidirectional (Boolean)",
+  "description_vi": "Vui lòng viết ba lớp được chỉ định dưới đây. Mỗi lớp phải có cùng tên và loại thuộc tính như được liệt kê.\n\nVui lòng bao gồm một hàm tạo trong mỗi lớp. Hàm tạo nên lấy các giá trị ban đầu của các thuộc tính làm đối số của nó, theo thứ tự được liệt kê bên dưới.\n\n1. Danh sách kiểm tra lớp học\n- tiêu đề thuộc tính (chuỗi)\n- mục thuộc tính (danh sách)\n\n2. Hạng khách hàng\n- id thuộc tính (chuỗi)\n- cân bằng thuộc tính (float)\n- thuộc tính giảm giá (số nguyên)\n\n3. Cáp lớp\n- mô hình thuộc tính (chuỗi)\n- chiều dài thuộc tính (float)\n- thuộc tính max_speed (số nguyên)\n- thuộc tính hai chiều (Boolean)",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "cd7ac14b8c42faad3719fab7e1c44a38f15f0b219180bcdc5dded22579f19e2f",
+  "order": 42
+}

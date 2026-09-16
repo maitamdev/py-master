@@ -1,0 +1,150 @@
+{
+  "id": "part10-2-access-modifiers",
+  "part": 10,
+  "part_slug": "part-10",
+  "slug": "2-access-modifiers",
+  "is_part_index": false,
+  "title_original": "Access modifiers",
+  "path": "/part-10/2-access-modifiers",
+  "source_path": "data/part-10/2-access-modifiers.md",
+  "source_hash": "ea325a571a335a76a322c8c2762bf0c94459a5a250eb99b6ae902ff6beb50f2c",
+  "frontmatter": {
+    "path": "/part-10/2-access-modifiers",
+    "title": "Access modifiers",
+    "hidden": false
+  },
+  "chunks_count": 21,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will understand the access modifiers private and protected\n- You will know how the visibility of traits is determined in Python",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will understand the access modifiers private and protected\n- You will know how the visibility of traits is determined in Python\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If a trait is defined as private in the base class, it is not directly accessible in any derived classes, as was briefly mentioned in the previous section. Let's take a look at an example. In the `Notebook` class below the notes are stored in a list, and the list attribute is private:",
+      "raw_source": "If a trait is defined as private in the base class, it is not directly accessible in any derived classes, as was briefly mentioned in the previous section. Let's take a look at an example. In the `Notebook` class below the notes are stored in a list, and the list attribute is private:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "\nclass Notebook:\n    \"\"\" A Notebook stores notes in string format \"\"\"\n\n    def __init__(self):\n        # private attribute\n        self.__notes = []\n\n    def add_note(self, note):\n        self.__notes.append(note)\n\n    def retrieve_note(self, index):\n        return self.__notes[index]\n\n    def all_notes(self):\n        return \",\".join(self.__notes)\n",
+      "raw_source": "```python\n\nclass Notebook:\n    \"\"\" A Notebook stores notes in string format \"\"\"\n\n    def __init__(self):\n        # private attribute\n        self.__notes = []\n\n    def add_note(self, note):\n        self.__notes.append(note)\n\n    def retrieve_note(self, index):\n        return self.__notes[index]\n\n    def all_notes(self):\n        return \",\".join(self.__notes)\n\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the integrity of the class is key, making the list attribute `notes` private makes sense. The class provides the client with suitable methods for adding and browsing notes, after all. This approach becomes problematic if we define a new class `NotebookPro`, which inherits the `Notebook` class. The private list attribute is not accessible to the client, but neither is it accessible to the derived classes. If we try to access it, as in the `find_notes` method below, we get an error:",
+      "raw_source": "If the integrity of the class is key, making the list attribute `notes` private makes sense. The class provides the client with suitable methods for adding and browsing notes, after all. This approach becomes problematic if we define a new class `NotebookPro`, which inherits the `Notebook` class. The private list attribute is not accessible to the client, but neither is it accessible to the derived classes. If we try to access it, as in the `find_notes` method below, we get an error:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class NotebookPro(Notebook):\n    \"\"\" A better Notebook with search functionality \"\"\"\n    def __init__(self):\n        # This is OK, the constructor is public despite the underscores\n        super().__init__()\n\n    # This causes an error\n    def find_notes(self, search_term):\n        found = []\n        # the attribute __notes is private\n        # the derived class can't access it directly\n        for note in self.__notes:\n            if search_term in note:\n                found.append(note)\n\n        return found",
+      "raw_source": "```python\nclass NotebookPro(Notebook):\n    \"\"\" A better Notebook with search functionality \"\"\"\n    def __init__(self):\n        # This is OK, the constructor is public despite the underscores\n        super().__init__()\n\n    # This causes an error\n    def find_notes(self, search_term):\n        found = []\n        # the attribute __notes is private\n        # the derived class can't access it directly\n        for note in self.__notes:\n            if search_term in note:\n                found.append(note)\n\n        return found\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "AttributeError: 'NotebookPro' object has no attribute '_NotebookPro__notes'",
+      "raw_source": "<sample-output>\n    \nAttributeError: 'NotebookPro' object has no attribute '_NotebookPro__notes'\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Protected traits",
+      "raw_source": "## Protected traits"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Many object oriented programming languages have a feature, usually a special keyword, for _protecting_ traits. This means that a trait should be hidden from the clients of the class, but kept accessible to its subclasses. Python in general abhors keywords, so no such feature is directly available in Python. Instead, there is a _convention_ of marking protected traits in a certain way.",
+      "raw_source": "Many object oriented programming languages have a feature, usually a special keyword, for _protecting_ traits. This means that a trait should be hidden from the clients of the class, but kept accessible to its subclasses. Python in general abhors keywords, so no such feature is directly available in Python. Instead, there is a _convention_ of marking protected traits in a certain way."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Remember, a trait can be hidden by prefixing its name with two underscores:",
+      "raw_source": "Remember, a trait can be hidden by prefixing its name with two underscores:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def __init__(self):\n    self.__notes = []",
+      "raw_source": "```python\ndef __init__(self):\n    self.__notes = []\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The agreed convention to _protect_ a trait is to prefix the name with a _single_ underscore. Now, this is _just_ a convention. Nothing prevents a programmer from breaking the convention, but it is considered a bad programming practice.",
+      "raw_source": "The agreed convention to _protect_ a trait is to prefix the name with a _single_ underscore. Now, this is _just_ a convention. Nothing prevents a programmer from breaking the convention, but it is considered a bad programming practice."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def __init__(self):\n    self._notes = []",
+      "raw_source": "```python\ndef __init__(self):\n    self._notes = []\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Below we have the entire Notebook example, with protected `_notes` instead of private `__notes`:",
+      "raw_source": "Below we have the entire Notebook example, with protected `_notes` instead of private `__notes`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class Notebook:\n    \"\"\" A Notebook stores notes in string format \"\"\"\n\n    def __init__(self):\n        # protected attribute\n        self._notes = []\n\n    def add_note(self, note):\n        self._notes.append(note)\n\n    def retrieve_note(self, index):\n        return self._notes[index]\n\n    def all_notes(self):\n        return \",\".join(self._notes)\n\nclass NotebookPro(Notebook):\n    \"\"\" A better Notebook with search functionality \"\"\"\n    def __init__(self):\n        # This is OK, the constructor is public despite the underscores\n        super().__init__()\n\n    # This works, the protected attribute is accessible to the derived class\n    def find_notes(self, search_term):\n        found = []\n        for note in self._notes:\n            if search_term in note:\n                found.append(note)\n\n        return found\n",
+      "raw_source": "```python\nclass Notebook:\n    \"\"\" A Notebook stores notes in string format \"\"\"\n\n    def __init__(self):\n        # protected attribute\n        self._notes = []\n\n    def add_note(self, note):\n        self._notes.append(note)\n\n    def retrieve_note(self, index):\n        return self._notes[index]\n\n    def all_notes(self):\n        return \",\".join(self._notes)\n\nclass NotebookPro(Notebook):\n    \"\"\" A better Notebook with search functionality \"\"\"\n    def __init__(self):\n        # This is OK, the constructor is public despite the underscores\n        super().__init__()\n\n    # This works, the protected attribute is accessible to the derived class\n    def find_notes(self, search_term):\n        found = []\n        for note in self._notes:\n            if search_term in note:\n                found.append(note)\n\n        return found\n\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Below we have a handy table for the visibility of attributes with different access modifiers:",
+      "raw_source": "Below we have a handy table for the visibility of attributes with different access modifiers:"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Access modifier\t| Example | Visible to client | Visible to derived class\n:--------:|:-------------:|:---:|:----:\nPublic    | `self.name`   | yes | yes\nProtected | `self._name`  | no  | yes\nPrivate   | `self.__name` | no  | no",
+      "raw_source": "Access modifier\t| Example | Visible to client | Visible to derived class\n:--------:|:-------------:|:---:|:----:\nPublic    | `self.name`   | yes | yes\nProtected | `self._name`  | no  | yes\nPrivate   | `self.__name` | no  | no"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Access modifiers work the same with all traits. For example, in the `Person` class below we have the protected method `capitalize_initials`. It can be used from the derived class `Footballer`:",
+      "raw_source": "Access modifiers work the same with all traits. For example, in the `Person` class below we have the protected method `capitalize_initials`. It can be used from the derived class `Footballer`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class Person:\n    def __init__(self, name: str):\n        self._name = self._capitalize_initials(name)\n\n    def _capitalize_initials(self, name):\n        name_capitalized = []\n        for n in name.split(\" \"):\n            name_capitalized.append(n.capitalize())\n\n        return \" \".join(name_capitalized)\n\n    def __repr__(self):\n        return self.__name\n\nclass Footballer(Person):\n\n    def __init__(self, name: str, nickname: str, position: str):\n        super().__init__(name)\n        # the method is available as it is protected in the base class\n        self.__nickname = self._capitalize_initials(nickname)\n        self.__position = position\n\n    def __repr__(self):\n        r =  f\"Footballer - name: {self._name}, nickname: {self.__nickname}\"\n        r += f\", position: {self.__position}\"\n        return r\n\n# Test the classes\nif __name__ == \"__main__\":\n    jp = Footballer(\"peter pythons\", \"pyper\", \"forward\")\n    print(jp)\n",
+      "raw_source": "```python\nclass Person:\n    def __init__(self, name: str):\n        self._name = self._capitalize_initials(name)\n\n    def _capitalize_initials(self, name):\n        name_capitalized = []\n        for n in name.split(\" \"):\n            name_capitalized.append(n.capitalize())\n\n        return \" \".join(name_capitalized)\n\n    def __repr__(self):\n        return self.__name\n\nclass Footballer(Person):\n\n    def __init__(self, name: str, nickname: str, position: str):\n        super().__init__(name)\n        # the method is available as it is protected in the base class\n        self.__nickname = self._capitalize_initials(nickname)\n        self.__position = position\n\n    def __repr__(self):\n        r =  f\"Footballer - name: {self._name}, nickname: {self.__nickname}\"\n        r += f\", position: {self.__position}\"\n        return r\n\n# Test the classes\nif __name__ == \"__main__\":\n    jp = Footballer(\"peter pythons\", \"pyper\", \"forward\")\n    print(jp)\n\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Footballer - name: Peter Pythons, nickname: Pyper, position: forward",
+      "raw_source": "<sample-output>\n\nFootballer - name: Peter Pythons, nickname: Pyper, position: forward\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Supergroup",
+        "tmcname": "part10-05_supergroup"
+      },
+      "inner_content": "The exercise template contains the class definition for a `SuperHero`.\n\nPlease define a class named `SuperGroup` which represents a group of superheroes. The class should contain the following members:\n\n* **Protected** attributes name (str), location (str) and members (list)\n* A constructor which takes the name and location of the group as arguments, in that order\n* Getter methods for the name and location attributes\n* A method named `add_member(hero: SuperHero)` which adds a new member to the group\n* A method named `print_group` which prints out information about the group and its members, following the format specified below\n\nAn example of the class in action:\n\n```python\nsuperperson = SuperHero(\"SuperPerson\", \"Superspeed, superstrength\")\ninvisible = SuperHero(\"Invisible Inca\", \"Invisibility\")\nrevengers = SuperGroup(\"Revengers\", \"Emerald City\")\n\nrevengers.add_member(superperson)\nrevengers.add_member(invisible)\nrevengers.print_group()\n```\n\n<sample-output>\n\nRevengers, Emerald City\nMembers:\nSuperPerson, superpowers: Superspeed, superstrength\nInvisible Inca, superpowers: Invisibility\n\n</sample-output>\n\nIf you need a refresher on getter and setter methods, please have a look at [this section in the previous part](/part-9/3-encapsulation#getters-and-setters) of the material.",
+      "raw_source": "<programming-exercise name='Supergroup' tmcname='part10-05_supergroup'>\n\nThe exercise template contains the class definition for a `SuperHero`.\n\nPlease define a class named `SuperGroup` which represents a group of superheroes. The class should contain the following members:\n\n* **Protected** attributes name (str), location (str) and members (list)\n* A constructor which takes the name and location of the group as arguments, in that order\n* Getter methods for the name and location attributes\n* A method named `add_member(hero: SuperHero)` which adds a new member to the group\n* A method named `print_group` which prints out information about the group and its members, following the format specified below\n\nAn example of the class in action:\n\n```python\nsuperperson = SuperHero(\"SuperPerson\", \"Superspeed, superstrength\")\ninvisible = SuperHero(\"Invisible Inca\", \"Invisibility\")\nrevengers = SuperGroup(\"Revengers\", \"Emerald City\")\n\nrevengers.add_member(superperson)\nrevengers.add_member(invisible)\nrevengers.print_group()\n```\n\n<sample-output>\n\nRevengers, Emerald City\nMembers:\nSuperPerson, superpowers: Superspeed, superstrength\nInvisible Inca, superpowers: Invisibility\n\n</sample-output>\n\nIf you need a refresher on getter and setter methods, please have a look at [this section in the previous part](/part-9/3-encapsulation#getters-and-setters) of the material.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Secret magic potion",
+        "tmcname": "part10-06_secret_magic_potion"
+      },
+      "inner_content": "The exercise template contains the class definition for a `MagicPotion` which allows you to save a recipe for a magic potion. The class definition contains a constructor along with the methods\n\n* `add_ingredient(ingredient: str, amount: float)` and\n* `print_recipe()`\n\nPlease define a class named `SecretMagicPotion` which inherits the `MagicPotion` class and allows you to also protect the recipe with a password.\n\nThe new class should have a constructor which also takes the password string as an argument.\n\nThe class should also contain the following methods:\n\n* `add_ingredient(ingredient: str, amount: float, password: str)`\n* `print_recipe(password: str)`\n\nIf the password argument given to either of these methods is wrong, the methods should raise a `ValueError` exception.\n\nIf the password is correct, each method should call the relevant method in the parent class. Do not copy and paste anything from the MagicPotion class.\n\nAn example of how this would work:\n\n```python\ndiminuendo = SecretMagicPotion(\"Diminuendo maximus\", \"hocuspocus\")\ndiminuendo.add_ingredient(\"Toadstool\", 1.5, \"hocuspocus\")\ndiminuendo.add_ingredient(\"Magic sand\", 3.0, \"hocuspocus\")\ndiminuendo.add_ingredient(\"Frogspawn\", 4.0, \"hocuspocus\")\ndiminuendo.print_recipe(\"hocuspocus\")\n\ndiminuendo.print_recipe(\"pocushocus\") # WRONG password!\n```\n\n<sample-output>\n\nDiminuendo maximus:\nToadstool 1.5 grams\nMagic sand 3.0 grams\nFrogspawn 4.0 grams\nTraceback (most recent call last):\n  File \"secret_magic_potion.py\", line 98, in <module>\n    raise ValueError(\"Wrong password!\")\nValueError: Wrong password!\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Secret magic potion' tmcname='part10-06_secret_magic_potion'>\n\nThe exercise template contains the class definition for a `MagicPotion` which allows you to save a recipe for a magic potion. The class definition contains a constructor along with the methods\n\n* `add_ingredient(ingredient: str, amount: float)` and\n* `print_recipe()`\n\nPlease define a class named `SecretMagicPotion` which inherits the `MagicPotion` class and allows you to also protect the recipe with a password.\n\nThe new class should have a constructor which also takes the password string as an argument.\n\nThe class should also contain the following methods:\n\n* `add_ingredient(ingredient: str, amount: float, password: str)`\n* `print_recipe(password: str)`\n\nIf the password argument given to either of these methods is wrong, the methods should raise a `ValueError` exception.\n\nIf the password is correct, each method should call the relevant method in the parent class. Do not copy and paste anything from the MagicPotion class.\n\nAn example of how this would work:\n\n```python\ndiminuendo = SecretMagicPotion(\"Diminuendo maximus\", \"hocuspocus\")\ndiminuendo.add_ingredient(\"Toadstool\", 1.5, \"hocuspocus\")\ndiminuendo.add_ingredient(\"Magic sand\", 3.0, \"hocuspocus\")\ndiminuendo.add_ingredient(\"Frogspawn\", 4.0, \"hocuspocus\")\ndiminuendo.print_recipe(\"hocuspocus\")\n\ndiminuendo.print_recipe(\"pocushocus\") # WRONG password!\n```\n\n<sample-output>\n\nDiminuendo maximus:\nToadstool 1.5 grams\nMagic sand 3.0 grams\nFrogspawn 4.0 grams\nTraceback (most recent call last):\n  File \"secret_magic_potion.py\", line 98, in <module>\n    raise ValueError(\"Wrong password!\")\nValueError: Wrong password!\n\n</sample-output>\n\n</programming-exercise>"
+    }
+  ]
+}

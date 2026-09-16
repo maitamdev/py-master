@@ -1,0 +1,591 @@
+{
+  "id": "page-faq",
+  "slug": "faq",
+  "title_original": "Frequently asked questions",
+  "title_vi": "Câu hỏi thường gặp",
+  "path": "/faq",
+  "source_path": "data/faq.md",
+  "source_hash": "4b9b8408d8a472aa29d550bbb218956ece699c9bd85bda22d7c3a83a6f76aecc",
+  "blocks_count": 34,
+  "blocks": [
+    {
+      "id": "blk-page-faq-0001",
+      "type": "custom_component",
+      "order": 1,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "component_name": "table-of-contents",
+        "attributes": {},
+        "raw_source": "<table-of-contents></table-of-contents>",
+        "parsed": true
+      }
+    },
+    {
+      "id": "blk-page-faq-0002",
+      "type": "heading",
+      "order": 2,
+      "source_hash": "3d3ba87c138359c8f4056a7318784078d195a0db89b80f75a496380e37d6fd6c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "I found a mistake in the course material or in a programming exercise"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tôi tìm thấy lỗi trong tài liệu khóa học hoặc trong bài tập lập trình"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-faq-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "bd4989ea7471d0dd255f0493e2c01ac397f8cd221a0c8ff9f727bb7d1f01bbe6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We would be very grateful if you'd let us know through the course support channels or via email to course maintainers at ohjelmoinnin-mooc@helsinki.fi. Thank you!"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng tôi sẽ rất biết ơn nếu bạn cho chúng tôi biết thông qua các kênh hỗ trợ khóa học hoặc qua email tới những người duy trì khóa học tại ohjelmoinnin-mooc@helsinki.fi. Cảm ơn!"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0004",
+      "type": "heading",
+      "order": 4,
+      "source_hash": "44691426196ce90d71453b30a16f74b842d78806cbf253058d5f98f97a2ad217",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Why doesn't TMC show all parts of the course? How can I download the next part's exercises?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tại sao TMC không hiển thị tất cả các phần của khóa học? Làm cách nào để tải xuống bài tập của phần tiếp theo?"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-faq-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "0ff0b86f76e039061d3683f977e35aa1c70acad819e11b6b3d5c165283a9d314",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Next part's exercises can be downloaded once you've gained 25% or more of the previous part's exercise points."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn có thể tải xuống các bài tập của phần tiếp theo khi bạn đã đạt được 25% điểm bài tập của phần trước trở lên."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "31dbda6c4cc594c7cddd95036beed74508421ea04fdc1bb85ec5f85062c64d95",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<span class=\"h2\">Participating from educational institutions in Finland</span>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<span class=\"h2\">Tham gia từ các cơ sở giáo dục ở Phần Lan</span>"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0007",
+      "type": "custom_component",
+      "order": 7,
+      "source_hash": "9a396ca084a6061f91f4dc11ee561aa27bad1902a2dcb9ef2ba838d24e006b93",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The questions below are relevant mainly to participants who are enrolled in a Finnish university or other educational institution."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các câu hỏi dưới đây chủ yếu liên quan đến những người tham gia đang theo học tại một trường đại học Phần Lan hoặc cơ sở giáo dục khác."
+      },
+      "metadata": {
+        "component_name": "notice",
+        "attributes": {},
+        "raw_source": "<notice>The questions below are relevant mainly to participants who are enrolled in a Finnish university or other educational institution.</notice>",
+        "parsed": true
+      }
+    },
+    {
+      "id": "blk-page-faq-0008",
+      "type": "heading",
+      "order": 8,
+      "source_hash": "6690278e12c39a0444fd25095e17873287f603bf5cf50a83a030c4d474d65f4f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "I don't know how to enrol, can I still start the course?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tôi không biết cách đăng ký, tôi vẫn có thể bắt đầu khóa học được không?"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-faq-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "3014b78d5470b965af395d5e82c620741007601e771723a813010ecd26cd7ed1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Yes you can! You do not need to enrol to start, or, in fact, even to complete the course. After the course is finished, you will be emailed instructions for receiving credits for the course."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vâng, bạn có thể! Bạn không cần phải đăng ký để bắt đầu, hoặc trên thực tế, thậm chí để hoàn thành khóa học. Sau khi khóa học kết thúc, bạn sẽ nhận được email hướng dẫn cách nhận tín chỉ cho khóa học."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0010",
+      "type": "heading",
+      "order": 10,
+      "source_hash": "dfdf85ad8bb9da8e040cfc95eb5ca1562392c4aee6c4935fd694210e984105b7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Can I receive official study credits for this course?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tôi có thể nhận được tín chỉ học tập chính thức cho khóa học này không?"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-faq-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "8063d8ee667ad11e958751d62732024e7df0c20e4a043b026d73c9c91f3fbb9c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "At the end of the course you will need to take part in the course exam. If you receive a passing grade, you will be able to get study credits. See the [Grading and exams](/grading-and-exams) page for more details about grading. You can find detailed instructions for registering credits below."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Kết thúc khóa học, bạn sẽ phải tham gia kỳ thi của khóa học. Nếu bạn đạt điểm đậu, bạn sẽ có thể nhận được tín chỉ học tập. Xem trang [Chấm điểm và bài kiểm tra](/grading-and-exams) để biết thêm chi tiết về cách chấm điểm. Bạn có thể tìm thấy hướng dẫn chi tiết để đăng ký tín dụng dưới đây."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "356af8a15c02e493efb0b017856657831955a94eff43ae60a6d71d9c325ed797",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "To receive credits for the course, you must enroll on the course through the Open University after you have successfully completed the online exam and passed the course. Follow these instructions to enroll on the course:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Để nhận được tín chỉ cho khóa học, bạn phải đăng ký khóa học thông qua Đại học Mở sau khi bạn đã hoàn thành xuất sắc bài kiểm tra trực tuyến và vượt qua khóa học. Hãy làm theo hướng dẫn sau để đăng ký khóa học:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0013",
+      "type": "list",
+      "order": 13,
+      "source_hash": "f3acc822f99bfdd5041abcb72fc47b71ded7c7c88605058e71214302f5886d2b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "1. Sign into the mooc.fi website through the following link: https://www.mooc.fi/fi/profile/completions\n2. Make sure you log in with the same email address that you have used on the course platform.\n3. After you have logged in, you will see a list of courses that you have completed. There is a Register Completion button on the right side of the course name.\n4. Clicking on the button will take you to the Open University enrollment form. Fill the form to receive credits. Be sure to enter the email address that you have used to complete the course in the enrolment form field 'Your email address on the MOOC course'."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "1. Đăng nhập vào trang web mooc.fi thông qua liên kết sau: https://www.mooc.fi/fi/profile/completions\n2. Đảm bảo bạn đăng nhập bằng cùng địa chỉ email mà bạn đã sử dụng trên nền tảng khóa học.\n3. Sau khi đăng nhập, bạn sẽ thấy danh sách các khóa học mà bạn đã hoàn thành. Có nút Đăng ký hoàn thành ở bên phải tên khóa học.\n4. Nhấp vào nút sẽ đưa bạn đến mẫu đăng ký Đại học Mở. Điền vào biểu mẫu để nhận tín dụng. Hãy nhớ nhập địa chỉ email mà bạn đã sử dụng để hoàn thành khóa học vào trường mẫu đăng ký 'Địa chỉ email của bạn trong khóa học MOOC'."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "ea8b310efd5a6de22a142c697c97ce917561d632442cb9ac6c342ea3b891f8d1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You will receive credits for the course within a few days of the course enrollment. Please note that the credits will be registered to the University of Helsinki study register."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn sẽ nhận được tín chỉ cho khóa học trong vòng vài ngày kể từ ngày đăng ký khóa học. Xin lưu ý rằng các khoản tín dụng sẽ được đăng ký vào sổ đăng ký học tập của Đại học Helsinki."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0015",
+      "type": "heading",
+      "order": 15,
+      "source_hash": "f577651a69627986f91e3fe10f12b4b36fbf5c49ebe0168e289c5289322f7910",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Can my study credits be transferred to my home institution?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tín chỉ học tập của tôi có thể được chuyển sang trường ở nước tôi không?"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-faq-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "4ac20d15b517bc3b538d01acc21ac2e3593a6bf74c1e72fdab3ec5ec6d706ad2",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If you obtain a passing grade for the course, you will receive study credits through the University of Helsinki. A transcript of your studies will likely suffice for credit transfer at your home institution, but please check this with the study counsellors at your home institution."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu đạt điểm đậu cho khóa học, bạn sẽ nhận được tín chỉ học tập thông qua Đại học Helsinki. Bảng điểm quá trình học tập của bạn có thể đủ để chuyển tín chỉ tại trường sở tại của bạn, nhưng vui lòng kiểm tra điều này với các cố vấn học tập tại trường sở tại của bạn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "8e7024461017e710622de6e1cd31149754d25ca5ac675ce192a93e7c6f023a68",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If you are unable to receive study credits for the course (see the question above), you will still receive a certificate for completing the course. Please check with the study counsellors at your home institution if they have a process for awarding credits based on the certificate."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu bạn không thể nhận được tín chỉ học tập cho khóa học (xem câu hỏi ở trên), bạn vẫn sẽ nhận được chứng chỉ hoàn thành khóa học. Vui lòng kiểm tra với các cố vấn học tập tại trường nơi bạn sống xem họ có quy trình cấp tín chỉ dựa trên chứng chỉ hay không."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0018",
+      "type": "heading",
+      "order": 18,
+      "source_hash": "6890338ebd086f1678fcd705a9a41604bd2b0a3685d9fef10cdaf512d3a92562",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Where do I get the certificate?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tôi lấy chứng chỉ ở đâu?"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-faq-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "62f65298b83b0486e4eb16b720feee585d74ab5e55d0a7bc4841fa44638fb974",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If you obtain a passing grade for the course, you can get a certificate from here: https://www.mooc.fi/en/profile/completions. Just log in with your MOOC account."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu đạt điểm đậu cho khóa học, bạn có thể nhận chứng chỉ từ đây: https://www.mooc.fi/en/profile/completions. Chỉ cần đăng nhập bằng tài khoản MOOC của bạn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0020",
+      "type": "heading",
+      "order": 20,
+      "source_hash": "23f70c0ed61dcce94921f771c58797057344481ba0fdb3c8110292ebce26bb48",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Do I need to have a University of Helsinki user account?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tôi có cần phải có tài khoản người dùng Đại học Helsinki không?"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-faq-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "c9d6955b860bb61efda809e2e5414c3f3a30bde49bd4786388f724c6743d8f82",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "No, you do not need a University of Helsinki user account to study on this course."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Không, bạn không cần có tài khoản người dùng Đại học Helsinki để học khóa học này."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0022",
+      "type": "heading",
+      "order": 22,
+      "source_hash": "4d367798a50d377031718829956d9a9273ef663fe1e764c52bc9e5a74972f6bf",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "How do I cancel my course enrolment?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Làm cách nào để hủy đăng ký khóa học của tôi?"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-faq-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "f0582fd9b3931c98838b1dcb387dd526c9b8cd346f0f7d1b1260b8481124f833",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "There is no need to enrol on this course, so you do not have to unenrol either. All you have to do is stop participating in the course."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Không cần phải đăng ký khóa học này nên bạn cũng không cần phải hủy đăng ký. Tất cả những gì bạn phải làm là ngừng tham gia khóa học."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "523a38546fe0afa6a4f4afb4cadc50f702eeffbf610a9020e1c382c980c40ced",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<span class=\"h2\">Questions to do with the Finnish social welfare authorities</span>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<span class=\"h2\">Các câu hỏi liên quan đến cơ quan phúc lợi xã hội Phần Lan</span>"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0025",
+      "type": "custom_component",
+      "order": 25,
+      "source_hash": "0e7edbb3c6dd298a4aebfcf9300f18d62ab6ae7308d2eac134e8fd168857197c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The questions below are relevant only to course participants dealing with the Finnish social welfare authorities."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các câu hỏi dưới đây chỉ liên quan đến những người tham gia khóa học làm việc với các cơ quan phúc lợi xã hội Phần Lan."
+      },
+      "metadata": {
+        "component_name": "notice",
+        "attributes": {},
+        "raw_source": "<notice>The questions below are relevant only to course participants dealing with the Finnish social welfare authorities.</notice>",
+        "parsed": true
+      }
+    },
+    {
+      "id": "blk-page-faq-0026",
+      "type": "heading",
+      "order": 26,
+      "source_hash": "1e8f3c59ea5531aa616b648317aee109f2bd61529110c1044b298de28749dd7e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Kela (Finland's Social Insurance Institution) or the jobseekers' services in Finland wants a statement about this course or a transcript of my studies"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Kela (Tổ chức Bảo hiểm Xã hội Phần Lan) hoặc các dịch vụ dành cho người tìm việc ở Phần Lan muốn có thông báo về khóa học này hoặc bảng điểm quá trình học tập của tôi"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-faq-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "12d9665100dcf7f9923a8f2c85a97c8592b93c72b76a7334a8f9357b48020ba7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please guide them to this page:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng hướng dẫn họ đến trang này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "a2930b4bd643487296fe05026b0b30e4ccebe9dc2596f2166822ae937f6d065b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Ohjelmoinnin perusteet on kaikille avoin ja ilmainen verkkokurssi. Kurssin käymistä voi verrata kirjan lainaamiseen kirjastosta. Kirjastosta lainattava kirja saattaa liittyä johonkin yliopisto-opintoihin liittyvään kurssiin. Aivan samalla tavalla kuin kirjastosta lainattava kirja, verkkokurssimme on luettavissa huvin ja itsensä sivistämisen vuoksi tai yliopisto-opintojen edistämiseksi."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ohjelmoinnin perusteet trên kaikille avoin ja ilmainen verkkokurssi. Kurssin käymistä với verrata kirjan lainaamiseen kirjastosta. Kirjastosta lainattava kirja saattaa liittyä johonkin yliopisto-opintoihin liittyvään kurssiin. Aivan samalla tavalla kuin kirjastosta lainattava kirja, verkkokurssimme on luettavissa huvin ja itsensä sivistämisen vuoksi tai yliopisto-opintojen edistämiseksi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "708dd09aee28d1a7429e6624fcb048daedea2ba2d42d812ffb15cf6909142e47",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Ohjelmoinnin perusteet vastaa Helsingin yliopiston 5 opintopisteen kurssia. Kurssin suorittajat eivät kuitenkaan automaattisesti ole Helsingin yliopiston opiskelijoita, emmekä pakota ketään suorittamaan kurssia opintopisteisiin johtavassa muodossa. Kurssin suorittamisesta voi kuitenkin halutessaan saada opintopisteitä. Kurssille osallistuminen ei oikeuta opintotukeen."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ohjelmoinnin perusteet Vastaa Helsingin yliopiston 5 opintopisteen kurssia. Kurssin suorittajat eivät kuitenkaan automaattisesti ole Helsingin yliopiston opiskelijoita, emmekä pakota ketään suorittamaan kurssia opintopisteisiin johtavassa muodossa. Kurssin suorittamisesta với kuitenkin halutessaan to opintopisteitä. Kurssille osallistuminen ei oikeuta opintotukeen."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "59a3c15e6419793c2b49132a49dc6af09a79fb1aed0bac2b4b185002bd1614dd",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "English translation:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bản dịch tiếng Anh:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "333012addcd15fa504d983a0b7cd453504ebaa3eeee4622d9e8120b85128189b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Introduction to Programming is a massive open online course, free of charge and open to all. Taking the course is comparable to borrowing a book from the library. A book may be relevant to some university studies, but not all who borrow it are studying at a university. Similarly, this open online course can be taken just for fun and self improvement, or it can be a part of a university degree."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Giới thiệu về Lập trình là một khóa học trực tuyến mở rộng rãi, miễn phí và dành cho tất cả mọi người. Tham gia khóa học có thể so sánh với việc mượn một cuốn sách từ thư viện. Một cuốn sách có thể liên quan đến một số nghiên cứu ở trường đại học, nhưng không phải tất cả những người mượn nó đều đang học tại một trường đại học. Tương tự, khóa học trực tuyến mở này có thể được tham gia chỉ để giải trí và hoàn thiện bản thân hoặc có thể là một phần của bằng đại học."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "2703e7a18513c1998ba0521c2d09e52968f7ee9784f49a0a153141165f34c815",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The Introduction to Programming course translates to a course worth 5 study credits at the University of Helsinki. However, course participants are not automatically University of Helsinki students, and it is possible to participate in the course in a way that will not result in study credits. If the participant so wishes, they may receive credits for this course. Participating in this course does not entitle the participant to a governmental study grant."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khóa học Giới thiệu về Lập trình được chuyển thành một khóa học trị giá 5 tín chỉ học tập tại Đại học Helsinki. Tuy nhiên, những người tham gia khóa học không tự động là sinh viên Đại học Helsinki và có thể tham gia khóa học theo cách không mang lại tín chỉ học tập. Nếu người tham gia mong muốn, họ có thể nhận được tín chỉ cho khóa học này. Việc tham gia khóa học này không cho phép người tham gia nhận được trợ cấp nghiên cứu của chính phủ."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-faq-0033",
+      "type": "heading",
+      "order": 33,
+      "source_hash": "9a7e9d8753829d5a3cec21e334da27effa7c2e710da0058326e75dde3b8127f9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "I'm currently receiving unemployment benefits in Finland. Can I still take this course?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tôi hiện đang nhận trợ cấp thất nghiệp ở Phần Lan. Tôi vẫn có thể tham gia khóa học này chứ?"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-faq-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "e335850ba77b27ce6f9f5c749a02aec3ef0159acefc1be28f9e42501cf6fe715",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please take this up with your employment services office (TE-toimisto). Unfortunately, not all employment services offices treat this course in the same way. Some offices have withdrawn benefits for simply participating in the course, even if the participant is not aiming for a right to study or official study credits. On the other hand, some offices have even recommended this course without withdrawing benefits."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng giải quyết vấn đề này với văn phòng dịch vụ việc làm của bạn (TE-toimisto). Thật không may, không phải tất cả các văn phòng dịch vụ việc làm đều xử lý khóa học này theo cách giống nhau. Một số văn phòng đã rút lại các lợi ích chỉ vì tham gia khóa học, ngay cả khi người tham gia không hướng tới quyền học tập hoặc tín chỉ học tập chính thức. Mặt khác, một số văn phòng thậm chí còn khuyến nghị khóa học này mà không rút lại quyền lợi."
+      },
+      "metadata": {}
+    }
+  ]
+}

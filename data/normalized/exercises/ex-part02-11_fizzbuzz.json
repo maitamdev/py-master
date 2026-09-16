@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-11_fizzbuzz",
+  "lesson_id": "part02-3-combining-conditions",
+  "part": 2,
+  "tmc_name": "part02-11_fizzbuzz",
+  "title_original": "FizzBuzz",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for an integer number. If the number is divisible by three, the program should print out Fizz. If the number is divisible by five, the program should print out Buzz. If the number is divisible by both three and five, the program should print out FizzBuzz.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nNumber: **9**\nFizz\n\n</sample-output>\n\n<sample-output>\n\nNumber: **7**\n\n</sample-output>\n\n<sample-output>\n\nNumber: **20**\nBuzz\n\n</sample-output>\n\n<sample-output>\n\nNumber: **45**\nFizzBuzz\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "f08b1f3549a597c36d08527199ff4a41e4703571c5793bb56ef9eb63f22ec7f5",
+  "order": 24
+}

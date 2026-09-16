@@ -1,0 +1,16 @@
+{
+  "id": "ex-part10-02_game_museum",
+  "lesson_id": "part10-1-class-hierarchies",
+  "part": 10,
+  "tmc_name": "part10-02_game_museum",
+  "title_original": "Game Museum",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The exercise template contains class definitions for a `ComputerGame` and a `GameWarehouse`. A GameWarehouse object is used to store ComputerGame objects.\n\nPlease familiarize yourself with these classes. Then define a new class named `GameMuseum` which inherits the `GameWarehouse` class.\n\nThe GameMuseum class should _override_ the `list_games()` method, so that it returns a list of only those games which were made before the year 1990.\n\nThe new class should also have a constructor which _calls the constructor from the parent class `GameWarehouse`_. The constructor takes no arguments.\n\nYou may use the following code to test your implementation:\n\n```python\nmuseum = GameMuseum()\nmuseum.add_game(ComputerGame(\"Pacman\", \"Namco\", 1980))\nmuseum.add_game(ComputerGame(\"GTA 2\", \"Rockstar\", 1999))\nmuseum.add_game(ComputerGame(\"Bubble Bobble\", \"Taito\", 1986))\nfor game in museum.list_games():\n    print(game.name)\n```\n\n<sample-output>\n\nPacman\nBubble Bobble\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "museum = GameMuseum()\nmuseum.add_game(ComputerGame(\"Pacman\", \"Namco\", 1980))\nmuseum.add_game(ComputerGame(\"GTA 2\", \"Rockstar\", 1999))\nmuseum.add_game(ComputerGame(\"Bubble Bobble\", \"Taito\", 1986))\nfor game in museum.list_games():\n    print(game.name)",
+  "grading_data_available": false,
+  "source_hash": "0adb2c276ca75ae2191118c039dae80d353ff6fcc31a68df8e88570ebcc73a48",
+  "order": 44
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-02_countdown",
+  "lesson_id": "part03-1-loops-with-conditions",
+  "part": 3,
+  "tmc_name": "part03-02_countdown",
+  "title_original": "Fix the code: Countdown",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "The program below has some syntactic issues:\n\n```python\nprint(\"Are you ready?\")\nnumber = int(input(\"Please type in a number: \"))\nwhile number = 0:\nprint(number)\nprint(\"Now!\")\n```\n\nPlease fix it so that it prints out the following:\n\n<sample-output>\n\nAre you ready?\nPlease type in a number: **5**\n5\n4\n3\n2\n1\nNow!\n\n</sample-output>\n\nThis exercise is similar to the countdown exercise in the last section, but please don't use a `while True` loop this time round!",
+  "description_vi": "",
+  "starter_code": "print(\"Are you ready?\")\nnumber = int(input(\"Please type in a number: \"))\nwhile number = 0:\nprint(number)\nprint(\"Now!\")",
+  "grading_data_available": false,
+  "source_hash": "d290344adc4fe3c29450e3ec030178797b5d7f834b489b8c53c2d75ebd9756f6",
+  "order": 30
+}

@@ -1,0 +1,600 @@
+{
+  "id": "part05-3-dictionary",
+  "part": 5,
+  "part_slug": "part-5",
+  "slug": "3-dictionary",
+  "is_part_index": false,
+  "title_original": "Dictionary",
+  "path": "/part-5/3-dictionary",
+  "source_path": "data/part-5/3-dictionary.md",
+  "source_hash": "60a7b59ba9c5bcc426035d9d109baaadbf8237970450827a85cef97002e47033",
+  "frontmatter": {
+    "path": "/part-5/3-dictionary",
+    "title": "Dictionary",
+    "hidden": false
+  },
+  "chunks_count": 93,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will be familiar with the dictionary data structure\n- You will be able to use a dictionary with different types of keys and values\n- You will know how to traverse through the contents of a dictionary\n- You will be able to name some typical use cases for dictionaries",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will be familiar with the dictionary data structure\n- You will be able to use a dictionary with different types of keys and values\n- You will know how to traverse through the contents of a dictionary\n- You will be able to name some typical use cases for dictionaries\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Lists can be handy in many situations, but they are limited by the fact that the items are accessed through indexes; 0, 1, 2, and so forth. If you want to find some item in a list, you will either have to know its index, or, at worst, traverse through the entire list.",
+      "raw_source": "Lists can be handy in many situations, but they are limited by the fact that the items are accessed through indexes; 0, 1, 2, and so forth. If you want to find some item in a list, you will either have to know its index, or, at worst, traverse through the entire list."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Another central data structure in Python is the _dictionary_. In a dictionary, the items are indexed by _keys_. Each key maps to a _value_. The values stored in the dictionary can be accessed and changed using the key.",
+      "raw_source": "Another central data structure in Python is the _dictionary_. In a dictionary, the items are indexed by _keys_. Each key maps to a _value_. The values stored in the dictionary can be accessed and changed using the key."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Using a dictionary",
+      "raw_source": "## Using a dictionary"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following example shows you how the dictionary data structure works. Here is a simple dictionary from Finnish to English:",
+      "raw_source": "The following example shows you how the dictionary data structure works. Here is a simple dictionary from Finnish to English:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_dictionary = {}\n\nmy_dictionary[\"apina\"] = \"monkey\"\nmy_dictionary[\"banaani\"] = \"banana\"\nmy_dictionary[\"cembalo\"] = \"harpsichord\"\n\nprint(len(my_dictionary))\nprint(my_dictionary)\nprint(my_dictionary[\"apina\"])",
+      "raw_source": "```python\nmy_dictionary = {}\n\nmy_dictionary[\"apina\"] = \"monkey\"\nmy_dictionary[\"banaani\"] = \"banana\"\nmy_dictionary[\"cembalo\"] = \"harpsichord\"\n\nprint(len(my_dictionary))\nprint(my_dictionary)\nprint(my_dictionary[\"apina\"])\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "3\n{'apina': 'monkey', 'banaani': 'banana', 'cembalo': 'harpsichord'}\nmonkey",
+      "raw_source": "<sample-output>\n\n3\n{'apina': 'monkey', 'banaani': 'banana', 'cembalo': 'harpsichord'}\nmonkey\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The notation `{}` creates an empty dictionary, to which we can now add content. Three key-value pairs are added:`\"apina\"` maps to `\"monkey\"`, `\"banaani\"` maps to `\"banana\"`, and `\"cembalo\"` maps to `\"harpsichord\"`. Finally, the number of key-value pairs in the dictionary is printed, along with the entire dictionary, and the value mapped to the key `\"apina\"`.",
+      "raw_source": "The notation `{}` creates an empty dictionary, to which we can now add content. Three key-value pairs are added:`\"apina\"` maps to `\"monkey\"`, `\"banaani\"` maps to `\"banana\"`, and `\"cembalo\"` maps to `\"harpsichord\"`. Finally, the number of key-value pairs in the dictionary is printed, along with the entire dictionary, and the value mapped to the key `\"apina\"`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "After defining the dictionary we could also use it with user input:",
+      "raw_source": "After defining the dictionary we could also use it with user input:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "word = input(\"Please type in a word: \")\nif word in my_dictionary:\n    print(\"Translation: \", my_dictionary[word])\nelse:\n    print(\"Word not found\")",
+      "raw_source": "```python\nword = input(\"Please type in a word: \")\nif word in my_dictionary:\n    print(\"Translation: \", my_dictionary[word])\nelse:\n    print(\"Word not found\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Notice the use of the `in` operator above. When used on a variable of type dictionary, it checks whether the first operand is among the keys stored in the dictionary. Given different inputs, this program might print out the following:",
+      "raw_source": "Notice the use of the `in` operator above. When used on a variable of type dictionary, it checks whether the first operand is among the keys stored in the dictionary. Given different inputs, this program might print out the following:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in a word: **apina**\nTranslation: monkey",
+      "raw_source": "<sample-output>\n\nPlease type in a word: **apina**\nTranslation: monkey\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in a word: **pöllö**\nWord not found",
+      "raw_source": "<sample-output>\n\nPlease type in a word: **pöllö**\nWord not found\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "What can be stored in a dictionary?",
+      "raw_source": "## What can be stored in a dictionary?"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The data type is called dictionary, but it does not have to contain only strings. For example, in the following dictionary the keys are strings, but the values are integers:",
+      "raw_source": "The data type is called dictionary, but it does not have to contain only strings. For example, in the following dictionary the keys are strings, but the values are integers:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "results = {}\nresults[\"Mary\"] = 4\nresults[\"Alice\"] = 5\nresults[\"Larry\"] = 2",
+      "raw_source": "```python\nresults = {}\nresults[\"Mary\"] = 4\nresults[\"Alice\"] = 5\nresults[\"Larry\"] = 2\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here the keys are integers and the values are lists:",
+      "raw_source": "Here the keys are integers and the values are lists:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "lists = {}\nlists[5] = [1, 2, 3]\nlists[42] = [5, 4, 5, 4, 5]\nlists[100] = [5, 2, 3]",
+      "raw_source": "```python\nlists = {}\nlists[5] = [1, 2, 3]\nlists[42] = [5, 4, 5, 4, 5]\nlists[100] = [5, 2, 3]\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "How keys and values work",
+      "raw_source": "## How keys and values work"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Each key can appear only once in the dictionary. If you add an entry using a key that already exists in the dictionary, the original value mapped to that key is replaced with the new value:",
+      "raw_source": "Each key can appear only once in the dictionary. If you add an entry using a key that already exists in the dictionary, the original value mapped to that key is replaced with the new value:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_dictionary[\"suuri\"] = \"big\"\nmy_dictionary[\"suuri\"] = \"large\"\nprint(my_dictionary[\"suuri\"])",
+      "raw_source": "```python\nmy_dictionary[\"suuri\"] = \"big\"\nmy_dictionary[\"suuri\"] = \"large\"\nprint(my_dictionary[\"suuri\"])\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "large",
+      "raw_source": "<sample-output>\n\nlarge\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "All keys in a dictionary must be _immutable_. So, a list cannot be used as a key, because it can be changed. For example, executing the following code causes an error:",
+      "raw_source": "All keys in a dictionary must be _immutable_. So, a list cannot be used as a key, because it can be changed. For example, executing the following code causes an error:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_dictionary[[1, 2, 3]] = 5",
+      "raw_source": "```python\nmy_dictionary[[1, 2, 3]] = 5\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "TypeError: unhashable type: 'list'",
+      "raw_source": "<sample-output>\n\nTypeError: unhashable type: 'list'\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "hint",
+        "name": "Hash table"
+      },
+      "inner_content": "Notice the word 'unhashable' in the error message above. This is a reference to the inner workings of the dictionary data type. Python stores the contents of a dictionary in a _hash table_. Each key is reduced to a _hash value_, which determines where the key is stored in computer memory. The error message above indicates that a list cannot be processed into a hash value, so it cannot be used as a key in a dictionary.\n\nThe _Data Structures and Algorithms_ courses will further explore hash tables.",
+      "raw_source": "<text-box variant=\"hint\" name=\"Hash table\">\n\nNotice the word 'unhashable' in the error message above. This is a reference to the inner workings of the dictionary data type. Python stores the contents of a dictionary in a _hash table_. Each key is reduced to a _hash value_, which determines where the key is stored in computer memory. The error message above indicates that a list cannot be processed into a hash value, so it cannot be used as a key in a dictionary.\n\nThe _Data Structures and Algorithms_ courses will further explore hash tables.\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Unlike keys, the _values_ stored in a dictionary can change, so any type of data is acceptable as a value. A value can also be mapped to more than one key in the same dictionary.",
+      "raw_source": "Unlike keys, the _values_ stored in a dictionary can change, so any type of data is acceptable as a value. A value can also be mapped to more than one key in the same dictionary."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Times ten",
+        "tmcname": "part05-14_times_ten"
+      },
+      "inner_content": "Please write a function named `times_ten(start_index: int, end_index: int)`, which creates and returns a new dictionary. The keys of the dictionary should be the numbers between `start_index` and `end_index` inclusive\n\nThe value mapped to each key should be the key times ten.\n\nFor example:\n\n```python\nd = times_ten(3, 6)\nprint(d)\n```\n\n<sample-output>\n\n{3: 30, 4: 40, 5: 50, 6: 60}\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Times ten' tmcname='part05-14_times_ten'>\n\nPlease write a function named `times_ten(start_index: int, end_index: int)`, which creates and returns a new dictionary. The keys of the dictionary should be the numbers between `start_index` and `end_index` inclusive\n\nThe value mapped to each key should be the key times ten.\n\nFor example:\n\n```python\nd = times_ten(3, 6)\nprint(d)\n```\n\n<sample-output>\n\n{3: 30, 4: 40, 5: 50, 6: 60}\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Factorials",
+        "tmcname": "part05-15_factorials"
+      },
+      "inner_content": "Please write a function named `factorials(n: int)`, which returns the factorials of the numbers 1 to `n` in a dictionary. The number is the key, and the factorial of that number is the value mapped to it.\n\nA reminder: the factorial of the number `n` is written `n`! and is calculated by multiplying the number by each integer smaller than itself. For example, the factorial of 4 is 4 * 3 * 2 * 1 = 24.\n\nAn example of the function in action:\n\n```python\nk = factorials(5)\nprint(k[1])\nprint(k[3])\nprint(k[5])\n```\n\n<sample-output>\n\n1\n6\n120\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Factorials' tmcname='part05-15_factorials'>\n\nPlease write a function named `factorials(n: int)`, which returns the factorials of the numbers 1 to `n` in a dictionary. The number is the key, and the factorial of that number is the value mapped to it.\n\nA reminder: the factorial of the number `n` is written `n`! and is calculated by multiplying the number by each integer smaller than itself. For example, the factorial of 4 is 4 * 3 * 2 * 1 = 24.\n\nAn example of the function in action:\n\n```python\nk = factorials(5)\nprint(k[1])\nprint(k[3])\nprint(k[5])\n```\n\n<sample-output>\n\n1\n6\n120\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Traversing a dictionary",
+      "raw_source": "## Traversing a dictionary"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The familiar `for item in collection` loop can be used to traverse a dictionary, too. When used on the dictionary directly, the loop goes through the keys stored in the dictionary, one by one. In the following example, all keys and values stored in the dictionary are printed out:",
+      "raw_source": "The familiar `for item in collection` loop can be used to traverse a dictionary, too. When used on the dictionary directly, the loop goes through the keys stored in the dictionary, one by one. In the following example, all keys and values stored in the dictionary are printed out:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_dictionary = {}\n\nmy_dictionary[\"apina\"] = \"monkey\"\nmy_dictionary[\"banaani\"] = \"banana\"\nmy_dictionary[\"cembalo\"] = \"harpsichord\"\n\nfor key in my_dictionary:\n    print(\"key:\", key)\n    print(\"value:\", my_dictionary[key])",
+      "raw_source": "```python\nmy_dictionary = {}\n\nmy_dictionary[\"apina\"] = \"monkey\"\nmy_dictionary[\"banaani\"] = \"banana\"\nmy_dictionary[\"cembalo\"] = \"harpsichord\"\n\nfor key in my_dictionary:\n    print(\"key:\", key)\n    print(\"value:\", my_dictionary[key])\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "key: apina\nvalue: monkey\nkey: banaani\nvalue: banana\nkey: cembalo\nvalue: harpsichord",
+      "raw_source": "<sample-output>\n\nkey: apina\nvalue: monkey\nkey: banaani\nvalue: banana\nkey: cembalo\nvalue: harpsichord\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Sometimes you need to traverse the entire contents of a dictionary. The method `items` returns all the keys and values stored in the dictionary, one pair at a time:",
+      "raw_source": "Sometimes you need to traverse the entire contents of a dictionary. The method `items` returns all the keys and values stored in the dictionary, one pair at a time:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "\nfor key, value in my_dictionary.items():\n    print(\"key:\", key)\n    print(\"value:\", value)",
+      "raw_source": "```python\n\nfor key, value in my_dictionary.items():\n    print(\"key:\", key)\n    print(\"value:\", value)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the examples above, you may have noticed that the keys are processed in the same order as they were added to the dictionary. As the keys are processed based on a hash value, the order should not usually matter in applications. In fact, in many older versions of Python the order is not guaranteed to follow the time of insertion.",
+      "raw_source": "In the examples above, you may have noticed that the keys are processed in the same order as they were added to the dictionary. As the keys are processed based on a hash value, the order should not usually matter in applications. In fact, in many older versions of Python the order is not guaranteed to follow the time of insertion."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Some more advanced ways to use dictionaries",
+      "raw_source": "## Some more advanced ways to use dictionaries"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's have a look at a list of words:",
+      "raw_source": "Let's have a look at a list of words:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "word_list = [\n  \"banana\", \"milk\", \"beer\", \"cheese\", \"sourmilk\", \"juice\", \"sausage\",\n  \"tomato\", \"cucumber\", \"butter\", \"margarine\", \"cheese\", \"sausage\",\n  \"beer\", \"sourmilk\", \"sourmilk\", \"butter\", \"beer\", \"chocolate\"\n]",
+      "raw_source": "```python\nword_list = [\n  \"banana\", \"milk\", \"beer\", \"cheese\", \"sourmilk\", \"juice\", \"sausage\",\n  \"tomato\", \"cucumber\", \"butter\", \"margarine\", \"cheese\", \"sausage\",\n  \"beer\", \"sourmilk\", \"sourmilk\", \"butter\", \"beer\", \"chocolate\"\n]\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We would like to analyze this list of words in different ways. For instance, we would like to know how many times each word appears in the list.",
+      "raw_source": "We would like to analyze this list of words in different ways. For instance, we would like to know how many times each word appears in the list."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A dictionary can be a useful tool in managing this kind of information. In the example below, we go through the items in the list one by one. Using the words in the list as keys in a new dictionary, the value mapped to each key is the number of times the word has appeared:",
+      "raw_source": "A dictionary can be a useful tool in managing this kind of information. In the example below, we go through the items in the list one by one. Using the words in the list as keys in a new dictionary, the value mapped to each key is the number of times the word has appeared:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def counts(my_list):\n    words = {}\n    for word in my_list:\n        # if the word is not yet in the dictionary, initialize the value to zero\n        if word not in words:\n            words[word] = 0\n        # increment the value\n        words[word] += 1\n    return words\n\n# call the function\nprint(counts(word_list))",
+      "raw_source": "```python\ndef counts(my_list):\n    words = {}\n    for word in my_list:\n        # if the word is not yet in the dictionary, initialize the value to zero\n        if word not in words:\n            words[word] = 0\n        # increment the value\n        words[word] += 1\n    return words\n\n# call the function\nprint(counts(word_list))\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The program prints out the following:",
+      "raw_source": "The program prints out the following:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "{'banana': 1, 'milk': 1, 'beer': 3, 'cheese': 2, 'sourmilk': 3, 'juice': 1, 'sausage': 2, 'tomato': 1, 'cucumber': 1, 'butter': 2, 'margarine': 1, 'chocolate': 1}",
+      "raw_source": "<sample-output>\n\n{'banana': 1, 'milk': 1, 'beer': 3, 'cheese': 2, 'sourmilk': 3, 'juice': 1, 'sausage': 2, 'tomato': 1, 'cucumber': 1, 'butter': 2, 'margarine': 1, 'chocolate': 1}\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "What if we wanted to categorize the words based on the initial letter in each word? One way to accomplish this would be to use dictionaries:",
+      "raw_source": "What if we wanted to categorize the words based on the initial letter in each word? One way to accomplish this would be to use dictionaries:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def categorize_by_initial(my_list):\n    groups = {}\n    for word in my_list:\n        initial = word[0]\n        # initialize a new list when the letter is first encountered\n        if initial not in groups:\n            groups[initial] = []\n        # add the word to the appropriate list\n        groups[initial].append(word)\n    return groups\n\ngroups = categorize_by_initial(word_list)\n\nfor key, value in groups.items():\n    print(f\"words beginning with {key}:\")\n    for word in value:\n        print(word)",
+      "raw_source": "```python\ndef categorize_by_initial(my_list):\n    groups = {}\n    for word in my_list:\n        initial = word[0]\n        # initialize a new list when the letter is first encountered\n        if initial not in groups:\n            groups[initial] = []\n        # add the word to the appropriate list\n        groups[initial].append(word)\n    return groups\n\ngroups = categorize_by_initial(word_list)\n\nfor key, value in groups.items():\n    print(f\"words beginning with {key}:\")\n    for word in value:\n        print(word)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The structure of the function is very similar to the previous exercise but this time the values mapped to the keys are lists. The program prints out the following:",
+      "raw_source": "The structure of the function is very similar to the previous exercise but this time the values mapped to the keys are lists. The program prints out the following:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "words beginning with b:\nbanana\nbeer\nbutter\nbeer\nbutter\nbeer\nwords beginning with m:\nmilk\nmargarine\nwords beginning with c:\ncheese\ncucumber\ncheese\nchocolate\nwords beginning with s:\nsourmilk\nsausage\nsausage\nsourmilk\nsourmilk\nwords beginning with j:\njuice\nwords beginning with t:\ntomato",
+      "raw_source": "<sample-output>\n\nwords beginning with b:\nbanana\nbeer\nbutter\nbeer\nbutter\nbeer\nwords beginning with m:\nmilk\nmargarine\nwords beginning with c:\ncheese\ncucumber\ncheese\nchocolate\nwords beginning with s:\nsourmilk\nsausage\nsausage\nsourmilk\nsourmilk\nwords beginning with j:\njuice\nwords beginning with t:\ntomato\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Histogram",
+        "tmcname": "part05-16_histogram"
+      },
+      "inner_content": "Please write a function named `histogram`, which takes a string as its argument. The function should print out a histogram representing the number of times each letter occurs in the string. Each occurrence of a letter should be represented by a star on the specific line for that letter.\n\nFor example, the function call `histogram(\"abba\")` should print out\n\n<sample-output>\n\n<pre>\na **\nb **\n</pre>\n\n</sample-output>\n\nwhile `histogram(\"statistically\")` should print out\n\n<sample-output>\n\n<pre>\ns **\nt ***\na **\ni **\nc *\nl **\ny *\n</pre>\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Histogram' tmcname='part05-16_histogram'>\n\nPlease write a function named `histogram`, which takes a string as its argument. The function should print out a histogram representing the number of times each letter occurs in the string. Each occurrence of a letter should be represented by a star on the specific line for that letter.\n\nFor example, the function call `histogram(\"abba\")` should print out\n\n<sample-output>\n\n<pre>\na **\nb **\n</pre>\n\n</sample-output>\n\nwhile `histogram(\"statistically\")` should print out\n\n<sample-output>\n\n<pre>\ns **\nt ***\na **\ni **\nc *\nl **\ny *\n</pre>\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Phone book, version 1",
+        "tmcname": "part05-17_phone_book_v1"
+      },
+      "inner_content": "Please write a phone book application. It should work as follows:\n\n<sample-output>\n\ncommand (1 search, 2 add, 3 quit): **2**\nname: **peter**\nnumber: **040-5466745**\nok!\ncommand (1 search, 2 add, 3 quit): **2**\nname: **emily**\nnumber: **045-1212344**\nok!\ncommand (1 search, 2 add, 3 quit): **1**\nname: **peter**\n040-5466745\ncommand (1 search, 2 add, 3 quit): **1**\nname: **mary**\nno number\ncommand (1 search, 2 add, 3 quit): **2**\nname: **peter**\nnumber: **09-22223333**\nok!\ncommand (1 search, 2 add, 3 quit): **1**\nname: **peter**\n09-22223333\ncommand (1 search, 2 add, 3 quit): **3**\nquitting...\n\n</sample-output>\n\nAs you can see above, each name can be attached to a single number only. If a new entry with the same name is added, the number attached to the old entry is replaced with the new number.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+      "raw_source": "<programming-exercise name='Phone book, version 1' tmcname='part05-17_phone_book_v1'>\n\nPlease write a phone book application. It should work as follows:\n\n<sample-output>\n\ncommand (1 search, 2 add, 3 quit): **2**\nname: **peter**\nnumber: **040-5466745**\nok!\ncommand (1 search, 2 add, 3 quit): **2**\nname: **emily**\nnumber: **045-1212344**\nok!\ncommand (1 search, 2 add, 3 quit): **1**\nname: **peter**\n040-5466745\ncommand (1 search, 2 add, 3 quit): **1**\nname: **mary**\nno number\ncommand (1 search, 2 add, 3 quit): **2**\nname: **peter**\nnumber: **09-22223333**\nok!\ncommand (1 search, 2 add, 3 quit): **1**\nname: **peter**\n09-22223333\ncommand (1 search, 2 add, 3 quit): **3**\nquitting...\n\n</sample-output>\n\nAs you can see above, each name can be attached to a single number only. If a new entry with the same name is added, the number attached to the old entry is replaced with the new number.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Phone book, version 2",
+        "tmcname": "part05-18_phone_book_v2"
+      },
+      "inner_content": "Please write an improved version of the phone book application. Each entry should now accommodate multiple phone numbers. The application should work otherwise exactly as above, but this time _all_ numbers attached to a name should be printed.\n\n<sample-output>\n\ncommand (1 search, 2 add, 3 quit): **2**\nname: **peter**\nnumber: **040-5466745**\nok!\ncommand (1 search, 2 add, 3 quit): **2**\nname: **emily**\nnumber: **045-1212344**\nok!\ncommand (1 search, 2 add, 3 quit): **1**\nname: **peter**\n040-5466745\ncommand (1 search, 2 add, 3 quit): **1**\nname: **mary**\nno number\ncommand (1 search, 2 add, 3 quit): **2**\nname: **peter**\nnumber: **09-22223333**\nok!\ncommand (1 search, 2 add, 3 quit): **1**\nname: **peter**\n040-5466745\n09-22223333\ncommand (1 search, 2 add, 3 quit): **3**\nquitting...",
+      "raw_source": "<programming-exercise name='Phone book, version 2' tmcname='part05-18_phone_book_v2'>\n\nPlease write an improved version of the phone book application. Each entry should now accommodate multiple phone numbers. The application should work otherwise exactly as above, but this time _all_ numbers attached to a name should be printed.\n\n<sample-output>\n\ncommand (1 search, 2 add, 3 quit): **2**\nname: **peter**\nnumber: **040-5466745**\nok!\ncommand (1 search, 2 add, 3 quit): **2**\nname: **emily**\nnumber: **045-1212344**\nok!\ncommand (1 search, 2 add, 3 quit): **1**\nname: **peter**\n040-5466745\ncommand (1 search, 2 add, 3 quit): **1**\nname: **mary**\nno number\ncommand (1 search, 2 add, 3 quit): **2**\nname: **peter**\nnumber: **09-22223333**\nok!\ncommand (1 search, 2 add, 3 quit): **1**\nname: **peter**\n040-5466745\n09-22223333\ncommand (1 search, 2 add, 3 quit): **3**\nquitting...\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Removing keys and values from a dictionary",
+      "raw_source": "## Removing keys and values from a dictionary"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It is naturally possible to also remove key-value pairs from the dictionary. There are two ways to accomplish this. The first is the command `del`:",
+      "raw_source": "It is naturally possible to also remove key-value pairs from the dictionary. There are two ways to accomplish this. The first is the command `del`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "staff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\ndel staff[\"David\"]\nprint(staff)",
+      "raw_source": "```python\nstaff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\ndel staff[\"David\"]\nprint(staff)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "{'Alan': 'lecturer', 'Emily': 'professor'}",
+      "raw_source": "<sample-output>\n\n{'Alan': 'lecturer', 'Emily': 'professor'}\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If you try to use the `del` command to delete a key which doesn't exist in the dictionary, there will be an error:",
+      "raw_source": "If you try to use the `del` command to delete a key which doesn't exist in the dictionary, there will be an error:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "staff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\ndel staff[\"Paul\"]",
+      "raw_source": "```python\nstaff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\ndel staff[\"Paul\"]\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "<pre>\n>>> del staff[\"Paul\"]\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nKeyError: 'Paul'\n</pre>",
+      "raw_source": "<sample-output>\n\n<pre>\n>>> del staff[\"Paul\"]\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nKeyError: 'Paul'\n</pre>\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "So, before deleting a key you should check if it is present in the dictionary:",
+      "raw_source": "So, before deleting a key you should check if it is present in the dictionary:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "staff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\nif \"Paul\" in staff:\n  del staff[\"Paul\"]\n  print(\"Deleted\")\nelse:\n  print(\"This person is not a staff member\")",
+      "raw_source": "```python\nstaff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\nif \"Paul\" in staff:\n  del staff[\"Paul\"]\n  print(\"Deleted\")\nelse:\n  print(\"This person is not a staff member\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The other way to delete entries in a dictionary is the method `pop`:",
+      "raw_source": "The other way to delete entries in a dictionary is the method `pop`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "staff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\ndeleted = staff.pop(\"David\")\nprint(staff)\nprint(deleted, \"deleted\")",
+      "raw_source": "```python\nstaff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\ndeleted = staff.pop(\"David\")\nprint(staff)\nprint(deleted, \"deleted\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "{'Alan': 'lecturer', 'Emily': 'professor'}\nlecturer deleted",
+      "raw_source": "<sample-output>\n\n{'Alan': 'lecturer', 'Emily': 'professor'}\nlecturer deleted\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As you can see above, `pop` also returns the value from the deleted entry.",
+      "raw_source": "As you can see above, `pop` also returns the value from the deleted entry."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "By default, `pop` will also cause an error if you try to delete a key which is not present in the dictionary. It is possible to avoid this by giving the method a second argument, which contains a _default return value_. This value is returned in case the key is not found in the dictionary. The special Python value `None` will work here:",
+      "raw_source": "By default, `pop` will also cause an error if you try to delete a key which is not present in the dictionary. It is possible to avoid this by giving the method a second argument, which contains a _default return value_. This value is returned in case the key is not found in the dictionary. The special Python value `None` will work here:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "staff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\ndeleted = staff.pop(\"Paul\", None)\nif deleted == None:\n  print(\"This person is not a staff member\")\nelse:\n  print(deleted, \"deleted\")",
+      "raw_source": "```python\nstaff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\ndeleted = staff.pop(\"Paul\", None)\nif deleted == None:\n  print(\"This person is not a staff member\")\nelse:\n  print(deleted, \"deleted\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "This person is not a staff member",
+      "raw_source": "<sample-output>\n\nThis person is not a staff member\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "NB: if you need to delete the contents of the entire dictionary, and try to do it with a for loop, like so",
+      "raw_source": "NB: if you need to delete the contents of the entire dictionary, and try to do it with a for loop, like so"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "staff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\nfor key in staff:\n  del staff[key]",
+      "raw_source": "```python\nstaff = {\"Alan\": \"lecturer\", \"Emily\": \"professor\", \"David\": \"lecturer\"}\nfor key in staff:\n  del staff[key]\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "you will receive an error message:",
+      "raw_source": "you will receive an error message:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "RuntimeError: dictionary changed size during iteration",
+      "raw_source": "<sample-output>\n\nRuntimeError: dictionary changed size during iteration\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When traversing a collection with a `for` loop, the contents may not change while the loop is in progress.",
+      "raw_source": "When traversing a collection with a `for` loop, the contents may not change while the loop is in progress."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Luckily, there is a dictionary method for just this purpose:",
+      "raw_source": "Luckily, there is a dictionary method for just this purpose:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "staff.clear()",
+      "raw_source": "```python\nstaff.clear()\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Invert a dictionary",
+        "tmcname": "part05-19_invert_dictionary"
+      },
+      "inner_content": "Please write a function named `invert(dictionary: dict)`, which takes a dictionary as its argument. The dictionary should be inverted in place so that values become keys and keys become values.\n\nAn example of its use:\n\n```python\ns = {1: \"first\", 2: \"second\", 3: \"third\", 4: \"fourth\"}\ninvert(s)\nprint(s)\n```\n\n<sample-output>\n\n{\"first\": 1, \"second\": 2, \"third\": 3, \"fourth\": 4}\n\n</sample-output>\n\n**NB:** the principles regarding lists covered [here](/part-5/2-references#using-lists-as-parameters-in-functions) also hold for dictionaries passed as arguments.\n\nIf you have trouble completing this exercise, the [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit) might help you understand what your code is or isn't doing.",
+      "raw_source": "<programming-exercise name='Invert a dictionary' tmcname='part05-19_invert_dictionary'>\n\nPlease write a function named `invert(dictionary: dict)`, which takes a dictionary as its argument. The dictionary should be inverted in place so that values become keys and keys become values.\n\nAn example of its use:\n\n```python\ns = {1: \"first\", 2: \"second\", 3: \"third\", 4: \"fourth\"}\ninvert(s)\nprint(s)\n```\n\n<sample-output>\n\n{\"first\": 1, \"second\": 2, \"third\": 3, \"fourth\": 4}\n\n</sample-output>\n\n**NB:** the principles regarding lists covered [here](/part-5/2-references#using-lists-as-parameters-in-functions) also hold for dictionaries passed as arguments.\n\nIf you have trouble completing this exercise, the [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit) might help you understand what your code is or isn't doing.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Numbers spelled out",
+        "tmcname": "part05-20_numbers_spelled_out"
+      },
+      "inner_content": "Please write a function named `dict_of_numbers()`, which returns a new dictionary. The dictionary should have the numbers from 0 to 99 as its keys. The value attached to each key should be the number spelled out in words. Please have a look at the example below:\n\n```python\nnumbers = dict_of_numbers()\nprint(numbers[2])\nprint(numbers[11])\nprint(numbers[45])\nprint(numbers[99])\nprint(numbers[0])\n```\n\n<sample-output>\n\ntwo\neleven\nforty-five\nninety-nine\nzero\n\n</sample-output>\n\nNB: Please don't formulate each spelled out number by hand. Figure out how you can use loops and dictionaries in your solution.",
+      "raw_source": "<programming-exercise name='Numbers spelled out' tmcname='part05-20_numbers_spelled_out'>\n\nPlease write a function named `dict_of_numbers()`, which returns a new dictionary. The dictionary should have the numbers from 0 to 99 as its keys. The value attached to each key should be the number spelled out in words. Please have a look at the example below:\n\n```python\nnumbers = dict_of_numbers()\nprint(numbers[2])\nprint(numbers[11])\nprint(numbers[45])\nprint(numbers[99])\nprint(numbers[0])\n```\n\n<sample-output>\n\ntwo\neleven\nforty-five\nninety-nine\nzero\n\n</sample-output>\n\nNB: Please don't formulate each spelled out number by hand. Figure out how you can use loops and dictionaries in your solution.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Using dictionaries for structured data",
+      "raw_source": "## Using dictionaries for structured data"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Dictionaries are very useful for structuring data. The following code will create a dictionary which contains some personal data:",
+      "raw_source": "Dictionaries are very useful for structuring data. The following code will create a dictionary which contains some personal data:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "person = {\"name\": \"Pippa Python\", \"height\": 154, \"weight\": 61, \"age\": 44}",
+      "raw_source": "```python\nperson = {\"name\": \"Pippa Python\", \"height\": 154, \"weight\": 61, \"age\": 44}\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This means that we have here a person named Pippa Python, whose height is 154, weight 61, and age 44. The same information could just as well be stored in variables:",
+      "raw_source": "This means that we have here a person named Pippa Python, whose height is 154, weight 61, and age 44. The same information could just as well be stored in variables:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "name = \"Pippa Python\"\nheight = 154\nweight = 61\nage = 44",
+      "raw_source": "```python\nname = \"Pippa Python\"\nheight = 154\nweight = 61\nage = 44\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The advantage of a dictionary is that it is a collection. It collects related data under one variable, so it is easy to access the different components. This same advantage is offered by a list:",
+      "raw_source": "The advantage of a dictionary is that it is a collection. It collects related data under one variable, so it is easy to access the different components. This same advantage is offered by a list:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "person = [\"Pippa Python\", 153, 61, 44]",
+      "raw_source": "```python\nperson = [\"Pippa Python\", 153, 61, 44]\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "With lists, the programmer will have to remember what is stored at each index in the list. There is nothing to indicate that `person[2]` contains the weight and `person[3]` the age of the person. When using a dictionary this problem is avoided, as each bit of data is accessed through a named key.",
+      "raw_source": "With lists, the programmer will have to remember what is stored at each index in the list. There is nothing to indicate that `person[2]` contains the weight and `person[3]` the age of the person. When using a dictionary this problem is avoided, as each bit of data is accessed through a named key."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Assuming we have defined multiple people using the same format, we can access their data in the following manner:",
+      "raw_source": "Assuming we have defined multiple people using the same format, we can access their data in the following manner:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "person1 = {\"name\": \"Pippa Python\", \"height\": 154, \"weight\": 61, \"age\": 44}\nperson2 = {\"name\": \"Peter Pythons\", \"height\": 174, \"weight\": 103, \"age\": 31}\nperson3 = {\"name\": \"Pedro Python\", \"height\": 191, \"weight\": 71, \"age\": 14}\n\npeople = [person1, person2, person3]\n\nfor person in people:\n    print(person[\"name\"])\n\ncombined_height = 0\nfor person in people:\n    combined_height += person[\"height\"]\n\nprint(\"The average height is\", combined_height / len(people))",
+      "raw_source": "```python\nperson1 = {\"name\": \"Pippa Python\", \"height\": 154, \"weight\": 61, \"age\": 44}\nperson2 = {\"name\": \"Peter Pythons\", \"height\": 174, \"weight\": 103, \"age\": 31}\nperson3 = {\"name\": \"Pedro Python\", \"height\": 191, \"weight\": 71, \"age\": 14}\n\npeople = [person1, person2, person3]\n\nfor person in people:\n    print(person[\"name\"])\n\ncombined_height = 0\nfor person in people:\n    combined_height += person[\"height\"]\n\nprint(\"The average height is\", combined_height / len(people))\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Pippa Python\nPeter Pythons\nPedro Python\nThe average height is 173.0",
+      "raw_source": "<sample-output>\n\nPippa Python\nPeter Pythons\nPedro Python\nThe average height is 173.0\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Movie database",
+        "tmcname": "part05-21_movie_database"
+      },
+      "inner_content": "Please write a function named `add_movie(database: list, name: str, director: str, year: int, runtime: int)`, which adds a new movie object into a movie database.\n\nThe database is a list, and each movie object in the list is a dictionary. The dictionary should contain the following keys.\n\n* name\n* director\n* year\n* runtime\n\nThe values attached to these keys are given as arguments to the function.\n\nAn example of its use:\n\n```python\ndatabase = []\nadd_movie(database, \"Gone with the Python\", \"Victor Pything\", 2017, 116)\nadd_movie(database, \"Pythons on a Plane\", \"Renny Pytholin\", 2001, 94)\nprint(database)\n```\n\n<sample-output>\n\n[{\"name\": \"Gone with the Python\", \"director\": \"Victor Pything\", \"year\": 2017, \"runtime\": 116}, {\"name\": \"Pythons on a Plane\", \"director\": \"Renny Pytholin\", \"year\": 2001, \"runtime\": 94}]\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Movie database' tmcname='part05-21_movie_database'>\n\nPlease write a function named `add_movie(database: list, name: str, director: str, year: int, runtime: int)`, which adds a new movie object into a movie database.\n\nThe database is a list, and each movie object in the list is a dictionary. The dictionary should contain the following keys.\n\n* name\n* director\n* year\n* runtime\n\nThe values attached to these keys are given as arguments to the function.\n\nAn example of its use:\n\n```python\ndatabase = []\nadd_movie(database, \"Gone with the Python\", \"Victor Pything\", 2017, 116)\nadd_movie(database, \"Pythons on a Plane\", \"Renny Pytholin\", 2001, 94)\nprint(database)\n```\n\n<sample-output>\n\n[{\"name\": \"Gone with the Python\", \"director\": \"Victor Pything\", \"year\": 2017, \"runtime\": 116}, {\"name\": \"Pythons on a Plane\", \"director\": \"Renny Pytholin\", \"year\": 2001, \"runtime\": 94}]\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Find movies",
+        "tmcname": "part05-22_find_movies"
+      },
+      "inner_content": "Please write a function named `find_movies(database: list, search_term: str)`, which processes the movie database created in the previous exercise. The function should formulate a new list, which contains only the movies whose title includes the word searched for. Capitalisation is irrelevant here. A search for `ana` should return a list containing both `Anaconda` and `Management`.\n\nAn example of its use:\n\n```python\ndatabase = [{\"name\": \"Gone with the Python\", \"director\": \"Victor Pything\", \"year\": 2017, \"runtime\": 116},\n{\"name\": \"Pythons on a Plane\", \"director\": \"Renny Pytholin\", \"year\": 2001, \"runtime\": 94},\n{\"name\": \"Dawn of the Dead Programmers\", \"director\": \"M. Night Python\", \"year\": 2011, \"runtime\": 101}]\n\nmy_movies = find_movies(database, \"python\")\nprint(my_movies)\n```\n\n<sample-output>\n\n[{\"name\": \"Gone with the Python\", \"director\": \"Victor Pything\", \"year\": 2017, \"runtime\": 116}, {\"name\": \"Pythons on a Plane\", \"director\": \"Renny Pytholin\", \"year\": 2001, \"runtime\": 94}]\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Find movies' tmcname='part05-22_find_movies'>\n\nPlease write a function named `find_movies(database: list, search_term: str)`, which processes the movie database created in the previous exercise. The function should formulate a new list, which contains only the movies whose title includes the word searched for. Capitalisation is irrelevant here. A search for `ana` should return a list containing both `Anaconda` and `Management`.\n\nAn example of its use:\n\n```python\ndatabase = [{\"name\": \"Gone with the Python\", \"director\": \"Victor Pything\", \"year\": 2017, \"runtime\": 116},\n{\"name\": \"Pythons on a Plane\", \"director\": \"Renny Pytholin\", \"year\": 2001, \"runtime\": 94},\n{\"name\": \"Dawn of the Dead Programmers\", \"director\": \"M. Night Python\", \"year\": 2011, \"runtime\": 101}]\n\nmy_movies = find_movies(database, \"python\")\nprint(my_movies)\n```\n\n<sample-output>\n\n[{\"name\": \"Gone with the Python\", \"director\": \"Victor Pything\", \"year\": 2017, \"runtime\": 116}, {\"name\": \"Pythons on a Plane\", \"director\": \"Renny Pytholin\", \"year\": 2001, \"runtime\": 94}]\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "At this point in the course, you can choose to participate in a research study related to learning programming. Participation is voluntary and individual participants cannot be identified from the data gathered in the study. You can freely quit the experiment at any point. [Click here to begin the study!](https://runestone.academy/ns/books/published/p3pt/index.html)",
+      "raw_source": "At this point in the course, you can choose to participate in a research study related to learning programming. Participation is voluntary and individual participants cannot be identified from the data gathered in the study. You can freely quit the experiment at any point. [Click here to begin the study!](https://runestone.academy/ns/books/published/p3pt/index.html)"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!---\nA quiz to review the contents of this section:",
+      "raw_source": "<!---\nA quiz to review the contents of this section:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "6361eeca-a2e2-5577-892c-749706d754f0"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"6361eeca-a2e2-5577-892c-749706d754f0\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    }
+  ]
+}

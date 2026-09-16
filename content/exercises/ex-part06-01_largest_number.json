@@ -1,0 +1,16 @@
+{
+  "id": "ex-part06-01_largest_number",
+  "lesson_id": "part06-1-reading-files",
+  "part": 6,
+  "tmc_name": "part06-01_largest_number",
+  "title_original": "Largest number",
+  "title_vi": "Số lớn nhất",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The file `numbers.txt` contains integer numbers, one number per line. The contents could look like this:\n\n```sh\n2\n45\n108\n3\n-10\n1100\n...etc...\n```\n\nPlease write a function named `largest`, which reads the file and returns the largest number in the file.\n\nNotice that the function does not take any arguments. The file you are working with is always named `numbers.txt`.\n\n**NB:** If Visual Studio Code can't find the file and you have checked that there are no spelling errors, take a look at the instructions following this exercise.",
+  "description_vi": "Tệp `numbers.txt` chứa các số nguyên, một số trên mỗi dòng. Nội dung có thể trông như thế này:\n\n```sh\n2\n45\n108\n3\n-10\n1100\n...etc...\n```\n\nHãy viết một hàm có tên `largest` để đọc tệp và trả về số lớn nhất trong tệp.\n\nLưu ý rằng hàm không nhận bất kỳ đối số nào. Tệp bạn đang làm việc luôn có tên `numbers.txt`.\n\n**NB:** Nếu Visual Studio Code không thể tìm thấy tệp và bạn đã kiểm tra rằng không có lỗi chính tả, hãy xem hướng dẫn sau bài tập này.",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "3b7bae78c3ce88f98c29ead171167c080e5c229b5c5eee9aa2b481a66cc68148",
+  "order": 22
+}

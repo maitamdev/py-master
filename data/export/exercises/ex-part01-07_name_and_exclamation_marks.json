@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-07_name_and_exclamation_marks",
+  "lesson_id": "part01-2-information-from-the-user",
+  "part": 1,
+  "tmc_name": "part01-07_name_and_exclamation_marks",
+  "title_original": "Name and exclamation marks",
+  "title_vi": "Tên và dấu chấm than",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks for the user's name and then prints it out twice on a single line so that there is an exclamation mark at the beginning of the line, another between the two names and a third one at the end of the line.\n\nThe program should function as follows:\n\n<sample-output>\n\nWhat is your name? **Paul**\n!Paul!Paul!\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình hỏi tên người dùng rồi in ra hai lần trên một dòng sao cho có dấu chấm than ở đầu dòng, một dấu chấm than ở giữa hai tên và dấu thứ ba ở cuối dòng.\n\nChương trình sẽ hoạt động như sau:\n\n<sample-output>\n\nTên bạn là gì? **Paul**\n!Paul!Paul!\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "26169378ee4864095f9fae6f9ceaee3ec6cf9142f68e37bb33a6627656824b00",
+  "order": 22
+}

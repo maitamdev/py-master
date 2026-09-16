@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-16_histogram",
+  "lesson_id": "part05-3-dictionary",
+  "part": 5,
+  "tmc_name": "part05-16_histogram",
+  "title_original": "Histogram",
+  "title_vi": "biểu đồ",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `histogram`, which takes a string as its argument. The function should print out a histogram representing the number of times each letter occurs in the string. Each occurrence of a letter should be represented by a star on the specific line for that letter.\n\nFor example, the function call `histogram(\"abba\")` should print out\n\n<sample-output>\n\n<pre>\na **\nb **\n</pre>\n\n</sample-output>\n\nwhile `histogram(\"statistically\")` should print out\n\n<sample-output>\n\n<pre>\ns **\nt ***\na **\ni **\nc *\nl **\ny *\n</pre>\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `histogram`, hàm này lấy một chuỗi làm đối số. Hàm sẽ in ra biểu đồ biểu thị số lần mỗi chữ cái xuất hiện trong chuỗi. Mỗi lần xuất hiện của một chữ cái phải được biểu thị bằng một ngôi sao trên dòng cụ thể cho chữ cái đó.\n\nVí dụ, lệnh gọi hàm `histogram(\"abba\")` sẽ in ra\n\n<sample-output>\n\n<pre>\nmột **\nb **\n</pre>\n\n</sample-output>\n\ntrong khi `histogram(\"statistically\")` sẽ in ra\n\n<sample-output>\n\n<pre>\ns **\nđ**\nmột **\ntôi **\nc *\ntôi **\ny*\n</pre>\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "25a6d80946ec2045eba748709eeff16b664fbecac1bd36067b66b5200977a159",
+  "order": 49
+}

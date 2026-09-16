@@ -1,0 +1,520 @@
+{
+  "id": "part02-1-programming_terminology",
+  "part": 2,
+  "part_slug": "part-2",
+  "slug": "1-programming_terminology",
+  "is_part_index": false,
+  "title_original": "Programming terminology",
+  "path": "/part-2/1-programming-terminology",
+  "source_path": "data/part-2/1-programming_terminology.md",
+  "source_hash": "f65c4f5489e25f5f96941306a9fb7c2a767977fafa2d6aebea73c17033c662bd",
+  "frontmatter": {
+    "path": "/part-2/1-programming-terminology",
+    "title": "Programming terminology"
+  },
+  "chunks_count": 87,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will be familiar with some essential terminology in programming\n- You will know the difference between a statement and an expression\n- You will be able to find out the data type of an evaluated expression\n- You will have learnt to use debugging methods to find mistakes in your code",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will be familiar with some essential terminology in programming\n- You will know the difference between a statement and an expression\n- You will be able to find out the data type of an evaluated expression\n- You will have learnt to use debugging methods to find mistakes in your code\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the first part of this course we didn't pay much attention to terminology, so let's have a look at some central concepts in programming.",
+      "raw_source": "In the first part of this course we didn't pay much attention to terminology, so let's have a look at some central concepts in programming."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Statement",
+      "raw_source": "## Statement"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A _statement_ is a part of the program which executes something. It often, but not always, refers to a single command.",
+      "raw_source": "A _statement_ is a part of the program which executes something. It often, but not always, refers to a single command."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "For example, `print(\"Hi!\")` is a statement which prints out a line of text. Likewise, `number = 2` is a statement which assigns a value to a variable.",
+      "raw_source": "For example, `print(\"Hi!\")` is a statement which prints out a line of text. Likewise, `number = 2` is a statement which assigns a value to a variable."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A statement can also be more complicated. It can, for instance, contain other statements. The following statement spans three lines:",
+      "raw_source": "A statement can also be more complicated. It can, for instance, contain other statements. The following statement spans three lines:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "if name == \"Anna\":\n    print(\"Hi!\")\n    number = 2",
+      "raw_source": "```python\nif name == \"Anna\":\n    print(\"Hi!\")\n    number = 2\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the above case there are two statements (a print statement and an assignment statement) within a conditional statement.",
+      "raw_source": "In the above case there are two statements (a print statement and an assignment statement) within a conditional statement."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Block",
+      "raw_source": "## Block"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A _block_ is a group of consecutive statements that are at the same level in the structure of the program. For example, the block of a conditional statement contains those statements which are executed only if the condition is true.",
+      "raw_source": "A _block_ is a group of consecutive statements that are at the same level in the structure of the program. For example, the block of a conditional statement contains those statements which are executed only if the condition is true."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "if age > 17:\n    # beginning of the conditional block\n    print(\"You are of age!\")\n    age = age + 1\n    print(\"You are now one year older...\")\n    # end of the conditional block\n\nprint(\"This here belongs to another block\")",
+      "raw_source": "```python\nif age > 17:\n    # beginning of the conditional block\n    print(\"You are of age!\")\n    age = age + 1\n    print(\"You are now one year older...\")\n    # end of the conditional block\n\nprint(\"This here belongs to another block\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In Python blocks are expressed by indenting all code in the block by the same amount of whitespace.",
+      "raw_source": "In Python blocks are expressed by indenting all code in the block by the same amount of whitespace."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "NB: the main block of a Python program must always be at the leftmost edge of the file, without indentation:",
+      "raw_source": "NB: the main block of a Python program must always be at the leftmost edge of the file, without indentation:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# this program will not work because it is not written at the leftmost egde of the file\n  print(\"hello world\")\n  print(\"this program is not very good...\")",
+      "raw_source": "```python\n# this program will not work because it is not written at the leftmost egde of the file\n  print(\"hello world\")\n  print(\"this program is not very good...\")\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Expression",
+      "raw_source": "## Expression"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "An _expression_ is a bit of code that results in a determined data type. When the program is executed, the expression is evaluated so that it has a value that can then be used in the program.",
+      "raw_source": "An _expression_ is a bit of code that results in a determined data type. When the program is executed, the expression is evaluated so that it has a value that can then be used in the program."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here are a few examples of expressions:",
+      "raw_source": "Here are a few examples of expressions:"
+    },
+    {
+      "raw_type": "table",
+      "content": "| Expression | Value  | Type    | Python data type |\n|------------|--------|---------|------------------|\n|`2 + 4 + 3` | `9`    | integer | `int` |\n|`\"abc\" + \"de\"` | `\"abcde\"` | string | `str`|\n|`11 / 2`    | `5.5`  | floating point number | `float` |\n|`2 * 5 > 9` | `True` | Boolean value | `bool`|",
+      "raw_source": "| Expression | Value  | Type    | Python data type |\n|------------|--------|---------|------------------|\n|`2 + 4 + 3` | `9`    | integer | `int` |\n|`\"abc\" + \"de\"` | `\"abcde\"` | string | `str`|\n|`11 / 2`    | `5.5`  | floating point number | `float` |\n|`2 * 5 > 9` | `True` | Boolean value | `bool`|"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Because all expressions have a type, they can be assigned to variables:",
+      "raw_source": "Because all expressions have a type, they can be assigned to variables:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# the variable x is assigned the value of the expression 1 + 2\nx = 1 + 2",
+      "raw_source": "```python\n# the variable x is assigned the value of the expression 1 + 2\nx = 1 + 2\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Simple expressions can be assembled together to form more complicated expressions, for example with arithmetic operations:",
+      "raw_source": "Simple expressions can be assembled together to form more complicated expressions, for example with arithmetic operations:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# the variable y is assigned the value of the expression '3 times x plus x squared'\ny = 3 * x + x**2",
+      "raw_source": "```python\n# the variable y is assigned the value of the expression '3 times x plus x squared'\ny = 3 * x + x**2\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Function",
+      "raw_source": "## Function"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A _function_ executes some functionality. Functions can also take one or more _arguments_, which are data that can be fed to and processed by the function. Arguments are sometimes also referred to as _parameters_. There is a technical distinction between an argument and a parameter, but the words are often used interchangeably. For now it should suffice to remember that both terms refer to the idea of some data passed to the function.",
+      "raw_source": "A _function_ executes some functionality. Functions can also take one or more _arguments_, which are data that can be fed to and processed by the function. Arguments are sometimes also referred to as _parameters_. There is a technical distinction between an argument and a parameter, but the words are often used interchangeably. For now it should suffice to remember that both terms refer to the idea of some data passed to the function."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A function is executed when it is _called_. That is, when the function (and its arguments, if any) is mentioned in the code. The following statement calls the `print` function with the argument `\"this is an argument\"`:",
+      "raw_source": "A function is executed when it is _called_. That is, when the function (and its arguments, if any) is mentioned in the code. The following statement calls the `print` function with the argument `\"this is an argument\"`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "print(\"this is an argument\")",
+      "raw_source": "```python\nprint(\"this is an argument\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Another function you've already used often is the `input` function, which asks the user for input. The argument of this function is the message that is shown to the user:",
+      "raw_source": "Another function you've already used often is the `input` function, which asks the user for input. The argument of this function is the message that is shown to the user:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "name = input(\"Please type in your name: \")",
+      "raw_source": "```python\nname = input(\"Please type in your name: \")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In this case the function also _returns_ a value. After the function has been executed, the section of code where it was called is replaced by the value it returns; it is another expression that has now been evaluated. The function `input` returns a string value containing whatever the user typed in at the prompt. The value a function returns is often stored in a variable so that it can be used in the program later on.",
+      "raw_source": "In this case the function also _returns_ a value. After the function has been executed, the section of code where it was called is replaced by the value it returns; it is another expression that has now been evaluated. The function `input` returns a string value containing whatever the user typed in at the prompt. The value a function returns is often stored in a variable so that it can be used in the program later on."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Data type",
+      "raw_source": "## Data type"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "_Data type_ refers to the characteristics of any value present in the program. In the following bit of code the data type of the variable `name` is string or `str`, and the data type of the variable `result` is integer or `int`:",
+      "raw_source": "_Data type_ refers to the characteristics of any value present in the program. In the following bit of code the data type of the variable `name` is string or `str`, and the data type of the variable `result` is integer or `int`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "name = \"Anna\"\nresult = 100",
+      "raw_source": "```python\nname = \"Anna\"\nresult = 100\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You can use the function `type` to find out the data type of any expression. An example of its use:",
+      "raw_source": "You can use the function `type` to find out the data type of any expression. An example of its use:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "print(type(\"Anna\"))\nprint(type(100))",
+      "raw_source": "```python\nprint(type(\"Anna\"))\nprint(type(100))\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "<class 'str'>\n<class 'int'>",
+      "raw_source": "<sample-output>\n\n<class 'str'>\n<class 'int'>\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Syntax",
+      "raw_source": "## Syntax"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Similarly to natural languages, the _syntax_ of a programming language determines how the code of a program should be written. Each programming language has its own specific syntax.",
+      "raw_source": "Similarly to natural languages, the _syntax_ of a programming language determines how the code of a program should be written. Each programming language has its own specific syntax."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The syntax of Python specifies, among other things, that the first line of an `if` statement should end in a colon character, and the block of the statement should be indented:",
+      "raw_source": "The syntax of Python specifies, among other things, that the first line of an `if` statement should end in a colon character, and the block of the statement should be indented:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "if name == \"Anna\":\n    print(\"Hi!\")",
+      "raw_source": "```python\nif name == \"Anna\":\n    print(\"Hi!\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the syntactic rules of the programming language are not followed, there will be an error:",
+      "raw_source": "If the syntactic rules of the programming language are not followed, there will be an error:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "if name == \"Anna\"\n    print(\"Hi!\")",
+      "raw_source": "```python\nif name == \"Anna\"\n    print(\"Hi!\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "<pre>\n  File \"test.py\", line 1\n    if name == \"Anna\"\n                    ^\nSyntaxError: invalid syntax\n</pre>",
+      "raw_source": "<sample-output>\n\n<pre>\n  File \"test.py\", line 1\n    if name == \"Anna\"\n                    ^\nSyntaxError: invalid syntax\n</pre>\n\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Debugging",
+      "raw_source": "## Debugging"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the syntax of the program is correct but the program still doesn't function as intended, there is a _bug_ in the program.",
+      "raw_source": "If the syntax of the program is correct but the program still doesn't function as intended, there is a _bug_ in the program."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Bugs manifest in different ways. Some bugs cause an error during execution. For example, the following program",
+      "raw_source": "Bugs manifest in different ways. Some bugs cause an error during execution. For example, the following program"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "x = 10\ny = 0\nresult = x / y\n\nprint(f\"{x} divided by {y} is {result}\")",
+      "raw_source": "```python\nx = 10\ny = 0\nresult = x / y\n\nprint(f\"{x} divided by {y} is {result}\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "causes this error:",
+      "raw_source": "causes this error:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "<pre>\nZeroDivisionError: integer division or modulo by zero on line 3\n</pre>",
+      "raw_source": "<sample-output>\n\n<pre>\nZeroDivisionError: integer division or modulo by zero on line 3\n</pre>\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The problem here is mathematical in nature: division by zero is not allowed, and this halts the execution of the program.",
+      "raw_source": "The problem here is mathematical in nature: division by zero is not allowed, and this halts the execution of the program."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Errors during execution are usually rather easy to fix, because the error message states the line of code causing the error. Of course the actual reason for the bug might be somewhere quite different than the line of code causing the error.",
+      "raw_source": "Errors during execution are usually rather easy to fix, because the error message states the line of code causing the error. Of course the actual reason for the bug might be somewhere quite different than the line of code causing the error."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Sometimes a bug in the program is revealed because the result the code produces is wrong. Discovering and locating this type of bug can be challenging. In the programming exercises on this course the tests are usually intended to reveal bugs of this type. Before a bug can be fixed, its cause must first be located.",
+      "raw_source": "Sometimes a bug in the program is revealed because the result the code produces is wrong. Discovering and locating this type of bug can be challenging. In the programming exercises on this course the tests are usually intended to reveal bugs of this type. Before a bug can be fixed, its cause must first be located."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Programming jargon refers to discovering the causes of bugs as _debugging_. It is an extremely important skill in any programmer's toolbox. Professional programmers often spend more time debugging than writing fresh code.",
+      "raw_source": "Programming jargon refers to discovering the causes of bugs as _debugging_. It is an extremely important skill in any programmer's toolbox. Professional programmers often spend more time debugging than writing fresh code."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A simple yet effective way of debugging a program is adding debugging print statements to your code. Verifying the results of your code with `print` commands gives a quick confirmation the code does what you want it to do.",
+      "raw_source": "A simple yet effective way of debugging a program is adding debugging print statements to your code. Verifying the results of your code with `print` commands gives a quick confirmation the code does what you want it to do."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following is an attempt to solve one of the exercises from the [previous section](/part-1/5-conditional-statements):",
+      "raw_source": "The following is an attempt to solve one of the exercises from the [previous section](/part-1/5-conditional-statements):"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "hourly_wage = float(input(\"Hourly wage: \"))\nhours = int(input(\"Hours worked: \"))\nday = input(\"Day of the week: \")\n\ndaily_wages = hourly_wage * hours\nif day == \"sunday\":\n    daily_wages * 2\n\nprint(f\"Daily wages: {daily_wages} euros\")",
+      "raw_source": "```python\nhourly_wage = float(input(\"Hourly wage: \"))\nhours = int(input(\"Hours worked: \"))\nday = input(\"Day of the week: \")\n\ndaily_wages = hourly_wage * hours\nif day == \"sunday\":\n    daily_wages * 2\n\nprint(f\"Daily wages: {daily_wages} euros\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The program doesn't work quite right. Executing the tests prints out the following:",
+      "raw_source": "The program doesn't work quite right. Executing the tests prints out the following:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "<pre>\nFAIL: PythonEditorTest: test_sunday_1\n\nWith input 20.0,6,Sunday correct wage 240.0 is not found in output Daily wages: 120.0 euros\n</pre>",
+      "raw_source": "<sample-output>\n\n<pre>\nFAIL: PythonEditorTest: test_sunday_1\n\nWith input 20.0,6,Sunday correct wage 240.0 is not found in output Daily wages: 120.0 euros\n</pre>\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When debugging the exercises on this course, the first step is often checking how the program behaves with the input specified in the test that failed. Indeed the result isn't what was expected:",
+      "raw_source": "When debugging the exercises on this course, the first step is often checking how the program behaves with the input specified in the test that failed. Indeed the result isn't what was expected:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Daily wages: 120.0 euros",
+      "raw_source": "<sample-output>\n\nDaily wages: 120.0 euros\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Debugging usually means running the program multiple times. It can come in handy to temporarily \"hard-code\" the problematic input, instead of asking the user for input each time. In this case hard-coding could look like this:",
+      "raw_source": "Debugging usually means running the program multiple times. It can come in handy to temporarily \"hard-code\" the problematic input, instead of asking the user for input each time. In this case hard-coding could look like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# hourly_wage = float(input(\"Hourly wage: \"))\n# hours = int(input(\"Hours worked: \"))\n# day = input(\"Day of the week: \")\nhourly_wage = 20.0\nhours = 6\nday = \"Sunday\"\n\ndaily_wages = hourly_wage * hours\nif day == \"sunday\":\n    daily_wages * 2\n\nprint(f\"Daily wages: {daily_wages} euros\")",
+      "raw_source": "```python\n# hourly_wage = float(input(\"Hourly wage: \"))\n# hours = int(input(\"Hours worked: \"))\n# day = input(\"Day of the week: \")\nhourly_wage = 20.0\nhours = 6\nday = \"Sunday\"\n\ndaily_wages = hourly_wage * hours\nif day == \"sunday\":\n    daily_wages * 2\n\nprint(f\"Daily wages: {daily_wages} euros\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The next step could be adding _debugging print statements_. The problematic part of the code is in the section dealing with Sundays, so let's add `print` commands before and after the line that should double the daily wages on Sundays:",
+      "raw_source": "The next step could be adding _debugging print statements_. The problematic part of the code is in the section dealing with Sundays, so let's add `print` commands before and after the line that should double the daily wages on Sundays:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# ...\n\ndaily_wages = hourly_wage * hours\nif day == \"sunday\":\n    print(\"wages before:\", daily_wages)\n    daily_wages * 2\n    print(\"wages after doubling:\", daily_wages)\n\nprint(f\"Daily wages: {daily_wages} euros\")",
+      "raw_source": "```python\n# ...\n\ndaily_wages = hourly_wage * hours\nif day == \"sunday\":\n    print(\"wages before:\", daily_wages)\n    daily_wages * 2\n    print(\"wages after doubling:\", daily_wages)\n\nprint(f\"Daily wages: {daily_wages} euros\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Running the code now reveals nothing - the debugging print statements aren't printed at all. It seems that the contents of the `if` block are never executed, so there must be a problem with the conditional statement. Let's try printing out the value of the Boolean expression:",
+      "raw_source": "Running the code now reveals nothing - the debugging print statements aren't printed at all. It seems that the contents of the `if` block are never executed, so there must be a problem with the conditional statement. Let's try printing out the value of the Boolean expression:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# ...\n\ndaily_wages = hourly_wage * hours\nprint(\"condition:\", day == \"sunday\")\nif day == \"sunday\":\n    print(\"wages before:\", daily_wages)\n    daily_wages * 2\n    print(\"wages after doubling:\", daily_wages)\n\nprint(f\"Daily wages: {daily_wages} euros\")",
+      "raw_source": "```python\n# ...\n\ndaily_wages = hourly_wage * hours\nprint(\"condition:\", day == \"sunday\")\nif day == \"sunday\":\n    print(\"wages before:\", daily_wages)\n    daily_wages * 2\n    print(\"wages after doubling:\", daily_wages)\n\nprint(f\"Daily wages: {daily_wages} euros\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Indeed, the value is `False`, so the contents of the if block are never executed:",
+      "raw_source": "Indeed, the value is `False`, so the contents of the if block are never executed:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "condition:  False\nDaily wages: 120.0 euros",
+      "raw_source": "<sample-output>\n\ncondition:  False\nDaily wages: 120.0 euros\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The issue must then lie within the condition of the `if` statement. As in so many situations in programming, the case of letters matters also in comparisons. Notice how the \"sunday\" in the Boolean expression has not been capitalized, but in the input it was. Let's fix this (in both the `print` command and the `if` statement):",
+      "raw_source": "The issue must then lie within the condition of the `if` statement. As in so many situations in programming, the case of letters matters also in comparisons. Notice how the \"sunday\" in the Boolean expression has not been capitalized, but in the input it was. Let's fix this (in both the `print` command and the `if` statement):"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# ...\n\ndaily_wages = hourly_wage * hours\nprint(\"condition:\", day == \"Sunday\")\nif day == \"Sunday\":\n    print(\"wages before:\", daily_wages)\n    daily_wages * 2\n    print(\"wages after doubling:\", daily_wages)\n\nprint(f\"Daily wages: {daily_wages} euros\")",
+      "raw_source": "```python\n# ...\n\ndaily_wages = hourly_wage * hours\nprint(\"condition:\", day == \"Sunday\")\nif day == \"Sunday\":\n    print(\"wages before:\", daily_wages)\n    daily_wages * 2\n    print(\"wages after doubling:\", daily_wages)\n\nprint(f\"Daily wages: {daily_wages} euros\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Running this prints out the following:",
+      "raw_source": "Running this prints out the following:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "condition: True\nwages before: 120\nwages after doubling: 120\nDaily wages: 120.0 euros",
+      "raw_source": "<sample-output>\n\ncondition: True\nwages before: 120\nwages after doubling: 120\nDaily wages: 120.0 euros\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It seems the value stored in `daily_wages` is correct at first: `hourly_wage = 20.0` and `hours = 6`, and 20.0 * 6 = 120.0. The command which is supposed to double the figure doesn't do so, however, so there must be a problem with the command. And indeed the command",
+      "raw_source": "It seems the value stored in `daily_wages` is correct at first: `hourly_wage = 20.0` and `hours = 6`, and 20.0 * 6 = 120.0. The command which is supposed to double the figure doesn't do so, however, so there must be a problem with the command. And indeed the command"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "daily_wages * 2",
+      "raw_source": "```python\ndaily_wages * 2\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "does double the value, but it doesn't store the new value anywhere. Let's change it so it also stores the new value:",
+      "raw_source": "does double the value, but it doesn't store the new value anywhere. Let's change it so it also stores the new value:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "daily_wages *= 2",
+      "raw_source": "```python\ndaily_wages *= 2\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Running the program again reveals that the printout at the end is now also correct:",
+      "raw_source": "Running the program again reveals that the printout at the end is now also correct:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "condition: True\nwages before: 120\nwages after doubling: 240\nDaily wages: 240.0 euros",
+      "raw_source": "<sample-output>\n\ncondition: True\nwages before: 120\nwages after doubling: 240\nDaily wages: 240.0 euros\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When the program has been fixed, remember to remove all debugging print statements and other code added for debugging purposes.",
+      "raw_source": "When the program has been fixed, remember to remove all debugging print statements and other code added for debugging purposes."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This example was quite simple, and in such a short program one could probably figure out the bugs just by reading the code carefully. However, using debugging print statements is often a quick way to get a feeling for where the problem might lie. Print statements can be used to figure out which parts of the program seem to work correctly, so bug tracking efforts can be concentrated on the sections of code which are the most likely culprits.",
+      "raw_source": "This example was quite simple, and in such a short program one could probably figure out the bugs just by reading the code carefully. However, using debugging print statements is often a quick way to get a feeling for where the problem might lie. Print statements can be used to figure out which parts of the program seem to work correctly, so bug tracking efforts can be concentrated on the sections of code which are the most likely culprits."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Debugging print statements are only one tool for debugging programs. We will come back to this subject later on during this course. You should now get into the habit of using debugging print statements to look for mistakes in your code. Programming professionals cannot get by without using them, so it is a very useful tool for beginners as well.",
+      "raw_source": "Debugging print statements are only one tool for debugging programs. We will come back to this subject later on during this course. You should now get into the habit of using debugging print statements to look for mistakes in your code. Programming professionals cannot get by without using them, so it is a very useful tool for beginners as well."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Fix the syntax",
+        "tmcname": "part02-01_fix_syntax",
+        "height": "400px"
+      },
+      "inner_content": "The following program contains several _syntactic errors_. Please fix the program so that the syntax is in order and the program works as specified by the examples below.\n\n```python\n  number = input(\"Please type in a number: \")\n  if number>100\n    print(\"The number was greater than one hundred\")\n    number - 100\n    print(\"Now its value has decreased by one hundred)\n     print(\"Its value is now\"+ number)\n print(number + \" must be my lucky number!\")\n print(\"Have a nice day!)\n```\n\n<sample-output>\n\nPlease type in a number: **13**\n13 must be my lucky number!\nHave a nice day!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **101**\nThe number was greater than one hundred\nNow its value has decreased by one hundred\nIts value is now 1\n1 must be my lucky number!\nHave a nice day!\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Fix the syntax\" tmcname=\"part02-01_fix_syntax\" height=\"400px\">\n\nThe following program contains several _syntactic errors_. Please fix the program so that the syntax is in order and the program works as specified by the examples below.\n\n```python\n  number = input(\"Please type in a number: \")\n  if number>100\n    print(\"The number was greater than one hundred\")\n    number - 100\n    print(\"Now its value has decreased by one hundred)\n     print(\"Its value is now\"+ number)\n print(number + \" must be my lucky number!\")\n print(\"Have a nice day!)\n```\n\n<sample-output>\n\nPlease type in a number: **13**\n13 must be my lucky number!\nHave a nice day!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **101**\nThe number was greater than one hundred\nNow its value has decreased by one hundred\nIts value is now 1\n1 must be my lucky number!\nHave a nice day!\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Number of characters",
+        "tmcname": "part02-02_number_of_characters"
+      },
+      "inner_content": "The function `len` can be used to find out the length of a string, among other things. The function returns the number of characters in a string.\n\nSome examples of how this works:\n\n```python\nword = \"abcd\"\nprint(len(word))\n\nprint(len(\"hi there\"))\n\nword2 = \"howdydoody\"\nlength = len(word2)\nprint(length)\n\nempty_string = \"\"\nlength = len(empty_string)\nprint(length)\n```\n\n<sample-output>\n\n4\n8\n10\n0\n\n</sample-output>\n\nPlease write a program which asks the user for a word and then prints out the number of characters, if there was more than one typed in.\n\nExamples of expected behaviour:\n\n<sample-output>\n\nPlease type in a word: **hey**\nThere are 3 letters in the word hey\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a word: **banana**\nThere are 6 letters in the word banana\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a word: **b**\nThank you!\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Number of characters\" tmcname=\"part02-02_number_of_characters\">\n\nThe function `len` can be used to find out the length of a string, among other things. The function returns the number of characters in a string.\n\nSome examples of how this works:\n\n```python\nword = \"abcd\"\nprint(len(word))\n\nprint(len(\"hi there\"))\n\nword2 = \"howdydoody\"\nlength = len(word2)\nprint(length)\n\nempty_string = \"\"\nlength = len(empty_string)\nprint(length)\n```\n\n<sample-output>\n\n4\n8\n10\n0\n\n</sample-output>\n\nPlease write a program which asks the user for a word and then prints out the number of characters, if there was more than one typed in.\n\nExamples of expected behaviour:\n\n<sample-output>\n\nPlease type in a word: **hey**\nThere are 3 letters in the word hey\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a word: **banana**\nThere are 6 letters in the word banana\nThank you!\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a word: **b**\nThank you!\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "in-browser-programming-exercise",
+      "attributes": {
+        "name": "Typecasting",
+        "tmcname": "part02-03_typecasting"
+      },
+      "inner_content": "When programming in Python, often we need to change the data type of a value. For example, a floating point number can be converted into an integer with the function `int`:\n\n```python\n\ntemperature = float(input(\"Please type in a temperature: \"))\n\nprint(\"The temperature is\", temperature)\n\nprint(\"...and rounded down it is\", int(temperature))\n\n```\n\n<sample-output>\n\nPlease type in a temperature: **5.15**\nThe temperature is 5.15\n...and rounded down it is 5\n\n</sample-output>\n\nNotice the function always rounds down, and not according to the rounding rules in mathematics. This is an example of a _floor function_.\n\n<sample-output>\n\nPlease type in a temperature: **8.99**\nThe temperature is 8.99\n...and rounded down it is 8\n\n</sample-output>\n\nPlease write a program which asks the user for a floating point number and then prints out the integer part and the decimal part separately. Use the Python `int` function.\n\nYou can assume the number given by the user is always greater than zero.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nPlease type in a number: **1.34**\nInteger part: 1\nDecimal part: 0.34\n\n</sample-output>",
+      "raw_source": "<in-browser-programming-exercise name=\"Typecasting\" tmcname=\"part02-03_typecasting\">\n\nWhen programming in Python, often we need to change the data type of a value. For example, a floating point number can be converted into an integer with the function `int`:\n\n```python\n\ntemperature = float(input(\"Please type in a temperature: \"))\n\nprint(\"The temperature is\", temperature)\n\nprint(\"...and rounded down it is\", int(temperature))\n\n```\n\n<sample-output>\n\nPlease type in a temperature: **5.15**\nThe temperature is 5.15\n...and rounded down it is 5\n\n</sample-output>\n\nNotice the function always rounds down, and not according to the rounding rules in mathematics. This is an example of a _floor function_.\n\n<sample-output>\n\nPlease type in a temperature: **8.99**\nThe temperature is 8.99\n...and rounded down it is 8\n\n</sample-output>\n\nPlease write a program which asks the user for a floating point number and then prints out the integer part and the decimal part separately. Use the Python `int` function.\n\nYou can assume the number given by the user is always greater than zero.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nPlease type in a number: **1.34**\nInteger part: 1\nDecimal part: 0.34\n\n</sample-output>\n\n</in-browser-programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!--",
+      "raw_source": "<!--"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A quiz to review the contents of this section:",
+      "raw_source": "A quiz to review the contents of this section:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "eb4b41d3-b83b-5815-a1d5-ae9b377aa274"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"eb4b41d3-b83b-5815-a1d5-ae9b377aa274\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    }
+  ]
+}

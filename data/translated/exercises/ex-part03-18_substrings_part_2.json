@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-18_substrings_part_2",
+  "lesson_id": "part03-2-working-with-strings",
+  "part": 3,
+  "tmc_name": "part03-18_substrings_part_2",
+  "title_original": "Substrings, part 2",
+  "title_vi": "Chuỗi con, phần 2",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user to type in a string. The program then prints out all the substrings which end with the last character, from the shortest to the longest. Have a look at the example below.\n\n<sample-output>\n\nPlease type in a string: **test**\nt\nst\nest\ntest\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình yêu cầu người dùng nhập một chuỗi. Sau đó, chương trình in ra tất cả các chuỗi con kết thúc bằng ký tự cuối cùng, từ ngắn nhất đến dài nhất. Hãy xem ví dụ dưới đây.\n\n<sample-output>\n\nVui lòng nhập một chuỗi: **test**\nt\nst\nước tính\nkiểm tra\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "52a049d659df31c7fd45c4b8cc7459a87d3f21e9dca0a62fd7013c3541e55122",
+  "order": 67
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-20_next_leap_year",
+  "lesson_id": "part02-4-simple-loops",
+  "part": 2,
+  "tmc_name": "part02-20_next_leap_year",
+  "title_original": "The next leap year",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for a year, and prints out the next leap year.\n\n<sample-output>\n\nYear: **2023**\nThe next leap year after 2023 is 2024\n\n</sample-output>\n\nIf the user inputs a year which is a leap year (such as 2024), the program should print out the following leap year:\n\n<sample-output>\n\nYear: **2024**\nThe next leap year after 2024 is 2028\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "6b5eb18a415087f6f454d2974fbc62acfd94e272c15aeda1d4a140d977f9c5fe",
+  "order": 40
+}

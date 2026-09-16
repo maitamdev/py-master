@@ -1,0 +1,890 @@
+{
+  "id": "part11-2-more-comprehensions",
+  "part": 11,
+  "part_slug": "part-11",
+  "slug": "2-more-comprehensions",
+  "is_part_index": false,
+  "title_original": "More comprehensions",
+  "title_vi": "",
+  "path": "/part-11/2-more-comprehensions",
+  "source_path": "data/part-11/2-more-comprehensions.md",
+  "source_hash": "7793a146485874cfcbd7993238938bcacaf6f04fd90c3ba88bb96f8d3776a383",
+  "order": 1,
+  "blocks_count": 48,
+  "blocks": [
+    {
+      "id": "blk-part11-2-more-comprehensions-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "eb67cfa781281b2dcf19b41067f375ac8e6aa5250fe6fae390245dc38ef1d923",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be able to use comprehensions with strings\n- You will know how to use comprehensions with your own classes\n- You will be able to create dictionary comprehensions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "8c12a87bbd1b61818e1317ad9697e25308c07a856e4113f4984693d5428013bd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Lists are perhaps the most common target for comprehensions, but comprehensions work on any series of items, including strings. Just like in the list examples in the previous section, if a list comprehension is performed on a string, the items (i.e. the characters) in the string are plucked one by one, processed according to the expression given, and stored in a list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0003",
+      "type": "code",
+      "order": 3,
+      "source_hash": "c998daf52d98abfefa04c3c5341044ea3310911b55f6751fcb236bfacf9f3363",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "name = \"Peter Python\"\n\nuppercased = [character.upper() for character in name]\nprint(uppercased)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "name = \"Peter Python\"\n\nuppercased = [character.upper() for character in name]\nprint(uppercased)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c998daf52d98abfefa04c3c5341044ea3310911b55f6751fcb236bfacf9f3363",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0004",
+      "type": "sample_output",
+      "order": 4,
+      "source_hash": "b6e720087a5e81c492fff3c60ba87f72d7ad8aee59bf44996abc5a10a7368a9a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "['P', 'E', 'T', 'E', 'R', ' ', 'P', 'Y', 'T', 'H', 'O', 'N']"
+      },
+      "translation": {
+        "language": "text",
+        "content": "['P', 'E', 'T', 'E', 'R', ' ', 'P', 'Y', 'T', 'H', 'O', 'N']"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n['P', 'E', 'T', 'E', 'R', ' ', 'P', 'Y', 'T', 'H', 'O', 'N']\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "b1d3731393a42275844b8a37cb53e81cf5c631d7681466793729741f9f8c2762",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The result is indeed a list, as dictated by the bracket notation around the comprehension statement. If we wanted a string instead, we could use the string method `join` to parse the list into a string. Remember, the method is called on the string we want to use as the \"glue\" between the characters. Let's take a look at some examples:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0006",
+      "type": "code",
+      "order": 6,
+      "source_hash": "b541647d7c6b5e9b788403e27ae3da6c8339e3dac8f4985a24ccc8169a7e74e8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "name = \"Peter\"\nchar_list = list(name)\nprint(char_list)\n\nprint(\"\".join(char_list))\nprint(\" \".join(char_list))\nprint(\",\".join(char_list))\nprint(\" and \".join(char_list))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "name = \"Peter\"\nchar_list = list(name)\nprint(char_list)\n\nprint(\"\".join(char_list))\nprint(\" \".join(char_list))\nprint(\",\".join(char_list))\nprint(\" and \".join(char_list))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b541647d7c6b5e9b788403e27ae3da6c8339e3dac8f4985a24ccc8169a7e74e8",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0007",
+      "type": "sample_output",
+      "order": 7,
+      "source_hash": "b3b68656d4a1705ade36d0ca6610cdf2e7aeddd62b64e7f71cc62f5a33869ae1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "['P', 'e', 't', 'e', 'r']\nPeter\nP e t e r\nP,e,t,e,r\nP and e and t and e and r"
+      },
+      "translation": {
+        "language": "text",
+        "content": "['P', 'e', 't', 'e', 'r']\nPeter\nP e t e r\nP,e,t,e,r\nP and e and t and e and r"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n['P', 'e', 't', 'e', 'r']\nPeter\nP e t e r\nP,e,t,e,r\nP and e and t and e and r\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "ac8d400972dc92c62f5b8995c0e3e69b2ef593bbf9217ca23d62000a2a886a4a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "List comprehensions and the `join` method make it easy to create new strings based on other strings. We could, for example, make a string which contains only the vowels from another string:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0009",
+      "type": "code",
+      "order": 9,
+      "source_hash": "b5a1543f0ff5131068afd3a0bbd02c048fb1bbf25ec70efa1614129626d43c1c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "test_string = \"Hello there, this is a test!\"\n\nvowels = [character for character in test_string if character in \"aeiou\"]\nnew_string = \"\".join(vowels)\n\nprint(new_string)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "test_string = \"Hello there, this is a test!\"\n\nvowels = [character for character in test_string if character in \"aeiou\"]\nnew_string = \"\".join(vowels)\n\nprint(new_string)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b5a1543f0ff5131068afd3a0bbd02c048fb1bbf25ec70efa1614129626d43c1c",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0010",
+      "type": "sample_output",
+      "order": 10,
+      "source_hash": "297bdcaf4b7a7b02ca076c0909ed76e7d57dca5e411d637b8ce9221c05ab8d3c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "eoeeiiae"
+      },
+      "translation": {
+        "language": "text",
+        "content": "eoeeiiae"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\neoeeiiae\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "b8adecaa229b0fe84c036cc6032507772f91abd0c5fa65f45fde2e3c2f0d82ac",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the example above the list comprehension and the `join` method are on separate lines, but they could be combined into a single expression:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0012",
+      "type": "code",
+      "order": 12,
+      "source_hash": "f9cfa70fdde1042595920bde7b4f9e492ef8956f454ec137feb7e7d9f915d776",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "test_string = \"Hello there, this is a test!\"\n\nvowel_string = \"\".join([character for character in test_string if character in \"aeiou\"])\n\nprint(vowel_string)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "test_string = \"Hello there, this is a test!\"\n\nvowel_string = \"\".join([character for character in test_string if character in \"aeiou\"])\n\nprint(vowel_string)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f9cfa70fdde1042595920bde7b4f9e492ef8956f454ec137feb7e7d9f915d776",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "d5683558cda0c6b996c7e232becda05c807b9cc5d51798c0260b8ff536fc0201",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Many Python programmers swear by these oneliners, so it is well worth your while to learn to read them. We could even add the `split` method to the mix, so that we can process entire sentences efficiently with a single statement. In the example below the first character from each word in a sentence is removed:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "0844e7a4f5d340566106a8addc82327a7146b5bea9d7fbc8e2becebc83a6735e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "sentence = \"Sheila keeps on selling seashells on the seashore\"\n\nsentence_no_initials = \" \".join([word[1:] for word in sentence.split()])\nprint(sentence_no_initials)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "sentence = \"Sheila keeps on selling seashells on the seashore\"\n\nsentence_no_initials = \" \".join([word[1:] for word in sentence.split()])\nprint(sentence_no_initials)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "0844e7a4f5d340566106a8addc82327a7146b5bea9d7fbc8e2becebc83a6735e",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0015",
+      "type": "sample_output",
+      "order": 15,
+      "source_hash": "944bd8e57475ccd82f09204172893287dc30a064053bc88411da3d6812651a24",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "heila eeps n elling eashells n he eashore"
+      },
+      "translation": {
+        "language": "text",
+        "content": "heila eeps n elling eashells n he eashore"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nheila eeps n elling eashells n he eashore\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "59ff1a15aa5bd62550685560066b68a9a927dd06f4f7047989be704907673861",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's go through this step by step:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0017",
+      "type": "list",
+      "order": 17,
+      "source_hash": "9227f56a5639c8ee9e98c1936c816963fdcd014a4b6961fea3cc094be58f5a5c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "- `word[1:]` extracts a substring from the second character (at index 1) onwards \n- `sentence.split()` splits the sentence into sections at the given character. In this case there is no argument given to the method, so the sentence is split at space characters by default\n- `\" \".join()` combines the items in the list into a new string using a space character between the items"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "0cd73ac66c75cbc4d18720d7e62b316600a2514e71adcd16cc47a468cc66dece",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A more traditional iterative approach could look like this"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0019",
+      "type": "code",
+      "order": 19,
+      "source_hash": "3ea1146ae6cc91cab1816801475bd11c86fe703d0b27ae2d319b36436a254c4f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "sentence = \"Sheila keeps on selling seashells on the seashore\"\n\nword_list = []\nwords = sentence.split()\nfor word in words:\n    word_no_initials = word[1:]\n    word_list.append(word_no_initials)\n\nsentence_no_initials = \" \".join(word_list)\n\nprint(sentence_no_initials)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "sentence = \"Sheila keeps on selling seashells on the seashore\"\n\nword_list = []\nwords = sentence.split()\nfor word in words:\n    word_no_initials = word[1:]\n    word_list.append(word_no_initials)\n\nsentence_no_initials = \" \".join(word_list)\n\nprint(sentence_no_initials)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3ea1146ae6cc91cab1816801475bd11c86fe703d0b27ae2d319b36436a254c4f",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0020",
+      "type": "exercise",
+      "order": 20,
+      "source_hash": "77cd92f3c33a5d8ab773fd9ebbd980941ab95793b1e83dd56a9d6600191f1fce",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `filter_forbidden(string: str, forbidden: str)` which takes two strings as its arguments. The function should return a new version of the first string. It should not contain any characters from the second string.\n\nThe function should be implemented using list comprehensions. The maximum length of the function is three lines of code, including the header line beginning with the `def` keyword.\n\nPlease have a look at the example below.\n\n```python\nsentence = \"Once! upon, a time: there was a python!??!?!\"\nfiltered = filter_forbidden(sentence, \"!?:,.\")\nprint(filtered)\n```\n\n<sample-output>\n\nOnce upon a time there was a python\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-08_filter_forbidden",
+        "exercise_type": "programming-exercise",
+        "name": "Filter forbidden",
+        "tmc_name": "part11-08_filter_forbidden",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0021",
+      "type": "heading",
+      "order": 21,
+      "source_hash": "46e43eb01252be785c1354c61df0f0ced6f7a5ab80e0b2ce9d4a9faa896b8350",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Own classes and comprehensions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "af22610e6e6e09a306670b0db5aabcd9d726caca96fe644ff4f205b73b0e07d1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Comprehensions can be a useful tool for processing or formulating instances of your own classes, as we'll see in the following examples."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "3ff2decbeee8fdf6d73f6260c77764f1b2810128b50eae27541cca9fc540cbed",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "First, let's have a look at the class `Country` which is a simple model for a single country, with attributes for the name and the population. In the main function below we first create some Country objects, and then use a list comprehension to select only those whose population is greater than five million."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0024",
+      "type": "code",
+      "order": 24,
+      "source_hash": "d470c726b1540b914b48955fdb77a1d5ab04ac9cc4663210e37d437703391daf",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Country:\n    \"\"\" This class models a single country with population \"\"\"\n    def __init__(self, name: str, population: int):\n        self.name = name\n        self.population = population\n\nif __name__ == \"__main__\":\n    finland = Country(\"Finland\", 6000000)\n    malta = Country(\"Malta\", 500000)\n    sweden = Country(\"Sweden\", 10000000)\n    iceland = Country(\"Iceland\", 350000)\n\n    countries = [finland, malta, sweden, iceland]\n\n    bigger_countries = [country.name for country in countries if country.population > 5000000]\n    for country in bigger_countries:\n        print(country)\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Country:\n    \"\"\" This class models a single country with population \"\"\"\n    def __init__(self, name: str, population: int):\n        self.name = name\n        self.population = population\n\nif __name__ == \"__main__\":\n    finland = Country(\"Finland\", 6000000)\n    malta = Country(\"Malta\", 500000)\n    sweden = Country(\"Sweden\", 10000000)\n    iceland = Country(\"Iceland\", 350000)\n\n    countries = [finland, malta, sweden, iceland]\n\n    bigger_countries = [country.name for country in countries if country.population > 5000000]\n    for country in bigger_countries:\n        print(country)\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d470c726b1540b914b48955fdb77a1d5ab04ac9cc4663210e37d437703391daf",
+        "length_lines": 17
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0025",
+      "type": "sample_output",
+      "order": 25,
+      "source_hash": "24100bcf9c2124a6f05286504efd7839fc99464c625a13f9f4f72de350c6f669",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Finland\nSweden"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Finland\nSweden"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nFinland\nSweden\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "0a7eb70ba378ea1e22aab364afbffba58695666e5fc6201a648454b292f93d27",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the list comprehension above we selected only the name attribute from the Country objects, so the contents of the list could be printed directly. We could also create a new list of the countries themselves and access the name attribute in the `for` loop. This would be useful if the same list of countries was used also later in the program, or if we needed the population attribute in the `for` loop as well:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0027",
+      "type": "code",
+      "order": 27,
+      "source_hash": "e8a13170eae58284b5b7f554db264f9dd05b14479774cecd1e9cd91300c57740",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    finland = Country(\"Finland\", 6000000)\n    malta = Country(\"Malta\", 500000)\n    sweden = Country(\"Sweden\", 10000000)\n    iceland = Country(\"Iceland\", 350000)\n\n    countries = [finland, malta, sweden, iceland]\n\n    bigger_countries = [country for country in countries if country.population > 5000000]\n    for country in bigger_countries:\n        print(country.name, country.population)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    finland = Country(\"Finland\", 6000000)\n    malta = Country(\"Malta\", 500000)\n    sweden = Country(\"Sweden\", 10000000)\n    iceland = Country(\"Iceland\", 350000)\n\n    countries = [finland, malta, sweden, iceland]\n\n    bigger_countries = [country for country in countries if country.population > 5000000]\n    for country in bigger_countries:\n        print(country.name, country.population)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e8a13170eae58284b5b7f554db264f9dd05b14479774cecd1e9cd91300c57740",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "0668e6558e5763d0409ec857885f6f936b79ed6b5b6e98910186024088e9dab5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the next example we have a class named `RunningEvent` which models a single foot race event with attributes for the length and the name of the race. We will use list comprehensions to create `RunningEvent` objects based on a list of race lengths."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "383a0c5a3659b9e562ec63fe6adf4d001a2b06b6a0f6f64dabe56fbec97eb592",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The parameter `name` has a default value in the constructor of the `RunningEvent` class, whIch is why we do not need to pass the name as an argument."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0030",
+      "type": "code",
+      "order": 30,
+      "source_hash": "2b75176cf7d93e405830d68e40f026fe00d8734e5103dfb0ad3b9a777853de5a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class RunningEvent:\n    \"\"\" The class models a foot race event of a length of n metres  \"\"\"\n    def __init__(self, length: int, name: str = \"no name\"):\n        self.length = length\n        self.name = name\n\n    def __repr__(self):\n        return f\"{self.length} m. ({self.name})\"\n\nif __name__ == \"__main__\":\n    lengths = [100, 200, 1500, 3000, 42195]\n    events = [RunningEvent(length) for length in lengths]\n\n    # Print out all events\n    print(events)\n\n    # Pick one from the list and give it a name\n    marathon = events[-1] # the last item in the list\n    marathon.name = \"Marathon\"\n\n    # Print out everything again, including the new name\n    print(events)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class RunningEvent:\n    \"\"\" The class models a foot race event of a length of n metres  \"\"\"\n    def __init__(self, length: int, name: str = \"no name\"):\n        self.length = length\n        self.name = name\n\n    def __repr__(self):\n        return f\"{self.length} m. ({self.name})\"\n\nif __name__ == \"__main__\":\n    lengths = [100, 200, 1500, 3000, 42195]\n    events = [RunningEvent(length) for length in lengths]\n\n    # Print out all events\n    print(events)\n\n    # Pick one from the list and give it a name\n    marathon = events[-1] # the last item in the list\n    marathon.name = \"Marathon\"\n\n    # Print out everything again, including the new name\n    print(events)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2b75176cf7d93e405830d68e40f026fe00d8734e5103dfb0ad3b9a777853de5a",
+        "length_lines": 22
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0031",
+      "type": "sample_output",
+      "order": 31,
+      "source_hash": "f950dbe2fca87a837bb1e3ea47af48d8a42a95fe4df50306ad3cbc690da9b265",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[100 m. (no name), 200 m. (no name), 1500 m. (no name), 3000 m. (no name), 42195 m. (no name)]\n[100 m. (no name), 200 m. (no name), 1500 m. (no name), 3000 m. (no name), 42195 m. (Marathon)]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[100 m. (no name), 200 m. (no name), 1500 m. (no name), 3000 m. (no name), 42195 m. (no name)]\n[100 m. (no name), 200 m. (no name), 1500 m. (no name), 3000 m. (no name), 42195 m. (Marathon)]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[100 m. (no name), 200 m. (no name), 1500 m. (no name), 3000 m. (no name), 42195 m. (no name)]\n[100 m. (no name), 200 m. (no name), 1500 m. (no name), 3000 m. (no name), 42195 m. (Marathon)]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "6b922b2de202bbe37c3dfd7f9df9e5fe0764573a134c31b2df2e9c1e59d1b2dd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Now, let's find out what makes a series of items \"comprehendible\". In the previous part we learnt how to make our own classes iterable. It is exactly this same feature which also allows for list comprehensions. If your own class is iterable, it can be used as the basis of a list comprehension statement. The following class definitions are copied directly from [part 10](/part-10/3-oo-programming-techniques#iterators):"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0033",
+      "type": "code",
+      "order": 33,
+      "source_hash": "4a5b9ce432783dbf64c81f67b1eeeede9c8dd033bff48f73cffd6c1afe40cee5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Book:\n    def __init__(self, name: str, author: str, page_count: int):\n        self.name = name\n        self.author = author\n        self.page_count = page_count\n\nclass Bookshelf:\n    def __init__(self):\n        self._books = []\n\n    def add_book(self, book: Book):\n        self._books.append(book)\n\n    # This is the iterator initialization method\n    # The iteration variable(s) should be initialized here\n    def __iter__(self):\n        self.n = 0\n        # the method returns a reference to the object itself as \n        # the iterator is implemented within the same class definition\n        return self\n\n    # This method returns the next item within the object\n    # If all items have been traversed, the StopIteration event is raised\n    def __next__(self):\n        if self.n < len(self._books):\n            # Select the current item from the list within the object\n            book = self._books[self.n]\n            # increase the counter (i.e. iteration variable) by one\n            self.n += 1\n            # return the current item\n            return book\n        else:\n            # All books have been traversed\n            raise StopIteration\n\n# Test your classes\nif __name__ == \"__main__\":\n    b1 = Book(\"The Life of Python\", \"Montague Python\", 123)\n    b2 = Book(\"The Old Man and the C\", \"Ernest Hemingjavay\", 204)\n    b3 = Book(\"A Good Cup of Java\", \"Caffee Coder\", 997)\n\n    shelf = Bookshelf()\n    shelf.add_book(b1)\n    shelf.add_book(b2)\n    shelf.add_book(b3)\n\n    # Create a list containing the names of all books\n    book_names = [book.name for book in shelf]\n    print(book_names)\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Book:\n    def __init__(self, name: str, author: str, page_count: int):\n        self.name = name\n        self.author = author\n        self.page_count = page_count\n\nclass Bookshelf:\n    def __init__(self):\n        self._books = []\n\n    def add_book(self, book: Book):\n        self._books.append(book)\n\n    # This is the iterator initialization method\n    # The iteration variable(s) should be initialized here\n    def __iter__(self):\n        self.n = 0\n        # the method returns a reference to the object itself as \n        # the iterator is implemented within the same class definition\n        return self\n\n    # This method returns the next item within the object\n    # If all items have been traversed, the StopIteration event is raised\n    def __next__(self):\n        if self.n < len(self._books):\n            # Select the current item from the list within the object\n            book = self._books[self.n]\n            # increase the counter (i.e. iteration variable) by one\n            self.n += 1\n            # return the current item\n            return book\n        else:\n            # All books have been traversed\n            raise StopIteration\n\n# Test your classes\nif __name__ == \"__main__\":\n    b1 = Book(\"The Life of Python\", \"Montague Python\", 123)\n    b2 = Book(\"The Old Man and the C\", \"Ernest Hemingjavay\", 204)\n    b3 = Book(\"A Good Cup of Java\", \"Caffee Coder\", 997)\n\n    shelf = Bookshelf()\n    shelf.add_book(b1)\n    shelf.add_book(b2)\n    shelf.add_book(b3)\n\n    # Create a list containing the names of all books\n    book_names = [book.name for book in shelf]\n    print(book_names)\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4a5b9ce432783dbf64c81f67b1eeeede9c8dd033bff48f73cffd6c1afe40cee5",
+        "length_lines": 49
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0034",
+      "type": "exercise",
+      "order": 34,
+      "source_hash": "8e1bea405ed56516f0d65a29b14a1a76b64d806753f429041e0cbc5e974929a9",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In part 10 you created an [iterable shopping list](/part-10/3-oo-programming-techniques#programming-exercise-an-iterable-shopping-list), and we just learnt that an object created from an iterable class can be used with list comprehensions. The exercise template contains a stripped down version of the `ShoppingList` with just enough functionality to fulfil the requirements of this exercise.\n\nPlease write a function named `products_in_shopping_list(shopping_list, amount: int)` which takes a ShoppingList object and an integer value as its arguments. The function returns a list of product names. The list should include only the products with at least the number of items specified by the `amount` parameter.\n\nThe function should be implemented using list comprehensions. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword. The `ShoppingList` class definition should _not_ be modified.\n\nThe function should work as follows:\n\n```python\nmy_list = ShoppingList()\nmy_list.add(\"bananas\", 10)\nmy_list.add(\"apples\", 5)\nmy_list.add(\"alcohol free beer\", 24)\nmy_list.add(\"pineapple\", 1)\n\nprint(\"the shopping list contains at least 8 of the following items:\")\nfor product in products_in_shopping_list(my_list, 8):\n    print(product)\n```\n\n<sample-output>\n\nthe shopping list contains at least 8 of the following items:\nbananas\nalcohol free beer\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-09_products_in_shopping_list",
+        "exercise_type": "programming-exercise",
+        "name": "Products in shopping list",
+        "tmc_name": "part11-09_products_in_shopping_list",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0035",
+      "type": "exercise",
+      "order": 35,
+      "source_hash": "e15ff34ad5124f271a7a7b960574603dbc1e957d18e19f187cad6360d951021b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This exercise is a slightly modified version of the exercise [Comparing properties](/part-9/1-objects-and-references#programming-exercise-comparing-properties) from part 9.\n\nPlease write a function named `cheaper_properties(properties: list, reference: RealProperty)` which takes a list of properties and a single RealProperty object as its arguments. The function should return a list containing only those properties in the original list which are cheaper than the reference property, along with the price difference. The items in the returned list should be tuples, where the first item is the property itself and the second is the difference in price.\n\nThe function should be implemented using list comprehensions. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe code for the `RealProperty` class is included in the exercise template and should not be changed.\n\nAn example of the function in action:\n\n```python\na1 = RealProperty(1, 16, 5500, \"Central studio\")\na2 = RealProperty(2, 38, 4200, \"Two bedrooms downtown\")\na3 = RealProperty(3, 78, 2500, \"Three bedrooms in the suburbs\")\na4 = RealProperty(6, 215, 500, \"Farm in the middle of nowhere\")\na5 = RealProperty(4, 105, 1700, \"Loft in a small town\")\na6 = RealProperty(25, 1200, 2500, \"Countryside mansion\")\n\nproperties = [a1, a2, a3, a4, a5, a6]\n\nprint(f\"cheaper options when compared to {a3.description}:\")\nfor item in cheaper_properties(properties, a3):\n    print(f\"{item[0].description:35} price difference {item[1]} euros\")\n```\n\n<sample-output>\n\ncheaper options when compared to Three bedrooms in the suburbs:\nCentral studio                                    price difference 107000 euros\nTwo bedrooms downtown               price difference 35400 euros\nFarm in the middle of nowhere       price difference 87500 euros\nLoft in a small town                           price difference 16500 euros\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-10_cheaper_properties",
+        "exercise_type": "programming-exercise",
+        "name": "Price difference of cheaper properties",
+        "tmc_name": "part11-10_cheaper_properties",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0036",
+      "type": "heading",
+      "order": 36,
+      "source_hash": "1e12436665f830729fb6def4d95b7f18abed82d3cdd803a19e999ad3ac392fd3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Comprehensions and dictionaries"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "2a2ecac6b6686fa6cc3bf271b8e776fefd4ed437fc0482474ef6fd6a704ec733",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "There is nothing intrinsically \"listey\" about comprehensions. The result is a list because the comprehension statement is encased in square brackets, which indicate a Python list. Comprehensions work just as well with Python dictionaries if you use curly brackets instead. Remember, though, that dictionaries require key-value pairs. Both must be specified when a dictionary is created, also with comprehensions."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "b8eaa96c8ecfeffb0eb442ca8a4b5df1e5852fda46c54d634199423c933249ef",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The basis of a comprehension can be any iterable series, be it a list, a string, a tuple, a dictionary, any of your own iterable classes, and so forth."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "c96a8db59179e3615b99b2d893040cff9896d59ea01e0c7bda4eefabb6c6f7e3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the following example we use a string as the basis of a dictionary. The dictionary contains all the unique characters in the string, along with the number of times they occurred:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0040",
+      "type": "code",
+      "order": 40,
+      "source_hash": "3e3a0ef455e299a2a9cd32f8c9e16e80e381a6dfb4ba6441d8ce6986081e4ced",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "sentence = \"hello there\"\n\nchar_counts = {character : sentence.count(character) for character in sentence}\nprint(char_counts)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "sentence = \"hello there\"\n\nchar_counts = {character : sentence.count(character) for character in sentence}\nprint(char_counts)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3e3a0ef455e299a2a9cd32f8c9e16e80e381a6dfb4ba6441d8ce6986081e4ced",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0041",
+      "type": "sample_output",
+      "order": 41,
+      "source_hash": "335bdf76636342d9d7c8190a3d14069592e913d9a286477ddf2ca618fe5b277e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "{'h': 2, 'e': 3, 'l': 2, 'o': 1, ' ': 1, 't': 1, 'r': 1}"
+      },
+      "translation": {
+        "language": "text",
+        "content": "{'h': 2, 'e': 3, 'l': 2, 'o': 1, ' ': 1, 't': 1, 'r': 1}"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n{'h': 2, 'e': 3, 'l': 2, 'o': 1, ' ': 1, 't': 1, 'r': 1}\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "9cc2bc31e34d785ed812431d19e20cb2779a31b912aa7d8cba6ac7544da5de26",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The principle of the comprehension statement is exactly the same as with lists, but instead of a single value, the expression now consists of a key and a value. The general syntax looks like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0043",
+      "type": "paragraph",
+      "order": 43,
+      "source_hash": "e611226cf53c9d53ef22845a8d3833cf6709cee4ae17e6a99a7b39341f746203",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "`{<key expression> : <value expression> for <item> in <series>}`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "912c6ab08d4156ac1928de4dd3fab2e05a26045b57788c91e06b47fe2e8ef636",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "To finish off this section, lets take a look at factorials again. This time we store the results in a dictionary. The number itself is the key, while the value is the result of the factorial from our function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0045",
+      "type": "code",
+      "order": 45,
+      "source_hash": "53dd92131949be4573890fe45dac3fdbc48344b0b5644d331c57ce986ba7b6fa",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def factorial(n: int):\n    \"\"\" The function calculates the factorial n! for integers above zero \"\"\"\n    k = 1\n    while n >= 2:\n        k *= n\n        n -= 1\n    return k\n\nif __name__ == \"__main__\":\n    numbers = [-2, 3, 2, 1, 4, -10, 5, 1, 6]\n    factorials = {number : factorial(number) for number in numbers if number > 0}\n    print(factorials)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def factorial(n: int):\n    \"\"\" The function calculates the factorial n! for integers above zero \"\"\"\n    k = 1\n    while n >= 2:\n        k *= n\n        n -= 1\n    return k\n\nif __name__ == \"__main__\":\n    numbers = [-2, 3, 2, 1, 4, -10, 5, 1, 6]\n    factorials = {number : factorial(number) for number in numbers if number > 0}\n    print(factorials)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "53dd92131949be4573890fe45dac3fdbc48344b0b5644d331c57ce986ba7b6fa",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0046",
+      "type": "sample_output",
+      "order": 46,
+      "source_hash": "f124b8a061008aa21fec74f0aeed9d95e346937a13f30bcd971d8492493040bd",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "{3: 6, 2: 2, 1: 1, 4: 24, 5: 120, 6: 720}"
+      },
+      "translation": {
+        "language": "text",
+        "content": "{3: 6, 2: 2, 1: 1, 4: 24, 5: 120, 6: 720}"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n{3: 6, 2: 2, 1: 1, 4: 24, 5: 120, 6: 720}\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0047",
+      "type": "exercise",
+      "order": 47,
+      "source_hash": "7618a23351f729afa016de7ba546667d4eba93fcd29d0d1e525b2ed9591c2737",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `lengths(strings: list)` which takes a list of strings as its argument. The function should return a _dictionary_ with the strings in the list as the keys and their lengths as the values.\n\nThe function should be implemented with a dictionary comprehension. The maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nThe function should work as follows:\n\n```python\nword_list = [\"once\", \"upon\" , \"a\", \"time\", \"in\"]\n\nword_lengths = lengths(word_list)\nprint(word_lengths)\n```\n\n<sample-output>\n\n{'once': 4, 'upon': 4, 'a': 1, 'time': 4, 'in': 2}\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-11_lengths_of_strings",
+        "exercise_type": "programming-exercise",
+        "name": "Lengths of strings",
+        "tmc_name": "part11-11_lengths_of_strings",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part11-2-more-comprehensions-0048",
+      "type": "exercise",
+      "order": 48,
+      "source_hash": "b59351521fafeac8ddc86a50daf76fe3dd52b8a2d6b8c8cac2ac7345b95e4432",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `most_common_words(filename: str, lower_limit: int)` which takes a filename and an integer value for a lower limit as its arguments. The function should return a dictionary containing the occurrences of the words which appear at least the number of times specified in the `lower_limit` parameter.\n\nFor example, say the function was used to process a file named _comprehensions.txt_ with the following contents:\n\n```txt\nList comprehension is an elegant way to define and create lists based on existing lists.\nList comprehension is generally more compact and faster than normal functions and loops for creating list.\nHowever, we should avoid writing very long list comprehensions in one line to ensure that code is user-friendly.\nRemember, every list comprehension can be rewritten in for loop, but every for loop can’t be rewritten in the form of list comprehension.\n```\n\nWhen the function is called with the arguments `most_common_words(\"comprehensions.txt\", 3)` it should return\n\n<sample-output>\n\n{'comprehension': 4, 'is': 3, 'and': 3, 'for': 3, 'list': 4, 'in': 3}\n\n</sample-output>\n\nNB: the case of letters affects the results, and all inflected forms are unique words in this exercise. That is, the words `List`, `lists` and `list` are each separate words here, and only `list` has enough occurrences to make it to the returned list. All punctutation should be removed before counting up the occurrences.\n\nIt is up to you to decide how to implement this. The easiest way would likely be to make use of list and dictionary comprehensions."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part11-12_most_common_words",
+        "exercise_type": "programming-exercise",
+        "name": "Most common words",
+        "tmc_name": "part11-12_most_common_words",
+        "height": null
+      }
+    }
+  ]
+}

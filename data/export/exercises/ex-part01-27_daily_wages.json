@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-27_daily_wages",
+  "lesson_id": "part01-5-conditional-statements",
+  "part": 1,
+  "tmc_name": "part01-27_daily_wages",
+  "title_original": "Daily wages",
+  "title_vi": "Tiền lương hàng ngày",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks for the hourly wage, hours worked, and the day of the week. The program should then print out the daily wages, which equal hourly wage multiplied by hours worked, except on Sundays when the hourly wage is doubled.\n\n<sample-output>\n\nHourly wage: **8.5**\nHours worked: **3**\nDay of the week: **Monday**\nDaily wages: 25.5 euros\n\n</sample-output>\n\n<sample-output>\n\nHourly wage: **12.5**\nHours worked: **10**\nDay of the week: **Sunday**\nDaily wages: 250.0 euros\n\n</sample-output>",
+  "description_vi": "Hãy viết một chương trình hỏi về mức lương theo giờ, số giờ làm việc và ngày trong tuần. Sau đó, chương trình sẽ in ra mức lương hàng ngày, bằng tiền lương theo giờ nhân với số giờ làm việc, ngoại trừ vào Chủ nhật khi mức lương theo giờ tăng gấp đôi.\n\n<sample-output>\n\nLương theo giờ: **8,5**\nSố giờ làm việc: **3**\nNgày trong tuần: **Thứ Hai**\nTiền lương hàng ngày: 25,5 euro\n\n</sample-output>\n\n<sample-output>\n\nLương theo giờ: **12,5**\nSố giờ làm việc: **10**\nNgày trong tuần: **Chủ Nhật**\nTiền lương hàng ngày: 250,0 euro\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "ee35f062fe8e0b4cc1f651b1f3976a25cbccd4a739878b6c13ff6fd37e1fb2b6",
+  "order": 53
+}

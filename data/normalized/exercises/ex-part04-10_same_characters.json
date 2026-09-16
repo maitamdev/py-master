@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-10_same_characters",
+  "lesson_id": "part04-2-more-functions",
+  "part": 4,
+  "tmc_name": "part04-10_same_characters",
+  "title_original": "Same characters",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `same_chars`, which takes one string and two integers as arguments. The integers refer to indexes within the string. The function should return `True` if the two characters at the indexes specified are the same. Otherwise, and especially if either of the indexes falls outside the scope of the string, the function returns `False`.\n\nSome examples of how the function is used:\n\n```python\n# same characters m and m\nprint(same_chars(\"programmer\", 6, 7)) # True\n\n# different characters p and r\nprint(same_chars(\"programmer\", 0, 4)) # False\n\n# the second index is not within the string\nprint(same_chars(\"programmer\", 0, 12)) # False\n```",
+  "description_vi": "",
+  "starter_code": "# same characters m and m\nprint(same_chars(\"programmer\", 6, 7)) # True\n\n# different characters p and r\nprint(same_chars(\"programmer\", 0, 4)) # False\n\n# the second index is not within the string\nprint(same_chars(\"programmer\", 0, 12)) # False",
+  "grading_data_available": false,
+  "source_hash": "ef68ce6e39aab6f36c6fb38502b35e717b102e7299b02bbad6edb60bf0ad5cef",
+  "order": 80
+}

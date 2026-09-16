@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-07_alphabetically_last",
+  "lesson_id": "part02-2-else-elif",
+  "part": 2,
+  "tmc_name": "part02-07_alphabetically_last",
+  "title_original": "Alphabetically last",
+  "title_vi": "Cuối cùng theo bảng chữ cái",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": "500px",
+  "description_original": "Python comparison operators can also be used on strings. String `a` is smaller than string `b` if it comes alphabetically before `b`. Notice however that the comparison is only reliable if\n- the characters compared are of the same case, i.e. both UPPERCASE or both lowercase\n- only the standard English alphabet of a to z, or A to Z, is used.\n\nPlease write a program which asks the user for two words. The program should then print out whichever of the two comes alphabetically last.\n\nYou can assume all words will be typed in lowercase entirely.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nPlease type in the 1st word: **car**\nPlease type in the 2nd word: **scooter**\nscooter comes alphabetically last.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in the 1st word: **zorro**\nPlease type in the 2nd word: **batman**\nzorro comes alphabetically last.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in the 1st word: **python**\nPlease type in the 2nd word: **python**\nYou gave the same word twice.\n\n</sample-output>",
+  "description_vi": "Toán tử so sánh Python cũng có thể được sử dụng trên chuỗi. Chuỗi `a` nhỏ hơn chuỗi `b` nếu nó đứng trước `b` theo thứ tự bảng chữ cái. Tuy nhiên, hãy lưu ý rằng sự so sánh chỉ đáng tin cậy nếu\n- các ký tự được so sánh đều có cùng kiểu chữ, tức là cả chữ HOA hoặc cả chữ thường\n- chỉ sử dụng bảng chữ cái tiếng Anh tiêu chuẩn từ a đến z hoặc từ A đến Z.\n\nHãy viết một chương trình yêu cầu người dùng nhập hai từ. Sau đó, chương trình sẽ in ra bất kỳ cái nào trong hai cái đứng cuối cùng theo thứ tự bảng chữ cái.\n\nBạn có thể cho rằng tất cả các từ sẽ được gõ hoàn toàn bằng chữ thường.\n\nMột số ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nVui lòng nhập từ đầu tiên: **car**\nHãy gõ từ thứ 2: **scooter**\nxe tay ga đến theo thứ tự bảng chữ cái cuối cùng.\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập từ đầu tiên: **zorro**\nHãy gõ từ thứ 2: **batman**\nzorro xuất hiện cuối cùng theo thứ tự bảng chữ cái.\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập từ đầu tiên: **python**\nHãy gõ từ thứ 2: **python**\nBạn đã đưa ra cùng một từ hai lần.\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "057e57aa31602b244605465c36c422e11a1181ffea220e4cca1c210d7c58300b",
+  "order": 38
+}

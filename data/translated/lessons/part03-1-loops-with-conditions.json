@@ -1,0 +1,1471 @@
+{
+  "id": "part03-1-loops-with-conditions",
+  "part": 3,
+  "part_slug": "part-3",
+  "slug": "1-loops-with-conditions",
+  "is_part_index": false,
+  "title_original": "Loops with conditions",
+  "title_vi": "Vòng lặp có điều kiện",
+  "path": "/part-3/1-loops-with-conditions",
+  "source_path": "data/part-3/1-loops-with-conditions.md",
+  "source_hash": "21c67c8c0d2cd0fb832a6c73d0f61336bd411b7b18db4b2f443bb057313108f4",
+  "order": 1,
+  "blocks_count": 81,
+  "blocks": [
+    {
+      "id": "blk-part03-1-loops-with-conditions-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "a9a0ad6884053bc8458bf39a593e8e20db0ddf19cd3395857116e17dec57a408",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know how to create a while loop with a condition\n- You will know what roles initialisation, formulating a condition and updating variables perform in a loop\n- You will be able to create loops with different kinds of conditions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ biết cách tạo vòng lặp `while` có điều kiện\n- Bạn sẽ biết các vai trò khởi tạo, xây dựng điều kiện và cập nhật các biến thực hiện trong một vòng lặp\n- Bạn sẽ có thể tạo các vòng lặp với các loại điều kiện khác nhau"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "ff4331630b07fc4e385ca6782e0294a3e8e66bc95990131ed7c224e5bc5e406f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!--the same text is in sections 3-1, 5-1 and 6-1, check them all if you're changing this-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!--văn bản tương tự nằm ở phần 3-1, 5-1 và 6-1, hãy kiểm tra tất cả nếu bạn thay đổi phần này-->"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0003",
+      "type": "text_box",
+      "order": 3,
+      "source_hash": "382fb262df638604c79234a9443e93b09cbb850c4bf5e185e8655ff4c9501197",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Becoming a proficient programmer requires a lot of practice, sometimes even quite mechanical practice. It also involves developing problem solving skills and applying intuition. This is why there are a lot of exercises of different kinds on this course. Some of them ask you to quite straightforwardly apply what you have learnt in the material, but some of them are intentionally more challenging and open-ended.\n\nSome of the exercises might at first seem overwhelming, but this is nothing to worry about. None of the exercises is strictly mandatory, and in fact _you need only 25 % of the points from each part to pass the course._ You can find more details about passing the course on the [page on grading](/grading-and-exams).\n\n**The exercises are not in any specific order of difficulty.** Each section usually introduces some new programming concepts, and these are then practised with both simpler and more complicated exercises. **If you come across an exercise that feels too difficult, move on to the next one.** You can always come back to the more difficult exercises if you have time later.\n\nWhen the going inevitably gets tough, a word of consolation: a task that seems impossibly difficult this week will likely feel rather easy in about four weeks' time."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Để trở thành một lập trình viên thành thạo đòi hỏi phải thực hành rất nhiều, đôi khi thậm chí là thực hành khá máy móc. Nó cũng liên quan đến việc phát triển kỹ năng giải quyết vấn đề và áp dụng trực giác. Đó là lý do vì sao khóa học này có rất nhiều bài tập thuộc nhiều thể loại khác nhau. Một số trong số chúng yêu cầu bạn áp dụng khá đơn giản những gì bạn đã học được trong tài liệu, nhưng một số trong số đó có chủ ý mang tính thử thách và cởi mở hơn.\n\nMột số bài tập thoạt đầu có vẻ quá sức nhưng điều này không có gì đáng lo ngại. Không có bài tập nào là bắt buộc nghiêm ngặt và trên thực tế _bạn chỉ cần 25 % số điểm từ mỗi phần để vượt qua khóa học._ Bạn có thể tìm thêm thông tin chi tiết về việc vượt qua khóa học trên [trang chấm điểm](/grading-and-exams).\n\n**Các bài tập không có thứ tự độ khó cụ thể.** Mỗi phần thường giới thiệu một số khái niệm lập trình mới và sau đó chúng được thực hành với cả bài tập đơn giản và phức tạp hơn. **Nếu bạn gặp một bài tập cảm thấy quá khó, hãy chuyển sang bài tiếp theo.** Bạn luôn có thể quay lại các bài tập khó hơn nếu có thời gian sau.\n\nKhi mọi việc chắc chắn trở nên khó khăn, một lời an ủi: một nhiệm vụ tưởng chừng như khó khăn trong tuần này sẽ có thể trở nên khá dễ dàng trong khoảng bốn tuần nữa."
+      },
+      "metadata": {
+        "variant": "hint",
+        "name_original": "About the exercises on this course",
+        "name_vi": "",
+        "attributes": {
+          "variant": "hint",
+          "name": "About the exercises on this course"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "4bc71a7ee733096290ce7e1d7cbb2e86bbe2e5f214a7ae23959bf62c1c6a52b1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the previous section we learnt to use the `while True` loop to repeat sections of code. In that construction the condition of the loop is `True`, so the condition is fulfilled every time. We needed to explicitly break out from the loop each time to avoid an infinite loop. For example:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong phần trước chúng ta đã học cách sử dụng vòng lặp `while True` để lặp lại các phần mã. Trong cấu trúc đó, điều kiện của vòng lặp là `True`, do đó điều kiện luôn được đáp ứng. Chúng tôi cần phải thoát ra khỏi vòng lặp một cách rõ ràng mỗi lần để tránh vòng lặp vô hạn. Ví dụ:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "e56a936ed42c3e0a2031988df8cc3509b0a0002e581c2364b7a99dfa127bc749",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# Print numbers until the variable a equals 5\na = 1\nwhile True:\n    print(a)\n    a += 1\n    if a == 5:\n        break"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# Print numbers until the variable a equals 5\na = 1\nwhile True:\n    print(a)\n    a += 1\n    if a == 5:\n        break"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e56a936ed42c3e0a2031988df8cc3509b0a0002e581c2364b7a99dfa127bc749",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0006",
+      "type": "sample_output",
+      "order": 6,
+      "source_hash": "67497b776854008d38c2340e14925a64b36686230bccaa777db68f644196015f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "1\n2\n3\n4"
+      },
+      "translation": {
+        "language": "text",
+        "content": "1\n2\n3\n4"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n1\n2\n3\n4\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "981b69fbd3ee2993a8bcc15d8746245fca792bc655e4c1ef5b620eba9edf174f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Of course, the condition doesn't always have to be `True`, but instead any Boolean expression can be used as the condition. The general structure of the `while` statement is as follows:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tất nhiên, điều kiện không phải lúc nào cũng phải là `True` mà thay vào đó, bất kỳ biểu thức Boolean nào cũng có thể được sử dụng làm điều kiện. Cấu trúc chung của câu lệnh `while` như sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0008",
+      "type": "code",
+      "order": 8,
+      "source_hash": "12f31b5005ffc54b6c90348ea5a0fae7053c25a524e65e9a495bbadb3b204440",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "while <condition>:\n    <block>"
+      },
+      "translation": {
+        "language": "code",
+        "content": "while <condition>:\n    <block>"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "12f31b5005ffc54b6c90348ea5a0fae7053c25a524e65e9a495bbadb3b204440",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "df78d7af31bff67e4f7dd050aec77153dd831c036ae31b65d190a545f571ce62",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The idea here is that the execution goes back and forth, checking if the condition is true and executing the code within the block, over and over again. If the condition at any point is false, execution of the program continues from the line after the `while` block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ý tưởng ở đây là việc thực thi được thực hiện qua lại, kiểm tra xem điều kiện có đúng hay không và thực thi mã trong khối, lặp đi lặp lại. Nếu điều kiện tại bất kỳ điểm nào là sai, việc thực thi chương trình sẽ tiếp tục từ dòng sau khối `while`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0010",
+      "type": "image",
+      "order": 10,
+      "source_hash": "cc3d0c40a090359f69a79482cdbc3590006ef79dc69b6c46d8a43a8ca4342654",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "3_1_1.png",
+        "alt": "",
+        "attributes": {
+          "src": "3_1_1.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "b18324f48ee47413d25ccdcbc83408d3a6c5926e23cec7d4cfe9de923f7b3c19",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the following loop we have the condition `number < 10`. The block within the loop is executed only if the variable number is less than 10."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong vòng lặp sau chúng ta có điều kiện `number < 10`. Khối trong vòng lặp chỉ được thực thi nếu số biến nhỏ hơn 10."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0012",
+      "type": "code",
+      "order": 12,
+      "source_hash": "7c55ef6bc39aed1a22ee112629cdd27983cbbd6dc37839611d0d29cece6d5493",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\n\nwhile number < 10:\n    print(number)\n    number += 1\n\nprint(\"Execution finished.\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\n\nwhile number < 10:\n    print(number)\n    number += 1\n\nprint(\"Execution finished.\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "7c55ef6bc39aed1a22ee112629cdd27983cbbd6dc37839611d0d29cece6d5493",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "2c3d1f480b7fd1ac93f98782e5ce217419f31eb1d47a88bcde6ae1db5c01fe10",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This could print out:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điều này có thể in ra:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0014",
+      "type": "sample_output",
+      "order": 14,
+      "source_hash": "17666e75f4282df085970b633e8375cb27b2ddceb107a927c9a3d5bfbaaf3cd4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number: **4**\n4\n5\n6\n7\n8\n9\nExecution finished."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number: **4**\n4\n5\n6\n7\n8\n9\nExecution finished."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number: **4**\n4\n5\n6\n7\n8\n9\nExecution finished.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "7a5863f2e331b31d90e2c279c72e561ccccce972dcba406f25683c90d835b6a6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In this structure the condition is always checked before the block within the loop is executed. It may happen that the block never gets executed, like so:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong cấu trúc này, điều kiện luôn được kiểm tra trước khi khối trong vòng lặp được thực thi. Có thể xảy ra trường hợp khối không bao giờ được thực thi, như sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0016",
+      "type": "sample_output",
+      "order": 16,
+      "source_hash": "c3094e0d1a8f9ec7ed913a209688a172458e32b8a96952ea037702c3f880fcea",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number: **12**\nExecution finished."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number: **12**\nExecution finished."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number: **12**\nExecution finished.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "c61852b7b2f05256776de0c549eb9e2a8a8cf3ad59c1c79bb18434bd5d1f1608",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "12 is not less than 10, so the program doesn't print out a single number."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "12 không nhỏ hơn 10 nên chương trình không in ra một số nào."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0018",
+      "type": "heading",
+      "order": 18,
+      "source_hash": "9c3750643483e93546b74e7b56d2a5a8823865432b698d63433f780ece3070d7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Initialisation, condition and update"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khởi tạo, điều kiện và cập nhật"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "66d53822cf496221f8f7e9399198fa6e5d4028faed82e4eb50eb6a2ea20e7466",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "To create a loop you'll often need to include three distinct steps: initialisation, condition, and updating the iteration variables."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Để tạo vòng lặp, bạn thường cần bao gồm ba bước riêng biệt: khởi tạo, điều kiện và cập nhật các biến lặp."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "c919ced42282a5cd5b6db725c31279a39060259bdd95b01ee26bc9196400116b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "_Initialisation_ refers to setting the initial value(s) of the variable(s) used within the condition of the loop. These are often called the iteration or iterator variables. This is performed before the loop is first entered. The _condition_ defines for how long the loop is to be executed. It is set out at the very beginning of the loop. Finally, within each repetition of the loop the variables involved in the condition are _updated_, so that each iteration brings the loop one step closer to its conclusion. The following image illustrates these steps:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "_Initialisation_ đề cập đến việc thiết lập (các) giá trị ban đầu của (các) biến được sử dụng trong điều kiện của vòng lặp. Chúng thường được gọi là các biến lặp hoặc biến lặp. Việc này được thực hiện trước khi vòng lặp được nhập lần đầu tiên. _condition_ xác định thời gian thực hiện vòng lặp. Nó được đặt ra ngay từ đầu vòng lặp. Cuối cùng, trong mỗi lần lặp lại vòng lặp, các biến liên quan đến điều kiện được _updated_, sao cho mỗi lần lặp lại sẽ đưa vòng lặp tiến gần hơn một bước đến kết luận của nó. Hình ảnh sau đây minh họa các bước này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "a726679f1bcd1963c34808a04cf3cfcb7a2dc62be8c06c5376e82d926e8c5a22",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!--- this is here in case the following image needs to be updated"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!--- đây là trong trường hợp hình ảnh sau cần được cập nhật"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0022",
+      "type": "code",
+      "order": 22,
+      "source_hash": "be15a9f1cc1063daa88a4d95427935a86c90c4fa7c75a09114a8c0d401133e31",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# Ask the user for a number\nnumber = int(input(\"Please type in a number: \"))\n\n# Repeat while the number is less than 10\nwhile number < 10:\n\n    # Print out and increment\n    print(number)\n    number += 1\n\nprint(\"Execution finished.\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# Ask the user for a number\nnumber = int(input(\"Please type in a number: \"))\n\n# Repeat while the number is less than 10\nwhile number < 10:\n\n    # Print out and increment\n    print(number)\n    number += 1\n\nprint(\"Execution finished.\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "be15a9f1cc1063daa88a4d95427935a86c90c4fa7c75a09114a8c0d401133e31",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "-->"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0024",
+      "type": "image",
+      "order": 24,
+      "source_hash": "8b785d9ce462fe7fa970253e639decb5a15b4314b45bb57426aca7a5f48cd397",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "3_1_2.png",
+        "alt": "",
+        "attributes": {
+          "src": "3_1_2.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "a2165ab177f26d7cc5d856137407d63fcff12761befe7ddca9b4091941f509fe",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If any one of these three components is missing, the loop will likely not function correctly. A typical error is omitting the update step:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu thiếu một trong ba thành phần này, vòng lặp có thể sẽ không hoạt động chính xác. Một lỗi điển hình là bỏ qua bước cập nhật:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0026",
+      "type": "code",
+      "order": 26,
+      "source_hash": "d8444213e3496c31c397ca0dd7e315feb140e743729d3bf8adf63e5183a395f1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = 1\n\nwhile number < 10:\n    print(number)\n\nprint(\"Execution finished.\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = 1\n\nwhile number < 10:\n    print(number)\n\nprint(\"Execution finished.\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d8444213e3496c31c397ca0dd7e315feb140e743729d3bf8adf63e5183a395f1",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "1d889ffeebe167519496fb7f3dae3528c677436073abc1d50e558ead4b54809e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Here, the value of the variable `number` never changes. The program is stuck in an infinite loop, and the exact same bit of code is repeated over and over again until the user stops the execution, for example by pressing `Control` + `C`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ở đây, giá trị của biến `number` không bao giờ thay đổi. Chương trình bị kẹt trong một vòng lặp vô hạn và cùng một đoạn mã được lặp đi lặp lại nhiều lần cho đến khi người dùng dừng thực thi, chẳng hạn bằng cách nhấn `Control` + `C`:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0028",
+      "type": "sample_output",
+      "order": 28,
+      "source_hash": "b6437f6cd6998107b082fe3bf997941fafca379065caeadec262dddc0463d3f6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "1\n1\n1\n1\n1\n(continued ad infinitum...)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "1\n1\n1\n1\n1\n(continued ad infinitum...)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n1\n1\n1\n1\n1\n(continued ad infinitum...)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0029",
+      "type": "exercise",
+      "order": 29,
+      "source_hash": "5fda589bff64dfcf1d782b88370616de2ca8c1590b87368714899eec6b8a753b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which prints out all the even numbers between two and thirty, using a loop. Print each number on a separate line.\n\nThe beginning of your output should look like this:\n\n<sample-output>\n2\n4\n6\n8\netc...\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một chương trình in ra tất cả các số chẵn từ 2 đến 30 bằng cách sử dụng vòng lặp. In mỗi số trên một dòng riêng biệt.\n\nPhần đầu của đầu ra của bạn sẽ trông như thế này:\n\n<sample-output>\n2\n4\n6\n8\nv.v...\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-01_print_numbers",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Print numbers",
+        "tmc_name": "part03-01_print_numbers",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0030",
+      "type": "exercise",
+      "order": 30,
+      "source_hash": "d290344adc4fe3c29450e3ec030178797b5d7f834b489b8c53c2d75ebd9756f6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The program below has some syntactic issues:\n\n```python\nprint(\"Are you ready?\")\nnumber = int(input(\"Please type in a number: \"))\nwhile number = 0:\nprint(number)\nprint(\"Now!\")\n```\n\nPlease fix it so that it prints out the following:\n\n<sample-output>\n\nAre you ready?\nPlease type in a number: **5**\n5\n4\n3\n2\n1\nNow!\n\n</sample-output>\n\nThis exercise is similar to the countdown exercise in the last section, but please don't use a `while True` loop this time round!"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình dưới đây có một số vấn đề về cú pháp:\n\n```python\nprint(\"Are you ready?\")\nnumber = int(input(\"Please type in a number: \"))\nwhile number = 0:\nprint(number)\nprint(\"Now!\")\n```\n\nVui lòng sửa nó để nó in ra như sau:\n\n<sample-output>\n\nBạn đã sẵn sàng chưa?\nVui lòng nhập một số: **5**\n5\n4\n3\n2\n1\nBây giờ!\n\n</sample-output>\n\nBài tập này tương tự như bài tập đếm ngược ở phần trước, nhưng lần này vui lòng không sử dụng vòng lặp `while True`!"
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-02_countdown",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Fix the code: Countdown",
+        "tmc_name": "part03-02_countdown",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0031",
+      "type": "heading",
+      "order": 31,
+      "source_hash": "0b8e2cec4363553ba1c63785ce202e2a969cc0905b42cde40692d014d70f06f1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Writing conditions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điều kiện viết"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "b474a7fd9de58a81ba0d5c7a5186b47e73fe2eeeef7866cb39e6d086411857a7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Any Boolean expression or combination thereof is a valid condition in a loop. For example, the following program prints out every third number, but only as long as the number is less than 100 and not divisible by 5:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bất kỳ biểu thức Boolean nào hoặc sự kết hợp của chúng đều là điều kiện hợp lệ trong vòng lặp. Ví dụ: chương trình sau in ra mọi số thứ ba, nhưng chỉ miễn là số đó nhỏ hơn 100 và không chia hết cho 5:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0033",
+      "type": "code",
+      "order": 33,
+      "source_hash": "018f04be697d9e062442a8e5af8c2704c6caf86d94c26e2a2ffe2f629a3bb1b0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\n\nwhile number < 100 and number % 5 != 0:\n    print(number)\n    number += 3"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\n\nwhile number < 100 and number % 5 != 0:\n    print(number)\n    number += 3"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "018f04be697d9e062442a8e5af8c2704c6caf86d94c26e2a2ffe2f629a3bb1b0",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "26722658b5c6696c850d79a46a64c8d6569f22f7240159e95b2813d7c3126398",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Two examples of the program's execution with different inputs:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hai ví dụ về việc thực thi chương trình với các đầu vào khác nhau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0035",
+      "type": "sample_output",
+      "order": 35,
+      "source_hash": "30fe38aa5e6fce953d3b79099b58413ef6f1f9c30bc9de6138ed6c540a4b2150",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number: **28**\n28\n31\n34\n37"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number: **28**\n28\n31\n34\n37"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number: **28**\n28\n31\n34\n37\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0036",
+      "type": "sample_output",
+      "order": 36,
+      "source_hash": "d66d3dbfd8bb81398885efd55047dc9483c21aad5c1e3d3633bfcad17928aa9b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number: **96**\n96\n99"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number: **96**\n96\n99"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number: **96**\n96\n99\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "48c5cb9caa0ecfe0a158a8993a446000a86dfa61d36a6131e9ae7cf5f2dc75a0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "When the input is 28, the loop ends with the number 37, because the next number is 40, which is divisible by 5. When the input is 96, the loop ends with the number 99, because the next number is 102, which is not less than 100."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khi đầu vào là 28, vòng lặp kết thúc bằng số 37, vì số tiếp theo là 40, chia hết cho 5. Khi đầu vào là 96, vòng lặp kết thúc bằng số 99, vì số tiếp theo là 102, không nhỏ hơn 100."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "0c424acda8f9e9592b554deeba1e55ab74ef244f9790de622a277d73ff52abb0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Whenever you write a loop you should make sure that the execution of the loop will always end at some point. The following program either finishes or doesn't, depending on the input:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bất cứ khi nào bạn viết một vòng lặp, bạn nên đảm bảo rằng việc thực hiện vòng lặp sẽ luôn kết thúc tại một điểm nào đó. Chương trình sau đây kết thúc hoặc không, tùy thuộc vào đầu vào:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0039",
+      "type": "code",
+      "order": 39,
+      "source_hash": "ff116e0b80cb45268ea08a67f5607dd8cd936bb6521a592d31a8b418694243c7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\n\nwhile number != 10:\n    print(number)\n    number += 2"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\n\nwhile number != 10:\n    print(number)\n    number += 2"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ff116e0b80cb45268ea08a67f5607dd8cd936bb6521a592d31a8b418694243c7",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "86793ead4449f52fc092a7fe7dc1b1326b93c04dfb546c7f6ef8e8276ba9f7e1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If the input is an even number and equals 10 or less, the loop will terminate:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu đầu vào là số chẵn và bằng 10 hoặc nhỏ hơn, vòng lặp sẽ kết thúc:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0041",
+      "type": "sample_output",
+      "order": 41,
+      "source_hash": "9e2714185216af66a66777c8451878beb947a8484588a25c86a7138b6ed626e0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number: **4**\n4\n6\n8"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number: **4**\n4\n6\n8"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number: **4**\n4\n6\n8\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "7fd9a9123c9521a700ee7a54e6352b45589eb7f438d05c80a251b58591c9e8fe",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In any other case the loop gets executed endlessly, as there is no way the variable could then ever equal 10. For example 3 or 12 are inputs that would end in an infinite loop."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong mọi trường hợp khác, vòng lặp sẽ được thực thi vô tận, vì khi đó biến sẽ không thể bằng 10. Ví dụ: 3 hoặc 12 là các đầu vào sẽ kết thúc bằng một vòng lặp vô hạn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0043",
+      "type": "exercise",
+      "order": 43,
+      "source_hash": "313dfd8b3a80673a1fceef06c13a4db0e1756ad2c8cace983755193d9208fd67",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for a number. The program then prints out all integer numbers greater than zero but smaller than the input.\n\n<sample-output>\n\nUpper limit: **5**\n1\n2\n3\n4\n\n</sample-output>\n\nPlease don't use the value `True` as the condition of your `while` loop in this exercise!"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một chương trình yêu cầu người dùng nhập một số. Sau đó, chương trình sẽ in ra tất cả các số nguyên lớn hơn 0 nhưng nhỏ hơn đầu vào.\n\n<sample-output>\n\nGiới hạn trên: **5**\n1\n2\n3\n4\n\n</sample-output>\n\nVui lòng không sử dụng giá trị `True` làm điều kiện của vòng lặp `while` trong bài tập này!"
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-03_numbers",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Numbers",
+        "tmc_name": "part03-03_numbers",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0044",
+      "type": "heading",
+      "order": 44,
+      "source_hash": "97cabee65505ca19e19a7f86098b31a9856280e1dd86090c904fe4390461ca91",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Debugging tips"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mẹo gỡ lỗi"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0045",
+      "type": "paragraph",
+      "order": 45,
+      "source_hash": "c909dcb5a95ede6db2a51962c39634a95ab00f7e117616191117217a1c8bb1ff",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Imagine you are writing some slightly more complicated program, such as the one in the next exercise, _Powers of two_. The first efforts could look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy tưởng tượng bạn đang viết một số chương trình phức tạp hơn một chút, chẳng hạn như chương trình trong bài tập tiếp theo, _Quyền năng của hai_. Những nỗ lực đầu tiên có thể trông như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0046",
+      "type": "code",
+      "order": 46,
+      "source_hash": "b73e84f94af7802b49620ffaac5a5072c3a56d41ceb9420769da8da4a33b0748",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "limit = int(input(\"Upper limit:\"))\nnumber = 1\nwhile number == limit:\n   # more code"
+      },
+      "translation": {
+        "language": "code",
+        "content": "limit = int(input(\"Upper limit:\"))\nnumber = 1\nwhile number == limit:\n   # more code"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b73e84f94af7802b49620ffaac5a5072c3a56d41ceb9420769da8da4a33b0748",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0047",
+      "type": "paragraph",
+      "order": 47,
+      "source_hash": "414b93bd88d41abf57b4d9bb378fd221c7c71a0201a2cccec53e184e79caac66",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Here the program starts with reading the input, and continues with the outline of the loop and some attempt at a condition."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ở đây, chương trình bắt đầu bằng việc đọc đầu vào và tiếp tục với phần phác thảo của vòng lặp và một số lần thử ở một điều kiện."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0048",
+      "type": "paragraph",
+      "order": 48,
+      "source_hash": "c9fd1f0a598db8ba2ce6fa5611c33117249e97e0426a27946e67ffdc57120950",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "It is likely the code will not work as desired on the first try. It might have to be tested dozens or even hundreds of times before it works correctly."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Rất có thể mã sẽ không hoạt động như mong muốn trong lần thử đầu tiên. Nó có thể phải được kiểm tra hàng chục, thậm chí hàng trăm lần trước khi hoạt động chính xác."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0049",
+      "type": "paragraph",
+      "order": 49,
+      "source_hash": "b8b5c987c34767c9d49d1d04ab8011c5c5b0b696d8d0f6c683b0b42e7977cdf1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This bit of code always asks for input from the user, which makes testing it slow and cumbersome. Each time the program is tested, input must be typed in."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đoạn mã này luôn yêu cầu đầu vào từ người dùng, điều này khiến việc kiểm tra nó chậm và cồng kềnh. Mỗi lần chương trình được kiểm tra, đầu vào phải được nhập vào."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0050",
+      "type": "paragraph",
+      "order": 50,
+      "source_hash": "454d60ef39ba341866db5beb768cfe1144601a7320c059c9a6f15518d0dd7cd5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "One way around this is \"hard-coding\" the input while testing:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một cách giải quyết vấn đề này là \"mã hóa cứng\" đầu vào trong khi thử nghiệm:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0051",
+      "type": "code",
+      "order": 51,
+      "source_hash": "f85d2f78347a4cf4cb41acefbdc2f95b5ebaec76181278f63f61f1091eae2137",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# let's hard-code the input value for testing\nlimit = 8 # int(input(\"Upper limit\"))\nnumber = 1\nwhile number == limit:\n   # more code "
+      },
+      "translation": {
+        "language": "code",
+        "content": "# let's hard-code the input value for testing\nlimit = 8 # int(input(\"Upper limit\"))\nnumber = 1\nwhile number == limit:\n   # more code "
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f85d2f78347a4cf4cb41acefbdc2f95b5ebaec76181278f63f61f1091eae2137",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0052",
+      "type": "paragraph",
+      "order": 52,
+      "source_hash": "68610653683593ca2a3c18c857d97c115e6ac4fd9c69dfd8d24d60172f973a95",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "When the program works with the one hard-coded input, it is easy to test it with other hard-coded inputs as well. When it seems to work correctly all round, it can be tested with input from the user."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khi chương trình hoạt động với một đầu vào được mã hóa cứng, bạn cũng có thể dễ dàng kiểm tra nó với các đầu vào được mã hóa cứng khác. Khi nó có vẻ hoạt động chính xác hoàn toàn, nó có thể được kiểm tra bằng dữ liệu đầu vào từ người dùng."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0053",
+      "type": "paragraph",
+      "order": 53,
+      "source_hash": "5ac387101c46ba866bb914aab13bec878ca1499a75fc0b3ac239ff49793541de",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This trick works with many of the tests that the exercises on this course are graded with. If the test tells you that the program works incorrectly when the input is, say, 42, that input can be hard-coded into the program while you look for the source of the bug:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thủ thuật này có tác dụng với nhiều bài kiểm tra chấm điểm cho các bài tập trong khóa học này. Nếu quá trình kiểm tra cho bạn biết rằng chương trình hoạt động không chính xác khi đầu vào là 42, thì đầu vào đó có thể được mã hóa cứng vào chương trình trong khi bạn tìm kiếm nguồn gốc của lỗi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0054",
+      "type": "code",
+      "order": 54,
+      "source_hash": "30d962808c5a87c32be71c250e4cd9b49d6ce8fd4db7a5fab3ce9232123e3802",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# the test said the program works incorrectly when the input is 42\nlimit = 42 # int(input(\"Upper limit\"))\nnumber = 1\nwhile number == limit:\n   # more code"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# the test said the program works incorrectly when the input is 42\nlimit = 42 # int(input(\"Upper limit\"))\nnumber = 1\nwhile number == limit:\n   # more code"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "30d962808c5a87c32be71c250e4cd9b49d6ce8fd4db7a5fab3ce9232123e3802",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0055",
+      "type": "paragraph",
+      "order": 55,
+      "source_hash": "ba2d2e676128097443a592fab78a6d9b7dac6ed18c9f349d13197334b2e26814",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Print statement debugging was mentioned a few times in the [previous part](/part-2) of the course. The programs you are asked to write will become more and more complex as the course advances. The amount of debugging you will have to do will likely increase accordingly. Common causes for bugs lie in the conditions that terminate loops; they may work correctly for some inputs and fail for others, and it is not always obvious why that is."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Gỡ lỗi câu lệnh `print` đã được đề cập một vài lần trong [phần trước](/part-2) của khóa học. Các chương trình bạn được yêu cầu viết sẽ ngày càng phức tạp hơn khi khóa học tiến triển. Số lần gỡ lỗi bạn phải thực hiện có thể sẽ tăng lên tương ứng. Nguyên nhân phổ biến gây ra lỗi nằm ở các điều kiện kết thúc vòng lặp; chúng có thể hoạt động chính xác đối với một số đầu vào và không hoạt động đối với những đầu vào khác và không phải lúc nào cũng rõ ràng tại sao lại như vậy."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0056",
+      "type": "paragraph",
+      "order": 56,
+      "source_hash": "2d39dc49a2c267f42b126cd89b3bb1e6e0bc2697c0ce2347f02807620105abc5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "That is why it is high time you included print statement debugging in your programming practices, if you haven't done so already. You can find debugging instructions in the [first](/part-2/1-programming-terminology) and the [fourth](/part-2/4-simple-loops) section of the previous part."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đó là lý do tại sao đã đến lúc bạn đưa việc gỡ lỗi câu lệnh `print` vào thực tiễn lập trình của mình, nếu bạn chưa làm như vậy. Bạn có thể tìm thấy hướng dẫn gỡ lỗi trong phần [đầu tiên](/part-2/1-programming-terminology) và [thứ tư](/part-2/4-simple-loops) của phần trước."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0057",
+      "type": "paragraph",
+      "order": 57,
+      "source_hash": "2fc69c8a143c447a80e29ccd8980480824258b3bcf04b9bfd03bd83ddfe86f0e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Besides print statements, there are many other tools that can be used for debugging. One of these is the [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit) on the [Python Tutor](http://www.pythontutor.com/) website. The tool allows you to execute your code line by line, and also shows you the values stored in variables at each step."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bên cạnh các câu lệnh `print`, còn có nhiều công cụ khác có thể được sử dụng để gỡ lỗi. Một trong số đó là [công cụ trực quan hóa](http://www.pythontutor.com/visualize.html#mode=edit) trên trang web [Python Tutor](http://www.pythontutor.com/). Công cụ này cho phép bạn thực thi từng dòng mã và cũng hiển thị cho bạn các giá trị được lưu trữ trong các biến ở mỗi bước."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0058",
+      "type": "paragraph",
+      "order": 58,
+      "source_hash": "7af4ee373d7e18e42418d3725a59eee15d70e22670fcc9962d0bef9bffd315b6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The slightly broken code from the debugging example in the [previous section](/part-2/4-simple-loops) is visualised with Python Tutor in the following image:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mã hơi bị lỗi từ ví dụ gỡ lỗi trong [phần trước](/part-2/4-simple-loops) được hiển thị bằng Python Tutor trong hình ảnh sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0059",
+      "type": "image",
+      "order": 59,
+      "source_hash": "094e06ab29f5902fe3b59039cfb4daa2e4cebd1d60dd5b1be038fc0cb08587ff",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "3_1_3.png",
+        "alt": "",
+        "attributes": {
+          "src": "3_1_3.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0060",
+      "type": "paragraph",
+      "order": 60,
+      "source_hash": "223fd7a685ef21e5c73559f8292ed965d6add3d3645abed19262743563a01149",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The red arrow points to where the execution of the program is at the moment. The tool displays what has been printed out so far, and also shows the value each variable has at each step. The execution moves forward line by line as you press _Next_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mũi tên màu đỏ chỉ vị trí hiện tại đang thực hiện chương trình. Công cụ này hiển thị những gì đã được in ra cho đến nay và cũng hiển thị giá trị của mỗi biến ở mỗi bước. Quá trình thực thi sẽ chuyển tiếp từng dòng khi bạn nhấn _Next_."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0061",
+      "type": "paragraph",
+      "order": 61,
+      "source_hash": "0e3e98812d026a0b62fc01194381a23d5d3486553eb0233be1ebdd55f6482ec7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "All you need to do to use the visualisation tool is to copy your code and paste it into the [code window](http://www.pythontutor.com/visualize.html#mode=edit) of the tool. The tool does have some limitations compared to the version of Python used on this course. If you come across any cryptic error messages, it may be better to try some other debugging method."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tất cả những gì bạn cần làm để sử dụng công cụ trực quan là sao chép mã và dán vào [cửa sổ mã](http://www.pythontutor.com/visualize.html#mode=edit) của công cụ. Công cụ này có một số hạn chế so với phiên bản Python được sử dụng trong khóa học này. Nếu bạn gặp bất kỳ thông báo lỗi khó hiểu nào, tốt hơn hết bạn nên thử một số phương pháp gỡ lỗi khác."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0062",
+      "type": "paragraph",
+      "order": 62,
+      "source_hash": "28805347e959a648011d74ebb3603d7091f90f7e4f9a8e2fb95673a6618dc352",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "More experienced programmers are rarely heavy users of the visualisation tool, but for a beginner it can be a valuable aid. Programming as a discipline has little room for luck or chance. It is essential that a programmer understands what values are created by their code at any given moment in the execution. If the values stored in variables are not as expected, there is most likely a bug in the program."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Những lập trình viên có kinh nghiệm hơn hiếm khi sử dụng nhiều công cụ trực quan, nhưng đối với người mới bắt đầu, đây có thể là một sự trợ giúp có giá trị. Lập trình như một môn học có rất ít chỗ cho may mắn hoặc cơ hội. Điều cần thiết là lập trình viên phải hiểu những giá trị nào được tạo bởi mã của họ tại bất kỳ thời điểm nào trong quá trình thực thi. Nếu các giá trị được lưu trữ trong các biến không như mong đợi thì rất có thể chương trình đã xảy ra lỗi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0063",
+      "type": "paragraph",
+      "order": 63,
+      "source_hash": "16657705dfad1e5fb9a37ca8115851133096d4c75d98eace1f790957ff314f1b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The visualisation tool and debugging print statements are both great ways for a programmer to see with their own eyes that a program does exactly what was expected of it."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Công cụ trực quan hóa và các câu lệnh `print` gỡ lỗi đều là những cách tuyệt vời để lập trình viên có thể tận mắt chứng kiến ​​​​rằng chương trình thực hiện chính xác những gì được mong đợi ở nó."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0064",
+      "type": "exercise",
+      "order": 64,
+      "source_hash": "13f29aadc99795357c43c692290a46c237e81dab777386e548977be2fa3902e4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user to type in an upper limit. The program then prints out numbers so that each subsequent number is the previous one doubled, starting from the number 1. That is, the program prints out powers of two in order.\n\nThe execution of the program finishes when the next number to be printed would be greater than the limit set by the user. No numbers greater than the limit should be printed.\n\n<sample-output>\n\nUpper limit: **8**\n1\n2\n4\n8\n\n</sample-output>\n\n<sample-output>\n\nUpper limit: **20**\n1\n2\n4\n8\n16\n\n</sample-output>\n\n<sample-output>\n\nUpper limit: **100**\n1\n2\n4\n8\n16\n32\n64\n\n</sample-output>\n\nPlease don't use the value `True` as the condition of your `while` loop in this exercise!\n\n**What are powers of two?** The first power of two is the number 1. The next one is 1 times 2, which is 2. The next is 2 times 2, which is 4. The next is 4 times 2, which is 8, and so forth. Each power in the sequence is multiplied by two to produce the next one."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình yêu cầu người dùng nhập giới hạn trên. Sau đó, chương trình in ra các số sao cho mỗi số tiếp theo nhân đôi số trước đó, bắt đầu từ số 1. Tức là chương trình in ra lũy thừa của hai theo thứ tự.\n\nViệc thực thi chương trình kết thúc khi số tiếp theo được in lớn hơn giới hạn do người dùng đặt ra. Không được in số lớn hơn giới hạn.\n\n<sample-output>\n\nGiới hạn trên: **8**\n1\n2\n4\n8\n\n</sample-output>\n\n<sample-output>\n\nGiới hạn trên: **20**\n1\n2\n4\n8\n16\n\n</sample-output>\n\n<sample-output>\n\nGiới hạn trên: **100**\n1\n2\n4\n8\n16\n32\n64\n\n</sample-output>\n\nVui lòng không sử dụng giá trị `True` làm điều kiện của vòng lặp `while` trong bài tập này!\n\n**Lũy thừa của hai là gì?** lũy thừa đầu tiên của hai là số 1. Số tiếp theo là 1 nhân 2, bằng 2. Số tiếp theo là 2 nhân 2, bằng 4. Số tiếp theo là 4 nhân 2, bằng 8, v.v. Mỗi lũy thừa trong chuỗi được nhân với hai để tạo ra lũy thừa tiếp theo."
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-04_powers_of_two",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Powers of two",
+        "tmc_name": "part03-04_powers_of_two",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0065",
+      "type": "exercise",
+      "order": 65,
+      "source_hash": "854ea57669669503720fc0df535b0ce98b3efaa470509d721638b34395396401",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please change the program from the previous exercise so that the user gets to input also the base which is multiplied (in the previous program the base was always 2). \n\n<sample-output>\n\nUpper limit: **27**\nBase: **3**\n1\n3\n9\n27\n\n</sample-output>\n\n<sample-output>\n\nUpper limit: **1234567**\nBase: **10**\n1\n10\n100\n1000\n10000\n100000\n1000000\n\n</sample-output>\n\nPlease don't use the value `True` as the condition of your `while` loop in this exercise!"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng thay đổi chương trình từ bài tập trước để người dùng nhập cả cơ số được nhân (trong chương trình trước, cơ số luôn là 2). \n\n<sample-output>\n\nGiới hạn trên: **27**\nCăn cứ: **3**\n1\n3\n9\n27\n\n</sample-output>\n\n<sample-output>\n\nGiới hạn trên: **1234567**\nCăn cứ: **10**\n1\n10\n100\n1000\n10000\n100000\n1000000\n\n</sample-output>\n\nVui lòng không sử dụng giá trị `True` làm điều kiện cho vòng lặp `while` của bạn trong bài tập này!"
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-05_powers_of_base_n",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Powers of base n",
+        "tmc_name": "part03-05_powers_of_base_n",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0066",
+      "type": "exercise",
+      "order": 66,
+      "source_hash": "814ffe2ea262842255ab81b9dd61fee8385256f83434a3dc2988b30df6bc741d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user to type in a limit. The program then calculates the sum of consecutive numbers (1 + 2 + 3 + ...) until the sum is at least equal to the limit set by the user. The program should function as follows:\n\n<sample-output>\n\nLimit: **2**\n3\n\n</sample-output>\n\n<sample-output>\n\nLimit: **10**\n10\n\n</sample-output>\n\n<sample-output>\n\nLimit: **18**\n21\n\n</sample-output>\n\nIf you have trouble understanding how the desired output is calculated, the sample outputs in the next exercise may help. You may assume the number typed in by the user is always equal to 2 or higher."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình yêu cầu người dùng nhập giới hạn. Sau đó, chương trình sẽ tính tổng các số liên tiếp (1 + 2 + 3 + ...) cho đến khi tổng ít nhất bằng giới hạn do người dùng đặt ra. Chương trình sẽ hoạt động như sau:\n\n<sample-output>\n\nGiới hạn: **2**\n3\n\n</sample-output>\n\n<sample-output>\n\nGiới hạn: **10**\n10\n\n</sample-output>\n\n<sample-output>\n\nGiới hạn: **18**\n21\n\n</sample-output>\n\nNếu bạn gặp khó khăn trong việc hiểu cách tính kết quả đầu ra mong muốn, kết quả đầu ra mẫu trong bài tập tiếp theo có thể hữu ích. Bạn có thể giả sử số người dùng nhập vào luôn bằng 2 hoặc cao hơn."
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-06_consecutive_sum_v1",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "The sum of consecutive numbers, version 1",
+        "tmc_name": "part03-06_consecutive_sum_v1",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0067",
+      "type": "heading",
+      "order": 67,
+      "source_hash": "58b31a259990d1a0bc4582347d0250b237929c6067c9c2c078f3b04a9d4c4786",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Building strings"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Xây dựng chuỗi"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0068",
+      "type": "paragraph",
+      "order": 68,
+      "source_hash": "82cd37913fb05e72cb0c4faf2c749421d0e4082e4675d92c25f63a241139f92c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the very [first week of the course](/part-1/2-information-from-the-user) we learnt that it is possible to \"build\" strings out of shorter strings with the `+` operator. For example, this is valid Python code:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ngay trong [tuần đầu tiên của khóa học](/part-1/2-information-from-the-user), chúng tôi đã biết rằng có thể \"xây dựng\" các chuỗi từ các chuỗi ngắn hơn bằng toán tử `+`. Ví dụ: đây là mã Python hợp lệ:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0069",
+      "type": "code",
+      "order": 69,
+      "source_hash": "0283748f98b48ec0f6abaf1e31de91fa912be15660af656077aba568c9874fed",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "words = \"pride\"\nwords = words + \", prejudice\"\nwords = words + \" and python\"\n\nprint(words)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "words = \"pride\"\nwords = words + \", prejudice\"\nwords = words + \" and python\"\n\nprint(words)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "0283748f98b48ec0f6abaf1e31de91fa912be15660af656077aba568c9874fed",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0070",
+      "type": "sample_output",
+      "order": 70,
+      "source_hash": "65d664d2935448ee7c8a70f46d9ef702ea52e50275f2f02e50464ac8e1ccab92",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "pride, prejudice and python"
+      },
+      "translation": {
+        "language": "text",
+        "content": "pride, prejudice and python"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\npride, prejudice and python\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0071",
+      "type": "paragraph",
+      "order": 71,
+      "source_hash": "3179ce356aa16a3eed7e4bd27591217233153dc4723479ad5ad60fe24233465f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The `+=` operator allows us to write this a little more compactly:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Toán tử `+=` cho phép chúng ta viết nó gọn hơn một chút:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0072",
+      "type": "code",
+      "order": 72,
+      "source_hash": "0d99b343466d2d6071a72b3384b52ffd16753c5ca11cbdde2c9deebf9a9b82c8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "words = \"pride\"\nwords += \", prejudice\"\nwords += \" and python\"\n\nprint(words)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "words = \"pride\"\nwords += \", prejudice\"\nwords += \" and python\"\n\nprint(words)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "0d99b343466d2d6071a72b3384b52ffd16753c5ca11cbdde2c9deebf9a9b82c8",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0073",
+      "type": "paragraph",
+      "order": 73,
+      "source_hash": "7a2c6233b1ca0db212b966ae4b71bd47959854f8aee99da5f4201ebc7ed43ce1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This also applies to f-strings, which may come in handy if values stored in variables are needed as parts of the resulting string. For example this would work:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điều này cũng áp dụng cho chuỗi f, có thể hữu ích nếu các giá trị được lưu trữ trong các biến cần thiết như một phần của chuỗi kết quả. Ví dụ: điều này sẽ hoạt động:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0074",
+      "type": "code",
+      "order": 74,
+      "source_hash": "8c93588328bcaf24831bad5966dafe7415d74e674b48040e75d17244bf7a3337",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "course = \"Introduction to Programming\"\ngrade = 4\n\nverdict = \"You have received \"\nverdict += f\"the grade {grade} \"\nverdict += f\"from the course {course}\"\n\nprint(verdict)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "course = \"Introduction to Programming\"\ngrade = 4\n\nverdict = \"You have received \"\nverdict += f\"the grade {grade} \"\nverdict += f\"from the course {course}\"\n\nprint(verdict)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8c93588328bcaf24831bad5966dafe7415d74e674b48040e75d17244bf7a3337",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0075",
+      "type": "sample_output",
+      "order": 75,
+      "source_hash": "211b2950ac9d9b51918388dc71e98dfa563fc9c65b0558f33806b7b3e36ec40a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "You have received the grade 4 from the course Introduction to Programming"
+      },
+      "translation": {
+        "language": "text",
+        "content": "You have received the grade 4 from the course Introduction to Programming"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nYou have received the grade 4 from the course Introduction to Programming\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0076",
+      "type": "paragraph",
+      "order": 76,
+      "source_hash": "d2313a98377d35fa1cd2f33af5438ff5f52cb7118b14452929fd5170c6603b0a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the previous exercise you calculated the sum of consecutive numbers by always adding a new value inside a loop."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong bài tập trước, bạn đã tính tổng các số liên tiếp bằng cách luôn cộng một giá trị mới bên trong một vòng lặp."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0077",
+      "type": "paragraph",
+      "order": 77,
+      "source_hash": "50b27c647a52b1ffc2edebcc78e67a7b6ca2a3179b040cc11caee75d6f18065a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The exact same idea applies to strings as well: you can add new parts to a string within a loop. This technique should be useful in the following exercise."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ý tưởng tương tự cũng áp dụng cho chuỗi: bạn có thể thêm các phần mới vào chuỗi trong vòng lặp. Kỹ thuật này sẽ hữu ích trong bài tập sau."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0078",
+      "type": "exercise",
+      "order": 78,
+      "source_hash": "f7a5bd983c76e6f0056b6714d992f394b4def9b6bac6a1cf9391802bb89d463b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a new version of the program in the previous exercise. In addition to the result it should also print out the calculation performed:\n\n<sample-output>\n\nLimit: **2**\nThe consecutive sum: 1 + 2 = 3\n\n</sample-output>\n\n<sample-output>\n\nLimit: **10**\nThe consecutive sum: 1 + 2 + 3 + 4 = 10\n\n</sample-output>\n\n<sample-output>\n\nLimit: **18**\nThe consecutive sum: 1 + 2 + 3 + 4 + 5 + 6 = 21\n\n</sample-output>\n\nYou may assume the number typed in by the user is always equal to 2 or higher."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một phiên bản mới của chương trình trong bài tập trước. Ngoài kết quả, nó cũng sẽ in ra phép tính được thực hiện:\n\n<sample-output>\n\nGiới hạn: **2**\nTổng liên tiếp: 1 + 2 = 3\n\n</sample-output>\n\n<sample-output>\n\nGiới hạn: **10**\nTổng liên tiếp: 1 + 2 + 3 + 4 = 10\n\n</sample-output>\n\n<sample-output>\n\nGiới hạn: **18**\nTổng liên tiếp: 1 + 2 + 3 + 4 + 5 + 6 = 21\n\n</sample-output>\n\nBạn có thể giả sử số người dùng nhập vào luôn bằng 2 hoặc cao hơn."
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-07_consecutive_sum_v2",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "The sum of consecutive numbers, version 2",
+        "tmc_name": "part03-07_consecutive_sum_v2",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0079",
+      "type": "paragraph",
+      "order": 79,
+      "source_hash": "b97eebcf5a0222c688482a2c1f8f4510ba0c7934c136e1f60999bbcc47c2ab75",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!---\nA quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!---\nMột bài kiểm tra để ôn lại nội dung của phần này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0080",
+      "type": "quiz",
+      "order": 80,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "900c0293-b14c-5736-b1a3-68d4fa01ac43",
+        "attributes": {
+          "id": "900c0293-b14c-5736-b1a3-68d4fa01ac43"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-1-loops-with-conditions-0081",
+      "type": "paragraph",
+      "order": 81,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "-->"
+      },
+      "metadata": {}
+    }
+  ]
+}

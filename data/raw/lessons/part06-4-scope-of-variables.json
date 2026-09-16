@@ -1,0 +1,315 @@
+{
+  "id": "part06-4-scope-of-variables",
+  "part": 6,
+  "part_slug": "part-6",
+  "slug": "4-scope-of-variables",
+  "is_part_index": false,
+  "title_original": "Local and global variables",
+  "path": "/part-6/4-scope-of-variables",
+  "source_path": "data/part-6/4-scope-of-variables.md",
+  "source_hash": "04bdcbf14b470b2ab39092ae19a09fc3d60642b32be8b94979920b89a93d31d4",
+  "frontmatter": {
+    "path": "/part-6/4-scope-of-variables",
+    "title": "Local and global variables",
+    "hidden": false
+  },
+  "chunks_count": 51,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know what is meant by a local variable\n- You will know how the scope of a variable affects how it is used\n- You will know what the Python keyword `global`means\n- You will be able to use local and global variables in the correct contexts",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know what is meant by a local variable\n- You will know how the scope of a variable affects how it is used\n- You will know what the Python keyword `global`means\n- You will be able to use local and global variables in the correct contexts\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The _scope_ of a variable refers to the sections of a program where a variable is accessible. A _local_ variable is only accessible in a defined section of the program, while a _global_ variable is available for use in any section of the program.",
+      "raw_source": "The _scope_ of a variable refers to the sections of a program where a variable is accessible. A _local_ variable is only accessible in a defined section of the program, while a _global_ variable is available for use in any section of the program."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Local variables",
+      "raw_source": "## Local variables"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Variables defined within a Python function are local variables, only available within the function. This applies to both function parameters, and other variables defined within the function definition. A variable which is local to a function _does not exist outside the function_.",
+      "raw_source": "Variables defined within a Python function are local variables, only available within the function. This applies to both function parameters, and other variables defined within the function definition. A variable which is local to a function _does not exist outside the function_."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the following example we are trying to access the variable `x` in the main function, but this causes an error:",
+      "raw_source": "In the following example we are trying to access the variable `x` in the main function, but this causes an error:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def testing():\n    x = 5\n    print(x)\n\ntesting()\nprint(x)",
+      "raw_source": "```python\ndef testing():\n    x = 5\n    print(x)\n\ntesting()\nprint(x)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "5\nNameError: name 'x' is not defined",
+      "raw_source": "<sample-output>\n\n5\nNameError: name 'x' is not defined\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The variable `x` only exists while the function `testing` is being executed. Other functions or the main function cannot access the variable.",
+      "raw_source": "The variable `x` only exists while the function `testing` is being executed. Other functions or the main function cannot access the variable."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Global variables",
+      "raw_source": "## Global variables"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Variables defined within the main function are global variables. We previously defined the main function as those sections of code in a Python program which do not fall within any other function. The value stored in a global variable can be accessed from any other function in the program, so the following does not cause any errors:",
+      "raw_source": "Variables defined within the main function are global variables. We previously defined the main function as those sections of code in a Python program which do not fall within any other function. The value stored in a global variable can be accessed from any other function in the program, so the following does not cause any errors:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def testing():\n    print(x)\n\nx = 3\ntesting()",
+      "raw_source": "```python\ndef testing():\n    print(x)\n\nx = 3\ntesting()\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "3",
+      "raw_source": "<sample-output>\n\n3\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A global variable cannot be changed directly from within another function. The following function _has no effect_ on the value stored in the global variable:",
+      "raw_source": "A global variable cannot be changed directly from within another function. The following function _has no effect_ on the value stored in the global variable:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def testing():\n    x = 5\n    print(x)\n\nx = 3\ntesting()\nprint(x)",
+      "raw_source": "```python\ndef testing():\n    x = 5\n    print(x)\n\nx = 3\ntesting()\nprint(x)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "5\n3",
+      "raw_source": "<sample-output>\n\n5\n3\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here the function `testing` creates a _new, local_ variable `x`, which \"masks\" the global variable while the function is being executed. This variable has the value 5, but it is a different variable than the global `x` which is defined in the main function.",
+      "raw_source": "Here the function `testing` creates a _new, local_ variable `x`, which \"masks\" the global variable while the function is being executed. This variable has the value 5, but it is a different variable than the global `x` which is defined in the main function."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "But what would the following code do?",
+      "raw_source": "But what would the following code do?"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def testing():\n    print(x)\n    x = 5\n\nx = 3\ntesting()\nprint(x)",
+      "raw_source": "```python\ndef testing():\n    print(x)\n    x = 5\n\nx = 3\ntesting()\nprint(x)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "UnboundLocalError: local variable 'x' referenced before assignment",
+      "raw_source": "<sample-output>\n\nUnboundLocalError: local variable 'x' referenced before assignment\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The function `testing` assigns a value to the variable `x`, so Python interprets `x` to be a local variable instead of the global variable of the same name. The function attempts to access the variable before it is defined, so there is an error.",
+      "raw_source": "The function `testing` assigns a value to the variable `x`, so Python interprets `x` to be a local variable instead of the global variable of the same name. The function attempts to access the variable before it is defined, so there is an error."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If we wish to specify that we mean to change the global variable within a function, we will need the Python keyword `global`:",
+      "raw_source": "If we wish to specify that we mean to change the global variable within a function, we will need the Python keyword `global`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def testing():\n    global x\n    x = 3\n    print(x)\n\nx = 5\ntesting()\nprint(x)",
+      "raw_source": "```python\ndef testing():\n    global x\n    x = 3\n    print(x)\n\nx = 5\ntesting()\nprint(x)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "3\n3",
+      "raw_source": "<sample-output>\n\n3\n3\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Now the assignment `x = 3` within the function also affects the main function. All sections of the program are using the same global variable `x`.",
+      "raw_source": "Now the assignment `x = 3` within the function also affects the main function. All sections of the program are using the same global variable `x`."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "When should you use global variables?",
+      "raw_source": "## When should you use global variables?"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Global variables are not a way to bypass function parameters or return values, and they should not be used as such. That is, it is _possible_ to write a function which stores its results directly in a global variable:",
+      "raw_source": "Global variables are not a way to bypass function parameters or return values, and they should not be used as such. That is, it is _possible_ to write a function which stores its results directly in a global variable:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def calculate_sum(a, b):\n    global result\n    result = a + b\n\ncalculate_sum(2, 3)\nprint(result)",
+      "raw_source": "```python\ndef calculate_sum(a, b):\n    global result\n    result = a + b\n\ncalculate_sum(2, 3)\nprint(result)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It is better to write a function with a return value, as we are used to do by now:",
+      "raw_source": "It is better to write a function with a return value, as we are used to do by now:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def calculate_sum(a, b):\n    return a + b\n\nresult = calculate_sum(2, 3)\nprint(result)",
+      "raw_source": "```python\ndef calculate_sum(a, b):\n    return a + b\n\nresult = calculate_sum(2, 3)\nprint(result)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The advantage of the latter approach is that the function is an _independent_ whole. It has certain, defined parameters, and it returns a result. It has no side effects, so it can be tested and changed independently of the other sections of the program.",
+      "raw_source": "The advantage of the latter approach is that the function is an _independent_ whole. It has certain, defined parameters, and it returns a result. It has no side effects, so it can be tested and changed independently of the other sections of the program."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Global variables are useful in situations where we need to have some common, \"higher level\" information available to all functions in the program. The following is an example of just such a situation:",
+      "raw_source": "Global variables are useful in situations where we need to have some common, \"higher level\" information available to all functions in the program. The following is an example of just such a situation:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def calculate_sum(a, b):\n    global count\n    count += 1\n    return a + b\n\ndef calculate_difference(a, b):\n    global count\n    count += 1\n    return a - b\n\n\ncount = 0\nprint(calculate_sum(2, 3))\nprint(calculate_sum(5, 5))\nprint(calculate_difference(5, 2))\nprint(calculate_sum(1, 0))\nprint(\"There were\", count, \"function calls\")",
+      "raw_source": "```python\ndef calculate_sum(a, b):\n    global count\n    count += 1\n    return a + b\n\ndef calculate_difference(a, b):\n    global count\n    count += 1\n    return a - b\n\n\ncount = 0\nprint(calculate_sum(2, 3))\nprint(calculate_sum(5, 5))\nprint(calculate_difference(5, 2))\nprint(calculate_sum(1, 0))\nprint(\"There were\", count, \"function calls\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "5\n10\n3\n1\nThere were 4 function calls",
+      "raw_source": "<sample-output>\n\n5\n10\n3\n1\nThere were 4 function calls\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In this case we want to keep track of how many times either of the functions were called during the execution of the program. The global variable `count` is useful here, because we can increment it from the functions themselves as they are executed, but still access the final value in the main function.",
+      "raw_source": "In this case we want to keep track of how many times either of the functions were called during the execution of the program. The global variable `count` is useful here, because we can increment it from the functions themselves as they are executed, but still access the final value in the main function."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Passing data from one function to another, revisited",
+      "raw_source": "## Passing data from one function to another, revisited"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!--- see also section 4-6, some significant overlap-->\nIf a program consists of multiple functions, the question of passing data from one function to another often comes up.",
+      "raw_source": "<!--- see also section 4-6, some significant overlap-->\nIf a program consists of multiple functions, the question of passing data from one function to another often comes up."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When we touched upon this topic [previously](/part-4/6-strings-and-lists#passing-data-from-one-function-to-another), we had a program which asks the user for some integer values, prints them out, and performs some statistical analysis on the numbers. The program was divided into three separate functions:",
+      "raw_source": "When we touched upon this topic [previously](/part-4/6-strings-and-lists#passing-data-from-one-function-to-another), we had a program which asks the user for some integer values, prints them out, and performs some statistical analysis on the numbers. The program was divided into three separate functions:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def input_from_user(how_many: int):\n    print(f\"Please type in {how_many} numbers:\")\n    numbers = []\n\n    for i in range(how_many):\n        number = int(input(f\"Number {i+1}: \"))\n        numbers.append(number)\n\n    return numbers\n\ndef print_result(numbers: list):\n    print(\"The numbers are: \")\n    for number in numbers:\n        print(number)\n\ndef analyze(numbers: list):\n    mean = sum(numbers) / len(numbers)\n    return f\"There are altogether {len(numbers)} numbers, the mean is {mean}, the smallest is {min(numbers)} and the greatest is {max(numbers)}\"\n\n# the main function using these functions\ninputs = input_from_user(5)\nprint_result(inputs)\nanalysis_result = analyze(inputs)\nprint(analysis_result)",
+      "raw_source": "```python\ndef input_from_user(how_many: int):\n    print(f\"Please type in {how_many} numbers:\")\n    numbers = []\n\n    for i in range(how_many):\n        number = int(input(f\"Number {i+1}: \"))\n        numbers.append(number)\n\n    return numbers\n\ndef print_result(numbers: list):\n    print(\"The numbers are: \")\n    for number in numbers:\n        print(number)\n\ndef analyze(numbers: list):\n    mean = sum(numbers) / len(numbers)\n    return f\"There are altogether {len(numbers)} numbers, the mean is {mean}, the smallest is {min(numbers)} and the greatest is {max(numbers)}\"\n\n# the main function using these functions\ninputs = input_from_user(5)\nprint_result(inputs)\nanalysis_result = analyze(inputs)\nprint(analysis_result)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "An example of the program's execution:",
+      "raw_source": "An example of the program's execution:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in 5 numbers:\nNumber 1: 10\nNumber 2: 34\nNumber 3: -32\nNumber 4: 99\nNumber 5: -53\nThe numbers are:\n10\n34\n-32\n99\n-53\nThere are altogether 5 numbers, the mean is 11.6, the smallest is -53 and the greatest is 99",
+      "raw_source": "<sample-output>\n\nPlease type in 5 numbers:\nNumber 1: 10\nNumber 2: 34\nNumber 3: -32\nNumber 4: 99\nNumber 5: -53\nThe numbers are:\n10\n34\n-32\n99\n-53\nThere are altogether 5 numbers, the mean is 11.6, the smallest is -53 and the greatest is 99\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The basic principle here is that the main function \"stores\" the data processed by the program. Here, this means the numbers typed in by the user, which are stored in the variable `inputs`.",
+      "raw_source": "The basic principle here is that the main function \"stores\" the data processed by the program. Here, this means the numbers typed in by the user, which are stored in the variable `inputs`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the numbers are needed in some function, the variable is passed as an argument, as seen above when the functions `print_result` and `analyze` are called. If the function produces a result that is relevant elsewhere in the program, the function returns this with a `return` statement, as seen with the functions `input_from_user` and `analyse` above.",
+      "raw_source": "If the numbers are needed in some function, the variable is passed as an argument, as seen above when the functions `print_result` and `analyze` are called. If the function produces a result that is relevant elsewhere in the program, the function returns this with a `return` statement, as seen with the functions `input_from_user` and `analyse` above."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As always in programming, there are many ways to arrive at the same functionality. It would be possible to use the keyword `global` and have the functions directly access the `inputs` variable defined in the main function. There are good reasons why [this is not a smart move](https://softwareengineering.stackexchange.com/questions/148108/why-is-global-state-so-evil), however. When many different functions can access and potentially alter a variable directly, it becomes difficult to reliably track the program's state, which can make the program unpredictable. This is particularly true as the number of functions involved increases, which is common in large software projects.",
+      "raw_source": "As always in programming, there are many ways to arrive at the same functionality. It would be possible to use the keyword `global` and have the functions directly access the `inputs` variable defined in the main function. There are good reasons why [this is not a smart move](https://softwareengineering.stackexchange.com/questions/148108/why-is-global-state-so-evil), however. When many different functions can access and potentially alter a variable directly, it becomes difficult to reliably track the program's state, which can make the program unpredictable. This is particularly true as the number of functions involved increases, which is common in large software projects."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In conclusion, passing data into and out of functions is best handled by arguments and return values.",
+      "raw_source": "In conclusion, passing data into and out of functions is best handled by arguments and return values."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You could also separate the implicit main function in the example above into its own, explicit `main` function. Then the variable `inputs` would no longer be a global variable, but instead a local variable within the `main` function:",
+      "raw_source": "You could also separate the implicit main function in the example above into its own, explicit `main` function. Then the variable `inputs` would no longer be a global variable, but instead a local variable within the `main` function:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# your main function goes here\ndef main():\n    inputs = input_from_user(5)\n    print_result(inputs)\n    analysis_result = analyze(inputs)\n\n    print(analysis_result)\n\n# run the main function\nmain()",
+      "raw_source": "```python\n# your main function goes here\ndef main():\n    inputs = input_from_user(5)\n    print_result(inputs)\n    analysis_result = analyze(inputs)\n\n    print(analysis_result)\n\n# run the main function\nmain()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!---\nA quiz to review the contents of this section:",
+      "raw_source": "<!---\nA quiz to review the contents of this section:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "69694e01-4c47-5b9d-8a00-b0d96a477dc7"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"69694e01-4c47-5b9d-8a00-b0d96a477dc7\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Please respond to a quick questionnaire on this week's materials.",
+      "raw_source": "Please respond to a quick questionnaire on this week's materials."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "413a67e5-2eb9-5652-9ab0-58dfc4ebb021"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"413a67e5-2eb9-5652-9ab0-58dfc4ebb021\"></quiz>"
+    }
+  ]
+}

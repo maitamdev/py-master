@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-16_product",
+  "lesson_id": "part01-4-arithmetic-operations",
+  "part": 1,
+  "tmc_name": "part01-16_product",
+  "title_original": "Fix the code: Product",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "This program asks the user for three numbers. The program then prints out their product, that is, the numbers multiplied by each other. There is, however, something wrong with the program - it doesn't work quite right, as you can see if you run it. Please fix it.\n\nAn example of the expected execution of the program:\n\n<sample-output>\n\nPlease type in the first number: **2**\nPlease type in the second number: **3**\nPlease type in the third number: **5**\nThe product is 30\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "a14729faadea0a1db587da89b6efd04242a8bee8290bc5f4ffa95e464429c730",
+  "order": 62
+}

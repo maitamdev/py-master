@@ -1,0 +1,1062 @@
+{
+  "id": "part09-3-encapsulation",
+  "part": 9,
+  "part_slug": "part-9",
+  "slug": "3-encapsulation",
+  "is_part_index": false,
+  "title_original": "Encapsulation",
+  "title_vi": "Đóng gói",
+  "path": "/part-9/3-encapsulation",
+  "source_path": "data/part-9/3-encapsulation.md",
+  "source_hash": "c1854681c51946b10a7fd44cc766a541680553823a2672697467808bcb73e866",
+  "order": 1,
+  "blocks_count": 58,
+  "blocks": [
+    {
+      "id": "blk-part09-3-encapsulation-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "e10d44d2ac2e343b7002d59c0a4edac9b9b2311769e709f45c1aee538b606fa4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know what encapsulation means\n- You will be able to create private attributes\n- You will know how to create getters and setters for your attributes"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ biết đóng gói nghĩa là gì\n- Bạn sẽ có thể tạo các thuộc tính riêng tư\n- Bạn sẽ biết cách tạo getters và setters cho thuộc tính của mình"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "321f2d152db5026b4887ad1300d1ff838e885cc2a8a2cd9d235ae7d75b47e991",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In object oriented programming the term _client_ refers to a program which uses a class, or instances of a class. A class offers the client _services_ through which the client can access the objects created based on the class. The goals here are that"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong lập trình hướng đối tượng, thuật ngữ _client_ dùng để chỉ một chương trình sử dụng một lớp hoặc các thể hiện của một lớp. Một lớp cung cấp _services_ máy khách mà qua đó máy khách có thể truy cập các đối tượng được tạo dựa trên lớp đó. Mục tiêu ở đây là"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "d1dc812215b36cfc64b87da1602ca925f7002cb5c2ffb2acf9c4a8a37bde7280",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "1) the use of a class and/or objects is as simple as possible from the client's point of view\n2) the _integrity_ of any object is preserved at all times"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "1) việc sử dụng một lớp và/hoặc các đối tượng càng đơn giản càng tốt theo quan điểm của khách hàng\n2) _tính toàn vẹn_ của bất kỳ đối tượng nào luôn được bảo toàn"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "f039886d3030a4bbdc69e8ea39229eaf57940fb7c2988d9e9d7a27e9f6b10993",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The integrity of an object means that the _state_ of an object always remains acceptable. In practice this means that the values of the object's attributes are always acceptable. For example, an object representing a date should never have 13 as the value of the month, an object modelling a student should never have a negative number as the value of study credits attained, and so forth."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tính toàn vẹn của một đối tượng có nghĩa là _state_ của một đối tượng luôn được chấp nhận. Trong thực tế, điều này có nghĩa là các giá trị thuộc tính của đối tượng luôn được chấp nhận. Ví dụ: một đối tượng biểu thị ngày tháng không bao giờ được có giá trị là 13 làm giá trị của tháng, một đối tượng mô hình hóa học sinh không bao giờ được có số âm làm giá trị tín chỉ học tập đạt được, v.v."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "77e54f22e703f0c40dcc034f2e9c6dc0dc94dd9ac1a67e98c315c6c3b8d26248",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's take a look at a class named Student:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy xem một lớp có tên là Sinh viên:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0006",
+      "type": "code",
+      "order": 6,
+      "source_hash": "a557ead8dab13637d520c0413f40624f41e2d3788c25b046ce7dcbc0d4d5da2a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Student:\n    def __init__(self, name: str, student_number: str):\n        self.name = name\n        self.student_number = student_number\n        self.study_credits = 0\n\n    def add_credits(self, study_credits):\n        if study_credits > 0:\n            self.study_credits += study_credits"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Student:\n    def __init__(self, name: str, student_number: str):\n        self.name = name\n        self.student_number = student_number\n        self.study_credits = 0\n\n    def add_credits(self, study_credits):\n        if study_credits > 0:\n            self.study_credits += study_credits"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a557ead8dab13637d520c0413f40624f41e2d3788c25b046ce7dcbc0d4d5da2a",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "65e14aa3e741363076e5b3d9628f46abb460ac7db9b36bb8266a714585f3f910",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The `Student` object offers its clients the method `add_credits`, which allows the client to add a specified number of credits to the student's total. The method ensures the value passed as the argument is above zero. The following code adds study credits on three occasions:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đối tượng `Student` cung cấp cho khách hàng phương thức `add_credits`, cho phép khách hàng thêm một số tín chỉ cụ thể vào tổng số tín chỉ của học sinh. Phương thức này đảm bảo giá trị được truyền khi đối số lớn hơn 0. Đoạn mã sau thêm tín chỉ học tập vào ba lần:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0008",
+      "type": "code",
+      "order": 8,
+      "source_hash": "fb5939613f26bfd00b25815f59342cffa99e4b6b3257634b63bb3af063540f77",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "sally = Student(\"Sally Student\", \"12345\")\nsally.add_credits(5)\nsally.add_credits(5)\nsally.add_credits(10)\nprint(\"Study credits:\", sally.study_credits)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "sally = Student(\"Sally Student\", \"12345\")\nsally.add_credits(5)\nsally.add_credits(5)\nsally.add_credits(10)\nprint(\"Study credits:\", sally.study_credits)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "fb5939613f26bfd00b25815f59342cffa99e4b6b3257634b63bb3af063540f77",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0009",
+      "type": "sample_output",
+      "order": 9,
+      "source_hash": "9ec9187e893fa4e077531d66c3f5bc5940eec8a443ddaaee0799648258038a6c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Study credits: 20"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Study credits: 20"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nStudy credits: 20\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "f299b0e3270463e270b17b1ca6b532100ce6f933f798b460319fa09965c3b68d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Despite the method definition it is still possible to access the `study_credits` attribute directly. This could result in an erroneous state where the integrity of the object is lost:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bất chấp định nghĩa phương thức, vẫn có thể truy cập trực tiếp vào thuộc tính `study_credits`. Điều này có thể dẫn đến trạng thái sai lầm trong đó tính toàn vẹn của đối tượng bị mất:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0011",
+      "type": "code",
+      "order": 11,
+      "source_hash": "d6ff02d2c77781f2a770037bfeadf3e8b8140dee6b68b2e093e11fc375b42392",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "sally = Student(\"Sally Student\", \"12345\")\nsally.study_credits = -100\nprint(\"Study credits:\", sally.study_credits)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "sally = Student(\"Sally Student\", \"12345\")\nsally.study_credits = -100\nprint(\"Study credits:\", sally.study_credits)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d6ff02d2c77781f2a770037bfeadf3e8b8140dee6b68b2e093e11fc375b42392",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0012",
+      "type": "sample_output",
+      "order": 12,
+      "source_hash": "e0471d8e512b6e52feee525ddd5190dd8e2e2e18730086ca028ebd623dfed700",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Study credits: -100"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Study credits: -100"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nStudy credits: -100\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0013",
+      "type": "heading",
+      "order": 13,
+      "source_hash": "3d0670756ba98895f24f0e38c62e66e3e57472d127f3732de617db236850ff34",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Encapsulation"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đóng gói"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "0423cb26638401725184d69d126df5309ba6ef0b859eb1c97d8e4b5b0c7da8bb",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A common feature in object oriented programming languages is that classes can usually hide their attributes from any prospective clients. Hidden attributes are usually called _private_. In Python this privacy is achieved by adding two underscores `__` to the beginning of the attribute name:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một đặc điểm chung trong các ngôn ngữ lập trình hướng đối tượng là các lớp thường có thể ẩn các thuộc tính của chúng khỏi bất kỳ khách hàng tiềm năng nào. Thuộc tính ẩn thường được gọi là _private_. Trong Python, quyền riêng tư này đạt được bằng cách thêm hai dấu gạch dưới `__` vào đầu tên thuộc tính:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0015",
+      "type": "code",
+      "order": 15,
+      "source_hash": "114600446ce55795f6329a750711ba8d94128d36d08ff4b387b4045124bb8fcb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class CreditCard:\n    # the attribute number is private, while the attribute name is accessible\n    def __init__(self, number: str, name: str):\n        self.__number = number\n        self.name = name"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class CreditCard:\n    # the attribute number is private, while the attribute name is accessible\n    def __init__(self, number: str, name: str):\n        self.__number = number\n        self.name = name"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "114600446ce55795f6329a750711ba8d94128d36d08ff4b387b4045124bb8fcb",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "019ca23765ac5083d551a57ddf5d81b9b807d4f31b1572ca6dad70f9f15c1192",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A private attribute is not directly visible to the client. Trying to refer to it causes an error. In the above example the `name` attribute can be easily accessed and changed:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thuộc tính riêng tư không hiển thị trực tiếp cho khách hàng. Cố gắng tham khảo nó gây ra lỗi. Trong ví dụ trên, thuộc tính `name` có thể dễ dàng truy cập và thay đổi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0017",
+      "type": "code",
+      "order": 17,
+      "source_hash": "934e1eb9837b175bdc0e8e59f1443987a34a8dc648792f479b3e57160d9f1630",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "card = CreditCard(\"123456\",\"Randy Riches\")\nprint(card.name)\ncard.name = \"Charlie Churchmouse\"\nprint(card.name)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "card = CreditCard(\"123456\",\"Randy Riches\")\nprint(card.name)\ncard.name = \"Charlie Churchmouse\"\nprint(card.name)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "934e1eb9837b175bdc0e8e59f1443987a34a8dc648792f479b3e57160d9f1630",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0018",
+      "type": "sample_output",
+      "order": 18,
+      "source_hash": "92ced65e7f2ef9322e3431306773c95fb67069e607023752f5c6296254ed0c18",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Randy Riches\nCharlie Churchmouse"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Randy Riches\nCharlie Churchmouse"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nRandy Riches\nCharlie Churchmouse\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "081873ce7cfc337ecf077e3065b6eb1334069f344c0cfd9379b41401dd3d1fc0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Trying to print out the card number, however, causes and error:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tuy nhiên khi cố gắng in ra số thẻ thì nguyên nhân và lỗi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0020",
+      "type": "code",
+      "order": 20,
+      "source_hash": "d5ed84d1043534d4a16366be728221f1961384ba90c2f6af2176c0dd28e804b3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "card = CreditCard(\"123456\",\"Randy Riches\")\nprint(card.__number)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "card = CreditCard(\"123456\",\"Randy Riches\")\nprint(card.__number)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d5ed84d1043534d4a16366be728221f1961384ba90c2f6af2176c0dd28e804b3",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0021",
+      "type": "sample_output",
+      "order": 21,
+      "source_hash": "b6feec93b53ef7f0db761d9134ff625dcc2f4c68699f2b7e54658e8f78572589",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "AttributeError: 'CreditCard' object has no attribute '__number'"
+      },
+      "translation": {
+        "language": "text",
+        "content": "AttributeError: 'CreditCard' object has no attribute '__number'"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nAttributeError: 'CreditCard' object has no attribute '__number'\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "aa5b22eb19825b84b3f35994fff0ba6d5f03b1255cba3c53ec795d70630cf907",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Hiding attributes from clients is called _encapsulation_. As the name implies, the attribute is \"enclosed in a capsule\". The client is then offered a suitable interface for accessing and processing the data stored in the object."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Việc ẩn các thuộc tính khỏi máy khách được gọi là _encapsulation_. Đúng như tên gọi, thuộc tính này được “đóng gói trong một viên nang”. Sau đó, máy khách sẽ được cung cấp một giao diện phù hợp để truy cập và xử lý dữ liệu được lưu trữ trong đối tượng."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "0625039894e05d4cc9617ba03e2488eb7822b204d43fb0f61442995eeb14b0b8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's add another encapsulated attribute: the balance on the credit card. This time we'll also add publicly visible methods which allow the client to access and change the balance:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy thêm một thuộc tính được đóng gói khác: số dư trên thẻ tín dụng. Lần này chúng tôi cũng sẽ thêm các phương thức hiển thị công khai cho phép khách hàng truy cập và thay đổi số dư:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0024",
+      "type": "code",
+      "order": 24,
+      "source_hash": "4727869065d5de24d103aef35f888bf66f542f5a8391bc785d0707ebd3d3cf1f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class CreditCard:\n    def __init__(self, number: str, name: str, balance: float):\n        self.__number = number\n        self.name = name\n        self.__balance = balance\n\n    def deposit_money(self, amount: float):\n        if amount > 0:\n            self.__balance += amount\n\n    def withdraw_money(self, amount: float):\n        if amount > 0 and amount <= self.__balance:\n            self.__balance -= amount\n\n    def retrieve_balance(self):\n        return self.__balance"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class CreditCard:\n    def __init__(self, number: str, name: str, balance: float):\n        self.__number = number\n        self.name = name\n        self.__balance = balance\n\n    def deposit_money(self, amount: float):\n        if amount > 0:\n            self.__balance += amount\n\n    def withdraw_money(self, amount: float):\n        if amount > 0 and amount <= self.__balance:\n            self.__balance -= amount\n\n    def retrieve_balance(self):\n        return self.__balance"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4727869065d5de24d103aef35f888bf66f542f5a8391bc785d0707ebd3d3cf1f",
+        "length_lines": 16
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0025",
+      "type": "code",
+      "order": 25,
+      "source_hash": "564d1da88b7ab77b32d1fdd79bdcfa4cf389f452cb20537763a63546e1594579",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "card = CreditCard(\"123456\", \"Randy Riches\", 5000)\nprint(card.retrieve_balance())\ncard.deposit_money(100)\nprint(card.retrieve_balance())\ncard.withdraw_money(500)\nprint(card.retrieve_balance())\n# The following will not work because the balance is not sufficient\ncard.withdraw_money(10000)\nprint(card.retrieve_balance())"
+      },
+      "translation": {
+        "language": "code",
+        "content": "card = CreditCard(\"123456\", \"Randy Riches\", 5000)\nprint(card.retrieve_balance())\ncard.deposit_money(100)\nprint(card.retrieve_balance())\ncard.withdraw_money(500)\nprint(card.retrieve_balance())\n# The following will not work because the balance is not sufficient\ncard.withdraw_money(10000)\nprint(card.retrieve_balance())"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "564d1da88b7ab77b32d1fdd79bdcfa4cf389f452cb20537763a63546e1594579",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0026",
+      "type": "sample_output",
+      "order": 26,
+      "source_hash": "f36607bce29c4dcc657e960a34fa8cd2ad51f6e151776d63798cb657da0b90fb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "5000\n5100\n4600\n4600"
+      },
+      "translation": {
+        "language": "text",
+        "content": "5000\n5100\n4600\n4600"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n5000\n5100\n4600\n4600\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "96d2deb7ccb36b7df6c33f9e98405cbe9e76404e5ead8d852b4fef6ab3743e8a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The balance cannot be changed directly because the attribute is private, but we've included the methods `deposit_money` and `withdraw_money` for changing the value. The method `retrieve_balance` returns the value stored in balance. The methods include some rudimentary checks for retaining the integrity of the object: for instance, the card cannot be overdrawn."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Không thể thay đổi số dư trực tiếp vì thuộc tính này là riêng tư nhưng chúng tôi đã đưa vào các phương thức `deposit_money` và `withdraw_money` để thay đổi giá trị. Phương thức `retrieve_balance` trả về giá trị được lưu trong số dư. Các phương thức này bao gồm một số kiểm tra thô sơ để duy trì tính toàn vẹn của đối tượng: ví dụ: thẻ không thể bị rút quá mức."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0028",
+      "type": "exercise",
+      "order": 28,
+      "source_hash": "ff858611b48a20fc4e82f738e1795532953e9f7ee493eebe78141f6510cf6022",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please implement a class named `Car` which has two private, _encapsulated_ variables: the amount of petrol in the tank (0 to 60 litres) and odometer reading (in kilometres). The car consumes one litre of petrol per kilometre.\n\nThe class should also contain the following methods:\n\n- `fill_up()` which fills up the tank\n- `drive(km:int)` which drives the car for the distance indicated, or for however long the petrol in the tank allows\n- `__str__` which returns a string representation of the car as per the examples below\n\nAn example of how the class is used:\n\n```python\ncar = Car()\nprint(car)\ncar.fill_up()\nprint(car)\ncar.drive(20)\nprint(car)\ncar.drive(50)\nprint(car)\ncar.drive(10)\nprint(car)\ncar.fill_up()\ncar.fill_up()\nprint(car)\n```\n\n<sample-output>\n\nCar: odometer reading 0 km, petrol remaining 0 litres\nCar: odometer reading 0 km, petrol remaining 60 litres\nCar: odometer reading 20 km, petrol remaining 40 litres\nCar: odometer reading 60 km, petrol remaining 0 litres\nCar: odometer reading 60 km, petrol remaining 0 litres\nCar: odometer reading 60 km, petrol remaining 60 litres\n\n</sample-output>\n\n**NB:** you are asked to encapsulate the amount of petrol left and the odometer reading. It should not be possible to access them directly from outside the class's own methods."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng triển khai một lớp có tên `Car` có hai biến _được đóng gói riêng: lượng xăng trong bình (0 đến 60 lít) và chỉ số công tơ mét (tính bằng km). Chiếc xe tiêu thụ một lít xăng mỗi km.\n\nLớp này cũng nên chứa các phương thức sau:\n\n- `fill_up()` đổ đầy bình\n- `drive(km:int)` giúp xe chạy theo quãng đường được chỉ định hoặc trong bao lâu mà lượng xăng trong bình cho phép\n- `__str__` trả về chuỗi đại diện của ô tô theo ví dụ bên dưới\n\nMột ví dụ về cách lớp được sử dụng:\n\n```python\ncar = Car()\nprint(car)\ncar.fill_up()\nprint(car)\ncar.drive(20)\nprint(car)\ncar.drive(50)\nprint(car)\ncar.drive(10)\nprint(car)\ncar.fill_up()\ncar.fill_up()\nprint(car)\n```\n\n<sample-output>\n\nÔ tô: đồng hồ đo quãng đường 0 km, xăng còn 0 lít\nÔ tô: đồng hồ đo quãng đường 0 km, xăng còn lại 60 lít\nÔ tô: đồng hồ km đi được 20 km, xăng còn 40 lít\nÔtô: đồng hồ km đi được 60 km, xăng còn 0 lít\nÔtô: đồng hồ km đi được 60 km, xăng còn 0 lít\nÔtô: đồng hồ km đi được 60 km, xăng còn 60 lít\n\n</sample-output>\n\n**NB:** bạn được yêu cầu tóm tắt lượng xăng còn lại và chỉ số đồng hồ đo đường. Không thể truy cập chúng trực tiếp từ bên ngoài các phương thức riêng của lớp."
+      },
+      "metadata": {
+        "exercise_id": "ex-part09-09_car",
+        "exercise_type": "programming-exercise",
+        "name": "Car",
+        "tmc_name": "part09-09_car",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0029",
+      "type": "heading",
+      "order": 29,
+      "source_hash": "03b9d3c27a9e3aed9fd2dd56627a3e73671870674bc305982fb7352107f4cc92",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A brief note on private attributes, Python and object oriented programming"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một lưu ý ngắn gọn về các thuộc tính riêng tư, Python và lập trình hướng đối tượng"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "090afe272705402f80a802c3e6f88f81100c1db46733fe73d58b1b46a82f6f81",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "There are ways around the underscore `__` notation for hiding attributes, which you may come across if you search for resources online. No Python attribute is truly private, and this is intentional on the part of the creators of Python. On the other hand, a Python programmer is generally expected to respect the visibility guidelines set in classes, and it takes a special effort to get around these. In other object oriented programming languages, such as Java, private variables are often truly hidden, and it is best if you think of private Python variables as such as well."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Có nhiều cách xung quanh ký hiệu gạch dưới `__` để ẩn các thuộc tính mà bạn có thể gặp phải khi tìm kiếm tài nguyên trực tuyến. Không có thuộc tính Python nào thực sự riêng tư và đây là sự cố ý của những người tạo ra Python. Mặt khác, một lập trình viên Python thường phải tôn trọng các nguyên tắc về khả năng hiển thị được đặt ra trong các lớp và cần phải nỗ lực đặc biệt để giải quyết được những nguyên tắc này. Trong các ngôn ngữ lập trình hướng đối tượng khác, chẳng hạn như Java, các biến riêng tư thường thực sự bị ẩn và tốt nhất là bạn cũng nên nghĩ đến các biến Python riêng tư."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0031",
+      "type": "heading",
+      "order": 31,
+      "source_hash": "88fe85151ce85453963c2236bd030ba9dcdad6f92a2eda66e6cd0eda4b748af1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Getters and setters"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Getters và setters"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "66282a5297ae9535d00865918300245f880118f9aa4c572451ee1799ee71fd04",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In object oriented programming, methods which are dedicated to accessing and changing attributes are usually called _getters_ and _setters_. Not all Python programmers use the terms \"getter\" and \"setter\", but the concept of _properties_ outlined below is very similar, which is why we will use the generally accepted object oriented programming terminology here."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong lập trình hướng đối tượng, các phương thức dành riêng cho việc truy cập và thay đổi các thuộc tính thường được gọi là _getters_ và _setters_. Không phải tất cả các lập trình viên Python đều sử dụng thuật ngữ \"getter\" và \"setter\", nhưng khái niệm _properties_ được nêu dưới đây rất giống nhau, đó là lý do tại sao chúng ta sẽ sử dụng thuật ngữ lập trình hướng đối tượng được chấp nhận rộng rãi ở đây."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "817b0b1b7002f013a247e153bbd35c2db7eecb1206edcbd733a6644405c38e46",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "So, above we created some public methods for accessing private attributes, but there is a more straightforward, \"pythonic\" way of accessing attributes. Let's have a look at a simple class named `Wallet` with a single, private attribute `money`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vì vậy, ở trên chúng tôi đã tạo một số phương thức công khai để truy cập các thuộc tính riêng tư, nhưng có một cách truy cập thuộc tính \"pythonic\" đơn giản hơn. Chúng ta hãy xem một lớp đơn giản có tên `Wallet` với một thuộc tính riêng, duy nhất `money`:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0034",
+      "type": "code",
+      "order": 34,
+      "source_hash": "782101092640fbc270f58012076d4dea2ad744ed56c98505a0986a44895f8651",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Wallet:\n    def __init__(self):\n        self.__money = 0"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Wallet:\n    def __init__(self):\n        self.__money = 0"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "782101092640fbc270f58012076d4dea2ad744ed56c98505a0986a44895f8651",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "046709cef1d68b04a002b295f9699db5829081176d918f77fc2c83111d9a8e96",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We can add getter and setter methods for accessing the private attribute using the `@property` decorator:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta có thể thêm các phương thức getter và setter để truy cập thuộc tính riêng tư bằng cách sử dụng trình trang trí `@property`:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0036",
+      "type": "code",
+      "order": 36,
+      "source_hash": "01bc0add946ee26b018ac61791c01bec52e1efc70f74b26dc87f2f32e1dd0af0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Wallet:\n    def __init__(self):\n        self.__money = 0\n\n    # A getter method\n    @property\n    def money(self):\n        return self.__money\n\n    # A setter method\n    @money.setter\n    def money(self, money):\n        if money >= 0:\n            self.__money = money"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Wallet:\n    def __init__(self):\n        self.__money = 0\n\n    # A getter method\n    @property\n    def money(self):\n        return self.__money\n\n    # A setter method\n    @money.setter\n    def money(self, money):\n        if money >= 0:\n            self.__money = money"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "01bc0add946ee26b018ac61791c01bec52e1efc70f74b26dc87f2f32e1dd0af0",
+        "length_lines": 14
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "51c3a4b31575ac912e4e9a60493065f7465cde162276202b719b4a34e5ce5800",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "First, we define a getter method, which returns the amount of money currently in the wallet. Then we define a setter method, which sets a new value for the money attribute while making sure the new value is not negative."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đầu tiên, chúng ta xác định một phương thức getter, phương thức này trả về số tiền hiện có trong ví. Sau đó, chúng tôi xác định một phương thức setter, phương thức này đặt giá trị mới cho thuộc tính money trong khi đảm bảo giá trị mới không âm."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "7c9f89fe32b710fb01816f01df96dfacf46223d043d85a96fb8006084869ddb5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The new methods can be used like so:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các phương pháp mới có thể được sử dụng như sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0039",
+      "type": "code",
+      "order": 39,
+      "source_hash": "d311e9b01f7559c71eb3eb4b5c026b27d7aed60049f45576cac66451a337d172",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "wallet = Wallet()\nprint(wallet.money)\n\nwallet.money = 50\nprint(wallet.money)\n\nwallet.money = -30\nprint(wallet.money)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "wallet = Wallet()\nprint(wallet.money)\n\nwallet.money = 50\nprint(wallet.money)\n\nwallet.money = -30\nprint(wallet.money)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d311e9b01f7559c71eb3eb4b5c026b27d7aed60049f45576cac66451a337d172",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0040",
+      "type": "sample_output",
+      "order": 40,
+      "source_hash": "95e8951c00ed9fe36d550376dae744b66158c049ac9ba42c21b90f936f7af289",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "0\n50\n50"
+      },
+      "translation": {
+        "language": "text",
+        "content": "0\n50\n50"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n0\n50\n50\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "011b21af1a7f05ee79a555a2a8b634a6363d0615cd1007c661763752b514b783",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "As far as the client is concerned, using these new methods is no different from directly accessing an attribute. Parentheses are not necessary; instead it is perfectly acceptable to state `wallet.money = 50`, as if we were simply assigning a value to a variable. Indeed, the purpose was to hide (i.e. encapsulate) the internal implementation of the attribute while offering an easy way of accessing and modifying the data stored in the object."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đối với khách hàng, việc sử dụng các phương thức mới này không khác gì việc truy cập trực tiếp vào một thuộc tính. Dấu ngoặc đơn là không cần thiết; thay vào đó, việc nêu `wallet.money = 50` là hoàn toàn có thể chấp nhận được, như thể chúng ta chỉ đơn giản gán một giá trị cho một biến. Thật vậy, mục đích là để ẩn (tức là đóng gói) việc triển khai bên trong của thuộc tính trong khi cung cấp một cách dễ dàng để truy cập và sửa đổi dữ liệu được lưu trữ trong đối tượng."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "f23cdf42aee515f102a254abf7d06abe089bbf048d1ed69b7b14a09fbebe2438",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The previous example has a small problem: the client is not notified of the failure to set a negative value for the money attribute. When a value supplied is clearly wrong, it is usually a good idea to raise an exception and thus let the client know. In this case the exception should probably be of type `ValueError` to signify that the value supplied was unacceptable."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ trước có một vấn đề nhỏ: khách hàng không được thông báo về việc không đặt giá trị âm cho thuộc tính money. Khi một giá trị được cung cấp rõ ràng là sai, bạn nên đưa ra một ngoại lệ và thông báo cho khách hàng biết. Trong trường hợp này, ngoại lệ có thể thuộc loại `ValueError` để biểu thị rằng giá trị được cung cấp là không thể chấp nhận được."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0043",
+      "type": "paragraph",
+      "order": 43,
+      "source_hash": "1f391b8dc17d522af30660c189bfcf1188f5695b63cc98a1c8a4a5dbcb5daf62",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Here we have an improved version of the class, along with some code for testing it:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ở đây chúng tôi có một phiên bản cải tiến của lớp, cùng với một số mã để kiểm tra nó:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0044",
+      "type": "code",
+      "order": 44,
+      "source_hash": "f88e49c0535e764314aa029450e9b5f5386973042386805a890043c85b7b8d42",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Wallet:\n    def __init__(self):\n        self.__money = 0\n\n    # A getter method\n    @property\n    def money(self):\n        return self.__money\n\n    # A setter method\n    @money.setter\n    def money(self, money):\n        if money >= 0:\n            self.__money = money\n        else:\n            raise ValueError(\"The amount must not be below zero\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Wallet:\n    def __init__(self):\n        self.__money = 0\n\n    # A getter method\n    @property\n    def money(self):\n        return self.__money\n\n    # A setter method\n    @money.setter\n    def money(self, money):\n        if money >= 0:\n            self.__money = money\n        else:\n            raise ValueError(\"The amount must not be below zero\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f88e49c0535e764314aa029450e9b5f5386973042386805a890043c85b7b8d42",
+        "length_lines": 16
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0045",
+      "type": "code",
+      "order": 45,
+      "source_hash": "b1f2fb77c209ebefe4fc1617d5d7cf3cbca68e3211270cd8cb81b7948078ed12",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "wallet.money = -30\nprint(wallet.money)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "wallet.money = -30\nprint(wallet.money)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b1f2fb77c209ebefe4fc1617d5d7cf3cbca68e3211270cd8cb81b7948078ed12",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0046",
+      "type": "sample_output",
+      "order": 46,
+      "source_hash": "596e92a063af54f59f62e4a3f5a0b5c709c6971073b7022cbfda9c331c7d22b0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "ValueError: The amount must not be below zero"
+      },
+      "translation": {
+        "language": "text",
+        "content": "ValueError: The amount must not be below zero"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nValueError: The amount must not be below zero\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0047",
+      "type": "paragraph",
+      "order": 47,
+      "source_hash": "d3d648668f95b861a85b9f24972405912971c1e6a6627f4afbf545d8ffbcd01a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "**NB:** the getter method, i.e. the `@property` decorator, must be introduced before the setter method, or there will be an error when the class is executed. This is because the `@property` decorator defines the name of the \"attribute\" offerred to the client. The setter method, added with `.setter`, simply adds a new functionality to it."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "**NB:** phương thức getter, tức là trình trang trí `@property`, phải được giới thiệu trước phương thức setter, nếu không sẽ xảy ra lỗi khi lớp được thực thi. Điều này là do trình trang trí `@property` xác định tên của \"thuộc tính\" được cung cấp cho khách hàng. Phương thức setter, được thêm bằng `.setter`, chỉ cần thêm chức năng mới vào nó."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0048",
+      "type": "exercise",
+      "order": 48,
+      "source_hash": "6e68647ed344626a2e1e28afa14360464aef1e97a62febc717226547df311fe8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please create a class named `Recording` which models a single recording. The class should have one private variable: `__length` of type integer.\n\nPlease implement the following:\n\n* a constructor which takes the length as an argument\n* a getter method `length` which returns the length of the recording\n* a setter method which sets the length of the recording\n\nIt should be possible to make use of the class as follows:\n\n```python\nthe_wall = Recording(43)\nprint(the_wall.length)\nthe_wall.length = 44\nprint(the_wall.length)\n```\n\n<sample-output>\n\n43\n44\n\n</sample-output>\n\n\nIf the argument for either the constructor or the setter method is below zero, this should raise a `ValueError`.\n\nIf you need a refresher on raising exceptions, please see [part 6](/part-6/3-errors#raising-exceptions) of the course materials."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng tạo một lớp có tên `Recording` để mô hình hóa một bản ghi. Lớp nên có một biến riêng: `__length` có kiểu số nguyên.\n\nHãy thực hiện những điều sau:\n\n* một hàm tạo lấy độ dài làm đối số\n* một phương thức getter `length` trả về độ dài của bản ghi\n* một phương thức setter đặt thời lượng của bản ghi\n\nCó thể sử dụng lớp như sau:\n\n```python\nthe_wall = Recording(43)\nprint(the_wall.length)\nthe_wall.length = 44\nprint(the_wall.length)\n```\n\n<sample-output>\n\n43\n44\n\n</sample-output>\n\n\nNếu đối số cho hàm tạo hoặc phương thức setter nhỏ hơn 0 thì điều này sẽ tăng `ValueError`.\n\nNếu bạn cần xem lại cách nêu ngoại lệ, vui lòng xem [phần 6](/part-6/3-errors#raising-exceptions) của tài liệu khóa học."
+      },
+      "metadata": {
+        "exercise_id": "ex-part09-10_recording",
+        "exercise_type": "programming-exercise",
+        "name": "Recording",
+        "tmc_name": "part09-10_recording",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0049",
+      "type": "paragraph",
+      "order": 49,
+      "source_hash": "12b9316b152953f0345bae6e839910c8d51bdd865e4769c8c48b00bb9ce790ee",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following example has a class with two private attributes, along with getters and setters for both. Please try the program out with different values passed as arguments:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ sau đây có một lớp có hai thuộc tính riêng tư, cùng với getters và setters cho cả hai. Vui lòng thử chương trình với các giá trị khác nhau được truyền dưới dạng đối số:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0050",
+      "type": "code",
+      "order": 50,
+      "source_hash": "6e27143b3fa7888d20f6c13125b085d9528cdcc2a08511c8a28163eb6971ec86",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Player:\n    def __init__(self, name: str, player_number: int):\n        self.__name = name\n        self.__player_number = player_number\n\n    @property\n    def name(self):\n        return self.__name\n\n    @name.setter\n    def name(self, name: str):\n        if name != \"\":\n            self.__name = name\n        else:\n            raise ValueError(\"The name may not be an empty string\")\n\n    @property\n    def player_number(self):\n        return self.__player_number\n\n    @player_number.setter\n    def player_number(self, player_number: int):\n        if player_number > 0:\n            self.__player_number = player_number\n        else:\n            raise ValueError(\"The player number must be a positive integer\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Player:\n    def __init__(self, name: str, player_number: int):\n        self.__name = name\n        self.__player_number = player_number\n\n    @property\n    def name(self):\n        return self.__name\n\n    @name.setter\n    def name(self, name: str):\n        if name != \"\":\n            self.__name = name\n        else:\n            raise ValueError(\"The name may not be an empty string\")\n\n    @property\n    def player_number(self):\n        return self.__player_number\n\n    @player_number.setter\n    def player_number(self, player_number: int):\n        if player_number > 0:\n            self.__player_number = player_number\n        else:\n            raise ValueError(\"The player number must be a positive integer\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6e27143b3fa7888d20f6c13125b085d9528cdcc2a08511c8a28163eb6971ec86",
+        "length_lines": 26
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0051",
+      "type": "code",
+      "order": 51,
+      "source_hash": "d0c9091d00cc7a397fd08d7804c2d759913185fc3b6fb82e3e27f2b4cf7a25e7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "player = Player(\"Betty Ballmer\", 10)\nprint(player.name)\nprint(player.player_number)\n\nplayer.name = \"Buster Ballmer\"\nplayer.player_number = 11\nprint(player.name)\nprint(player.player_number)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "player = Player(\"Betty Ballmer\", 10)\nprint(player.name)\nprint(player.player_number)\n\nplayer.name = \"Buster Ballmer\"\nplayer.player_number = 11\nprint(player.name)\nprint(player.player_number)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d0c9091d00cc7a397fd08d7804c2d759913185fc3b6fb82e3e27f2b4cf7a25e7",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0052",
+      "type": "sample_output",
+      "order": 52,
+      "source_hash": "d37811ddd07fa036b6668a8a306db14c40095b55721231be9ef3fb0a6e06f116",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Betty Ballmer\n10\nBuster Ballmer\n11"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Betty Ballmer\n10\nBuster Ballmer\n11"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nBetty Ballmer\n10\nBuster Ballmer\n11\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0053",
+      "type": "paragraph",
+      "order": 53,
+      "source_hash": "e5739a1350918fbc54803e8b0d24730f7b7776e56f02fab010eb72b6c11e6532",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "To finish off this section, let's take a look at a class which models a simple diary. All attributes are private, but they are handled through differing interfaces: the owner of the diary has getter and setter methods, but the diary entries are processed with \"traditional\" methods. In this case it makes sense to deny the client all access to the internal data structure of the diary. Only the public methods are directly visible to the client."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Để kết thúc phần này, chúng ta hãy xem một lớp mô phỏng một cuốn nhật ký đơn giản. Tất cả các thuộc tính đều riêng tư, nhưng chúng được xử lý thông qua các giao diện khác nhau: chủ sở hữu nhật ký có các phương thức getter và setter, nhưng các mục nhật ký được xử lý bằng các phương thức \"truyền thống\". Trong trường hợp này, việc từ chối tất cả quyền truy cập của khách hàng vào cấu trúc dữ liệu nội bộ của nhật ký là điều hợp lý. Chỉ có các phương thức công khai mới được hiển thị trực tiếp cho khách hàng."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0054",
+      "type": "paragraph",
+      "order": 54,
+      "source_hash": "9fbf2849db9ccfc68f7a5680d7e4a24ffafd238b12c8d8226f1be1a9f0a17637",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Encapsulation also ensures that the internal implementation of the class can be changed at will, provided that the public interface stays intact. The client does not have to know or care whether the internal data structure is based on lists, dictionaries, or something completely different."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Việc đóng gói cũng đảm bảo rằng việc triển khai nội bộ của lớp có thể được thay đổi theo ý muốn, miễn là giao diện chung vẫn còn nguyên. Khách hàng không cần phải biết hoặc quan tâm liệu cấu trúc dữ liệu nội bộ có dựa trên danh sách, từ điển hay thứ gì đó hoàn toàn khác hay không."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0055",
+      "type": "code",
+      "order": 55,
+      "source_hash": "4ba93b9c1ad569cfef15bffcb6434c8e4c1b5c32bf3a4aed20627891ea036bc4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Diary:\n    def __init__(self, owner: str):\n        self.__owner = owner\n        self.__entries = []\n\n    @property\n    def owner(self):\n        return self.__owner\n\n    @owner.setter\n    def owner(self, owner):\n        if owner != \"\":\n            self.__owner = owner\n        else:\n            raise ValueError(\"The owner may not be an empty string\")\n\n    def add_entry(self, entry: str):\n        self.__entries.append(entry)\n\n    def print_entries(self):\n        print(\"A total of\", len(self.__entries), \"entries\")\n        for entry in self.__entries:\n            print(\"- \" + entry)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Diary:\n    def __init__(self, owner: str):\n        self.__owner = owner\n        self.__entries = []\n\n    @property\n    def owner(self):\n        return self.__owner\n\n    @owner.setter\n    def owner(self, owner):\n        if owner != \"\":\n            self.__owner = owner\n        else:\n            raise ValueError(\"The owner may not be an empty string\")\n\n    def add_entry(self, entry: str):\n        self.__entries.append(entry)\n\n    def print_entries(self):\n        print(\"A total of\", len(self.__entries), \"entries\")\n        for entry in self.__entries:\n            print(\"- \" + entry)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4ba93b9c1ad569cfef15bffcb6434c8e4c1b5c32bf3a4aed20627891ea036bc4",
+        "length_lines": 23
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0056",
+      "type": "code",
+      "order": 56,
+      "source_hash": "93a8dec98ff4cd36c4b5e7f17e7bae8d5d89d54ab42de952263eaa40b98b84d8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "diary = Diary(\"Peter\")\ndiary.add_entry(\"Today I ate porridge\")\ndiary.add_entry(\"Today I learned object oriented programming\")\ndiary.add_entry(\"Today I went to bed early\")\ndiary.print_entries()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "diary = Diary(\"Peter\")\ndiary.add_entry(\"Today I ate porridge\")\ndiary.add_entry(\"Today I learned object oriented programming\")\ndiary.add_entry(\"Today I went to bed early\")\ndiary.print_entries()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "93a8dec98ff4cd36c4b5e7f17e7bae8d5d89d54ab42de952263eaa40b98b84d8",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0057",
+      "type": "sample_output",
+      "order": 57,
+      "source_hash": "88ab91686fa7f448ac133cfd1f96c73c5081efedcd4d0108bd936f786d45e8d9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "A total of 3 entries\n- Today I ate porridge\n- Today I learned object oriented programming\n- Today I went to bed early"
+      },
+      "translation": {
+        "language": "text",
+        "content": "A total of 3 entries\n- Today I ate porridge\n- Today I learned object oriented programming\n- Today I went to bed early"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nA total of 3 entries\n- Today I ate porridge\n- Today I learned object oriented programming\n- Today I went to bed early\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-3-encapsulation-0058",
+      "type": "exercise",
+      "order": 58,
+      "source_hash": "a9c9b17834d9cbbb915cd6394fad92c3ea944b07df9d2f0182c354c913e75315",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please create a class named `WeatherStation` which is used to store observations about the weather. The class should have the following public attributes:\n\n* a constructor which takes the name of the station as its argument\n* a method named `add_observation(observation: str)` which adds an observation as the last entry in a list\n* a method named `latest_observation()` which returns the latest observation added to the list. If there are no observations yet, the method should return an _empty string_.\n* a method named `number_of_observations()` which returns the total number of observations added\n* a `__str__` method which returns the name of the station and the total number of observations added as per the example below.\n\nAll attributes should be encapsulated, so they can't be directly accessed. It is up to you how you implement the class, as long as the public interface is exactly as described above.\n\nAn example of how the class is used:\n\n```python\nstation = WeatherStation(\"Houston\")\nstation.add_observation(\"Rain 10mm\")\nstation.add_observation(\"Sunny\")\nprint(station.latest_observation())\n\nstation.add_observation(\"Thunderstorm\")\nprint(station.latest_observation())\n\nprint(station.number_of_observations())\nprint(station)\n```\n\n<sample-output>\n\nSunny\nThunderstorm\n3\nHouston, 3 observations\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng tạo một lớp có tên `WeatherStation` được sử dụng để lưu trữ các quan sát về thời tiết. Lớp nên có các thuộc tính công khai sau:\n\n* một hàm tạo lấy tên của trạm làm đối số\n* một phương thức có tên `add_observation(observation: str)` bổ sung một quan sát làm mục cuối cùng trong danh sách\n* một phương thức có tên `latest_observation()` trả về quan sát mới nhất được thêm vào danh sách. Nếu chưa có quan sát nào, phương thức sẽ trả về một _chuỗi trống_.\n* một phương thức có tên `number_of_observations()` trả về tổng số quan sát được thêm vào\n* phương thức `__str__` trả về tên của trạm và tổng số quan sát được thêm vào theo ví dụ bên dưới.\n\nTất cả các thuộc tính phải được đóng gói để không thể truy cập trực tiếp vào chúng. Việc triển khai lớp như thế nào là tùy thuộc vào bạn, miễn là giao diện chung chính xác như được mô tả ở trên.\n\nMột ví dụ về cách lớp được sử dụng:\n\n```python\nstation = WeatherStation(\"Houston\")\nstation.add_observation(\"Rain 10mm\")\nstation.add_observation(\"Sunny\")\nprint(station.latest_observation())\n\nstation.add_observation(\"Thunderstorm\")\nprint(station.latest_observation())\n\nprint(station.number_of_observations())\nprint(station)\n```\n\n<sample-output>\n\nNắng\nSấm sét\n3\nHouston, 3 quan sát\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part09-11_weather_station",
+        "exercise_type": "programming-exercise",
+        "name": "Weather station",
+        "tmc_name": "part09-11_weather_station",
+        "height": null
+      }
+    }
+  ]
+}

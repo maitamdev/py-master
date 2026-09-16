@@ -1,0 +1,16 @@
+{
+  "id": "ex-part13-02_robots_row",
+  "lesson_id": "part13-1-pygame",
+  "part": 13,
+  "tmc_name": "part13-02_robots_row",
+  "title_original": "Robots in a row",
+  "title_vi": "Robot liên tiếp",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which draws ten robots in a row. The end result should look like this:\n\n<img src=\"pygame_row.gif\">",
+  "description_vi": "Hãy viết chương trình vẽ 10 robot thành một hàng. Kết quả cuối cùng sẽ trông như thế này:\n\n<img src=\"pygame_row.gif\">",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "49fc2f9685ce79b1d21ee6d098148c0249eaed6519daacd4689ff0b0b0141b84",
+  "order": 62
+}

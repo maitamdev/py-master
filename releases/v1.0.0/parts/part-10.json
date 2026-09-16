@@ -1,0 +1,53 @@
+{
+  "part": 10,
+  "slug": "part-10",
+  "title_original": "Part 10",
+  "title_vi": "Kế thừa Lớp và Kỹ thuật Hướng đối tượng",
+  "lessons": [
+    {
+      "id": "part10-1-class-hierarchies",
+      "slug": "1-class-hierarchies",
+      "is_index": false,
+      "title_original": "Class hierarchies",
+      "path": "/part-10/1-class-hierarchies",
+      "blocks_count": 46,
+      "title_vi": "Phân cấp lớp (Kế thừa)"
+    },
+    {
+      "id": "part10-2-access-modifiers",
+      "slug": "2-access-modifiers",
+      "is_index": false,
+      "title_original": "Access modifiers",
+      "path": "/part-10/2-access-modifiers",
+      "blocks_count": 21,
+      "title_vi": "Phạm vi truy cập (Access Modifiers)"
+    },
+    {
+      "id": "part10-3-oo-programming-techniques",
+      "slug": "3-oo-programming-techniques",
+      "is_index": false,
+      "title_original": "Object oriented programming techniques",
+      "path": "/part-10/3-oo-programming-techniques",
+      "blocks_count": 62,
+      "title_vi": "Kỹ thuật lập trình hướng đối tượng"
+    },
+    {
+      "id": "part10-4-application-development",
+      "slug": "4-application-development",
+      "is_index": false,
+      "title_original": "Developing a larger application",
+      "path": "/part-10/4-application-development",
+      "blocks_count": 117,
+      "title_vi": "Phát triển ứng dụng lớn hơn"
+    },
+    {
+      "id": "part10-index",
+      "slug": "index",
+      "is_index": true,
+      "title_original": "Part 10",
+      "path": "/part-10",
+      "blocks_count": 2,
+      "title_vi": "Kế thừa Lớp và Kỹ thuật Hướng đối tượng"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-25_sum_of_positives",
+  "lesson_id": "part04-4-definite-iteration",
+  "part": 4,
+  "tmc_name": "part04-25_sum_of_positives",
+  "title_original": "The sum of positive numbers",
+  "title_vi": "Tổng các số dương",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `sum_of_positives`, which takes a list of integers as its argument. The function returns the sum of the positive values in the list.\n\n```python\nmy_list = [1, -2, 3, -4, 5]\nresult = sum_of_positives(my_list)\nprint(\"The result is\", result)\n```\n\n<sample-output>\n\nThe result is 9\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `sum_of_positives`, hàm này lấy danh sách các số nguyên làm đối số. Hàm trả về tổng các giá trị dương trong danh sách.\n\n```python\nmy_list = [1, -2, 3, -4, 5]\nresult = sum_of_positives(my_list)\nprint(\"The result is\", result)\n```\n\n<sample-output>\n\nKết quả là 9\n\n</sample-output>",
+  "starter_code": "my_list = [1, -2, 3, -4, 5]\nresult = sum_of_positives(my_list)\nprint(\"The result is\", result)",
+  "grading_data_available": false,
+  "source_hash": "b4f068fd068b84e380bb651b188870ac8de9b08cbc139e70b058b0a9b125d7c5",
+  "order": 51
+}

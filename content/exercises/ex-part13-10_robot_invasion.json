@@ -1,0 +1,16 @@
+{
+  "id": "ex-part13-10_robot_invasion",
+  "lesson_id": "part13-2-animation",
+  "part": 13,
+  "tmc_name": "part13-10_robot_invasion",
+  "title_original": "Robot invasion",
+  "title_vi": "Cuộc xâm lược của robot",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please create an animation where robots fall from the sky randomly. When a robot reaches the ground, it starts moving to the left or to the right, and finaly disappears off the screen. The end result should look like this:\n\n<img src=\"pygame_invasion.gif\">",
+  "description_vi": "Vui lòng tạo hoạt ảnh trong đó robot từ trên trời rơi xuống một cách ngẫu nhiên. Khi robot chạm đất, nó bắt đầu di chuyển sang trái hoặc phải và cuối cùng biến mất khỏi màn hình. Kết quả cuối cùng sẽ trông như thế này:\n\n<img src=\"pygame_invasion.gif\">",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "3d6201cf5311f2555d613c78206d7c6b41b87bb32a89ebd8044284b55b20de3d",
+  "order": 46
+}

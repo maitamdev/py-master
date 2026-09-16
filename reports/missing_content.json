@@ -1,0 +1,214 @@
+{
+  "missing_assets": [],
+  "untranslated_blocks": [],
+  "mismatched_code_hashes": [],
+  "duplicate_ids": [],
+  "mojibake_errors": [],
+  "intentional_syntax_error_snippets_cataloged": [
+    {
+      "block_id": "blk-part01-1-getting-started-0009",
+      "file": "part01-1-getting-started.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: invalid syntax. Perhaps you forgot a comma? (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part01-5-conditional-statements-0013",
+      "file": "part01-5-conditional-statements.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: expected ':' (<string>, line 4))"
+    },
+    {
+      "block_id": "blk-part02-1-programming_terminology-0041",
+      "file": "part02-1-programming_terminology.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: expected ':' (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part02-4-simple-loops-0050",
+      "file": "part02-4-simple-loops.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part03-1-loops-with-conditions-0046",
+      "file": "part03-1-loops-with-conditions.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: expected an indented block after 'while' statement on line 3 (<string>, line 4))"
+    },
+    {
+      "block_id": "blk-part03-1-loops-with-conditions-0051",
+      "file": "part03-1-loops-with-conditions.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: expected an indented block after 'while' statement on line 4 (<string>, line 5))"
+    },
+    {
+      "block_id": "blk-part03-1-loops-with-conditions-0054",
+      "file": "part03-1-loops-with-conditions.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: expected an indented block after 'while' statement on line 4 (<string>, line 5))"
+    },
+    {
+      "block_id": "blk-part04-3-lists-0066",
+      "file": "part04-3-lists.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unmatched ')' (<string>, line 2))"
+    },
+    {
+      "block_id": "blk-part04-4-definite-iteration-0059",
+      "file": "part04-4-definite-iteration.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: invalid syntax (<string>, line 3))"
+    },
+    {
+      "block_id": "blk-part04-5-print-statement-formatting-0027",
+      "file": "part04-5-print-statement-formatting.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: invalid syntax (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part04-5-print-statement-formatting-0031",
+      "file": "part04-5-print-statement-formatting.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: invalid syntax (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part04-6-strings-and-lists-0068",
+      "file": "part04-6-strings-and-lists.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: expected an indented block after function definition on line 2 (<string>, line 5))"
+    },
+    {
+      "block_id": "blk-part06-1-reading-files-0056",
+      "file": "part06-1-reading-files.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: invalid syntax. Perhaps you forgot a comma? (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part06-2-writing-files-0006",
+      "file": "part06-2-writing-files.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: expected an indented block after 'with' statement on line 1 (<string>, line 2))"
+    },
+    {
+      "block_id": "blk-part07-6-more-features-0016",
+      "file": "part07-6-more-features.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: expected an indented block after function definition on line 1 (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part08-3-defining-classes-0003",
+      "file": "part08-3-defining-classes.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: expected an indented block after class definition on line 1 (<string>, line 2))"
+    },
+    {
+      "block_id": "blk-part10-4-application-development-0113",
+      "file": "part10-4-application-development.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: expected an indented block after class definition on line 1 (<string>, line 5))"
+    },
+    {
+      "block_id": "blk-part12-3-functional-programming-0093",
+      "file": "part12-3-functional-programming.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: invalid syntax (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part13-2-animation-0013",
+      "file": "part13-2-animation.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part13-2-animation-0017",
+      "file": "part13-2-animation.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part13-2-animation-0019",
+      "file": "part13-2-animation.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part13-2-animation-0038",
+      "file": "part13-2-animation.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part14-1-game-project-0010",
+      "file": "part14-1-game-project.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part14-1-game-project-0015",
+      "file": "part14-1-game-project.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part14-1-game-project-0040",
+      "file": "part14-1-game-project.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part14-1-game-project-0045",
+      "file": "part14-1-game-project.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part14-2-robot-and-boxes-0004",
+      "file": "part14-2-robot-and-boxes.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part14-2-robot-and-boxes-0008",
+      "file": "part14-2-robot-and-boxes.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part14-2-robot-and-boxes-0014",
+      "file": "part14-2-robot-and-boxes.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part14-2-robot-and-boxes-0017",
+      "file": "part14-2-robot-and-boxes.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part14-2-robot-and-boxes-0021",
+      "file": "part14-2-robot-and-boxes.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part14-2-robot-and-boxes-0024",
+      "file": "part14-2-robot-and-boxes.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part14-2-robot-and-boxes-0029",
+      "file": "part14-2-robot-and-boxes.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part14-2-robot-and-boxes-0034",
+      "file": "part14-2-robot-and-boxes.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part14-2-robot-and-boxes-0037",
+      "file": "part14-2-robot-and-boxes.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part14-3-finishing-the-game-0018",
+      "file": "part14-3-finishing-the-game.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-part14-3-finishing-the-game-0028",
+      "file": "part14-3-finishing-the-game.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-page-error_messages-0004",
+      "file": "page-error_messages.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-page-error_messages-0012",
+      "file": "page-error_messages.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-page-error_messages-0015",
+      "file": "page-error_messages.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    },
+    {
+      "block_id": "blk-page-error_messages-0019",
+      "file": "page-error_messages.json",
+      "syntax_check_skipped_reason": "Intentional pedagogical error snippet (SyntaxError: unexpected indent (<string>, line 1))"
+    }
+  ]
+}

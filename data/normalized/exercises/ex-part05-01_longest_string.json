@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-01_longest_string",
+  "lesson_id": "part05-1-more-lists",
+  "part": 5,
+  "tmc_name": "part05-01_longest_string",
+  "title_original": "The longest string",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `longest(strings: list)`, which takes a list of strings as its argument. The function finds and returns the longest string in the list. You may assume there is always a single longest string in the list.\n\nAn example of expected behaviour:\n\n```python\n\nif __name__ == \"__main__\":\n    strings = [\"hi\", \"hiya\", \"hello\", \"howdydoody\", \"hi there\"]\n    print(longest(strings))\n\n```\n\n<sample-output>\n\nhowdydoody\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "if __name__ == \"__main__\":\n    strings = [\"hi\", \"hiya\", \"hello\", \"howdydoody\", \"hi there\"]\n    print(longest(strings))\n",
+  "grading_data_available": false,
+  "source_hash": "c72a11bc6ae6d54e3a96e279b975006d8b3e939fa2bd00097305893581d61c6a",
+  "order": 38
+}

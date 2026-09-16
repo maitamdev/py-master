@@ -1,0 +1,208 @@
+{
+  "id": "page-support-and-assistance",
+  "slug": "support-and-assistance",
+  "title_original": "Support and assistance",
+  "title_vi": "Hỗ trợ và trợ giúp",
+  "path": "/support-and-assistance",
+  "source_path": "data/support-and-assistance.md",
+  "source_hash": "a6b3e5af1e5f49c55b9085b2b00e950cee6f15090105ffd0845ba10929f21d3f",
+  "blocks_count": 12,
+  "blocks": [
+    {
+      "id": "blk-page-support-and-assistance-0001",
+      "type": "heading",
+      "order": 1,
+      "source_hash": "09484af25d28aaffd5ed2b353f7b242b6e2c4803cc80ace4cc6a2aa407a284ab",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Guidance during autumn"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hướng dẫn trong mùa thu"
+      },
+      "metadata": {
+        "level": 3
+      }
+    },
+    {
+      "id": "blk-page-support-and-assistance-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "5ed2e834c845f49599f9129a1e6a86545336012b278aa30c36677ee80864083a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "**The guidance schedule will be updated in early September, with more guidance slots available**"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "**Lịch hướng dẫn sẽ được cập nhật vào đầu tháng 9, với nhiều vị trí hướng dẫn hơn**"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-support-and-assistance-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "2ad76c08077ceb740666f9636b9ab88f5a46f49cae412426dd1444867a03ae81",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The 2026 course will offer guidance at both the Kumpula campus and on Discord. The sessions on campus are held in Exactum BK107. The guidance sessions are at the following times (UPDATED on Sep 3th):"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khóa học năm 2026 sẽ cung cấp hướng dẫn tại cả khuôn viên Kumpula và trên Discord. Các buổi học trong khuôn viên trường được tổ chức tại Exactum BK107. Các buổi hướng dẫn diễn ra vào thời gian như sau (CẬP NHẬT ngày 3/9):"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-support-and-assistance-0004",
+      "type": "list",
+      "order": 4,
+      "source_hash": "aa2f86cc609f0e297ac476b3bc1a3d5610412a3a43333a5a1ab69ecac4de8867",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* Mondays 16:00 to 19:00\n* Tuesdays 13:00 to 16:00\n* Thursdays 16:00 to 19:00\n* Fridays 13:00 to 16:00"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* Thứ Hai 16:00 đến 19:00\n* Thứ Ba 13:00 đến 16:00\n* Thứ Năm 16:00 đến 19:00\n* Thứ Sáu 13:00 đến 16:00"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-support-and-assistance-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "e5957b0bb2259e4cf034bddf16dab3a6fce84e4bcd8998369fe331d647efb7f3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!-- Kumpulan kampuksella Exactumin salissa BK107 keskiviikkoisin klo 12–16 sekä perjantaisin klo 12–16."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!-- Kumpulan kampuksella Exactumin salissa BK107 keskiviikkoisin klo 12–16 sekä perjantaisin klo 12–16."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-support-and-assistance-0006",
+      "type": "table",
+      "order": 6,
+      "source_hash": "147ba9d7473c4c90eef0bbaea0ca3272be816e3f9a19ba3e853d894db4662466",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "| Time / Date | MON | TUE | WED | THU | FRI |\n|-----|----|----|----|----|----|\n| 10-11 | - | X | - | - | X |\n| 11-12 | - | X | - | - | X |\n| 12-13 | - | - | - | X | - |\n| 13-14 | - | - | - | X | - |\n| 14-15 | - | - | - | - | - |\n| 15-16 | - | - | X | - | - |\n| 16-17 | - | X | X | - | - |\n| 17-18 | - | X | - | - | - |-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "| Thời gian / Ngày | THÁNG | Thứ 3 | Thứ Tư | THU | THỨ SÁU |\n|------|----|------|---||----|----|\n| 11-10 | - | X | - | - | X |\n| 12-11 | - | X | - | - | X |\n| 13-12 | - | - | - | X | - |\n| 13-14 | - | - | - | X | - |\n| 14-15 | - | - | - | - | - |\n| 15-16 | - | - | X | - | - |\n| 16-17 | - | X | X | - | - |\n| 17-18 | - | X | - | - | - |-->"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-support-and-assistance-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "ff399fd5004ea0cb27a15b526e80595eb1ea93a997f0d205e8d68f8a16d74b5c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "During the on-campus sessions there might be help available also on Discord if the assistants have time to follow the course Discord. Naturally, you can still ask for assistance in Discord whenever needed."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong các buổi học trong khuôn viên trường, Discord cũng có thể có trợ giúp nếu các trợ lý có thời gian theo dõi khóa học Discord. Đương nhiên, bạn vẫn có thể yêu cầu hỗ trợ trong Discord bất cứ khi nào cần."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-support-and-assistance-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "ca0482afb6698dd3784ec47959e93270f9e2bd9eed2bd76d85e151ba985d6620",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "*The schedule is subject to change.*"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "*Lịch trình có thể thay đổi.*"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-support-and-assistance-0009",
+      "type": "heading",
+      "order": 9,
+      "source_hash": "053bc65874ad6098e58c41c57b378a2f36b0220e5e0b46722245e6c2f796818c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Discord"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bất hòa"
+      },
+      "metadata": {
+        "level": 4
+      }
+    },
+    {
+      "id": "blk-page-support-and-assistance-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "9dbdfd985297fa851409ccfd499c2e52e6b3dfced4a5d8715194f49c2cb4531e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Discord is a communication platform which allows both text-based and voice/video chats. You can find out more about the platform [on the Discord website](https://discord.com/)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Discord là một nền tảng giao tiếp cho phép trò chuyện bằng cả văn bản và trò chuyện thoại/video. Bạn có thể tìm hiểu thêm về nền tảng [trên trang web Discord](https://discord.com/)."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-support-and-assistance-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "c44fbc5ec4e61990554b4f5aadd817f98771c0e51a098e4db37dd6e703834f40",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The course channels are available through [this link](https://study.cs.helsinki.fi/discord/join/ohjelmoinnin_mooc). See especially the `ohjelmoinnin_mooc_english` and the `ohjelmoinnin_mooc_voice` channels for support in English."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các kênh khóa học có sẵn thông qua [liên kết này](https://study.cs.helsinki.fi/discord/join/ohjelmoinnin_mooc). Đặc biệt xem các kênh `ohjelmoinnin_mooc_english` và `ohjelmoinnin_mooc_voice` để được hỗ trợ bằng tiếng Anh."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-support-and-assistance-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "65763b52d19e43c6e9b5067e5dc76f30bf2680668cde9ef882b5a10a6149a6fa",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Instructor will be on standby on the course channels in Discord at guidance time. Instructor will also reply to questions sent via private messages. Discord also has a discussion about the course outside of the guidance hours, so it’s worth joining!"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Người hướng dẫn sẽ ở chế độ chờ trên các kênh khóa học trong Discord vào thời điểm hướng dẫn. Người hướng dẫn cũng sẽ trả lời các câu hỏi được gửi qua tin nhắn riêng tư. Discord cũng có một cuộc thảo luận về khóa học ngoài giờ hướng dẫn, vì vậy rất đáng để tham gia!"
+      },
+      "metadata": {}
+    }
+  ]
+}

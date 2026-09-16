@@ -1,0 +1,563 @@
+{
+  "id": "part09-6-more-examples-with-classes",
+  "part": 9,
+  "part_slug": "part-9",
+  "slug": "6-more-examples-with-classes",
+  "is_part_index": false,
+  "title_original": "More examples with classes",
+  "title_vi": "",
+  "path": "/part-9/6-more-examples-with-classes",
+  "source_path": "data/part-9/6-more-examples-with-classes.md",
+  "source_hash": "54b012204d3e65eceb36f93dfb0646b4d6071662297c581af68548010987a4f7",
+  "order": 1,
+  "blocks_count": 30,
+  "blocks": [
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "fb23052447b903a0e2427ef5600b8a546715e84010f4c4758951efe1fdecefc2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be familiar with some more examples of classes and objects\n- You will be able to use default values for parameters in your methods"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "3e5a2d945ccb3a684c02250ca4a5b3a2edd4059fa506a8876c5d49622980d4fe",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The following example consists of two classes. The class `Point` is a model for a point in two-dimensional space. The class `Line` is a model for a line segment between two points. The code below is commented; please read the comments in order to understand how the classes work."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0003",
+      "type": "code",
+      "order": 3,
+      "source_hash": "8fde3a00f30dd107067c9d2e9253cda606959c38ec88634aa052d1e8fff08d95",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import math\n\nclass Point:\n    \"\"\" The class represents a point in two-dimensional space \"\"\"\n\n    def __init__(self, x: float, y: float):\n        # These attributes are public because any value is acceptable for x and y\n        self.x = x\n        self.y = y\n\n    # This class method returns a new Point at origo (0, 0)\n    # It is possible to return a new instance of the class from within the class\n    @classmethod\n    def origo(cls):\n        return Point(0, 0)\n\n    # This class method creates a new Point based on an existing Point\n    # The original Point can be mirrored on either or both of the x and y axes\n    # For example, the Point (1, 3) mirrored on the x-axis is (1, -3)\n    @classmethod\n    def mirrored(cls, point: \"Point\", mirror_x: bool, mirror_y: bool):\n        x = point.x\n        y = point.y\n        if mirror_x:\n            y = -y\n        if mirror_y:\n            x = -x\n\n        return Point(x, y)\n\n    def __str__(self):\n        return f\"({self.x}, {self.y})\"\n\n\nclass Line:\n    \"\"\" The class represents a line segment in two-dimensional space \"\"\"\n\n    def __init__(self, beginning: Point, end: Point):\n        # These attributes are public because any two Points are acceptable\n        self.beginning = beginning\n        self.end = end\n\n    # This method uses the Pythagorean theorem to calculate the length of the line segment\n    def length(self):\n        sum_of_squares = (self.end.x - self.beginning.x) ** 2 + (self.end.y - self.beginning.y) ** 2\n        return math.sqrt(sum_of_squares)\n\n    # This method returns the Point in the middle of the line segment\n    def centre_point(self):\n        centre_x = (self.beginning.x + self.end.x) / 2\n        centre_y = (self.beginning.y + self.end.y) / 2\n        return Point(centre_x, centre_y)\n\n    def __str__(self):\n        return f\"{self.beginning} ... {self.end}\""
+      },
+      "translation": {
+        "language": "code",
+        "content": "import math\n\nclass Point:\n    \"\"\" The class represents a point in two-dimensional space \"\"\"\n\n    def __init__(self, x: float, y: float):\n        # These attributes are public because any value is acceptable for x and y\n        self.x = x\n        self.y = y\n\n    # This class method returns a new Point at origo (0, 0)\n    # It is possible to return a new instance of the class from within the class\n    @classmethod\n    def origo(cls):\n        return Point(0, 0)\n\n    # This class method creates a new Point based on an existing Point\n    # The original Point can be mirrored on either or both of the x and y axes\n    # For example, the Point (1, 3) mirrored on the x-axis is (1, -3)\n    @classmethod\n    def mirrored(cls, point: \"Point\", mirror_x: bool, mirror_y: bool):\n        x = point.x\n        y = point.y\n        if mirror_x:\n            y = -y\n        if mirror_y:\n            x = -x\n\n        return Point(x, y)\n\n    def __str__(self):\n        return f\"({self.x}, {self.y})\"\n\n\nclass Line:\n    \"\"\" The class represents a line segment in two-dimensional space \"\"\"\n\n    def __init__(self, beginning: Point, end: Point):\n        # These attributes are public because any two Points are acceptable\n        self.beginning = beginning\n        self.end = end\n\n    # This method uses the Pythagorean theorem to calculate the length of the line segment\n    def length(self):\n        sum_of_squares = (self.end.x - self.beginning.x) ** 2 + (self.end.y - self.beginning.y) ** 2\n        return math.sqrt(sum_of_squares)\n\n    # This method returns the Point in the middle of the line segment\n    def centre_point(self):\n        centre_x = (self.beginning.x + self.end.x) / 2\n        centre_y = (self.beginning.y + self.end.y) / 2\n        return Point(centre_x, centre_y)\n\n    def __str__(self):\n        return f\"{self.beginning} ... {self.end}\""
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8fde3a00f30dd107067c9d2e9253cda606959c38ec88634aa052d1e8fff08d95",
+        "length_lines": 55
+      }
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0004",
+      "type": "code",
+      "order": 4,
+      "source_hash": "8e5b4f3eafe7c60fde6d4657abb47978477a469d394735f9b8c8190476f782b8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "point = Point(1,3)\nprint(point)\n\norigo = Point.origo()\nprint(origo)\n\npoint2 = Point.mirrored(point, True, True)\nprint(point2)\n\nline = Line(point, point2)\nprint(line.length())\nprint(line.centre_point())\nprint(line)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "point = Point(1,3)\nprint(point)\n\norigo = Point.origo()\nprint(origo)\n\npoint2 = Point.mirrored(point, True, True)\nprint(point2)\n\nline = Line(point, point2)\nprint(line.length())\nprint(line.centre_point())\nprint(line)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8e5b4f3eafe7c60fde6d4657abb47978477a469d394735f9b8c8190476f782b8",
+        "length_lines": 13
+      }
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0005",
+      "type": "sample_output",
+      "order": 5,
+      "source_hash": "dc972e19dfa71d85104d43d2920ce52314ae10c420db0f522969fc5212e1203b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "(1, 3)\n(0, 0)\n(-1, -3)\n6.324555320336759\n(0.0, 0.0)\n(1, 3) ... (-1, -3)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "(1, 3)\n(0, 0)\n(-1, -3)\n6.324555320336759\n(0.0, 0.0)\n(1, 3) ... (-1, -3)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n(1, 3)\n(0, 0)\n(-1, -3)\n6.324555320336759\n(0.0, 0.0)\n(1, 3) ... (-1, -3)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0006",
+      "type": "heading",
+      "order": 6,
+      "source_hash": "50a34a177d7a728927551cf66e0260a78111326a4d3ae1f8acd0fbba6abba63f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Default values of parameters"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "7e2fda8d22d5794f963143df94acd30f3f8feb39e34777657d1897de222f43b8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In Python programming you can generally set a default value for any parameter. Default values can be used in both functions and methods."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "2c491e25514f58f9ae7fb3a353bf563744b7d4f3312ceadfe8e7ef121f711797",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If a parameter has a default value, you do not have to include a value as an argument when calling the function. If an argument is given, the default value is ignored. If not, the default value is used."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "3f5b62938af3a5f33141947a90b4a748252f98b507d753caf6cb809ba6eacebe",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Default values are often used in constructors. If it can be expected that not all information is available when an object is created, it is better to include a default value in the definition of the constructor method than to force the client to take care of the issue. This makes using the class easier from the client's point of view, but it also ensures the integrity of the object. For instance, with a set default value we can be sure that an \"empty\" value is always the same, unless the client specifically wants to supply something different. If a default value is not set, it is up to the client to provide an \"empty\" value. This could be, for example, an empty string `\"\"`, the special empty object `None`, or the string `\"not set\"`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "867b499303d2fa717309cbb5ecfc3620dce3ec6287b66bf52e29a9cbeeaa9f9a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at yet another class representing a student. When creating a new Student object the client must provide a name and a student number. The student number is private and should not be changed later. Additionally, a Student object has attributes for study credits and notes, which have default values set in the constructor. New values can be passed as arguments to the constructor, but they can also be left out so that the default values are used instead. Please have a look at the comments in the code to better understand what each method does."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0011",
+      "type": "code",
+      "order": 11,
+      "source_hash": "c5c13cbebbd2688e41c3ffe14da8e542d43e86eb5d248d21e72db3a38d409526",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Student:\n    \"\"\" This class models a student \"\"\"\n\n    def __init__(self, name: str, student_number: str, credits: int = 0, notes: str = \"\"):\n        # calling the setter method for the name attribute\n        self.name = name\n\n        if len(student_number) < 5:\n            raise ValueError(\"A student number should have at least five characters\")\n\n        self.__student_number = student_number\n\n        # calling the setter method for the credits attribute\n        self.credits = credits\n\n        self.__notes = notes\n\n    @property\n    def name(self):\n        return self.__name\n\n    @name.setter\n    def name(self, name):\n        if name != \"\":\n            self.__name = name\n        else:\n            raise ValueError(\"The name cannot be an empty string\")\n\n    @property\n    def student_number(self):\n        return self.__student_number\n\n    @property\n    def credits(self):\n        return self.__credits\n\n    @credits.setter\n    def credits(self, op):\n        if op >= 0:\n            self.__credits = op\n        else:\n            raise ValueError(\"The number of study credits cannot be below zero\")\n\n    @property\n    def notes(self):\n        return self.__notes\n\n    @notes.setter\n    def notes(self, notes):\n        self.__notes = notes\n\n    def summary(self):\n        print(f\"Student {self.__name} ({self.student_number}):\")\n        print(f\"- credits: {self.__credits}\")\n        print(f\"- notes: {self.notes}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Student:\n    \"\"\" This class models a student \"\"\"\n\n    def __init__(self, name: str, student_number: str, credits: int = 0, notes: str = \"\"):\n        # calling the setter method for the name attribute\n        self.name = name\n\n        if len(student_number) < 5:\n            raise ValueError(\"A student number should have at least five characters\")\n\n        self.__student_number = student_number\n\n        # calling the setter method for the credits attribute\n        self.credits = credits\n\n        self.__notes = notes\n\n    @property\n    def name(self):\n        return self.__name\n\n    @name.setter\n    def name(self, name):\n        if name != \"\":\n            self.__name = name\n        else:\n            raise ValueError(\"The name cannot be an empty string\")\n\n    @property\n    def student_number(self):\n        return self.__student_number\n\n    @property\n    def credits(self):\n        return self.__credits\n\n    @credits.setter\n    def credits(self, op):\n        if op >= 0:\n            self.__credits = op\n        else:\n            raise ValueError(\"The number of study credits cannot be below zero\")\n\n    @property\n    def notes(self):\n        return self.__notes\n\n    @notes.setter\n    def notes(self, notes):\n        self.__notes = notes\n\n    def summary(self):\n        print(f\"Student {self.__name} ({self.student_number}):\")\n        print(f\"- credits: {self.__credits}\")\n        print(f\"- notes: {self.notes}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c5c13cbebbd2688e41c3ffe14da8e542d43e86eb5d248d21e72db3a38d409526",
+        "length_lines": 55
+      }
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0012",
+      "type": "code",
+      "order": 12,
+      "source_hash": "983c0685e3b56e8be5a588b4aff346c23cfabaadeae3b20355777b547d2d5557",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# Passing only the name and the student number as arguments to the constructor\nstudent1 = Student(\"Sally Student\", \"12345\")\nstudent1.summary()\n\n# Passing the name, the student number and the number of study credits\nstudent2 = Student(\"Sassy Student\", \"54321\", 25)\nstudent2.summary()\n\n# Passing values for all the parameters\nstudent3 = Student(\"Saul Student\", \"99999\", 140, \"extra time in exam\")\nstudent3.summary()\n\n# Passing a value for notes, but not for study credits\n# NB: the parameter must be named now that the arguments are not in order\nstudent4 = Student(\"Sandy Student\", \"98765\", notes=\"absent in academic year 20-21\")\nstudent4.summary()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# Passing only the name and the student number as arguments to the constructor\nstudent1 = Student(\"Sally Student\", \"12345\")\nstudent1.summary()\n\n# Passing the name, the student number and the number of study credits\nstudent2 = Student(\"Sassy Student\", \"54321\", 25)\nstudent2.summary()\n\n# Passing values for all the parameters\nstudent3 = Student(\"Saul Student\", \"99999\", 140, \"extra time in exam\")\nstudent3.summary()\n\n# Passing a value for notes, but not for study credits\n# NB: the parameter must be named now that the arguments are not in order\nstudent4 = Student(\"Sandy Student\", \"98765\", notes=\"absent in academic year 20-21\")\nstudent4.summary()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "983c0685e3b56e8be5a588b4aff346c23cfabaadeae3b20355777b547d2d5557",
+        "length_lines": 16
+      }
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0013",
+      "type": "sample_output",
+      "order": 13,
+      "source_hash": "3d8c77d53937e2a82452e62502bb620579e90d4aafcb89f08fdad3017e2d3b2f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Student Sally Student (12345):\n- credits: 0\n- notes:\nStudent Sassy Student (54321):\n- credits: 25\n- notes:\nStudent Saul Student (99999):\n- credits: 140\n- notes: extra time in exam\nStudent Sandy Student (98765):\n- credits: 0\n- notes: absent in academic year 20-21"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Student Sally Student (12345):\n- credits: 0\n- notes:\nStudent Sassy Student (54321):\n- credits: 25\n- notes:\nStudent Saul Student (99999):\n- credits: 140\n- notes: extra time in exam\nStudent Sandy Student (98765):\n- credits: 0\n- notes: absent in academic year 20-21"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nStudent Sally Student (12345):\n- credits: 0\n- notes:\nStudent Sassy Student (54321):\n- credits: 25\n- notes:\nStudent Saul Student (99999):\n- credits: 140\n- notes: extra time in exam\nStudent Sandy Student (98765):\n- credits: 0\n- notes: absent in academic year 20-21\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "ffab105445eacd9a29b4c22bc544e63da51fc8057cb8fedfafefa8207a835178",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "NB: there is no setter method for the attribute `student_number` as the student number is not supposed to change."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "057b8c3910ddc2ed9bbbf21a45be98a902f5f5111d87e0c34e9b79d3bfdfa46f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "There is one rather significant snag when using default values for parameters. The following example modelling yet another kind of student will shed more light on this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0016",
+      "type": "code",
+      "order": 16,
+      "source_hash": "b448ec5ecb46756d3d3fc964f41aa1174a6fdf723200abab8156ce07af57b22e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Student:\n    def __init__(self, name, completed_courses=[]):\n        self.name = name\n        self.completed_courses = completed_courses\n\n    def add_course(self, course):\n        self.completed_courses.append(course)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Student:\n    def __init__(self, name, completed_courses=[]):\n        self.name = name\n        self.completed_courses = completed_courses\n\n    def add_course(self, course):\n        self.completed_courses.append(course)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b448ec5ecb46756d3d3fc964f41aa1174a6fdf723200abab8156ce07af57b22e",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0017",
+      "type": "code",
+      "order": 17,
+      "source_hash": "374029029ec3191e4b26124ad7fffb094cdd09d81a4f3f906b22bc3f75cc9497",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "student1 = Student(\"Sally Student\")\nstudent2 = Student(\"Sassy Student\")\n\nstudent1.add_course(\"ItP\")\nstudent1.add_course(\"ACiP\")\n\nprint(student1.completed_courses)\nprint(student2.completed_courses)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "student1 = Student(\"Sally Student\")\nstudent2 = Student(\"Sassy Student\")\n\nstudent1.add_course(\"ItP\")\nstudent1.add_course(\"ACiP\")\n\nprint(student1.completed_courses)\nprint(student2.completed_courses)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "374029029ec3191e4b26124ad7fffb094cdd09d81a4f3f906b22bc3f75cc9497",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0018",
+      "type": "sample_output",
+      "order": 18,
+      "source_hash": "7b2066c66a35e76471181a19d3e134384876380e0a3d439e4d221f0f52f1b498",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "['ItP', 'ACiP']\n['ItP', 'ACiP']"
+      },
+      "translation": {
+        "language": "text",
+        "content": "['ItP', 'ACiP']\n['ItP', 'ACiP']"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n['ItP', 'ACiP']\n['ItP', 'ACiP']\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "61daababd1ac6c8305a8383f729aed662a17d04eb5cb0e5422145de29e1cb8f1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Adding completed courses to Sally's list also adds those courses to Sassy's list. In fact, these two are the exact same list, as Python reuses the reference stored in the default value. Creating the two new Student objects in the above example is equivalent to the following:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0020",
+      "type": "code",
+      "order": 20,
+      "source_hash": "2be9c9c2122b129e99c094933eef9318d02f4cc21a4befb587a3e24aef5bfd7b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "courses = []\nstudent1 = Student(\"Sally Student\", courses)\nstudent2 = Student(\"Sassy Student\", courses)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "courses = []\nstudent1 = Student(\"Sally Student\", courses)\nstudent2 = Student(\"Sassy Student\", courses)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2be9c9c2122b129e99c094933eef9318d02f4cc21a4befb587a3e24aef5bfd7b",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "5957d2a3919c777cabd37da00226f2daf93120572bb9c4aaf284011ced3a2d9c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The default values of parameters should never be instances of more complicated, mutable data structures, such as lists. The problem can be circumvented by making the following changes to the constructor of the `Student` class:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0022",
+      "type": "code",
+      "order": 22,
+      "source_hash": "26b283cb276976511ecd1e26b863027abe7b8057a1a0e226347aad1181319596",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Student:\n    def __init__(self, name, completed_courses=None):\n        self.name = name\n        if completed_courses is None:\n            self.completed_courses = []\n        else:\n            self.completed_courses = completed_courses\n\n    def add_course(self, course):\n        self.completed_courses.append(course)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Student:\n    def __init__(self, name, completed_courses=None):\n        self.name = name\n        if completed_courses is None:\n            self.completed_courses = []\n        else:\n            self.completed_courses = completed_courses\n\n    def add_course(self, course):\n        self.completed_courses.append(course)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "26b283cb276976511ecd1e26b863027abe7b8057a1a0e226347aad1181319596",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0023",
+      "type": "code",
+      "order": 23,
+      "source_hash": "374029029ec3191e4b26124ad7fffb094cdd09d81a4f3f906b22bc3f75cc9497",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "student1 = Student(\"Sally Student\")\nstudent2 = Student(\"Sassy Student\")\n\nstudent1.add_course(\"ItP\")\nstudent1.add_course(\"ACiP\")\n\nprint(student1.completed_courses)\nprint(student2.completed_courses)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "student1 = Student(\"Sally Student\")\nstudent2 = Student(\"Sassy Student\")\n\nstudent1.add_course(\"ItP\")\nstudent1.add_course(\"ACiP\")\n\nprint(student1.completed_courses)\nprint(student2.completed_courses)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "374029029ec3191e4b26124ad7fffb094cdd09d81a4f3f906b22bc3f75cc9497",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0024",
+      "type": "sample_output",
+      "order": 24,
+      "source_hash": "6621659ec810a6e4df1f75291b5b15eb20f7e2b380d244f05f2c69655b441505",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "['ItP', 'ACiP']\n[]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "['ItP', 'ACiP']\n[]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n['ItP', 'ACiP']\n[]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0025",
+      "type": "heading",
+      "order": 25,
+      "source_hash": "70c75cd42b6d74f3121249b9cc7c76203afa5be8769992b2bbdd5b5519ca5f9f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The Grand Finale"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "61b38077c3b0c5e110dcc9881afbe29df9752ff360ee6884b8221c081d603de7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Even though the following exercise finishes off this part of the material, the techniques required to solve it were all covered already in the section named [objects as attributes](/part-9/2-objects-as-attributes). Specifically, you are not required to use the `@property` decorator or default values for parameters in this exercise. This exercise is very similar to the exercises [a box of presents](/part-9/2-objects-as-attributes#programming-exercise-a-box-of-presents) and [the shortest person in the room](/part-9/2-objects-as-attributes#programming-exercise-the-shortest-person-in-the-room)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "a24b7979080d585d2ebfb574b6c5864bcd96a3a58d04c3e0604897112e84762c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "#### Important information regarding the next exercise\nPlease note that there is an issue resulting from an update in Python, which conflicts with the inbuilt library and the original file name for this exercise. If you experience any issues, we recommend redownloading the exercise folder. Once you have obtained the new local test files, you can use either \"code.py\" or \"code_1.py\" as the file name. While using Visual Studio Code, you may receive notifications about problems in the test file. However, these notifications can be safely ignored, as they are caused by the test's inability to import from either the \"code.py\" or \"code_1.py\" files."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0028",
+      "type": "exercise",
+      "order": 28,
+      "source_hash": "8e25d4044e51f511151c2d7e124a523c613c5f4423cd2f5893b1cb450ad7a243",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In this series of exercises you will create the classes `Item`, `Suitcase` and `Cargo Hold`, which will let you further practice working on objects which contain references to other objects.\n\n## Item\n\nPlease create a class named `Item` which is used to create items of different kinds. Each item has a name and a weight (in kilograms).\n\nYou can use the following code to test your class:\n\n```python\nbook = Item(\"ABC Book\", 2)\nphone = Item(\"Nokia 3210\", 1)\n\nprint(\"Name of the book:\", book.name())\nprint(\"Weight of the book:\", book.weight())\n\nprint(\"Book:\", book)\nprint(\"Phone:\", phone)\n```\n\nYour program should print out this:\n\n<sample-output>\n\nName of the book: ABC Book\nWeight of the book: 2\nBook: ABC Book (2 kg)\nPhone: Nokia 3210 (1 kg)\n\n</sample-output>\n\nAn `Item` should provide the methods `weight` and `name`, which return the values stored in those attributes.\n\nThe name and weight should be encapsulated within the class. The following code should not work:\n\n```python\nbook = Item(\"ABC Book\", 2)\nbook.weight = 10\n```\n\n## Suitcase\n\nPlease write a class named `Suitcase`. You should be able to pack items into a suitcase. A suitcase also has a maximum combined weight for the items stored within.\n\nYour class should contains the following members:\n\n- a constructor which takes the maximum weight as an argument\n- a method named `add_item` which adds the item given as an argument to the suitcase. The method has no return value.\n- a `__str__` method which returns a string in the format \"x items (y kg)\"\n\nThe class should make sure that the combined weight of the items stored within any `Suitcase` does not exceed the maximum weight set for that instance. If the maximum weight would be exceeded when the `add_item` method is called, the new item should not be added to the suitcase.\n\nYour class should work as follows:\n\n```python\nbook = Item(\"ABC Book\", 2)\nphone = Item(\"Nokia 3210\", 1)\nbrick = Item(\"Brick\", 4)\n\nsuitcase = Suitcase(5)\nprint(suitcase)\n\nsuitcase.add_item(book)\nprint(suitcase)\n\nsuitcase.add_item(phone)\nprint(suitcase)\n\nsuitcase.add_item(brick)\nprint(suitcase)\n```\n\nExecuting the above should print out\n\n<sample-output>\n\n0 items (0 kg)\n1 items (2 kg)\n2 items (3 kg)\n2 items (3 kg)\n\n</sample-output>\n\n## Mind your language\n\nThe notification \"1 items\" is not very grammatical. Instead, it should say \"1 item\". Please make the required changes to your `__str__` method.\n\nThe previous example should now print out\n\n<sample-output>\n\n0 items (0 kg)\n1 item (2 kg)\n2 items (3 kg)\n2 items (3 kg)\n\n</sample-output>\n\n## All the items\n\nPlease add the following methods to your `Suitcase` class definition:\n\n- `print_items` prints out all the items stored in the suitcase\n- `weight` returns an integer number representing the combined weight of all the items stored in the suitcase\n\nYour class should now work with the following program:\n\n```python\nbook = Item(\"ABC Book\", 2)\nphone = Item(\"Nokia 3210\", 1)\nbrick = Item(\"Brick\", 4)\n\nsuitcase = Suitcase(10)\nsuitcase.add_item(book)\nsuitcase.add_item(phone)\nsuitcase.add_item(brick)\n\nprint(\"The suitcase contains the following items:\")\nsuitcase.print_items()\ncombined_weight = suitcase.weight()\nprint(f\"Combined weight: {combined_weight} kg\")\n```\n\nExecuting the above program should print out this:\n\n<sample-output>\n\nThe suitcase contains the following items:\nABC Book (2 kg)\nNokia 3210 (1 kg)\nBrick (4 kg)\nCombined weight: 7 kg\n\n</sample-output>\n\nIf you have implemented your `Suitcase` class with more than two instance variables, please make the required changes so that each instance has only two data attributes: the maximum weight and a list of items within.\n\n## The heaviest item\n\nPlease add a new method to your `Suitcase` class: `heaviest_item` should return the `Item` which is the heaviest. If there are two or more items with the same, heaviest weight, the method may return any one of these. The method should return a reference to an object. If the suitcase is empty, the method should return `None`.\n\nYour class should now work with the following program:\n\n```python\nbook = Item(\"ABC Book\", 2)\nphone = Item(\"Nokia 3210\", 1)\nbrick = Item(\"Brick\", 4)\n\nsuitcase = Suitcase(10)\nsuitcase.add_item(book)\nsuitcase.add_item(phone)\nsuitcase.add_item(brick)\n\nheaviest = suitcase.heaviest_item()\nprint(f\"The heaviest item: {heaviest}\")\n```\n\nExecuting the above program should print out this:\n\n<sample-output>\n\nThe heaviest item: Brick (4 kg)\n\n</sample-output>\n\n## Cargo hold\n\nPlease write a class named `CargoHold` with the following methods:\n\n- a constructor which takes the maximum weight as an argument\n- a method named `add_suitcase` which adds the suitcase given as an argument to the cargo hold\n- a `__str__` method which returns a string in the format \"x suitcases, space for y kg\"\n\nThe class should make sure that the combined weight of the items stored within any `CargoHold` does not exceed the maximum weight set for that instance. If the maximum weight would be exceeded when the `add_suitcase` method is called, the new suitcase should not be added to the cargo hold.\n\nYour class should now work with the following program:\n\n```python\ncargo_hold = CargoHold(1000)\nprint(cargo_hold)\n\nbook = Item(\"ABC Book\", 2)\nphone = Item(\"Nokia 3210\", 1)\nbrick = Item(\"Brick\", 4)\n\nadas_suitcase = Suitcase(10)\nadas_suitcase.add_item(book)\nadas_suitcase.add_item(phone)\n\npeters_suitcase = Suitcase(10)\npeters_suitcase.add_item(brick)\n\ncargo_hold.add_suitcase(adas_suitcase)\nprint(cargo_hold)\n\ncargo_hold.add_suitcase(peters_suitcase)\nprint(cargo_hold)\n```\n\n<sample-output>\n\n0 suitcases, space for 1000 kg\n1 suitcase, space for 997 kg\n2 suitcases, space for 993 kg\n\n</sample-output>\n\n## The contents of the cargo hold\n\nPlease add a method named `print_items` to your `CargoHold` class. It should print out all the items in all the suitcases within the cargo hold.\n\nYour class should now work with the following program:\n\n```python\nbook = Item(\"ABC Book\", 2)\nphone = Item(\"Nokia 3210\", 1)\nbrick = Item(\"Brick\", 4)\n\nadas_suitcase = Suitcase(10)\nadas_suitcase.add_item(book)\nadas_suitcase.add_item(phone)\n\npeters_suitcase = Suitcase(10)\npeters_suitcase.add_item(brick)\n\ncargo_hold = CargoHold(1000)\ncargo_hold.add_suitcase(adas_suitcase)\ncargo_hold.add_suitcase(peters_suitcase)\n\nprint(\"The suitcases in the cargo hold contain the following items:\")\ncargo_hold.print_items()\n```\n\nExecuting the above program should print out this:\n\n<sample-output>\n\nThe suitcases in the cargo hold contain the following items:\nABC Book (2 kg)\nNokia 3210 (1 kg)\nBrick (4 kg)\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part09-15_item_suitcase_hold",
+        "exercise_type": "programming-exercise",
+        "name": "Item, Suitcase and Cargo hold",
+        "tmc_name": "part09-15_item_suitcase_hold",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "e7c1a46e91282cacd4221fc454f07d2669740016f75a092ce3959836e6ef0903",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please respond to a quick questionnaire on this week's materials."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part09-6-more-examples-with-classes-0030",
+      "type": "quiz",
+      "order": 30,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "42accf05-8328-5277-bf26-259a59852362",
+        "attributes": {
+          "id": "42accf05-8328-5277-bf26-259a59852362"
+        }
+      }
+    }
+  ]
+}

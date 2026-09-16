@@ -1,0 +1,16 @@
+{
+  "id": "ex-part08-13_stopwatch",
+  "lesson_id": "part08-5-more-examples-of-classes",
+  "part": 8,
+  "tmc_name": "part08-13_stopwatch",
+  "title_original": "Stopwatch",
+  "title_vi": "Đồng hồ bấm giờ",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The exercise template contains the following skeleton for the `Stopwatch` class:\n\n```python\nclass Stopwatch:\n    def __init__(self):\n        self.seconds = 0\n        self.minutes = 0\n```\n\nPlease add to the class definition so that it works as follows:\n\n```python\nwatch = Stopwatch()\nfor i in range(3600):\n    print(watch)\n    watch.tick()\n```\n\n<sample-output>\n\n00:00\n00:01\n00:02\n... many more lines printed out\n00:59\n01:00\n01:01\n... many, many more lines printed out\n59:58\n59:59\n00:00\n00:01\n\n</sample-output>\n\nSo, the method `tick` adds one second to the stopwatch. The maximum value for both seconds and minutes is 59. Your class definition should also contain a `__str__` method, which returns a string representation of the state of the stopwatch, as shown in the example above.\n\n**Hint:** it might make it easier to test the `tick` method if you temporarily set the initial values of the seconds and minutes to some value closer to 59 in the constructor. If you do change the initial values, remember to change them back before submitting.",
+  "description_vi": "Mẫu bài tập chứa khung sau cho lớp `Stopwatch`:\n\n```python\nclass Stopwatch:\n    def __init__(self):\n        self.seconds = 0\n        self.minutes = 0\n```\n\nVui lòng thêm vào định nghĩa lớp để nó hoạt động như sau:\n\n```python\nwatch = Stopwatch()\nfor i in range(3600):\n    print(watch)\n    watch.tick()\n```\n\n<sample-output>\n\n00:00\n00:01\n00:02\n... nhiều dòng nữa được in ra\n00:59\n01:00\n01:01\n... rất nhiều dòng nữa được in ra\n59:58\n59:59\n00:00\n00:01\n\n</sample-output>\n\nVì vậy, phương pháp `tick` thêm một giây vào đồng hồ bấm giờ. Giá trị tối đa cho cả giây và phút là 59. Định nghĩa lớp của bạn cũng phải chứa phương thức `__str__`, phương thức này trả về một chuỗi biểu thị trạng thái của đồng hồ bấm giờ, như trong ví dụ trên.\n\n**Gợi ý:** có thể giúp kiểm tra phương pháp `tick` dễ dàng hơn nếu bạn tạm thời đặt giá trị ban đầu của giây và phút thành một giá trị nào đó gần hơn 59 trong hàm tạo. Nếu bạn thay đổi các giá trị ban đầu, hãy nhớ thay đổi lại chúng trước khi gửi.",
+  "starter_code": "class Stopwatch:\n    def __init__(self):\n        self.seconds = 0\n        self.minutes = 0",
+  "grading_data_available": false,
+  "source_hash": "7130788a44877b4cd8385224ebe69cf9c41a3d12da14d87eaf01e9c4fff2d00e",
+  "order": 26
+}

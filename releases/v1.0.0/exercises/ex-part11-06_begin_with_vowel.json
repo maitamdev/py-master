@@ -1,0 +1,16 @@
+{
+  "id": "ex-part11-06_begin_with_vowel",
+  "lesson_id": "part11-1-list-comprehensions",
+  "part": 11,
+  "tmc_name": "part11-06_begin_with_vowel",
+  "title_original": "Begin with a vowel",
+  "title_vi": "Bắt đầu bằng một nguyên âm",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `begin_with_vowel(words: list)` which takes a list of strings as its argument.\n\nThe function should use a list comprehension technique to create and return a new list, containing only those words from the original list which begin with a vowel (a, e, i, o, u). Both lowercase and uppercase letters should be accepted.\n\nThe maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nAn example of the function in use:\n\n```python\nword_list = [\"automobile\",\"motorbike\",\"Animal\",\"cat\",\"Dog\",\"APPLE\",\"orange\"]\nfor vowelled in begin_with_vowel(word_list):\n    print(vowelled)\n```\n\n<sample-output>\n\nautomobile\nAnimal\nAPPLE\norange\n\n</sample-output>",
+  "description_vi": "Vui lòng viết một hàm có tên `begin_with_vowel(words: list)` lấy danh sách các chuỗi làm đối số.\n\nHàm nên sử dụng kỹ thuật hiểu danh sách để tạo và trả về một danh sách mới, chỉ chứa những từ trong danh sách ban đầu bắt đầu bằng nguyên âm (a, e, i, o, u). Cả chữ thường và chữ hoa đều phải được chấp nhận.\n\nĐộ dài tối đa của hàm là hai dòng mã, bao gồm dòng tiêu đề bắt đầu bằng từ khóa `def`.\n\nMột ví dụ về chức năng được sử dụng:\n\n```python\nword_list = [\"automobile\",\"motorbike\",\"Animal\",\"cat\",\"Dog\",\"APPLE\",\"orange\"]\nfor vowelled in begin_with_vowel(word_list):\n    print(vowelled)\n```\n\n<sample-output>\n\nô tô\nđộng vật\nTÁO\ntrái cam\n\n</sample-output>",
+  "starter_code": "word_list = [\"automobile\",\"motorbike\",\"Animal\",\"cat\",\"Dog\",\"APPLE\",\"orange\"]\nfor vowelled in begin_with_vowel(word_list):\n    print(vowelled)",
+  "grading_data_available": false,
+  "source_hash": "f83e1d7f2dc36d93bd4866dbb28fecd45dfe61d3aeadff3088ce5ada6ee59c34",
+  "order": 51
+}

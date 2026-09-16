@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-19_range_of_list",
+  "lesson_id": "part04-3-lists",
+  "part": 4,
+  "tmc_name": "part04-19_range_of_list",
+  "title_original": "The range of a list",
+  "title_vi": "Phạm vi của danh sách",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named  `range_of_list`, which takes a list of integers as an argument. The function returns the difference between the smallest and the largest value in the list.\n\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nresult = range_of_list(my_list))\nprint(\"The range of the list is\", result)\n```\n\n<sample-output>\n\nThe range of the list is 4\n\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `range_of_list`, hàm này lấy danh sách các số nguyên làm đối số. Hàm trả về chênh lệch giữa giá trị nhỏ nhất và lớn nhất trong danh sách.\n\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nresult = range_of_list(my_list))\nprint(\"The range of the list is\", result)\n```\n\n<sample-output>\n\nPhạm vi của danh sách là 4\n\n</sample-output>",
+  "starter_code": "my_list = [1, 2, 3, 4, 5]\nresult = range_of_list(my_list))\nprint(\"The range of the list is\", result)",
+  "grading_data_available": false,
+  "source_hash": "6dc8cef256db8daa7edd7044b487750db83df8dc14e2ae95d5e089a9ab0fe04a",
+  "order": 105
+}

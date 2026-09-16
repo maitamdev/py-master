@@ -1,0 +1,402 @@
+{
+  "id": "part13-1-pygame",
+  "part": 13,
+  "part_slug": "part-13",
+  "slug": "1-pygame",
+  "is_part_index": false,
+  "title_original": "Pygame",
+  "path": "/part-13/1-pygame",
+  "source_path": "data/part-13/1-pygame.md",
+  "source_hash": "659caf4e8cb6b7ddba7487a5f09b70adee56481781054233d5a2c939b563d5f1",
+  "frontmatter": {
+    "path": "/part-13/1-pygame",
+    "title": "Pygame",
+    "hidden": false
+  },
+  "chunks_count": 64,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will have installed the pygame library on your computer\n- You will know how to create a pygame window and how to exit a program\n- You will be able to use an image stored in a file in a pygame window",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will have installed the pygame library on your computer\n- You will know how to create a pygame window and how to exit a program\n- You will be able to use an image stored in a file in a pygame window\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In these last two parts of this course material we will get to grips with the pygame library. It is a Python library for programming games. It helps you create graphical elements, handle events from the keyboard and the mouse, and implement other features necessary in games.",
+      "raw_source": "In these last two parts of this course material we will get to grips with the pygame library. It is a Python library for programming games. It helps you create graphical elements, handle events from the keyboard and the mouse, and implement other features necessary in games."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Installing pygame",
+      "raw_source": "## Installing pygame"
+    },
+    {
+      "raw_type": "heading",
+      "level": 3,
+      "content": "Linux",
+      "raw_source": "### Linux"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Open a command line, type in `pip3 install pygame` an press `enter`.",
+      "raw_source": "Open a command line, type in `pip3 install pygame` an press `enter`."
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "pygame_linux.png"
+      },
+      "raw_source": "<img src=\"pygame_linux.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This should install the pygame library on your computer.",
+      "raw_source": "This should install the pygame library on your computer."
+    },
+    {
+      "raw_type": "heading",
+      "level": 3,
+      "content": "Windows",
+      "raw_source": "### Windows"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Open the Windows terminal by opening the menu, typing in `cmd` and pressing `enter`:",
+      "raw_source": "Open the Windows terminal by opening the menu, typing in `cmd` and pressing `enter`:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "13_1_1.png"
+      },
+      "raw_source": "<img src=\"13_1_1.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The command line interpreter window should open. Type in `pip3 install pygame` and press `enter`.",
+      "raw_source": "The command line interpreter window should open. Type in `pip3 install pygame` and press `enter`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This should install the pygame library on your computer.",
+      "raw_source": "This should install the pygame library on your computer."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Installation may require system administrator privileges. If the above doesn't work, you can try running the terminal application as an administrator: open the Windows menu, find the CMD application, right-click it and choose \"Run as administrator\".",
+      "raw_source": "Installation may require system administrator privileges. If the above doesn't work, you can try running the terminal application as an administrator: open the Windows menu, find the CMD application, right-click it and choose \"Run as administrator\"."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Installing and accessing pygame requires that your Python installation is added to path, as instructed [here](https://www.mooc.fi/en/installation/vscode/#python3).",
+      "raw_source": "Installing and accessing pygame requires that your Python installation is added to path, as instructed [here](https://www.mooc.fi/en/installation/vscode/#python3)."
+    },
+    {
+      "raw_type": "heading",
+      "level": 3,
+      "content": "Mac",
+      "raw_source": "### Mac"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Open the _Terminal_, for example through the magnifying glass symbol in the top right corner:",
+      "raw_source": "Open the _Terminal_, for example through the magnifying glass symbol in the top right corner:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "13-1-2.png"
+      },
+      "raw_source": "<img src=\"13-1-2.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The search tool should open. Type in `terminal` and press `enter`:",
+      "raw_source": "The search tool should open. Type in `terminal` and press `enter`:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "13-1-3.png"
+      },
+      "raw_source": "<img src=\"13-1-3.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Type in the following and press `enter`:",
+      "raw_source": "Type in the following and press `enter`:"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "`pip3 install pygame`",
+      "raw_source": "`pip3 install pygame`"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "13-1-4.png"
+      },
+      "raw_source": "<img src=\"13-1-4.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This should install the pygame library on your computer.",
+      "raw_source": "This should install the pygame library on your computer."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Your first program",
+      "raw_source": "## Your first program"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here is a simple program for checking your pygame installation works correctly:",
+      "raw_source": "Here is a simple program for checking your pygame installation works correctly:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nwindow.fill((0,0,0))\npygame.display.flip()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()",
+      "raw_source": "```python\nimport pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nwindow.fill((0,0,0))\npygame.display.flip()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "When this program is run, it should display a window:",
+      "raw_source": "When this program is run, it should display a window:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "pygame_first.gif"
+      },
+      "raw_source": "<img src=\"pygame_first.gif\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The program only consists of displaying a window, and it runs until the user closes the window.",
+      "raw_source": "The program only consists of displaying a window, and it runs until the user closes the window."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's take a closer look at the steps required to achieve this. The first line takes the pygame library into use: `import pygame`. The next command `pygame.init` initializes the pygame modules, and the next one creates a window with the function `pygame.display.set_mode`.",
+      "raw_source": "Let's take a closer look at the steps required to achieve this. The first line takes the pygame library into use: `import pygame`. The next command `pygame.init` initializes the pygame modules, and the next one creates a window with the function `pygame.display.set_mode`."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "pygame.init()\nwindow = pygame.display.set_mode((640, 480))",
+      "raw_source": "```python\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `set_mode` function takes the window dimensions as an argument. The tuple `(640, 480)` indicates that the window is 640 pixels wide and 480 pixels high. The variable name `window` can be used later to access the window, for example to draw something in it.",
+      "raw_source": "The `set_mode` function takes the window dimensions as an argument. The tuple `(640, 480)` indicates that the window is 640 pixels wide and 480 pixels high. The variable name `window` can be used later to access the window, for example to draw something in it."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following two commands do just that:",
+      "raw_source": "The following two commands do just that:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "window.fill((0, 0, 0))\npygame.display.flip()",
+      "raw_source": "```python\nwindow.fill((0, 0, 0))\npygame.display.flip()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `fill` method fills the window with the colour passed as an argument. In this case the colour is black, passed as an RGB value in the tuple `(0, 0, 0)`. The `pygame.display.flip` updates the contents of the window.",
+      "raw_source": "The `fill` method fills the window with the colour passed as an argument. In this case the colour is black, passed as an RGB value in the tuple `(0, 0, 0)`. The `pygame.display.flip` updates the contents of the window."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "After these initialization commands the _main loop_ of the program begins:",
+      "raw_source": "After these initialization commands the _main loop_ of the program begins:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "while True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()",
+      "raw_source": "```python\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The main loop handles all events the operating system passes to the program. With each iteration the function `pygame.event.get` returns a list of any events collected since the previous iteration.",
+      "raw_source": "The main loop handles all events the operating system passes to the program. With each iteration the function `pygame.event.get` returns a list of any events collected since the previous iteration."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the example above the program only handles events of type `pygame.QUIT`. This event is raised by, for example, clicking on the exit button in the corner of the window. If the `pygame.QUIT` event is raised, the program exits through the `exit` function.",
+      "raw_source": "In the example above the program only handles events of type `pygame.QUIT`. This event is raised by, for example, clicking on the exit button in the corner of the window. If the `pygame.QUIT` event is raised, the program exits through the `exit` function."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You can try and see what happens if your program doesn't handle the `pygame.QUIT` event. This should mean that clicking on the exit button does nothing, which would be confusing for the user. As the program is run from the command line, you can still stop it from the command line with Control+C.",
+      "raw_source": "You can try and see what happens if your program doesn't handle the `pygame.QUIT` event. This should mean that clicking on the exit button does nothing, which would be confusing for the user. As the program is run from the command line, you can still stop it from the command line with Control+C."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Add an image",
+      "raw_source": "## Add an image"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's add an image to the window:",
+      "raw_source": "Let's add an image to the window:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "import pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nwindow.fill((0, 0, 0))\nwindow.blit(robot, (100, 50))\npygame.display.flip()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()",
+      "raw_source": "```python\nimport pygame\n\npygame.init()\nwindow = pygame.display.set_mode((640, 480))\n\nrobot = pygame.image.load(\"robot.png\")\n\nwindow.fill((0, 0, 0))\nwindow.blit(robot, (100, 50))\npygame.display.flip()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The program uses this image of a robot, which is stored in the file `robot.png`:",
+      "raw_source": "The program uses this image of a robot, which is stored in the file `robot.png`:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "robot.png"
+      },
+      "raw_source": "<img src=\"robot.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The file `robot.png` has to be in the same directory with the source code of the your program, or the program won't be able to find it. In the exercise templates for this part the images are waiting in the exercise directory.",
+      "raw_source": "The file `robot.png` has to be in the same directory with the source code of the your program, or the program won't be able to find it. In the exercise templates for this part the images are waiting in the exercise directory."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The window should now look like this:",
+      "raw_source": "The window should now look like this:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "pygame_pic.gif"
+      },
+      "raw_source": "<img src=\"pygame_pic.gif\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The function `pygame.image.load` loads the image in the file `robot.png` and stores a reference to it in the variable named `robot`. The method `blit` draws the image at the location `(100, 50)`, and the function `pygame.display.flip` updates the window contents, as before. The location `(100, 50)` means that the _top left corner_ of the image is at that location within the window.",
+      "raw_source": "The function `pygame.image.load` loads the image in the file `robot.png` and stores a reference to it in the variable named `robot`. The method `blit` draws the image at the location `(100, 50)`, and the function `pygame.display.flip` updates the window contents, as before. The location `(100, 50)` means that the _top left corner_ of the image is at that location within the window."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In pygame the origo point `(0, 0)` is in the top left corner of the window. The x coordinates increase to the right, and the y coordinates increase downwards, so that the bottom right corner has the coordinates `(640, 480)`. This is contrary to how coordinates are usually handled in e.g. mathematics, but it is quite common in a programming context, and worth getting used to.",
+      "raw_source": "In pygame the origo point `(0, 0)` is in the top left corner of the window. The x coordinates increase to the right, and the y coordinates increase downwards, so that the bottom right corner has the coordinates `(640, 480)`. This is contrary to how coordinates are usually handled in e.g. mathematics, but it is quite common in a programming context, and worth getting used to."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Once you have loaded an image, you can use it many times within the same window. The following code draws the image of the robot at three different locations:",
+      "raw_source": "Once you have loaded an image, you can use it many times within the same window. The following code draws the image of the robot at three different locations:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "window.blit(robot, (0, 0))\nwindow.blit(robot, (300, 0))\nwindow.blit(robot, (100, 200))",
+      "raw_source": "```python\nwindow.blit(robot, (0, 0))\nwindow.blit(robot, (300, 0))\nwindow.blit(robot, (100, 200))\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The window should look like this as a result:",
+      "raw_source": "The window should look like this as a result:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "pygame_pic2.gif"
+      },
+      "raw_source": "<img src=\"pygame_pic2.gif\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here we set the location of the image so that it lies at the centre of the window:",
+      "raw_source": "Here we set the location of the image so that it lies at the centre of the window:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "width = robot.get_width()\nheight = robot.get_height()\nwindow.blit(robot, (320-width/2, 240-height/2))",
+      "raw_source": "```python\nwidth = robot.get_width()\nheight = robot.get_height()\nwindow.blit(robot, (320-width/2, 240-height/2))\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The window should now look like this:",
+      "raw_source": "The window should now look like this:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "pygame_pic3.gif"
+      },
+      "raw_source": "<img src=\"pygame_pic3.gif\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The method `get_width` returns the width of the image, and the method `get_height` returns its height, both in pixels. The centre of the window is at half its width and height, so at `(320, 240)`, which we can use to calculate a suitable location for the top left corner of the image, so that it lies exactly at the centre.",
+      "raw_source": "The method `get_width` returns the width of the image, and the method `get_height` returns its height, both in pixels. The centre of the window is at half its width and height, so at `(320, 240)`, which we can use to calculate a suitable location for the top left corner of the image, so that it lies exactly at the centre."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "hint",
+        "name": "Pygame exercises"
+      },
+      "inner_content": "The exercises in this part of the course have no automated tests, as the results as visually verified. The tests grant points automatically as you submit your solution to the server, no matter what your implementation. Only submit your solution when you are ready, and your solution matches the exercise description. The exercises may not have automatic tests, but the course staff will still see your solution. Also submitting incomplete solution to TMC Paste grants points automatically, so it should not be used when asking for help with the exercises in this part. You can use [Pastebin.com](https://pastebin.com/) or some another internet pastebin service when asking for help in the course's support channels.\n\nIf your solution clearly does not match the exercise description, you may lose the points granted for the exercises in this part.",
+      "raw_source": "<text-box variant='hint' name='Pygame exercises'>\n\nThe exercises in this part of the course have no automated tests, as the results as visually verified. The tests grant points automatically as you submit your solution to the server, no matter what your implementation. Only submit your solution when you are ready, and your solution matches the exercise description. The exercises may not have automatic tests, but the course staff will still see your solution. Also submitting incomplete solution to TMC Paste grants points automatically, so it should not be used when asking for help with the exercises in this part. You can use [Pastebin.com](https://pastebin.com/) or some another internet pastebin service when asking for help in the course's support channels.\n\nIf your solution clearly does not match the exercise description, you may lose the points granted for the exercises in this part.\n\n</text-box>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Four robots",
+        "tmcname": "part13-01_four_robots"
+      },
+      "inner_content": "Please write a program which draws a robot in each of the four corners of the window. The end result should look like this:\n\n<img src=\"pygame_four.gif\">",
+      "raw_source": "<programming-exercise name='Four robots' tmcname='part13-01_four_robots'>\n\nPlease write a program which draws a robot in each of the four corners of the window. The end result should look like this:\n\n<img src=\"pygame_four.gif\">\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Robots in a row",
+        "tmcname": "part13-02_robots_row"
+      },
+      "inner_content": "Please write a program which draws ten robots in a row. The end result should look like this:\n\n<img src=\"pygame_row.gif\">",
+      "raw_source": "<programming-exercise name='Robots in a row' tmcname='part13-02_robots_row'>\n\nPlease write a program which draws ten robots in a row. The end result should look like this:\n\n<img src=\"pygame_row.gif\">\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "A hundred robots",
+        "tmcname": "part13-03_hundred_robots"
+      },
+      "inner_content": "Please write a program which draws a hundred robots: ten rows with ten robots in each row. The end result should look like this:\n\n<img src=\"pygame_hundred.gif\">",
+      "raw_source": "<programming-exercise name='A hundred robots' tmcname='part13-03_hundred_robots'>\n\nPlease write a program which draws a hundred robots: ten rows with ten robots in each row. The end result should look like this:\n\n<img src=\"pygame_hundred.gif\">\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Random robots",
+        "tmcname": "part13-04_random_robots"
+      },
+      "inner_content": "Please write a program which draws _a thousand_ robots in random places. The end result should look like this:\n\n<img src=\"pygame_thousand.gif\">",
+      "raw_source": "<programming-exercise name='Random robots' tmcname='part13-04_random_robots'>\n\nPlease write a program which draws _a thousand_ robots in random places. The end result should look like this:\n\n<img src=\"pygame_thousand.gif\">\n\n</programming-exercise>"
+    }
+  ]
+}

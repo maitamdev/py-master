@@ -1,0 +1,48 @@
+{
+  "part": 13,
+  "slug": "part-13",
+  "title_original": "Part 13",
+  "title_vi": "Phần 13",
+  "lessons": [
+    {
+      "id": "part13-1-pygame",
+      "slug": "1-pygame",
+      "is_index": false,
+      "title_original": "Pygame",
+      "path": "/part-13/1-pygame",
+      "blocks_count": 64
+    },
+    {
+      "id": "part13-2-animation",
+      "slug": "2-animation",
+      "is_index": false,
+      "title_original": "Animation",
+      "path": "/part-13/2-animation",
+      "blocks_count": 46
+    },
+    {
+      "id": "part13-3-events",
+      "slug": "3-events",
+      "is_index": false,
+      "title_original": "Events",
+      "path": "/part-13/3-events",
+      "blocks_count": 43
+    },
+    {
+      "id": "part13-4-more-pygame-techniques",
+      "slug": "4-more-pygame-techniques",
+      "is_index": false,
+      "title_original": "More pygame techniques",
+      "path": "/part-13/4-more-pygame-techniques",
+      "blocks_count": 22
+    },
+    {
+      "id": "part13-index",
+      "slug": "index",
+      "is_index": true,
+      "title_original": "Part 13",
+      "path": "/part-13",
+      "blocks_count": 2
+    }
+  ]
+}

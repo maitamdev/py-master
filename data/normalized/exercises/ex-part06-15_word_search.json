@@ -1,0 +1,16 @@
+{
+  "id": "ex-part06-15_word_search",
+  "lesson_id": "part06-2-writing-files",
+  "part": 6,
+  "tmc_name": "part06-15_word_search",
+  "title_original": "Word search",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The exercise template includes the file `words.txt`, which contains words in English.\n\nPlease write a function named `find_words(search_term: str)`. It should return a list containing all the words in the file which match the search term.\n\nThe search term may include lowercase letters and the following wildcard characters:\n\n* A dot `.` means that any single character is acceptable in its place. For example, `ca.` would yield words like _cat_ and _car_, `p.ng` would yield words like _ping_ and _pong_, and `.a.e` would yield words like _sane_, _care_ and _late_.\n* An asterisk `*` at the _end_ of the search term means that any word which _begins_ with the search term is acceptable. An asterisk at the _beginning_ of the search term means that any word which _ends_ with the search term is acceptable. For example, `ca*` would yield words like _california_, _cat_, _caring_ and _catapult_, while `*ane` would yield words like _crane_, _insane_ and _aeroplane_. There can only ever be a single asterisk in the search term.\n* If there are no wildcard characters in the search term, only words which match the search term exactly are returned. \n\nYou may assume both wildcards are never used in the same search term.\n\nThe words in the file are all written in lowercase. You may also assume the argument to the function will be in lowercase entirely.\n\nIf no matching words are found, the function should return an empty list.\n\nHint: the Pythons string methods `startswith()` and `endswith()` may be useful here. You can search for more information about them online.\n\nAn example of the function in action:\n\n```python\nprint(find_words(\"*vokes\"))\n```\n\n<sample-output>\n\n['convokes', 'equivokes', 'evokes', 'invokes', 'provokes', 'reinvokes', 'revokes']\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "print(find_words(\"*vokes\"))",
+  "grading_data_available": false,
+  "source_hash": "8cb409cee71a03251b1d3e7564cf860c246a8f965d7e25d36a753d5ab24b327f",
+  "order": 70
+}

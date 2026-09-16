@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-21_orwell",
+  "lesson_id": "part01-5-conditional-statements",
+  "part": 1,
+  "tmc_name": "part01-21_orwell",
+  "title_original": "Orwell",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for an integer number. The program should print out \"Orwell\" if the number is exactly 1984, and otherwise do nothing.\n\n<sample-output>\n\nPlease type in a number: **2020**\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **1984**\nOrwell\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "5ed263dd9abbecbef8a2a39d001a146c10a6029fa7ff34dd8fe2550d3e73060d",
+  "order": 36
+}

@@ -1,0 +1,309 @@
+{
+  "id": "part07-2-randomness",
+  "part": 7,
+  "part_slug": "part-7",
+  "slug": "2-randomness",
+  "is_part_index": false,
+  "title_original": "Randomness",
+  "path": "/part-7/2-randomness",
+  "source_path": "data/part-7/2-randomness.md",
+  "source_hash": "60f9737f51a19216c6af57726a4773e206838d39e00ebc024d2005b6199c1dcd",
+  "frontmatter": {
+    "path": "/part-7/2-randomness",
+    "title": "Randomness",
+    "hidden": false
+  },
+  "chunks_count": 46,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will be familiar with some of the functions in the module `random` \n- You will be able to make use of random numbers in your programs",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will be familiar with some of the functions in the module `random` \n- You will be able to make use of random numbers in your programs\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This section concentrates on the module [random](https://docs.python.org/3/library/random.html?highlight=random#module-random) from the Python standard library. It contains tools for generating random numbers and other randomized functionality.",
+      "raw_source": "This section concentrates on the module [random](https://docs.python.org/3/library/random.html?highlight=random#module-random) from the Python standard library. It contains tools for generating random numbers and other randomized functionality."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The sections in this part of the material contain many links to the [documentation](https://docs.python.org/3/library/) of the Python standard library. We recommend following the links to familiarize yourself with how the documentation works.",
+      "raw_source": "The sections in this part of the material contain many links to the [documentation](https://docs.python.org/3/library/) of the Python standard library. We recommend following the links to familiarize yourself with how the documentation works."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Generating a random number",
+      "raw_source": "## Generating a random number"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The function [randint(a, b)](https://docs.python.org/3/library/random.html?highlight=random#random.randint) returns a random integer value between `a` and `b`, inclusive. For example, the following program works like a generic die:",
+      "raw_source": "The function [randint(a, b)](https://docs.python.org/3/library/random.html?highlight=random#random.randint) returns a random integer value between `a` and `b`, inclusive. For example, the following program works like a generic die:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from random import randint\n\nprint(\"The result of the throw:\", randint(1, 6))",
+      "raw_source": "```python\nfrom random import randint\n\nprint(\"The result of the throw:\", randint(1, 6))\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Executing this could print out:",
+      "raw_source": "Executing this could print out:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The result of the throw: 4",
+      "raw_source": "<sample-output>\n\nThe result of the throw: 4\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following program throws the die ten times:",
+      "raw_source": "The following program throws the die ten times:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from random import randint\n\nfor i in range(10):\n    print(\"The result of the throw:\", randint(1, 6))",
+      "raw_source": "```python\nfrom random import randint\n\nfor i in range(10):\n    print(\"The result of the throw:\", randint(1, 6))\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Running the above could print out",
+      "raw_source": "Running the above could print out"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The result of the throw: 5\nThe result of the throw: 4\nThe result of the throw: 3\nThe result of the throw: 2\nThe result of the throw: 3\nThe result of the throw: 4\nThe result of the throw: 6\nThe result of the throw: 4\nThe result of the throw: 4\nThe result of the throw: 3",
+      "raw_source": "<sample-output>\n\nThe result of the throw: 5\nThe result of the throw: 4\nThe result of the throw: 3\nThe result of the throw: 2\nThe result of the throw: 3\nThe result of the throw: 4\nThe result of the throw: 6\nThe result of the throw: 4\nThe result of the throw: 4\nThe result of the throw: 3\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "NB: it is worth remembering that the function `randint` works a bit differently when compared to, for example, slices, or the function `range`, which we've come across previously. The function call `randint(1, 6)` results in a number between 1 and 6 inclusive, but the function call `range(1, 6)` results in a range of numbers from 1 to 5.",
+      "raw_source": "NB: it is worth remembering that the function `randint` works a bit differently when compared to, for example, slices, or the function `range`, which we've come across previously. The function call `randint(1, 6)` results in a number between 1 and 6 inclusive, but the function call `range(1, 6)` results in a range of numbers from 1 to 5."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "More randomizing functions",
+      "raw_source": "## More randomizing functions"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The function [shuffle](https://docs.python.org/3/library/random.html?highlight=random#random.shuffle) will shuffle any data structure passed as an argument, in place. For example, the following program shuffles a list of words:",
+      "raw_source": "The function [shuffle](https://docs.python.org/3/library/random.html?highlight=random#random.shuffle) will shuffle any data structure passed as an argument, in place. For example, the following program shuffles a list of words:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from random import shuffle\n\nwords = [\"atlas\", \"banana\", \"carrot\"]\nshuffle(words)\nprint(words)",
+      "raw_source": "```python\nfrom random import shuffle\n\nwords = [\"atlas\", \"banana\", \"carrot\"]\nshuffle(words)\nprint(words)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "['banana', 'atlas', 'carrot']",
+      "raw_source": "<sample-output>\n\n['banana', 'atlas', 'carrot']\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The function `choice` returns a randomly picked item from a data structure:",
+      "raw_source": "The function `choice` returns a randomly picked item from a data structure:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from random import choice\n\nwords = [\"atlas\", \"banana\", \"carrot\"]\nprint(choice(words))",
+      "raw_source": "```python\nfrom random import choice\n\nwords = [\"atlas\", \"banana\", \"carrot\"]\nprint(choice(words))\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "'carrot'",
+      "raw_source": "<sample-output>\n\n'carrot'\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Lottery numbers",
+      "raw_source": "## Lottery numbers"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A common example for studying randomness is the case of lottery numbers. Let's try and draw some lottery numbers. In Finland the national lottery consists of a pool of 40 numbers, 7 of which are chosen for each week's draw.",
+      "raw_source": "A common example for studying randomness is the case of lottery numbers. Let's try and draw some lottery numbers. In Finland the national lottery consists of a pool of 40 numbers, 7 of which are chosen for each week's draw."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A first attempt at drawing a set of numbers could look like this:",
+      "raw_source": "A first attempt at drawing a set of numbers could look like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from random import randint\n\nfor i in range(7):\n    print(randint(1, 40))",
+      "raw_source": "```python\nfrom random import randint\n\nfor i in range(7):\n    print(randint(1, 40))\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This would not work in the long run, however, as the same number may appear twice in a single weekly draw of seven numbers. We need a way to make sure the numbers drawn are all unique.",
+      "raw_source": "This would not work in the long run, however, as the same number may appear twice in a single weekly draw of seven numbers. We need a way to make sure the numbers drawn are all unique."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "One possibility is to store the drawn numbers in a list, and only add a number if it is not already on the list. This can be repeated until the length of the list is seven:",
+      "raw_source": "One possibility is to store the drawn numbers in a list, and only add a number if it is not already on the list. This can be repeated until the length of the list is seven:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from random import randint\n\nweekly_draw = []\nwhile len(weekly_draw) < 7:\n    new_rnd = randint(1, 40)\n    if new_rnd not in weekly_draw:\n        weekly_draw.append(new_rnd)\n\nprint(weekly_draw)",
+      "raw_source": "```python\nfrom random import randint\n\nweekly_draw = []\nwhile len(weekly_draw) < 7:\n    new_rnd = randint(1, 40)\n    if new_rnd not in weekly_draw:\n        weekly_draw.append(new_rnd)\n\nprint(weekly_draw)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A more compact approach would be to use the `shuffle` function:",
+      "raw_source": "A more compact approach would be to use the `shuffle` function:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from random import shuffle\n\nnumber_pool = list(range(1, 41))\nshuffle(number_pool)\nweekly_draw = number_pool[0:7]\nprint(weekly_draw)",
+      "raw_source": "```python\nfrom random import shuffle\n\nnumber_pool = list(range(1, 41))\nshuffle(number_pool)\nweekly_draw = number_pool[0:7]\nprint(weekly_draw)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here the idea is that we first create a list containing the available numbers 1 to 40, rather like the balls in a lottery machine. The pool of numbers is then shuffled, and the first seven numbers chosen for the weekly draw. This saves us the trouble of writing a loop.",
+      "raw_source": "Here the idea is that we first create a list containing the available numbers 1 to 40, rather like the balls in a lottery machine. The pool of numbers is then shuffled, and the first seven numbers chosen for the weekly draw. This saves us the trouble of writing a loop."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In fact, the `random` module contains an even easier way to select lottery numbers: the [sample](https://docs.python.org/3/library/random.html?highlight=random#random.sample) function. It returns a random selection of a specified size from a given data structure:",
+      "raw_source": "In fact, the `random` module contains an even easier way to select lottery numbers: the [sample](https://docs.python.org/3/library/random.html?highlight=random#random.sample) function. It returns a random selection of a specified size from a given data structure:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from random import sample\n\nnumber_pool = list(range(1, 41))\nweekly_draw = sample(number_pool, 7)\nprint(weekly_draw)",
+      "raw_source": "```python\nfrom random import sample\n\nnumber_pool = list(range(1, 41))\nweekly_draw = sample(number_pool, 7)\nprint(weekly_draw)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Lottery numbers",
+        "tmcname": "part07-04_lottery_numbers"
+      },
+      "inner_content": "Please write a function named `lottery_numbers(amount: int, lower: int, upper: int)`, which generates as many random numbers as specified by the first argument. All numbers should fall within the bounds `lower` to `upper`. The numbers should be stored in a list and returned. The numbers should be in ascending order in the returned list.\n\nAs these are lottery numbers, no number should appear twice in the list.\n\nAn example of how the function should work:\n\n```python\nfor number in lottery_numbers(7, 1, 40):\n    print(number)\n```\n\n<sample-output>\n\n4\n7\n11\n16\n22\n29\n38\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Lottery numbers' tmcname='part07-04_lottery_numbers'>\n\nPlease write a function named `lottery_numbers(amount: int, lower: int, upper: int)`, which generates as many random numbers as specified by the first argument. All numbers should fall within the bounds `lower` to `upper`. The numbers should be stored in a list and returned. The numbers should be in ascending order in the returned list.\n\nAs these are lottery numbers, no number should appear twice in the list.\n\nAn example of how the function should work:\n\n```python\nfor number in lottery_numbers(7, 1, 40):\n    print(number)\n```\n\n<sample-output>\n\n4\n7\n11\n16\n22\n29\n38\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Where do these random numbers come from?",
+      "raw_source": "## Where do these random numbers come from?"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The features of the module [random](https://docs.python.org/3/library/random.html) are based on an algorithm which produces random numbers based on a specific initialization value and some arithmetic operations. The initialization value is often called a _seed value_.",
+      "raw_source": "The features of the module [random](https://docs.python.org/3/library/random.html) are based on an algorithm which produces random numbers based on a specific initialization value and some arithmetic operations. The initialization value is often called a _seed value_."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The seed value can be supplied by the user with the [seed](https://docs.python.org/3/library/random.html?highlight=random#random.seed) function:",
+      "raw_source": "The seed value can be supplied by the user with the [seed](https://docs.python.org/3/library/random.html?highlight=random#random.seed) function:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "from random import randint, seed\n\nseed(1337)\n# this will always produce the same \"random\" number\nprint(randint(1, 100))",
+      "raw_source": "```python\nfrom random import randint, seed\n\nseed(1337)\n# this will always produce the same \"random\" number\nprint(randint(1, 100))\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If we have functions which rely on randomization, and we set seed value, the function will produce the same result each time it is executed. The result may be different with different Python versions, but in essence randomness is lost by setting a seed value. This can be a useful feature when testing a program, for example.",
+      "raw_source": "If we have functions which rely on randomization, and we set seed value, the function will produce the same result each time it is executed. The result may be different with different Python versions, but in essence randomness is lost by setting a seed value. This can be a useful feature when testing a program, for example."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "info",
+        "name": "True randomness"
+      },
+      "inner_content": "To be specific, the numbers provided by the `random` module are not truly random. Instead, they are _pseudorandom_. Computers are, in essence, deterministic machines. In an ideal situation, it should be possible to foretell the way they function down to the last bit. Therefore it is very difficult to create truly random numbers with a computer. For many applications, however, pseudorandom numbers are good enough. When true random numbers are required, the seed value is usually generated by some source outside the computer, for example background radiation, noise levels, or [lava lamps](https://blog.cloudflare.com/randomness-101-lavarand-in-production/).\n\nFor more information about randomness, please see <a href=\"https://www.random.org/randomness/\">random.org</a>.",
+      "raw_source": "<text-box variant=\"info\" name=\"True randomness\">\n\nTo be specific, the numbers provided by the `random` module are not truly random. Instead, they are _pseudorandom_. Computers are, in essence, deterministic machines. In an ideal situation, it should be possible to foretell the way they function down to the last bit. Therefore it is very difficult to create truly random numbers with a computer. For many applications, however, pseudorandom numbers are good enough. When true random numbers are required, the seed value is usually generated by some source outside the computer, for example background radiation, noise levels, or [lava lamps](https://blog.cloudflare.com/randomness-101-lavarand-in-production/).\n\nFor more information about randomness, please see <a href=\"https://www.random.org/randomness/\">random.org</a>.\n\n</text-box>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Password generator, part 1",
+        "tmcname": "part07-05_password_generator_part_1"
+      },
+      "inner_content": "Please write a function which creates passwords of a desired length, consisting of lowercase characters a to z.\n\nAn example of how the function should work:\n\n```python\nfor i in range(10):\n    print(generate_password(8))\n```\n\n<sample-output>\n\nlttehepy\nolsxttjl\ncbjncrzo\ndwxqjdgu\ngpfdcecs\njabyvgar\nxnbbonbl\nktmsjyww\nejhprmel\nrjkoacib\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Password generator, part 1' tmcname='part07-05_password_generator_part_1'>\n\nPlease write a function which creates passwords of a desired length, consisting of lowercase characters a to z.\n\nAn example of how the function should work:\n\n```python\nfor i in range(10):\n    print(generate_password(8))\n```\n\n<sample-output>\n\nlttehepy\nolsxttjl\ncbjncrzo\ndwxqjdgu\ngpfdcecs\njabyvgar\nxnbbonbl\nktmsjyww\nejhprmel\nrjkoacib\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Password generator, part 2",
+        "tmcname": "part07-06_password_generator_part_2"
+      },
+      "inner_content": "Please write an improved version of your password generator. The function now takes three arguments:\n\n* If the second argument is `True`, the generated password should also contain one or more numbers.\n* If the third argument is `True`, the generated password should also contain one or more of these special characters: `!?=+-()#`.\n\nDespite these two additional arguments, the password should always contain at least one lowercase alphabet. You may assume the function will only be called with combinations of arguments that are possible to formulate into passwords following these rules. That is, the arguments will not specify e.g. a password of length 2 which contains both a number and a special characters, for then there would not be space for the mandatory lowercase letter.\n\nAn example of how the function should work:\n\n```python\nfor i in range(10):\n    print(generate_strong_password(8, True, True))\n```\n\n<sample-output>\n\n2?0n+u31\nu=m4nl94\nn#=i6r#(\nda9?zvm?\n7h)!)g?!\na=59x2n5\n(jr6n3b5\n9n(4i+2!\n32+qba#=\nn?b0a7ey\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Password generator, part 2' tmcname='part07-06_password_generator_part_2'>\n\nPlease write an improved version of your password generator. The function now takes three arguments:\n\n* If the second argument is `True`, the generated password should also contain one or more numbers.\n* If the third argument is `True`, the generated password should also contain one or more of these special characters: `!?=+-()#`.\n\nDespite these two additional arguments, the password should always contain at least one lowercase alphabet. You may assume the function will only be called with combinations of arguments that are possible to formulate into passwords following these rules. That is, the arguments will not specify e.g. a password of length 2 which contains both a number and a special characters, for then there would not be space for the mandatory lowercase letter.\n\nAn example of how the function should work:\n\n```python\nfor i in range(10):\n    print(generate_strong_password(8, True, True))\n```\n\n<sample-output>\n\n2?0n+u31\nu=m4nl94\nn#=i6r#(\nda9?zvm?\n7h)!)g?!\na=59x2n5\n(jr6n3b5\n9n(4i+2!\n32+qba#=\nn?b0a7ey\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Dice roller",
+        "tmcname": "part07-07_dice_roller"
+      },
+      "inner_content": "In this exercise you will write some functions which can be used in games that involve dice.\n\nInstead of normal dice this exercise specifies _non-transitive dice_. You can read up on these [here](https://singingbanana.com/dice/article.htm) or [watch this video](https://www.youtube.com/watch?v=LrIp6CKUlH8).\n\nYou will use three dice:\n\n- Die A has the sides 3, 3, 3, 3, 3, 6\n- Die B has the sides 2, 2, 2, 5, 5, 5\n- Die C has the sides 1, 4, 4, 4, 4, 4\n\n</pre>\n\nPlease write a function named `roll(die: str)`, which rolls the die specified by the argument. An example of how this should work:\n\n```python\nfor i in range(20):\n    print(roll(\"A\"), \" \", end=\"\")\nprint()\nfor i in range(20):\n    print(roll(\"B\"), \" \", end=\"\")\nprint()\nfor i in range(20):\n    print(roll(\"C\"), \" \", end=\"\")\n```\n\n<sample-output>\n\n3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  6  3  6  3\n2  2  5  2  2  5  5  2  2  5  2  5  5  5  2  5  2  2  2  2\n4  4  4  4  4  1  1  4  4  4  1  4  4  4  4  4  4  4  4  4\n\n</sample-output>\n\nAlso write a function named  `play(die1: str, die2: str, times: int)`, which throws both dice as many times as specified by the third argument. The function should return a tuple. The first item should be the number of times die 1 won, the second the number of times die 2 won, and the third item should be the number of ties.\n\n```python\nresult = play(\"A\", \"C\", 1000)\nprint(result)\nresult = play(\"B\", \"B\", 1000)\nprint(result)\n```\n\n<sample-output>\n\n(292, 708, 0)\n(249, 273, 478)\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Dice roller' tmcname='part07-07_dice_roller'>\n\nIn this exercise you will write some functions which can be used in games that involve dice.\n\nInstead of normal dice this exercise specifies _non-transitive dice_. You can read up on these [here](https://singingbanana.com/dice/article.htm) or [watch this video](https://www.youtube.com/watch?v=LrIp6CKUlH8).\n\nYou will use three dice:\n\n- Die A has the sides 3, 3, 3, 3, 3, 6\n- Die B has the sides 2, 2, 2, 5, 5, 5\n- Die C has the sides 1, 4, 4, 4, 4, 4\n\n</pre>\n\nPlease write a function named `roll(die: str)`, which rolls the die specified by the argument. An example of how this should work:\n\n```python\nfor i in range(20):\n    print(roll(\"A\"), \" \", end=\"\")\nprint()\nfor i in range(20):\n    print(roll(\"B\"), \" \", end=\"\")\nprint()\nfor i in range(20):\n    print(roll(\"C\"), \" \", end=\"\")\n```\n\n<sample-output>\n\n3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  6  3  6  3\n2  2  5  2  2  5  5  2  2  5  2  5  5  5  2  5  2  2  2  2\n4  4  4  4  4  1  1  4  4  4  1  4  4  4  4  4  4  4  4  4\n\n</sample-output>\n\nAlso write a function named  `play(die1: str, die2: str, times: int)`, which throws both dice as many times as specified by the third argument. The function should return a tuple. The first item should be the number of times die 1 won, the second the number of times die 2 won, and the third item should be the number of ties.\n\n```python\nresult = play(\"A\", \"C\", 1000)\nprint(result)\nresult = play(\"B\", \"B\", 1000)\nprint(result)\n```\n\n<sample-output>\n\n(292, 708, 0)\n(249, 273, 478)\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Random words",
+        "tmcname": "part07-08_random_words"
+      },
+      "inner_content": "The exercise template contains the file `words.txt`, which contains some English language words, one on each line.\n\nPlease write a function named `words(n: int, beginning: str)`, which returns a list containing `n` random words from the `words.txt` file. All words should begin with the string specified by the second argument. \n\nThe same word should not appear twice in the list. If there are not enough words beginning with the specified string, the function should raise a `ValueError` exception.\n\nAn example of the function in action:\n\n```python\nword_list = words(3, \"ca\")\nfor word in word_list:\n    print(word)\n```\n\n<sample-output>\n\ncat\ncar\ncarbon\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Random words' tmcname='part07-08_random_words'>\n\nThe exercise template contains the file `words.txt`, which contains some English language words, one on each line.\n\nPlease write a function named `words(n: int, beginning: str)`, which returns a list containing `n` random words from the `words.txt` file. All words should begin with the string specified by the second argument. \n\nThe same word should not appear twice in the list. If there are not enough words beginning with the specified string, the function should raise a `ValueError` exception.\n\nAn example of the function in action:\n\n```python\nword_list = words(3, \"ca\")\nfor word in word_list:\n    print(word)\n```\n\n<sample-output>\n\ncat\ncar\ncarbon\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!---",
+      "raw_source": "<!---"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "d53a6898-f390-55ef-b266-95694bcbe704"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"d53a6898-f390-55ef-b266-95694bcbe704\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    }
+  ]
+}

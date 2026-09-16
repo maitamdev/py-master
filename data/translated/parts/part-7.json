@@ -1,0 +1,71 @@
+{
+  "part": 7,
+  "slug": "part-7",
+  "title_original": "Part 7",
+  "title_vi": "Mô-đun và Các tính năng nâng cao của Python",
+  "lessons": [
+    {
+      "id": "part07-1-modules",
+      "slug": "1-modules",
+      "is_index": false,
+      "title_original": "Modules",
+      "path": "/part-7/1-modules",
+      "blocks_count": 41,
+      "title_vi": "Mô-đun"
+    },
+    {
+      "id": "part07-2-randomness",
+      "slug": "2-randomness",
+      "is_index": false,
+      "title_original": "Randomness",
+      "path": "/part-7/2-randomness",
+      "blocks_count": 46,
+      "title_vi": "Tính ngẫu nhiên"
+    },
+    {
+      "id": "part07-3-times-and-dates",
+      "slug": "3-times-and-dates",
+      "is_index": false,
+      "title_original": "Times and dates",
+      "path": "/part-7/3-times-and-dates",
+      "blocks_count": 44,
+      "title_vi": "Thời gian và ngày tháng"
+    },
+    {
+      "id": "part07-4-data-processing",
+      "slug": "4-data-processing",
+      "is_index": false,
+      "title_original": "Data processing",
+      "path": "/part-7/4-data-processing",
+      "blocks_count": 43,
+      "title_vi": "Xử lý dữ liệu"
+    },
+    {
+      "id": "part07-5-creating-modules",
+      "slug": "5-creating-modules",
+      "is_index": false,
+      "title_original": "Creating your own modules",
+      "path": "/part-7/5-creating-modules",
+      "blocks_count": 37,
+      "title_vi": "Tạo mô-đun của riêng bạn"
+    },
+    {
+      "id": "part07-6-more-features",
+      "slug": "6-more-features",
+      "is_index": false,
+      "title_original": "More Python features",
+      "path": "/part-7/6-more-features",
+      "blocks_count": 36,
+      "title_vi": "Các tính năng khác của Python"
+    },
+    {
+      "id": "part07-index",
+      "slug": "index",
+      "is_index": true,
+      "title_original": "Part 7",
+      "path": "/part-7",
+      "blocks_count": 2,
+      "title_vi": "Mô-đun và Các tính năng nâng cao của Python"
+    }
+  ]
+}

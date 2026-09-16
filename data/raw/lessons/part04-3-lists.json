@@ -1,0 +1,691 @@
+{
+  "id": "part04-3-lists",
+  "part": 4,
+  "part_slug": "part-4",
+  "slug": "3-lists",
+  "is_part_index": false,
+  "title_original": "Lists",
+  "path": "/part-4/3-lists",
+  "source_path": "data/part-4/3-lists.md",
+  "source_hash": "081ac6f09577e0780fd1ceab9ad54c84122cd971c7beb6185ca90bf34cdd17b0",
+  "frontmatter": {
+    "path": "/part-4/3-lists",
+    "title": "Lists",
+    "hidden": false
+  },
+  "chunks_count": 109,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know what lists are in Python\n- You will be able access a specified item within a list\n- You will know how to add items to a list, and how to remove them\n- You will be familiar with built-in list functions and methods",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know what lists are in Python\n- You will be able access a specified item within a list\n- You will know how to add items to a list, and how to remove them\n- You will be familiar with built-in list functions and methods\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Thus far in our programs we have stored data with variables, each bit of data usually having its own named variable. This obviously has some limitations, as it can get cumbersome to define separate variables for everything when there is a lot of data to handle.",
+      "raw_source": "Thus far in our programs we have stored data with variables, each bit of data usually having its own named variable. This obviously has some limitations, as it can get cumbersome to define separate variables for everything when there is a lot of data to handle."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A Python _list_ is a collection of values which is accessed via a single variable name. The contents of the list are written within square brackets. The values contained in the list are called _items_, or sometimes _elements_.",
+      "raw_source": "A Python _list_ is a collection of values which is accessed via a single variable name. The contents of the list are written within square brackets. The values contained in the list are called _items_, or sometimes _elements_."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following command creates a new, empty list",
+      "raw_source": "The following command creates a new, empty list"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = []",
+      "raw_source": "```python\nmy_list = []\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "whereas this command creates a list with five items in it:",
+      "raw_source": "whereas this command creates a list with five items in it:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [7, 2, 2, 5, 2]",
+      "raw_source": "```python\nmy_list = [7, 2, 2, 5, 2]\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Accessing items in a list",
+      "raw_source": "## Accessing items in a list"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The items in a list are indexed in exactly the same way as characters in a string. Indexing starts from zero, and the last index is the length of the list minus 1:",
+      "raw_source": "The items in a list are indexed in exactly the same way as characters in a string. Indexing starts from zero, and the last index is the length of the list minus 1:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "4_3_1.png",
+        "alt": "Lists are indexed starting from 0"
+      },
+      "raw_source": "<img src=\"4_3_1.png\" alt=\"Lists are indexed starting from 0\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A single list item can be accessed just like a single character in a string is accessed, with square brackets:",
+      "raw_source": "A single list item can be accessed just like a single character in a string is accessed, with square brackets:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [7, 2, 2, 5, 2]\n\nprint(my_list[0])\nprint(my_list[1])\nprint(my_list[3])\n\nprint(\"The sum of the first two items:\", my_list[0] + my_list[1])",
+      "raw_source": "```python\nmy_list = [7, 2, 2, 5, 2]\n\nprint(my_list[0])\nprint(my_list[1])\nprint(my_list[3])\n\nprint(\"The sum of the first two items:\", my_list[0] + my_list[1])\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "7\n2\n5\nThe sum of the first two items: 9",
+      "raw_source": "<sample-output>\n\n7\n2\n5\nThe sum of the first two items: 9\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The entire contents of the list can also be printed out:",
+      "raw_source": "The entire contents of the list can also be printed out:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [7, 2, 2, 5, 2]\nprint(my_list)",
+      "raw_source": "```python\nmy_list = [7, 2, 2, 5, 2]\nprint(my_list)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[7, 2, 2, 5, 2]",
+      "raw_source": "<sample-output>\n\n[7, 2, 2, 5, 2]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Unlike strings, lists are mutable, which means their contents can change. You can assign a new value to an item within a list, just like you can assign a new value to a variable:",
+      "raw_source": "Unlike strings, lists are mutable, which means their contents can change. You can assign a new value to an item within a list, just like you can assign a new value to a variable:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [7, 2, 2, 5, 2]\nprint(my_list)\nmy_list[1] = 3\nprint(my_list)",
+      "raw_source": "```python\nmy_list = [7, 2, 2, 5, 2]\nprint(my_list)\nmy_list[1] = 3\nprint(my_list)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[7, 2, 2, 5, 2]\n[7, 3, 2, 5, 2]",
+      "raw_source": "<sample-output>\n\n[7, 2, 2, 5, 2]\n[7, 3, 2, 5, 2]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The function `len` gives you the number of items in a list:",
+      "raw_source": "The function `len` gives you the number of items in a list:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [7, 2, 2, 5, 2]\nprint(len(my_list))",
+      "raw_source": "```python\nmy_list = [7, 2, 2, 5, 2]\nprint(len(my_list))\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "5",
+      "raw_source": "<sample-output>\n\n5\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Change the value of an item",
+        "tmcname": "part04-12_change_value_of_item"
+      },
+      "inner_content": "Please write a program which initialises a list with the values `[1, 2, 3, 4, 5]`. Then the program should ask the user for an index and a new value, replace the value at the given index, and print the list again. This should be looped over until the user gives -1 for the index. You can assume all given index values will fall within your list.\n\nAn example execution of the program:\n\n<sample-output>\n\nIndex: **0**\nNew value: **10**\n[10, 2, 3, 4, 5]\nIndex: **2**\nNew value: **250**\n[10, 2, 250, 4, 5]\nIndex: **4**\nNew value: **-45**\n[10, 2, 250, 4, -45]\nIndex: **-1**\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+      "raw_source": "<programming-exercise name='Change the value of an item' tmcname='part04-12_change_value_of_item'>\n\nPlease write a program which initialises a list with the values `[1, 2, 3, 4, 5]`. Then the program should ask the user for an index and a new value, replace the value at the given index, and print the list again. This should be looped over until the user gives -1 for the index. You can assume all given index values will fall within your list.\n\nAn example execution of the program:\n\n<sample-output>\n\nIndex: **0**\nNew value: **10**\n[10, 2, 3, 4, 5]\nIndex: **2**\nNew value: **250**\n[10, 2, 250, 4, 5]\nIndex: **4**\nNew value: **-45**\n[10, 2, 250, 4, -45]\nIndex: **-1**\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Adding items to a list",
+      "raw_source": "## Adding items to a list"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The `append` method adds items to the end of a list. It works like this:",
+      "raw_source": "The `append` method adds items to the end of a list. It works like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "numbers = []\nnumbers.append(5)\nnumbers.append(10)\nnumbers.append(3)\nprint(numbers)",
+      "raw_source": "```python\nnumbers = []\nnumbers.append(5)\nnumbers.append(10)\nnumbers.append(3)\nprint(numbers)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[5, 10, 3]",
+      "raw_source": "<sample-output>\n\n[5, 10, 3]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following example makes use of two separate lists:",
+      "raw_source": "The following example makes use of two separate lists:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "numbers = []\nshoe_sizes = []\n\nnumbers.append(5)\nnumbers.append(10)\nnumbers.append(3)\n\nshoe_sizes.append(37)\nshoe_sizes.append(44)\nshoe_sizes.append(40)\nshoe_sizes.append(28)\n\nprint(\"Numbers:\")\nprint(numbers)\n\nprint(\"Shoe sizes:\")\nprint(shoe_sizes)",
+      "raw_source": "```python\nnumbers = []\nshoe_sizes = []\n\nnumbers.append(5)\nnumbers.append(10)\nnumbers.append(3)\n\nshoe_sizes.append(37)\nshoe_sizes.append(44)\nshoe_sizes.append(40)\nshoe_sizes.append(28)\n\nprint(\"Numbers:\")\nprint(numbers)\n\nprint(\"Shoe sizes:\")\nprint(shoe_sizes)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The item is appended to the list on which the method is called:",
+      "raw_source": "The item is appended to the list on which the method is called:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Numbers:\n[5, 10, 3]\nShoe sizes:\n[37, 44, 40, 28]",
+      "raw_source": "<sample-output>\n\nNumbers:\n[5, 10, 3]\nShoe sizes:\n[37, 44, 40, 28]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Add items to a list",
+        "tmcname": "part04-13_add_items_to_list"
+      },
+      "inner_content": "Please write a program which first asks the user for the number of items to be added. Then the program should ask for the given number of values, one by one, and add them to a list in the order they were typed in. Finally, the list is printed out.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nHow many items: **3**\nItem 1: **10**\nItem 2: **250**\nItem 3: **34**\n[10, 250, 34]\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+      "raw_source": "<programming-exercise name='Add items to a list' tmcname='part04-13_add_items_to_list'>\n\nPlease write a program which first asks the user for the number of items to be added. Then the program should ask for the given number of values, one by one, and add them to a list in the order they were typed in. Finally, the list is printed out.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nHow many items: **3**\nItem 1: **10**\nItem 2: **250**\nItem 3: **34**\n[10, 250, 34]\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Adding to a specific location",
+      "raw_source": "## Adding to a specific location"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If you want to specify a location in the list where an item should be added, you can use the `insert` method. The method adds an item at the specified index. All the items already in the list with an index equal to or higher than the specified index are moved one index further, \"to the right\":",
+      "raw_source": "If you want to specify a location in the list where an item should be added, you can use the `insert` method. The method adds an item at the specified index. All the items already in the list with an index equal to or higher than the specified index are moved one index further, \"to the right\":"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "4_3_2.png",
+        "alt": "Inserting an item to a list"
+      },
+      "raw_source": "<img src=\"4_3_2.png\" alt = \"Inserting an item to a list\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "So, for instance this program",
+      "raw_source": "So, for instance this program"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "numbers = [1, 2, 3, 4, 5, 6]\nnumbers.insert(0, 10)\nprint(numbers)\nnumbers.insert(2, 20)\nprint(numbers)",
+      "raw_source": "```python\nnumbers = [1, 2, 3, 4, 5, 6]\nnumbers.insert(0, 10)\nprint(numbers)\nnumbers.insert(2, 20)\nprint(numbers)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "prints out this:",
+      "raw_source": "prints out this:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[10, 1, 2, 3, 4, 5, 6]\n[10, 1, 20, 2, 3, 4, 5, 6]",
+      "raw_source": "<sample-output>\n\n[10, 1, 2, 3, 4, 5, 6]\n[10, 1, 20, 2, 3, 4, 5, 6]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Removing items from a list",
+      "raw_source": "## Removing items from a list"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "There are two different approaches to removing an item from a list:",
+      "raw_source": "There are two different approaches to removing an item from a list:"
+    },
+    {
+      "raw_type": "list",
+      "content": "* If the _index_ of the item is known, you can use the method `pop`.\n* If the _contents_ of the item are known, you can use the method `remove`.",
+      "raw_source": "* If the _index_ of the item is known, you can use the method `pop`.\n* If the _contents_ of the item are known, you can use the method `remove`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "So, the method `pop` takes the index of the item you want to remove as its argument. The following program removes items at indexes 2 and 3 from the list. Notice how the indexes of the remaining items change when one is removed.",
+      "raw_source": "So, the method `pop` takes the index of the item you want to remove as its argument. The following program removes items at indexes 2 and 3 from the list. Notice how the indexes of the remaining items change when one is removed."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [1, 2, 3, 4, 5, 6]\n\nmy_list.pop(2)\nprint(my_list)\nmy_list.pop(3)\nprint(my_list)",
+      "raw_source": "```python\nmy_list = [1, 2, 3, 4, 5, 6]\n\nmy_list.pop(2)\nprint(my_list)\nmy_list.pop(3)\nprint(my_list)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[1, 2, 4, 5, 6]\n[1, 2, 4, 6]",
+      "raw_source": "<sample-output>\n\n[1, 2, 4, 5, 6]\n[1, 2, 4, 6]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "It's useful to remember that the method `pop` also _returns_ the removed item:",
+      "raw_source": "It's useful to remember that the method `pop` also _returns_ the removed item:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [4, 2, 7, 2, 5]\n\nnumber = my_list.pop(2)\nprint(number)\nprint(my_list)",
+      "raw_source": "```python\nmy_list = [4, 2, 7, 2, 5]\n\nnumber = my_list.pop(2)\nprint(number)\nprint(my_list)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "7\n[4, 2, 2, 5]",
+      "raw_source": "<sample-output>\n\n7\n[4, 2, 2, 5]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The method `remove`, on the other hand, takes the value of the item to be removed as its argument. For example, this program",
+      "raw_source": "The method `remove`, on the other hand, takes the value of the item to be removed as its argument. For example, this program"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [1, 2, 3, 4, 5, 6]\n\nmy_list.remove(2)\nprint(my_list)\nmy_list.remove(5)\nprint(my_list)",
+      "raw_source": "```python\nmy_list = [1, 2, 3, 4, 5, 6]\n\nmy_list.remove(2)\nprint(my_list)\nmy_list.remove(5)\nprint(my_list)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "prints out this:",
+      "raw_source": "prints out this:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[1, 3, 4, 5, 6]\n[1, 3, 4, 6]",
+      "raw_source": "<sample-output>\n\n[1, 3, 4, 5, 6]\n[1, 3, 4, 6]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The method removes the _first_ occurrence of the value in the list, much like the string function `find` returns the first occurrence of a substring:",
+      "raw_source": "The method removes the _first_ occurrence of the value in the list, much like the string function `find` returns the first occurrence of a substring:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [1, 2, 1, 2]\n\nmy_list.remove(1)\nprint(my_list)\nmy_list.remove(1)\nprint(my_list)",
+      "raw_source": "```python\nmy_list = [1, 2, 1, 2]\n\nmy_list.remove(1)\nprint(my_list)\nmy_list.remove(1)\nprint(my_list)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[2, 1, 2]\n[2, 2]",
+      "raw_source": "<sample-output>\n\n[2, 1, 2]\n[2, 2]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Addition and removal",
+        "tmcname": "part04-14_addition_and_removal"
+      },
+      "inner_content": "Please write a program which asks the user to choose between addition and removal. Depending on the choice, the program _adds an item to_ or _removes an item from_ the end of a list. The item that is added must always be one greater than the last item in the list. The first item to be added must be 1.\n\nThe list is printed out in the beginning and after each operation. Have a look at the example execution below:\n\n<sample-output>\n\nThe list is now []\na(d)d, (r)emove or e(x)it: **d**\nThe list is now [1]\na(d)d, (r)emove or e(x)it: **d**\nThe list is now [1, 2]\na(d)d, (r)emove or e(x)it: **d**\nThe list is now [1, 2, 3]\na(d)d, (r)emove or e(x)it: **r**\nThe list is now [1, 2]\na(d)d, (r)emove or e(x)it: **d**\nThe list is now [1, 2, 3]\na(d)d, (r)emove or e(x)it: **x**\nBye!\n\n</sample-output>\n\nYou may assume that, if the list is empty, there will not be an attempt to remove items.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+      "raw_source": "<programming-exercise name='Addition and removal' tmcname='part04-14_addition_and_removal'>\n\nPlease write a program which asks the user to choose between addition and removal. Depending on the choice, the program _adds an item to_ or _removes an item from_ the end of a list. The item that is added must always be one greater than the last item in the list. The first item to be added must be 1.\n\nThe list is printed out in the beginning and after each operation. Have a look at the example execution below:\n\n<sample-output>\n\nThe list is now []\na(d)d, (r)emove or e(x)it: **d**\nThe list is now [1]\na(d)d, (r)emove or e(x)it: **d**\nThe list is now [1, 2]\na(d)d, (r)emove or e(x)it: **d**\nThe list is now [1, 2, 3]\na(d)d, (r)emove or e(x)it: **r**\nThe list is now [1, 2]\na(d)d, (r)emove or e(x)it: **d**\nThe list is now [1, 2, 3]\na(d)d, (r)emove or e(x)it: **x**\nBye!\n\n</sample-output>\n\nYou may assume that, if the list is empty, there will not be an attempt to remove items.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If the specified item is not in the list, the `remove` function causes an error. Just like with strings, we can check for the presence of an item with the `in` operator:",
+      "raw_source": "If the specified item is not in the list, the `remove` function causes an error. Just like with strings, we can check for the presence of an item with the `in` operator:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [1, 3, 4]\n\nif 1 in my_list:\n    print(\"The list contains item 1\")\n\nif 2 in my_list:\n    print(\"The list contains item 2\")",
+      "raw_source": "```python\nmy_list = [1, 3, 4]\n\nif 1 in my_list:\n    print(\"The list contains item 1\")\n\nif 2 in my_list:\n    print(\"The list contains item 2\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The list contains item 1",
+      "raw_source": "<sample-output>\n\nThe list contains item 1\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Same word twice",
+        "tmcname": "part04-15_same_word_twice"
+      },
+      "inner_content": "Please write a program which asks the user for words. If the user types in a word for the second time, the program should print out the number of different words typed in, and exit.\n\n<sample-output>\n\nWord: **once**\nWord: **upon**\nWord: **a**\nWord: **time**\nWord: **upon**\nYou typed in 4 different words\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+      "raw_source": "<programming-exercise name='Same word twice' tmcname='part04-15_same_word_twice'>\n\nPlease write a program which asks the user for words. If the user types in a word for the second time, the program should print out the number of different words typed in, and exit.\n\n<sample-output>\n\nWord: **once**\nWord: **upon**\nWord: **a**\nWord: **time**\nWord: **upon**\nYou typed in 4 different words\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Sorting lists",
+      "raw_source": "## Sorting lists"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The items in a list can be _sorted_ from smallest to greatest with the method `sort`.",
+      "raw_source": "The items in a list can be _sorted_ from smallest to greatest with the method `sort`."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [2,5,1,2,4]\nmy_list.sort()\nprint(my_list)",
+      "raw_source": "```python\nmy_list = [2,5,1,2,4]\nmy_list.sort()\nprint(my_list)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[1, 2, 2, 4, 5]",
+      "raw_source": "<sample-output>\n\n[1, 2, 2, 4, 5]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Notice how the method modifies the list itself. Sometimes we don't want to change the original list, so we use the function `sorted` instead. It _returns_ a sorted list:",
+      "raw_source": "Notice how the method modifies the list itself. Sometimes we don't want to change the original list, so we use the function `sorted` instead. It _returns_ a sorted list:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [2,5,1,2,4]\nprint(sorted(my_list)))",
+      "raw_source": "```python\nmy_list = [2,5,1,2,4]\nprint(sorted(my_list)))\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[1, 2, 2, 4, 5]",
+      "raw_source": "<sample-output>\n\n[1, 2, 2, 4, 5]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Remember the difference between the two: `sort` changes the order of the original list in place, whereas `sorted` creates a new, ordered copy of the list. With `sorted` we can preserve the original order of the list:",
+      "raw_source": "Remember the difference between the two: `sort` changes the order of the original list in place, whereas `sorted` creates a new, ordered copy of the list. With `sorted` we can preserve the original order of the list:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "original = [2, 5, 1, 2, 4]\nin_order = sorted(original)\nprint(original)\nprint(in_order)",
+      "raw_source": "```python\noriginal = [2, 5, 1, 2, 4]\nin_order = sorted(original)\nprint(original)\nprint(in_order)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "[2, 5, 1, 2, 4]\n[1, 2, 2, 4, 5]",
+      "raw_source": "<sample-output>\n\n[2, 5, 1, 2, 4]\n[1, 2, 2, 4, 5]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "List twice",
+        "tmcname": "part04-16_list_twice"
+      },
+      "inner_content": "Please write a program which asks the user to type in values and adds them to a list. After each addition, the list is printed out in two different ways:\n- in the order the items were added\n- ordered from smallest to greatest\n\nThe program exits when the user types in 0.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nNew item: **3**\nThe list now: [3]\nThe list in order: [3]\nNew item: **1**\nThe list now: [3, 1]\nThe list in order: [1, 3]\nNew item: **9**\nThe list now: [3, 1, 9]\nThe list in order: [1, 3, 9]\nNew item: **5**\nThe list now: [3, 1, 9, 5]\nThe list in order: [1, 3, 5, 9]\nNew item: **0**\nBye!\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+      "raw_source": "<programming-exercise name='List twice' tmcname='part04-16_list_twice'>\n\nPlease write a program which asks the user to type in values and adds them to a list. After each addition, the list is printed out in two different ways:\n- in the order the items were added\n- ordered from smallest to greatest\n\nThe program exits when the user types in 0.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nNew item: **3**\nThe list now: [3]\nThe list in order: [3]\nNew item: **1**\nThe list now: [3, 1]\nThe list in order: [1, 3]\nNew item: **9**\nThe list now: [3, 1, 9]\nThe list in order: [1, 3, 9]\nNew item: **5**\nThe list now: [3, 1, 9, 5]\nThe list in order: [1, 3, 5, 9]\nNew item: **0**\nBye!\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Maximum, minimum and sum",
+      "raw_source": "## Maximum, minimum and sum"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The functions `max` and `min`, short for maximum and minimum, return the greatest and smallest item in a list, respectively. The function `sum` returns the sum of all items in a list.",
+      "raw_source": "The functions `max` and `min`, short for maximum and minimum, return the greatest and smallest item in a list, respectively. The function `sum` returns the sum of all items in a list."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [5, 2, 3, 1, 4]\n\ngreatest = max(my_list)\nsmallest = min(my_list)\nlist_sum = sum(my_list)\n\nprint(\"Smallest:\", smallest)\nprint(\"Greatest:\", greatest)\nprint(\"Sum:\", list_sum)",
+      "raw_source": "```python\nmy_list = [5, 2, 3, 1, 4]\n\ngreatest = max(my_list)\nsmallest = min(my_list)\nlist_sum = sum(my_list)\n\nprint(\"Smallest:\", smallest)\nprint(\"Greatest:\", greatest)\nprint(\"Sum:\", list_sum)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Smallest: 1\nGreatest: 5\nSum: 15",
+      "raw_source": "<sample-output>\n\nSmallest: 1\nGreatest: 5\nSum: 15\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Methods vs functions",
+      "raw_source": "## Methods vs functions"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "There are two different ways of processing lists in Python, which can get confusing. For the most part you will use list _methods_, such as `append` and `sort`. They are used with the dot `.` operator on the list variable:",
+      "raw_source": "There are two different ways of processing lists in Python, which can get confusing. For the most part you will use list _methods_, such as `append` and `sort`. They are used with the dot `.` operator on the list variable:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = []\n\n# method calls\nmy_list.append(3)\nmy_list.append(1)\nmy_list.append(7)\nmy_list.append(2)\n\n# another method call\nmy_list.sort()",
+      "raw_source": "```python\nmy_list = []\n\n# method calls\nmy_list.append(3)\nmy_list.append(1)\nmy_list.append(7)\nmy_list.append(2)\n\n# another method call\nmy_list.sort()\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Some _functions_ are happy to take a list as an argument. Above we saw the functions `max`,  `min`, `len` and `sorted` do just that:",
+      "raw_source": "Some _functions_ are happy to take a list as an argument. Above we saw the functions `max`,  `min`, `len` and `sorted` do just that:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_list = [3, 2, 7, 1]\n\n# function calls take the list as an argument\ngreatest = max(my_list)\nsmallest = min(my_list)\nlength = len(my_list)\n\nprint(\"Smallest:\", smallest)\nprint(\"Greatest:\", greatest)\nprint(\"Length of the list:\", length)\n\n# another function call \n# the list itself is an argument, the function returns a sorted copy\nin_order = sorted(my_list)\nprint(in_order)",
+      "raw_source": "```python\nmy_list = [3, 2, 7, 1]\n\n# function calls take the list as an argument\ngreatest = max(my_list)\nsmallest = min(my_list)\nlength = len(my_list)\n\nprint(\"Smallest:\", smallest)\nprint(\"Greatest:\", greatest)\nprint(\"Length of the list:\", length)\n\n# another function call \n# the list itself is an argument, the function returns a sorted copy\nin_order = sorted(my_list)\nprint(in_order)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Smallest: 1\nGreatest: 7\nLength of the list: 4\n[1, 2, 3, 7]",
+      "raw_source": "<sample-output>\n\nSmallest: 1\nGreatest: 7\nLength of the list: 4\n[1, 2, 3, 7]\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "A list as an argument or a return value",
+      "raw_source": "## A list as an argument or a return value"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Just like the built-in functions above, our own functions can also take a list as an argument and produce a list as a return value. The following function works out the central value in an ordered list, also called the _median_ value:",
+      "raw_source": "Just like the built-in functions above, our own functions can also take a list as an argument and produce a list as a return value. The following function works out the central value in an ordered list, also called the _median_ value:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def median(my_list: list):\n    ordered = sorted(my_list)\n    list_centre = len(ordered) // 2\n    return ordered[list_centre]",
+      "raw_source": "```python\ndef median(my_list: list):\n    ordered = sorted(my_list)\n    list_centre = len(ordered) // 2\n    return ordered[list_centre]\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The function creates an ordered version of the list given as an argument and returns the item in the very middle. Notice the integer division operator `//` used here. The index of a list should always be an integer.",
+      "raw_source": "The function creates an ordered version of the list given as an argument and returns the item in the very middle. Notice the integer division operator `//` used here. The index of a list should always be an integer."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The function works like this:",
+      "raw_source": "The function works like this:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "shoe_sizes = [45, 44, 36, 39, 40]\nprint(\"The median of the shoe sizes is\", median(shoe_sizes))\n\nages = [1, 56, 34, 22, 5, 77, 5]\nprint(\"The median of the ages is\", median(ages))",
+      "raw_source": "```python\nshoe_sizes = [45, 44, 36, 39, 40]\nprint(\"The median of the shoe sizes is\", median(shoe_sizes))\n\nages = [1, 56, 34, 22, 5, 77, 5]\nprint(\"The median of the ages is\", median(ages))\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The median of the shoe sizes is 40\nThe median of the ages is 22",
+      "raw_source": "<sample-output>\n\nThe median of the shoe sizes is 40\nThe median of the ages is 22\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A function can also return a list. The following function asks the user to type in integers and returns the input as a list:",
+      "raw_source": "A function can also return a list. The following function asks the user to type in integers and returns the input as a list:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def input_numbers():\n    numbers = []\n    while True:\n        user_input = input(\"Please type in an integer, leave empty to exit: \")\n        if len(user_input) == 0:\n            break\n        numbers.append(int(user_input))\n    return numbers",
+      "raw_source": "```python\ndef input_numbers():\n    numbers = []\n    while True:\n        user_input = input(\"Please type in an integer, leave empty to exit: \")\n        if len(user_input) == 0:\n            break\n        numbers.append(int(user_input))\n    return numbers\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The function makes use of a helper variable `numbers`, which is a list. All the numbers typed in by the user are added to the list. When the loop is exited from, the function returns the list with the statement `return numbers`.",
+      "raw_source": "The function makes use of a helper variable `numbers`, which is a list. All the numbers typed in by the user are added to the list. When the loop is exited from, the function returns the list with the statement `return numbers`."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Calling the function like this",
+      "raw_source": "Calling the function like this"
+    },
+    {
+      "raw_type": "code",
+      "language": "",
+      "code": "",
+      "raw_source": "```python \nnumbers = input_numbers()\n\nprint(\"The greatest number is\", max(numbers))\nprint(\"The median of the numbers is\", median(numbers))\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "could print this, for example:",
+      "raw_source": "could print this, for example:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Please type in an integer, leave empty to exit: **5**\nPlease type in an integer, leave empty to exit: **-22**\nPlease type in an integer, leave empty to exit: **4**\nPlease type in an integer, leave empty to exit: **35**\nPlease type in an integer, leave empty to exit: **1**\nPlease type in an integer, leave empty to exit:\nThe greatest number is 35\nThe median of the numbers is 4",
+      "raw_source": "<sample-output>\n\nPlease type in an integer, leave empty to exit: **5**\nPlease type in an integer, leave empty to exit: **-22**\nPlease type in an integer, leave empty to exit: **4**\nPlease type in an integer, leave empty to exit: **35**\nPlease type in an integer, leave empty to exit: **1**\nPlease type in an integer, leave empty to exit:\nThe greatest number is 35\nThe median of the numbers is 4\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This small example demonstrates one of the most important uses of functions: they can help you divide your code into smaller, easily understandable and logical wholes.",
+      "raw_source": "This small example demonstrates one of the most important uses of functions: they can help you divide your code into smaller, easily understandable and logical wholes."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Of course the same functionality could be achieved without writing any of our own functions:",
+      "raw_source": "Of course the same functionality could be achieved without writing any of our own functions:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "numbers = []\nwhile True:\n    user_input = input(\"Please type in an integer, leave empty to exit: \")\n    if len(user_input) == 0:\n        break\n    numbers.append(int(user_input))\n\nordered = sorted(numbers)\nlist_centre = len(ordered) // 2\nmedian = ordered[list_centre]\n\nprint(\"The greatest number is\", max(numbers))\nprint(\"The median of the numbers is\", median)",
+      "raw_source": "```python\nnumbers = []\nwhile True:\n    user_input = input(\"Please type in an integer, leave empty to exit: \")\n    if len(user_input) == 0:\n        break\n    numbers.append(int(user_input))\n\nordered = sorted(numbers)\nlist_centre = len(ordered) // 2\nmedian = ordered[list_centre]\n\nprint(\"The greatest number is\", max(numbers))\nprint(\"The median of the numbers is\", median)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In this version, following the programming logic is more difficult, as it is no longer clear which commands are a part of which functionality. The code fulfils the same purposes - reading in input, calculating the median value, and so on - but the structure is less clear.",
+      "raw_source": "In this version, following the programming logic is more difficult, as it is no longer clear which commands are a part of which functionality. The code fulfils the same purposes - reading in input, calculating the median value, and so on - but the structure is less clear."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Organising your code into separate functions will improve you program's readability, but also make it easier to handle logical wholes. This in turn helps you verify that the program works as intended, as each function can be tested separately.",
+      "raw_source": "Organising your code into separate functions will improve you program's readability, but also make it easier to handle logical wholes. This in turn helps you verify that the program works as intended, as each function can be tested separately."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Another important use for functions is making code _reusable_. If you need to achieve some functionality multiple times in your program, it is a good idea to create your own function and name it appropriately:",
+      "raw_source": "Another important use for functions is making code _reusable_. If you need to achieve some functionality multiple times in your program, it is a good idea to create your own function and name it appropriately:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "print(\"Shoe sizes:\")\nshoe_sizes = input_numbers()\n\nprint(\"Weights:\")\nweights = input_numbers()\n\nprint(\"Heights:\")\nheights = input_numbers()",
+      "raw_source": "```python\nprint(\"Shoe sizes:\")\nshoe_sizes = input_numbers()\n\nprint(\"Weights:\")\nweights = input_numbers()\n\nprint(\"Heights:\")\nheights = input_numbers()\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "The length of a list",
+        "tmcname": "part04-17_length_of_list"
+      },
+      "inner_content": "Please write a function named `length` which takes a list as its argument and returns the length of the list.\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nresult = length(my_list)\nprint(\"The length is\", result)\n\n# the list given as an argument doesn't need to be stored in any variable\nresult = length([1, 1, 1, 1])\nprint(\"The length is\", result)\n```\n\n<sample-output>\n\nThe length is 5\nThe length is 4\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='The length of a list' tmcname='part04-17_length_of_list'>\n\nPlease write a function named `length` which takes a list as its argument and returns the length of the list.\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nresult = length(my_list)\nprint(\"The length is\", result)\n\n# the list given as an argument doesn't need to be stored in any variable\nresult = length([1, 1, 1, 1])\nprint(\"The length is\", result)\n```\n\n<sample-output>\n\nThe length is 5\nThe length is 4\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Arithmetic mean",
+        "tmcname": "part04-18_mean"
+      },
+      "inner_content": "Please write a function named `mean`, which takes a list of integers as an argument. The function returns the arithmetic mean of the values in the list.\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nresult = mean(my_list))\nprint(\"mean value is\", result)\n```\n\n<sample-output>\n\nmean value is 3.0\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Arithmetic mean' tmcname='part04-18_mean'>\n\nPlease write a function named `mean`, which takes a list of integers as an argument. The function returns the arithmetic mean of the values in the list.\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nresult = mean(my_list))\nprint(\"mean value is\", result)\n```\n\n<sample-output>\n\nmean value is 3.0\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "The range of a list",
+        "tmcname": "part04-19_range_of_list"
+      },
+      "inner_content": "Please write a function named  `range_of_list`, which takes a list of integers as an argument. The function returns the difference between the smallest and the largest value in the list.\n\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nresult = range_of_list(my_list))\nprint(\"The range of the list is\", result)\n```\n\n<sample-output>\n\nThe range of the list is 4\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='The range of a list' tmcname='part04-19_range_of_list'>\n\nPlease write a function named  `range_of_list`, which takes a list of integers as an argument. The function returns the difference between the smallest and the largest value in the list.\n\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nresult = range_of_list(my_list))\nprint(\"The range of the list is\", result)\n```\n\n<sample-output>\n\nThe range of the list is 4\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "There are many more ways to use lists in Python. The Python [documentation](https://docs.python.org/3/tutorial/datastructures.html) is a good place to start if you want to know more.",
+      "raw_source": "There are many more ways to use lists in Python. The Python [documentation](https://docs.python.org/3/tutorial/datastructures.html) is a good place to start if you want to know more."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!---\nA quiz to review the contents of this section:",
+      "raw_source": "<!---\nA quiz to review the contents of this section:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "4849cd69-1938-5f4f-8805-8445f0f5c015"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"4849cd69-1938-5f4f-8805-8445f0f5c015\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part07-07_dice_roller",
+  "lesson_id": "part07-2-randomness",
+  "part": 7,
+  "tmc_name": "part07-07_dice_roller",
+  "title_original": "Dice roller",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "In this exercise you will write some functions which can be used in games that involve dice.\n\nInstead of normal dice this exercise specifies _non-transitive dice_. You can read up on these [here](https://singingbanana.com/dice/article.htm) or [watch this video](https://www.youtube.com/watch?v=LrIp6CKUlH8).\n\nYou will use three dice:\n\n- Die A has the sides 3, 3, 3, 3, 3, 6\n- Die B has the sides 2, 2, 2, 5, 5, 5\n- Die C has the sides 1, 4, 4, 4, 4, 4\n\n</pre>\n\nPlease write a function named `roll(die: str)`, which rolls the die specified by the argument. An example of how this should work:\n\n```python\nfor i in range(20):\n    print(roll(\"A\"), \" \", end=\"\")\nprint()\nfor i in range(20):\n    print(roll(\"B\"), \" \", end=\"\")\nprint()\nfor i in range(20):\n    print(roll(\"C\"), \" \", end=\"\")\n```\n\n<sample-output>\n\n3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  6  3  6  3\n2  2  5  2  2  5  5  2  2  5  2  5  5  5  2  5  2  2  2  2\n4  4  4  4  4  1  1  4  4  4  1  4  4  4  4  4  4  4  4  4\n\n</sample-output>\n\nAlso write a function named  `play(die1: str, die2: str, times: int)`, which throws both dice as many times as specified by the third argument. The function should return a tuple. The first item should be the number of times die 1 won, the second the number of times die 2 won, and the third item should be the number of ties.\n\n```python\nresult = play(\"A\", \"C\", 1000)\nprint(result)\nresult = play(\"B\", \"B\", 1000)\nprint(result)\n```\n\n<sample-output>\n\n(292, 708, 0)\n(249, 273, 478)\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "for i in range(20):\n    print(roll(\"A\"), \" \", end=\"\")\nprint()\nfor i in range(20):\n    print(roll(\"B\"), \" \", end=\"\")\nprint()\nfor i in range(20):\n    print(roll(\"C\"), \" \", end=\"\")",
+  "grading_data_available": false,
+  "source_hash": "dea19635a66d1ff43e4f6e01265d75c0c07c41386234d77ab5a15b8e447ecbce",
+  "order": 42
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part07-04_lottery_numbers",
+  "lesson_id": "part07-2-randomness",
+  "part": 7,
+  "tmc_name": "part07-04_lottery_numbers",
+  "title_original": "Lottery numbers",
+  "title_vi": "Số xổ số",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `lottery_numbers(amount: int, lower: int, upper: int)`, which generates as many random numbers as specified by the first argument. All numbers should fall within the bounds `lower` to `upper`. The numbers should be stored in a list and returned. The numbers should be in ascending order in the returned list.\n\nAs these are lottery numbers, no number should appear twice in the list.\n\nAn example of how the function should work:\n\n```python\nfor number in lottery_numbers(7, 1, 40):\n    print(number)\n```\n\n<sample-output>\n\n4\n7\n11\n16\n22\n29\n38\n\n</sample-output>",
+  "description_vi": "Vui lòng viết một hàm có tên `lottery_numbers(amount: int, lower: int, upper: int)`, hàm này tạo ra nhiều số ngẫu nhiên như được chỉ định bởi đối số đầu tiên. Tất cả các số phải nằm trong giới hạn `lower` đến `upper`. Các số nên được lưu trữ trong một danh sách và trả về. Các số phải theo thứ tự tăng dần trong danh sách trả về.\n\nVì đây là những con số xổ số nên không có con số nào xuất hiện hai lần trong danh sách.\n\nMột ví dụ về cách hoạt động của hàm:\n\n```python\nfor number in lottery_numbers(7, 1, 40):\n    print(number)\n```\n\n<sample-output>\n\n4\n7\n11\n16\n22\n29\n38\n\n</sample-output>",
+  "starter_code": "for number in lottery_numbers(7, 1, 40):\n    print(number)",
+  "grading_data_available": false,
+  "source_hash": "0d010cdecfab7e6c8f4e980814db5df5fddc714701269851d36bd2687a0b43ed",
+  "order": 33
+}

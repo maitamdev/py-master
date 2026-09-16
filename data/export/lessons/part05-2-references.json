@@ -1,0 +1,1888 @@
+{
+  "id": "part05-2-references",
+  "part": 5,
+  "part_slug": "part-5",
+  "slug": "2-references",
+  "is_part_index": false,
+  "title_original": "References",
+  "title_vi": "Tài liệu tham khảo",
+  "path": "/part-5/2-references",
+  "source_path": "data/part-5/2-references.md",
+  "source_hash": "aef88fc0605e6767d67997c3809f5556a9689110cc3254b7f1c40436936f4119",
+  "order": 1,
+  "blocks_count": 104,
+  "blocks": [
+    {
+      "id": "blk-part05-2-references-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "b54cf394c20981e01c5df3d5d931dfafd79f700e08b13821b3694beceb03d706",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know what is meant by a reference to a variable\n- You will understand that there can be multiple references to the same object\n- You will be able to use lists as parameters in functions\n- You will know what is meant by a side effect of a function"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ biết ý nghĩa của việc tham chiếu đến một biến\n- Bạn sẽ hiểu rằng có thể có nhiều tham chiếu đến cùng một đối tượng\n- Bạn sẽ có thể sử dụng danh sách làm tham số trong hàm\n- Bạn sẽ biết tác dụng phụ của hàm là gì"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "dbf335a6ffc57f4eece447c56a54aee367b93c8bfe5d0c06245fb9ff7d639b6a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Thus far we have thought of a variable as a sort of a \"box\" which contains the value of the variable. Technically this is not true in Python. What is stored in a variable is not the value per se, but a _reference_ to the _object_ which is the actual value of the variable. The object can be e.g. a number, a string or a list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cho đến nay chúng ta đã coi biến là một loại \"hộp\" chứa giá trị của biến. Về mặt kỹ thuật điều này không đúng trong Python. Những gì được lưu trữ trong một biến không phải là giá trị thực tế mà là một _reference_ cho _object_ là giá trị thực của biến. Đối tượng có thể là ví dụ. một số, một chuỗi hoặc một danh sách."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "779da6309a1c806d6932bf296987b16e938b8b19c3878b3ffe56950468190a00",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In practice, this means that the value of the variable _is not stored_ in the variable itself. Instead, there is information about the location in computer memory where the value can be found."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong thực tế, điều này có nghĩa là giá trị của biến _không được lưu trữ_ trong chính biến đó. Thay vào đó, có thông tin về vị trí trong bộ nhớ máy tính nơi có thể tìm thấy giá trị."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "586415d28fd5392a82e17867c23b95e6668981d3ce51b8faef8616ba6de64f20",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A reference is often represented by an arrow from the variable to the actual value in memory:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một tham chiếu thường được biểu thị bằng một mũi tên từ biến đến giá trị thực trong bộ nhớ:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0005",
+      "type": "image",
+      "order": 5,
+      "source_hash": "9394375e86cfc3c6b2c5869907098563cc3c4ab24ffb33131e2155d653e354be",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "5_2_1.png",
+        "alt": "",
+        "attributes": {
+          "src": "5_2_1.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "3a50c8e21d49df4525d53a5762ec6315430ca16cdfbb9644f7ff36b4f7db3fbb",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "So, a reference tells us where the value can be found. The function `id` can be used to find out the exact location the variable points to:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vì vậy, một tham chiếu cho chúng ta biết giá trị có thể được tìm thấy ở đâu. Hàm `id` có thể được sử dụng để tìm ra vị trí chính xác mà biến trỏ tới:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0007",
+      "type": "code",
+      "order": 7,
+      "source_hash": "e63d698d6792eba103a86491bd5b2f77cdbd86db786db12b567b694e1fa3757a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "a = [1, 2, 3]\nprint(id(a))\nb = \"This is a reference, too\"\nprint(id(b))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "a = [1, 2, 3]\nprint(id(a))\nb = \"This is a reference, too\"\nprint(id(b))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e63d698d6792eba103a86491bd5b2f77cdbd86db786db12b567b694e1fa3757a",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0008",
+      "type": "sample_output",
+      "order": 8,
+      "source_hash": "d830f04fea67cd7ae326c0bce1971ee758f16603121b24c645f5888c36d7c965",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "4538357072\n4537788912"
+      },
+      "translation": {
+        "language": "text",
+        "content": "4538357072\n4537788912"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n4538357072\n4537788912\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "f099938dfa4ebf8c134f75aa65665232fb4f50ead9bc5c66f7e539ce61a50fa4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The reference, or the ID of the variable, is an integer, which can be thought of as the address in computer memory where the value of the variable is stored. If you execute the above code on your own computer, the result will likely be different, as your variables will point to different locations - the references will be different."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tham chiếu hoặc ID của biến là một số nguyên, có thể được coi là địa chỉ trong bộ nhớ máy tính nơi lưu trữ giá trị của biến. Nếu bạn thực thi đoạn mã trên trên máy tính của mình, kết quả có thể sẽ khác vì các biến của bạn sẽ trỏ đến các vị trí khác nhau - các tham chiếu sẽ khác nhau."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "2518d8c0e245cc7c29a37ff66ddfdbe5b19b5a510172f728bf074fd9d53ee732",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The Python Tutor visualisation tool also shows references as arrows from the variable to the actual content, as we saw in the [previous section](/part-5/1-more-lists#visualising-code-containing-lists-within-lists). The tool \"cheats\" a bit when it comes to strings, however. It displays strings as if they are stored in the variables themselves:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Công cụ trực quan hóa Python Tutor cũng hiển thị các tham chiếu dưới dạng mũi tên từ biến đến nội dung thực tế, như chúng ta đã thấy trong [phần trước](/part-5/1-more-lists#visualising-code-containing-lists-within-lists). Tuy nhiên, công cụ này \"gian lận\" một chút khi nói đến chuỗi. Nó hiển thị các chuỗi như thể chúng được lưu trữ trong các biến:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0011",
+      "type": "image",
+      "order": 11,
+      "source_hash": "ca9a61f3e72d089c0cbda46832c625ec848759b0223363f585cdd130e45e6d8b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "5_2_2.png",
+        "alt": "",
+        "attributes": {
+          "src": "5_2_2.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "524bea17afd3b55c0c626192a111376b17846a526d3f1365ff1fd77ccc9aac30",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In reality, Python strings are handled very much like lists, with references to locations in memory."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong thực tế, các chuỗi Python được xử lý rất giống các danh sách, có tham chiếu đến các vị trí trong bộ nhớ."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "0ddc2649d3303845879300e51636561835db2d64123f13a9ccdc47fd6b9e1dd1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Many of the builtin types in Python, such as `str`, are _immutable_. This means the value of the object, or any part of it, cannot change. The value can be replaced with a new value:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nhiều kiểu dựng sẵn trong Python, chẳng hạn như `str`, là _immutable_. Điều này có nghĩa là giá trị của đối tượng hoặc bất kỳ phần nào của đối tượng không thể thay đổi. Giá trị có thể được thay thế bằng một giá trị mới:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0014",
+      "type": "image",
+      "order": 14,
+      "source_hash": "261ac4a2f4f2a3f1725635f598099e894b3446a2bd6f38515b9a24a5c7c820d7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "5_2_3.png",
+        "alt": "",
+        "attributes": {
+          "src": "5_2_3.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "ec5c4d5d92f9db222420dc92e50fbde24bd6b4a9bd96c9b892f49e643ca4c106",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Some of Python types are _mutable_. For example, the contents of a list can change without needing to create a whole new list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một số loại Python là _mutable_. Ví dụ: nội dung của danh sách có thể thay đổi mà không cần tạo danh sách hoàn toàn mới:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0016",
+      "type": "image",
+      "order": 16,
+      "source_hash": "0a02dfc2ad7f1502252497c67890d52cd310fcc3ba854b751e53c605253d6757",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "5_2_4.png",
+        "alt": "",
+        "attributes": {
+          "src": "5_2_4.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "87733c213fda83c1e8f2a2b2e8eb30c3ab5c987f17c671a6bd07ffb65d979a13",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "It may surprise you that also the basic data types `int`, `float` and `bool` are immutable in Python. Let's have a look at the following bit of code:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn có thể ngạc nhiên rằng các kiểu dữ liệu cơ bản `int`, `float` và `bool` cũng không thể thay đổi trong Python. Chúng ta hãy xem đoạn mã sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0018",
+      "type": "code",
+      "order": 18,
+      "source_hash": "5503428cbb28bd6ef168ace0a20343c1a98ff303cbed72540d9aacdf67ab5393",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = 1\nnumber = 2\nnumber += 10"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = 1\nnumber = 2\nnumber += 10"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5503428cbb28bd6ef168ace0a20343c1a98ff303cbed72540d9aacdf67ab5393",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "cc9a6c08fb2d428114208ba212f4c987c2a440cc15b94337fec6ea2293abbaab",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "It seems that the commands above are just changing the value stored in the variable, but in fact each command creates a whole new number in the computer's memory."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tưởng chừng như các lệnh trên chỉ là thay đổi giá trị được lưu trong biến nhưng thực chất mỗi lệnh lại tạo ra một số hoàn toàn mới trong bộ nhớ của máy tính."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "ff4301bd5d58637a123e34311e3026befe9e7b7ad9d75ea6893216e9ef495fa7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The printout from the following program illuminates the situation:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bản in từ chương trình sau đây làm sáng tỏ tình huống:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0021",
+      "type": "code",
+      "order": 21,
+      "source_hash": "a84458d96bd6a5592c98b2ec91fef44912dff279241f77697f068adb38da8e0d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = 1\nprint(id(number))\nnumber += 10\nprint(id(number))\na = 1\nprint(id(a))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = 1\nprint(id(number))\nnumber += 10\nprint(id(number))\na = 1\nprint(id(a))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a84458d96bd6a5592c98b2ec91fef44912dff279241f77697f068adb38da8e0d",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0022",
+      "type": "sample_output",
+      "order": 22,
+      "source_hash": "ca30e6738b37a24486f0f28067198471442c8adafbc63369ca0595bddc77a0d1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "4535856912\n4535856944\n4535856912"
+      },
+      "translation": {
+        "language": "text",
+        "content": "4535856912\n4535856944\n4535856912"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n4535856912\n4535856944\n4535856912\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "322eda0ee629ede6b2152b148e642cd54b0df62384edbf9693de61bf0576440a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "At first, the variable `number` points to the memory location 4535856912. When `number` is assigned a new value, it points to the location 4535856944. Now, when the variable `a` is assigned the value 1, `a` points to the very same location where `number` was pointing, when it was also assigned the value 1."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lúc đầu, biến `number` trỏ đến vị trí bộ nhớ 4535856912. Khi `number` được gán một giá trị mới, nó sẽ trỏ đến vị trí 4535856944. Bây giờ, khi biến `a` được gán giá trị 1, `a` trỏ đến chính vị trí mà `number` đang trỏ, khi nó cũng được chỉ định được gán giá trị 1."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "455d2b8b1c41e4e28ea613dff36b27f544891b76a688bb0dfb530a8514bca3ae",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "It seems Python has stored the value 1 in the memory location 4535856912. Whenever a variable is assigned the value 1, it _refers_ to that location in computer memory."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Có vẻ như Python đã lưu trữ giá trị 1 trong vị trí bộ nhớ 4535856912. Bất cứ khi nào một biến được gán giá trị 1, nó sẽ tham chiếu đến vị trí đó trong bộ nhớ máy tính."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "7bff33905819b104ae14a9dba1b95c51d752f2657d7b0124638a8bb1a093f907",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "It is good to keep in mind that _almost everything is a reference_ in Python, but all this is rarely relevant to everyday programming tasks. So let's get back to more practical matters."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn nên nhớ rằng _hầu hết mọi thứ đều là tài liệu tham khảo_ trong Python, nhưng tất cả những điều này hiếm khi liên quan đến các tác vụ lập trình hàng ngày. Vì vậy, hãy quay trở lại những vấn đề thực tế hơn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0026",
+      "type": "heading",
+      "order": 26,
+      "source_hash": "d5b5058fdf9282e28b2f3ee9c4b64915c1a5cc589a9a6b6f8cfd282ce72d6945",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Multiple references to the same list"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nhiều tài liệu tham khảo cho cùng một danh sách"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "8d41b558b54bc417c53dda766df71d54ea8458a401b8f6536568722ff41e8738",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "What actually happens when you assign a list variable to a new variable - is the list copied over?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điều gì thực sự xảy ra khi bạn gán một biến danh sách cho một biến mới - danh sách có được sao chép không?"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0028",
+      "type": "code",
+      "order": 28,
+      "source_hash": "bd3ff57570b2e25be93653d5235e746595988e9a8f88ba440200796891286b98",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "a = [1, 2, 3]\nb = a\nb[0] = 10"
+      },
+      "translation": {
+        "language": "code",
+        "content": "a = [1, 2, 3]\nb = a\nb[0] = 10"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "bd3ff57570b2e25be93653d5235e746595988e9a8f88ba440200796891286b98",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "b3c3735964766f2c8957b72dffd792e670512a04d611e20a647a1663ab74749a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The assignment `b = a` copies the value stored in variable `a` to the variable `b`. However, the value stored in `a` is not the list _itself_, but a _reference_ to the list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phép gán `b = a` sao chép giá trị được lưu trong biến `a` sang biến `b`. Tuy nhiên, giá trị được lưu trữ trong `a` không phải là danh sách _itself_, mà là _reference_ cho danh sách."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "60bb605d881d14c175506f83570ec30e1cf6dbee65f763c233391a07d6ffd0f5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "So, the assignment `b = a` copies the reference. As a result there are now two references to the same memory location containing the list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vì vậy, bài tập `b = a` sao chép tham chiếu. Kết quả là bây giờ có hai tham chiếu đến cùng một vị trí bộ nhớ chứa danh sách."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0031",
+      "type": "image",
+      "order": 31,
+      "source_hash": "24575f0e12ca18f72da6594fc8df341f8a0d37e1352f90c9ab7bda5122f4f1d7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "5_2_5.png",
+        "alt": "",
+        "attributes": {
+          "src": "5_2_5.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "9ae835018cd6f85e50dc9c35103c6977e78e5aa5ec477e045110308d32bb072b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The list can be accessed through either of the two references:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Danh sách có thể được truy cập thông qua một trong hai tài liệu tham khảo:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0033",
+      "type": "code",
+      "order": 33,
+      "source_hash": "54cf08dd362c450a49cfa7885e0a4f3de8c61f1fe993ea68771d665186c24969",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "list1 = [1, 2, 3, 4]\nlist2 = list1\n\nlist1[0] = 10\nlist2[1] = 20\n\nprint(list1)\nprint(list2)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "list1 = [1, 2, 3, 4]\nlist2 = list1\n\nlist1[0] = 10\nlist2[1] = 20\n\nprint(list1)\nprint(list2)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "54cf08dd362c450a49cfa7885e0a4f3de8c61f1fe993ea68771d665186c24969",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0034",
+      "type": "sample_output",
+      "order": 34,
+      "source_hash": "9e8a816e840f153b158a2f431959413f00a084b2d2fc8e0b71a7ce8f1ec32ab0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[10, 20, 3, 4]\n[10, 20, 3, 4]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[10, 20, 3, 4]\n[10, 20, 3, 4]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[10, 20, 3, 4]\n[10, 20, 3, 4]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "3d1b300be962986b3d2247d4544c8d28c8dfa038ec2474804c7d08d4ca658d05",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If there is more than one reference to the same list, any one of the references can be used to access the list. On the other hand, a change made through any one of the references affects also the other references, as their target is the same."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu có nhiều hơn một tham chiếu đến cùng một danh sách thì bất kỳ tham chiếu nào trong số đó đều có thể được sử dụng để truy cập vào danh sách. Mặt khác, một thay đổi được thực hiện thông qua bất kỳ tham chiếu nào cũng ảnh hưởng đến các tham chiếu khác vì mục tiêu của chúng giống nhau."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "6b1975bd507ad29d3fd9784e27c80a53ac537f6bce96b026fb97ffdde2e9fa85",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The visualisation tool is again very useful in figuring out what is happening:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Công cụ trực quan lại rất hữu ích trong việc tìm hiểu điều gì đang xảy ra:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0037",
+      "type": "image",
+      "order": 37,
+      "source_hash": "4c7000162f3e5f5990d6e6cf0bc8ec0452b3ca12e58ef1e6419045d3a7f67bc1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "5_2_6.png",
+        "alt": "",
+        "attributes": {
+          "src": "5_2_6.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0038",
+      "type": "heading",
+      "order": 38,
+      "source_hash": "869712acaf34fd729d8f8e77f31ea58eb1b29ea993125e363cabb85a4ab12675",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Copying a list"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sao chép một danh sách"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "622af3bee0ef064b98ec24ae9809fa1c3b199f06e22b81abd26431fea98b0153",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If you want to create an actual separate copy of a list, you can create a new list and add each item from the original list in turn:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu bạn muốn tạo một bản sao thực sự riêng biệt của một danh sách, bạn có thể tạo một danh sách mới và lần lượt thêm từng mục từ danh sách ban đầu:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0040",
+      "type": "code",
+      "order": 40,
+      "source_hash": "139d7793695745caa2d567a554c2b83cf6a5c93f5edf1a3e7d80c5c6de494bb9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [1, 2, 3, 3, 5]\n\nnew_list = []\nfor item in my_list:\n    new_list.append(item)\n\nnew_list[0] = 10\nnew_list.append(6)\nprint(\"the original:\", my_list)\nprint(\"the copy:\", new_list)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [1, 2, 3, 3, 5]\n\nnew_list = []\nfor item in my_list:\n    new_list.append(item)\n\nnew_list[0] = 10\nnew_list.append(6)\nprint(\"the original:\", my_list)\nprint(\"the copy:\", new_list)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "139d7793695745caa2d567a554c2b83cf6a5c93f5edf1a3e7d80c5c6de494bb9",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0041",
+      "type": "sample_output",
+      "order": 41,
+      "source_hash": "79a1f3055fddcaf06d193057071789eafb5cd4ee71cbacd77e81cd3c76c858b8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "my_list [1, 2, 3, 3, 5]\nnew_list [10, 2, 3, 3, 5, 6]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "my_list [1, 2, 3, 3, 5]\nnew_list [10, 2, 3, 3, 5, 6]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nmy_list [1, 2, 3, 3, 5]\nnew_list [10, 2, 3, 3, 5, 6]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "1748fb2139002a2569fde6b965c22e84e83992c445426ef500c105012f61acd2",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A snapshot of the copying process in the visualisation tool:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ảnh chụp nhanh quá trình sao chép trong công cụ trực quan hóa:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0043",
+      "type": "image",
+      "order": 43,
+      "source_hash": "4efa7a54acc6bcfb08dd4ca0328941e15e4d8cdcb4df3cc42c20c6305ba7d298",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "5_2_7.png",
+        "alt": "",
+        "attributes": {
+          "src": "5_2_7.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "bebc93078f9f63e8d35ea44ee0be53ffeeeaeb761e71638dd338b41a3a8f3933",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The variable `new_list` points to a different list than the variable `my_list`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Biến `new_list` trỏ đến một danh sách khác với biến `my_list`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0045",
+      "type": "paragraph",
+      "order": 45,
+      "source_hash": "2ad8eb1853c29f0671e8bce8742f7ef728cc4e145a7f36db20977a0b5d7741e5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "An easier way to copy a list is the bracket operator `[]`, which we used for slices previously. The notation `[:]` selects all items in the collection. As a side effect, it creates a copy of the list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một cách dễ dàng hơn để sao chép danh sách là toán tử ngoặc `[]` mà chúng ta đã sử dụng cho các lát trước đây. Ký hiệu `[:]` chọn tất cả các mục trong bộ sưu tập. Là một tác dụng phụ, nó tạo ra một bản sao của danh sách:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0046",
+      "type": "code",
+      "order": 46,
+      "source_hash": "fd9d732e8537520d6315465435baec37f7143b6e3cbf01211bb4222beb1d4cd1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [1,2,3,4]\nnew_list = my_list[:]\n\nmy_list[0] = 10\nnew_list[1] = 20\n\nprint(my_list)\nprint(new_list)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [1,2,3,4]\nnew_list = my_list[:]\n\nmy_list[0] = 10\nnew_list[1] = 20\n\nprint(my_list)\nprint(new_list)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "fd9d732e8537520d6315465435baec37f7143b6e3cbf01211bb4222beb1d4cd1",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0047",
+      "type": "sample_output",
+      "order": 47,
+      "source_hash": "10dd79659731c25640016cb79dd336abf6c9e8a2efef6d5622f0cf52c8f86bc1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[10, 2, 3, 4]\n[1, 20, 3, 4]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[10, 2, 3, 4]\n[1, 20, 3, 4]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[10, 2, 3, 4]\n[1, 20, 3, 4]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0048",
+      "type": "heading",
+      "order": 48,
+      "source_hash": "8166a8db77f40edda76ec3e9204c065560c919f7f29f46a9d12e4f0a2fd2d688",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Using lists as parameters in functions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sử dụng danh sách làm tham số trong hàm"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0049",
+      "type": "paragraph",
+      "order": 49,
+      "source_hash": "aa32fb7bbfcfc6b5e6eae5f428ff041334d322da0ef8a888d794372f505081f8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "When you pass a list as an argument to a function, you are passing a reference to that list. This means that the function can modify the list directly."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khi bạn chuyển một danh sách làm đối số cho một hàm, bạn đang chuyển một tham chiếu đến danh sách đó. Điều này có nghĩa là hàm có thể sửa đổi danh sách trực tiếp."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0050",
+      "type": "paragraph",
+      "order": 50,
+      "source_hash": "89ade6085a61d3406d24f2e2cb468d91fbb57bd8cbe63f24e375155ef71e710e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following function takes a list as an argument and adds a new item to the end of the list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm sau lấy danh sách làm đối số và thêm một mục mới vào cuối danh sách:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0051",
+      "type": "code",
+      "order": 51,
+      "source_hash": "9cd19fd0783341616f525f263bf871f82babf69b74df2c639d2e0a7d63c9bf8e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def add_item(my_list: list):\n    new_item = 10\n    my_list.append(new_item)\n\na_list = [1,2,3]\nprint(a_list)\nadd_item(a_list)\nprint(a_list)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def add_item(my_list: list):\n    new_item = 10\n    my_list.append(new_item)\n\na_list = [1,2,3]\nprint(a_list)\nadd_item(a_list)\nprint(a_list)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "9cd19fd0783341616f525f263bf871f82babf69b74df2c639d2e0a7d63c9bf8e",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0052",
+      "type": "sample_output",
+      "order": 52,
+      "source_hash": "969bb2f75d8c92912bd3bbd4c694bbdc1550c2f9e00daba7b112da77c67aff7f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[1, 2, 3]\n[1, 2, 3, 10]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[1, 2, 3]\n[1, 2, 3, 10]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n[1, 2, 3]\n[1, 2, 3, 10]\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0053",
+      "type": "paragraph",
+      "order": 53,
+      "source_hash": "2cde0d655ac60a563e2b781bab56fabfe551c143f2b30157e36b2c9f683a0e62",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Notice the function `add_item` does not have a return value. It only changes the list it takes as an argument."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lưu ý hàm `add_item` không có giá trị trả về. Nó chỉ thay đổi danh sách mà nó lấy làm đối số."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0054",
+      "type": "paragraph",
+      "order": 54,
+      "source_hash": "d745cf320944499bbf536661f3de81f4618096437e6ab840d77b32c520cef344",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The visualisation tool may help you understand what is happening here:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Công cụ trực quan có thể giúp bạn hiểu điều gì đang xảy ra ở đây:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0055",
+      "type": "image",
+      "order": 55,
+      "source_hash": "bdbdc525627a19edecfad5d5326ea603c1a60c6624afd906f0fbb2a433f4ff5d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "5_2_8.png",
+        "alt": "",
+        "attributes": {
+          "src": "5_2_8.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0056",
+      "type": "paragraph",
+      "order": 56,
+      "source_hash": "4f81f20e21fd2f242f4304376dc410a34367b506eed547ee8f290704e3c8f185",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "_Global frame_ refers to the variables defined in the main function, whereas the *add_item* frame with a blue background represents the parameters and variables within that function. As you can see from the visualisation, the `add_item` function refers to the very same list as the main function. The changes made within the `add_item` function also affect the main function."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "_Khung toàn cầu_ đề cập đến các biến được xác định trong hàm chính, trong khi khung *add_item* có nền màu xanh lam đại diện cho các tham số và biến trong hàm đó. Như bạn có thể thấy từ hình ảnh trực quan, hàm `add_item` đề cập đến danh sách rất giống với hàm chính. Những thay đổi được thực hiện trong hàm `add_item` cũng ảnh hưởng đến chức năng chính."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0057",
+      "type": "paragraph",
+      "order": 57,
+      "source_hash": "b95ffe5157e6188131f432118768f0b27035f970f02de88bbd1f9737b229116a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Another way to implement this functionality would be to create a new list within the function, and return that:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một cách khác để triển khai hàm này là tạo một danh sách mới trong hàm và trả về danh sách đó:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0058",
+      "type": "code",
+      "order": 58,
+      "source_hash": "0f8677a0555c47b5f2a4c044dc77bae73d0888256640852331d0a7770dda2390",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def add_item(my_list: list) -> list:\n    new_item = 10\n    my_list_copy = my_list[:]\n    my_list_copy.append(new_item)\n    return my_list_copy\n\nnumbers = [1, 2, 3]\nnumbers2 = add_item(numbers)\n\nprint(\"original list:\", numbers)\nprint(\"new list:\", numbers2)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def add_item(my_list: list) -> list:\n    new_item = 10\n    my_list_copy = my_list[:]\n    my_list_copy.append(new_item)\n    return my_list_copy\n\nnumbers = [1, 2, 3]\nnumbers2 = add_item(numbers)\n\nprint(\"original list:\", numbers)\nprint(\"new list:\", numbers2)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "0f8677a0555c47b5f2a4c044dc77bae73d0888256640852331d0a7770dda2390",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0059",
+      "type": "sample_output",
+      "order": 59,
+      "source_hash": "8c8d3378b40ae0a08af4c8758ffda4597c73115db63d5941f78b184d86e9e5a7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "original list: [1, 2, 3]\nnew list: [1, 2, 3, 10]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "original list: [1, 2, 3]\nnew list: [1, 2, 3, 10]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\noriginal list: [1, 2, 3]\nnew list: [1, 2, 3, 10]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0060",
+      "type": "paragraph",
+      "order": 60,
+      "source_hash": "8938372735d1d339ae885fd45b7e4cf9cafc0064616b00ace84502d0ed59b959",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If you aren't absolutely sure you understand what is happening in the code above, please go through it in the visualisation tool."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu bạn không hoàn toàn chắc chắn mình hiểu điều gì đang xảy ra trong đoạn mã trên, vui lòng xem qua nó trong công cụ trực quan."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0061",
+      "type": "heading",
+      "order": 61,
+      "source_hash": "80b7ade390f46e2208f6a4dd41417844952682342753f21a73db4a796d4d04fb",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Editing a list given as an argument"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chỉnh sửa danh sách được đưa ra dưới dạng đối số"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0062",
+      "type": "paragraph",
+      "order": 62,
+      "source_hash": "96e4f98c51c1124ab7edd92c9a5acf1ac46ba92d2b6a30bea7afe8206cd97664",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following is an attempt at a function which should augment each item in a list by ten:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau đây là nỗ lực thực hiện một hàm sẽ tăng mỗi mục trong danh sách lên 10:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0063",
+      "type": "code",
+      "order": 63,
+      "source_hash": "972d9c13ead1bee4488d93d832f6b7e626d80b38aed0693b2eac1e9927c357f8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def augment_all(my_list: list):\n    new_list = []\n    for item in my_list:\n        new_list.append(item + 10)\n    my_list = new_list\n\nnumbers = [1, 2, 3]\nprint(\"in the beginning:\", numbers)\naugment_all(numbers)\nprint(\"after the function is executed:\", numbers)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def augment_all(my_list: list):\n    new_list = []\n    for item in my_list:\n        new_list.append(item + 10)\n    my_list = new_list\n\nnumbers = [1, 2, 3]\nprint(\"in the beginning:\", numbers)\naugment_all(numbers)\nprint(\"after the function is executed:\", numbers)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "972d9c13ead1bee4488d93d832f6b7e626d80b38aed0693b2eac1e9927c357f8",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0064",
+      "type": "sample_output",
+      "order": 64,
+      "source_hash": "b158e14fe86e5f2a8708ff07f35a030617a745e52b59a6afa6ff500abb12923e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "in the beginning: [1, 2, 3]\nafter the function is executed: [1, 2, 3]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "in the beginning: [1, 2, 3]\nafter the function is executed: [1, 2, 3]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nin the beginning: [1, 2, 3]\nafter the function is executed: [1, 2, 3]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0065",
+      "type": "paragraph",
+      "order": 65,
+      "source_hash": "d47d34aaad972d9b2b49f0590026fc1c27f70622c2c4ab161676c63bd5798b11",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "For some reason the function doesn't work, so what is going on?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vì lý do nào đó chức năng không hoạt động, vậy chuyện gì đang xảy ra?"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0066",
+      "type": "paragraph",
+      "order": 66,
+      "source_hash": "ebe509b4a60417ba69778ad43cfc04766fe9884fb5e689eede5088ed25f70f0d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The function takes a _reference_ to a list as an argument. This is stored in the variable `my_list`. The assignment `my_list = new_list` assigns a new value to that same variable. The variable `my_list` now points to the new list created inside the function, and the reference to the original list is no longer available within the function. This assignment has no effect outside the function, however."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm lấy _reference_ vào danh sách làm đối số. Điều này được lưu trữ trong biến `my_list`. Phép gán `my_list = new_list` gán một giá trị mới cho cùng biến đó. Biến `my_list` hiện trỏ đến danh sách mới được tạo bên trong hàm và tham chiếu đến danh sách ban đầu không còn khả dụng trong hàm. Tuy nhiên, nhiệm vụ này không có tác dụng bên ngoài chức năng."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0067",
+      "type": "paragraph",
+      "order": 67,
+      "source_hash": "45b153d6f03df6f0709014ccd8416fdf242a2289ea9d530dd9f4cc804d76ad0e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!---\nThe following sequence of images illustrates the states of the variables at different stages during the execution of the function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!---\nChuỗi hình ảnh sau đây minh họa trạng thái của các biến ở các giai đoạn khác nhau trong quá trình thực thi hàm:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0068",
+      "type": "image",
+      "order": 68,
+      "source_hash": "9929fef82869c772b2e27aee4121f3bbebf52cc6b86f45e38c085f166dc74b25",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "5_2_9.png",
+        "alt": "",
+        "attributes": {
+          "src": "5_2_9.png",
+          "width": "400"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0069",
+      "type": "paragraph",
+      "order": 69,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "-->"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0070",
+      "type": "paragraph",
+      "order": 70,
+      "source_hash": "caec79a8315d69764f8bbae4130d61f75379af9baed4897ac83301b424bae3fc",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Furthermore, the variable `new_list`, which contains the new, augmented values, is not accessible from outside the function. It is \"lost\" as the execution of the function finishes, and focus returns to the main function. The variable `numbers` in the main function always points to the original list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hơn nữa, biến `new_list`, chứa các giá trị mới, tăng cường, không thể truy cập được từ bên ngoài hàm. Nó bị \"mất\" khi quá trình thực thi hàm kết thúc và tiêu điểm quay trở lại hàm chính. Biến `numbers` trong hàm main luôn trỏ đến danh sách gốc."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0071",
+      "type": "paragraph",
+      "order": 71,
+      "source_hash": "9fc7a5da73d54cf712bbbc95cb991dddeb4b18ee1489349c729f889ec75e6b0b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The visualisation tool is your friend here, too. Please go through the stages carefully, and see how the original list is not affected by the execution of the function at all:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Công cụ trực quan hóa cũng là bạn của bạn ở đây. Vui lòng xem xét cẩn thận các giai đoạn và xem danh sách ban đầu không bị ảnh hưởng bởi việc thực thi hàm như thế nào:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0072",
+      "type": "image",
+      "order": 72,
+      "source_hash": "c8896abe8f476230223484fb18a38bedcc9d687381320f6a2c008087cd0bdb89",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "5_2_10.png",
+        "alt": "",
+        "attributes": {
+          "src": "5_2_10.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0073",
+      "type": "paragraph",
+      "order": 73,
+      "source_hash": "8e6e55562804d4078a8db8327b141a6b26a94398955f058277091b8fed9cec9e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "One way to fix this is to copy all the items from the new list to the old list, one by one:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một cách để khắc phục điều này là sao chép từng mục từ danh sách mới sang danh sách cũ:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0074",
+      "type": "code",
+      "order": 74,
+      "source_hash": "9c1137602c8618700fcfc6160b74a1d2d98b98f586fa28ec84b2ade6cd1170a9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def augment_all(my_list: list):\n    new_list = []\n    for item in my_list:\n        new_list.append(item + 10)\n\n    # copy items from the new list into the old list\n    for i in range(len(my_list)):\n        my_list[i] = new_list[i]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def augment_all(my_list: list):\n    new_list = []\n    for item in my_list:\n        new_list.append(item + 10)\n\n    # copy items from the new list into the old list\n    for i in range(len(my_list)):\n        my_list[i] = new_list[i]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "9c1137602c8618700fcfc6160b74a1d2d98b98f586fa28ec84b2ade6cd1170a9",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0075",
+      "type": "paragraph",
+      "order": 75,
+      "source_hash": "67829d673cbaff26ecc0a69bb657018823c0c88342b5481537a316a9cf242d58",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Python also has a nifty shorthand for assigning multiple items in a collection at once:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Python cũng có một cách viết tắt tiện lợi để gán nhiều mục trong một bộ sưu tập cùng một lúc:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0076",
+      "type": "code",
+      "order": 76,
+      "source_hash": "4103aa4480de2718522951d86e661ce2b2c8d3ea3b7b216e80a735ef368d738a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": ">>> my_list = [1, 2, 3, 4]\n>>> my_list[1:3] = [10, 20]\n>>> my_list\n[1, 10, 20, 4]"
+      },
+      "translation": {
+        "language": "code",
+        "content": ">>> my_list = [1, 2, 3, 4]\n>>> my_list[1:3] = [10, 20]\n>>> my_list\n[1, 10, 20, 4]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4103aa4480de2718522951d86e661ce2b2c8d3ea3b7b216e80a735ef368d738a",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0077",
+      "type": "paragraph",
+      "order": 77,
+      "source_hash": "c83ab775995e516d94a781d45727df5da51b08e297e32fd426688975398173c0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the example above a slice of the list is assigned values from another collection."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong ví dụ trên, một lát danh sách được gán các giá trị từ một bộ sưu tập khác."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0078",
+      "type": "paragraph",
+      "order": 78,
+      "source_hash": "d64f6f78c0d2b91b2f8ab9ca292b8ca586d1b713abcf1bee3428a86bd6fe9487",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "As we know, a slice can include the entire collection:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Như chúng ta đã biết, một slice có thể bao gồm toàn bộ bộ sưu tập:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0079",
+      "type": "code",
+      "order": 79,
+      "source_hash": "a6de725fdccc4bc7ac641c580d9192477245e8a4dd9ed8ce8dbcf709d6fdb065",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": ">>> my_list = [1, 2, 3, 4]\n>>> my_list[:] = [100, 99, 98, 97]\n>>> my_list\n[100, 99, 98, 97]"
+      },
+      "translation": {
+        "language": "code",
+        "content": ">>> my_list = [1, 2, 3, 4]\n>>> my_list[:] = [100, 99, 98, 97]\n>>> my_list\n[100, 99, 98, 97]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a6de725fdccc4bc7ac641c580d9192477245e8a4dd9ed8ce8dbcf709d6fdb065",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0080",
+      "type": "paragraph",
+      "order": 80,
+      "source_hash": "d9cafeed9696ab2e12ce56cbd547dff2201a9756ec5fdf853d28bdefc0f308e7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The entire contents of the old list are replaced. Inspired by this, a working version of the augmenting function could look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Toàn bộ nội dung của danh sách cũ được thay thế. Lấy cảm hứng từ điều này, một phiên bản hoạt động của chức năng tăng cường có thể trông như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0081",
+      "type": "code",
+      "order": 81,
+      "source_hash": "ec33c73049cd3eea27ad9b85fe7028d1b8dbe9084af2db07286b5e6af05f0aba",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def augment_all(my_list: list):\n    new_list = []\n    for item in my_list:\n        new_list.append(item + 10)\n\n    my_list[:] = new_list"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def augment_all(my_list: list):\n    new_list = []\n    for item in my_list:\n        new_list.append(item + 10)\n\n    my_list[:] = new_list"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ec33c73049cd3eea27ad9b85fe7028d1b8dbe9084af2db07286b5e6af05f0aba",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0082",
+      "type": "paragraph",
+      "order": 82,
+      "source_hash": "629bd07b4c40cdc1d56854b76737841a5ae94a6884e14010e822d7893703c755",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Actually, there is no need to create a new list within the function at all. We can just assign the new values directly into the original list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trên thực tế, không cần phải tạo danh sách mới trong hàm. Chúng ta chỉ có thể gán các giá trị mới trực tiếp vào danh sách ban đầu:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0083",
+      "type": "code",
+      "order": 83,
+      "source_hash": "5f1b9873fbce84b564c22515b7ae8857b29b2fc94a45036bd388420378eba598",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def augment_all(my_list: list):\n    for i in range(len(my_list)):\n        my_list[i] += 10\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def augment_all(my_list: list):\n    for i in range(len(my_list)):\n        my_list[i] += 10\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5f1b9873fbce84b564c22515b7ae8857b29b2fc94a45036bd388420378eba598",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0084",
+      "type": "exercise",
+      "order": 84,
+      "source_hash": "7de51ba95eeb4c65d4ffd1fb64334ec0f51b6ef21a0555043b1e16cb70ecb01b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `double_items(numbers: list)`, which takes a list of integers as its argument.\n\nThe function should return a new list, which contains all values from the original list doubled. The function should _not_ change the original list.\n\nAn example of the function at work:\n\n```python\nif __name__ == \"__main__\":\n    numbers = [2, 4, 5, 3, 11, -4]\n    numbers_doubled = double_items(numbers)\n    print(\"original:\", numbers)\n    print(\"doubled:\", numbers_doubled)\n```\n<sample-output>\n\noriginal: [2, 4, 5, 3, 11, -4]\ndoubled: [4, 8, 10, 6, 22, -8]\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `double_items(numbers: list)`, hàm này lấy danh sách các số nguyên làm đối số.\n\nHàm sẽ trả về một danh sách mới, chứa tất cả các giá trị từ danh sách ban đầu được nhân đôi. Hàm này sẽ _not_ thay đổi danh sách ban đầu.\n\nMột ví dụ về chức năng tại nơi làm việc:\n\n```python\nif __name__ == \"__main__\":\n    numbers = [2, 4, 5, 3, 11, -4]\n    numbers_doubled = double_items(numbers)\n    print(\"original:\", numbers)\n    print(\"doubled:\", numbers_doubled)\n```\n<sample-output>\n\nbản gốc: [2, 4, 5, 3, 11, -4]\nnhân đôi: [4, 8, 10, 6, 22, -8]\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-08_items_multiplied_by_two",
+        "exercise_type": "programming-exercise",
+        "name": "Items multiplied by two",
+        "tmc_name": "part05-08_items_multiplied_by_two",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0085",
+      "type": "exercise",
+      "order": 85,
+      "source_hash": "6299d68400b779ef20d2706a1ab3b96db329a759320b2a1f9c543c0302972832",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `remove_smallest(numbers: list)`, which takes a list of integers as its argument.\n\nThe functions should find and remove the smallest item in the list. You may assume there is a single smallest item in the list.\n\nThe function should not have a return value - it should directly modify the list it receives as a parameter.\n\nAn example of how the function works:\n\n```python\nif __name__ == \"__main__\":\n    numbers = [2, 4, 6, 1, 3, 5]\n    remove_smallest(numbers)\n    print(numbers)\n```\n<sample-output>\n\n[2, 4, 6, 3, 5]\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `remove_smallest(numbers: list)`, hàm này lấy danh sách các số nguyên làm đối số.\n\nCác hàm sẽ tìm và loại bỏ mục nhỏ nhất trong danh sách. Bạn có thể cho rằng có một mục nhỏ nhất trong danh sách.\n\nHàm không được có giá trị trả về - nó phải sửa đổi trực tiếp danh sách mà nó nhận được dưới dạng tham số.\n\nMột ví dụ về cách hoạt động của hàm:\n\n```python\nif __name__ == \"__main__\":\n    numbers = [2, 4, 6, 1, 3, 5]\n    remove_smallest(numbers)\n    print(numbers)\n```\n<sample-output>\n\n[2, 4, 6, 3, 5]\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-09_remove_smallest",
+        "exercise_type": "programming-exercise",
+        "name": "Remove the smallest",
+        "tmc_name": "part05-09_remove_smallest",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0086",
+      "type": "exercise",
+      "order": 86,
+      "source_hash": "d9ecf2d578e6f3552a7fd50e202bb1f572e3425955f57ef1ad46e63b622341c8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In this exercise we will complete two more functions for the sudoku project from the previous section: `print_sudoku` and `add_number`.\n\nThe function `print_sudoku(sudoku: list)` takes a two-dimensional array representing a sudoku grid as its argument. The function should print out the grid in the format specified in the examples below.\n\nThe function `add_number(sudoku: list, row_no: int, column_no: int, number:int)` takes a two-dimensional array representing a sudoku grid, two integers referring to the row and column indexes of a single square, and a single digit between 1 and 9, as its arguments. The function should add the digit to the specified location in the grid.\n\n```python\nsudoku  = [\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0]\n]\n\nprint_sudoku(sudoku)\nadd_number(sudoku, 0, 0, 2)\nadd_number(sudoku, 1, 2, 7)\nadd_number(sudoku, 5, 7, 3)\nprint()\nprint(\"Three numbers added:\")\nprint()\nprint_sudoku(sudoku)\n```\n\n<sample-output>\n\n<pre>\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n\nThree numbers added:\n\n2 _ _  _ _ _  _ _ _\n_ _ 7  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ 3 _\n\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n\n</pre>\n\n</sample-output>\n\n**Hint**\n\nRemember it is possible to call the `print` function without causing a line change:\n\n```python\nprint(\"characters \", end=\"\")\nprint(\"without carriage returns\", end=\"\")\n```\n\n<sample-output>\n\ncharacters without carriage returns\n\n</sample-output>\n\nSometimes you need just a new line, which a print statement without any argument will achieve:\n\n```python\nprint()\n```"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong bài tập này, chúng ta sẽ hoàn thành thêm hai chức năng nữa cho dự án sudoku từ phần trước: `print_sudoku` và `add_number`.\n\nHàm `print_sudoku(sudoku: list)` lấy mảng hai chiều biểu thị lưới sudoku làm đối số. Hàm sẽ in ra lưới theo định dạng được chỉ định trong các ví dụ bên dưới.\n\nHàm `add_number(sudoku: list, row_no: int, column_no: int, number:int)` lấy mảng hai chiều biểu thị lưới sudoku, hai số nguyên tham chiếu đến chỉ mục hàng và cột của một hình vuông và một chữ số từ 1 đến 9 làm đối số. Hàm sẽ thêm chữ số vào vị trí đã chỉ định trong lưới.\n\n```python\nsudoku  = [\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0]\n]\n\nprint_sudoku(sudoku)\nadd_number(sudoku, 0, 0, 2)\nadd_number(sudoku, 1, 2, 7)\nadd_number(sudoku, 5, 7, 3)\nprint()\nprint(\"Three numbers added:\")\nprint()\nprint_sudoku(sudoku)\n```\n\n<sample-output>\n\n<pre>\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n\nBa số được thêm vào:\n\n2 _ _ _ _ _ _ _ _\n_ _ 7 _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ 3 _\n\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n\n</pre>\n\n</sample-output>\n\n**Gợi ý**\n\nHãy nhớ rằng có thể gọi hàm `print` mà không gây ra thay đổi dòng:\n\n```python\nprint(\"characters \", end=\"\")\nprint(\"without carriage returns\", end=\"\")\n```\n\n<sample-output>\n\nký tự không có dấu xuống dòng\n\n</sample-output>\n\nĐôi khi bạn chỉ cần một dòng mới, điều mà một câu lệnh `print` không có bất kỳ đối số nào sẽ đạt được:\n\n```python\nprint()\n```"
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-10_sudoku_print_and_add",
+        "exercise_type": "programming-exercise",
+        "name": "Sudoku: print out the grid and add a number",
+        "tmc_name": "part05-10_sudoku_print_and_add",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0087",
+      "type": "exercise",
+      "order": 87,
+      "source_hash": "c1ec2a243c9187067357e6ae9ed5b81dd2ab1c2c0309eb2e58f351785e000de9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This is the very last sudoku task. This time we will create a slightly different version of the function for adding new numbers to the grid.\n\nThe function `copy_and_add(sudoku: list, row_no: int, column_no: int, number: int)` takes a two-dimensional array representing a sudoku grid, two integers referring to the row and column indexes of a single square, and a single digit between 1 and 9, as its arguments. The function should _return_ a copy of the original grid with the new digit added in the correct location. The function should _not_ change the original grid received as a parameter.\n\nThe `print_sudoku` function from the previous exercise could be useful for testing, and it is used in the example below:\n\n```python\nsudoku  = [\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0]\n]\n\ngrid_copy = copy_and_add(sudoku, 0, 0, 2)\nprint(\"Original:\")\nprint_sudoku(sudoku)\nprint()\nprint(\"Copy:\")\nprint_sudoku(grid_copy)\n```\n\n<sample-output>\n\n<pre>\nOriginal:\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n\nCopy:\n2 _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n\n</pre>\n\n</sample-output>\n\n**Hint** \nWhen dealing with nested lists you should be extra careful when copying. What all needs to be explicitly copied, and where do changes actually have an effect? The [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit) is a great help here, too, although the size of the sudoku grid will make the view less orderly than usual."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đây là nhiệm vụ sudoku cuối cùng. Lần này chúng ta sẽ tạo một phiên bản hơi khác của hàm để thêm số mới vào lưới.\n\nHàm `copy_and_add(sudoku: list, row_no: int, column_no: int, number: int)` lấy một mảng hai chiều biểu thị lưới sudoku, hai số nguyên tham chiếu đến chỉ mục hàng và cột của một hình vuông và một chữ số từ 1 đến 9 làm đối số. Hàm sẽ _return_ một bản sao của lưới ban đầu với chữ số mới được thêm vào đúng vị trí. Hàm này sẽ _not_ thay đổi lưới ban đầu được nhận dưới dạng tham số.\n\nHàm `print_sudoku` từ bài tập trước có thể hữu ích cho việc kiểm tra và nó được sử dụng trong ví dụ bên dưới:\n\n```python\nsudoku  = [\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0]\n]\n\ngrid_copy = copy_and_add(sudoku, 0, 0, 2)\nprint(\"Original:\")\nprint_sudoku(sudoku)\nprint()\nprint(\"Copy:\")\nprint_sudoku(grid_copy)\n```\n\n<sample-output>\n\n<pre>\nBản gốc:\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n\nSao chép:\n2 _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n_ _ _ _ _ _ _ _ _\n\n</pre>\n\n</sample-output>\n\n**Gợi ý** \nKhi xử lý các danh sách lồng nhau, bạn nên hết sức cẩn thận khi sao chép. Tất cả những gì cần phải được sao chép rõ ràng và những thay đổi thực sự có tác dụng ở đâu? [Công cụ trực quan hóa](http://www.pythontutor.com/visualize.html#mode=edit) cũng rất hữu ích ở đây, mặc dù kích thước của lưới sudoku sẽ khiến chế độ xem kém trật tự hơn bình thường."
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-11_sudoku_add_to_copy",
+        "exercise_type": "programming-exercise",
+        "name": "Sudoku: add number to a copy of the grid",
+        "tmc_name": "part05-11_sudoku_add_to_copy",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0088",
+      "type": "exercise",
+      "order": 88,
+      "source_hash": "e5e749279496c72851af7fe7b848cf4629f589aa9809321578bcf293a3522834",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Tic-Tac-Toe is played on a 3 by 3 grid, by two players who take turns inputting noughts and crosses. If either player succeeds in placing three of their own symbols on any row, column or diagonal, they win. If neither player manages this, it is a draw.\n\nPlease write a function named `play_turn(game_board: list, x: int, y: int, piece: str)`, which places the given symbol at the given coordinates on the board. The values of the coordinates on the board are between 0 and 2.\n\n**NB:** when compared to the sudoku exercises, the arguments the function takes are the other way around here. The column `x` comes first, and the row `y` second.\n\nThe board consists of the following strings:\n\n* `\"\"`: empty square\n* `\"X\"`: player 1 symbol\n* `\"O\"`: player 2 symbol\n\nThe function should return `True` if the square was empty and the symbol was successfully placed on the game board. The function should return `False` if the square was occupied, or if the coordinates weren't valid.\n\nAn example execution of the function:\n\n```python\ngame_board = [[\"\", \"\", \"\"], [\"\", \"\", \"\"], [\"\", \"\", \"\"]]\nprint(play_turn(game_board, 2, 0, \"X\"))\nprint(game_board)\n```\n\n<sample-output>\n\nTrue\n[['', '', 'X'], ['', '', ''], ['', '', '']]\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tic-Tac-Toe được chơi trên lưới 3 x 3, bởi hai người chơi thay phiên nhau nhập điểm không và điểm chéo. Nếu một trong hai người chơi thành công trong việc đặt ba biểu tượng của riêng mình trên bất kỳ hàng, cột hoặc đường chéo nào thì họ sẽ thắng. Nếu không có người chơi nào làm được điều này thì đó là một trận hòa.\n\nHãy viết một hàm có tên `play_turn(game_board: list, x: int, y: int, piece: str)` để đặt ký hiệu đã cho vào tọa độ đã cho trên bảng. Các giá trị tọa độ trên bảng nằm trong khoảng từ 0 đến 2.\n\n**NB:** khi so sánh với các bài tập sudoku, các đối số mà hàm đưa ra ở đây lại ngược lại. Cột `x` đứng đầu và hàng `y` đứng thứ hai.\n\nBảng bao gồm các chuỗi sau:\n\n* `\"\"`: hình vuông trống\n* `\"X\"`: biểu tượng người chơi 1\n* `\"O\"`: biểu tượng người chơi 2\n\nHàm sẽ trả về `True` nếu hình vuông trống và biểu tượng được đặt thành công trên bảng trò chơi. Hàm sẽ trả về `False` nếu hình vuông đã bị chiếm hoặc nếu tọa độ không hợp lệ.\n\nMột ví dụ thực hiện hàm:\n\n```python\ngame_board = [[\"\", \"\", \"\"], [\"\", \"\", \"\"], [\"\", \"\", \"\"]]\nprint(play_turn(game_board, 2, 0, \"X\"))\nprint(game_board)\n```\n\n<sample-output>\n\nĐúng\n[['', '', 'X'], ['', '', ''], ['', '', '']]\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-12_tic_tac_toe",
+        "exercise_type": "programming-exercise",
+        "name": "Tic-Tac-Toe",
+        "tmc_name": "part05-12_tic_tac_toe",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0089",
+      "type": "exercise",
+      "order": 89,
+      "source_hash": "d622bb66ee2c70433d131c45f213e089ef441d085917df376e88f1fae76f76e7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `transpose(matrix: list)`, which takes a two-dimensional integer array, i.e., a matrix, as its argument. The function should _transpose_ the matrix. Transposing means essentially flipping the matrix over its diagonal: columns become rows, and rows become columns.\n\nYou may assume the matrix is a square matrix, so it will have an equal number of rows and columns.\n\nThe following matrix\n\n```python\n1 2 3\n4 5 6\n7 8 9\n```\n\ntransposed looks like this:\n\n```python\n1 4 7\n2 5 8\n3 6 9\n```\n\nThe function should not have a return value. The matrix should be modified directly through the reference."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng viết một hàm có tên `transpose(matrix: list)`, hàm này lấy mảng số nguyên hai chiều, tức là ma trận, làm đối số. Hàm sẽ _transpose_ ma trận. Chuyển vị về cơ bản có nghĩa là lật ma trận theo đường chéo của nó: cột trở thành hàng và hàng trở thành cột.\n\nBạn có thể giả sử ma trận là ma trận vuông nên sẽ có số hàng và số cột bằng nhau.\n\nMa trận sau\n\n```python\n1 2 3\n4 5 6\n7 8 9\n```\n\nchuyển đổi trông như thế này:\n\n```python\n1 4 7\n2 5 8\n3 6 9\n```\n\nHàm không được có giá trị trả về. Ma trận nên được sửa đổi trực tiếp thông qua tài liệu tham khảo."
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-13_transpose_matrix",
+        "exercise_type": "programming-exercise",
+        "name": "Transpose a matrix",
+        "tmc_name": "part05-13_transpose_matrix",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0090",
+      "type": "heading",
+      "order": 90,
+      "source_hash": "d87ec6f9fa4a9766f63ac7049484c6f9a7bc0eeff990e12a1acb53a781d31eec",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Side effects of functions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tác dụng phụ của chức năng"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0091",
+      "type": "paragraph",
+      "order": 91,
+      "source_hash": "ce84356da441c70da53b3b79da8c9dc83f034e0f8f0f285d9617101a6bdb0309",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If a function takes a reference to a list as an argument, it will be able to modify that list. If direct modifications were not intended by the programmer, accidentally modifying the list received as a parameter could cause problems elsewhere in the program."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu một hàm lấy tham chiếu đến một danh sách làm đối số thì nó sẽ có thể sửa đổi danh sách đó. Nếu người lập trình không có ý định sửa đổi trực tiếp thì việc vô tình sửa đổi danh sách nhận được dưới dạng tham số có thể gây ra sự cố ở nơi khác trong chương trình."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0092",
+      "type": "paragraph",
+      "order": 92,
+      "source_hash": "f087e37602dfbcf5c3f25242bb0190bfc3360c11b2512f04494deef4082ddbae",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's take a look at a function which is supposed to find the second smallest item in a list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy xem một hàm có nhiệm vụ tìm mục nhỏ thứ hai trong danh sách:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0093",
+      "type": "code",
+      "order": 93,
+      "source_hash": "96d00fca61602c2b5bfd9673d125d7c7d69228554729141f09ee2868badfebfb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def second_smallest(my_list: list) -> int:\n    # in an ordered list, the second smallest item is at index 1\n    my_list.sort()\n    return my_list[1]\n\nnumbers = [1, 4, 2, 5, 3, 6, 4, 7]\nprint(second_smallest(numbers))\nprint(numbers)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def second_smallest(my_list: list) -> int:\n    # in an ordered list, the second smallest item is at index 1\n    my_list.sort()\n    return my_list[1]\n\nnumbers = [1, 4, 2, 5, 3, 6, 4, 7]\nprint(second_smallest(numbers))\nprint(numbers)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "96d00fca61602c2b5bfd9673d125d7c7d69228554729141f09ee2868badfebfb",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0094",
+      "type": "sample_output",
+      "order": 94,
+      "source_hash": "0a92d40de6dad67b6267d341aa4047f9a92a1969de3aaed6336f77c2f019497d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "2\n[1, 2, 3, 4, 4, 5, 6, 7]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "2\n[1, 2, 3, 4, 4, 5, 6, 7]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n2\n[1, 2, 3, 4, 4, 5, 6, 7]\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0095",
+      "type": "paragraph",
+      "order": 95,
+      "source_hash": "e0fad3d2438f986c266afb13460d44f330b390d73254e20f07e8d8338f426ddd",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The function does find the second smallest item reliably, but it additionally sorts the list in place, changing the order of the items. If the order is significant elsewhere in the program, calling the function could cause errors. Unintentional modifications to an object accessed through a reference is called a _side effect_ of a function."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm này tìm thấy mục nhỏ thứ hai một cách đáng tin cậy, nhưng nó cũng sắp xếp danh sách tại chỗ, thay đổi thứ tự của các mục. Nếu thứ tự có ý nghĩa quan trọng ở nơi khác trong chương trình, việc gọi hàm có thể gây ra lỗi. Những sửa đổi không chủ ý đối với một đối tượng được truy cập thông qua một tham chiếu được gọi là _hiệu ứng phụ_ của hàm."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0096",
+      "type": "paragraph",
+      "order": 96,
+      "source_hash": "69f37172ff2702157a3dbcef135c8ad50d4aa04036f786fa78d280902bf58991",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We can avoid the side effect by making a small change to the function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta có thể tránh tác dụng phụ bằng cách thực hiện một thay đổi nhỏ đối với hàm:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0097",
+      "type": "code",
+      "order": 97,
+      "source_hash": "bfa6019edf71f9bad8fbcf7ffc981c97088987e824c5204063c0c068163a264b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def second_smallest(my_list: list) -> int:\n    list_copy = sorted(my_list)\n    return list_copy[1]\n\nnumbers = [1, 4, 2, 5, 3, 6, 4, 7]\nprint(second_smallest(numbers))\nprint(numbers)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def second_smallest(my_list: list) -> int:\n    list_copy = sorted(my_list)\n    return list_copy[1]\n\nnumbers = [1, 4, 2, 5, 3, 6, 4, 7]\nprint(second_smallest(numbers))\nprint(numbers)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "bfa6019edf71f9bad8fbcf7ffc981c97088987e824c5204063c0c068163a264b",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0098",
+      "type": "sample_output",
+      "order": 98,
+      "source_hash": "05b09b2860a163a0c4b923fd70c2c24cd417799fdd1b970d835ba667750a7f53",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "2\n[1, 4, 2, 5, 3, 6, 4, 7]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "2\n[1, 4, 2, 5, 3, 6, 4, 7]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n2\n[1, 4, 2, 5, 3, 6, 4, 7]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0099",
+      "type": "paragraph",
+      "order": 99,
+      "source_hash": "2350f3a5c4367b35f604f38e0b2dd6c07fc3d8f86b6bd35c17f23ed9b54afd78",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The function `sorted` returns a new, sorted copy of the list, so looking for the second smallest item no longer messes with the order of the original list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm `sorted` trả về một bản sao mới đã được sắp xếp của danh sách, do đó việc tìm kiếm mục nhỏ thứ hai không còn lộn xộn với thứ tự của danh sách ban đầu."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0100",
+      "type": "paragraph",
+      "order": 100,
+      "source_hash": "b504690476fd044ddda4a7c78cef8cb5569ac19ad06aafe682e13ab91d2969a8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "It is generally considered a good programming practice to avoid causing side effects with functions. Side effects can make it more difficult to verify that the program functions as intended in all situations."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nói chung, nó được coi là một phương thức lập trình tốt để tránh gây ra tác dụng phụ với các hàm. Tác dụng phụ có thể gây khó khăn hơn cho việc xác minh rằng chương trình hoạt động như dự định trong mọi tình huống."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0101",
+      "type": "paragraph",
+      "order": 101,
+      "source_hash": "60db4c7ce1e9616cd6ec178464f6f3f44d8df1b89f171ae423a54b35a8f34d71",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Functions free of side effects are also called _pure functions_. Especially when adhering to a functional programming style, this is a common ideal to follow. We will explore this topic further in _Advanced Course in Programming_, which is the course following this one."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các hàm không có tác dụng phụ còn được gọi là _hàm thuần túy_. Đặc biệt là khi tuân thủ phong cách lập trình hàm, đây là một lý tưởng phổ biến để làm theo. Chúng ta sẽ khám phá chủ đề này sâu hơn trong _Khóa học nâng cao về lập trình_, đây là khóa học tiếp theo khóa học này."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0102",
+      "type": "paragraph",
+      "order": 102,
+      "source_hash": "b97eebcf5a0222c688482a2c1f8f4510ba0c7934c136e1f60999bbcc47c2ab75",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!---\nA quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!---\nMột bài kiểm tra để ôn lại nội dung của phần này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-2-references-0103",
+      "type": "quiz",
+      "order": 103,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "b254a4f9-09bb-55c8-87c0-538f91e51ace",
+        "attributes": {
+          "id": "b254a4f9-09bb-55c8-87c0-538f91e51ace"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-2-references-0104",
+      "type": "paragraph",
+      "order": 104,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "-->"
+      },
+      "metadata": {}
+    }
+  ]
+}

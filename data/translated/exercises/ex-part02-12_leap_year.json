@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-12_leap_year",
+  "lesson_id": "part02-3-combining-conditions",
+  "part": 2,
+  "tmc_name": "part02-12_leap_year",
+  "title_original": "Leap year",
+  "title_vi": "Năm nhuận",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Generally, any year that is divisible by four is a leap year. However, if the year is additionally divisible by 100, it is a leap year only if it also divisible by 400.\n\nPlease write a program which asks the user for a year, and then prints out whether that year is a leap year or not.\n\nSome examples:\n\n<sample-output>\n\nPlease type in a year: **2011**\nThat year is not a leap year.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a year: **2020**\nThat year is a leap year.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a year: **1800**\nThat year is not a leap year.\n\n</sample-output>",
+  "description_vi": "Nói chung, năm nào chia hết cho 4 là năm nhuận. Tuy nhiên, nếu năm đó chia hết cho 100 thì năm đó chỉ chia hết cho 400 là năm nhuận.\n\nHãy viết chương trình hỏi người dùng một năm rồi in ra năm đó có phải là năm nhuận hay không.\n\nMột số ví dụ:\n\n<sample-output>\n\nVui lòng nhập năm: **2011**\nNăm đó không phải là năm nhuận.\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập năm: **2020**\nNăm đó là năm nhuận.\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập năm: **1800**\nNăm đó không phải là năm nhuận.\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "76a87c2154e70d0ef8a1fdb9ad7db676f15118e44ff834fda49fe0050c298856",
+  "order": 34
+}

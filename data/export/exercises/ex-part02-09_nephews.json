@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-09_nephews",
+  "lesson_id": "part02-3-combining-conditions",
+  "part": 2,
+  "tmc_name": "part02-09_nephews",
+  "title_original": "Nephews",
+  "title_vi": "cháu trai",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks for the user's name. If the name is Huey, Dewey or Louie, the program should recognise the user as one of Donald Duck's nephews.\n\nIn a similar fashion, if the name is Morty or Ferdie, the program should recognise the user as one of Mickey Mouse's nephews.\n\nSome examples:\n\n<sample-output>\n\nPlease type in your name: **Morty**\nI think you might be one of Mickey Mouse's nephews.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in your name: **Huey**\nI think you might be one of Donald Duck's nephews.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in your name: **Ken**\nYou're not a nephew of any character I know of.\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình hỏi tên người dùng. Nếu tên là Huey, Dewey hoặc Louie, chương trình sẽ nhận dạng người dùng là một trong những cháu trai của Vịt Donald.\n\nTheo cách tương tự, nếu tên là Morty hoặc Ferdie, chương trình sẽ nhận dạng người dùng là một trong những cháu trai của Chuột Mickey.\n\nMột số ví dụ:\n\n<sample-output>\n\nVui lòng nhập tên của bạn: **Morty**\nTôi nghĩ bạn có thể là một trong những cháu trai của chuột Mickey.\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập tên của bạn: **Huey**\nTôi nghĩ bạn có thể là một trong những cháu trai của Donald Duck.\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập tên của bạn: **Ken**\nBạn không phải là cháu trai của bất kỳ nhân vật nào mà tôi biết.\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "5668390704c592463d84af4fe17beda32e89ee5af712656a7c234ffb9e925247",
+  "order": 22
+}

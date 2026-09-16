@@ -1,0 +1,16 @@
+{
+  "id": "ex-part10-10_phone_book_v1",
+  "lesson_id": "part10-4-application-development",
+  "part": 10,
+  "tmc_name": "part10-10_phone_book_v1",
+  "title_original": "Phone book expansion, version 1",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "In this exercise you will create a small expansion to the phone book application. The code from the above example is in the exercise template. Please add a command which lets the user search the phone book by number. After the addition the application should work as follows:\n\n<sample-output>\n\ncommands:\n0 exit\n1 add entry\n2 search\n3 search by number\n\ncommand: **1**\nname: **Eric**\nnumber: **02-123456**\n\ncommand: **1**\nname: **Eric**\nnumber: **045-4356713**\n\ncommand: **3**\nnumber: **02-123456**\nEric\n\ncommand: **3**\nnumber: **0100100**\nunknown number\n\ncommand: **0**\n\n</sample-output>\n\nPlease implement this addition with respect to the current structure of the program. This means that in the `PhoneBookApplication` class you should add an appropriate helper method to allow for the new functionality, and also add a new branch to the `while` loop. In the `PhoneBook` class you should add a method which allows for searching with a number.\n\n**NB:** as you test your program and end up with lots of different numbers stored in the `phonebook.txt` file, there is a chance the local tests will not be passed if conflicting data is read from the file as the app starts. You can try emptying the contents of any `phonebook.txt` files you find in the directory for the exercise _before_ running the local tests. Which one of the files is used by your program may depend on your Visual Studio Code settings. Please have a look at the explanation in [part 6](/part-6/1-reading-files#what-if-visual-studio-code-cannot-find-my-file). If your solution is correct, the tests on the server should still pass normally, regardless.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "4bfa8d5ab0869cb424064f3d1dee3fdaedb51ef807e66bfc32cc667d8dba7d3d",
+  "order": 75
+}

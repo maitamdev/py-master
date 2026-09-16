@@ -1,0 +1,339 @@
+{
+  "id": "part05-4-tuple",
+  "part": 5,
+  "part_slug": "part-5",
+  "slug": "4-tuple",
+  "is_part_index": false,
+  "title_original": "Tuple",
+  "path": "/part-5/4-tuple",
+  "source_path": "data/part-5/4-tuple.md",
+  "source_hash": "ca1ac31d88ca5785e942cfef23bf65b65252b1f4c5e678a689638ec6afeec392",
+  "frontmatter": {
+    "path": "/part-5/4-tuple",
+    "title": "Tuple",
+    "hidden": false
+  },
+  "chunks_count": 51,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will be familiar with the tuple data type\n- You will be able to create tuples from various types of values\n- You will know the difference between a tuple and a list\n- You will be able to name some typical use cases for tuples",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will be familiar with the tuple data type\n- You will be able to create tuples from various types of values\n- You will know the difference between a tuple and a list\n- You will be able to name some typical use cases for tuples\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Tuple is a data structure which is, in many ways, similar to a list. The most important differences between the two are:",
+      "raw_source": "Tuple is a data structure which is, in many ways, similar to a list. The most important differences between the two are:"
+    },
+    {
+      "raw_type": "list",
+      "content": "* Tuples are enclosed in parentheses `()`, while lists are enclosed in square brackets `[]`\n* Tuples are _immutable_, while the contents of a list may change",
+      "raw_source": "* Tuples are enclosed in parentheses `()`, while lists are enclosed in square brackets `[]`\n* Tuples are _immutable_, while the contents of a list may change"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The following bit of code creates a tuple containing the coordinates of a point:",
+      "raw_source": "The following bit of code creates a tuple containing the coordinates of a point:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "point = (10, 20)",
+      "raw_source": "```python\npoint = (10, 20)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The items stored in a tuple are accessed by index, just like the items stored in a list:",
+      "raw_source": "The items stored in a tuple are accessed by index, just like the items stored in a list:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "point = (10, 20)\nprint(\"x coordinate:\", point[0])\nprint(\"y coordinate:\", point[1])",
+      "raw_source": "```python\npoint = (10, 20)\nprint(\"x coordinate:\", point[0])\nprint(\"y coordinate:\", point[1])\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "x coordinate: 10\ny coordinate: 20",
+      "raw_source": "<sample-output>\n\nx coordinate: 10\ny coordinate: 20\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The values stored in a tuple cannot be changed after the tuple has been defined. The following will _not_ work:",
+      "raw_source": "The values stored in a tuple cannot be changed after the tuple has been defined. The following will _not_ work:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "point = (10, 20)\npoint[0] = 15",
+      "raw_source": "```python\npoint = (10, 20)\npoint[0] = 15\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "TypeError: 'tuple' object does not support item assignment",
+      "raw_source": "<sample-output>\n\nTypeError: 'tuple' object does not support item assignment\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Create a tuple",
+        "tmcname": "part05-23_create_tuple"
+      },
+      "inner_content": "Please write a function named `create_tuple(x: int, y: int, z: int)`, which takes three integers as its arguments, and creates and returns a tuple based on the following criteria:\n\n1. The first element in the tuple is the smallest of the arguments\n2. The second element in the tuple is the greatest of the arguments\n3. The third element in the tuple is the sum of the arguments\n\nAn example of its use:\n\n```python\n\nif __name__ == \"__main__\":\n    print(create_tuple(5, 3, -1))\n\n```\n\n<sample-output>\n\n(-1, 5, 7)\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Create a tuple' tmcname='part05-23_create_tuple'>\n\nPlease write a function named `create_tuple(x: int, y: int, z: int)`, which takes three integers as its arguments, and creates and returns a tuple based on the following criteria:\n\n1. The first element in the tuple is the smallest of the arguments\n2. The second element in the tuple is the greatest of the arguments\n3. The third element in the tuple is the sum of the arguments\n\nAn example of its use:\n\n```python\n\nif __name__ == \"__main__\":\n    print(create_tuple(5, 3, -1))\n\n```\n\n<sample-output>\n\n(-1, 5, 7)\n\n</sample-output>\n\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "The oldest person",
+        "tmcname": "part05-24_oldest_person"
+      },
+      "inner_content": "Please write a function named `oldest_person(people: list)`, which takes a list of tuples as its argument. In each tuple, the first element is the name of a person, and the second element is their year of birth. The function should find the oldest person on the list and return their name.\n\nAn example of the function in action:\n\n```python\np1 = (\"Adam\", 1977)\np2 = (\"Ellen\", 1985)\np3 = (\"Mary\", 1953)\np4 = (\"Ernest\", 1997)\npeople = [p1, p2, p3, p4]\n\nprint(oldest_person(people))\n```\n\n<sample-output>\n\nMary\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='The oldest person' tmcname='part05-24_oldest_person'>\n\nPlease write a function named `oldest_person(people: list)`, which takes a list of tuples as its argument. In each tuple, the first element is the name of a person, and the second element is their year of birth. The function should find the oldest person on the list and return their name.\n\nAn example of the function in action:\n\n```python\np1 = (\"Adam\", 1977)\np2 = (\"Ellen\", 1985)\np3 = (\"Mary\", 1953)\np4 = (\"Ernest\", 1997)\npeople = [p1, p2, p3, p4]\n\nprint(oldest_person(people))\n```\n\n<sample-output>\n\nMary\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Older people",
+        "tmcname": "part05-25_older_people"
+      },
+      "inner_content": "In this exercise we are handling tuples just like the ones described in the previous exercise.\n\nPlease write a function named `older_people(people: list, year: int)`, which selects all those people on the list who were born _before_ the year given as an argument. The function should return the names of these people in a new list.\n\nAn example of its use:\n\n```python\np1 = (\"Adam\", 1977)\np2 = (\"Ellen\", 1985)\np3 = (\"Mary\", 1953)\np4 = (\"Ernest\", 1997)\npeople = [p1, p2, p3, p4]\n\nolder = older_people(people, 1979)\nprint(older)\n```\n\n<sample-output>\n\n[ 'Adam', 'Mary' ]\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Older people' tmcname='part05-25_older_people'>\n\nIn this exercise we are handling tuples just like the ones described in the previous exercise.\n\nPlease write a function named `older_people(people: list, year: int)`, which selects all those people on the list who were born _before_ the year given as an argument. The function should return the names of these people in a new list.\n\nAn example of its use:\n\n```python\np1 = (\"Adam\", 1977)\np2 = (\"Ellen\", 1985)\np3 = (\"Mary\", 1953)\np4 = (\"Ernest\", 1997)\npeople = [p1, p2, p3, p4]\n\nolder = older_people(people, 1979)\nprint(older)\n```\n\n<sample-output>\n\n[ 'Adam', 'Mary' ]\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "What is the purpose of a tuple?",
+      "raw_source": "## What is the purpose of a tuple?"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Tuples are ideal for when there is a set collection of values which are in some way connected. For example, when there is a need to handle the x and y coordinates of a point, a tuple is a natural choice, because coordinates will always consist of two values:",
+      "raw_source": "Tuples are ideal for when there is a set collection of values which are in some way connected. For example, when there is a need to handle the x and y coordinates of a point, a tuple is a natural choice, because coordinates will always consist of two values:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "point = (10, 20)",
+      "raw_source": "```python\npoint = (10, 20)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Technically it is of course possible to also use a list to store these:",
+      "raw_source": "Technically it is of course possible to also use a list to store these:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "point = [10, 20]",
+      "raw_source": "```python\npoint = [10, 20]\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A list is a collection of consecutive items in a certain order. The size of a list may also change. When we are storing the coordinates of a point, we want to store the x and y coordinates specifically, not an arbitrary list containing those values.",
+      "raw_source": "A list is a collection of consecutive items in a certain order. The size of a list may also change. When we are storing the coordinates of a point, we want to store the x and y coordinates specifically, not an arbitrary list containing those values."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Because tuples are immutable, unlike lists, they can be used as keys in a dictionary. The following bit of code creates a dictionary, where the keys are coordinate points:",
+      "raw_source": "Because tuples are immutable, unlike lists, they can be used as keys in a dictionary. The following bit of code creates a dictionary, where the keys are coordinate points:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "points = {}\npoints[(3, 5)] = \"monkey\"\npoints[(5, 0)] = \"banana\"\npoints[(1, 2)] = \"harpsichord\"\nprint(points[(3, 5)])",
+      "raw_source": "```python\npoints = {}\npoints[(3, 5)] = \"monkey\"\npoints[(5, 0)] = \"banana\"\npoints[(1, 2)] = \"harpsichord\"\nprint(points[(3, 5)])\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "monkey",
+      "raw_source": "<sample-output>\nmonkey\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Attempting a similar dictionary definition using lists would _not_ work:",
+      "raw_source": "Attempting a similar dictionary definition using lists would _not_ work:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "points = {}\npoints[[3, 5]] = \"monkey\"\npoints[[5, 0]] = \"banana\"\npoints[[1, 2]] = \"harpsichord\"\nprint(points[[3, 5]])",
+      "raw_source": "```python\npoints = {}\npoints[[3, 5]] = \"monkey\"\npoints[[5, 0]] = \"banana\"\npoints[[1, 2]] = \"harpsichord\"\nprint(points[[3, 5]])\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "TypeError: unhashable type: 'list'",
+      "raw_source": "<sample-output>\n\nTypeError: unhashable type: 'list'\n\n</sample-output>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Tuples without parentheses",
+      "raw_source": "## Tuples without parentheses"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The parentheses are not strictly necessary when defining tuples. The following two variable assignments are identical in their results:",
+      "raw_source": "The parentheses are not strictly necessary when defining tuples. The following two variable assignments are identical in their results:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "numbers = (1, 2, 3)",
+      "raw_source": "```python\nnumbers = (1, 2, 3)\n```"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "numbers = 1, 2, 3",
+      "raw_source": "```python\nnumbers = 1, 2, 3\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This means we can also easily return multiple values using tuples. Let's have alook at he following example:",
+      "raw_source": "This means we can also easily return multiple values using tuples. Let's have alook at he following example:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def minmax(my_list):\n  return min(my_list), max(my_list)\n\nmy_list = [33, 5, 21, 7, 88, 312, 5]\n\nmin_value, max_value = minmax(my_list)\nprint(f\"The smallest item is {min_value} and the greatest item is {max_value}\")",
+      "raw_source": "```python\ndef minmax(my_list):\n  return min(my_list), max(my_list)\n\nmy_list = [33, 5, 21, 7, 88, 312, 5]\n\nmin_value, max_value = minmax(my_list)\nprint(f\"The smallest item is {min_value} and the greatest item is {max_value}\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The smallest item is 5 and the greatest item is 312",
+      "raw_source": "<sample-output>\n\nThe smallest item is 5 and the greatest item is 312\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This function returns two values in a tuple. The return value is assigned to two variables at once:",
+      "raw_source": "This function returns two values in a tuple. The return value is assigned to two variables at once:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "min_value, max_value = minmax(my_list)",
+      "raw_source": "```python\nmin_value, max_value = minmax(my_list)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Using parentheses may make the notation more clear. On the left hand side of the assignment statement we also have a tuple, which contains two variable names. The values contained within the tuple returned by the function are assigned to these two variables.",
+      "raw_source": "Using parentheses may make the notation more clear. On the left hand side of the assignment statement we also have a tuple, which contains two variable names. The values contained within the tuple returned by the function are assigned to these two variables."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "(min_value, max_value) = minmax(my_list)",
+      "raw_source": "```python\n(min_value, max_value) = minmax(my_list)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You may remember the dictionary method `items` in the previous section. We used it to access all the keys and values stored in a dictionary:",
+      "raw_source": "You may remember the dictionary method `items` in the previous section. We used it to access all the keys and values stored in a dictionary:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "my_dictionary = {}\n\nmy_dictionary[\"apina\"] = \"monkey\"\nmy_dictionary[\"banaani\"] = \"banana\"\nmy_dictionary[\"cembalo\"] = \"harpsichord\"\n\nfor key, value in my_dictionary.items():\n    print(\"key:\", key)\n    print(\"value:\", value)",
+      "raw_source": "```python\nmy_dictionary = {}\n\nmy_dictionary[\"apina\"] = \"monkey\"\nmy_dictionary[\"banaani\"] = \"banana\"\nmy_dictionary[\"cembalo\"] = \"harpsichord\"\n\nfor key, value in my_dictionary.items():\n    print(\"key:\", key)\n    print(\"value:\", value)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Tuples are at work here, too. The method `my_dictionary.items()` returns each key-value pair as a tuple, where the first item is the key and the second item is the value.",
+      "raw_source": "Tuples are at work here, too. The method `my_dictionary.items()` returns each key-value pair as a tuple, where the first item is the key and the second item is the value."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Another common use case for tuples is swapping the values of two variables:",
+      "raw_source": "Another common use case for tuples is swapping the values of two variables:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "number1, number2 = number2, number1",
+      "raw_source": "```python\nnumber1, number2 = number2, number1\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The assignment statement above swaps the values stored in the variables `number1` and `number2`. The result is identical to what is achieved with the following bit of code, using a helper variable:",
+      "raw_source": "The assignment statement above swaps the values stored in the variables `number1` and `number2`. The result is identical to what is achieved with the following bit of code, using a helper variable:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "helper_var = number1\nnumber1 = number2\nnumber2 = helper_var",
+      "raw_source": "```python\nhelper_var = number1\nnumber1 = number2\nnumber2 = helper_var\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Student database",
+        "tmcname": "part05-26_student_database"
+      },
+      "inner_content": "In this series of exercises you will create a simple student database. Before diving in, please spend a moment reading through the instructions and thinking about what sort of data structures are necessary for organising the data stored by your program.\n\n#### adding students\n\nFirst write a function named `add_student`, which adds a new student to the database. Also write a preliminary version of the function `print_student`, which prints out the information of a single student.\n\nThese function are used as follows:\n\n```python\nstudents = {}\nadd_student(students, \"Peter\")\nadd_student(students, \"Eliza\")\nprint_student(students, \"Peter\")\nprint_student(students, \"Eliza\")\nprint_student(students, \"Jack\")\n```\n\nYour program should now print out\n\n<sample-output>\n\n<pre>\nPeter:\n no completed courses\nEliza:\n no completed courses\nJack: no such person in the database\n</pre>\n\n</sample-output>\n\n#### adding completed courses\n\nPlease write a function named `add_course`, which adds a completed course to the information of a specific student in the database. The course data is a tuple consisting of the name of the course and the grade:\n\n```python\nstudents = {}\nadd_student(students, \"Peter\")\nadd_course(students, \"Peter\", (\"Introduction to Programming\", 3))\nadd_course(students, \"Peter\", (\"Advanced Course in Programming\", 2))\nprint_student(students, \"Peter\")\n```\n\nWhen some courses have been added, the information printed out changes:\n\n<sample-output>\n\n<pre>\nPeter:\n 2 completed courses:\n  Introduction to Programming 3\n  Advanced Course in Programming 2\n average grade 2.5\n</pre>\n\n</sample-output>\n\n#### repeating courses\n\nCourses with grade 0 should be ignored when adding course information. Additionally, if the course is already in the database in that specific student's information, the grade recorded in the database should never be lowered if the course is repeated.\n\n```python\nstudents = {}\nadd_student(students, \"Peter\")\nadd_course(students, \"Peter\", (\"Introduction to Programming\", 3))\nadd_course(students, \"Peter\", (\"Advanced Course in Programming\", 2))\nadd_course(students, \"Peter\", (\"Data Structures and Algorithms\", 0))\nadd_course(students, \"Peter\", (\"Introduction to Programming\", 2))\nprint_student(students, \"Peter\")\n```\n\n<sample-output>\n\n<pre>\nPeter:\n 2 completed courses:\n  Introduction to Programming 3\n  Advanced Course in Programming 2\n average grade 2.5\n</pre>\n\n</sample-output>\n\n#### summary of database\n\nPlease write a function named `summary`, which prints out a summary based on all the information stored in the database.\n\n```python\nstudents = {}\nadd_student(students, \"Peter\")\nadd_student(students, \"Eliza\")\nadd_course(students, \"Peter\", (\"Data Structures and Algorithms\", 1))\nadd_course(students, \"Peter\", (\"Introduction to Programming\", 1))\nadd_course(students, \"Peter\", (\"Advanced Course in Programming\", 1))\nadd_course(students, \"Eliza\", (\"Introduction to Programming\", 5))\nadd_course(students, \"Eliza\", (\"Introduction to Computer Science\", 4))\nsummary(students)\n```\n\nThis should print out\n\n<sample-output>\n\n<pre>\nstudents 2\nmost courses completed 3 Peter\nbest average grade 4.5 Eliza\n</pre>\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Student database' tmcname='part05-26_student_database'>\n\nIn this series of exercises you will create a simple student database. Before diving in, please spend a moment reading through the instructions and thinking about what sort of data structures are necessary for organising the data stored by your program.\n\n#### adding students\n\nFirst write a function named `add_student`, which adds a new student to the database. Also write a preliminary version of the function `print_student`, which prints out the information of a single student.\n\nThese function are used as follows:\n\n```python\nstudents = {}\nadd_student(students, \"Peter\")\nadd_student(students, \"Eliza\")\nprint_student(students, \"Peter\")\nprint_student(students, \"Eliza\")\nprint_student(students, \"Jack\")\n```\n\nYour program should now print out\n\n<sample-output>\n\n<pre>\nPeter:\n no completed courses\nEliza:\n no completed courses\nJack: no such person in the database\n</pre>\n\n</sample-output>\n\n#### adding completed courses\n\nPlease write a function named `add_course`, which adds a completed course to the information of a specific student in the database. The course data is a tuple consisting of the name of the course and the grade:\n\n```python\nstudents = {}\nadd_student(students, \"Peter\")\nadd_course(students, \"Peter\", (\"Introduction to Programming\", 3))\nadd_course(students, \"Peter\", (\"Advanced Course in Programming\", 2))\nprint_student(students, \"Peter\")\n```\n\nWhen some courses have been added, the information printed out changes:\n\n<sample-output>\n\n<pre>\nPeter:\n 2 completed courses:\n  Introduction to Programming 3\n  Advanced Course in Programming 2\n average grade 2.5\n</pre>\n\n</sample-output>\n\n#### repeating courses\n\nCourses with grade 0 should be ignored when adding course information. Additionally, if the course is already in the database in that specific student's information, the grade recorded in the database should never be lowered if the course is repeated.\n\n```python\nstudents = {}\nadd_student(students, \"Peter\")\nadd_course(students, \"Peter\", (\"Introduction to Programming\", 3))\nadd_course(students, \"Peter\", (\"Advanced Course in Programming\", 2))\nadd_course(students, \"Peter\", (\"Data Structures and Algorithms\", 0))\nadd_course(students, \"Peter\", (\"Introduction to Programming\", 2))\nprint_student(students, \"Peter\")\n```\n\n<sample-output>\n\n<pre>\nPeter:\n 2 completed courses:\n  Introduction to Programming 3\n  Advanced Course in Programming 2\n average grade 2.5\n</pre>\n\n</sample-output>\n\n#### summary of database\n\nPlease write a function named `summary`, which prints out a summary based on all the information stored in the database.\n\n```python\nstudents = {}\nadd_student(students, \"Peter\")\nadd_student(students, \"Eliza\")\nadd_course(students, \"Peter\", (\"Data Structures and Algorithms\", 1))\nadd_course(students, \"Peter\", (\"Introduction to Programming\", 1))\nadd_course(students, \"Peter\", (\"Advanced Course in Programming\", 1))\nadd_course(students, \"Eliza\", (\"Introduction to Programming\", 5))\nadd_course(students, \"Eliza\", (\"Introduction to Computer Science\", 4))\nsummary(students)\n```\n\nThis should print out\n\n<sample-output>\n\n<pre>\nstudents 2\nmost courses completed 3 Peter\nbest average grade 4.5 Eliza\n</pre>\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "A square of letters",
+        "tmcname": "part05-27_letter_square"
+      },
+      "inner_content": "This final exercise in this part is a relatively demanding problem solving task. It can be solved in many different ways. Even though this current section in the material covers tuples, tuples are not necessarily the best way to go about solving this.\n\nPlease write a program which prints out a square of letters as specified in the examples below. You may assume there will be at most 26 layers.\n\n<sample-output>\n\nLayers: **3**\n<pre>\nCCCCC\nCBBBC\nCBABC\nCBBBC\nCCCCC\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nLayers: **4**\n<pre>\nDDDDDDD\nDCCCCCD\nDCBBBCD\nDCBABCD\nDCBBBCD\nDCCCCCD\nDDDDDDD\n</pre>\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+      "raw_source": "<programming-exercise name=\"A square of letters\" tmcname=\"part05-27_letter_square\">\n\nThis final exercise in this part is a relatively demanding problem solving task. It can be solved in many different ways. Even though this current section in the material covers tuples, tuples are not necessarily the best way to go about solving this.\n\nPlease write a program which prints out a square of letters as specified in the examples below. You may assume there will be at most 26 layers.\n\n<sample-output>\n\nLayers: **3**\n<pre>\nCCCCC\nCBBBC\nCBABC\nCBBBC\nCCCCC\n</pre>\n\n</sample-output>\n\n<sample-output>\n\nLayers: **4**\n<pre>\nDDDDDDD\nDCCCCCD\nDCBBBCD\nDCBABCD\nDCBBBCD\nDCCCCCD\nDDDDDDD\n</pre>\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "<!---\nA quiz to review the contents of this section:",
+      "raw_source": "<!---\nA quiz to review the contents of this section:"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "69694e01-4c47-5b9d-8a00-b0d96a477dc7"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"69694e01-4c47-5b9d-8a00-b0d96a477dc7\"></quiz>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "-->",
+      "raw_source": "-->"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Please respond to a quick questionnaire on this week's materials.",
+      "raw_source": "Please respond to a quick questionnaire on this week's materials."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "751a95a2-e308-58a0-8283-74fbef6259ed"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"751a95a2-e308-58a0-8283-74fbef6259ed\"></quiz>"
+    }
+  ]
+}

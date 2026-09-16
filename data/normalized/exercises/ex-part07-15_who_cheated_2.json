@@ -1,0 +1,16 @@
+{
+  "id": "ex-part07-15_who_cheated_2",
+  "lesson_id": "part07-4-data-processing",
+  "part": 7,
+  "tmc_name": "part07-15_who_cheated_2",
+  "title_original": "Who cheated, version 2",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "You have the CSV files from the previous exercise at your disposal again. Please write a function named `final_points()`, which returns the final exam points received by the students, in a dictionary format, following these criteria:\n\n* If there are multiple submissions for the same task, the submission with the highest number of points is taken into account.\n* If the submission was made over 3 hours after the start time, the submission is ignored.\n\nThe tasks are numbered 1 to 8, and each submission is graded with 0 to 6 points.\n\nIn the dictionary returned the key should be the name of the student, and the value the total points received by the student.\n\nHint: nested dictionaries might be a good approach when processing the tasks and submission times of each student.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "ae234708398d019445be10af905f6c699db022401baa0e1bfb8859cc910fc35b",
+  "order": 34
+}

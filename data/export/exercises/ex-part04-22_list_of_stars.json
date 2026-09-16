@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-22_list_of_stars",
+  "lesson_id": "part04-4-definite-iteration",
+  "part": 4,
+  "tmc_name": "part04-22_list_of_stars",
+  "title_original": "List of stars",
+  "title_vi": "Danh sách các ngôi sao",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `list_of_stars`, which takes a list of integers as its argument. The function should print out lines of star characters. The numbers in the list specify how many stars each line should contain.\n\nFor example, with the function call `list_of_stars([3, 7, 1, 1, 2])` the following should be printed out:\n\n<sample-output>\n\n<pre>\n***\n*******\n*\n*\n**\n</pre>\n\n</sample-output>\n\n<!-- **Huomaa** että tällä hetkellä Windowsissa on ongelmia joidenkin tehtävien testien suorittamisessa. Jos törmäät seuraavaan virheilmoitukseen\n\n<img src=\"4_3_2.png\" alt=\"Listan iterointi\">\n\nvoit suorittaa testit lähettämällä ne palvelimelle valitsemalla testien suoritusnapin oikealla puolella olevasta symbolista avautuvasta TMC-valikosta _Submit solutions_.\n\nOngelman saa korjattua menemällä laajennuksen asennusvalikkoon ja muuttamalla \"TMC Data\" -kohdassa tehtävien sijainnin johonkin toiseen sijaintiin, jonka tiedostopolku on lyhempi, allaolevassa kuvassa nappi _change path_. Siirrossa saattaa kestää hetken, joten odotathan operaation päättymistä.\n\n<img src=\"4_3_3.png\" alt=\"Listan iterointi\">\n\nOngelmaan pyritään saamaan parempi ratkaisu lähipäivinä. -->",
+  "description_vi": "Hãy viết một hàm có tên `list_of_stars`, hàm này lấy danh sách các số nguyên làm đối số. Hàm sẽ in ra các dòng ký tự ngôi sao. Các con số trong danh sách xác định mỗi dòng sẽ chứa bao nhiêu ngôi sao.\n\nVí dụ: với hàm gọi `list_of_stars([3, 7, 1, 1, 2])`, nội dung sau sẽ được in ra:\n\n<sample-output>\n\n<pre>\n***\n*******\n*\n*\n**\n</pre>\n\n</sample-output>\n\n<!-- **Huomaa** että tällä hetkellä Windowsissa on ongelmia joidenkin tehtävien testien suorittamisessa. Jos törmäät seuraavaan virheilmoituksen\n\n<img src=\"4_3_2.png\" alt=\"Listan iterointi\">\n\nvoit suorittaa testit lähettämällä ne palvelimelle valitsemalla testien suoritusnapin oikealla puolella olevasta biểu tượng avautuvasta TMC-valikosta _Gửi giải pháp_.\n\nOngelman saa korjattua menemällä laajennuksen asennusvalikkoon ja muuttamalla \"TMC Data\" -kohdassa tehtävien sijainnin johonkin toiseen sijaintiin, jonka tieostopolku on lyhempi, allaolevassa kuvassa nappi _change path_. Siirrossa saattaa kestää hetken, joten odotathan operaation päättymistä.\n\n<img src=\"4_3_3.png\" alt=\"Listan iterointi\">\n\nOngelmaan pyritään saamaan parempi ratkaisu lähipäivinä. -->",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "938a703d46665aff79025880e0b564bc3033c33fc979e553e51f6f390bc77088",
+  "order": 48
+}

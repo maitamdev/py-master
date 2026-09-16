@@ -1,0 +1,16 @@
+{
+  "id": "ex-part08-02_row_sums ",
+  "lesson_id": "part08-1-objects-and-methods",
+  "part": 8,
+  "tmc_name": "part08-02_row_sums ",
+  "title_original": "Row sums",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "In Python, every value stored in a variable is a reference to an object, so any value stored in a list is also a reference to an object. This is also true when modelling a matrix data structure: each value in the top level list is a reference to another list, which in turn contains references to the objects representing the elements of the matrix.\n\nPlease write a function named `row_sums(my_matrix: list)`, which takes an integer matrix as its argument.\n\nThe function should add a new element on each row in the matrix. This element contains the sum of the other elements on that row. The function does not have a return value. It should modify the parameter matrix in place.\n\nAn example of the function in action:\n\n```python\nmy_matrix = [[1, 2], [3, 4]]\nrow_sums(my_matrix)\nprint(my_matrix)\n```\n\n<sample-output>\n\n[[1, 2, 3], [3, 4, 7]]\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "my_matrix = [[1, 2], [3, 4]]\nrow_sums(my_matrix)\nprint(my_matrix)",
+  "grading_data_available": false,
+  "source_hash": "86a4db35fe969ee14bdf5e173b6c295223dfddf93304aacd840c925f1ac04601",
+  "order": 25
+}

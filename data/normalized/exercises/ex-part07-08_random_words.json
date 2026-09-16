@@ -1,0 +1,16 @@
+{
+  "id": "ex-part07-08_random_words",
+  "lesson_id": "part07-2-randomness",
+  "part": 7,
+  "tmc_name": "part07-08_random_words",
+  "title_original": "Random words",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The exercise template contains the file `words.txt`, which contains some English language words, one on each line.\n\nPlease write a function named `words(n: int, beginning: str)`, which returns a list containing `n` random words from the `words.txt` file. All words should begin with the string specified by the second argument. \n\nThe same word should not appear twice in the list. If there are not enough words beginning with the specified string, the function should raise a `ValueError` exception.\n\nAn example of the function in action:\n\n```python\nword_list = words(3, \"ca\")\nfor word in word_list:\n    print(word)\n```\n\n<sample-output>\n\ncat\ncar\ncarbon\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "word_list = words(3, \"ca\")\nfor word in word_list:\n    print(word)",
+  "grading_data_available": false,
+  "source_hash": "175d6dd7007d0533c8a895de6a020e010d51074609f00c0a7b7b0b770f259262",
+  "order": 43
+}

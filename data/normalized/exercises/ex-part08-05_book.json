@@ -1,0 +1,16 @@
+{
+  "id": "ex-part08-05_book",
+  "lesson_id": "part08-3-defining-classes",
+  "part": 8,
+  "tmc_name": "part08-05_book",
+  "title_original": "Book",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a class named `Book` with the attributes `name`, `author`, `genre` and `year`, along with a constructor which assigns initial values to these attributes.\n\nYour class should work like this:\n\n```python\npython = Book(\"Fluent Python\", \"Luciano Ramalho\", \"programming\", 2015)\neverest = Book(\"High Adventure\", \"Edmund Hillary\", \"autobiography\", 1956)\n\nprint(f\"{python.author}: {python.name} ({python.year})\")\nprint(f\"The genre of the book {everest.name} is {everest.genre}\")\n```\n\n<sample-output>\n\nLuciano Ramalho: Fluent Python (2015)\nThe genre of the book High Adventure is autobiography\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "python = Book(\"Fluent Python\", \"Luciano Ramalho\", \"programming\", 2015)\neverest = Book(\"High Adventure\", \"Edmund Hillary\", \"autobiography\", 1956)\n\nprint(f\"{python.author}: {python.name} ({python.year})\")\nprint(f\"The genre of the book {everest.name} is {everest.genre}\")",
+  "grading_data_available": false,
+  "source_hash": "6fb5df66f6199460c6e2ec8c03f661f34767976621d0df9b404d4be481f852f9",
+  "order": 41
+}

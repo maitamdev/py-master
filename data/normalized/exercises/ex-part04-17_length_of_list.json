@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-17_length_of_list",
+  "lesson_id": "part04-3-lists",
+  "part": 4,
+  "tmc_name": "part04-17_length_of_list",
+  "title_original": "The length of a list",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `length` which takes a list as its argument and returns the length of the list.\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nresult = length(my_list)\nprint(\"The length is\", result)\n\n# the list given as an argument doesn't need to be stored in any variable\nresult = length([1, 1, 1, 1])\nprint(\"The length is\", result)\n```\n\n<sample-output>\n\nThe length is 5\nThe length is 4\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "my_list = [1, 2, 3, 4, 5]\nresult = length(my_list)\nprint(\"The length is\", result)\n\n# the list given as an argument doesn't need to be stored in any variable\nresult = length([1, 1, 1, 1])\nprint(\"The length is\", result)",
+  "grading_data_available": false,
+  "source_hash": "cb1ceef2afd46897b3529e2c328c226fe9852767a4413239ff13dde7e567f30f",
+  "order": 103
+}

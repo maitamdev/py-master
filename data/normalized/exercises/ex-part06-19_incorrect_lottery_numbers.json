@@ -1,0 +1,16 @@
+{
+  "id": "ex-part06-19_incorrect_lottery_numbers",
+  "lesson_id": "part06-3-errors",
+  "part": 6,
+  "tmc_name": "part06-19_incorrect_lottery_numbers",
+  "title_original": "Incorrect lottery numbers",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "The file `lottery_numbers.csv` containts winning lottery numbers in the following format:\n\n<sample-data>\n\nweek 1;5,7,11,13,23,24,30\nweek 2;9,13,14,24,34,35,37\n...etc...\n\n</sample-data>\n\nEach line should contain a header `week x`, followed by seven integer numbers which are all between 1 and 39 inclusive.\n\nThe file has been corrupted. Lines in the file may contain the following kinds of errors (these exact lines may not be present in the file, but errors in a similar format will be):\n\nThe week number is incorrect:\n\n<sample-data>\n\nweek zzc;1,5,13,22,24,25,26\n\n</sample-data>\n\nOne or more numbers are not correct:\n\n<sample-data>\n\nweek 22;1,**,5,6,13,2b,34\n\n</sample-data>\n\nToo few numbers:\n\n<sample-data>\n\nweek 13;4,6,17,19,24,33\n\n</sample-data>\n\nThe numbers are too small or large:\n\n<sample-data>\n\nweek 39;5,9,15,35,39,41,105\n\n</sample-data>\n\nThe same number appears twice:\n\n<sample-data>\n\nweek 41;5,12,3,35,12,14,36\n\n</sample-data>\n\nPlease write a function named `filter_incorrect()`, which creates a file called `correct_numbers.csv`. The file should contain only those lines from the original file which are in the correct format.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "3d71f60c7dccfa0fdd1206ec54946c814b97868e83064a95c6f9920201c83a15",
+  "order": 66
+}

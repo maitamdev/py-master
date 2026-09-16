@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-12_tic_tac_toe",
+  "lesson_id": "part05-2-references",
+  "part": 5,
+  "tmc_name": "part05-12_tic_tac_toe",
+  "title_original": "Tic-Tac-Toe",
+  "title_vi": "Tic-Tac-Toe",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Tic-Tac-Toe is played on a 3 by 3 grid, by two players who take turns inputting noughts and crosses. If either player succeeds in placing three of their own symbols on any row, column or diagonal, they win. If neither player manages this, it is a draw.\n\nPlease write a function named `play_turn(game_board: list, x: int, y: int, piece: str)`, which places the given symbol at the given coordinates on the board. The values of the coordinates on the board are between 0 and 2.\n\n**NB:** when compared to the sudoku exercises, the arguments the function takes are the other way around here. The column `x` comes first, and the row `y` second.\n\nThe board consists of the following strings:\n\n* `\"\"`: empty square\n* `\"X\"`: player 1 symbol\n* `\"O\"`: player 2 symbol\n\nThe function should return `True` if the square was empty and the symbol was successfully placed on the game board. The function should return `False` if the square was occupied, or if the coordinates weren't valid.\n\nAn example execution of the function:\n\n```python\ngame_board = [[\"\", \"\", \"\"], [\"\", \"\", \"\"], [\"\", \"\", \"\"]]\nprint(play_turn(game_board, 2, 0, \"X\"))\nprint(game_board)\n```\n\n<sample-output>\n\nTrue\n[['', '', 'X'], ['', '', ''], ['', '', '']]\n\n</sample-output>",
+  "description_vi": "Tic-Tac-Toe được chơi trên lưới 3 x 3, bởi hai người chơi thay phiên nhau nhập điểm không và điểm chéo. Nếu một trong hai người chơi thành công trong việc đặt ba biểu tượng của riêng mình trên bất kỳ hàng, cột hoặc đường chéo nào thì họ sẽ thắng. Nếu không có người chơi nào làm được điều này thì đó là một trận hòa.\n\nHãy viết một hàm có tên `play_turn(game_board: list, x: int, y: int, piece: str)` để đặt ký hiệu đã cho vào tọa độ đã cho trên bảng. Các giá trị tọa độ trên bảng nằm trong khoảng từ 0 đến 2.\n\n**NB:** khi so sánh với các bài tập sudoku, các đối số mà hàm đưa ra ở đây lại ngược lại. Cột `x` đứng đầu và hàng `y` đứng thứ hai.\n\nBảng bao gồm các chuỗi sau:\n\n* `\"\"`: hình vuông trống\n* `\"X\"`: biểu tượng người chơi 1\n* `\"O\"`: biểu tượng người chơi 2\n\nHàm sẽ trả về `True` nếu hình vuông trống và biểu tượng được đặt thành công trên bảng trò chơi. Hàm sẽ trả về `False` nếu hình vuông đã bị chiếm hoặc nếu tọa độ không hợp lệ.\n\nMột ví dụ thực hiện hàm:\n\n```python\ngame_board = [[\"\", \"\", \"\"], [\"\", \"\", \"\"], [\"\", \"\", \"\"]]\nprint(play_turn(game_board, 2, 0, \"X\"))\nprint(game_board)\n```\n\n<sample-output>\n\nĐúng\n[['', '', 'X'], ['', '', ''], ['', '', '']]\n\n</sample-output>",
+  "starter_code": "game_board = [[\"\", \"\", \"\"], [\"\", \"\", \"\"], [\"\", \"\", \"\"]]\nprint(play_turn(game_board, 2, 0, \"X\"))\nprint(game_board)",
+  "grading_data_available": false,
+  "source_hash": "e5e749279496c72851af7fe7b848cf4629f589aa9809321578bcf293a3522834",
+  "order": 88
+}

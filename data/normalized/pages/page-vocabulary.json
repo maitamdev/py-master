@@ -1,0 +1,49 @@
+{
+  "id": "page-vocabulary",
+  "slug": "vocabulary",
+  "title_original": "Glossary",
+  "title_vi": "",
+  "path": "/glossary",
+  "source_path": "data/vocabulary.md",
+  "source_hash": "476a57e4765aa7351c3bfaff14863b20dc236e6b7bce6959ce1bb7f6911bd500",
+  "blocks_count": 2,
+  "blocks": [
+    {
+      "id": "blk-page-vocabulary-0001",
+      "type": "paragraph",
+      "order": 1,
+      "source_hash": "c4226f9e61080d11f329e4c8db2f022c2fffcc0befe790fa94b5a4da960cd99e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This page will be filled in as the course progresses."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-page-vocabulary-0002",
+      "type": "custom_component",
+      "order": 2,
+      "source_hash": "329f5d853d136c1a42aab54aadef198e4e45eed62294203d6e037188e1d1e7ee",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "component",
+        "content": "<vocabulary />"
+      },
+      "translation": {
+        "language": "component",
+        "content": "<vocabulary />"
+      },
+      "metadata": {
+        "component_name": "vocabulary",
+        "attributes": {},
+        "raw_source": "<vocabulary />",
+        "parsed": true
+      }
+    }
+  ]
+}

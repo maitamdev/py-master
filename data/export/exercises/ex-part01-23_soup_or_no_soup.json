@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-23_soup_or_no_soup",
+  "lesson_id": "part01-5-conditional-statements",
+  "part": 1,
+  "tmc_name": "part01-23_soup_or_no_soup",
+  "title_original": "Soup or no soup",
+  "title_vi": "Súp hoặc không súp",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks for the user's name. If the name is anything but \"Jerry\", the program then asks for the number of portions and prints out the total cost. The price of a single portion is 5.90.\n\nTwo examples of the program's execution:\n\n<sample-output>\n\nPlease tell me your name: **Kramer**\nHow many portions of soup? **2**\nThe total cost is 11.8\nNext please!\n\n</sample-output>\n\n<sample-output>\n\nPlease tell me your name: **Jerry**\nNext please!\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình hỏi tên người dùng. Nếu tên không phải là \"Jerry\", chương trình sẽ hỏi số phần và in ra tổng chi phí. Giá của một phần là 5,90.\n\nHai ví dụ về việc thực hiện chương trình:\n\n<sample-output>\n\nVui lòng cho tôi biết tên của bạn: **Kramer**\nCó bao nhiêu phần súp? **2**\nTổng chi phí là 11,8\nTiếp theo xin vui lòng!\n\n</sample-output>\n\n<sample-output>\n\nVui lòng cho tôi biết tên của bạn: **Jerry**\nTiếp theo xin vui lòng!\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "1fcfb73463aefae0dd7dd504e655bf9b47570c4a22fafb1504d8fe099885601c",
+  "order": 38
+}

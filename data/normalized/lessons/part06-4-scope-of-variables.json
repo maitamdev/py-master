@@ -1,0 +1,912 @@
+{
+  "id": "part06-4-scope-of-variables",
+  "part": 6,
+  "part_slug": "part-6",
+  "slug": "4-scope-of-variables",
+  "is_part_index": false,
+  "title_original": "Local and global variables",
+  "title_vi": "",
+  "path": "/part-6/4-scope-of-variables",
+  "source_path": "data/part-6/4-scope-of-variables.md",
+  "source_hash": "04bdcbf14b470b2ab39092ae19a09fc3d60642b32be8b94979920b89a93d31d4",
+  "order": 1,
+  "blocks_count": 51,
+  "blocks": [
+    {
+      "id": "blk-part06-4-scope-of-variables-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "f248905b512f3e97dfd5a347aa2439e6c78370629aa8f2c1840d019a610f2faf",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know what is meant by a local variable\n- You will know how the scope of a variable affects how it is used\n- You will know what the Python keyword `global`means\n- You will be able to use local and global variables in the correct contexts"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "642c3c198cd12f2a1411f2928514176a36af8e043baecf85134fb84f1d1bbd57",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The _scope_ of a variable refers to the sections of a program where a variable is accessible. A _local_ variable is only accessible in a defined section of the program, while a _global_ variable is available for use in any section of the program."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0003",
+      "type": "heading",
+      "order": 3,
+      "source_hash": "3d90b1f3c7bc3c566822bd8127f10c0274a9d82f26dc2d3e5b60b327e385fbfb",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Local variables"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "fba2ba3376f47db857e1576629cf224fad94e7da9ff0cfc03d8b83b3dc4b0316",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Variables defined within a Python function are local variables, only available within the function. This applies to both function parameters, and other variables defined within the function definition. A variable which is local to a function _does not exist outside the function_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "7f9dfa09a637429ccc4aaabdb4c7e5f675926b8eed104684e28ab83f6e013061",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the following example we are trying to access the variable `x` in the main function, but this causes an error:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0006",
+      "type": "code",
+      "order": 6,
+      "source_hash": "2a63c3c7a8465fe49101287785dc7d205f137ac9ec3972698349b76ba745939f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def testing():\n    x = 5\n    print(x)\n\ntesting()\nprint(x)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def testing():\n    x = 5\n    print(x)\n\ntesting()\nprint(x)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2a63c3c7a8465fe49101287785dc7d205f137ac9ec3972698349b76ba745939f",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0007",
+      "type": "sample_output",
+      "order": 7,
+      "source_hash": "0eca33941492d4b449fb5c73e6e2d41b4e6c1594c622845e466e39059265f94e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "5\nNameError: name 'x' is not defined"
+      },
+      "translation": {
+        "language": "text",
+        "content": "5\nNameError: name 'x' is not defined"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n5\nNameError: name 'x' is not defined\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "88459bb41b482947a4cb43e8e2b52a53a88a942e487ba728bb2cbc7ebf90188b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The variable `x` only exists while the function `testing` is being executed. Other functions or the main function cannot access the variable."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0009",
+      "type": "heading",
+      "order": 9,
+      "source_hash": "367ea46c375318e15ed251f78afcf3528899bc67a2b827a9db15c7dc872cd4f9",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Global variables"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "f00ce5466964c78d1eae438d9a1d5bb69f07658c2cf46ed6727f859d4174771e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Variables defined within the main function are global variables. We previously defined the main function as those sections of code in a Python program which do not fall within any other function. The value stored in a global variable can be accessed from any other function in the program, so the following does not cause any errors:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0011",
+      "type": "code",
+      "order": 11,
+      "source_hash": "3c5245293e565fcecf53a0cf74f1ffb829bb88d8657ad6a14b4638e293cea72f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def testing():\n    print(x)\n\nx = 3\ntesting()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def testing():\n    print(x)\n\nx = 3\ntesting()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3c5245293e565fcecf53a0cf74f1ffb829bb88d8657ad6a14b4638e293cea72f",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0012",
+      "type": "sample_output",
+      "order": 12,
+      "source_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "3"
+      },
+      "translation": {
+        "language": "text",
+        "content": "3"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n3\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "4d0d2707ff0c076c91a94c7ff96f45a783f191b6e1857cdb320f306387969ded",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A global variable cannot be changed directly from within another function. The following function _has no effect_ on the value stored in the global variable:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "04ea24bc78aa9880b301f9ad705beef4e9b3ffc430504a88ffe1a47825b433ab",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def testing():\n    x = 5\n    print(x)\n\nx = 3\ntesting()\nprint(x)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def testing():\n    x = 5\n    print(x)\n\nx = 3\ntesting()\nprint(x)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "04ea24bc78aa9880b301f9ad705beef4e9b3ffc430504a88ffe1a47825b433ab",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0015",
+      "type": "sample_output",
+      "order": 15,
+      "source_hash": "0e4f3afd00375d1ed6e73b556e8b0edff20412352386e4f6b75469f931f0c315",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "5\n3"
+      },
+      "translation": {
+        "language": "text",
+        "content": "5\n3"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n5\n3\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "05e3b234f9b1005773c1fc57aef5681b088c34b9d19d7bc873de9d4f43694afa",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Here the function `testing` creates a _new, local_ variable `x`, which \"masks\" the global variable while the function is being executed. This variable has the value 5, but it is a different variable than the global `x` which is defined in the main function."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "3a547634b34765024e99caf20eb60d75c3bcf6ead599586b344636dcc75210c4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "But what would the following code do?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0018",
+      "type": "code",
+      "order": 18,
+      "source_hash": "8a41883cb41ede7e94afb2d6e2732eb1768305e493b6822ac61d277d4d909f62",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def testing():\n    print(x)\n    x = 5\n\nx = 3\ntesting()\nprint(x)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def testing():\n    print(x)\n    x = 5\n\nx = 3\ntesting()\nprint(x)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8a41883cb41ede7e94afb2d6e2732eb1768305e493b6822ac61d277d4d909f62",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0019",
+      "type": "sample_output",
+      "order": 19,
+      "source_hash": "59a569af3cd00a93835206113ab2844db8303565e720aee1c617d3e592e1b327",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "UnboundLocalError: local variable 'x' referenced before assignment"
+      },
+      "translation": {
+        "language": "text",
+        "content": "UnboundLocalError: local variable 'x' referenced before assignment"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nUnboundLocalError: local variable 'x' referenced before assignment\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "83518cb1310fb29fc4f020374e75d64583987565f18145adb9fb02b670ef8fc0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The function `testing` assigns a value to the variable `x`, so Python interprets `x` to be a local variable instead of the global variable of the same name. The function attempts to access the variable before it is defined, so there is an error."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "dcce1b11cb214bcc0c8004a49bc026923211e0123364c8698daa810a5da97e3a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If we wish to specify that we mean to change the global variable within a function, we will need the Python keyword `global`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0022",
+      "type": "code",
+      "order": 22,
+      "source_hash": "2795c1bf7bf1aedc0a4f8d5c8d798e2510d6eecaad8021087ae5e40937b34234",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def testing():\n    global x\n    x = 3\n    print(x)\n\nx = 5\ntesting()\nprint(x)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def testing():\n    global x\n    x = 3\n    print(x)\n\nx = 5\ntesting()\nprint(x)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2795c1bf7bf1aedc0a4f8d5c8d798e2510d6eecaad8021087ae5e40937b34234",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0023",
+      "type": "sample_output",
+      "order": 23,
+      "source_hash": "51ff22c4978ca03111524584e2001fd3905c8eafe277b2668eee8c691e3f821f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "3\n3"
+      },
+      "translation": {
+        "language": "text",
+        "content": "3\n3"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n3\n3\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "df8f5865f15ca10e1bfdde36e7318a54516de2e7b4fce6d2f84cf18c83a445df",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Now the assignment `x = 3` within the function also affects the main function. All sections of the program are using the same global variable `x`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0025",
+      "type": "heading",
+      "order": 25,
+      "source_hash": "1a7208256a6b5223bc1812ba9aca2b96818ac2c51b17b5ed5cd2883f114f49ba",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When should you use global variables?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "a5c23e66682075e3d1a5bfbe8d23f2778d965b58875850222fe714ae23db497e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Global variables are not a way to bypass function parameters or return values, and they should not be used as such. That is, it is _possible_ to write a function which stores its results directly in a global variable:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0027",
+      "type": "code",
+      "order": 27,
+      "source_hash": "454a495eca8b7e24c68ab5343b8567bf4fa9d97620994239079ca7f3491e93b5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def calculate_sum(a, b):\n    global result\n    result = a + b\n\ncalculate_sum(2, 3)\nprint(result)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def calculate_sum(a, b):\n    global result\n    result = a + b\n\ncalculate_sum(2, 3)\nprint(result)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "454a495eca8b7e24c68ab5343b8567bf4fa9d97620994239079ca7f3491e93b5",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "815c47e0e5c5f9a3b6416fe8c6f8d49862a059b00a19c5069440d47f3f7af752",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "It is better to write a function with a return value, as we are used to do by now:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0029",
+      "type": "code",
+      "order": 29,
+      "source_hash": "1c88aaaef1d1e20435a15e5ecdab2b3b5ddc20000880693c2f367d8fd79f59ac",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def calculate_sum(a, b):\n    return a + b\n\nresult = calculate_sum(2, 3)\nprint(result)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def calculate_sum(a, b):\n    return a + b\n\nresult = calculate_sum(2, 3)\nprint(result)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "1c88aaaef1d1e20435a15e5ecdab2b3b5ddc20000880693c2f367d8fd79f59ac",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "b16d3786b2715113c384459296968554d05dbd1e9e8aabf7dd515acd6c9bab35",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The advantage of the latter approach is that the function is an _independent_ whole. It has certain, defined parameters, and it returns a result. It has no side effects, so it can be tested and changed independently of the other sections of the program."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "b4167903c83201c2eaeaefbe252ec02436bd2ece85fc16e99d96d3c259222e06",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Global variables are useful in situations where we need to have some common, \"higher level\" information available to all functions in the program. The following is an example of just such a situation:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0032",
+      "type": "code",
+      "order": 32,
+      "source_hash": "f26e571df73a076dd4b8707714fbb510d153442640793538c06a640dd112425c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def calculate_sum(a, b):\n    global count\n    count += 1\n    return a + b\n\ndef calculate_difference(a, b):\n    global count\n    count += 1\n    return a - b\n\n\ncount = 0\nprint(calculate_sum(2, 3))\nprint(calculate_sum(5, 5))\nprint(calculate_difference(5, 2))\nprint(calculate_sum(1, 0))\nprint(\"There were\", count, \"function calls\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def calculate_sum(a, b):\n    global count\n    count += 1\n    return a + b\n\ndef calculate_difference(a, b):\n    global count\n    count += 1\n    return a - b\n\n\ncount = 0\nprint(calculate_sum(2, 3))\nprint(calculate_sum(5, 5))\nprint(calculate_difference(5, 2))\nprint(calculate_sum(1, 0))\nprint(\"There were\", count, \"function calls\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f26e571df73a076dd4b8707714fbb510d153442640793538c06a640dd112425c",
+        "length_lines": 17
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0033",
+      "type": "sample_output",
+      "order": 33,
+      "source_hash": "365c78e1facbf65f8ce3f3c72d04ccd305a52dd2c5836a4d0dcae25769603897",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "5\n10\n3\n1\nThere were 4 function calls"
+      },
+      "translation": {
+        "language": "text",
+        "content": "5\n10\n3\n1\nThere were 4 function calls"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n5\n10\n3\n1\nThere were 4 function calls\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "c2b393c542b1cd82aaa8fbc3eedc61e8ad1ac0bb82bc00d1ebf55032184d08da",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In this case we want to keep track of how many times either of the functions were called during the execution of the program. The global variable `count` is useful here, because we can increment it from the functions themselves as they are executed, but still access the final value in the main function."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0035",
+      "type": "heading",
+      "order": 35,
+      "source_hash": "95de4938ebbceaa01fd51978826ab9d19b31d4737cd659255c3aca474c5a6900",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Passing data from one function to another, revisited"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "196cfb656d12647549ebf2296f0db484a9e24d698e88bfdb0c351d3d2468bc95",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!--- see also section 4-6, some significant overlap-->\nIf a program consists of multiple functions, the question of passing data from one function to another often comes up."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "7c870ee4624fd5a8317cb5f24cd331395b34b68f40f42342d93075e843edafcb",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "When we touched upon this topic [previously](/part-4/6-strings-and-lists#passing-data-from-one-function-to-another), we had a program which asks the user for some integer values, prints them out, and performs some statistical analysis on the numbers. The program was divided into three separate functions:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0038",
+      "type": "code",
+      "order": 38,
+      "source_hash": "64ca11226d69ebb2d3158a49320b1f2e3325ffda8f9290cabbc1fcce636e5a9d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def input_from_user(how_many: int):\n    print(f\"Please type in {how_many} numbers:\")\n    numbers = []\n\n    for i in range(how_many):\n        number = int(input(f\"Number {i+1}: \"))\n        numbers.append(number)\n\n    return numbers\n\ndef print_result(numbers: list):\n    print(\"The numbers are: \")\n    for number in numbers:\n        print(number)\n\ndef analyze(numbers: list):\n    mean = sum(numbers) / len(numbers)\n    return f\"There are altogether {len(numbers)} numbers, the mean is {mean}, the smallest is {min(numbers)} and the greatest is {max(numbers)}\"\n\n# the main function using these functions\ninputs = input_from_user(5)\nprint_result(inputs)\nanalysis_result = analyze(inputs)\nprint(analysis_result)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def input_from_user(how_many: int):\n    print(f\"Please type in {how_many} numbers:\")\n    numbers = []\n\n    for i in range(how_many):\n        number = int(input(f\"Number {i+1}: \"))\n        numbers.append(number)\n\n    return numbers\n\ndef print_result(numbers: list):\n    print(\"The numbers are: \")\n    for number in numbers:\n        print(number)\n\ndef analyze(numbers: list):\n    mean = sum(numbers) / len(numbers)\n    return f\"There are altogether {len(numbers)} numbers, the mean is {mean}, the smallest is {min(numbers)} and the greatest is {max(numbers)}\"\n\n# the main function using these functions\ninputs = input_from_user(5)\nprint_result(inputs)\nanalysis_result = analyze(inputs)\nprint(analysis_result)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "64ca11226d69ebb2d3158a49320b1f2e3325ffda8f9290cabbc1fcce636e5a9d",
+        "length_lines": 24
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "cac941162aa96ef7426a925e0a7922b03036a8f663597781b34839be72efc735",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "An example of the program's execution:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0040",
+      "type": "sample_output",
+      "order": 40,
+      "source_hash": "24e6fcaff2a8d97e881e3129a2c4053d0bd672b4978599e936ddcc3f19f92e11",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in 5 numbers:\nNumber 1: 10\nNumber 2: 34\nNumber 3: -32\nNumber 4: 99\nNumber 5: -53\nThe numbers are:\n10\n34\n-32\n99\n-53\nThere are altogether 5 numbers, the mean is 11.6, the smallest is -53 and the greatest is 99"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in 5 numbers:\nNumber 1: 10\nNumber 2: 34\nNumber 3: -32\nNumber 4: 99\nNumber 5: -53\nThe numbers are:\n10\n34\n-32\n99\n-53\nThere are altogether 5 numbers, the mean is 11.6, the smallest is -53 and the greatest is 99"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in 5 numbers:\nNumber 1: 10\nNumber 2: 34\nNumber 3: -32\nNumber 4: 99\nNumber 5: -53\nThe numbers are:\n10\n34\n-32\n99\n-53\nThere are altogether 5 numbers, the mean is 11.6, the smallest is -53 and the greatest is 99\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "fedb152070604899b6cbfe76e7bf5b947562da15f53f2d07650771ef9ad4d2b9",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The basic principle here is that the main function \"stores\" the data processed by the program. Here, this means the numbers typed in by the user, which are stored in the variable `inputs`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "b3e64accdd3203fd9f580ec718413cd449af6987be72fdef0da01254ce928649",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If the numbers are needed in some function, the variable is passed as an argument, as seen above when the functions `print_result` and `analyze` are called. If the function produces a result that is relevant elsewhere in the program, the function returns this with a `return` statement, as seen with the functions `input_from_user` and `analyse` above."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0043",
+      "type": "paragraph",
+      "order": 43,
+      "source_hash": "4cfbf512a5cfcb3adf3b3abe58a6afd98ccd60b6fea3d4802daab500ad8e7ee9",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As always in programming, there are many ways to arrive at the same functionality. It would be possible to use the keyword `global` and have the functions directly access the `inputs` variable defined in the main function. There are good reasons why [this is not a smart move](https://softwareengineering.stackexchange.com/questions/148108/why-is-global-state-so-evil), however. When many different functions can access and potentially alter a variable directly, it becomes difficult to reliably track the program's state, which can make the program unpredictable. This is particularly true as the number of functions involved increases, which is common in large software projects."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "7cc1276d52d7d9b4d572287352aac8573064b983ef54b7b1946e48880ab38904",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In conclusion, passing data into and out of functions is best handled by arguments and return values."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0045",
+      "type": "paragraph",
+      "order": 45,
+      "source_hash": "8b4b1acc8ba4078ebf20e8a178888fc5ab36eee4bfe35cc47c34dfcb19be11c2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You could also separate the implicit main function in the example above into its own, explicit `main` function. Then the variable `inputs` would no longer be a global variable, but instead a local variable within the `main` function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0046",
+      "type": "code",
+      "order": 46,
+      "source_hash": "9d579ec6f60ad8129b2587a06f0f62c35638c0a556301c85049a5b0a350bf5aa",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# your main function goes here\ndef main():\n    inputs = input_from_user(5)\n    print_result(inputs)\n    analysis_result = analyze(inputs)\n\n    print(analysis_result)\n\n# run the main function\nmain()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# your main function goes here\ndef main():\n    inputs = input_from_user(5)\n    print_result(inputs)\n    analysis_result = analyze(inputs)\n\n    print(analysis_result)\n\n# run the main function\nmain()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "9d579ec6f60ad8129b2587a06f0f62c35638c0a556301c85049a5b0a350bf5aa",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0047",
+      "type": "paragraph",
+      "order": 47,
+      "source_hash": "b97eebcf5a0222c688482a2c1f8f4510ba0c7934c136e1f60999bbcc47c2ab75",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!---\nA quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0048",
+      "type": "quiz",
+      "order": 48,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "69694e01-4c47-5b9d-8a00-b0d96a477dc7",
+        "attributes": {
+          "id": "69694e01-4c47-5b9d-8a00-b0d96a477dc7"
+        }
+      }
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0049",
+      "type": "paragraph",
+      "order": 49,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0050",
+      "type": "paragraph",
+      "order": 50,
+      "source_hash": "e7c1a46e91282cacd4221fc454f07d2669740016f75a092ce3959836e6ef0903",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please respond to a quick questionnaire on this week's materials."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-4-scope-of-variables-0051",
+      "type": "quiz",
+      "order": 51,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "413a67e5-2eb9-5652-9ab0-58dfc4ebb021",
+        "attributes": {
+          "id": "413a67e5-2eb9-5652-9ab0-58dfc4ebb021"
+        }
+      }
+    }
+  ]
+}

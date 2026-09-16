@@ -1,0 +1,425 @@
+{
+  "id": "part13-4-more-pygame-techniques",
+  "part": 13,
+  "part_slug": "part-13",
+  "slug": "4-more-pygame-techniques",
+  "is_part_index": false,
+  "title_original": "More pygame techniques",
+  "title_vi": "Thêm kỹ thuật pygame",
+  "path": "/part-13/4-more-pygame-techniques",
+  "source_path": "data/part-13/4-more-pygame-techniques.md",
+  "source_hash": "500e920b617c508ba026635fede98eb27c18028317a391677fa0c45942554a09",
+  "order": 1,
+  "blocks_count": 22,
+  "blocks": [
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "7e02aa7800b7b38c78bb60447bba421ff2e2ac6cde0a721c2f7e215ed1fb8eff",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know how the title of the pygame window\n- You will be able to draw shapes with pygame\n- You will know how to display text in your window"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ biết tiêu đề của cửa sổ pygame như thế nào\n- Bạn sẽ có thể vẽ hình bằng pygame\n- Bạn sẽ biết cách hiển thị văn bản trong cửa sổ của mình"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0002",
+      "type": "heading",
+      "order": 2,
+      "source_hash": "db03c8701f4257e4f8ea5b472b7a7b3eb6d81c73c612323b105d9e722318257d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The window title"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tiêu đề cửa sổ"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "e8f03c26bec1c089004ced6d35a62601c9c097d4595dddb485194ebd28ec03a0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Your programs will look more professional if instead of \"pygame window\" the window title contains the actual name of the program.The title is set with the `pygame.display.set_caption` function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình của bạn sẽ trông chuyên nghiệp hơn nếu thay vì \"pygame window\", tiêu đề cửa sổ chứa tên thực của chương trình. Tiêu đề được đặt bằng chức năng `pygame.display.set_caption`:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0004",
+      "type": "code",
+      "order": 4,
+      "source_hash": "ad87ae634193cd38a00110304fd1afd1cfba08191888bf13d3e890e14fc95038",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "pygame.display.set_caption(\"Great Adventure\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "pygame.display.set_caption(\"Great Adventure\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ad87ae634193cd38a00110304fd1afd1cfba08191888bf13d3e890e14fc95038",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0005",
+      "type": "heading",
+      "order": 5,
+      "source_hash": "9529375c180d0c9dd6e71c2b9a2a12ce3e1776d8f84fb23ee66aad586352c9a6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Drawing shapes"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vẽ hình"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "8c0efe3890ebc85bc2657df753048fd37feadd1f901e97266c199d8708c96a0b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following program draws a rectangle, a circle and a line on the screen:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình sau vẽ một hình chữ nhật, một hình tròn và một đường thẳng lên màn hình:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0007",
+      "type": "code",
+      "order": 7,
+      "source_hash": "106b1897ab48b5f7b346227a0f33a776285c15d93031d431c42704c9b166e79f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\ndisplay = pygame.display.set_mode((640, 480))\ndisplay.fill((0, 0, 0))\n\npygame.draw.rect(display, (0, 255, 0), (50, 100, 200, 250))\npygame.draw.circle(display, (255, 0, 0), (200, 150), 40)\npygame.draw.line(display, (0, 0, 255), (80, 120), (300, 160), 2)\n\npygame.display.flip()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\ndisplay = pygame.display.set_mode((640, 480))\ndisplay.fill((0, 0, 0))\n\npygame.draw.rect(display, (0, 255, 0), (50, 100, 200, 250))\npygame.draw.circle(display, (255, 0, 0), (200, 150), 40)\npygame.draw.line(display, (0, 0, 255), (80, 120), (300, 160), 2)\n\npygame.display.flip()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "106b1897ab48b5f7b346227a0f33a776285c15d93031d431c42704c9b166e79f",
+        "length_lines": 16
+      }
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "016621b5191613e327e0640ab8af6ed84e746c54d529cb071634329eb94fa745",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Running the above code should look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chạy đoạn mã trên sẽ trông như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0009",
+      "type": "image",
+      "order": 9,
+      "source_hash": "803ea4e9d3f5fb55743e15535379b3ac675d0b6da7c13a710bbbb03c55be0891",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "pygame_shapes.gif",
+        "alt": "",
+        "attributes": {
+          "src": "pygame_shapes.gif"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0010",
+      "type": "heading",
+      "order": 10,
+      "source_hash": "2fa8597430bf0a3a37f8e225e30516694eee8921afaf9182f46f0c64922914b2",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Drawing text"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vẽ văn bản"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "f0ef99674dd69a5ee9f1fc1bc5365c98e84b2e9191b298c0392f6f66db4d4982",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Text in pygame is drawn in two steps: first we create an image containing the desired text, and then this image is drawn on the screen. It works like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Văn bản trong pygame được vẽ theo hai bước: đầu tiên chúng ta tạo một hình ảnh chứa văn bản mong muốn, sau đó hình ảnh này được vẽ trên màn hình. Nó hoạt động như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0012",
+      "type": "code",
+      "order": 12,
+      "source_hash": "8ce6fb8fc4ffa1662b82ffa2fcedeedccf47ebffff1a47e60600df252ff1925b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\ndisplay = pygame.display.set_mode((640, 480))\ndisplay.fill((0, 0, 0))\n\ngame_font = pygame.font.SysFont(\"Arial\", 24)\ntext = game_font.render(\"Moikka!\", True, (255, 0, 0))\ndisplay.blit(text, (100, 50))\npygame.display.flip()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "import pygame\n\npygame.init()\ndisplay = pygame.display.set_mode((640, 480))\ndisplay.fill((0, 0, 0))\n\ngame_font = pygame.font.SysFont(\"Arial\", 24)\ntext = game_font.render(\"Moikka!\", True, (255, 0, 0))\ndisplay.blit(text, (100, 50))\npygame.display.flip()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            exit()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8ce6fb8fc4ffa1662b82ffa2fcedeedccf47ebffff1a47e60600df252ff1925b",
+        "length_lines": 15
+      }
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "016621b5191613e327e0640ab8af6ed84e746c54d529cb071634329eb94fa745",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Running the above code should look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chạy đoạn mã trên sẽ trông như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0014",
+      "type": "image",
+      "order": 14,
+      "source_hash": "d660fce32e565a6cb8ad2bd5b8ceb5aa60eab41d96a0a79e6f05201f7265c271",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "pygame_text.gif",
+        "alt": "",
+        "attributes": {
+          "src": "pygame_text.gif"
+        }
+      }
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "7ddf6027b0f5ef7ca282a9d451962a8330f160b9ad8a92ecdd1497784d778bc4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Here the method `pygame.font.SysFont` creates a font object, which uses the system font Arial in size 24. The the method `render` creates an image of the specified text in the given colour. This image is drawn on the window with the `blit` method, just as before."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ở đây, phương thức `pygame.font.SysFont` tạo một đối tượng phông chữ, sử dụng phông chữ hệ thống Arial có kích thước 24. Phương thức `render` tạo ra hình ảnh của văn bản được chỉ định với màu đã cho. Hình ảnh này được vẽ trên cửa sổ bằng phương pháp `blit`, giống như trước đây."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "2b96d15bf76547a2dfb277301446fe4f16a59a5a6da3e9177e2af06f618ac72b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "NB: different systems will have different fonts available. If the system this program is exeuted on doesn't have the Arial font, even though Arial is a very common font available on most systems, the default system font is used instead. If you need to have a specific font available for your game, you can include the font file in the game directory and specify its location for the `pygame.font.Font` method."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lưu ý: các hệ thống khác nhau sẽ có sẵn các phông chữ khác nhau. Nếu hệ thống mà chương trình này được thực thi không có phông chữ Arial, mặc dù Arial là phông chữ rất phổ biến có sẵn trên hầu hết các hệ thống, phông chữ hệ thống mặc định sẽ được sử dụng thay thế. Nếu bạn cần có sẵn một phông chữ cụ thể cho trò chơi của mình, bạn có thể đưa tệp phông chữ vào thư mục trò chơi và chỉ định vị trí của nó cho phương pháp `pygame.font.Font`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0017",
+      "type": "heading",
+      "order": 17,
+      "source_hash": "988f06b3635487bb876deb80a2b413465d1ee7b15edc07b7912f50748d953dfa",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Exercises"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bài tập"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "b51c9ace7b918e8a425e9899e076f8b828923c69b695e0c127d372027c73e7ed",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Here are some more advanced exercises for practicing what you have learned in this part of the course material."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Dưới đây là một số bài tập nâng cao hơn để thực hành những gì bạn đã học trong phần này của tài liệu khóa học."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0019",
+      "type": "exercise",
+      "order": 19,
+      "source_hash": "e5ba896cca34daadd9fa539923cc684c5fb5344e663c078ab2ffff5c19edf9c3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which displays a clock face which displays the system time. The end result should look like this:\n\n<img src=\"pygame_clock.gif\">"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình hiển thị mặt đồng hồ hiển thị thời gian của hệ thống. Kết quả cuối cùng sẽ trông như thế này:\n\n<img src=\"pygame_clock.gif\">"
+      },
+      "metadata": {
+        "exercise_id": "ex-part13-16_clock",
+        "exercise_type": "programming-exercise",
+        "name": "Clock",
+        "tmc_name": "part13-16_clock",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0020",
+      "type": "exercise",
+      "order": 20,
+      "source_hash": "7749cba183e4698caaa4e9dfb83694748fa91eca075408a4ca8f607b08d905f7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please create a game where asteroids fall from the sky. The player moves a robot left and right and tries to collect the falling rocks. The player gets a point for each asteroid collected, and the points total is shown at the top of the window. The game ends when the player misses an asteroid. The end result should look like this:\n\n<img src=\"pygame_asteroids.gif\">\n\nNB: the above animation is from the Finnish version of the course. You may use the word \"Points\" instead of the Finnish equivalent \"Pisteet\" depicted above.\n\nThe exercise template contains the image `rock.png` for the asteroid."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng tạo một trò chơi trong đó các tiểu hành tinh rơi từ trên trời xuống. Người chơi di chuyển robot sang trái và phải và cố gắng thu thập những tảng đá rơi xuống. Người chơi nhận được một điểm cho mỗi tiểu hành tinh thu thập được và tổng số điểm được hiển thị ở đầu cửa sổ. Trò chơi kết thúc khi người chơi bắn trượt một tiểu hành tinh. Kết quả cuối cùng sẽ trông như thế này:\n\n<img src=\"pygame_asteroids.gif\">\n\nLưu ý: hoạt ảnh trên là từ phiên bản tiếng Phần Lan của khóa học. Bạn có thể sử dụng từ \"Điểm\" thay vì từ \"Pisteet\" tương đương trong tiếng Phần Lan được mô tả ở trên.\n\nMẫu bài tập chứa hình ảnh `rock.png` cho tiểu hành tinh."
+      },
+      "metadata": {
+        "exercise_id": "ex-part13-17_asteroids",
+        "exercise_type": "programming-exercise",
+        "name": "Asteroids",
+        "tmc_name": "part13-17_asteroids",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "ff05298c0973d60be8b75d25f01bfd9ecc9887b5ea6cf58dd19bc993cf013650",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please respond to a quick questionnaire on this part of the course."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng trả lời bảng câu hỏi nhanh về phần này của khóa học."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part13-4-more-pygame-techniques-0022",
+      "type": "quiz",
+      "order": 22,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "9b57c7ea-8983-507f-93e7-243be766e2ad",
+        "attributes": {
+          "id": "9b57c7ea-8983-507f-93e7-243be766e2ad"
+        }
+      }
+    }
+  ]
+}

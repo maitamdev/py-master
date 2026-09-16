@@ -1,0 +1,16 @@
+{
+  "id": "ex-part07-03_fractions",
+  "lesson_id": "part07-1-modules",
+  "part": 7,
+  "tmc_name": "part07-03_fractions",
+  "title_original": "Fractions",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please familiarize yourself with the Python module `fractions`. Use it to write a function named `fractionate(amount: int)`, which takes the number of parts as its argument. The function should divide the number 1 into as many equal sized fractions as is specified by the argument, and return these in a list.\n\nAn example of the function in action:\n\n```python\nfor p in fractionate(3):\n    print(p)\n\nprint()\n\nprint(fractionate(5))\n```\n\n<sample-output>\n\n1/3\n1/3\n1/3\n\n[Fraction(1, 5), Fraction(1, 5), Fraction(1, 5), Fraction(1, 5), Fraction(1, 5)]\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "for p in fractionate(3):\n    print(p)\n\nprint()\n\nprint(fractionate(5))",
+  "grading_data_available": false,
+  "source_hash": "32beb0d70159be1e79ec21788d8810efe68b4adf44fd7fc883613b23600ab2f7",
+  "order": 38
+}

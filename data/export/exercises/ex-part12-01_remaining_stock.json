@@ -1,0 +1,16 @@
+{
+  "id": "ex-part12-01_remaining_stock",
+  "lesson_id": "part12-1-functions-as-arguments",
+  "part": 12,
+  "tmc_name": "part12-01_remaining_stock",
+  "title_original": "Sort by remaining stock",
+  "title_vi": "Sắp xếp theo số hàng còn lại",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `sort_by_remaining_stock(items: list)`. The function takes a list of tuples as its argument. The tuples consist of the name, price and remaining stock of a product. The function should return a new list, where the items are sorted according to the stock remaining, lowest value first. The original list should not be changed.\n\nThe function should work as follows:\n\n```python\nproducts = [(\"banana\", 5.95, 12), (\"apple\", 3.95, 3), (\"orange\", 4.50, 2), (\"watermelon\", 4.95, 22)]\n\nfor product in sort_by_remaining_stock(products):\n    print(f\"{product[0]} {product[2]} pcs\")\n```\n\n<sample-output>\norange 2 pcs\napple 3 pcs\nbanana 12 pcs\nwatermelon 22 pcs\n</sample-output>",
+  "description_vi": "Hãy viết một hàm có tên `sort_by_remaining_stock(items: list)`. Hàm lấy danh sách các bộ dữ liệu làm đối số của nó. Các bộ dữ liệu bao gồm tên, giá và số lượng tồn kho còn lại của sản phẩm. Hàm sẽ trả về một danh sách mới, trong đó các mục được sắp xếp theo lượng hàng còn lại, giá trị thấp nhất trước tiên. Danh sách ban đầu không nên thay đổi.\n\nChức năng này sẽ hoạt động như sau:\n\n```python\nproducts = [(\"banana\", 5.95, 12), (\"apple\", 3.95, 3), (\"orange\", 4.50, 2), (\"watermelon\", 4.95, 22)]\n\nfor product in sort_by_remaining_stock(products):\n    print(f\"{product[0]} {product[2]} pcs\")\n```\n\n<sample-output>\ncam 2 chiếc\ntáo 3 quả\nchuối 12 trái\ndưa hấu 22 miếng\n</sample-output>",
+  "starter_code": "products = [(\"banana\", 5.95, 12), (\"apple\", 3.95, 3), (\"orange\", 4.50, 2), (\"watermelon\", 4.95, 22)]\n\nfor product in sort_by_remaining_stock(products):\n    print(f\"{product[0]} {product[2]} pcs\")",
+  "grading_data_available": false,
+  "source_hash": "9bcdf4c733eabb2adba4aaecb6795a54d7b7a52000a171358c7e229451cd5d9f",
+  "order": 26
+}

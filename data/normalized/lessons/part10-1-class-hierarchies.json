@@ -1,0 +1,840 @@
+{
+  "id": "part10-1-class-hierarchies",
+  "part": 10,
+  "part_slug": "part-10",
+  "slug": "1-class-hierarchies",
+  "is_part_index": false,
+  "title_original": "Class hierarchies",
+  "title_vi": "",
+  "path": "/part-10/1-class-hierarchies",
+  "source_path": "data/part-10/1-class-hierarchies.md",
+  "source_hash": "a770093e5679679416a60699c945013f6072413eba67f87df584d6cb32837c9c",
+  "order": 1,
+  "blocks_count": 46,
+  "blocks": [
+    {
+      "id": "blk-part10-1-class-hierarchies-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "401ddad91b3fb4f8a117f782fcf96c88acc4b7e58f22e24b3213ff5d34721990",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know what inheritance means in a programming context\n- You will be able to write classes which inherit other classes\n- You will know how inheritance affects the traits in classes"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0002",
+      "type": "heading",
+      "order": 2,
+      "source_hash": "810d1fcbb27acd3185e09c0a876c13732655b2d72df442c4d145dcbc9aa60710",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Special classes for special purposes"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "459ca569bbc99dc8a9e8903516a3fc98499968a5f49db377d8a74bf9193ac334",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Sometimes you come across a situation where you have already defined a class, but then realize you need special traits in some, but not all, instances of the class. Then again, sometimes you realize you've defined two very similar classes with only minor differences. As programmers we aim to always repeat ourselves as little as possible, while maintaining clarity and readability. So how can we accommodate for different implementations of intrinsically similar objects?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "3b6c4c5ff0d81a9a74181d68f8daa8be3fd166426888bf9790beaea15a58ac8b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at two class definitions: `Student` and `Teacher`. Getter and setter methods have been left out for now, in order to keep the example short."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "ba2f02ebacabc7227cd3a3b07bc091d3734ade1c92288946a716e5ac03b4c42e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\nclass Student:\n\n    def __init__(self, name: str, id: str, email: str, credits: str):\n        self.name = name\n        self.id = id\n        self.email = email\n        self.credits = credits\n\nclass Teacher:\n\n    def __init__(self, name: str, email: str, room: str, teaching_years: int):\n        self.name = name\n        self.email = email\n        self.room = room\n        self.teaching_years = teaching_years\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "\nclass Student:\n\n    def __init__(self, name: str, id: str, email: str, credits: str):\n        self.name = name\n        self.id = id\n        self.email = email\n        self.credits = credits\n\nclass Teacher:\n\n    def __init__(self, name: str, email: str, room: str, teaching_years: int):\n        self.name = name\n        self.email = email\n        self.room = room\n        self.teaching_years = teaching_years\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ba2f02ebacabc7227cd3a3b07bc091d3734ade1c92288946a716e5ac03b4c42e",
+        "length_lines": 16
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "925dfcd5b64a794ac6b35853cb5b6f2b86ba1a000dfad4ffab13a04552a217fa",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Even in a stripped down example, like the above, we already have quite a bit of repetition: both classes contain attributes `name` and `email`. It would be a good idea to have a single attribute definition, so that a single function would suffice for editing both attributes."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "dd5137ca036434445f918f518e19f7403e85238b4ade4282a48639b9d12b9097",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "For example, imagine the school's email address changed. All addresses would have to be updated. We _could_ write two separate versions of essentially the same function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0008",
+      "type": "code",
+      "order": 8,
+      "source_hash": "2ed026e5e62e00f834c9bea88cd4519e86cdfe3f9e6bcbfd4fbb34a5e1a8749b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\ndef update_email(o: Student):\n    o.email = o.email.replace(\".com\", \".edu\")\n\ndef update_email2(o: Teacher):\n    o.email = o.email.replace(\".com\", \".edu\")\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "\ndef update_email(o: Student):\n    o.email = o.email.replace(\".com\", \".edu\")\n\ndef update_email2(o: Teacher):\n    o.email = o.email.replace(\".com\", \".edu\")\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2ed026e5e62e00f834c9bea88cd4519e86cdfe3f9e6bcbfd4fbb34a5e1a8749b",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "704d542d29edb33e21f4c58b3acba8090d8447236c5bff90f427a27172fe0f91",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Writing practically the same thing twice is unnecessary repetition, not to mention it doubles the possibilities for errors. It would be a definite improvement if we could use a single function to work with instances of both classes."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "637d3a87c168f7c4f8062bc0f15dba2a1b865d2eaf9b1263a23e40f52a538218",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Both classes also have attributes which are unique to them. Simply combining _all_ attributes in a single class would mean _all_ instances of the class would then have unnecessary attributes, just different ones for different instances. That doesn't seem like an ideal situation, either."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0011",
+      "type": "heading",
+      "order": 11,
+      "source_hash": "9f0c392fa6116f32713c79b9167714b59834a159ce2f7b160c142f49b0bc2040",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Inheritance"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "f6402f5f41d97d141f92727f8e8cff84add3a6a0a6930dd88668209ac393531c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Object oriented programming languages usually feature a technique called _inheritance_. A class can _inherit_ the traits of another class. In addition to these inherited traits a class can also contain traits which are unique to it."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "4e56c69415b9fa9270021fc62826836bb8d7913dd9408aacf97d29feea585109",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Knowing this, it would make sense for the `Teacher` and `Student` classes to have a common base or parent class `Person`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": ""
+      },
+      "translation": {
+        "language": "code",
+        "content": ""
+      },
+      "metadata": {
+        "language": "",
+        "code_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "length_lines": 0
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "38a1060cdd8f89bf552a5e7fc825ffdffd6da41c24c55b75e6f10b5f0e1ae990",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The new class contains those traits which are shared by the other two classes. Now `Student` and `Teacher` can _inherit_ these traits and add their own besides."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "e79bc55b5e527745e200c825c7d532a467397668b380b774e2f60f2384ce11a8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The syntax for inheritance simply involves adding the base class name in parentheses on the header line:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0017",
+      "type": "code",
+      "order": 17,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": ""
+      },
+      "translation": {
+        "language": "code",
+        "content": ""
+      },
+      "metadata": {
+        "language": "",
+        "code_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "length_lines": 0
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "83cdaac938f8b0750a56d6c7c7006e2693be2e95d9dd798932991120c67dd40a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Both `Student` and `Teacher` inherit the `Person` class, so both have the traits defined in the `Person` class, including the method `update_email_domain`. The same method works for instances of both the derived classes."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "10a8360f47eae0603a46c8f9748415b4bc031940edb3ebdabea04de7124b8c7c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at another example. We have a `Bookshelf` which inherits the class `BookContainer`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0020",
+      "type": "code",
+      "order": 20,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": ""
+      },
+      "translation": {
+        "language": "code",
+        "content": ""
+      },
+      "metadata": {
+        "language": "",
+        "code_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "length_lines": 0
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "386a0742c9e8c4f9ac3292fb7550f7d2907e46dd2c19165fac99ecf4ce2917e7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The class `Bookshelf` contains the method `add_book`. A method with the same name is defined in the base class  `BookContainer`. This is called _overriding_: if a derived class has a method with the same name as the base class, the derived version overrides the original in instances of the derived class."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "8d5e1da06c02f3cc21348a6f306d294ec440b83d6840c5f5b0b26fb91e9b7504",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The idea in the example above is that a new book added to a BookContainer always goes to the top, but with a Bookshelf you can specify the location yourself. The method `list_books` works the same for both classes, as there is no overriding method in the derived class."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "affa6c1a5cab8c00a929508829c9c0634e3333c0fd71996e4a1481cc9a8c3506",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's try out these classes:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0024",
+      "type": "code",
+      "order": 24,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": ""
+      },
+      "translation": {
+        "language": "code",
+        "content": ""
+      },
+      "metadata": {
+        "language": "",
+        "code_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "length_lines": 0
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0025",
+      "type": "sample_output",
+      "order": 25,
+      "source_hash": "d008bd17c16ae1c8c31096d3d649c9507d2263611f6c623ea8c8b52e60e314a5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Container:\nOld Man and the Sea (Ernest Hemingway)\nSilent Spring (Rachel Carson)\nPride and Prejudice (Jane Austen)\n\nShelf:\nPride and Prejudice (Jane Austen)\nSilent Spring (Rachel Carson)\nOld Man and the Sea (Ernest Hemingway)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Container:\nOld Man and the Sea (Ernest Hemingway)\nSilent Spring (Rachel Carson)\nPride and Prejudice (Jane Austen)\n\nShelf:\nPride and Prejudice (Jane Austen)\nSilent Spring (Rachel Carson)\nOld Man and the Sea (Ernest Hemingway)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nContainer:\nOld Man and the Sea (Ernest Hemingway)\nSilent Spring (Rachel Carson)\nPride and Prejudice (Jane Austen)\n\nShelf:\nPride and Prejudice (Jane Austen)\nSilent Spring (Rachel Carson)\nOld Man and the Sea (Ernest Hemingway)\n\n </sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "117d4efec14de858c92734225e6d409e9b1ad285dff1b0ec5215054bddf0b5b2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "So, the Bookshelf class also has access to the `list_books` method. Through inheritance the method is a member of all the classes derived from the `BookContainer` class."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0027",
+      "type": "heading",
+      "order": 27,
+      "source_hash": "5645a0f73cb03e56f99d7fd757974032fe606716a6fc0bd7a5dfa221a545f94a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Inheritance and scope of traits"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "22e72d79d873bf572a9227d4e7a2a1ef1c85fa2ccccbdc1affe6f25552927ea1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A derived class inherits all traits from its base class. Those traits are directly accessible in the derived class, unless they have been defined as private in the base class (with two underscores before the name of the trait)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "98dadb4a62b49969f7f4047f34915b35d89b670881370cafdf2dc04c1c299225",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As the attributes of a Bookshelf are identical to a BookContainer, there was no need to rewrite the constructor of Bookshelf. We simply called the constructor of the base class:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0030",
+      "type": "code",
+      "order": 30,
+      "source_hash": "a1fecb65ba563988f376a8dc2507f0cff302f41af77387573e93f918d46fd552",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Bookshelf(BookContainer):\n\n    def __init__(self):\n        super().__init__()\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Bookshelf(BookContainer):\n\n    def __init__(self):\n        super().__init__()\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a1fecb65ba563988f376a8dc2507f0cff302f41af77387573e93f918d46fd552",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "ddda243b4be1e35aeb150b8d3ae28e6ff484c7ec9971a81248a9efc130e05160",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Any trait in the base class can be accessed from the derived class with the function `super()`. The `self` argument is left out from the method call, as Python adds it automatically."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "c47a216d6fc975d41068a59a6fb59988964144451caee3118a28eed5ba5802af",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "But what if the attributes are not identical; can we still use the base class constructor in some way? Let's have a look at a class named `Thesis` which inherits the `Book` class. The derived class _can_ still call the constructor from the base class:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0033",
+      "type": "code",
+      "order": 33,
+      "source_hash": "ba229a9112c3bbe8065b491c9c10d37e4f2a3bde9e96d5c058d8d7da72f59a2e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\nclass Book:\n    \"\"\" This class models a simple book \"\"\"\n\n    def __init__(self, name: str, author: str):\n        self.name = name\n        self.author = author\n\n\nclass Thesis(Book):\n    \"\"\" This class models a graduate thesis \"\"\"\n\n    def __init__(self, name: str, author: str, grade: int):\n        super().__init__(name, author)\n        self.grade = grade\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "\nclass Book:\n    \"\"\" This class models a simple book \"\"\"\n\n    def __init__(self, name: str, author: str):\n        self.name = name\n        self.author = author\n\n\nclass Thesis(Book):\n    \"\"\" This class models a graduate thesis \"\"\"\n\n    def __init__(self, name: str, author: str, grade: int):\n        super().__init__(name, author)\n        self.grade = grade\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ba229a9112c3bbe8065b491c9c10d37e4f2a3bde9e96d5c058d8d7da72f59a2e",
+        "length_lines": 15
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "6591f82dda0fb70c89c6896f090dbf576a4de07c5e859857f1f64f10a1335b10",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The constructor in the `Thesis` class calls the constructor in the base class `Book` with the arguments for `name` and `author`. Additionally, the constructor in the derived class sets the value for the attribute `grade`. This naturally cannot be a part of the base class constructor, as the base class has no such attribute."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "c654c5bdbefef96fdb0d965892bf9f5f46899c0fcd7f240496299ba362872fc4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The above class can be used like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0036",
+      "type": "code",
+      "order": 36,
+      "source_hash": "968f318b972507f8cf67a4314d579a28346aa1a4d21b2f608db789047efe8dbb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    thesis = Thesis(\"Python and the Universe\", \"Peter Pythons\", 3)\n\n    # Print out the values of the attributes\n    print(thesis.name)\n    print(thesis.author)\n    print(thesis.grade)\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    thesis = Thesis(\"Python and the Universe\", \"Peter Pythons\", 3)\n\n    # Print out the values of the attributes\n    print(thesis.name)\n    print(thesis.author)\n    print(thesis.grade)\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "968f318b972507f8cf67a4314d579a28346aa1a4d21b2f608db789047efe8dbb",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0037",
+      "type": "sample_output",
+      "order": 37,
+      "source_hash": "247fefc3c0d3f1901f7410e8e3a263e674d3bcfdac0d07bf052e9d52834ac9c0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Python and the Universe\nPeter Pythons\n3"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Python and the Universe\nPeter Pythons\n3"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPython and the Universe\nPeter Pythons\n3\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "11b31592a7e20c7eb58e3ec6401d8202023cb92f88d6237bb4582acb4cf7b56a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Even if a derived class _overrides_ a method in its base class, the derived class can _still_ call the overridden method in the base class. In the following example we have a basic `BonusCard` and a special `PlatinumCard` for especially loyal customers. The `calculate_bonus` method is overridden in the derived class, but the overriding method calls the base method:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0039",
+      "type": "code",
+      "order": 39,
+      "source_hash": "25f1ba657e12fba2dfbf7347ece28391494269446f5ad466a52cd2081b363247",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\nclass Product:\n\n    def __init__(self, name: str, price: float):\n        self.name = name\n        self.price = price\n\nclass BonusCard:\n\n    def __init__(self):\n        self.products_bought = []\n\n    def add_product(self, product: Product):\n        self.products_bought.append(product)\n\n    def calculate_bonus(self):\n        bonus = 0\n        for product in self.products_bought:\n            bonus += product.price * 0.05\n\n        return bonus\n\nclass PlatinumCard(BonusCard):\n\n    def __init__(self):\n        super().__init__()\n\n    def calculate_bonus(self):\n        # Call the method in the base class\n        bonus = super().calculate_bonus()\n\n        # ...and add five percent to the total\n        bonus = bonus * 1.05\n        return bonus"
+      },
+      "translation": {
+        "language": "code",
+        "content": "\nclass Product:\n\n    def __init__(self, name: str, price: float):\n        self.name = name\n        self.price = price\n\nclass BonusCard:\n\n    def __init__(self):\n        self.products_bought = []\n\n    def add_product(self, product: Product):\n        self.products_bought.append(product)\n\n    def calculate_bonus(self):\n        bonus = 0\n        for product in self.products_bought:\n            bonus += product.price * 0.05\n\n        return bonus\n\nclass PlatinumCard(BonusCard):\n\n    def __init__(self):\n        super().__init__()\n\n    def calculate_bonus(self):\n        # Call the method in the base class\n        bonus = super().calculate_bonus()\n\n        # ...and add five percent to the total\n        bonus = bonus * 1.05\n        return bonus"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "25f1ba657e12fba2dfbf7347ece28391494269446f5ad466a52cd2081b363247",
+        "length_lines": 34
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "ef6fd5ddd6c91e5c3b0ead8ce67b3f44ff1d5ee0b01df1fdf5988d8db58fd531",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "So, the bonus for a PlatinumCard is calculated by calling the overriden method in the base class, and then adding an extra 5 percent to the base result. An example of how these classes are used:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0041",
+      "type": "code",
+      "order": 41,
+      "source_hash": "6b30d6fc8bd0b2326ed5972239363c5a1feb8b9b834182f637b582221a989f26",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    card = BonusCard()\n    card.add_product(Product(\"Bananas\", 6.50))\n    card.add_product(Product(\"Satsumas\", 7.95))\n    bonus = card.calculate_bonus()\n\n    card2 = PlatinumCard()\n    card2.add_product(Product(\"Bananas\", 6.50))\n    card2.add_product(Product(\"Satsumas\", 7.95))\n    bonus2 = card2.calculate_bonus()\n\n    print(bonus)\n    print(bonus2)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "if __name__ == \"__main__\":\n    card = BonusCard()\n    card.add_product(Product(\"Bananas\", 6.50))\n    card.add_product(Product(\"Satsumas\", 7.95))\n    bonus = card.calculate_bonus()\n\n    card2 = PlatinumCard()\n    card2.add_product(Product(\"Bananas\", 6.50))\n    card2.add_product(Product(\"Satsumas\", 7.95))\n    bonus2 = card2.calculate_bonus()\n\n    print(bonus)\n    print(bonus2)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6b30d6fc8bd0b2326ed5972239363c5a1feb8b9b834182f637b582221a989f26",
+        "length_lines": 13
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0042",
+      "type": "sample_output",
+      "order": 42,
+      "source_hash": "e968760d62d92004381d678d7d2018082829242deff5229776946ef69fca570c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "0.7225\n0.7586250000000001"
+      },
+      "translation": {
+        "language": "text",
+        "content": "0.7225\n0.7586250000000001"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n0.7225\n0.7586250000000001\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0043",
+      "type": "exercise",
+      "order": 43,
+      "source_hash": "5a58812bb04a0fcbc70cb8bd38ee2a28d3a86169c65e441454ea67340ec3e73a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains a class definition for a `Computer`, which has the attributes `model` and `speed`.\n\nPlease define a class named `LaptopComputer` which _inherits_ the class `Computer`. The constructor of the new class should take a third argument: `weight`, of type integer.\n\nPlease also include a `__str__` method in your class definition. See the example below for the expected format of the string representation printed out.\n\n```python\nlaptop = LaptopComputer(\"NoteBook Pro15\", 1500, 2)\nprint(laptop)\n```\n\n<sample-output>\n\nNoteBook Pro15, 1500 MHz, 2 kg\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part10-01_laptop_computer",
+        "exercise_type": "programming-exercise",
+        "name": "Laptop computer",
+        "tmc_name": "part10-01_laptop_computer",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0044",
+      "type": "exercise",
+      "order": 44,
+      "source_hash": "0adb2c276ca75ae2191118c039dae80d353ff6fcc31a68df8e88570ebcc73a48",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains class definitions for a `ComputerGame` and a `GameWarehouse`. A GameWarehouse object is used to store ComputerGame objects.\n\nPlease familiarize yourself with these classes. Then define a new class named `GameMuseum` which inherits the `GameWarehouse` class.\n\nThe GameMuseum class should _override_ the `list_games()` method, so that it returns a list of only those games which were made before the year 1990.\n\nThe new class should also have a constructor which _calls the constructor from the parent class `GameWarehouse`_. The constructor takes no arguments.\n\nYou may use the following code to test your implementation:\n\n```python\nmuseum = GameMuseum()\nmuseum.add_game(ComputerGame(\"Pacman\", \"Namco\", 1980))\nmuseum.add_game(ComputerGame(\"GTA 2\", \"Rockstar\", 1999))\nmuseum.add_game(ComputerGame(\"Bubble Bobble\", \"Taito\", 1986))\nfor game in museum.list_games():\n    print(game.name)\n```\n\n<sample-output>\n\nPacman\nBubble Bobble\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part10-02_game_museum",
+        "exercise_type": "programming-exercise",
+        "name": "Game Museum",
+        "tmc_name": "part10-02_game_museum",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0045",
+      "type": "exercise",
+      "order": 45,
+      "source_hash": "06f41f42d6809e1addfafe60a1299dccc3c39a4bb00a27be793863c031e25809",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains a class definition for a `Rectangle`. It represents a [rectangle shape](https://en.wikipedia.org/wiki/Rectangle). A Rectangle works like this:\n\n```python\nrectangle = Rectangle(2, 3)\nprint(rectangle)\nprint(\"area:\", rectangle.area())\n```\n\n<sample-output>\n\nrectangle 2x3\narea: 6\n\n</sample-output>\n\n## Square\n\nPlease define a class named `Square` which inherits the `Rectangle` class. The sides of a [square](https://en.wikipedia.org/wiki/Square) are all of equal length, which makes the square a special case of the rectangle. The new class should not contain any new attributes.\n\nA Square object is used as follows:\n\n```python\nsquare = Square(4)\nprint(square)\nprint(\"area:\", square.area())\n```\n\n<sample-output>\n\nsquare 4x4\narea: 16\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part10-03_areas",
+        "exercise_type": "programming-exercise",
+        "name": "Areas",
+        "tmc_name": "part10-03_areas",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part10-1-class-hierarchies-0046",
+      "type": "exercise",
+      "order": 46,
+      "source_hash": "980585d37db0cd4b410c302ff566675c46b7d711fb18c7efaa0909ec62a4155c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains the class definition for a `WordGame`. It provides some basic functionality for playing different word-based games:\n\n```python\nimport random\n\nclass WordGame():\n    def __init__(self, rounds: int):\n        self.wins1 = 0\n        self.wins2 = 0\n        self.rounds = rounds\n\n    def round_winner(self, player1_word: str, player2_word: str):\n        # determine a random winner\n        return random.randint(1, 2)\n\n    def play(self):\n        print(\"Word game:\")\n        for i in range(1, self.rounds+1):\n            print(f\"round {i}\")\n            answer1 = input(\"player1: \")\n            answer2 = input(\"player2: \")\n\n            if self.round_winner(answer1, answer2) == 1:\n                self.wins1 += 1\n                print(\"player 1 won\")\n            elif self.round_winner(answer1, answer2) == 2:\n                self.wins2 += 1\n                print(\"player 2 won\")\n            else:\n                pass # it's a tie\n\n        print(\"game over, wins:\")\n        print(f\"player 1: {self.wins1}\")\n        print(f\"player 2: {self.wins2}\")\n```\n\nThe game is played as follows:\n\n```python\np = WordGame(3)\np.play()\n```\n\n<sample-output>\n\nWord game:\nround 1\nplayer1: **longword**\nplayer2: **??**\nplayer 2 won\nround 2\nplayer1: **i'm the best**\nplayer2: **wut?**\nplayer 1 won\nround 3\nplayer1: **who's gonna win**\nplayer2: **me**\nplayer 1 won\ngame over, wins:\nplayer 1: 2\nplayer 2: 1\n\n</sample-output>\n\nIn this \"basic\" version of the game the winner is determined randomly. The input from the players has no effect on the result.\n\n## Longest word wins\n\nPlease define a class named `LongestWord`. It is a version of the game where whoever types in the longest word on each round wins.\n\nThe new version of the game is implemented by _inheriting_ the `WordGame` class. The `round_winner` method should also be suitably overridden. The outline of the new class is as follows:\n\n```python\nclass LongestWord(WordGame):\n    def __init__(self, rounds: int):\n        super().__init__(rounds)\n\n    def round_winner(self, player1_word: str, player2_word: str):\n        # your code for determining the winner goes here\n```\n\nAn example of how the new game is played:\n\n```python\np = LongestWord(3)\np.play()\n```\n\n<sample-output>\n\nWord game:\nround 1\nplayer1: **short**\nplayer2: **longword**\nplayer 2 won\nround 2\nplayer1: **word**\nplayer2: **wut?**\nround 3\nplayer1: **i'm the best**\nplayer2: **no, me**\nplayer 1 won\ngame over, wins:\nplayer 1: 1\nplayer 2: 1\n\n</sample-output>\n\n## Most vowels wins\n\nPlease define another WordGame class named `MostVowels`. In this version of the game whoever has squeezed more vowels into their word wins the round.\n\n## Rock paper scissors\n\nFinally, please define a class named `RockPaperScissors` which allows you to play a game of [rock paper scissors](https://en.wikipedia.org/wiki/Rock_paper_scissors).\n\nThe rules of the game are as follows:\n\n- rock beats scissors (the rock can break the scissors but the scissors can't cut the rock)\n- paper beats rock (the paper can cover the rock)\n- scissors beats paper (the scissors can cut the paper)\n\nIf the input from either player is invalid, they lose the round. If both players type in something else than _rock_, _paper_ or _scissors_, the result is a tie.\n\nAn example of how the game is played:\n\n```python\np = RockPaperScissors(4)\np.play()\n```\n\n<sample-output>\n\nWord game:\nround 1\nplayer1: **rock**\nplayer2: **rock**\nround 2\nplayer1: **rock**\nplayer2: **paper**\nplayer 2 won\nround 3\nplayer1: **scissors**\nplayer2: **paper**\nplayer 1 won\nround 4\nplayer1: **paper**\nplayer2: **dynamite**\nplayer 1 won\ngame over, wins:\nplayer 1: 2\nplayer 2: 1\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part10-04_word_game",
+        "exercise_type": "programming-exercise",
+        "name": "Word game",
+        "tmc_name": "part10-04_word_game",
+        "height": null
+      }
+    }
+  ]
+}

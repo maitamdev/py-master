@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-22_second_occurrence",
+  "lesson_id": "part03-2-working-with-strings",
+  "part": 3,
+  "tmc_name": "part03-22_second_occurrence",
+  "title_original": "The second occurrence",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which finds the _second_ occurrence of a substring. If there is no second (or first) occurrence, the program should print out a message accordingly.\n\nIn this exercise the occurrences _cannot_ overlap. For example, in the string `aaaa` the second occurrence of the substring `aa` is at index 2.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nPlease type in a string: **abcabc**\nPlease type in a substring: **ab**\nThe second occurrence of the substring is at index 3.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a string: **methodology**\nPlease type in a substring: **o**\nThe second occurrence of the substring is at index 6.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a string: **aybabtu**\nPlease type in a substring: **ba**\nThe substring does not occur twice in the string.\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "7b9f8cb051e9ce73c009ee0b4f95d0ff403ab9cac6d0f341cf1e9c5b334cf2e5",
+  "order": 90
+}

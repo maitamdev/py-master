@@ -1,0 +1,220 @@
+{
+  "id": "part12-2-generators",
+  "part": 12,
+  "part_slug": "part-12",
+  "slug": "2-generators",
+  "is_part_index": false,
+  "title_original": "Generators",
+  "path": "/part-12/2-generators",
+  "source_path": "data/part-12/2-generators.md",
+  "source_hash": "782337d280d540efd87919159a8beee91f5354376a91442c9857c4a3217e7868",
+  "frontmatter": {
+    "path": "/part-12/2-generators",
+    "title": "Generators",
+    "hidden": false
+  },
+  "chunks_count": 32,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will know what a Python generator is\n- You will be familiar with the keyword `yield`\n- You will be able to write your own generator functions",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will know what a Python generator is\n- You will be familiar with the keyword `yield`\n- You will be able to write your own generator functions\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We have already come across situations where we're dealing with a series of items, and we'd need the next item(s) in the series, but we wouldn't necessarily want to formulate the entire series up to that point each time a new item is required. Some recursive series, such as the Fibonacci number, are a good example of such a situation. If each function call recursively generates the entire series up to the desired point, we end up generating the beginning of the series many times over.",
+      "raw_source": "We have already come across situations where we're dealing with a series of items, and we'd need the next item(s) in the series, but we wouldn't necessarily want to formulate the entire series up to that point each time a new item is required. Some recursive series, such as the Fibonacci number, are a good example of such a situation. If each function call recursively generates the entire series up to the desired point, we end up generating the beginning of the series many times over."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Python _generators_ are a way of producing just the next item in a series when it is needed, essentially running the generation process for the series only once (for a given execution of a program). They work mostly like normal functions, as they can be called and will return values, but the value a generator function returns differs from a normal function. A normal function should return the same value every time, given the same arguments. A generator function, on the other hand, should remember its current state and return the next item in the series, which may be different from the previous item.",
+      "raw_source": "Python _generators_ are a way of producing just the next item in a series when it is needed, essentially running the generation process for the series only once (for a given execution of a program). They work mostly like normal functions, as they can be called and will return values, but the value a generator function returns differs from a normal function. A normal function should return the same value every time, given the same arguments. A generator function, on the other hand, should remember its current state and return the next item in the series, which may be different from the previous item."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Just as there are many ways of solving most any programming problem, there are many ways of achieving a functionality similar to generators, but generators can help make the program easier to understand, and can in certain situations save memory or other computational resources.",
+      "raw_source": "Just as there are many ways of solving most any programming problem, there are many ways of achieving a functionality similar to generators, but generators can help make the program easier to understand, and can in certain situations save memory or other computational resources."
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "The keyword yield",
+      "raw_source": "## The keyword yield"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A generator function must contain the keyword `yield`, which marks out the value which the function returns. Let's take a look at a function which generates integer numbers, starting from zero and ending at a pre-determined maximum value:",
+      "raw_source": "A generator function must contain the keyword `yield`, which marks out the value which the function returns. Let's take a look at a function which generates integer numbers, starting from zero and ending at a pre-determined maximum value:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "\ndef counter(max_value: int):\n    number = 0\n    while number <= max_value:\n        yield number\n        number += 1\n",
+      "raw_source": "```python\n\ndef counter(max_value: int):\n    number = 0\n    while number <= max_value:\n        yield number\n        number += 1\n\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Now the `counter` function can be passed as an argument to the function `next()`:",
+      "raw_source": "Now the `counter` function can be passed as an argument to the function `next()`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "if __name__ == \"__main__\":\n    numbers = counter(10)\n    print(\"First value:\")\n    print(next(numbers))\n    print(\"Second value:\")\n    print(next(numbers))",
+      "raw_source": "```python\nif __name__ == \"__main__\":\n    numbers = counter(10)\n    print(\"First value:\")\n    print(next(numbers))\n    print(\"Second value:\")\n    print(next(numbers))\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "First value:\n0\nSecond value:\n1",
+      "raw_source": "<sample-output>\n\nFirst value:\n0\nSecond value:\n1\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As you can see from the example above, the keyword `yield` is similar to the keyword `return`: both are used to define a return value. The difference is that `yield` doesn't \"close\" the function in the same sense as `return`. A generator function with the `yield` keyword keeps track of its state, and the next time it is called, it will continue from the same state.",
+      "raw_source": "As you can see from the example above, the keyword `yield` is similar to the keyword `return`: both are used to define a return value. The difference is that `yield` doesn't \"close\" the function in the same sense as `return`. A generator function with the `yield` keyword keeps track of its state, and the next time it is called, it will continue from the same state."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "This generator also requires a maximum value, which was `10` in the example above. When the generator runs out of values, it will raise a `StopIteration` exception:",
+      "raw_source": "This generator also requires a maximum value, which was `10` in the example above. When the generator runs out of values, it will raise a `StopIteration` exception:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "if __name__ == \"__main__\":\n    # creates a generator with maximum value 1\n    numbers = counter(1)\n    print(next(numbers))\n    print(next(numbers))\n    print(next(numbers))",
+      "raw_source": "```python\nif __name__ == \"__main__\":\n    # creates a generator with maximum value 1\n    numbers = counter(1)\n    print(next(numbers))\n    print(next(numbers))\n    print(next(numbers))\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "0\n1\nTraceback (most recent call last):\n  File \"generator_example.py\", line 11, in <module>\n    print(next(numbers))\nStopIteration",
+      "raw_source": "<sample-output>\n\n0\n1\nTraceback (most recent call last):\n  File \"generator_example.py\", line 11, in <module>\n    print(next(numbers))\nStopIteration\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The exception can be caught with a `try` - `except` block:",
+      "raw_source": "The exception can be caught with a `try` - `except` block:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "if __name__ == \"__main__\":\n    numbers = counter(1)\n    try:\n        print(next(numbers))\n        print(next(numbers))\n        print(next(numbers))\n    except StopIteration:\n        print(\"ran out of numbers\")",
+      "raw_source": "```python\nif __name__ == \"__main__\":\n    numbers = counter(1)\n    try:\n        print(next(numbers))\n        print(next(numbers))\n        print(next(numbers))\n    except StopIteration:\n        print(\"ran out of numbers\")\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "0\n1\nran out of numbers",
+      "raw_source": "<sample-output>\n\n0\n1\nran out of numbers\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Traversing through all the items in a generator is easily done with a `for` loop:",
+      "raw_source": "Traversing through all the items in a generator is easily done with a `for` loop:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "if __name__ == \"__main__\":\n    numbers = counter(5)\n    for number in numbers:\n        print(number)",
+      "raw_source": "```python\nif __name__ == \"__main__\":\n    numbers = counter(5)\n    for number in numbers:\n        print(number)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "0\n1\n2\n3\n4\n5",
+      "raw_source": "<sample-output>\n\n0\n1\n2\n3\n4\n5\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Generators do not have to have a defined maximum value or termination point. They can generate values infinitely (within other computational and physical constraints, naturally).",
+      "raw_source": "Generators do not have to have a defined maximum value or termination point. They can generate values infinitely (within other computational and physical constraints, naturally)."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Pay mind, though: traversing a generator with a `for` loop only works if the generator terminates at some point. If the generator is built on an infinite loop, trying to traverse it with a simple `for` loop will cause an endless execution, just like a `while` loop with no end or break condition would.",
+      "raw_source": "Pay mind, though: traversing a generator with a `for` loop only works if the generator terminates at some point. If the generator is built on an infinite loop, trying to traverse it with a simple `for` loop will cause an endless execution, just like a `while` loop with no end or break condition would."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Even numbers",
+        "tmcname": "part12-08_even_numbers"
+      },
+      "inner_content": "Please write a generator function named `even_numbers(beginning: int, maximum: int)` which takes two integers as its arguments. The function should produce even numbers starting from `beginning` and ending with, at most, `maximum`.\n\nTwo examples of how the function works:\n\n```python\nnumbers = even_numbers(2, 10)\nfor number in numbers:\n    print(number)\n```\n\n<sample-output>\n\n2\n4\n6\n8\n10\n\n</sample-output>\n\n```python\nnumbers = even_numbers(11, 21)\nfor number in numbers:\n    print(number)\n```\n\n<sample-output>\n\n12\n14\n16\n18\n20\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Even numbers' tmcname='part12-08_even_numbers'>\n\nPlease write a generator function named `even_numbers(beginning: int, maximum: int)` which takes two integers as its arguments. The function should produce even numbers starting from `beginning` and ending with, at most, `maximum`.\n\nTwo examples of how the function works:\n\n```python\nnumbers = even_numbers(2, 10)\nfor number in numbers:\n    print(number)\n```\n\n<sample-output>\n\n2\n4\n6\n8\n10\n\n</sample-output>\n\n```python\nnumbers = even_numbers(11, 21)\nfor number in numbers:\n    print(number)\n```\n\n<sample-output>\n\n12\n14\n16\n18\n20\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Prime numbers",
+        "tmcname": "part12-09_prime_numbers"
+      },
+      "inner_content": "A prime number is a number which is divisible only by itself and the number 1. By convention prime numbers are defined as positive integers from the number 2 upwards. The first six prime numbers are 2, 3, 5, 7, 11 and 13.\n\nPlease write a generator function `prime_numbers()` which creates a new generator. The generator should return new prime numbers, one by one in sequence, from 2 onwards. NB: this generator never terminates. It will generate numbers for as long as they are needed.\n\nFor example:\n\n```python\nnumbers = prime_numbers()\nfor i in range(8):\n    print(next(numbers))\n```\n\n<sample-output>\n\n2\n3\n5\n7\n11\n13\n17\n19\n\n</sample-output>\n\n**Hint:** you can use a loop to check if a number is a prime number. If we are checking the number `x`, the loop would go through the numbers `2` to `x-1`. If `x` is divisible by any one of these, it is not a prime number.",
+      "raw_source": "<programming-exercise name='Prime numbers' tmcname='part12-09_prime_numbers'>\n\nA prime number is a number which is divisible only by itself and the number 1. By convention prime numbers are defined as positive integers from the number 2 upwards. The first six prime numbers are 2, 3, 5, 7, 11 and 13.\n\nPlease write a generator function `prime_numbers()` which creates a new generator. The generator should return new prime numbers, one by one in sequence, from 2 onwards. NB: this generator never terminates. It will generate numbers for as long as they are needed.\n\nFor example:\n\n```python\nnumbers = prime_numbers()\nfor i in range(8):\n    print(next(numbers))\n```\n\n<sample-output>\n\n2\n3\n5\n7\n11\n13\n17\n19\n\n</sample-output>\n\n**Hint:** you can use a loop to check if a number is a prime number. If we are checking the number `x`, the loop would go through the numbers `2` to `x-1`. If `x` is divisible by any one of these, it is not a prime number.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Generator comprehensions",
+      "raw_source": "## Generator comprehensions"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "You do not necessarily need a function definition to create a generator. We can use a structure similar to a list comprehension instead. This time we use _round_ brackets to signify a generator instead of a list or a dictionary:",
+      "raw_source": "You do not necessarily need a function definition to create a generator. We can use a structure similar to a list comprehension instead. This time we use _round_ brackets to signify a generator instead of a list or a dictionary:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# This generator returns squares of integers\nsquares = (x ** 2 for x in range(1, 64))\n\nprint(squares) # the printout of a generator object isn't too informative\n\nfor i in range(5):\n    print(next(squares))",
+      "raw_source": "```python\n# This generator returns squares of integers\nsquares = (x ** 2 for x in range(1, 64))\n\nprint(squares) # the printout of a generator object isn't too informative\n\nfor i in range(5):\n    print(next(squares))\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "<generator object &lt;genexpr&gt; at 0x000002B4224EBFC0>\n1\n4\n9\n16\n25",
+      "raw_source": "<sample-output>\n\n<generator object &lt;genexpr&gt; at 0x000002B4224EBFC0>\n1\n4\n9\n16\n25\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the following example we print out substrings of the English alphabet, each three characters long. This prints out the first 10 items in the generator:",
+      "raw_source": "In the following example we print out substrings of the English alphabet, each three characters long. This prints out the first 10 items in the generator:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "substrings = (\"abcdefghijklmnopqrstuvwxyz\"[i : i + 3] for i in range(24))\n\n# print out first 10 substrings\nfor i in range(10):\n    print(next(substrings))",
+      "raw_source": "```python\nsubstrings = (\"abcdefghijklmnopqrstuvwxyz\"[i : i + 3] for i in range(24))\n\n# print out first 10 substrings\nfor i in range(10):\n    print(next(substrings))\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "abc\nbcd\ncde\ndef\nefg\nfgh\nghi\nhij\nijk\njkl",
+      "raw_source": "<sample-output>\n\nabc\nbcd\ncde\ndef\nefg\nfgh\nghi\nhij\nijk\njkl\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Random words",
+        "tmcname": "part12-10_random_words"
+      },
+      "inner_content": "Please write a function named `word_generator(characters: str, length: int, amount: int)` which returns a new generator for generating random words based on the parameters given.\n\nA random word is generated by selecting from the string named `characters` as many characters as is indicated by the argument `length`. The same character can appear many times in a random word.\n\nThe generator returns as many words as specified by the argument `amount` before terminating.\n\nAn example run of the word generator:\n\n```python\nwordgen = word_generator(\"abcdefg\", 3, 5)\nfor word in wordgen:\n    print(word)\n```\n\n<sample-output>\n\ndbf\nbaf\nead\nfga\nccc\n\n</sample-output>\n\nNB: it is up to you how you implement this function. You may use a \"traditional\" generator or a generator comprehension equally well.",
+      "raw_source": "<programming-exercise name='Random words' tmcname='part12-10_random_words'>\n\nPlease write a function named `word_generator(characters: str, length: int, amount: int)` which returns a new generator for generating random words based on the parameters given.\n\nA random word is generated by selecting from the string named `characters` as many characters as is indicated by the argument `length`. The same character can appear many times in a random word.\n\nThe generator returns as many words as specified by the argument `amount` before terminating.\n\nAn example run of the word generator:\n\n```python\nwordgen = word_generator(\"abcdefg\", 3, 5)\nfor word in wordgen:\n    print(word)\n```\n\n<sample-output>\n\ndbf\nbaf\nead\nfga\nccc\n\n</sample-output>\n\nNB: it is up to you how you implement this function. You may use a \"traditional\" generator or a generator comprehension equally well.\n\n</programming-exercise>"
+    }
+  ]
+}

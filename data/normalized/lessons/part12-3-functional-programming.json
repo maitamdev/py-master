@@ -1,0 +1,1692 @@
+{
+  "id": "part12-3-functional-programming",
+  "part": 12,
+  "part_slug": "part-12",
+  "slug": "3-functional-programming",
+  "is_part_index": false,
+  "title_original": "Functional programming",
+  "title_vi": "",
+  "path": "/part-12/3-functional-programming",
+  "source_path": "data/part-12/3-functional-programming.md",
+  "source_hash": "e0a7104b50a68ccfee5a1e063935c3d1f0026c3456a2f3ceef02574d1a084cfb",
+  "order": 1,
+  "blocks_count": 95,
+  "blocks": [
+    {
+      "id": "blk-part12-3-functional-programming-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "d5465bc095102d9b556797f4bf43fc5848a6dc6192f11662124d6bf991bf4623",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know what functional programming means\n- You will be able to make use of the functions `map`, `reduce` and `filter` in your own programs"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "d833c594f40be6ab3283e7efa078e9890ced9814d42321cf5bb46845c6854956",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Functional programming refers to a _programming paradigm_ which avoids changes in program state as much as possible. Variables are generally avoided. Instead, chains of function calls form the backbone of the program."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "16ea2223ecedc0c152f0f74479de1b3ebdbe9ab4fb79e89958d2e8f1de729fa3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Lambda expressions and different types of comprehensions are common techniques in the functional programming style, as they let you process data without storing it in variables, so that the state of the program does not change. For example, a lambda expression is for all intents and purposes a function, but we do not need to store a named reference to it anywhere."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "fe78fd744758e9bcac943d3b6222fc35f44a7b5781b4680f564e4ebe5b9ae32b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As mentioned above, functional programming is a programming paradigm, or a style of programming. There are many different programming paradigms, and we've already come across some of them:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0005",
+      "type": "list",
+      "order": 5,
+      "source_hash": "f6f2c8cea8f09b7c765d76336be7cea08c4676c11118a7611497eb62be10a035",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "* imperative programming, where the program consists of a sequence of commands which is executed in order\n* procedural programming, where the program is grouped into procedures or sub-programs\n* object-oriented programming, where the program and its state is stored in objects defined in classes."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "e0cf6203b1602d9ee8bd95bc6d3de47580474bfa8141b8e81e69f44a67ef2b84",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "There are differing opinions on the divisions between the different paradigms; for example, some maintain that imperative and procedural programming mean the same thing, while others place imperative programming as an umbrella term which covers both procedural and object-oriented programming. Th terminology and divisions are not that important, and neither is strictly sticking to one or the other paradigm, but it is important to understand that such different approaches exist, as they affect the choices programmers make."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "3cbc4f38a27229b66b0b7dd4c8de826e5acb3b03400a96dd657f3179c9503850",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Many programming languages are designed with one or the other programming paradigm in mind, but Python is a rather versatile programming language, and allows for following several different programming paradigms, even within a single program. This lets us choose the most efficient and clear method for solving each problem."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "099f8b34f580587d05662a3a13e9a88a6beb46e3896c9754d64681ff882c94eb",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at some functional programming tools provided by Python."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0009",
+      "type": "heading",
+      "order": 9,
+      "source_hash": "60be9861750facbfad8758254a2f76c0cfe78d54459a3bc187d49b1401fcd8e8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "map"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "3076d98bda91c6d4de3671354bbc4b07a752c56b3944b7473e270352fe655370",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `map` function executes some operation on each item in an iterable series. This sounds a lot like the effect a comprehension has, but the syntax is different."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "8eab9c1022f4b606272a541e78b32849cb18d86f9ac25cf44be50deaba0a47b4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's assume we have list of strings which we want to convert into a list of integers:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0012",
+      "type": "code",
+      "order": 12,
+      "source_hash": "5fc1be62c72e6d508bb224167c3427495b61d69451b088f78a00d6f9da1c7c4f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "str_list = [\"123\",\"-10\", \"23\", \"98\", \"0\", \"-110\"]\n\nintegers = map(lambda x : int(x), str_list)\n\nprint(integers) # this tells us the type of object we're dealing with\n\nfor number in integers:\n    print(number)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "str_list = [\"123\",\"-10\", \"23\", \"98\", \"0\", \"-110\"]\n\nintegers = map(lambda x : int(x), str_list)\n\nprint(integers) # this tells us the type of object we're dealing with\n\nfor number in integers:\n    print(number)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5fc1be62c72e6d508bb224167c3427495b61d69451b088f78a00d6f9da1c7c4f",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0013",
+      "type": "sample_output",
+      "order": 13,
+      "source_hash": "2ad490cfac8618db30d70424f719724d93832ca30c1740e3b6a63d341712b1c5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "<map object at 0x0000021A4BFA9A90>\n123\n-10\n23\n98\n0\n-110"
+      },
+      "translation": {
+        "language": "text",
+        "content": "<map object at 0x0000021A4BFA9A90>\n123\n-10\n23\n98\n0\n-110"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n<map object at 0x0000021A4BFA9A90>\n123\n-10\n23\n98\n0\n-110\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "2700362c5f33c13ce0ccd4d82495e8bf64ef815369c664dc03c5bb179d1ffbef",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The general syntax for the `map` function is"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "b9c90479ca15e4a5256695397bf9853f4119ab44d13cce664809ce6e4b9c0cfc",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "`map(<function>, <series>)`"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "dddb94529e602b73dca5d24dea6b73b7f31e27870ac09cdfa9065c53f3a64735",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "where `function` is the operation we want to execute on each item in the `series`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "a5b19b87e5e4109eb07af99ca53df6cecd206e286522e0940bbcc976e16c80b8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `map` function returns an object of type `map`, which is iterable, and can be converted into a list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0018",
+      "type": "code",
+      "order": 18,
+      "source_hash": "731dde3ea9830dd24fdcdce16e417b7b905bf979526a70e98a2c7cd8ed7d23c0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def capitalize(my_string: str):\n    first = my_string[0]\n    first = first.upper()\n    return first + my_string[1:]\n\ntest_list = [\"first\", \"second\", \"third\", \"fourth\"]\n\ncapitalized = map(capitalize, test_list)\n\ncapitalized_list = list(capitalized)\nprint(capitalized_list)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def capitalize(my_string: str):\n    first = my_string[0]\n    first = first.upper()\n    return first + my_string[1:]\n\ntest_list = [\"first\", \"second\", \"third\", \"fourth\"]\n\ncapitalized = map(capitalize, test_list)\n\ncapitalized_list = list(capitalized)\nprint(capitalized_list)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "731dde3ea9830dd24fdcdce16e417b7b905bf979526a70e98a2c7cd8ed7d23c0",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0019",
+      "type": "sample_output",
+      "order": 19,
+      "source_hash": "1e671514d8389e85c0518487aaf2a29e1a0a137de0f15ad9786c29a2f94e4d4b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "['First', 'Second', 'Third', 'Fourth']"
+      },
+      "translation": {
+        "language": "text",
+        "content": "['First', 'Second', 'Third', 'Fourth']"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n['First', 'Second', 'Third', 'Fourth']\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "9754084dc178f6e3640e491d9a57e83ae44067457a9d82cb2b3108779b6ecfa8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As you can see from the examples above, the `map` function accepts both an anonymous lambda function and a named function defined with the `def` keyword."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "e03626cbc760c71e14bd9bdf0c643db284d0a435198736ed16367193deb62c2b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We could achieve the same result with a list comprehension:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0022",
+      "type": "code",
+      "order": 22,
+      "source_hash": "51364295fbde8320d873d90a62caa49aa027d905d6ff722a9ba4724280cf6d07",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def capitalize(my_string: str):\n    first = my_string[0]\n    first = first.upper()\n    return first + my_string[1:]\n\ntest_list = [\"first\", \"second\", \"third\", \"fourth\"]\n\ncapitalized_list = [capitalize(item) for item in test_list]\nprint(capitalized_list)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def capitalize(my_string: str):\n    first = my_string[0]\n    first = first.upper()\n    return first + my_string[1:]\n\ntest_list = [\"first\", \"second\", \"third\", \"fourth\"]\n\ncapitalized_list = [capitalize(item) for item in test_list]\nprint(capitalized_list)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "51364295fbde8320d873d90a62caa49aa027d905d6ff722a9ba4724280cf6d07",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "26593043973daf7373c21073b8644c749b6a531ee86137fb7b3463d394d74c21",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "...or we could go through the original list with a `for` loop and save the processed items in a new list with the `append` method. Typically, in programming there are many different solutions to each problem. There are rarely any absolutely right or wrong answers. Knowing many different approaches helps you choose the most appropriate one for each situation, or one that best suits your own tastes."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "d9a1f06b5523109219b4e248f14bc06a6fb0bc139d560574ef63f527af8b928c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "It is worth pointing out that the `map` function does not return a list, but an _iterator_ object of type map. An iterator behaves in many ways like a list, but there are exceptions, as can be seen in the following example:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0025",
+      "type": "code",
+      "order": 25,
+      "source_hash": "f9b1cd018b3588d7e4793d5a0cc9b301e6417024e13ad0a0c482ce626e2cfcf0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def capitalize(my_string: str):\n    first = my_string[0]\n    first = first.upper()\n    return first + my_string[1:]\n\ntest_list = [\"first\", \"second\", \"third\", \"fourth\"]\n\n# store the return value from the map function\ncapitalized = map(capitalize, test_list)\n\nfor word in capitalized:\n  print(word)\n\nprint(\"print the same again:\")\nfor word in capitalized:\n  print(word)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def capitalize(my_string: str):\n    first = my_string[0]\n    first = first.upper()\n    return first + my_string[1:]\n\ntest_list = [\"first\", \"second\", \"third\", \"fourth\"]\n\n# store the return value from the map function\ncapitalized = map(capitalize, test_list)\n\nfor word in capitalized:\n  print(word)\n\nprint(\"print the same again:\")\nfor word in capitalized:\n  print(word)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f9b1cd018b3588d7e4793d5a0cc9b301e6417024e13ad0a0c482ce626e2cfcf0",
+        "length_lines": 16
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "835e887978dff9026c5f0f25d55c455f6023cd67c03134790de2d362c445fb2d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This would print out the following:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0027",
+      "type": "sample_output",
+      "order": 27,
+      "source_hash": "b7543b21200e330129e9999a9b58abc30c6a6dac15f5a74ebe14e087da5b2cc4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "First\nSecond\nThird\nFourth\nprint the same again:"
+      },
+      "translation": {
+        "language": "text",
+        "content": "First\nSecond\nThird\nFourth\nprint the same again:"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nFirst\nSecond\nThird\nFourth\nprint the same again:\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "4255651c4f61bd40cafc489c0299b73496829e595b88f2ac6478dbb1ded0d727",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Above we tried to print out the contents of the `map` iterator twice, but the second attempt produced no printout. The reason is that `map` is an iterator; passing through it with a `for` loop \"depletes\" it, much like a generator is depleted once its maximum value is reached. Once the items in the iterator have been traversed with a `for` loop, there is nothing left to go through."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "443ca21480f62f222dea210a150861be6f64dac6c474395cfb975ab2d3f7f15b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If you need to go through the contents of a `map` iterator more than once, you could, for example, convert the map into a list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0030",
+      "type": "code",
+      "order": 30,
+      "source_hash": "14a0488d9bd5be3be054b22ec138e1804f0d966a1d1a4fecc359f36049797258",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "test_list = [\"first\", \"second\", \"third\", \"fourth\"]\n\n# convert the return value of the map function into a list\ncapitalized = list(map(capitalize, test_list))\n\nfor word in capitalized:\n  print(word)\n\nprint(\"print the same again:\")\nfor word in capitalized:\n  print(word)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "test_list = [\"first\", \"second\", \"third\", \"fourth\"]\n\n# convert the return value of the map function into a list\ncapitalized = list(map(capitalize, test_list))\n\nfor word in capitalized:\n  print(word)\n\nprint(\"print the same again:\")\nfor word in capitalized:\n  print(word)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "14a0488d9bd5be3be054b22ec138e1804f0d966a1d1a4fecc359f36049797258",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0031",
+      "type": "sample_output",
+      "order": 31,
+      "source_hash": "0bc199665f7e2a32460fc2f8917f63d3df34975dda203ada43d9db036568f97c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "First\nSecond\nThird\nFourth\nprint the same again:\nFirst\nSecond\nThird\nFourth"
+      },
+      "translation": {
+        "language": "text",
+        "content": "First\nSecond\nThird\nFourth\nprint the same again:\nFirst\nSecond\nThird\nFourth"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nFirst\nSecond\nThird\nFourth\nprint the same again:\nFirst\nSecond\nThird\nFourth\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0032",
+      "type": "heading",
+      "order": 32,
+      "source_hash": "4c6eaab5e5d60e4db1f081c1f8efb43b1b55151d3ebfdd7577ed67dba33a5e11",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The map function and your own classes"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "bfa1a78665edbb871a756fa07616ac39f1f5ca8c3cfa4c21dd4878b2046c7ebb",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You can naturally also process instances of your own classes with the `map` function. There are no special gimmicks involved, as you can see in the example below:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0034",
+      "type": "code",
+      "order": 34,
+      "source_hash": "dccba1f85d84e1b6912d24abd97bfeb3470460eee6f5dcaae844461781ac729c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class BankAccount:\n    def __init__(self, account_number: str, name: str, balance: float):\n        self.__account_number = account_number\n        self.name = name\n        self.__balance = balance\n\n    def deposit(self, amount: float):\n        if amount > 0:\n            self.__balance += amount\n\n    def get_balance(self):\n        return self.__balance\n\na1 = BankAccount(\"123456\", \"Randy Riches\", 5000)\na2 = BankAccount(\"12321\", \"Paul Pauper\", 1)\na3 = BankAccount(\"223344\", \"Mary Millionaire \", 1000000)\n\naccounts = [a1, a2, a3]\n\nclients = map(lambda t: t.name, accounts)\nfor name in clients:\n  print(name)\n\nbalances = map(lambda t: t.get_balance(), accounts)\nfor balance in balances:\n  print(balance)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class BankAccount:\n    def __init__(self, account_number: str, name: str, balance: float):\n        self.__account_number = account_number\n        self.name = name\n        self.__balance = balance\n\n    def deposit(self, amount: float):\n        if amount > 0:\n            self.__balance += amount\n\n    def get_balance(self):\n        return self.__balance\n\na1 = BankAccount(\"123456\", \"Randy Riches\", 5000)\na2 = BankAccount(\"12321\", \"Paul Pauper\", 1)\na3 = BankAccount(\"223344\", \"Mary Millionaire \", 1000000)\n\naccounts = [a1, a2, a3]\n\nclients = map(lambda t: t.name, accounts)\nfor name in clients:\n  print(name)\n\nbalances = map(lambda t: t.get_balance(), accounts)\nfor balance in balances:\n  print(balance)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "dccba1f85d84e1b6912d24abd97bfeb3470460eee6f5dcaae844461781ac729c",
+        "length_lines": 26
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0035",
+      "type": "sample_output",
+      "order": 35,
+      "source_hash": "3c8db52a8fc39843083ba26bb8c542362b4eaabc435cef25394f699f860e93e0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Randy Riches\nPaul Pauper\nMary Millionaire\n5000\n1\n1000000"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Randy Riches\nPaul Pauper\nMary Millionaire\n5000\n1\n1000000"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nRandy Riches\nPaul Pauper\nMary Millionaire\n5000\n1\n1000000\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "1b5f9b9c09539c99b2b7c0ab6ebabfead8038d0670a7646014d21dc861d911c2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Here we first collect the names of the account holders with the `map` function. An anonymous lambda function is used to retrieve the value of the `name` attribute from each BankAccount object:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0037",
+      "type": "code",
+      "order": 37,
+      "source_hash": "965683d56593b0500ac0e0493461f06da5f34cd0613ed092072d68939554a2e2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "clients = map(lambda t: t.name, accounts)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "clients = map(lambda t: t.name, accounts)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "965683d56593b0500ac0e0493461f06da5f34cd0613ed092072d68939554a2e2",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "58f2eb2e29a093e06cf2834606763be88ebacd67a4527243bf1966bdf9f033e8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Similarly, the balance of each BankAccount is collected. The lambda function looks a bit different, because the balance is retrieved with a method call, not from the attribute directly:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0039",
+      "type": "code",
+      "order": 39,
+      "source_hash": "4837998ad1b6e69efbcfb5924b81bae61bbe120f31f25b1d73c93d75325fe8a3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "balances = map(lambda t: t.get_balance(), accounts)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "balances = map(lambda t: t.get_balance(), accounts)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4837998ad1b6e69efbcfb5924b81bae61bbe120f31f25b1d73c93d75325fe8a3",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0040",
+      "type": "exercise",
+      "order": 40,
+      "source_hash": "7493574543a31f3c9ab7bf1efbfb080711488023e5ba7335e038a6a507d0e03e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains the class definition for a `CourseAttempt`. It works like this:\n\n```python\nattempt = CourseAttempt(\"Peter Python\", \"Introduction to Programming\", 5)\nprint(attempt.student_name)\nprint(attempt.course_name)\nprint(attempt.grade)\nprint(attempt)\n```\n\n<sample-output>\n\nPeter Python\nIntroduction to Programming\n5\nPeter Python, grade for the course Introduction to Programming 5\n\n</sample-output>\n\n## Names of students\n\nPlease write a function named `names_of_students(attempts: list)` which takes a list of CourseAttempt objects as its argument. The function should return a new list with the names of the students who have attempted the course.\n\n```python\ns1 = CourseAttempt(\"Peter Python\", \"Introduction to Programming\", 3)\ns2 = CourseAttempt(\"Olivia C. Objective\", \"Introduction to Programming\", 5)\ns3 = CourseAttempt(\"Peter Python\", \"Advanced Course in Programming\", 2)\n\nfor name in names_of_students([s1, s2, s3]):\n    print(name)\n```\n\n<sample-output>\n\nPeter Python\nOlivia C. Objective\nPeter Python\n\n</sample-output>\n\nPlease implement the function using the `map` function.\n\n## Courses\n\nPlease write a function named `course_names(attempts: list)` which takes a list of CourseAttempt objects as its argument. The function should return a new list containing the names of the courses on the original list in alphabetical order. Each course name should appear only once on the list.\n\n```python\ns1 = CourseAttempt(\"Peter Python\", \"Introduction to Programming\", 3)\ns2 = CourseAttempt(\"Olivia C. Objective\", \"Introduction to Programming\", 5)\ns3 = CourseAttempt(\"Peter Python\", \"Advanced Course in Programming\", 2)\n\nfor name in course_names([s1, s2, s3]):\n    print(name)\n```\n<sample-output>\n\nAdvanced Course in Programming\nIntroduction to Programming\n\n</sample-output>\n\nPlease implement the function using the `map` function. That alone will likely not be enough, however. You will need something else, too, to make sure the course names are unique."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part12-11_attempted_courses",
+        "exercise_type": "programming-exercise",
+        "name": "Attempted courses",
+        "tmc_name": "part12-11_attempted_courses",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0041",
+      "type": "heading",
+      "order": 41,
+      "source_hash": "dfc3376b8266c66e8c24736645128a5f93ccf1df6f381286ffbda654fec8f21c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "filter"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "45dd9453dd9b923e0c2e6d3a38e56dd3711d23c6393948e05472aba885a99b6f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The built-in Python function `filter` is similar to the `map` function, but, as the name implies, it doesn't take all the items from the source. Instead, it filters them with a criterion function, which is passed as an argument. If the criterion function returns `True`, the item is selected."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0043",
+      "type": "paragraph",
+      "order": 43,
+      "source_hash": "82ae4659c560c716927cf379110d8e1536d0294f0df325aa1a7b782ec0f6c5cd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's look at an example using `filter`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0044",
+      "type": "code",
+      "order": 44,
+      "source_hash": "e0abfbfb562853e2551397cdb12e4a8573cc36a2837deb9903816f1ce074f44b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "integers = [1, 2, 3, 5, 6, 4, 9, 10, 14, 15]\n\neven_numbers = filter(lambda number: number % 2 == 0, integers)\n\nfor number in even_numbers:\n    print(number)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "integers = [1, 2, 3, 5, 6, 4, 9, 10, 14, 15]\n\neven_numbers = filter(lambda number: number % 2 == 0, integers)\n\nfor number in even_numbers:\n    print(number)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e0abfbfb562853e2551397cdb12e4a8573cc36a2837deb9903816f1ce074f44b",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0045",
+      "type": "sample_output",
+      "order": 45,
+      "source_hash": "02fffa58261c1d0bcfe963b9fa9400fe8179ba443f4700fdddf167256672d773",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "2\n6\n4\n10\n14"
+      },
+      "translation": {
+        "language": "text",
+        "content": "2\n6\n4\n10\n14"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n2\n6\n4\n10\n14\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0046",
+      "type": "paragraph",
+      "order": 46,
+      "source_hash": "cf2a6fcf67201a086d5ca5a2a287144267c937f59ec8ca45b8605370cfd255fa",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "It might make the above example a bit clearer if we used a named function instead:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0047",
+      "type": "code",
+      "order": 47,
+      "source_hash": "2bdef3d2a3aeffd4997a7d23a9b4477efb291155f9e356a10ffa3111555b11e3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def is_it_even(number: int):\n    if number % 2 == 0:\n        return True\n    return False\n\nintegers = [1, 2, 3, 5, 6, 4, 9, 10, 14, 15]\n\neven_numbers = filter(is_it_even, integers)\n\nfor number in even_numbers:\n    print(number)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def is_it_even(number: int):\n    if number % 2 == 0:\n        return True\n    return False\n\nintegers = [1, 2, 3, 5, 6, 4, 9, 10, 14, 15]\n\neven_numbers = filter(is_it_even, integers)\n\nfor number in even_numbers:\n    print(number)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2bdef3d2a3aeffd4997a7d23a9b4477efb291155f9e356a10ffa3111555b11e3",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0048",
+      "type": "paragraph",
+      "order": 48,
+      "source_hash": "a8c23ef78beab33c17056261282b57b1d237bf89d2030a10d3def7e6174cdfa8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "These two programs are functionally completely identical. It is mostly a matter of opinion which you consider the better approach."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0049",
+      "type": "paragraph",
+      "order": 49,
+      "source_hash": "cdfd08501242f1ba775cb6a3e56945ac6eddff3d6bc67715ba90c8a3a7f5892c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at another filtering example. This program models fishes, and selects only those which weigh at least 1000 grams:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0050",
+      "type": "code",
+      "order": 50,
+      "source_hash": "968269c22e153a32b80da8eba07e0198923d1f1925cc7a9f3a01e9a3c644cedb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Fish:\n    \"\"\" The class models a fish of a certain species and weight \"\"\"\n    def __init__(self, species: str, weight: int):\n        self.species = species\n        self.weight = weight\n\n    def __repr__(self):\n        return f\"{self.species} ({self.weight} g.)\"\n\nif __name__ == \"__main__\":\n    f1 = Fish(\"Pike\", 1870)\n    f2 = Fish(\"Perch\", 763)\n    f3 = Fish(\"Pike\", 3410)\n    f4 = Fish(\"Cod\", 2449)\n    f5 = Fish(\"Roach\", 210)\n\n    fishes = [f1, f2, f3, f4, f5]\n\n    over_a_kilo = filter(lambda fish : fish.weight >= 1000, fishes)\n\n    for fish in over_a_kilo:\n        print(fish)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Fish:\n    \"\"\" The class models a fish of a certain species and weight \"\"\"\n    def __init__(self, species: str, weight: int):\n        self.species = species\n        self.weight = weight\n\n    def __repr__(self):\n        return f\"{self.species} ({self.weight} g.)\"\n\nif __name__ == \"__main__\":\n    f1 = Fish(\"Pike\", 1870)\n    f2 = Fish(\"Perch\", 763)\n    f3 = Fish(\"Pike\", 3410)\n    f4 = Fish(\"Cod\", 2449)\n    f5 = Fish(\"Roach\", 210)\n\n    fishes = [f1, f2, f3, f4, f5]\n\n    over_a_kilo = filter(lambda fish : fish.weight >= 1000, fishes)\n\n    for fish in over_a_kilo:\n        print(fish)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "968269c22e153a32b80da8eba07e0198923d1f1925cc7a9f3a01e9a3c644cedb",
+        "length_lines": 22
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0051",
+      "type": "sample_output",
+      "order": 51,
+      "source_hash": "d20a5d5cc3b00325effc049c2e8239c07014b7f490ea2d38a784c1529e208455",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Pike (1870 g.)\nPike (3410 g.)\nCod (2449 g.)"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Pike (1870 g.)\nPike (3410 g.)\nCod (2449 g.)"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPike (1870 g.)\nPike (3410 g.)\nCod (2449 g.)\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0052",
+      "type": "paragraph",
+      "order": 52,
+      "source_hash": "180f40c58a7c2ea2afb6403e5195dd752524307a1ef1e8f268ab20a4f96bea84",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We could just as well use a list comprehension and achieve the same result:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0053",
+      "type": "code",
+      "order": 53,
+      "source_hash": "bd0d5ef945c2199372af46c42e977e92ae2ab44ab7bd9eb56cbc975129a5f2cb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "over_a_kilo = [fish for fish in fishes if fish.weight >= 1000]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "over_a_kilo = [fish for fish in fishes if fish.weight >= 1000]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "bd0d5ef945c2199372af46c42e977e92ae2ab44ab7bd9eb56cbc975129a5f2cb",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0054",
+      "type": "heading",
+      "order": 54,
+      "source_hash": "6cd9c1a83221dc3760eca479db4ccf71346bda786c6e8b5c59b083af8ec3d8e8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The return value of filter is an iterator"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0055",
+      "type": "paragraph",
+      "order": 55,
+      "source_hash": "eb1b39c23160c10a2b695e66c417f94bca842d40929f2274d1cdbed41ada2698",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `filter` function resembles the `map` function in also that it returns an _iterator_. There are situations where you should be especially careful with `filter` as iterators can only be traversed once. So, trying to print out the collection of large fishes twice will not work quite as straightforwardly as you might think:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0056",
+      "type": "code",
+      "order": 56,
+      "source_hash": "3e5a86a9b4014421ee6fcd9cdb1db74c85e4c8544865a4b6eb350fc97fa0d6f7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "f1 = Fish(\"Pike\", 1870)\nf2 = Fish(\"Perch\", 763)\nf3 = Fish(\"Pike\", 3410)\nf4 = Fish(\"Cod\", 2449)\nf5 = Fish(\"Roach\", 210)\n\nfishes = [f1, f2, f3, f4, f5]\n\nover_a_kilo = filter(lambda fish : fish.weight >= 1000, fishes)\n\nfor fish in over_a_kilo:\n    print(fish)\n\nprint(\"print the same again:\")\n\nfor Fish in over_a_kilo:\n    print(Fish)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "f1 = Fish(\"Pike\", 1870)\nf2 = Fish(\"Perch\", 763)\nf3 = Fish(\"Pike\", 3410)\nf4 = Fish(\"Cod\", 2449)\nf5 = Fish(\"Roach\", 210)\n\nfishes = [f1, f2, f3, f4, f5]\n\nover_a_kilo = filter(lambda fish : fish.weight >= 1000, fishes)\n\nfor fish in over_a_kilo:\n    print(fish)\n\nprint(\"print the same again:\")\n\nfor Fish in over_a_kilo:\n    print(Fish)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3e5a86a9b4014421ee6fcd9cdb1db74c85e4c8544865a4b6eb350fc97fa0d6f7",
+        "length_lines": 17
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0057",
+      "type": "paragraph",
+      "order": 57,
+      "source_hash": "835e887978dff9026c5f0f25d55c455f6023cd67c03134790de2d362c445fb2d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This would print out the following:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0058",
+      "type": "sample_output",
+      "order": 58,
+      "source_hash": "7cd505deb3266ce02adabbf8e8bfcd3071be769e83bdfa1699909041114c1d97",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Pike (1870 g.)\nPike (3410 g.)\nCod (2449 g.)\nprint the same again:"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Pike (1870 g.)\nPike (3410 g.)\nCod (2449 g.)\nprint the same again:"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPike (1870 g.)\nPike (3410 g.)\nCod (2449 g.)\nprint the same again:\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0059",
+      "type": "paragraph",
+      "order": 59,
+      "source_hash": "00224daaac40c50e623baa87e3118e6cb29b3d765552e6400f766a8051d91314",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If you need to go through the contents of a `filter` iterator more than once, you could convert the result into a list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0060",
+      "type": "code",
+      "order": 60,
+      "source_hash": "b59095abda934b2ddcc28ce44b2479e60e0d6b5603abcfd2023130b55bf6ca57",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "fishes = [f1, f2, f3, f4, f5]\n\n# convert the return value of the filter function into a list\nover_a_kilo = list(filter(lambda fish : fish.weight >= 1000, fishes))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "fishes = [f1, f2, f3, f4, f5]\n\n# convert the return value of the filter function into a list\nover_a_kilo = list(filter(lambda fish : fish.weight >= 1000, fishes))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b59095abda934b2ddcc28ce44b2479e60e0d6b5603abcfd2023130b55bf6ca57",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0061",
+      "type": "exercise",
+      "order": 61,
+      "source_hash": "ad2cb6508fd33194d24f88f42f7bb8dcfbca8fe03ac5fb0372dea5199b0e0cdf",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In this exercise we will continue with the `CourseAttempt` class.\n\n## Accepted attempts\n\nPlease write a function named `accepted(attempts: list)` which takes a list of CourseAttempt objects as its argument. The function should return a new list of CourseAttempt objects, including only those items from the original list whose grade is at least 1.\n\n```python\ns1 = CourseAttempt(\"Peter Python\", \"Introduction to Programming\", 3)\ns2 = CourseAttempt(\"Olivia C. Objective\", \"Introduction to Programming\", 5)\ns3 = CourseAttempt(\"Peter Python\", \"Advanced Course in Programming\", 0)\n\nfor attempt in accepted([s1, s2, s3]):\n    print(attempt)\n```\n\n<sample-output>\n\nPeter Python, grade for the course Introduction to Programming 3\nOlivia C. Objective grade for the course Introduction to Programming 5\n\n</sample-output>\n\nPlease implement the function using the `filter` function.\n\n## Attempts with grade\n\nPlease write a function named `attempts_with_grade(attempts: list, grade: int)` which takes a list of CourseAttempt objects and an integer as its arguments. The function should return a new list containing only those CourseAttempt objects from the original list whose grade matches the second argument.\n\n```python\ns1 = CourseAttempt(\"Peter Python\", \"Introduction to Programming\", 3)\ns2 = CourseAttempt(\"Olivia C. Objective\", \"Introduction to Programming\", 5)\ns3 = CourseAttempt(\"Peter Python\", \"Introduction to AI\", 3)\ns4 = CourseAttempt(\"Olivia C. Objective\", \"Data Structures and Algorithms\", 3)\n\nfor attempt in attempts_with_grade([s1, s2, s3, s4], 3):\n    print(attempt)\n```\n\n<sample-output>\n\nPeter Python, grade for the course Introduction to Programming 3\nPeter Python, grade for the course Introduction to AI 3\nOlivia C. Objective, grade for the course Data Structures and Algorithms 3\n\n</sample-output>\n\nPlease implement the function using the `filter` function.\n\n## Students who passed the course\n\nPlease write a function named `passed_students(attempts: list, course: str)` which takes a list of CourseAttempt objects and a course name as its arguments. The function should return an _alphabetically ordered_ list of names of those students who passed the course, i.e. their grade for the given course was higher than 0.\n\n```python\ns1 = CourseAttempt(\"Peter Python\", \"Introduction to Programming\", 3)\ns2 = CourseAttempt(\"Olivia C. Objective\", \"Introduction to AI\", 5)\ns3 = CourseAttempt(\"Peter Python\", \"Introduction to AI\", 0)\ns4 = CourseAttempt(\"Jack Java\", \"Introduction to AI\", 3)\n\nfor attempt in passed_students([s1, s2, s3, s4], \"Introduction to AI\"):\n    print(attempt)\n```\n\n<sample-output>\n\nJack Java\nOlivia C. Objective\n\n</sample-output>\n\nPlease implement the function using the `filter` and `map` functions."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part12-12_filtering_attempts",
+        "exercise_type": "programming-exercise",
+        "name": "Filtering attempts",
+        "tmc_name": "part12-12_filtering_attempts",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0062",
+      "type": "heading",
+      "order": 62,
+      "source_hash": "4c7e98bfa0c750beb52cf2ddf452297d55681dc9efa8e9725d4334e981ae61ad",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "reduce"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0063",
+      "type": "paragraph",
+      "order": 63,
+      "source_hash": "3db0727882e400bbb4a967501a4174f6294bf7784f3cfa145fac0e4f5562b943",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A third cornerstone function in this introduction to functional programming principles is `reduce`, from the `functools` module. As the name implies, its purpose is to _reduce_ the items in a series into a single value."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0064",
+      "type": "paragraph",
+      "order": 64,
+      "source_hash": "ab100b512e55ac2a5426ae2d01d9dc02e0e6685b08eb329644224c26dbb7da84",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `reduce` function starts with an operation and an initial value. It performs the given operation on each item in the series in turn, so that the value changes at each step. Once all items have been processed, the resulting value is returned."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0065",
+      "type": "paragraph",
+      "order": 65,
+      "source_hash": "56f455759db3c8bf6b43f997b85425295d7e42b9977e7e7da17e267f09e9164a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We have done summation of lists of integers in different ways before, but here we have an example with the help of the `reduce` function. Notice the `import` statement; in Python versions 3 and higher it is necessary to access the `reduce` function. In older Python versions the `import` statement was not needed, so you may come across examples without it online."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0066",
+      "type": "code",
+      "order": 66,
+      "source_hash": "9e10dc10d4af79447e7616ec5191f4b853166af1701ea9aa211e6ebe9a9c38d1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from functools import reduce\n\nmy_list = [2, 3, 1, 5]\n\nsum_of_numbers = reduce(lambda reduced_sum, item: reduced_sum + item, my_list, 0)\n\nprint(sum_of_numbers)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from functools import reduce\n\nmy_list = [2, 3, 1, 5]\n\nsum_of_numbers = reduce(lambda reduced_sum, item: reduced_sum + item, my_list, 0)\n\nprint(sum_of_numbers)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "9e10dc10d4af79447e7616ec5191f4b853166af1701ea9aa211e6ebe9a9c38d1",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0067",
+      "type": "sample_output",
+      "order": 67,
+      "source_hash": "4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "11"
+      },
+      "translation": {
+        "language": "text",
+        "content": "11"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n11\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0068",
+      "type": "paragraph",
+      "order": 68,
+      "source_hash": "534a635af3060b3f453d3435ab35b67965c17b3f9647a8c957f982b7fc893009",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's take a closer look at what's happening here. The `reduce` function takes three arguments: a function, a series of items, and an initial value. In this case, the series is a list of integers, and as we are calculating a sum, a suitable initial value is zero."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0069",
+      "type": "paragraph",
+      "order": 69,
+      "source_hash": "684b75681ef76b241fb8386694f369b513e509d598d72036bc2f70c41b3795f0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The first argument is a function, which represents the operation we want to perform on each item. Here the function is an anonymous lambda function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0070",
+      "type": "code",
+      "order": 70,
+      "source_hash": "06d30d98bedc7980a63fda9368fa63346fc9fe23567da087c9ac70bba3c138c4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "lambda reduced_sum, item: reduced_sum + item"
+      },
+      "translation": {
+        "language": "code",
+        "content": "lambda reduced_sum, item: reduced_sum + item"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "06d30d98bedc7980a63fda9368fa63346fc9fe23567da087c9ac70bba3c138c4",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0071",
+      "type": "paragraph",
+      "order": 71,
+      "source_hash": "22129eed5fa6854e2f3cc68b0ceb646dfdd0e10576bce2952041862f72142a88",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This function takes two arguments: the current reduced value and the item whose turn it is to be processed. These are used to calculate a new value for the reduced value. In this case the new value is the sum of the old value and the current item."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0072",
+      "type": "paragraph",
+      "order": 72,
+      "source_hash": "748b75f2b96cc81ce5de0756195de7ac4281e7030e80fef1374467bd83b53bce",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "It may be easier to comprehend what the `reduce` function actually does if we use a normal named function instead of a lambda function. That way we can also include helpful printouts:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0073",
+      "type": "code",
+      "order": 73,
+      "source_hash": "23f70fb8ad2405d8aa3b19f29b2eeda1cdaedbd6802b9fdfff7afcb130fe8419",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from functools import reduce\n\nmy_list = [2, 3, 1, 5]\n\n# a helper function for reduce, adds one value to the current reduced sum\ndef sum_helper(reduced_sum, item):\n  print(f\"the reduced sum is now {reduced_sum}, next item is {item}\")\n  # the new reduced sum is the old sum + the next item\n  return reduced_sum + item\n\nsum_of_numbers = reduce(sum_helper, my_list, 0)\n\nprint(sum_of_numbers)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from functools import reduce\n\nmy_list = [2, 3, 1, 5]\n\n# a helper function for reduce, adds one value to the current reduced sum\ndef sum_helper(reduced_sum, item):\n  print(f\"the reduced sum is now {reduced_sum}, next item is {item}\")\n  # the new reduced sum is the old sum + the next item\n  return reduced_sum + item\n\nsum_of_numbers = reduce(sum_helper, my_list, 0)\n\nprint(sum_of_numbers)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "23f70fb8ad2405d8aa3b19f29b2eeda1cdaedbd6802b9fdfff7afcb130fe8419",
+        "length_lines": 13
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0074",
+      "type": "paragraph",
+      "order": 74,
+      "source_hash": "11e1e9bff0bde5802a8e9f64e643fb4483892a7a047633c0f967ab18c79ff622",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The program prints out:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0075",
+      "type": "sample_output",
+      "order": 75,
+      "source_hash": "c1aac83c9d92cd6b139260519c8d57da88e4135b41189a81d06cf47a6bf476d1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "the reduced sum is now 0, next item is 2\nthe reduced sum is now 2, next item is 3\nthe reduced sum is now 5, next item is 1\nthe reduced sum is now 6, next item is 5\n11"
+      },
+      "translation": {
+        "language": "text",
+        "content": "the reduced sum is now 0, next item is 2\nthe reduced sum is now 2, next item is 3\nthe reduced sum is now 5, next item is 1\nthe reduced sum is now 6, next item is 5\n11"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nthe reduced sum is now 0, next item is 2\nthe reduced sum is now 2, next item is 3\nthe reduced sum is now 5, next item is 1\nthe reduced sum is now 6, next item is 5\n11\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0076",
+      "type": "paragraph",
+      "order": 76,
+      "source_hash": "175406c384810e93ba2b0e0106e6e6d165c558528a9d82f85f87221117857df3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "First, the function takes care of the item with value 2. To begin with, the reduced sum is 0, which is the initial value passed to the `reduce` function. The function calculates and returns the sum of these two: `0 + 2 = 2`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0077",
+      "type": "paragraph",
+      "order": 77,
+      "source_hash": "3d7441d1a1885638401bdacaa753d5398e20f1ada8ab1c4ef5aec99bcf09b7db",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This is the value stored in `reduced_sum` as the `reduce` function processes the next item on the list, with value 3. The function calculates and returns the sum of these two: `2 + 3 = 5`. This result is then used when processing the next item, and so forth, and so forth."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0078",
+      "type": "paragraph",
+      "order": 78,
+      "source_hash": "428d4cda16a5407a313bdd352b96281f1eda945ea1768500aad2170f64c14b73",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Now, summation is simple, as there is even the built-in `sum` function for this purpose. But how about multiplication? Only minor changes are needed to create a reduced product:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0079",
+      "type": "code",
+      "order": 79,
+      "source_hash": "fc4143c13aefc1b5c2547c8fcf6cd6f8fcdd9d55472275f729da8345dffdae78",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "from functools import reduce\n\nmy_list = [2, 2, 4, 3, 5, 2]\n\nproduct_of_list = reduce(lambda product, item: product * item, my_list, 1)\n\nprint(product_of_list)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "from functools import reduce\n\nmy_list = [2, 2, 4, 3, 5, 2]\n\nproduct_of_list = reduce(lambda product, item: product * item, my_list, 1)\n\nprint(product_of_list)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "fc4143c13aefc1b5c2547c8fcf6cd6f8fcdd9d55472275f729da8345dffdae78",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0080",
+      "type": "sample_output",
+      "order": 80,
+      "source_hash": "ddfe0e8d462af661f81db36589c39882dc0f2330785b5d80cd34f2f520ad618f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "480"
+      },
+      "translation": {
+        "language": "text",
+        "content": "480"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n480\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0081",
+      "type": "paragraph",
+      "order": 81,
+      "source_hash": "23d5a7e13fde2c24ab822d819590952f3f0b00bf77a150e56ed59bba59174c31",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As we are dealing with multiplication the initial value is not zero. Instead, we use 1. What would happen if we used 0 as the initial value?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0082",
+      "type": "paragraph",
+      "order": 82,
+      "source_hash": "f6efd32accc122b8261b470e0307a3246d1c992db564ffd193febf87e64d9b3e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Above we have dealt largely with integers, but `map`, `filter` and `reduce` can all handle a collection of objects of any type."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0083",
+      "type": "paragraph",
+      "order": 83,
+      "source_hash": "aebb12fd027b705b7ab970dfadaa4d7e80cf208f212d7f73e09c4aaef2829186",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As an example, let's generate a sum total of the balances of all accounts in a bank, with the help of `reduce`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0084",
+      "type": "code",
+      "order": 84,
+      "source_hash": "65dbbb0ea273d41b6f035da15d516d38c9327a85395031139c79d3387d59da27",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class BankAccount:\n    def __init__(self, account_number: str, name: str, balance: float):\n        self.__account_number = account_number\n        self.name = name\n        self.__balance = balance\n\n    def deposit(self, amount: float):\n        if amount > 0:\n            self.__balance += amount\n\n    def get_balance(self):\n        return self.__balance\n\na1 = BankAccount(\"123456\", \"Randy Riches\", 5000)\na2 = BankAccount(\"12321\", \"Paul Pauper\", 1)\na3 = BankAccount(\"223344\", \"Mary Millionaire \", 1000000)\n\naccounts = [a1, a2, a3]\n\nfrom functools import reduce\n\ndef balance_sum_helper(balance_sum, account):\n  return balance_sum + account.get_balance()\n\nbalances_total = reduce(balance_sum_helper, accounts, 0)\n\nprint(\"The total of the bank's balances:\")\nprint(balances_total)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class BankAccount:\n    def __init__(self, account_number: str, name: str, balance: float):\n        self.__account_number = account_number\n        self.name = name\n        self.__balance = balance\n\n    def deposit(self, amount: float):\n        if amount > 0:\n            self.__balance += amount\n\n    def get_balance(self):\n        return self.__balance\n\na1 = BankAccount(\"123456\", \"Randy Riches\", 5000)\na2 = BankAccount(\"12321\", \"Paul Pauper\", 1)\na3 = BankAccount(\"223344\", \"Mary Millionaire \", 1000000)\n\naccounts = [a1, a2, a3]\n\nfrom functools import reduce\n\ndef balance_sum_helper(balance_sum, account):\n  return balance_sum + account.get_balance()\n\nbalances_total = reduce(balance_sum_helper, accounts, 0)\n\nprint(\"The total of the bank's balances:\")\nprint(balances_total)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "65dbbb0ea273d41b6f035da15d516d38c9327a85395031139c79d3387d59da27",
+        "length_lines": 28
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0085",
+      "type": "paragraph",
+      "order": 85,
+      "source_hash": "8d0a0696ce2d9a0b4ecf5eee6079e851d3d726bce48cabacd69ca74352ba3272",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This program would print out:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0086",
+      "type": "sample_output",
+      "order": 86,
+      "source_hash": "d2914dcba2d5f7ad9100fc2b700545061a685306b3d4c978afcb747ed103c1d7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The total of the bank's balances:\n1005001"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The total of the bank's balances:\n1005001"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe total of the bank's balances:\n1005001\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0087",
+      "type": "paragraph",
+      "order": 87,
+      "source_hash": "fd3832fcedcb0f25f513abcdedc2f28a5af103f57bef873d165b1df1643319ad",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `balance_sum_helper` function grabs the balance of each bank account, with the method dedicated for the purpose in the `BankAccount` class definition:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0088",
+      "type": "code",
+      "order": 88,
+      "source_hash": "f16363600fcfb3375180bc84298a009e73527d17a156c060531b2f4db4e1e010",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def balance_sum_helper(balance_sum, account):\n  return balance_sum + account.get_balance()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def balance_sum_helper(balance_sum, account):\n  return balance_sum + account.get_balance()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f16363600fcfb3375180bc84298a009e73527d17a156c060531b2f4db4e1e010",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0089",
+      "type": "text_box",
+      "order": 89,
+      "source_hash": "fa1653824b7e64ef4b3da32d39e6cffeaa9252ebeeb8afdc8f3706f504487c3d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "You do not need to always pass a third argument to the `reduce` function. For instance, summation would work just as well _without_ the initial value:\n\n```python\nmy_list = [2, 3, 1, 5]\n\nsum_of_numbers = reduce(lambda reduced_sum, item: reduced_sum + item, my_list)\n\nprint(sum_of_numbers)\n```\n\nIf the initial value is left out, `reduce` takes the first item in the list as the initial value and starts reducing from the second item onwards."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "hint",
+        "name_original": "Reduce without an initial value",
+        "name_vi": "",
+        "attributes": {
+          "variant": "hint",
+          "name": "Reduce without an initial value"
+        }
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0090",
+      "type": "paragraph",
+      "order": 90,
+      "source_hash": "3b3b1033ebb1eea0148e7ed995df99687bb01ace79e4064ecb0a9747503150b7",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "**NB:** if the items in the series are of a different type than the intended reduced result, the thrd argument is mandatory. The example with the bank accounts would not work without the initial value. That is, trying this"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0091",
+      "type": "code",
+      "order": 91,
+      "source_hash": "a6a044c9146a634879ccc2355526037144dc2a81dd99beace6ca21e56347e421",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "balances_total = reduce(balance_sum_helper, accounts)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "balances_total = reduce(balance_sum_helper, accounts)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a6a044c9146a634879ccc2355526037144dc2a81dd99beace6ca21e56347e421",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0092",
+      "type": "paragraph",
+      "order": 92,
+      "source_hash": "25eb9640e9c2e7d839171977cab332aed0f4c1054467179215095ad806f00874",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "would produce an error:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0093",
+      "type": "code",
+      "order": 93,
+      "source_hash": "003db998a0be4c06457987e4e9362276494ce407ccbd90b4faf9e027f8b6a676",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "TypeError: unsupported operand type(s) for +: 'BankAccount' and 'int'"
+      },
+      "translation": {
+        "language": "code",
+        "content": "TypeError: unsupported operand type(s) for +: 'BankAccount' and 'int'"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "003db998a0be4c06457987e4e9362276494ce407ccbd90b4faf9e027f8b6a676",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0094",
+      "type": "paragraph",
+      "order": 94,
+      "source_hash": "0881afa4f690a0f67ecd10a4d8d68781cae2772050f13a289a11a8955c8d6917",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the above case, when `reduce` tries to execute the `balance_sum_helper` function for the first time, the arguments it uses are the _two first items in the list_, which are both of type BankAccount. Specifically, the value assigned to the parameter `balance_sum` is the first item in the list.  The `balance_sum_helper` function tries to add an integer value to it, but adding an integer directly to a BankAccount object is not a supported operation."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part12-3-functional-programming-0095",
+      "type": "exercise",
+      "order": 95,
+      "source_hash": "c3560a975552592623cbe86da8a77f69b49d46a4f104f0ea48f97c78d45b7a86",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In this exercise we will work with a slightly modified version of the `CourseAttempt` class. The name of the student is omitted, but the number of credits is included. The class works as follows:\n\n```python\nattempt = CourseAttempt(\"Data Structures and Algorithms\", 3, 10)\nprint(attempt)\nprint(attempt.course_name)\nprint(attempt.credits)\nprint(attempt.grade)\n```\n\n<sample-output>\n\nData Structures and Algorithms (10 cr) grade 3\nData Structures and Algorithms\n10\n3\n\n</sample-output>\n\n## The sum of all credits\n\nPlease implement a function named `sum_of_all_credits` which takes a list of course attempts as its argument. The function sums up the total number of study credits covered by the courses. It should work like this:\n\n```python\ns1 = CourseAttempt(\"Introduction to Programming\", 5, 5)\ns2 = CourseAttempt(\"Advanced Course in Programming\", 4, 5)\ns3 = CourseAttempt(\"Data Structures and Algorithms\", 3, 10)\ncredit_sum = sum_of_all_credits([s1, s2, s3])\nprint(credit_sum)\n```\n\n<sample-output>\n\n20\n\n</sample-output>\n\nPlease implement the function using the `reduce` function.\n\n## The sum of passed credits\n\nPlease implement a function named `sum_of_passed_credits` which takes a list of course attempts as its argument. The function sums up the credits for the course attempts with grade 1 or above. It should work like this:\n\n```python\ns1 = CourseAttempt(\"Introduction to Programming\", 5, 5)\ns2 = CourseAttempt(\"Advanced Course in Programming\", 0, 4)\ns3 = CourseAttempt(\"Data Structures and Algorithms\", 3, 10)\ncredit_sum = sum_of_passed_credits([s1, s2, s3])\nprint(credit_sum)\n```\n\n<sample-output>\n\n15\n\n</sample-output>\n\nPlease implement the function using the `reduce` and `filter` functions.\n\n## Average grade for passed courses\n\nPlease implement a function named `average` which takes a list of course attempts as its argument. The function calculates the average grade for the course attempts with grade 1 or above. It should work like this:\n\n```python\ns1 = CourseAttempt(\"Introduction to Programming\", 5, 5)\ns2 = CourseAttempt(\"Advanced Course in Programming\", 0, 4)\ns3 = CourseAttempt(\"Data Structures and Algorithms\", 3, 10)\nag = average([s1, s2, s3])\nprint(ag)\n```\n\n<sample-output>\n\n4.0\n\n</sample-output>\n\nPlease implement the function using the `reduce` and `filter` functions. NB: the exercise asks for a simple mean value, not a weighted average.\n\nWhile working on this exercise, it is likely worth remembering that [the return value of filter is an iterator](/part-12/3-functional-programming#the-return-value-of-filter-is-an-iterator)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part12-13_credits",
+        "exercise_type": "programming-exercise",
+        "name": "Study credits",
+        "tmc_name": "part12-13_credits",
+        "height": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-04_powers_of_two",
+  "lesson_id": "part03-1-loops-with-conditions",
+  "part": 3,
+  "tmc_name": "part03-04_powers_of_two",
+  "title_original": "Powers of two",
+  "title_vi": "Sức mạnh của hai",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user to type in an upper limit. The program then prints out numbers so that each subsequent number is the previous one doubled, starting from the number 1. That is, the program prints out powers of two in order.\n\nThe execution of the program finishes when the next number to be printed would be greater than the limit set by the user. No numbers greater than the limit should be printed.\n\n<sample-output>\n\nUpper limit: **8**\n1\n2\n4\n8\n\n</sample-output>\n\n<sample-output>\n\nUpper limit: **20**\n1\n2\n4\n8\n16\n\n</sample-output>\n\n<sample-output>\n\nUpper limit: **100**\n1\n2\n4\n8\n16\n32\n64\n\n</sample-output>\n\nPlease don't use the value `True` as the condition of your `while` loop in this exercise!\n\n**What are powers of two?** The first power of two is the number 1. The next one is 1 times 2, which is 2. The next is 2 times 2, which is 4. The next is 4 times 2, which is 8, and so forth. Each power in the sequence is multiplied by two to produce the next one.",
+  "description_vi": "Hãy viết chương trình yêu cầu người dùng nhập giới hạn trên. Sau đó, chương trình in ra các số sao cho mỗi số tiếp theo nhân đôi số trước đó, bắt đầu từ số 1. Tức là chương trình in ra lũy thừa của hai theo thứ tự.\n\nViệc thực thi chương trình kết thúc khi số tiếp theo được in lớn hơn giới hạn do người dùng đặt ra. Không được in số lớn hơn giới hạn.\n\n<sample-output>\n\nGiới hạn trên: **8**\n1\n2\n4\n8\n\n</sample-output>\n\n<sample-output>\n\nGiới hạn trên: **20**\n1\n2\n4\n8\n16\n\n</sample-output>\n\n<sample-output>\n\nGiới hạn trên: **100**\n1\n2\n4\n8\n16\n32\n64\n\n</sample-output>\n\nVui lòng không sử dụng giá trị `True` làm điều kiện của vòng lặp `while` trong bài tập này!\n\n**Lũy thừa của hai là gì?** lũy thừa đầu tiên của hai là số 1. Số tiếp theo là 1 nhân 2, bằng 2. Số tiếp theo là 2 nhân 2, bằng 4. Số tiếp theo là 4 nhân 2, bằng 8, v.v. Mỗi lũy thừa trong chuỗi được nhân với hai để tạo ra lũy thừa tiếp theo.",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "13f29aadc99795357c43c692290a46c237e81dab777386e548977be2fa3902e4",
+  "order": 64
+}

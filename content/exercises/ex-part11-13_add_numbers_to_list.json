@@ -1,0 +1,16 @@
+{
+  "id": "ex-part11-13_add_numbers_to_list",
+  "lesson_id": "part11-3-recursion",
+  "part": 11,
+  "tmc_name": "part11-13_add_numbers_to_list",
+  "title_original": "Add numbers to a list",
+  "title_vi": "Thêm số vào danh sách",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a _recursive function_ named `add_numbers_to_list(numbers: list)`. The function takes a list of numbers as its argument, and adds new numbers to the list until the length of the list is divisible by five. Each number added to the list should be one greater than the last number in the list.\n\nThe function must call itself recursively. Please see the example below.\n\n```python\nnumbers = [1,3,4,5,10,11]\nadd_numbers_to_list(numbers)\nprint(numbers)\n```\n\n<sample-output>\n\n[1, 3, 4, 5, 10, 11, 12, 13, 14, 15]\n\n</sample-output>",
+  "description_vi": "Vui lòng viết _hàm đệ quy_ có tên `add_numbers_to_list(numbers: list)`. Hàm lấy danh sách các số làm đối số và thêm các số mới vào danh sách cho đến khi độ dài của danh sách chia hết cho 5. Mỗi số được thêm vào danh sách phải lớn hơn số cuối cùng trong danh sách một đơn vị.\n\nHàm phải gọi chính nó một cách đệ quy. Xin vui lòng xem ví dụ dưới đây.\n\n```python\nnumbers = [1,3,4,5,10,11]\nadd_numbers_to_list(numbers)\nprint(numbers)\n```\n\n<sample-output>\n\n[1, 3, 4, 5, 10, 11, 12, 13, 14, 15]\n\n</sample-output>",
+  "starter_code": "numbers = [1,3,4,5,10,11]\nadd_numbers_to_list(numbers)\nprint(numbers)",
+  "grading_data_available": false,
+  "source_hash": "df913fae94e052582ca7c918243c2bfacc6c3811b30008a67668c52cb8833808",
+  "order": 17
+}

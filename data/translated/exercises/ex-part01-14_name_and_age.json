@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-14_name_and_age",
+  "lesson_id": "part01-4-arithmetic-operations",
+  "part": 1,
+  "tmc_name": "part01-14_name_and_age",
+  "title_original": "Name and age",
+  "title_vi": "Tên và tuổi",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for their name and year of birth. The program then prints out a message as follows:\n\n<sample-output>\n\nWhat is your name? **Frances Fictitious**\nWhich year were you born? **1990**\nHi Frances Fictitious, you will be 31 years old at the end of the year 2021\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình hỏi tên và năm sinh của người dùng. Sau đó chương trình sẽ in ra thông báo như sau:\n\n<sample-output>\n\nTên bạn là gì? **Pháp hư cấu**\nBạn sinh năm nào? **1990**\nXin chào Frances hư cấu, bạn sẽ 31 tuổi vào cuối năm 2021\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "e52a6392ce8f49341614202670599d25522be8bed3aff9a5b177275a6bb0ed95",
+  "order": 34
+}

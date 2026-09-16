@@ -1,0 +1,16 @@
+{
+  "id": "ex-part13-06_round_the_perimeter",
+  "lesson_id": "part13-2-animation",
+  "part": 13,
+  "tmc_name": "part13-06_round_the_perimeter",
+  "title_original": "Round the perimeter",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please create an animation where the robot traces the perimeter of the window. The end result should look like this:\n\n<img src=\"pygame_perimeter.gif\">",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "626dee1b1512544fa6d77f7fe1d0c7c5ddf57c68a4dd2049b353934758c2690e",
+  "order": 42
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-30_quadratic_formula",
+  "lesson_id": "part01-5-conditional-statements",
+  "part": 1,
+  "tmc_name": "part01-30_quadratic_formula",
+  "title_original": "Solving a quadratic equation",
+  "title_vi": "Giải phương trình bậc hai",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "In the Python `math` module there is the function `sqrt`, which calculates the square root of a number. You can use it like so:\n\n```python\nfrom math import sqrt\n\nprint(sqrt(9))\n```\n\nThis should print out\n\n<sample-output>\n\n3.0\n\n</sample-output>\n\nWe will return to the concept of a _module_ and the `import` statement later. For now, it is sufficient to understand that the line `from math import sqrt` allows us to use the `sqrt` function in our program.\n\nPlease write a program for solving a quadratic equation of the form ax²+bx+c. The program asks for values a, b and c. It should then use the quadratic formula to solve the equation. The quadratic formula expressed with the Python `sqrt` function is as follows:\n\nx = (-b ± sqrt(b²-4ac))/(2a).\n\nYou can assume the equation will always have two real roots, so the above formula will always work.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nValue of a: **1**\nValue of b: **2**\nValue of c: **-8**\n\nThe roots are 2.0 and -4.0\n\n</sample-output>",
+  "description_vi": "Trong mô-đun Python `math` có hàm `sqrt`, tính toán căn bậc hai của một số. Bạn có thể sử dụng nó như vậy:\n\n```python\nfrom math import sqrt\n\nprint(sqrt(9))\n```\n\nĐiều này sẽ in ra\n\n<sample-output>\n\n3.0\n\n</sample-output>\n\nChúng ta sẽ quay lại khái niệm về _module_ và câu lệnh `import` sau. Hiện tại, chỉ cần hiểu rằng dòng `from math import sqrt` cho phép chúng ta sử dụng chức năng `sqrt` trong chương trình của mình là đủ.\n\nHãy viết chương trình giải phương trình bậc hai dạng ax2+bx+c. Chương trình yêu cầu các giá trị a, b và c. Sau đó nên sử dụng công thức bậc hai để giải phương trình. Công thức bậc hai được biểu thị bằng hàm Python `sqrt` như sau:\n\nx = (-b ± sqrt(b2-4ac))/(2a).\n\nBạn có thể giả sử phương trình sẽ luôn có hai nghiệm thực, vì vậy công thức trên sẽ luôn đúng.\n\nMột ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nGiá trị của a: **1**\nGiá trị của b: **2**\nGiá trị của c: **-8**\n\nGốc là 2.0 và -4.0\n\n</sample-output>",
+  "starter_code": "from math import sqrt\n\nprint(sqrt(9))",
+  "grading_data_available": false,
+  "source_hash": "11b9d776edac4dca7f046392f1f1ebd300ba40887295ab6dafab55da68eda49c",
+  "order": 56
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-23_create_tuple",
+  "lesson_id": "part05-4-tuple",
+  "part": 5,
+  "tmc_name": "part05-23_create_tuple",
+  "title_original": "Create a tuple",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `create_tuple(x: int, y: int, z: int)`, which takes three integers as its arguments, and creates and returns a tuple based on the following criteria:\n\n1. The first element in the tuple is the smallest of the arguments\n2. The second element in the tuple is the greatest of the arguments\n3. The third element in the tuple is the sum of the arguments\n\nAn example of its use:\n\n```python\n\nif __name__ == \"__main__\":\n    print(create_tuple(5, 3, -1))\n\n```\n\n<sample-output>\n\n(-1, 5, 7)\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "if __name__ == \"__main__\":\n    print(create_tuple(5, 3, -1))\n",
+  "grading_data_available": false,
+  "source_hash": "5f4256044fe73c77e4ab5e8587a05c7c51068f2553ff546368b911db822ccc68",
+  "order": 12
+}

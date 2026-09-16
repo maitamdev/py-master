@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-20_students_in_groups",
+  "lesson_id": "part01-4-arithmetic-operations",
+  "part": 1,
+  "tmc_name": "part01-20_students_in_groups",
+  "title_original": "Students in groups",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks for the number of students on a course and the desired group size. The program will then print out the number of groups formed from the students on the course. If the division is not even, one of the groups may have fewer members than specified.\n\nIf you can't get your code working as expected, it is absolutely okay to move on and come back to this exercise later. The topic of the next section is [conditional statements](/part-1/5-conditional-statements). This exercise can also be solved using a conditional construction.\n\n<sample-output>\n\nHow many students on the course? **8**\nDesired group size? **4**\nNumber of groups formed: 2\n\n</sample-output>\n\n<sample-output>\n\nHow many students on the course? **11**\nDesired group size? **3**\nNumber of groups formed: 4\n\n</sample-output>\n\nHint: the integer division operator `//` could come in handy here.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "1a47afc9076c09dd46edd45bd54f02d11eb188cacf9724acbf3556db8710262e",
+  "order": 66
+}

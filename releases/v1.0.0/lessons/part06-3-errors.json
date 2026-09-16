@@ -1,0 +1,1215 @@
+{
+  "id": "part06-3-errors",
+  "part": 6,
+  "part_slug": "part-6",
+  "slug": "3-errors",
+  "is_part_index": false,
+  "title_original": "Handling errors",
+  "title_vi": "Xử lý lỗi",
+  "path": "/part-6/3-errors",
+  "source_path": "data/part-6/3-errors.md",
+  "source_hash": "8b486849eff12ce552c1121f15e5b2eef28944539fb55c850e556be67fe96ede",
+  "order": 1,
+  "blocks_count": 69,
+  "blocks": [
+    {
+      "id": "blk-part06-3-errors-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "7a7daa3b416f8598f392ea19e64c4bc7cdf9d9f5c2f09d678db1bc1c67fa25e2",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know how to handle invalid input\n- You will understand what are exceptions in programming\n- You will be familiar with the most common exception types in Python\n- You will be able to handle exceptions in your own programs"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ biết cách xử lý đầu vào không hợp lệ\n- Bạn sẽ hiểu ngoại lệ trong lập trình là gì\n- Bạn sẽ làm quen với các loại ngoại lệ phổ biến nhất trong Python\n- Bạn sẽ có thể xử lý các trường hợp ngoại lệ trong chương trình của riêng mình"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "c94d10362343519854a6eb116b4c5d33da101ed8c6c64a79497461d9c6d03d6c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The are two basic categories of errors that come up in programming contexts:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Có hai loại lỗi cơ bản xuất hiện trong bối cảnh lập trình:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0003",
+      "type": "list",
+      "order": 3,
+      "source_hash": "ae6791535518dd458270046926f3cc97952c656259b5f44f91d2c2aef0a70c06",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "1. Syntax errors, which prevent the execution of the program\n2. Runtime errors, which halt the execution"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "1. Lỗi cú pháp khiến chương trình không thể thực thi được\n2. Lỗi thời gian chạy làm dừng quá trình thực thi"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "711db6c15edd0328a372ded496c9638e0a14a45af52ca509a7ac22af90181df1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Errors in category 1 are usually easy to fix, as the Python interpreter flags the error location when attempting to execute the program. Common syntax errors include a missing colon at the end of a header line, or a missing quotation mark at the end of a string."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các lỗi thuộc loại 1 thường dễ sửa vì trình thông dịch Python sẽ đánh dấu vị trí lỗi khi cố gắng thực thi chương trình. Các lỗi cú pháp phổ biến bao gồm thiếu dấu hai chấm ở cuối dòng tiêu đề hoặc thiếu dấu ngoặc kép ở cuối chuỗi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "c7221b7b5c2a35d011f5f0eec104525d701a9adad8f292037c57f116ac022dfc",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Errors in category 2 can be harder to spot, as it may happen that they only occur at a certain point in the execution of a program, and only in certain circumstances. The program may work just fine in most situations, but halt due to an error in a specific marginal case. We will now concentrate on handling these types of errors."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các lỗi thuộc loại 2 có thể khó phát hiện hơn vì có thể chúng chỉ xảy ra ở một thời điểm nhất định trong quá trình thực thi chương trình và chỉ trong một số trường hợp nhất định. Chương trình có thể hoạt động tốt trong hầu hết các trường hợp nhưng bị dừng do lỗi trong một trường hợp cụ thể. Bây giờ chúng ta sẽ tập trung vào việc xử lý các loại lỗi này."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0006",
+      "type": "heading",
+      "order": 6,
+      "source_hash": "c5160825cc0ef8c3f227bbfc394f08fb9b1bc99360926c8e81ce392ef3866bf7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Input validation"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Xác thực đầu vào"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "41e3814f90c4323881ae9a3f21b45baa79a31986e13140628e56c453984a203b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Many errors that come up during the execution of a program have to do with invalid input. Some examples include:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nhiều lỗi xuất hiện trong quá trình thực thi chương trình có liên quan đến đầu vào không hợp lệ. Một số ví dụ bao gồm:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0008",
+      "type": "list",
+      "order": 8,
+      "source_hash": "92611b24d48bbb9ea8042f9aa62c811a4148c5b239f4ba12e230ff1a81270581",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* missing or empty input values in mandatory fields, such as empty strings when the length of the string is critical\n* negative values where only positive values are accepted, such as -15 as the amount of an ingredient in a recipe\n* missing files or typos in filenames\n* values that are too small or too large, for example when working with dates and times\n* invalid indexes, such as trying to access index 3 in the string \"hey\"\n* values of a wrong type, such as strings when integers are expected"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* giá trị đầu vào bị thiếu hoặc trống trong các trường bắt buộc, chẳng hạn như chuỗi trống khi độ dài của chuỗi là quan trọng\n* giá trị âm trong đó chỉ chấp nhận giá trị dương, chẳng hạn như -15 là lượng nguyên liệu trong công thức\n* thiếu tệp hoặc lỗi chính tả trong tên tệp\n* các giá trị quá nhỏ hoặc quá lớn, ví dụ như khi làm việc với ngày và giờ\n* chỉ mục không hợp lệ, chẳng hạn như cố gắng truy cập chỉ mục 3 trong chuỗi \"hey\"\n* các giá trị thuộc loại sai, chẳng hạn như các chuỗi khi cần có số nguyên"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "a72327375b62832955ead83593269ec47b85f657c274446fcef0d4e30730f930",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Fortunately, we as programmers can prepare for most errors. Let's have a look at a program which asks the user for their age, and makes sure it is an acceptable number (between 0 and 150, in this case):"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "May mắn thay, chúng ta, với tư cách là lập trình viên, có thể chuẩn bị cho hầu hết các lỗi. Chúng ta hãy xem một chương trình hỏi người dùng về độ tuổi của họ và đảm bảo rằng đó là một con số có thể chấp nhận được (trong trường hợp này là từ 0 đến 150):"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0010",
+      "type": "code",
+      "order": 10,
+      "source_hash": "5e8ad704b94058606c3095f5a01e883b6e91a4cacfc5f3f08c82f3187dabe44e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "age = int(input(\"Please type in your age: \"))\nif age >= 0 and age <= 150:\n    print(\"That is a fine age\")\nelse:\n    print(\"This is not a valid age\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "age = int(input(\"Please type in your age: \"))\nif age >= 0 and age <= 150:\n    print(\"That is a fine age\")\nelse:\n    print(\"This is not a valid age\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5e8ad704b94058606c3095f5a01e883b6e91a4cacfc5f3f08c82f3187dabe44e",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0011",
+      "type": "sample_output",
+      "order": 11,
+      "source_hash": "aef45b7c53f66e0d361d902630990b51f0bdfad0e5bc5165c7a44b706a4b0625",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in your age: **25**\nThat is a fine age"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in your age: **25**\nThat is a fine age"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in your age: **25**\nThat is a fine age\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0012",
+      "type": "sample_output",
+      "order": 12,
+      "source_hash": "dbdbc3bc23a5eb5112e8947cd972c91094d18b99b23c15ad586f223d327ac330",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in your age: **-3**\nThis is not a valid age"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in your age: **-3**\nThis is not a valid age"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in your age: **-3**\nThis is not a valid age\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "591901a8bb3e8aee20879fa7f7f05317e5fde348f5114b808759a812bed793de",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "As long as the user types in an integer value, our input validation seems to work fine. But what if they type in a string?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Miễn là người dùng nhập một giá trị số nguyên, quá trình xác thực đầu vào của chúng tôi có vẻ hoạt động tốt. Nhưng nếu họ gõ vào một chuỗi thì sao?"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0014",
+      "type": "sample_output",
+      "order": 14,
+      "source_hash": "248a77984042c2679a3321ec7c78bd39d5044b8717722116f7f8165a7598cb4a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in your age: **twenty-three**\nValueError: invalid literal for int() with base 10: 'twenty-three'"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in your age: **twenty-three**\nValueError: invalid literal for int() with base 10: 'twenty-three'"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in your age: **twenty-three**\nValueError: invalid literal for int() with base 10: 'twenty-three'\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "cfbfab21beb5621ea4a603b8806dbd783129793cc89fae07501eca2668c71fd7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The `int` function is unable to parse the input string `twenty-three` as a valid integer value. The execution halts and the above error message is printed."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm `int` không thể phân tích chuỗi đầu vào `twenty-three` dưới dạng giá trị số nguyên hợp lệ. Quá trình thực thi dừng lại và thông báo lỗi trên được in ra."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0016",
+      "type": "heading",
+      "order": 16,
+      "source_hash": "a0c002f91bf98dbab8b98cd9f84ff233dabcb79d554ad13ec03646eeff357f79",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Exceptions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ngoại lệ"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "a2f9d9920e2ef2ffad9a90f99cd48f34af75080466fda82a749fc34f006a13e0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Errors that occur while the program is already running are called _exceptions_. It is possible to prepare for exceptions, and handle them so that the execution continues despite them occurring."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các lỗi xảy ra khi chương trình đang chạy được gọi là _ngoại lệ_. Có thể chuẩn bị cho các trường hợp ngoại lệ và xử lý chúng để việc thực thi vẫn tiếp tục mặc dù chúng xảy ra."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "d926e49d4e988c7b2ff26046dab7e26df5742aa1920174ce69f92d7bb33f60f3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Exception handling in Python is accomplished with `try` and `except` statements. The idea is that if something within a `try` block causes an exception, Python checks if there is a corresponding `except` block. If such a block exists, it is executed and the program then continues as if nothing happened."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Việc xử lý ngoại lệ trong Python được thực hiện bằng các câu lệnh `try` và `except`. Ý tưởng là nếu có thứ gì đó trong khối `try` gây ra ngoại lệ, Python sẽ kiểm tra xem có khối `except` tương ứng hay không. Nếu một khối như vậy tồn tại, nó sẽ được thực thi và chương trình sẽ tiếp tục như không có gì xảy ra."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "6da7e6e7b3c167e48659a376c7cdddcd16a461cd16fe907bcb2f4fcf7ca12b3a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's change the above example so that the program is prepared for the `ValueError` exception:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy thay đổi ví dụ trên để chương trình được chuẩn bị cho ngoại lệ `ValueError`:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0020",
+      "type": "code",
+      "order": 20,
+      "source_hash": "7ad690ace5b6ecc5daac156a58e202ea6efe52d9e31dddb72e5f77fa84fa9965",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "try:\n    age = int(input(\"Please type in your age: \"))\nexcept ValueError:\n    age = -1\n\nif age >= 0 and age <= 150:\n    print(\"That is a fine age\")\nelse:\n    print(\"This is not a valid age\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "try:\n    age = int(input(\"Please type in your age: \"))\nexcept ValueError:\n    age = -1\n\nif age >= 0 and age <= 150:\n    print(\"That is a fine age\")\nelse:\n    print(\"This is not a valid age\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "7ad690ace5b6ecc5daac156a58e202ea6efe52d9e31dddb72e5f77fa84fa9965",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0021",
+      "type": "sample_output",
+      "order": 21,
+      "source_hash": "42c67f11968856968d1758844ecb7a569f0323f5224598696acf51ba372750a6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in your age: **twenty-three**\nThis is not a valid age"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in your age: **twenty-three**\nThis is not a valid age"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in your age: **twenty-three**\nThis is not a valid age\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "35785ebb52be08af92960c473aeb3f589466caf96be205967f708df947e66750",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We can use the `try` block to flag that the code within the block may cause an error. In the `except` statement directly after the block the relevant error is mentioned. In the above example we covered only a `ValueError` exception. If the exception had some other cause, the execution would still have halted, despite the `try` and `except` blocks."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta có thể sử dụng khối `try` để gắn cờ rằng mã trong khối có thể gây ra lỗi. Trong câu lệnh `except` ngay sau khối, lỗi liên quan được đề cập. Trong ví dụ trên, chúng tôi chỉ đề cập đến ngoại lệ `ValueError`. Nếu ngoại lệ có một số nguyên nhân khác thì quá trình thực thi vẫn bị tạm dừng, bất chấp các khối `try` và `except`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "3f8efe1dccc011e1d8fd19c7b36237e0e87394c533c5d3dbb1df7a721f5151d3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the above example, if the error is caught, the value of `age` is set to -1. This is an invalid input value which we have already programmed behaviour for, as the program expects the age of the user to be greater than 0."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong ví dụ trên, nếu phát hiện lỗi, giá trị `age` được đặt thành -1. Đây là giá trị đầu vào không hợp lệ mà chúng tôi đã lập trình hành vi vì chương trình dự kiến ​​tuổi của người dùng sẽ lớn hơn 0."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "39647afa442ef6bdd3bd2e72ad2a221ab4eeaef64e5ea85d8aa94331c27acf07",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the following example we have a function `read_integer`, which asks the user to type in an integer value, but the function is also prepared for invalid input. The function keeps asking for integers until the user types in a valid input value."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong ví dụ sau, chúng ta có hàm `read_integer`, yêu cầu người dùng nhập một giá trị nguyên nhưng hàm này cũng được chuẩn bị cho trường hợp đầu vào không hợp lệ. Hàm tiếp tục yêu cầu số nguyên cho đến khi người dùng nhập giá trị đầu vào hợp lệ."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0025",
+      "type": "code",
+      "order": 25,
+      "source_hash": "affe9c260bd856805c7abd85cda8112016e13ac3dd3a0ac726b3b6428a6c7303",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def read_integer():\n    while True:\n        try:\n            input_str = input(\"Please type in an integer: \")\n            return int(input_str)\n        except ValueError:\n            print(\"This input is invalid\")\n\nnumber = read_integer()\nprint(\"Thank you!\")\nprint(number, \"to the power of three is\", number**3)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def read_integer():\n    while True:\n        try:\n            input_str = input(\"Please type in an integer: \")\n            return int(input_str)\n        except ValueError:\n            print(\"This input is invalid\")\n\nnumber = read_integer()\nprint(\"Thank you!\")\nprint(number, \"to the power of three is\", number**3)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "affe9c260bd856805c7abd85cda8112016e13ac3dd3a0ac726b3b6428a6c7303",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0026",
+      "type": "sample_output",
+      "order": 26,
+      "source_hash": "ad029deb91efa72dd6d7d5e61daaef02799cf1cec41f71070475161145e8d8f2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in an integer: **three**\nThis input is invalid\nPlease type in an integer: **aybabtu**\nThis input is invalid\nPlease type in an integer: **5**\nThank you!\n5 to the power of three is 125"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in an integer: **three**\nThis input is invalid\nPlease type in an integer: **aybabtu**\nThis input is invalid\nPlease type in an integer: **5**\nThank you!\n5 to the power of three is 125"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in an integer: **three**\nThis input is invalid\nPlease type in an integer: **aybabtu**\nThis input is invalid\nPlease type in an integer: **5**\nThank you!\n5 to the power of three is 125\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "241172160acc8d42f55c802e6c29e524395e56870a483db1ccd6d20fd3e759f9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Sometimes it is enough to catch exceptions with a try-except structure, without doing anything about them. That is, we can just ignore the situation in the `except` block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đôi khi chỉ cần bắt ngoại lệ bằng cấu trúc thử ngoại trừ là đủ mà không cần làm gì với chúng. Nghĩa là, chúng ta có thể bỏ qua tình huống trong khối `except`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "0a9c1798f1b3bbd614467545c6aba4e05024cace07b040bf5a87022334750635",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If we were to change the above example so that we only accepted integers smaller than 100, the results could look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu chúng ta thay đổi ví dụ trên để chỉ chấp nhận các số nguyên nhỏ hơn 100 thì kết quả có thể như sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0029",
+      "type": "code",
+      "order": 29,
+      "source_hash": "45fc2a1143feb5fc09384d974f72037f09d64dd499601d1ea68050163f6ed2d6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def read_small_integer():\n    while True:\n        try:\n            input_str = input(\"Please type in an integer: \")\n            number = int(input_str)\n            if number < 100:\n                return number\n        except ValueError:\n            pass # this command doesn't actually do anything\n\n        print(\"This input is invalid\")\n\nnumber = read_small_integer()\nprint(number, \"to the power of three is\", number**3)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def read_small_integer():\n    while True:\n        try:\n            input_str = input(\"Please type in an integer: \")\n            number = int(input_str)\n            if number < 100:\n                return number\n        except ValueError:\n            pass # this command doesn't actually do anything\n\n        print(\"This input is invalid\")\n\nnumber = read_small_integer()\nprint(number, \"to the power of three is\", number**3)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "45fc2a1143feb5fc09384d974f72037f09d64dd499601d1ea68050163f6ed2d6",
+        "length_lines": 14
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0030",
+      "type": "sample_output",
+      "order": 30,
+      "source_hash": "44610285e22b465c2d8badb6fa5a17be855db937dbd43dbcc59ad399a2c12418",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in an integer: **three**\nThis input is invalid\nPlease type in an integer: **1000**\nThis input is invalid\nPlease type in an integer: **5**\nThank you!\n5 to the power of three is 125"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in an integer: **three**\nThis input is invalid\nPlease type in an integer: **1000**\nThis input is invalid\nPlease type in an integer: **5**\nThank you!\n5 to the power of three is 125"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in an integer: **three**\nThis input is invalid\nPlease type in an integer: **1000**\nThis input is invalid\nPlease type in an integer: **5**\nThank you!\n5 to the power of three is 125\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "d7c91a53e11c8c2bf8940b57feee0df7b6be2051ba6318e21146cbae356bb3cd",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Now the `except` block only contains the command `pass`, which doesn't do anything. Python does not allow empty blocks, so the command is necessary."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bây giờ khối `except` chỉ chứa lệnh `pass`, lệnh này không làm gì cả. Python không cho phép các khối trống nên lệnh này là cần thiết."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0032",
+      "type": "exercise",
+      "order": 32,
+      "source_hash": "bc994a6b1f33f9826311d3dac9f06002c917ff01c806c19eea7a551b5e1b217a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `read_input`, which asks the user for input until the user types in an integer which falls within the bounds given as arguments to the function. The function should return the final valid integer value typed in by the user.\n\nAn example of the function in action:\n\n```python\nnumber = read_input(\"Please type in a number: \", 5, 10)\nprint(\"You typed in:\", number)\n```\n\n<sample-output>\n\nPlease type in a number: **seven**\nYou must type in an integer between 5 and 10\nPlease type in a number: **-3**\nYou must type in an integer between 5 and 10\nPlease type in a number: **8**\nYou typed in: 8\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng viết một hàm có tên `read_input`, hàm này yêu cầu người dùng nhập dữ liệu cho đến khi người dùng nhập một số nguyên nằm trong giới hạn được đưa ra làm đối số cho hàm. Hàm sẽ trả về giá trị số nguyên hợp lệ cuối cùng được người dùng nhập vào.\n\nMột ví dụ về chức năng đang hoạt động:\n\n```python\nnumber = read_input(\"Please type in a number: \", 5, 10)\nprint(\"You typed in:\", number)\n```\n\n<sample-output>\n\nVui lòng nhập một số: **bảy**\nBạn phải nhập số nguyên từ 5 đến 10\nVui lòng nhập một số: **-3**\nBạn phải nhập số nguyên từ 5 đến 10\nVui lòng nhập một số: **8**\nBạn đã gõ vào: 8\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-17_read_input",
+        "exercise_type": "programming-exercise",
+        "name": "Reading input",
+        "tmc_name": "part06-17_read_input",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0033",
+      "type": "heading",
+      "order": 33,
+      "source_hash": "c029d30445358e9f5553333caf213e5906cf91593fc6c4cf57778a59e98aafdc",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Typical errors"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lỗi điển hình"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "645d5dbc8a985b416d50577ee9ccb09ecf51a509ee37f7340969e2e35202d8db",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Here is a selection of typical errors you will likely come across, along with some situations where they may occur."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Dưới đây là tuyển tập các lỗi điển hình mà bạn có thể gặp phải, cùng với một số tình huống chúng có thể xảy ra."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "21772090d7739fe5829061030516382da22664a83decd43b7e43cdd497ca5e87",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "**ValueError**"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "**Lỗi giá trị**"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "62fb10e55992433986379b4c33455f72fa3f0669b4677c1a02851ba3c575731e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This error is often thrown when the argument passed to a function is somehow invalid. For example, the function call `float(\"1,23\")`causes an error, because decimals are always separated by a point in Python, and here we have a comma."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lỗi này thường xảy ra khi đối số được truyền cho một hàm nào đó không hợp lệ. Ví dụ: hàm gọi `float(\"1,23\")`gây ra lỗi, vì số thập phân luôn được phân tách bằng một dấu chấm trong Python và ở đây chúng ta có dấu phẩy."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "dee6ccc591b5be81aedb6c214f002f8adc4b42f63866939c735c65b70d59d6f5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "**TypeError**"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "**Lỗi loại**"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "d537345da4ab80df6743a3fdf15bb15bccc0ff04871b594170fddeb4a9087353",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This error occurs when a value is of the wrong type. For example, the function call `len(10)` causes a `TypeError`, because the function `len` requires a value whose length can be calculated, such as a string or a list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lỗi này xảy ra khi một giá trị có kiểu sai. Ví dụ: lệnh gọi hàm `len(10)` gây ra `TypeError`, vì hàm `len` yêu cầu một giá trị có độ dài có thể tính toán được, chẳng hạn như một chuỗi hoặc danh sách."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "811d09c694ec10030169af608c65d93da953d02ddee293985f737be9ce71400c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "**IndexError**"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "**Lỗi chỉ mục**"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "95194cbb9896fcdf00d5c9005be88dd960c7ebd0b3b0390162bb9f0e3dcc7b5c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This common error occurs when trying to refer to an index which doesn't exist. For example, the expression `\"abc\"[5]` causes an `IndexError`, because the string in question has no index 5."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lỗi phổ biến này xảy ra khi cố gắng tham chiếu đến một chỉ mục không tồn tại. Ví dụ: biểu thức `\"abc\"[5]` gây ra `IndexError` vì chuỗi được đề cập không có chỉ mục 5."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "28e8bdb0b507c8022759fe600ada136c4490f847a2c59d9e7430889e47941822",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "**ZeroDivisionError**"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "**Lỗi Không Phân Chia**"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "c8575ff71493b49347de952fd4283ccc45db4a12ed320acc093c86b30e415218",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "As the name implies, this error is thrown when trying to divide by zero, which we know from mathematics to always be a bad idea. For example, if we try to determine the arithmetic mean of values in a list with the formula `sum(my_list) / len(my_list)`, but our list has length zero, this error will occur."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đúng như tên gọi, lỗi này xảy ra khi cố gắng chia cho 0, điều mà chúng ta biết từ toán học luôn là một ý tưởng tồi. Ví dụ: nếu chúng tôi cố gắng xác định giá trị trung bình số học của các giá trị trong danh sách có công thức `sum(my_list) / len(my_list)`, nhưng danh sách của chúng tôi có độ dài bằng 0 thì lỗi này sẽ xảy ra."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0043",
+      "type": "paragraph",
+      "order": 43,
+      "source_hash": "febf91dc018856d83eae1b38d91884599240270a8a495e18ec138fa0f63c805e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "**Exceptions in file handling**"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "**Ngoại lệ trong việc xử lý tệp**"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "2b77807c6fce92cbff7f5e1894fb39a92ed5e18aec75af7de4735674d28abb53",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Some common errors when working with files are **FileNotFoundError** (when trying to access a file which doesn't exist), **io.UnsupportedOperation** (when trying to perform an operation on a file which is not supported by the mode in which the file is opened) or **PermissionError** (the program lacks necessary permissions to access the file)."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một số lỗi phổ biến khi làm việc với tệp là **FileNotFoundError** (khi cố gắng truy cập một tệp không tồn tại), **io.UnsupportedOperation** (khi cố gắng thực hiện một thao tác trên một tệp không được chế độ mở tệp hỗ trợ) hoặc **PermissionError** (chương trình thiếu các quyền cần thiết để truy cập tệp)."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0045",
+      "type": "heading",
+      "order": 45,
+      "source_hash": "56790f060f8cbc6978ca3fc318f7403f5fa51bdfb4bb09d97aa405e136fdb8ba",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Handling multiple exceptions at once"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Xử lý nhiều ngoại lệ cùng một lúc"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0046",
+      "type": "paragraph",
+      "order": 46,
+      "source_hash": "4f58cc261ca6bb78652be419a9e745a68c1e2388e64c981c391f72a641c1d971",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "There may be more than one `except` block attached to each `try` block. For example, the following program can handle both a `FileNotFoundException` and a `PermissionError`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Có thể có nhiều hơn một khối `except` được gắn vào mỗi khối `try`. Ví dụ: chương trình sau có thể xử lý cả `FileNotFoundException` và `PermissionError`:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0047",
+      "type": "code",
+      "order": 47,
+      "source_hash": "447cddd6f5cdb9c5a841fcce81b689f97dae5eb161fafdf618e68ccf7cf9db6e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "try:\n    with open(\"example.txt\") as my_file:\n        for line in my_file:\n            print(line)\nexcept FileNotFoundError:\n    print(\"The file example.txt was not found\")\nexcept PermissionError:\n    print(\"No permission to access the file example.txt\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "try:\n    with open(\"example.txt\") as my_file:\n        for line in my_file:\n            print(line)\nexcept FileNotFoundError:\n    print(\"The file example.txt was not found\")\nexcept PermissionError:\n    print(\"No permission to access the file example.txt\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "447cddd6f5cdb9c5a841fcce81b689f97dae5eb161fafdf618e68ccf7cf9db6e",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0048",
+      "type": "paragraph",
+      "order": 48,
+      "source_hash": "8fb51b1579f54b6a33ebf6bb0414472c16be8eddc48ed2cb9d24bf574b8b0933",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Sometimes it is not necessary to specify the error the program prepares for. Especially when dealing with files, it is often enough to know that an error has occurred, and safely exit the program. It is not always necessary to know _why_ the error occurred. If we need to cover for all possible exceptions, we can use the `except` block without specifying the error:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đôi khi không cần thiết phải chỉ rõ lỗi mà chương trình chuẩn bị. Đặc biệt là khi xử lý các tập tin, bạn chỉ cần biết rằng đã xảy ra lỗi và thoát khỏi chương trình một cách an toàn là đủ. Không phải lúc nào cũng cần biết _tại_sao_ xảy ra lỗi. Nếu chúng tôi cần đề cập đến tất cả các trường hợp ngoại lệ có thể xảy ra, chúng tôi có thể sử dụng khối `except` mà không chỉ định lỗi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0049",
+      "type": "code",
+      "order": 49,
+      "source_hash": "0c1f1e0c1ee1af68ea390d7c316efa4bf59ca3b0432ecb5659169149d44e840e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\ntry:\n    with open(\"example.txt\") as my_file:\n        for line in my_file:\n            print(line)\nexcept:\n    print(\"There was an error when reading the file.\")\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "\ntry:\n    with open(\"example.txt\") as my_file:\n        for line in my_file:\n            print(line)\nexcept:\n    print(\"There was an error when reading the file.\")\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "0c1f1e0c1ee1af68ea390d7c316efa4bf59ca3b0432ecb5659169149d44e840e",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0050",
+      "type": "paragraph",
+      "order": 50,
+      "source_hash": "e16a272e562b9289e4ee1fb089d7a667f247fb50738d4fae0117e2765528202e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "NB: the `except` statement here covers all possible errors, even those caused by the programming mistakes. Only syntax errors will not be caught by this, as they prevent the code from being executed in the first place."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lưu ý: câu lệnh `except` ở đây bao gồm tất cả các lỗi có thể xảy ra, ngay cả những lỗi do lỗi lập trình gây ra. Điều này chỉ có lỗi cú pháp sẽ không bị phát hiện vì chúng ngăn mã được thực thi ngay từ đầu."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0051",
+      "type": "paragraph",
+      "order": 51,
+      "source_hash": "ebea45a1b9612ed4361630870c176666ab354a70b2ca266263259bda718d56bf",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "For example, the following program will always throw an error, because the variable name `my_file` is written as `myfile` on the third line."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ: chương trình sau sẽ luôn báo lỗi vì tên biến `my_file` được viết là `myfile` ở dòng thứ ba."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0052",
+      "type": "code",
+      "order": 52,
+      "source_hash": "2105ebaeea173c4bc8909a5f0c3d560b359e02c3ac6a149392636865e8a87595",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "try:\n    with open(\"example.txt\") as my_file:\n        for line in myfile:\n            print(line)\nexcept:\n    print(\"There was an error when reading the file.\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "try:\n    with open(\"example.txt\") as my_file:\n        for line in myfile:\n            print(line)\nexcept:\n    print(\"There was an error when reading the file.\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2105ebaeea173c4bc8909a5f0c3d560b359e02c3ac6a149392636865e8a87595",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0053",
+      "type": "paragraph",
+      "order": 53,
+      "source_hash": "cf39a7b29406bb16e40bd56951a0275d4bd7f6a95e056048cc33dfcd853da07a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "An `except` block can hide the actual error: the problem here was not caused by file handling as such, but by the variable name which was misspelled. Without the `except` block the error thrown would be shown, and the cause could be found more easily. Therefore it is usually a good idea to use only `except` blocks specifically declared for certain error types."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khối `except` có thể ẩn lỗi thực tế: sự cố ở đây không phải do việc xử lý tệp như vậy mà do tên biến bị sai chính tả. Nếu không có khối `except`, lỗi được đưa ra sẽ được hiển thị và nguyên nhân có thể được tìm thấy dễ dàng hơn. Do đó, thông thường chỉ nên sử dụng các khối `except` được khai báo cụ thể cho một số loại lỗi nhất định."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0054",
+      "type": "heading",
+      "order": 54,
+      "source_hash": "5a35b662715a4c6cb057c7b46c6e0d1d86ce2a820d97f27fc2a6553e27e47417",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Passing exceptions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vượt qua ngoại lệ"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0055",
+      "type": "paragraph",
+      "order": 55,
+      "source_hash": "c070feb606f8eebad443c67b342f50b0e7fba8c0e90b96898f8bfc3e6a0cd66a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If executing a function causes an exception, and this exception is not handled, it is passed on to the section of code which called the function, and so forth up the call chain, until it reaches the main function level. If it is not handled there, either, the execution of the program halts, and the exception is usually printed out for the user to see."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu việc thực thi một hàm gây ra ngoại lệ và ngoại lệ này không được xử lý thì ngoại lệ đó sẽ được chuyển đến phần mã gọi là hàm, v.v. trong chuỗi lệnh gọi, cho đến khi đạt đến cấp độ hàm chính. Nếu nó không được xử lý ở đó thì việc thực thi chương trình sẽ tạm dừng và ngoại lệ thường được in ra để người dùng xem."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0056",
+      "type": "paragraph",
+      "order": 56,
+      "source_hash": "32190ca0360425ba54a81cfdf4d37d805c2a3e6e34494cf648f9cb96ac89c05e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the following example we have the function `testing`. If it causes an exception, this is not handled within the function itself, but in the main function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong ví dụ sau chúng ta có hàm `testing`. Nếu nó gây ra ngoại lệ, thì điều này không được xử lý trong chính hàm đó mà trong hàm chính:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0057",
+      "type": "code",
+      "order": 57,
+      "source_hash": "8fac4a2b93ab4185d48bd6fdb07746a1516d14deed4e9dcefc2fce4eccc3fbf6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def testing(x):\n    print(int(x) + 1)\n\ntry:\n    number = input(\"Please type in a number: \")\n    testing(number)\nexcept:\n    print(\"Something went wrong\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def testing(x):\n    print(int(x) + 1)\n\ntry:\n    number = input(\"Please type in a number: \")\n    testing(number)\nexcept:\n    print(\"Something went wrong\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8fac4a2b93ab4185d48bd6fdb07746a1516d14deed4e9dcefc2fce4eccc3fbf6",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0058",
+      "type": "sample_output",
+      "order": 58,
+      "source_hash": "9044a9be6d6f2287e130369a8b8b7c237d6453e4e0581222d53d2f8195dc62a0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number: **three**\nSomething went wrong"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number: **three**\nSomething went wrong"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number: **three**\nSomething went wrong\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0059",
+      "type": "heading",
+      "order": 59,
+      "source_hash": "4aca1cada2340824e9f3d096f6e2999b499d31a25975d2189ee93d5ae8660143",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Raising exceptions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đưa ra ngoại lệ"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0060",
+      "type": "paragraph",
+      "order": 60,
+      "source_hash": "13fa9c5c31b24408c1a0676ebe5ef085ead950847a7b4492c41dff39040ee0e1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "You can also raise exceptions, with the command `raise`. It may seem like an odd idea to purposefully cause errors in your programs, but it can, in fact, be a very useful mechanism."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bạn cũng có thể đưa ra các ngoại lệ bằng lệnh `raise`. Việc cố tình gây ra lỗi trong chương trình của bạn có vẻ là một ý tưởng kỳ quặc, nhưng trên thực tế, nó có thể là một cơ chế rất hữu ích."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0061",
+      "type": "paragraph",
+      "order": 61,
+      "source_hash": "eac8790dea20f58a4389e8425ff7e36cd4f04f7aa1142dde6490f4132b267dc3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "For instance, it can sometimes be a good idea to raise an error when detecting invalid parameters. So far we have usually printed out messages when validating input, but if we are writing a function which is executed from elsewhere, just printing something out can go unnoticed when the function is called. Raising an error can make debugging easier."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ: đôi khi, việc đưa ra lỗi khi phát hiện các tham số không hợp lệ có thể là một ý tưởng hay. Cho đến nay, chúng ta thường in ra các thông báo khi xác thực đầu vào, nhưng nếu chúng ta đang viết một hàm được thực thi từ nơi khác, thì việc chỉ in nội dung nào đó ra có thể không được chú ý khi hàm được gọi. Đưa ra lỗi có thể giúp việc gỡ lỗi dễ dàng hơn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0062",
+      "type": "paragraph",
+      "order": 62,
+      "source_hash": "027f7918c3ab342966efa4d5c43da9b4d4acf0cb4fa93c1605973a3b0e2b6a69",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the following example we have a function which calculates factorials (for example, the factorial of the number 5 is 1 * 2 * 3 * 4 * 5). If the argument passed to the function is negative, the function raises an error:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong ví dụ sau, chúng ta có một hàm tính giai thừa (ví dụ: giai thừa của số 5 là 1 * 2 * 3 * 4 * 5). Nếu đối số được truyền vào hàm là âm thì hàm sẽ báo lỗi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0063",
+      "type": "code",
+      "order": 63,
+      "source_hash": "34249f2af197bb32d53546d8eb0b4ff71ee3a375f8ffa3335267aaa6e4e9da71",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def factorial(n):\n    if n < 0:\n        raise ValueError(\"The input was negative: \" + str(n))\n    k = 1\n    for i in range(2, n + 1):\n        k *= i\n    return k\n\nprint(factorial(3))\nprint(factorial(6))\nprint(factorial(-1))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def factorial(n):\n    if n < 0:\n        raise ValueError(\"The input was negative: \" + str(n))\n    k = 1\n    for i in range(2, n + 1):\n        k *= i\n    return k\n\nprint(factorial(3))\nprint(factorial(6))\nprint(factorial(-1))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "34249f2af197bb32d53546d8eb0b4ff71ee3a375f8ffa3335267aaa6e4e9da71",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0064",
+      "type": "sample_output",
+      "order": 64,
+      "source_hash": "c0a4f6214a1fab9e2a9a7e9f635c867ca288575fce33c1e05262d552d59ab4c6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "6\n720\nTraceback (most recent call last):\n  File \"test.py\", line 11, in <module>\n    print(factorial(-1))\n  File \"test.py\", line 3, in factorial\n    raise ValueError(\"The input was negative: \" + str(n))\nValueError: The input was negative: -1"
+      },
+      "translation": {
+        "language": "text",
+        "content": "6\n720\nTraceback (most recent call last):\n  File \"test.py\", line 11, in <module>\n    print(factorial(-1))\n  File \"test.py\", line 3, in factorial\n    raise ValueError(\"The input was negative: \" + str(n))\nValueError: The input was negative: -1"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n6\n720\nTraceback (most recent call last):\n  File \"test.py\", line 11, in <module>\n    print(factorial(-1))\n  File \"test.py\", line 3, in factorial\n    raise ValueError(\"The input was negative: \" + str(n))\nValueError: The input was negative: -1\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0065",
+      "type": "exercise",
+      "order": 65,
+      "source_hash": "61b62dab4310aab559bae4a3bae9ef738fe5dc670d6048f2180eb9bba05fa239",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `new_person(name: str, age: int)`, which creates and returns a tuple containing the data in the arguments. The first element should be the name and the second the age.\n\nIf the values stored in the parameter variables are not valid, the function should throw a `ValueError` exception.\n\nInvalid parameters in this case include:\n\n* name is an empty string\n* name contains less than two words\n* name is longer than 40 characters\n* age is a negative number\n* age is greater than 150"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `new_person(name: str, age: int)` để tạo và trả về một bộ chứa dữ liệu trong các đối số. Phần tử đầu tiên phải là tên và phần tử thứ hai là tuổi.\n\nNếu các giá trị được lưu trữ trong các biến tham số không hợp lệ thì hàm sẽ đưa ra ngoại lệ `ValueError`.\n\nCác tham số không hợp lệ trong trường hợp này bao gồm:\n\n* tên là một chuỗi rỗng\n* tên chứa ít hơn hai từ\n* tên dài hơn 40 ký tự\n* tuổi là số âm\n* tuổi lớn hơn 150"
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-18_parameter_validation",
+        "exercise_type": "programming-exercise",
+        "name": "Parameter validation",
+        "tmc_name": "part06-18_parameter_validation",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0066",
+      "type": "exercise",
+      "order": 66,
+      "source_hash": "3d71f60c7dccfa0fdd1206ec54946c814b97868e83064a95c6f9920201c83a15",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The file `lottery_numbers.csv` containts winning lottery numbers in the following format:\n\n<sample-data>\n\nweek 1;5,7,11,13,23,24,30\nweek 2;9,13,14,24,34,35,37\n...etc...\n\n</sample-data>\n\nEach line should contain a header `week x`, followed by seven integer numbers which are all between 1 and 39 inclusive.\n\nThe file has been corrupted. Lines in the file may contain the following kinds of errors (these exact lines may not be present in the file, but errors in a similar format will be):\n\nThe week number is incorrect:\n\n<sample-data>\n\nweek zzc;1,5,13,22,24,25,26\n\n</sample-data>\n\nOne or more numbers are not correct:\n\n<sample-data>\n\nweek 22;1,**,5,6,13,2b,34\n\n</sample-data>\n\nToo few numbers:\n\n<sample-data>\n\nweek 13;4,6,17,19,24,33\n\n</sample-data>\n\nThe numbers are too small or large:\n\n<sample-data>\n\nweek 39;5,9,15,35,39,41,105\n\n</sample-data>\n\nThe same number appears twice:\n\n<sample-data>\n\nweek 41;5,12,3,35,12,14,36\n\n</sample-data>\n\nPlease write a function named `filter_incorrect()`, which creates a file called `correct_numbers.csv`. The file should contain only those lines from the original file which are in the correct format."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tệp `lottery_numbers.csv` chứa số trúng xổ số theo định dạng sau:\n\n<sample-data>\n\ntuần 1;5,7,11,13,23,24,30\ntuần 2;9,13,14,24,34,35,37\n...v.v...\n\n</sample-data>\n\nMỗi dòng phải chứa tiêu đề `week x`, theo sau là bảy số nguyên nằm trong khoảng từ 1 đến 39.\n\nTập tin đã bị hỏng. Các dòng trong tệp có thể chứa các loại lỗi sau (các dòng chính xác này có thể không có trong tệp nhưng sẽ có các lỗi ở định dạng tương tự):\n\nSố tuần không chính xác:\n\n<sample-data>\n\ntuần zzc;1,5,13,22,24,25,26\n\n</sample-data>\n\nMột hoặc nhiều số không đúng:\n\n<sample-data>\n\ntuần 22;1,**,5,6,13,2b,34\n\n</sample-data>\n\nQuá ít số:\n\n<sample-data>\n\ntuần 13;4,6,17,19,24,33\n\n</sample-data>\n\nNhững con số quá nhỏ hoặc quá lớn:\n\n<sample-data>\n\ntuần 39;5,9,15,35,39,41,105\n\n</sample-data>\n\nCùng một số xuất hiện hai lần:\n\n<sample-data>\n\ntuần 41;5,12,3,35,12,14,36\n\n</sample-data>\n\nHãy viết một hàm có tên `filter_incorrect()` để tạo một tệp có tên `correct_numbers.csv`. Tệp chỉ được chứa những dòng từ tệp gốc có định dạng đúng."
+      },
+      "metadata": {
+        "exercise_id": "ex-part06-19_incorrect_lottery_numbers",
+        "exercise_type": "programming-exercise",
+        "name": "Incorrect lottery numbers",
+        "tmc_name": "part06-19_incorrect_lottery_numbers",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0067",
+      "type": "paragraph",
+      "order": 67,
+      "source_hash": "b97eebcf5a0222c688482a2c1f8f4510ba0c7934c136e1f60999bbcc47c2ab75",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!---\nA quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!---\nMột bài kiểm tra để ôn lại nội dung của phần này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part06-3-errors-0068",
+      "type": "quiz",
+      "order": 68,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "69694e01-4c47-5b9d-8a00-b0d96a477dc7",
+        "attributes": {
+          "id": "69694e01-4c47-5b9d-8a00-b0d96a477dc7"
+        }
+      }
+    },
+    {
+      "id": "blk-part06-3-errors-0069",
+      "type": "paragraph",
+      "order": 69,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "-->"
+      },
+      "metadata": {}
+    }
+  ]
+}

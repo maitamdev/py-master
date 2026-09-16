@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-31_print_many_times",
+  "lesson_id": "part03-4-defining-functions",
+  "part": 3,
+  "tmc_name": "part03-31_print_many_times",
+  "title_original": "Print many times",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `print_many_times(text, times)`, which takes a string and an integer as arguments. The integer argument specifies how many times the string argument should be printed out:\n\n```python\nprint_many_times(\"hi\", 5)\n\nprint()\n\ntext = \"All Pythons, except one, grow up\"\ntimes = 3\nprint_many_times(text, times)\n```\n<sample-output>\n\nhi\nhi\nhi\nhi\nhi\n\nAll Pythons, except one, grow up.\nAll Pythons, except one, grow up.\nAll Pythons, except one, grow up.\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "print_many_times(\"hi\", 5)\n\nprint()\n\ntext = \"All Pythons, except one, grow up\"\ntimes = 3\nprint_many_times(text, times)",
+  "grading_data_available": false,
+  "source_hash": "687972a175a253d4afb95111a67ca611ab8645cc54f34b8802065139ad4359db",
+  "order": 69
+}

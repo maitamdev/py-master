@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-19_does_it_contain_vowels",
+  "lesson_id": "part03-2-working-with-strings",
+  "part": 3,
+  "tmc_name": "part03-19_does_it_contain_vowels",
+  "title_original": "Does it contain vowels",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user to input a string. The program then prints out different messages if the string contains any of the vowels a, e or o.\n\nYou may assume the input will be in lowercase entirely. Have a look at the examples below.\n\n<sample-output>\n\nPlease type in a string: **hello there**\na not found\ne found\no found\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a string: **hiya**\na found\ne not found\no not found\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "367112ad092ffffa6635ea312fd0ccc4f1edd01d2d14470c040bc6ba0ad72d1f",
+  "order": 77
+}

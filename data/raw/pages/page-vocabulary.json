@@ -1,0 +1,32 @@
+{
+  "id": "page-vocabulary",
+  "slug": "vocabulary",
+  "title_original": "Glossary",
+  "path": "/glossary",
+  "source_path": "data/vocabulary.md",
+  "source_hash": "476a57e4765aa7351c3bfaff14863b20dc236e6b7bce6959ce1bb7f6911bd500",
+  "frontmatter": {
+    "path": "/glossary",
+    "title": "Glossary",
+    "hidden": true,
+    "information_page": true,
+    "banner": false,
+    "vocabulary_page": true,
+    "hide_in_sidebar": true,
+    "sidebar_priority": 1000
+  },
+  "chunks_count": 2,
+  "raw_chunks": [
+    {
+      "raw_type": "paragraph",
+      "content": "This page will be filled in as the course progresses.",
+      "raw_source": "This page will be filled in as the course progresses."
+    },
+    {
+      "raw_type": "custom_self_closing",
+      "component_name": "vocabulary",
+      "attributes": {},
+      "raw_source": "<vocabulary />"
+    }
+  ]
+}

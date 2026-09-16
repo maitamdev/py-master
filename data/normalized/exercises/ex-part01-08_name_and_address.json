@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-08_name_and_address",
+  "lesson_id": "part01-2-information-from-the-user",
+  "part": 1,
+  "tmc_name": "part01-08_name_and_address",
+  "title_original": "Name and address",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks for the user's name and address. The program should also print out the given information, as follows:\n\n<sample-output>\n\nGiven name: **Steve**\nFamily name: **Sanders**\nStreet address: **91 Station Road**\nCity and postal code: **London EC05 6AW**\nSteve Sanders\n91 Station Road\nLondon EC05 6AW\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "114f817a8fac37b461ddd9db45c0ad7f724fab35ae4a13de7f6569af6194306d",
+  "order": 36
+}

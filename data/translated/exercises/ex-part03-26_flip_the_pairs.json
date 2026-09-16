@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-26_flip_the_pairs",
+  "lesson_id": "part03-3-more-loops",
+  "part": 3,
+  "tmc_name": "part03-26_flip_the_pairs",
+  "title_original": "Flip the pairs",
+  "title_vi": "Lật các cặp",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user to type in a number. The program then prints out all the positive integer values from 1 up to the number. However, the order of the numbers is changed so that each pair or numbers is flipped. That is, 2 comes before 1, 4 before 3 and so forth. See the examples below for details.\n\n<sample-output>\n\nPlease type in a number: **5**\n2\n1\n4\n3\n5\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **6**\n2\n1\n4\n3\n6\n5\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình yêu cầu người dùng nhập vào một số. Sau đó, chương trình in ra tất cả các giá trị nguyên dương từ 1 đến số. Tuy nhiên, thứ tự của các số được thay đổi sao cho mỗi cặp hoặc số đều bị đảo lộn. Tức là 2 đứng trước 1, 4 đứng trước 3, v.v. Xem các ví dụ dưới đây để biết chi tiết.\n\n<sample-output>\n\nVui lòng nhập một số: **5**\n2\n1\n4\n3\n5\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập một số: **6**\n2\n1\n4\n3\n6\n5\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "be6bb832bf967529d08d3f1c676b6991c214ecde44b9194b8e7e93636d9ce7f7",
+  "order": 46
+}

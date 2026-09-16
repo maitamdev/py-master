@@ -1,0 +1,1923 @@
+{
+  "id": "part05-1-more-lists",
+  "part": 5,
+  "part_slug": "part-5",
+  "slug": "1-more-lists",
+  "is_part_index": false,
+  "title_original": "More lists",
+  "title_vi": "",
+  "path": "/part-5/1-more-lists",
+  "source_path": "data/part-5/1-more-lists.md",
+  "source_hash": "eb00c71808cbda26908b1ce9a3782f25077cadda309c75b0e482d592a7503256",
+  "order": 1,
+  "blocks_count": 106,
+  "blocks": [
+    {
+      "id": "blk-part05-1-more-lists-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "a630983a7af979b8429d087eab5fbd0417b8a4c8a8b74e82be12e583c9defcfd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be able to create lists with different types of items\n- You will know how to use lists to organise data\n- You will be able to store a matrix as a two-dimensional list"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "ff4331630b07fc4e385ca6782e0294a3e8e66bc95990131ed7c224e5bc5e406f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!--the same text is in sections 3-1, 5-1 and 6-1, check them all if you're changing this-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0003",
+      "type": "text_box",
+      "order": 3,
+      "source_hash": "0b66c1030fa3f5d41e87182aeeb9f53489c8341f9e3cf8490b8a76c61bbdb34f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Becoming a proficient programmer requires a lot of practice, sometimes even quite mechanical practice. It also involves developing problem solving skills and applying intuition. This is why there are a lot of exercises of different kinds on this course. Some of them ask you to quite straightforwardly apply what you have learnt in the material, but some of them are intentionally more challenging and open-ended.\n\nSome of the exercises might at first seem overwhelming, but this is nothing to worry about. None of the exercises is strictly mandatory, and in fact _only 25 % of the points in each part is required to pass the course._ You can find more details about passing the course on the [page on grading](/grading-and-exams).\n\n**The exercises are not in any specific order of difficulty.** Each section usually introduces some new programming concepts, and these are then practised with both simpler and more complicated exercises. **If you come across an exercise that feels too difficult, move on to the next one.** You can always come back to the more difficult exercises if you have time later.\n\nWhen the going inevitably gets tough, a word of consolation: a task that seems impossibly difficult this week will likely feel rather easy in about four weeks' time."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "hint",
+        "name_original": "About the exercises on this course",
+        "name_vi": "",
+        "attributes": {
+          "variant": "hint",
+          "name": "About the exercises on this course"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0004",
+      "type": "heading",
+      "order": 4,
+      "source_hash": "99541ccbfff52ec4f30a0fa3768e8b6613e3b8d8f9c26fab5706e0ffa5a5fea5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Lists with different types of data"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "8677f41be54e121c7b2d3573ad800ce286523ae53d909a3e5ed0a33b5180ee97",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the previous part we mainly handled lists with integer items, but any types of values can be stored in lists. A list of strings could look like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0006",
+      "type": "code",
+      "order": 6,
+      "source_hash": "ce7e4b74cbf9206c262127641f7f7be3dcb87f50c8edb99a0fc55e4caaa12566",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "names = [\"Marlyn\", \"Ruth\", \"Paul\"]\nprint(names)\nnames.append(\"David\")\nprint(names)\n\nprint(\"Number of names on the list:\", len(names))\nprint(\"Names in alphabetical order:\")\nnames.sort()\nfor name in names:\n  print(name)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "names = [\"Marlyn\", \"Ruth\", \"Paul\"]\nprint(names)\nnames.append(\"David\")\nprint(names)\n\nprint(\"Number of names on the list:\", len(names))\nprint(\"Names in alphabetical order:\")\nnames.sort()\nfor name in names:\n  print(name)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ce7e4b74cbf9206c262127641f7f7be3dcb87f50c8edb99a0fc55e4caaa12566",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0007",
+      "type": "sample_output",
+      "order": 7,
+      "source_hash": "ea16f80f219b5273baacb91f444c0e605dd0697cfad8468c131f3325785e4dcf",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "['Marlyn', 'Ruth', 'Paul']\n['Marlyn', 'Ruth', 'Paul', 'David']\nNumber of names on the list: 4\nNames in alphabetical order:\nDavid\nMarlyn\nPaul\nRuth"
+      },
+      "translation": {
+        "language": "text",
+        "content": "['Marlyn', 'Ruth', 'Paul']\n['Marlyn', 'Ruth', 'Paul', 'David']\nNumber of names on the list: 4\nNames in alphabetical order:\nDavid\nMarlyn\nPaul\nRuth"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n['Marlyn', 'Ruth', 'Paul']\n['Marlyn', 'Ruth', 'Paul', 'David']\nNumber of names on the list: 4\nNames in alphabetical order:\nDavid\nMarlyn\nPaul\nRuth\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "9b7052364463674936710cf462571d17252729e163da1ef27d8b43b8d6371d57",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Floating point numbers are also valid list items:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0009",
+      "type": "code",
+      "order": 9,
+      "source_hash": "0ce60137aef713caee7821688a200ca59ce511b403387c427acadb727e55dde2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "measurements = [-2.5, 1.1, 7.5, 14.6, 21.0, 19.2]\n\nfor measure in measurements:\n    print(measure)\n\nmean = sum(measurements) / len(measurements)\n\nprint(\"The mean is:\", mean)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "measurements = [-2.5, 1.1, 7.5, 14.6, 21.0, 19.2]\n\nfor measure in measurements:\n    print(measure)\n\nmean = sum(measurements) / len(measurements)\n\nprint(\"The mean is:\", mean)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "0ce60137aef713caee7821688a200ca59ce511b403387c427acadb727e55dde2",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0010",
+      "type": "sample_output",
+      "order": 10,
+      "source_hash": "b4603871ce57faf28f3ffb44febbb9ace8374176eb40fd6f8786ecd1207137fb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "-2.5\n1.1\n7.5\n14.6\n21.0\n19.2\nThe mean is: 10.15"
+      },
+      "translation": {
+        "language": "text",
+        "content": "-2.5\n1.1\n7.5\n14.6\n21.0\n19.2\nThe mean is: 10.15"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n-2.5\n1.1\n7.5\n14.6\n21.0\n19.2\nThe mean is: 10.15\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "315a2351186810c2591933987ed052ae255d3465d83b36b1c30dda10a5ffb2fc",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!--a similar warning is in sections 3-4, 4-6 and 5-1, check them all if you're changing this-->\n## Reminder: using global variables within functions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "c96153243d233b509cd2d5dbec4201bb35c250480942cbef8cfad188c36d78b4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "We know it is possible to assign new variables within function definitions, but the function can also see variables assigned outside it, in the main function. Such variables are called _global_ variables."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "99f27aabfffa53827b6d115e12d9343d346363d9034bc1da05936a8a72c6fcb5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Using global variables from within functions is usually a bad idea. Among other issues, doing so may cause bugs which are difficult to trace."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "f166be0b8a1b5b094b9773e7d09bc3987d94e25b1a443e95efe39c35e865e9a4",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Below is an example of a function which uses a global variable \"by mistake\":"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0015",
+      "type": "code",
+      "order": 15,
+      "source_hash": "ff50bcb8fd97b75d1c5ea511393270f92cce6c39d4338614a6a315a8d7026a3f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def print_reversed(names: list):\n    # using the global variable instead of the parameter by accident\n    i = len(name_list) - 1\n    while i >= 0:\n        print(name_list[i])\n        i -= 1\n\n# here the global variable is assigned\nname_list = [\"Steve\", \"Jean\", \"Katherine\", \"Paul\"]\nprint_reversed(name_list)\nprint()\nprint_reversed([\"Huey\", \"Dewey\", \"Louie\"])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def print_reversed(names: list):\n    # using the global variable instead of the parameter by accident\n    i = len(name_list) - 1\n    while i >= 0:\n        print(name_list[i])\n        i -= 1\n\n# here the global variable is assigned\nname_list = [\"Steve\", \"Jean\", \"Katherine\", \"Paul\"]\nprint_reversed(name_list)\nprint()\nprint_reversed([\"Huey\", \"Dewey\", \"Louie\"])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "ff50bcb8fd97b75d1c5ea511393270f92cce6c39d4338614a6a315a8d7026a3f",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0016",
+      "type": "sample_output",
+      "order": 16,
+      "source_hash": "8b5ae8c3eb1f7f082005001e184f1968c15c608e763a1f3ce16adb897079db3b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Paul\nKatherine\nJean\nSteve\n\nPaul\nKatherine\nJean\nSteve"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Paul\nKatherine\nJean\nSteve\n\nPaul\nKatherine\nJean\nSteve"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPaul\nKatherine\nJean\nSteve\n\nPaul\nKatherine\nJean\nSteve\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "20acf475355b218324190946464627ca9c76f224a02b8e70018f9b064dd34936",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Even though both function calls have the right kind of argument, the function always prints out what is stored in the global variable `name_list`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "b2f9f8043f25cb5f10baf17fecb2e92e09f20c0812ee2ca6b7f9bf2f8558b43b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "To make matters even more muddled, remember that all code for testing your functions should be placed within the `if __name__ == \"__main__\":` block for the automatic tests. The previous example should be modified:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0019",
+      "type": "code",
+      "order": 19,
+      "source_hash": "fb405448b506bf8d3d96b787b07f98f1cb0cfd1da7114f95a6b51562a61a08cc",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def print_reversed(names: list):\n    # using the global variable instead of the parameter by accident\n    i = len(name_list) - 1\n    while i>=0:\n        print(name_list[i])\n        i -= 1\n\n# All the code for testing the function should be within this block\nif __name__ == \"__main__\":\n    # here the global variable is assigned\n    name_list = [\"Steve\", \"Jean\", \"Katherine\", \"Paul\"]\n    print_reversed(name_list)\n    print()\n    print_reversed([\"Huey\", \"Dewey\", \"Louie\"])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def print_reversed(names: list):\n    # using the global variable instead of the parameter by accident\n    i = len(name_list) - 1\n    while i>=0:\n        print(name_list[i])\n        i -= 1\n\n# All the code for testing the function should be within this block\nif __name__ == \"__main__\":\n    # here the global variable is assigned\n    name_list = [\"Steve\", \"Jean\", \"Katherine\", \"Paul\"]\n    print_reversed(name_list)\n    print()\n    print_reversed([\"Huey\", \"Dewey\", \"Louie\"])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "fb405448b506bf8d3d96b787b07f98f1cb0cfd1da7114f95a6b51562a61a08cc",
+        "length_lines": 14
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "b81174304c236bab4a4f8a5be175ee301debb6f6a343202a3c8b8812f982bd7c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Notice the global variable is assigned within the `if` block now."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "829fe3e1286b33ee0aabec6806f3fd15de2297bb37c5ecf546ebb2bba992a831",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The automatic tests in the TMC system are executed without running any of the code in the `if` block. So, in this latter example the function wouldn't even theoretically work, since it refers to the variable `name_list`, which doesn't exist at all when the tests are executed."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0022",
+      "type": "heading",
+      "order": 22,
+      "source_hash": "0a6c6d4a4db615ebf0097438a8e7418a6453827d0ac3f43d7567ead9dc66c1c9",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Warning: overwriting a parameter and returning too early"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "20b1d05d5dbd2e86ab4fd24d586cae079e901ef2ec701abc46d72c11627b62d2",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "There are a couple of novel sources of bugs we should look at before jumping into the exercises in this part. Let's have a look at a function which tells us whether an integer is found within a list. Both are defined as parameters of the function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0024",
+      "type": "code",
+      "order": 24,
+      "source_hash": "dda6f890534a6782f090e68b6193430fdb3423de44a89dd28aae5b2303683bee",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def number_in_list(numbers: list, number: int):\n    for number in numbers:\n        if number == number:\n            return True\n        else:\n            return False"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def number_in_list(numbers: list, number: int):\n    for number in numbers:\n        if number == number:\n            return True\n        else:\n            return False"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "dda6f890534a6782f090e68b6193430fdb3423de44a89dd28aae5b2303683bee",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "63aef1e01f6dd0ed5b88f39b37cc002facc43cbfd44500e15b67878cac51c58f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This function seems to always return `True`. The reason is that the `for` loop overwrites the value stored in the parameter `number`. Thus the condition in the `if` statement is always true."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "df9769c039e5399a3b62f3ddada0acf59704cf6c9d0a60fc5cce3269b3ad480e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Renaming the parameter solves the problem:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0027",
+      "type": "code",
+      "order": 27,
+      "source_hash": "12406ffda15e0d51d19b549e69160610ae43dd356e949c30418e732449f9b51c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def number_in_list(numbers: list, searched_number: int):\n    for number in numbers:\n        if number == searched_number:\n            return True\n        else:\n            return False"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def number_in_list(numbers: list, searched_number: int):\n    for number in numbers:\n        if number == searched_number:\n            return True\n        else:\n            return False"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "12406ffda15e0d51d19b549e69160610ae43dd356e949c30418e732449f9b51c",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "9285f1dc0bdbaca646ebdb47c40d376c46f8240561c859f6515c0640ae70ed08",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Now the condition in the `if` statement looks better. But there is a new problem, since the function still doesn't seem to work correctly. Trying out the following manifests a bug:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0029",
+      "type": "code",
+      "order": 29,
+      "source_hash": "4ac37a07028553990ef245c32122308b46671dfd42d36b488d4be51d7ab14114",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "found = number_in_list([1, 2, 3, 4], 3)\nprint(found)  # prints out False"
+      },
+      "translation": {
+        "language": "code",
+        "content": "found = number_in_list([1, 2, 3, 4], 3)\nprint(found)  # prints out False"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4ac37a07028553990ef245c32122308b46671dfd42d36b488d4be51d7ab14114",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "2e58e916b8f4116041a228db301840044262453f643907ffcdde42bba082d52f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The issue here is that the function returns too early, without checking all the numbers in the list. In fact, the function takes only the first item in the list, and returns `True` or `False` depending on its value. We cannot know whether a number is _not present_ in the list until we have checked all the items in the list. The `return False` command should be placed outside the `for` loop:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0031",
+      "type": "code",
+      "order": 31,
+      "source_hash": "392ce464aa53cd4ff9e74bd6f4074ea8512f0a470febb861683066a04e341e70",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def number_in_list(numbers: list, searched_number: int):\n    for number in numbers:\n        if number == searched_number:\n            return True\n\n    return False"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def number_in_list(numbers: list, searched_number: int):\n    for number in numbers:\n        if number == searched_number:\n            return True\n\n    return False"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "392ce464aa53cd4ff9e74bd6f4074ea8512f0a470febb861683066a04e341e70",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0032",
+      "type": "paragraph",
+      "order": 32,
+      "source_hash": "d8ed4f71a5017f6a703cd500053c6dda84c50854d744d58eab84590279da5aef",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at another faulty function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0033",
+      "type": "code",
+      "order": 33,
+      "source_hash": "a0fec7ff7a68f1e4f13aef0bc5c2a8648522ab25d80cfbf88a4e82cf63c39b31",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def unique_numbers(numbers: list):\n    # a helper variable to store all the numbers we've already checked\n    numbers = []\n    for number in numbers:\n        # have we seen this number already?\n        if number in numbers:\n            return False\n        numbers.append(number)\n\n    return True\n\nunique = unique_numbers([1, 2, 2])\nprint(unique)  # prints out True"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def unique_numbers(numbers: list):\n    # a helper variable to store all the numbers we've already checked\n    numbers = []\n    for number in numbers:\n        # have we seen this number already?\n        if number in numbers:\n            return False\n        numbers.append(number)\n\n    return True\n\nunique = unique_numbers([1, 2, 2])\nprint(unique)  # prints out True"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a0fec7ff7a68f1e4f13aef0bc5c2a8648522ab25d80cfbf88a4e82cf63c39b31",
+        "length_lines": 13
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "c7b747b6dbbb4673707ae33a62529bca22cc27b10c91b1398c4ea5e5ddb04014",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "This function is supposed to check whether all numbers in a list are distinct from each other, but it always returns `True`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "e126323e240921b0542956421bd1f58fea6cbfee3c2774cfbb1fc142f9fd5a00",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Here the function again overwrites the value stored in its parameter by mistake. The function tries to use the variable `numbers` to store all the numbers already checked, but this overwrites the original argument list. Renaming the helper variable is an easy fix:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0036",
+      "type": "code",
+      "order": 36,
+      "source_hash": "5dc77ab7f558c134cb68ca5a963e38819cab263651bba647c971b81165e3c7fb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def unique_numbers(numbers: list):\n    # a helper variable to store all the numbers we've already checked\n    numbers_checked = []\n    for number in numbers:\n        # have we seen this number already?\n        if number in numbers_checked:\n            return False\n        numbers_checked.append(number)\n\n    return True\n\nunique = unique_numbers([1, 2, 2])\nprint(unique)  # prints out False"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def unique_numbers(numbers: list):\n    # a helper variable to store all the numbers we've already checked\n    numbers_checked = []\n    for number in numbers:\n        # have we seen this number already?\n        if number in numbers_checked:\n            return False\n        numbers_checked.append(number)\n\n    return True\n\nunique = unique_numbers([1, 2, 2])\nprint(unique)  # prints out False"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5dc77ab7f558c134cb68ca5a963e38819cab263651bba647c971b81165e3c7fb",
+        "length_lines": 13
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "f8244653adb07bb9b110596b186da334d9db0baf11a15c77aac3cada5af05edd",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Problems like this, and many others, can be located and fixed with the help of the debugger or the [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit). Learning to use these efficiently cannot be emphasised enough."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0038",
+      "type": "exercise",
+      "order": 38,
+      "source_hash": "c72a11bc6ae6d54e3a96e279b975006d8b3e939fa2bd00097305893581d61c6a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `longest(strings: list)`, which takes a list of strings as its argument. The function finds and returns the longest string in the list. You may assume there is always a single longest string in the list.\n\nAn example of expected behaviour:\n\n```python\n\nif __name__ == \"__main__\":\n    strings = [\"hi\", \"hiya\", \"hello\", \"howdydoody\", \"hi there\"]\n    print(longest(strings))\n\n```\n\n<sample-output>\n\nhowdydoody\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-01_longest_string",
+        "exercise_type": "programming-exercise",
+        "name": "The longest string",
+        "tmc_name": "part05-01_longest_string",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0039",
+      "type": "heading",
+      "order": 39,
+      "source_hash": "5262db40498378ca27b2e38bd3cbf15535449848e8a2c724ba4f51a2b82f15d1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Lists within lists"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "31b1891428437dd79ef9a48b4b05b11b587ee2f049c4467e3b853324fe967885",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The items in a list can be lists themselves:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0041",
+      "type": "code",
+      "order": 41,
+      "source_hash": "7f2aefbdb113cafead7e7fa1db44dd6a34cc6658726dfd851b0f6308977002a8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [[5, 2, 3], [4, 1], [2, 2, 5, 1]]\nprint(my_list)\nprint(my_list[1])\nprint(my_list[1][0])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [[5, 2, 3], [4, 1], [2, 2, 5, 1]]\nprint(my_list)\nprint(my_list[1])\nprint(my_list[1][0])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "7f2aefbdb113cafead7e7fa1db44dd6a34cc6658726dfd851b0f6308977002a8",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0042",
+      "type": "sample_output",
+      "order": 42,
+      "source_hash": "3099c56b2043a9058fb9614086eede931eabde2a8324ea5be7b6ebe470c8dfe2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[[5, 2, 3], [4, 1], [2, 2, 5, 1]]\n[4, 1]\n4"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[[5, 2, 3], [4, 1], [2, 2, 5, 1]]\n[4, 1]\n4"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[[5, 2, 3], [4, 1], [2, 2, 5, 1]]\n[4, 1]\n4\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0043",
+      "type": "paragraph",
+      "order": 43,
+      "source_hash": "97e71e4e25ccf636d9330fbfad7aa32d77198feaf3316f5c1fe8a0640afb376f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Why would lists within lists be useful?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0044",
+      "type": "paragraph",
+      "order": 44,
+      "source_hash": "eb0bc74d52f1356ccad7dcba6e3eafa3be2d8d108e5dc8f09a551a046f98a6e3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Remember that lists can contain items of different types. You could store information about a person in a list. For instance, you could include their name as the first item, their age as the second item, and their height in meters as the third item:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0045",
+      "type": "code",
+      "order": 45,
+      "source_hash": "906ef45ecf04ca9f602eec3d96c6bed968c068575a8844aee41913fc556be7c2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "[\"Anne\", 12, 1.45]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "[\"Anne\", 12, 1.45]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "906ef45ecf04ca9f602eec3d96c6bed968c068575a8844aee41913fc556be7c2",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0046",
+      "type": "paragraph",
+      "order": 46,
+      "source_hash": "992deafbde3bb16be5f096541632f272097f25936141ce3224eb6b7468a05c94",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A database of persons could then be a list, whose items would be lists containing information about a single person:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0047",
+      "type": "code",
+      "order": 47,
+      "source_hash": "5e2f2f9adf99c067526e6196b00799dba09f8e3565c957bf5343968b01a6888b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "persons = [[\"Betty\", 10, 1.37], [\"Peter\", 7, 1.25], [\"Emily\", 32, 1.64], [\"Alan\", 39, 1.78]]\n\nfor person in persons:\n  name = person[0]\n  age = person[1]\n  height = person[2]\n  print(f\"{name}: age {age} years, height {height} meters\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "persons = [[\"Betty\", 10, 1.37], [\"Peter\", 7, 1.25], [\"Emily\", 32, 1.64], [\"Alan\", 39, 1.78]]\n\nfor person in persons:\n  name = person[0]\n  age = person[1]\n  height = person[2]\n  print(f\"{name}: age {age} years, height {height} meters\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5e2f2f9adf99c067526e6196b00799dba09f8e3565c957bf5343968b01a6888b",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0048",
+      "type": "sample_output",
+      "order": 48,
+      "source_hash": "e4f152776d72a489302c3f144a638f121d426f89d6b0f31fcef3b401d3f4081f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Betty: age 10 years, height 1.37 meters\nPeter: age 7 years, height 1.25 meters\nEmily: age 32 years, height 1.64 meters\nAlan: age 39 years, height 1.78 meters"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Betty: age 10 years, height 1.37 meters\nPeter: age 7 years, height 1.25 meters\nEmily: age 32 years, height 1.64 meters\nAlan: age 39 years, height 1.78 meters"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nBetty: age 10 years, height 1.37 meters\nPeter: age 7 years, height 1.25 meters\nEmily: age 32 years, height 1.64 meters\nAlan: age 39 years, height 1.78 meters\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0049",
+      "type": "paragraph",
+      "order": 49,
+      "source_hash": "2f7babf0c5e60d708026a518d6cc0a2bb523e674ec88631e2e19faa0944a733c",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The `for` loop goes through the items in the outer list one by one. That is, each list containing information about a single person is, in turn, assigned to the variable `person`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0050",
+      "type": "paragraph",
+      "order": 50,
+      "source_hash": "62cf7ff6e39240ab2364c878378dfb59fc3b841bbc1c64d40964e251bf1899ed",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Lists arent always the best way to present data, such as information about a person. We will soon come across Python _dictionaries_, which are often better suited to such situations."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0051",
+      "type": "heading",
+      "order": 51,
+      "source_hash": "6009efe95f18eabbd14c861bdf06ffb187bde46414349c18d90bc54a2672fcd9",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Matrices"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0052",
+      "type": "paragraph",
+      "order": 52,
+      "source_hash": "191f1490db88d027abf7efd4881b0e86344fbc2ab4b9680945de39808494e1f1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A two-dimensional array, or a _matrix_, is also a natural application of a list within a list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0053",
+      "type": "paragraph",
+      "order": 53,
+      "source_hash": "2948182d67269e56eb03de6132d20062fa93739c5fd99b2124f9a86631bbcce8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "For example, the following matrix"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0054",
+      "type": "image",
+      "order": 54,
+      "source_hash": "b72352f18803f0b14173ce4720c480d875b3b4c36bf2c33446971c55c4416cd1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "5_1_1.png",
+        "alt": "",
+        "attributes": {
+          "src": "5_1_1.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0055",
+      "type": "paragraph",
+      "order": 55,
+      "source_hash": "d1b584859907204acf0b16d361d016c273db94762d09b673fb4ab6e06fe5678a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "could be presented as a two-dimensional list in Python like so:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0056",
+      "type": "code",
+      "order": 56,
+      "source_hash": "1631a060a94a4b79f007b797d4860c76aa78f49d50d41fca76cf17349d91fe0d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_matrix = [[1, 2, 3], [3, 2, 1], [4, 5, 6]]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_matrix = [[1, 2, 3], [3, 2, 1], [4, 5, 6]]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "1631a060a94a4b79f007b797d4860c76aa78f49d50d41fca76cf17349d91fe0d",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0057",
+      "type": "paragraph",
+      "order": 57,
+      "source_hash": "f391f0b25d35f78b458e3c464550dff188bfc1156250624d6acfd618c6126dc0",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Since a matrix is a list containing lists, the individual elements within the matrix can be accessed using consecutive square brackets. The first index refers to the row, and the second to the column. Indexing starts from zero, so for example `my_matrix[0][1]` refers to the second item on the first row."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0058",
+      "type": "code",
+      "order": 58,
+      "source_hash": "f78a1a01b78b62528a6b88eddd3f0149df7ec5547b1f920191df8475f9b6b91f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_matrix = [[1, 2, 3], [3, 2, 1], [4, 5, 6]]\n\nprint(my_matrix[0][1])\nmy_matrix[1][0] = 10\nprint(my_matrix)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_matrix = [[1, 2, 3], [3, 2, 1], [4, 5, 6]]\n\nprint(my_matrix[0][1])\nmy_matrix[1][0] = 10\nprint(my_matrix)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f78a1a01b78b62528a6b88eddd3f0149df7ec5547b1f920191df8475f9b6b91f",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0059",
+      "type": "sample_output",
+      "order": 59,
+      "source_hash": "73480534270a1d1e02446ecd19ec1d5950028e9d337d448bcd95c2b81e1e52dd",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "2\n[[1, 2, 3], [10, 2, 1], [4, 5, 6]]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "2\n[[1, 2, 3], [10, 2, 1], [4, 5, 6]]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n2\n[[1, 2, 3], [10, 2, 1], [4, 5, 6]]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0060",
+      "type": "paragraph",
+      "order": 60,
+      "source_hash": "79fea5c82a977cc29577fc43e164191e992ba247986cfdeb14697c7c411edce9",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Like any other list, the rows of the matrix can be traversed with a `for` loop. The following code prints out each row of the matrix on a separate line:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0061",
+      "type": "code",
+      "order": 61,
+      "source_hash": "bba418b4a0410c883814822f7d97e72ca187944636240edd4365f1dcc53b322a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\n\nfor row in my_matrix:\n    print(row)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\n\nfor row in my_matrix:\n    print(row)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "bba418b4a0410c883814822f7d97e72ca187944636240edd4365f1dcc53b322a",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0062",
+      "type": "sample_output",
+      "order": 62,
+      "source_hash": "0a36e234e23e5f72e6d6efe62c3042397174ee822029c731bf5b8f58d2c71a4b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[1, 2, 3]\n[4, 5, 6]\n[7, 8, 9]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[1, 2, 3]\n[4, 5, 6]\n[7, 8, 9]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[1, 2, 3]\n[4, 5, 6]\n[7, 8, 9]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0063",
+      "type": "paragraph",
+      "order": 63,
+      "source_hash": "f29073977f040fd64e01c64fc7e36729f524eff8a16060bf0ddcf60a96ea34fb",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Likewise, nested loops can be used to access the individual elements. The following code prints out each element in the matrix on a separate line with the help of two `for` loops:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0064",
+      "type": "code",
+      "order": 64,
+      "source_hash": "bdea68751794d8ff44aede52c96a5a6e6c0347c54ed7be097a9a2eb6bc91aee5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\n\nfor row in my_matrix:\n    print(\"a new row\")\n    for element in row:\n        print(element)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\n\nfor row in my_matrix:\n    print(\"a new row\")\n    for element in row:\n        print(element)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "bdea68751794d8ff44aede52c96a5a6e6c0347c54ed7be097a9a2eb6bc91aee5",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0065",
+      "type": "sample_output",
+      "order": 65,
+      "source_hash": "dd7997ccae683d4eb13cfdbd0a95459e31f00c0ecefce11017558da27b2bf7ff",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "a new row\n1\n2\n3\na new row\n4\n5\n6\na new row\n7\n8\n9"
+      },
+      "translation": {
+        "language": "text",
+        "content": "a new row\n1\n2\n3\na new row\n4\n5\n6\na new row\n7\n8\n9"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\na new row\n1\n2\n3\na new row\n4\n5\n6\na new row\n7\n8\n9\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0066",
+      "type": "heading",
+      "order": 66,
+      "source_hash": "e2323ab1f194f840a4c2f94690134e69bd31fe6524fe2c9785853544e3e37d01",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Visualising code containing lists within lists"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0067",
+      "type": "paragraph",
+      "order": 67,
+      "source_hash": "579cda001d9de20022afaafa8091979505441f3411a70e411138ae2a6e125e7e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Programs containing lists within lists can feel hard to grasp at first. The [visualisation tool](http://www.pythontutor.com/visualize.html) from Python Tutor is a great help in understanding how they work. The following is a visualisation of the example above:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0068",
+      "type": "image",
+      "order": 68,
+      "source_hash": "fa1263b390f52ee883f693874cf379acd82d7f5ebf089efe822935369d4e8927",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "5_1_2.png",
+        "alt": "",
+        "attributes": {
+          "src": "5_1_2.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0069",
+      "type": "paragraph",
+      "order": 69,
+      "source_hash": "3659c9027b99e8954014119338b9847026120243de74cb6e80275596c7512af6",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The image above reveals that a 3 by 3 matrix technically consists of four lists. The first list represents the entire matrix. The three remaining lists are items in the first list, and represent the rows."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0070",
+      "type": "paragraph",
+      "order": 70,
+      "source_hash": "87bad41c51408e75c6a9704904bb71bfb107404914b185c8f40703bca26b85ce",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "As multidimensional lists can be traversed with nested loops, it would be natural to think of the lists themselves as nested, but the image above shows us this isn't actually so. Instead, the list representing the whole matrix \"points\" to each individual list representing a row in the matrix. This is called a _reference_, and in the [following section](/part-5/2-references) the idea will be explored more thoroughly."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0071",
+      "type": "paragraph",
+      "order": 71,
+      "source_hash": "0d6c36acdee5583b71dc19cc8881c8050462760dcec527ee43d534d8dd14eb6d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In the image above the execution has progressed to the second row of the matrix, and this list is what the variable `row` currently refers to. The variable `element` contains the element the execution is currently at. The value stored in `element` is the middle item in the list, i.e. 5."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0072",
+      "type": "heading",
+      "order": 72,
+      "source_hash": "4487c352125ff9149e7eff089f5f712711e66a5d928c4cf6b89b100ae2a49d31",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Accessing items in a matrix"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0073",
+      "type": "paragraph",
+      "order": 73,
+      "source_hash": "fa8ad87edd002c48416a4fe0578d4a22a322eb0f4302ecf9758bb6510133f503",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Accessing a single row within a matrix is simple - just choose the desired row. The following function calculates the sum of the elements on a chosen row:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0074",
+      "type": "code",
+      "order": 74,
+      "source_hash": "29dd160580b3e182ee12a64d816dd42b0bac73fbe72c9c159d149af47c327ff4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def sum_of_row(my_matrix, row_no: int):\n    # choose the desired row from within the matrix\n    row = my_matrix[row_no]\n    row_sum = 0\n    for item in row:\n        row_sum += item\n\n    return row_sum\n\nm = [[4, 2, 3, 2], [9, 1, 12, 11], [7, 8, 9, 5], [2, 9, 15, 1]]\n\nmy_sum = sum_of_row(m, 1)\nprint(my_sum) # prints out 33 (which equals 9 + 1 + 12 + 11)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def sum_of_row(my_matrix, row_no: int):\n    # choose the desired row from within the matrix\n    row = my_matrix[row_no]\n    row_sum = 0\n    for item in row:\n        row_sum += item\n\n    return row_sum\n\nm = [[4, 2, 3, 2], [9, 1, 12, 11], [7, 8, 9, 5], [2, 9, 15, 1]]\n\nmy_sum = sum_of_row(m, 1)\nprint(my_sum) # prints out 33 (which equals 9 + 1 + 12 + 11)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "29dd160580b3e182ee12a64d816dd42b0bac73fbe72c9c159d149af47c327ff4",
+        "length_lines": 13
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0075",
+      "type": "paragraph",
+      "order": 75,
+      "source_hash": "4d2258ba01ffe8202cd4be2299cf26e4fd059f9b3b13b5083782e99d11db0461",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Working with columns within a matrix is slightly more complicated, as the matrix is stored by rows:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0076",
+      "type": "code",
+      "order": 76,
+      "source_hash": "a815446e51b7079edfa0651eabce0b5027143373db3379b034f5063a50e71e7e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def sum_of_column(my_matrix, column_no: int):\n    # go through each row and select the item at the chosen position\n    column_sum = 0\n    for row in my_matrix:\n        column_sum += row[column_no]\n\n    return column_sum\n\nm = [[4, 2, 3, 2], [9, 1, 12, 11], [7, 8, 9, 5], [2, 9, 15, 1]]\n\nmy_sum = sum_of_column(m, 2)\nprint(my_sum) # prints out 39 (which equals 3 + 12 + 9 + 15)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def sum_of_column(my_matrix, column_no: int):\n    # go through each row and select the item at the chosen position\n    column_sum = 0\n    for row in my_matrix:\n        column_sum += row[column_no]\n\n    return column_sum\n\nm = [[4, 2, 3, 2], [9, 1, 12, 11], [7, 8, 9, 5], [2, 9, 15, 1]]\n\nmy_sum = sum_of_column(m, 2)\nprint(my_sum) # prints out 39 (which equals 3 + 12 + 9 + 15)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a815446e51b7079edfa0651eabce0b5027143373db3379b034f5063a50e71e7e",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0077",
+      "type": "paragraph",
+      "order": 77,
+      "source_hash": "11222d321bf948b58f97429879c764f97ec0bd9dee48f0eb03f82c4489324c02",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The column handled here consists of the elements at index 2 on _each row_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0078",
+      "type": "paragraph",
+      "order": 78,
+      "source_hash": "555e6751ebbe2303c2bdf6a093c806a082ede9ad954ab6b691237dd62447efb8",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "[The visualisation tool](http://www.pythontutor.com/visualize.html) is definitely recommended for understanding how these functions work."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0079",
+      "type": "paragraph",
+      "order": 79,
+      "source_hash": "a31dd6097f638e524d67cbfb3d6a9d0d592b385a41e74ef1274d1a89d5c6e962",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Changing the value of a single element within the matrix is simple: choose a row within the matrix, and then a column within the row:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0080",
+      "type": "code",
+      "order": 80,
+      "source_hash": "e8ca3f878efe317067420e385af6a21c7865e0e6e69bc7dd47218c6de8d51051",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def change_value(my_matrix, row_no: int, column_no: int, new_value: int):\n    # choose the desired row\n    row = my_matrix[row_no]\n    # select the correct item within the row\n    row[column_no] = new_value\n\nm = [[4, 2, 3, 2], [9, 1, 12, 11], [7, 8, 9, 5], [2, 9, 15, 1]]\n\nprint(m)\nchange_value(m, 2, 3, 1000)\nprint(m)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def change_value(my_matrix, row_no: int, column_no: int, new_value: int):\n    # choose the desired row\n    row = my_matrix[row_no]\n    # select the correct item within the row\n    row[column_no] = new_value\n\nm = [[4, 2, 3, 2], [9, 1, 12, 11], [7, 8, 9, 5], [2, 9, 15, 1]]\n\nprint(m)\nchange_value(m, 2, 3, 1000)\nprint(m)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "e8ca3f878efe317067420e385af6a21c7865e0e6e69bc7dd47218c6de8d51051",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0081",
+      "type": "sample_output",
+      "order": 81,
+      "source_hash": "0e062ded530fe1bcf0e3ebb52a89722ca4a769e62c6f8cb70cfeb57eef4ff9b8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[[4, 2, 3, 2], [9, 1, 12, 11], [7, 8, 9, 5], [2, 9, 15, 1]]\n[[4, 2, 3, 2], [9, 1, 12, 11], [7, 8, 9, 1000], [2, 9, 15, 1]]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[[4, 2, 3, 2], [9, 1, 12, 11], [7, 8, 9, 5], [2, 9, 15, 1]]\n[[4, 2, 3, 2], [9, 1, 12, 11], [7, 8, 9, 1000], [2, 9, 15, 1]]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[[4, 2, 3, 2], [9, 1, 12, 11], [7, 8, 9, 5], [2, 9, 15, 1]]\n[[4, 2, 3, 2], [9, 1, 12, 11], [7, 8, 9, 1000], [2, 9, 15, 1]]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0082",
+      "type": "paragraph",
+      "order": 82,
+      "source_hash": "2f6cdb7c570cd9227d60e746c1b25191ee7961a8972de5505ec5e4483fbee2ef",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Notice how above we used the indexes of the row and column to access a chosen element. If we want to change the contents of the matrix, we have to access the elements by their indexes. This means that we can't use a simple `for item in list` loop to traverse the matrix if we want to change the contents of the matrix."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0083",
+      "type": "paragraph",
+      "order": 83,
+      "source_hash": "686ce29b3a0cc91fc5b909a34d0c029e53db69fd1be5ef1a1553031d673faea1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Instead, we will have to keep track of the indexes of the elements, for example with a `while` loop, or a `for` loop using the `range` function. The following code increases the value of each element in the matrix by one:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0084",
+      "type": "code",
+      "order": 84,
+      "source_hash": "1ae3a581f92825d9bda7e6fbfb7609f17b2602660ac110fd3ce3645402bfd9c1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "m = [[1,2,3], [4,5,6], [7,8,9]]\n\nfor i in range(len(m)): # using the number of rows in the matrix\n    for j in range(len(m[i])): # using the number of items on each row \n        m[i][j] += 1\n\nprint(m)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "m = [[1,2,3], [4,5,6], [7,8,9]]\n\nfor i in range(len(m)): # using the number of rows in the matrix\n    for j in range(len(m[i])): # using the number of items on each row \n        m[i][j] += 1\n\nprint(m)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "1ae3a581f92825d9bda7e6fbfb7609f17b2602660ac110fd3ce3645402bfd9c1",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0085",
+      "type": "sample_output",
+      "order": 85,
+      "source_hash": "1f07255252c638c7ada7d63dd7a9c0d2dcc5a13a1dd3c86d680c22926ee79c01",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[[2, 3, 4], [5, 6, 7], [8, 9, 10]]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[[2, 3, 4], [5, 6, 7], [8, 9, 10]]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[[2, 3, 4], [5, 6, 7], [8, 9, 10]]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0086",
+      "type": "paragraph",
+      "order": 86,
+      "source_hash": "68de6fc0b97bdb43812c3bfb6dcd66aeeba7caeaf835f9572bbda28c98586fd1",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The outer loop goes through indexes from zero to the length of the matrix, that is, the number of rows in the matrix. The inner loop goes through indexes from zero to the length of each row within the matrix."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0087",
+      "type": "exercise",
+      "order": 87,
+      "source_hash": "13f8f215c8d3576593057c2983b20088b1fabfb0552acdb30e60ad7838fed86a",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `count_matching_elements(my_matrix: list, element: int)`, which takes a two-dimensional array of integers and a single integer value as its arguments. The function then counts how many elements within the matrix match the argument value.\n\nAn example of how the function should work:\n\n```python\nm = [[1, 2, 1], [0, 3, 4], [1, 0, 0]]\nprint(count_matching_elements(m, 1))\n```\n\n<sample-output>\n\n3\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-02_number_of_elements",
+        "exercise_type": "programming-exercise",
+        "name": "Number of matching elements",
+        "tmc_name": "part05-02_number_of_elements",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0088",
+      "type": "heading",
+      "order": 88,
+      "source_hash": "8edbc4e14c059e0932ced3a671c4baef230adc102be96640d2c4b49fd486ff60",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A two-dimensional array as a data structure in a game"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0089",
+      "type": "paragraph",
+      "order": 89,
+      "source_hash": "2295c39fe499c9fc01b5c8d9617d73b82844aae1a246b8716513fb0540fc5a39",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "A matrix can be a very useful data structure in many different games. For example, the grid of a sudoku game in the image below"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0090",
+      "type": "image",
+      "order": 90,
+      "source_hash": "fc45090adb3782be42ab3060d695aa4772c7fb7a64b4b5195995951037174a06",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "5_1_3.png",
+        "alt": "",
+        "attributes": {
+          "src": "5_1_3.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0091",
+      "type": "paragraph",
+      "order": 91,
+      "source_hash": "db74ac4d5938be90738c24fdbd32c5078e23b65cf31c2c18db15424d4db13bfe",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "can be represented in matrix form like so:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0092",
+      "type": "code",
+      "order": 92,
+      "source_hash": "39cc5e0a8bf97f9da2e6d13f7203f8f6667ae89244007b81594a62c5c908cb92",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "sudoku = [\n  [9, 0, 0, 0, 8, 0, 3, 0, 0],\n  [0, 0, 0, 2, 5, 0, 7, 0, 0],\n  [0, 2, 0, 3, 0, 0, 0, 0, 4],\n  [0, 9, 4, 0, 0, 0, 0, 0, 0],\n  [0, 0, 0, 7, 3, 0, 5, 6, 0],\n  [7, 0, 5, 0, 6, 0, 4, 0, 0],\n  [0, 0, 7, 8, 0, 3, 9, 0, 0],\n  [0, 0, 1, 0, 0, 0, 0, 0, 3],\n  [3, 0, 0, 0, 0, 0, 0, 0, 2]\n]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "sudoku = [\n  [9, 0, 0, 0, 8, 0, 3, 0, 0],\n  [0, 0, 0, 2, 5, 0, 7, 0, 0],\n  [0, 2, 0, 3, 0, 0, 0, 0, 4],\n  [0, 9, 4, 0, 0, 0, 0, 0, 0],\n  [0, 0, 0, 7, 3, 0, 5, 6, 0],\n  [7, 0, 5, 0, 6, 0, 4, 0, 0],\n  [0, 0, 7, 8, 0, 3, 9, 0, 0],\n  [0, 0, 1, 0, 0, 0, 0, 0, 3],\n  [3, 0, 0, 0, 0, 0, 0, 0, 2]\n]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "39cc5e0a8bf97f9da2e6d13f7203f8f6667ae89244007b81594a62c5c908cb92",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0093",
+      "type": "paragraph",
+      "order": 93,
+      "source_hash": "683d25afa28e0a7de918a9212cb67c0efe8d41a2942a69e3c05ec7e5bfecb742",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Here the value zero represents an empty square, as zero is not an acceptable value in a finished sudoku puzzle."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0094",
+      "type": "paragraph",
+      "order": 94,
+      "source_hash": "123ba3535c3a9e43147d5340aba32c54c639482dbe00c9a2d0aaacf8e986af74",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Here is a simple function for printing out the above sudoku grid:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0095",
+      "type": "code",
+      "order": 95,
+      "source_hash": "6c017f9ab34e23d2e69c5b587bb4922603078007618108a949842c043aa4e13f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def print_grid(sudoku):\n    for row in sudoku:\n        for square in row:\n            if square > 0:\n                print(f\" {square}\", end=\"\")\n            else:\n                print(\" _\", end=\"\")\n        print()\n\nprint_grid(sudoku)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def print_grid(sudoku):\n    for row in sudoku:\n        for square in row:\n            if square > 0:\n                print(f\" {square}\", end=\"\")\n            else:\n                print(\" _\", end=\"\")\n        print()\n\nprint_grid(sudoku)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6c017f9ab34e23d2e69c5b587bb4922603078007618108a949842c043aa4e13f",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0096",
+      "type": "paragraph",
+      "order": 96,
+      "source_hash": "eea049af19634aef1d6b3c90746d71e9dfb6beb732b64f5473c53a0f8dad925b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The printout should look like this::"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0097",
+      "type": "code",
+      "order": 97,
+      "source_hash": "64928bcc268d75786104b7a4ec53ca7fc9a93f64736bac0f3ff31833fe15067c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\n 9 _ _ _ 8 _ 3 _ _\n _ _ _ 2 5 _ 7 _ _\n _ 2 _ 3 _ _ _ _ 4\n _ 9 4 _ _ _ _ _ _\n _ _ _ 7 3 _ 5 6 _\n 7 _ 5 _ 6 _ 4 _ _\n _ _ 7 8 _ 3 9 _ _\n _ _ 1 _ _ _ _ _ 3\n 3 _ _ _ _ _ _ _ 2\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "\n 9 _ _ _ 8 _ 3 _ _\n _ _ _ 2 5 _ 7 _ _\n _ 2 _ 3 _ _ _ _ 4\n _ 9 4 _ _ _ _ _ _\n _ _ _ 7 3 _ 5 6 _\n 7 _ 5 _ 6 _ 4 _ _\n _ _ 7 8 _ 3 9 _ _\n _ _ 1 _ _ _ _ _ 3\n 3 _ _ _ _ _ _ _ 2\n"
+      },
+      "metadata": {
+        "language": "x",
+        "code_hash": "64928bcc268d75786104b7a4ec53ca7fc9a93f64736bac0f3ff31833fe15067c",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0098",
+      "type": "paragraph",
+      "order": 98,
+      "source_hash": "266c1892adbc86660fd6b5b09bbfe9aa0ab975910774c41d204a16d8c00fe866",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Any common game with a gameboard layout can be modelled in a similar fashion. Among others, chess, Minesweeper, Battleship or Mastermind are all based on a two-dimensional grid. For sudoku, it is natural to use numbers to represent the game state, but for other games, different methods may be better."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0099",
+      "type": "exercise",
+      "order": 99,
+      "source_hash": "20c76a74302868db729752917960fb5588b14977e906a02c1ea244a1550bb691",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "In a game of Go two players take turns to place black and white stones on a game board. The winner is the player who manages to encircle a bigger area on the board with their own game pieces. \n\nPlease write a function named `who_won(game_board: list)`, which takes a two-dimensional array as its argument. The array consists of integer values, which represent the following situations:\n\n* 0: empty square\n* 1: player 1 game piece\n* 2: player 2 game piece\n\nThe scoring rules of Go can be quite complex, but in this exercise it is enough to compare the number of pieces each player has on the game board. Also, the size of the game board is not limited.\n\nThe function should return the value 1 if player 1 won, and the value 2 if player 2 won. If both players have the same number of pieces on the board, the function should return the value 0."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-03_go",
+        "exercise_type": "programming-exercise",
+        "name": "Go",
+        "tmc_name": "part05-03_go",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0100",
+      "type": "exercise",
+      "order": 100,
+      "source_hash": "0627f9b5b777ea5f7f7818eaf14f6b4a5dae463b20ced721d8bd817a1ab15259",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `row_correct(sudoku: list, row_no: int)`, which takes a two-dimensional array representing a sudoku grid, and an integer referring to a single row, as its arguments. Rows are indexed from 0.\n\nThe function should return `True` or `False`, depending on whether the row is filled in correctly, that is, whether it contains each of the numbers 1 to 9 at most once.\n\n```python\nsudoku = [\n  [9, 0, 0, 0, 8, 0, 3, 0, 0],\n  [2, 0, 0, 2, 5, 0, 7, 0, 0],\n  [0, 2, 0, 3, 0, 0, 0, 0, 4],\n  [2, 9, 4, 0, 0, 0, 0, 0, 0],\n  [0, 0, 0, 7, 3, 0, 5, 6, 0],\n  [7, 0, 5, 0, 6, 0, 4, 0, 0],\n  [0, 0, 7, 8, 0, 3, 9, 0, 0],\n  [0, 0, 1, 0, 0, 0, 0, 0, 3],\n  [3, 0, 0, 0, 0, 0, 0, 0, 2]\n]\n\nprint(row_correct(sudoku, 0))\nprint(row_correct(sudoku, 1))\n```\n\n<sample-output>\n\nTrue\nFalse\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-04_sudoku_row",
+        "exercise_type": "programming-exercise",
+        "name": "Sudoku: check row",
+        "tmc_name": "part05-04_sudoku_row",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0101",
+      "type": "exercise",
+      "order": 101,
+      "source_hash": "9bc5586716698c9862d36a4058fea2768eccabb7e9bd72f95079e55e5a7acf7b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `column_correct(sudoku: list, column_no: int)`, which takes a two-dimensional array representing a sudoku grid, and an integer referring to a single column, as its arguments. Columns are indexed from 0. \n\nThe function should return `True` or `False`, depending on whether the column is filled in correctly, that is, whether it contains each of the numbers 1 to 9 at most once.\n\n```python\nsudoku = [\n  [9, 0, 0, 0, 8, 0, 3, 0, 0],\n  [2, 0, 0, 2, 5, 0, 7, 0, 0],\n  [0, 2, 0, 3, 0, 0, 0, 0, 4],\n  [2, 9, 4, 0, 0, 0, 0, 0, 0],\n  [0, 0, 0, 7, 3, 0, 5, 6, 0],\n  [7, 0, 5, 0, 6, 0, 4, 0, 0],\n  [0, 0, 7, 8, 0, 3, 9, 0, 0],\n  [0, 0, 1, 0, 0, 0, 0, 0, 3],\n  [3, 0, 0, 0, 0, 0, 0, 0, 2]\n]\n\nprint(column_correct(sudoku, 0))\nprint(column_correct(sudoku, 1))\n```\n\n<sample-output>\n\nFalse\nTrue\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-05_sudoku_column",
+        "exercise_type": "programming-exercise",
+        "name": "Sudoku: check column",
+        "tmc_name": "part05-05_sudoku_column",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0102",
+      "type": "exercise",
+      "order": 102,
+      "source_hash": "4f69cc48bccd7a0a1eb342198b6685a761f98c0aacd55911bde6e8be5b38dcfa",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `block_correct(sudoku: list, row_no: int, column_no: int)`, which takes a two-dimensional array representing a sudoku grid, and two integers referring to the row and column indexes of a single square, as its arguments. Rows and columns are indexed from 0. \n\nThe function should return `True` or `False` depending on whether the 3 by 3 block to the right and down from the given indexes is filled in correctly. That is, whether the block contains each of the numbers 1 to 9 at most once.\n\nNotice that this function does not strictly follow the rules of sudoku. In a real game of sudoku there are only 9 blocks to check, and these are located at indexes (0, 0), (0, 3), (0, 6), (3, 0), (3, 3), (3, 6), (6, 0), (6, 3) and (6, 6). Such restrictions on indexes should not be implemented here.\n\n```python\nsudoku = [\n  [9, 0, 0, 0, 8, 0, 3, 0, 0],\n  [2, 0, 0, 2, 5, 0, 7, 0, 0],\n  [0, 2, 0, 3, 0, 0, 0, 0, 4],\n  [2, 9, 4, 0, 0, 0, 0, 0, 0],\n  [0, 0, 0, 7, 3, 0, 5, 6, 0],\n  [7, 0, 5, 0, 6, 0, 4, 0, 0],\n  [0, 0, 7, 8, 0, 3, 9, 0, 0],\n  [0, 0, 1, 0, 0, 0, 0, 0, 3],\n  [3, 0, 0, 0, 0, 0, 0, 0, 2]\n]\n\nprint(block_correct(sudoku, 0, 0))\nprint(block_correct(sudoku, 1, 2))\n```\n\n<sample-output>\n\nFalse\nTrue\n\n</sample-output>\n\nThe first function call should check the 3 by 3 block beginning with the square at indexes `0, 0`:\n\n<pre>\n9 0 0\n2 0 0\n0 2 0\n</pre>\n\nThe second function call should check the 3 by 3 block beginning with the square at row 1, column 2:\n\n<pre>\n0 2 5\n0 3 0\n4 0 0\n</pre>\n\nThis second block would not be checked in an actual game of sudoku, but your function should allow for it to be checked."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-06_sudoku_block",
+        "exercise_type": "programming-exercise",
+        "name": "Sudoku: check block",
+        "tmc_name": "part05-06_sudoku_block",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0103",
+      "type": "exercise",
+      "order": 103,
+      "source_hash": "2e049533f38be2bb5698ea58aedfbd22d69cc497817386ca978550871426cb2e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `sudoku_grid_correct(sudoku: list)`, which takes a two-dimensional array representing a sudoku grid as its argument. The function should use the functions from the three previous exercises to determine whether the complete sudoku grid is filled in correctly. Copy the functions from the exercises above into your Python code file for this exercise.\n\nThe function should check each of the nine rows, columns and 3 by 3 blocks in the grid. If all contain each of the numbers 1 to 9 at most once, the function returns `True`. If a single one is filled in incorrectly, the function returns `False`. \n\nThe image of a sudoku grid above these exercises has the nine blocks within the grid indicated with thicker borders. These are the blocks the function should check, and they begin at the indexes (0, 0), (0, 3), (0, 6), (3, 0), (3, 3), (3, 6), (6, 0), (6, 3) and (6, 6). \n\n```python\nsudoku1 = [\n  [9, 0, 0, 0, 8, 0, 3, 0, 0],\n  [2, 0, 0, 2, 5, 0, 7, 0, 0],\n  [0, 2, 0, 3, 0, 0, 0, 0, 4],\n  [2, 9, 4, 0, 0, 0, 0, 0, 0],\n  [0, 0, 0, 7, 3, 0, 5, 6, 0],\n  [7, 0, 5, 0, 6, 0, 4, 0, 0],\n  [0, 0, 7, 8, 0, 3, 9, 0, 0],\n  [0, 0, 1, 0, 0, 0, 0, 0, 3],\n  [3, 0, 0, 0, 0, 0, 0, 0, 2]\n]\n\nprint(sudoku_grid_correct(sudoku1))\n\nsudoku2 = [\n  [2, 6, 7, 8, 3, 9, 5, 0, 4],\n  [9, 0, 3, 5, 1, 0, 6, 0, 0],\n  [0, 5, 1, 6, 0, 0, 8, 3, 9],\n  [5, 1, 9, 0, 4, 6, 3, 2, 8],\n  [8, 0, 2, 1, 0, 5, 7, 0, 6],\n  [6, 7, 4, 3, 2, 0, 0, 0, 5],\n  [0, 0, 0, 4, 5, 7, 2, 6, 3],\n  [3, 2, 0, 0, 8, 0, 0, 5, 7],\n  [7, 4, 5, 0, 0, 3, 9, 0, 1]\n]\n\nprint(sudoku_grid_correct(sudoku2))\n```\n\n<sample-output>\n\nFalse\nTrue\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part05-07_sudoku_grid",
+        "exercise_type": "programming-exercise",
+        "name": "Sudoku: check grid",
+        "tmc_name": "part05-07_sudoku_grid",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0104",
+      "type": "paragraph",
+      "order": 104,
+      "source_hash": "b97eebcf5a0222c688482a2c1f8f4510ba0c7934c136e1f60999bbcc47c2ab75",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "<!---\nA quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part05-1-more-lists-0105",
+      "type": "quiz",
+      "order": 105,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "ccb6dcbf-1065-513f-9294-15f42a318300",
+        "attributes": {
+          "id": "ccb6dcbf-1065-513f-9294-15f42a318300"
+        }
+      }
+    },
+    {
+      "id": "blk-part05-1-more-lists-0106",
+      "type": "paragraph",
+      "order": 106,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    }
+  ]
+}

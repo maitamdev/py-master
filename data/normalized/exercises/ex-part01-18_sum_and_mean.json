@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-18_sum_and_mean",
+  "lesson_id": "part01-4-arithmetic-operations",
+  "part": 1,
+  "tmc_name": "part01-18_sum_and_mean",
+  "title_original": "Sum and mean",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for four numbers. The program then prints out the sum and the mean of the numbers.\n\nThe program should function as follows:\n\n<sample-output>\n\nNumber 1: **2**\nNumber 2: **1**\nNumber 3: **6**\nNumber 4: **7**\nThe sum of the numbers is 16 and the mean is 4.0\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "c43caf77ce93e0d0b1eca5b2c8a4f1130c4fbcc53375dddef74c71e001f7e8ee",
+  "order": 64
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-20_find_first_substring",
+  "lesson_id": "part03-2-working-with-strings",
+  "part": 3,
+  "tmc_name": "part03-20_find_first_substring",
+  "title_original": "Find the first substring",
+  "title_vi": "Tìm chuỗi con đầu tiên",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user to type in a string and a single character. The program then prints the first three character slice which begins with the character specified by the user. You may assume the input string is at least three characters long. The program must print out three characters, or else nothing. \n\nPay special attention to when there are less than two characters left in the string after the first occurrence of the character looked for. In that case nothing should be printed out, and there should not be any indexing errors when executing the program.\n\n<sample-output>\n\nPlease type in a word: **mammoth**\nPlease type in a character: **m**\nmam\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a word: **banana**\nPlease type in a character: **n**\nnan\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a word: **tomato**\nPlease type in a character: **x**\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a word: **python**\nPlease type in a character: **n**\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình yêu cầu người dùng nhập một chuỗi và một ký tự đơn. Sau đó, chương trình sẽ in lát cắt ba ký tự đầu tiên bắt đầu bằng ký tự do người dùng chỉ định. Bạn có thể giả sử chuỗi đầu vào dài ít nhất ba ký tự. Chương trình phải in ra ba ký tự, nếu không thì không in được gì. \n\nĐặc biệt chú ý khi chỉ còn lại ít hơn hai ký tự trong chuỗi sau lần xuất hiện đầu tiên của ký tự được tìm kiếm. Trong trường hợp đó, không nên in ra bất cứ thứ gì và không được có bất kỳ lỗi lập chỉ mục nào khi thực thi chương trình.\n\n<sample-output>\n\nHãy gõ một từ: **mammoth**\nVui lòng nhập một ký tự: **m**\nmẹ\n\n</sample-output>\n\n<sample-output>\n\nHãy gõ một từ: **banana**\nVui lòng nhập một ký tự: **n**\nnan\n\n</sample-output>\n\n<sample-output>\n\nHãy gõ một từ: **tomato**\nVui lòng nhập một ký tự: **x**\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập một từ: **python**\nVui lòng nhập một ký tự: **n**\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "516d61339cd22a836d1827b927eb9868863a8d82132eabe2e21417f6ee31c89b",
+  "order": 88
+}

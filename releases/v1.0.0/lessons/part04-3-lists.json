@@ -1,0 +1,1993 @@
+{
+  "id": "part04-3-lists",
+  "part": 4,
+  "part_slug": "part-4",
+  "slug": "3-lists",
+  "is_part_index": false,
+  "title_original": "Lists",
+  "title_vi": "Danh sách",
+  "path": "/part-4/3-lists",
+  "source_path": "data/part-4/3-lists.md",
+  "source_hash": "081ac6f09577e0780fd1ceab9ad54c84122cd971c7beb6185ca90bf34cdd17b0",
+  "order": 1,
+  "blocks_count": 109,
+  "blocks": [
+    {
+      "id": "blk-part04-3-lists-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "a01c837aa48aac85c9c70c8e7c94a6ec8eafedeb38feea2bc62597d45a1f4cf4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know what lists are in Python\n- You will be able access a specified item within a list\n- You will know how to add items to a list, and how to remove them\n- You will be familiar with built-in list functions and methods"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ biết danh sách trong Python là gì\n- Bạn sẽ có thể truy cập một mục được chỉ định trong danh sách\n- Bạn sẽ biết cách thêm các mục vào danh sách và cách xóa chúng\n- Bạn sẽ làm quen với các hàm và phương thức danh sách có sẵn"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "2985ce6c83bc285694d47812cad20c04cba049c1fba7580cb811c10a4f661439",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Thus far in our programs we have stored data with variables, each bit of data usually having its own named variable. This obviously has some limitations, as it can get cumbersome to define separate variables for everything when there is a lot of data to handle."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cho đến nay, trong các chương trình của chúng ta, chúng ta đã lưu trữ dữ liệu với các biến, mỗi bit dữ liệu thường có biến được đặt tên riêng. Điều này rõ ràng có một số hạn chế, vì việc xác định các biến riêng biệt cho mọi thứ khi có nhiều dữ liệu cần xử lý có thể trở nên cồng kềnh."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "197553b149c958bf363ca1615bb9e68063863c7761df93c703c4722f66245790",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A Python _list_ is a collection of values which is accessed via a single variable name. The contents of the list are written within square brackets. The values contained in the list are called _items_, or sometimes _elements_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Python _list_ là tập hợp các giá trị được truy cập thông qua một tên biến duy nhất. Nội dung của danh sách được viết trong dấu ngoặc vuông. Các giá trị có trong danh sách được gọi là _items_ hoặc đôi khi là _elements_."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "7d6c1399433b8cab9697e5d13a21b6380908271e348b8f3aa89cac00f90fbf9f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following command creates a new, empty list"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lệnh sau tạo một danh sách mới, trống"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "522aa498f15e626284a1be1f8be9b54b913f19d4c88fe11c30f86ecc54d474a9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = []"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = []"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "522aa498f15e626284a1be1f8be9b54b913f19d4c88fe11c30f86ecc54d474a9",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "f170e044ef496ae504fef369cf8cdd398ed7760e813e2e49c50c42635c801f5f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "whereas this command creates a list with five items in it:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "trong khi lệnh này tạo một danh sách có năm mục trong đó:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0007",
+      "type": "code",
+      "order": 7,
+      "source_hash": "f4327059f1c2412e2074cb50bb176b63e0701a1e2f0a826232d7a6f5829cd3cf",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [7, 2, 2, 5, 2]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [7, 2, 2, 5, 2]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f4327059f1c2412e2074cb50bb176b63e0701a1e2f0a826232d7a6f5829cd3cf",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0008",
+      "type": "heading",
+      "order": 8,
+      "source_hash": "b74dc34a1fd19f931feff790d8f527331d60be5df9546729be986e170b550e3b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Accessing items in a list"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Truy cập các mục trong danh sách"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "2886812250e1917f8498e2c9a6b625c5da662de66c974572405d0c7dc8cd953e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The items in a list are indexed in exactly the same way as characters in a string. Indexing starts from zero, and the last index is the length of the list minus 1:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các mục trong danh sách được lập chỉ mục giống hệt như các ký tự trong chuỗi. Việc lập chỉ mục bắt đầu từ 0 và chỉ mục cuối cùng là độ dài của danh sách trừ đi 1:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0010",
+      "type": "image",
+      "order": 10,
+      "source_hash": "b989e6f5147bec9c96b276e9dc69e4c5210b0c1a56cbfe259eca944e13566697",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Lists are indexed starting from 0"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Danh sách được lập chỉ mục bắt đầu từ 0"
+      },
+      "metadata": {
+        "src": "4_3_1.png",
+        "alt": "Lists are indexed starting from 0",
+        "attributes": {
+          "src": "4_3_1.png",
+          "alt": "Lists are indexed starting from 0"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "b295e9afb494e3fc9132be81fa99c9be40fc80843511d9fd7b5c3d2b64e24c6c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A single list item can be accessed just like a single character in a string is accessed, with square brackets:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một mục danh sách có thể được truy cập giống như truy cập một ký tự trong chuỗi, với dấu ngoặc vuông:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0012",
+      "type": "code",
+      "order": 12,
+      "source_hash": "57fb9ac7de22a8122004f826cddf05a524dd400beb08452f3a005da58bf16617",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [7, 2, 2, 5, 2]\n\nprint(my_list[0])\nprint(my_list[1])\nprint(my_list[3])\n\nprint(\"The sum of the first two items:\", my_list[0] + my_list[1])"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [7, 2, 2, 5, 2]\n\nprint(my_list[0])\nprint(my_list[1])\nprint(my_list[3])\n\nprint(\"The sum of the first two items:\", my_list[0] + my_list[1])"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "57fb9ac7de22a8122004f826cddf05a524dd400beb08452f3a005da58bf16617",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0013",
+      "type": "sample_output",
+      "order": 13,
+      "source_hash": "bebf552897ffa52091492f720984df09b77296cbc7df96db82f777173fffaff3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "7\n2\n5\nThe sum of the first two items: 9"
+      },
+      "translation": {
+        "language": "text",
+        "content": "7\n2\n5\nThe sum of the first two items: 9"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n7\n2\n5\nThe sum of the first two items: 9\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "9633502385718b2dea16e0c620f5aa6076cc988d98c0bfcd69ca6574454c6bf9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The entire contents of the list can also be printed out:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Toàn bộ nội dung của danh sách cũng có thể được in ra:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0015",
+      "type": "code",
+      "order": 15,
+      "source_hash": "f8f00c48b5c3b8c07522a164e553b7c57b50efebb434b399efc428ad7fb299ff",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [7, 2, 2, 5, 2]\nprint(my_list)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [7, 2, 2, 5, 2]\nprint(my_list)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f8f00c48b5c3b8c07522a164e553b7c57b50efebb434b399efc428ad7fb299ff",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0016",
+      "type": "sample_output",
+      "order": 16,
+      "source_hash": "6275cec480252424ab5f20b33ac13cd32f73d8344c6c3cdc5b63cd5ca4dfdc48",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[7, 2, 2, 5, 2]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[7, 2, 2, 5, 2]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[7, 2, 2, 5, 2]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "73accb62dbe1e0740567461ee0a154f8af43c02c3080e4a68f15e12784f39060",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Unlike strings, lists are mutable, which means their contents can change. You can assign a new value to an item within a list, just like you can assign a new value to a variable:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Không giống như chuỗi, danh sách có thể thay đổi, nghĩa là nội dung của chúng có thể thay đổi. Bạn có thể gán giá trị mới cho một mục trong danh sách, giống như bạn có thể gán giá trị mới cho một biến:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0018",
+      "type": "code",
+      "order": 18,
+      "source_hash": "6a3d4031810f52633fd95ab798d65c66702fccf3f82da8c7dc5080c14d0843b2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [7, 2, 2, 5, 2]\nprint(my_list)\nmy_list[1] = 3\nprint(my_list)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [7, 2, 2, 5, 2]\nprint(my_list)\nmy_list[1] = 3\nprint(my_list)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6a3d4031810f52633fd95ab798d65c66702fccf3f82da8c7dc5080c14d0843b2",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0019",
+      "type": "sample_output",
+      "order": 19,
+      "source_hash": "4212d764a2baea77f748389f1003b23942b9781b0758bf7be406791a09508a9c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[7, 2, 2, 5, 2]\n[7, 3, 2, 5, 2]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[7, 2, 2, 5, 2]\n[7, 3, 2, 5, 2]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[7, 2, 2, 5, 2]\n[7, 3, 2, 5, 2]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "984943f98b55e28b350e313ff0a7b1f20f9a4a533216f474412bf6040679be6d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The function `len` gives you the number of items in a list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm `len` cung cấp cho bạn số mục trong danh sách:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0021",
+      "type": "code",
+      "order": 21,
+      "source_hash": "2e5b8cdf24c6a9b064d0db16c260a81b60606f76befe30907e9ea25604baa0ec",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [7, 2, 2, 5, 2]\nprint(len(my_list))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [7, 2, 2, 5, 2]\nprint(len(my_list))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "2e5b8cdf24c6a9b064d0db16c260a81b60606f76befe30907e9ea25604baa0ec",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0022",
+      "type": "sample_output",
+      "order": 22,
+      "source_hash": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "5"
+      },
+      "translation": {
+        "language": "text",
+        "content": "5"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n5\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0023",
+      "type": "exercise",
+      "order": 23,
+      "source_hash": "82d779705bd8451f9d54f6ad290b0182f2ed1914fadf89b6253f3d36e285a302",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which initialises a list with the values `[1, 2, 3, 4, 5]`. Then the program should ask the user for an index and a new value, replace the value at the given index, and print the list again. This should be looped over until the user gives -1 for the index. You can assume all given index values will fall within your list.\n\nAn example execution of the program:\n\n<sample-output>\n\nIndex: **0**\nNew value: **10**\n[10, 2, 3, 4, 5]\nIndex: **2**\nNew value: **250**\n[10, 2, 250, 4, 5]\nIndex: **4**\nNew value: **-45**\n[10, 2, 250, 4, -45]\nIndex: **-1**\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình khởi tạo danh sách với các giá trị `[1, 2, 3, 4, 5]`. Sau đó, chương trình sẽ yêu cầu người dùng nhập chỉ mục và giá trị mới, thay thế giá trị tại chỉ mục đã cho và in lại danh sách. Điều này sẽ được lặp lại cho đến khi người dùng đưa ra -1 cho chỉ mục. Bạn có thể giả định rằng tất cả các giá trị chỉ mục đã cho sẽ nằm trong danh sách của bạn.\n\nMột ví dụ thực hiện chương trình:\n\n<sample-output>\n\nChỉ mục: **0**\nGiá trị mới: **10**\n[10, 2, 3, 4, 5]\nChỉ mục: **2**\nGiá trị mới: **250**\n[10, 2, 250, 4, 5]\nMục lục: **4**\nGiá trị mới: **-45**\n[10, 2, 250, 4, -45]\nChỉ mục: **-1**\n\n</sample-output>\n\n**NB:** bài tập này không yêu cầu bạn viết bất kỳ hàm nào, vì vậy bạn nên __không__ đặt bất kỳ mã nào trong khối `if __name__ == \"__main__\"`."
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-12_change_value_of_item",
+        "exercise_type": "programming-exercise",
+        "name": "Change the value of an item",
+        "tmc_name": "part04-12_change_value_of_item",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0024",
+      "type": "heading",
+      "order": 24,
+      "source_hash": "e66491817e8958f1234f4be9bc431e9bf61d16c9894c4b5483e3378a7435e0fc",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Adding items to a list"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thêm các mục vào danh sách"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "00c0998f6619dd94f89a1e497cbfd0104332a54fc9f41ea241175072de511ba2",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The `append` method adds items to the end of a list. It works like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương thức `append` thêm các mục vào cuối danh sách. Nó hoạt động như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0026",
+      "type": "code",
+      "order": 26,
+      "source_hash": "6e00b7a9c9dedda67311359e5c79cd5086b6ab27765649fdc950f101ba1b264b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "numbers = []\nnumbers.append(5)\nnumbers.append(10)\nnumbers.append(3)\nprint(numbers)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "numbers = []\nnumbers.append(5)\nnumbers.append(10)\nnumbers.append(3)\nprint(numbers)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "6e00b7a9c9dedda67311359e5c79cd5086b6ab27765649fdc950f101ba1b264b",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0027",
+      "type": "sample_output",
+      "order": 27,
+      "source_hash": "40c902b6e1f05056b8cf69c7c0b92f064aae01038144a089f17662ce051a5162",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[5, 10, 3]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[5, 10, 3]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[5, 10, 3]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "a37d69adcfac2097eb66a2b924bdebd172754cb86622758959488912055fdbb8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following example makes use of two separate lists:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ sau sử dụng hai danh sách riêng biệt:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0029",
+      "type": "code",
+      "order": 29,
+      "source_hash": "68e280f933143c7137cf6f0393edf98aafe5abb01d1914b240c9a60ce0088787",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "numbers = []\nshoe_sizes = []\n\nnumbers.append(5)\nnumbers.append(10)\nnumbers.append(3)\n\nshoe_sizes.append(37)\nshoe_sizes.append(44)\nshoe_sizes.append(40)\nshoe_sizes.append(28)\n\nprint(\"Numbers:\")\nprint(numbers)\n\nprint(\"Shoe sizes:\")\nprint(shoe_sizes)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "numbers = []\nshoe_sizes = []\n\nnumbers.append(5)\nnumbers.append(10)\nnumbers.append(3)\n\nshoe_sizes.append(37)\nshoe_sizes.append(44)\nshoe_sizes.append(40)\nshoe_sizes.append(28)\n\nprint(\"Numbers:\")\nprint(numbers)\n\nprint(\"Shoe sizes:\")\nprint(shoe_sizes)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "68e280f933143c7137cf6f0393edf98aafe5abb01d1914b240c9a60ce0088787",
+        "length_lines": 17
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "55927ee7630f76783c36c9126697161d185e66bb40d786f609e9ac1632ad2e32",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The item is appended to the list on which the method is called:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mục này được thêm vào danh sách mà phương thức được gọi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0031",
+      "type": "sample_output",
+      "order": 31,
+      "source_hash": "13f710ccf5270aa58d619b81ae87bc761171d51d3835ce617abdda5ef559c518",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Numbers:\n[5, 10, 3]\nShoe sizes:\n[37, 44, 40, 28]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Numbers:\n[5, 10, 3]\nShoe sizes:\n[37, 44, 40, 28]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nNumbers:\n[5, 10, 3]\nShoe sizes:\n[37, 44, 40, 28]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0032",
+      "type": "exercise",
+      "order": 32,
+      "source_hash": "67db5ff886ff5fa6b1d6aa83ea96463a77ba678f7ee170782e06ee4484fae692",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which first asks the user for the number of items to be added. Then the program should ask for the given number of values, one by one, and add them to a list in the order they were typed in. Finally, the list is printed out.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nHow many items: **3**\nItem 1: **10**\nItem 2: **250**\nItem 3: **34**\n[10, 250, 34]\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một chương trình đầu tiên hỏi người dùng số lượng phần tử cần thêm vào. Sau đó, chương trình sẽ yêu cầu từng số giá trị nhất định và thêm chúng vào danh sách theo thứ tự chúng được nhập vào. Cuối cùng, danh sách được in ra.\n\nMột ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nSố lượng sản phẩm: **3**\nMục 1: **10**\nMục 2: **250**\nMục 3: **34**\n[10, 250, 34]\n\n</sample-output>\n\n**NB:** bài tập này không yêu cầu bạn viết bất kỳ hàm nào, vì vậy bạn nên __không__ đặt bất kỳ mã nào trong khối `if __name__ == \"__main__\"`."
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-13_add_items_to_list",
+        "exercise_type": "programming-exercise",
+        "name": "Add items to a list",
+        "tmc_name": "part04-13_add_items_to_list",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0033",
+      "type": "heading",
+      "order": 33,
+      "source_hash": "2e6745153287c6f8839566a5f852a0b6e2360943e582f2233031f0d781e75fd1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Adding to a specific location"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thêm vào một vị trí cụ thể"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "360d2cc980ffb8e005d71206d564b65b79eccb4bc51bcf5e1410bde4c740b553",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If you want to specify a location in the list where an item should be added, you can use the `insert` method. The method adds an item at the specified index. All the items already in the list with an index equal to or higher than the specified index are moved one index further, \"to the right\":"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu bạn muốn chỉ định một vị trí trong danh sách nơi cần thêm một mục, bạn có thể sử dụng phương pháp `insert`. Phương thức thêm một mục vào chỉ mục đã chỉ định. Tất cả các mục đã có trong danh sách có chỉ mục bằng hoặc cao hơn chỉ mục đã chỉ định sẽ được di chuyển thêm một chỉ mục nữa, \"sang bên phải\":"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0035",
+      "type": "image",
+      "order": 35,
+      "source_hash": "6f24876f03bd74728756582ba9b0912372fb7b65f89ef0559e932a44f476b8ca",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Inserting an item to a list"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chèn một mục vào danh sách"
+      },
+      "metadata": {
+        "src": "4_3_2.png",
+        "alt": "Inserting an item to a list",
+        "attributes": {
+          "src": "4_3_2.png",
+          "alt": "Inserting an item to a list"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "570f80edb40ba424bf9dd7e845825d775b7bfef264fc4ef1a83a7ea4c260e152",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "So, for instance this program"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vì vậy, ví dụ chương trình này"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0037",
+      "type": "code",
+      "order": 37,
+      "source_hash": "8105b290b61e1d05526880041df91330fdcc6ec2bfcbffc7d660855156bc1d97",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "numbers = [1, 2, 3, 4, 5, 6]\nnumbers.insert(0, 10)\nprint(numbers)\nnumbers.insert(2, 20)\nprint(numbers)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "numbers = [1, 2, 3, 4, 5, 6]\nnumbers.insert(0, 10)\nprint(numbers)\nnumbers.insert(2, 20)\nprint(numbers)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8105b290b61e1d05526880041df91330fdcc6ec2bfcbffc7d660855156bc1d97",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "5d7576a5303fe27ef9c805ac28a88c06142cfca2356c600144f825099eef1240",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "prints out this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "in ra cái này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0039",
+      "type": "sample_output",
+      "order": 39,
+      "source_hash": "19f47c3bdd5e4dac300e7174c4891282d43a2123086cb58f977e05cd14603802",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[10, 1, 2, 3, 4, 5, 6]\n[10, 1, 20, 2, 3, 4, 5, 6]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[10, 1, 2, 3, 4, 5, 6]\n[10, 1, 20, 2, 3, 4, 5, 6]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[10, 1, 2, 3, 4, 5, 6]\n[10, 1, 20, 2, 3, 4, 5, 6]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0040",
+      "type": "heading",
+      "order": 40,
+      "source_hash": "095927b750594ff427a20b6360acdc4721811989856b22e82dd8c8a99061aaa5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Removing items from a list"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Xóa các mục khỏi danh sách"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "96a259840dd46da1d91e03b3ca4ba5177e22a6a2194037042cba3b6017f4c645",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "There are two different approaches to removing an item from a list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Có hai cách tiếp cận khác nhau để xóa một mục khỏi danh sách:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0042",
+      "type": "list",
+      "order": 42,
+      "source_hash": "d493534a108657e9f827eb6c287974eec1edf4603622aa38568bce2792f9328c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* If the _index_ of the item is known, you can use the method `pop`.\n* If the _contents_ of the item are known, you can use the method `remove`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* Nếu biết _index_ của mục, bạn có thể sử dụng phương thức `pop`.\n* Nếu biết _nội dung_ của mục, bạn có thể sử dụng phương pháp `remove`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0043",
+      "type": "paragraph",
+      "order": 43,
+      "source_hash": "a16ebba9adab7dcc78ed953cf7c8749df7473d743c4df6fc427f5ed764bd8500",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "So, the method `pop` takes the index of the item you want to remove as its argument. The following program removes items at indexes 2 and 3 from the list. Notice how the indexes of the remaining items change when one is removed."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vì vậy, phương thức `pop` lấy chỉ mục của mục bạn muốn xóa làm đối số. Chương trình sau sẽ xóa các mục ở chỉ mục 2 và 3 khỏi danh sách. Lưu ý cách chỉ mục của các mục còn lại thay đổi khi xóa một mục."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0044",
+      "type": "code",
+      "order": 44,
+      "source_hash": "7570d9076b76e2ac31ffc96e96b801bc4ce6257a4e04e8231c9cc1db22681972",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [1, 2, 3, 4, 5, 6]\n\nmy_list.pop(2)\nprint(my_list)\nmy_list.pop(3)\nprint(my_list)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [1, 2, 3, 4, 5, 6]\n\nmy_list.pop(2)\nprint(my_list)\nmy_list.pop(3)\nprint(my_list)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "7570d9076b76e2ac31ffc96e96b801bc4ce6257a4e04e8231c9cc1db22681972",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0045",
+      "type": "sample_output",
+      "order": 45,
+      "source_hash": "de1abc4fcac933c8b5d315a41b1a2dbc86b5b0cd58421e483d81d27edf9040eb",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[1, 2, 4, 5, 6]\n[1, 2, 4, 6]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[1, 2, 4, 5, 6]\n[1, 2, 4, 6]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[1, 2, 4, 5, 6]\n[1, 2, 4, 6]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0046",
+      "type": "paragraph",
+      "order": 46,
+      "source_hash": "b0a6314906aa413d2ceb98c255992d14f35c9052fda27dd13efd33db9b504396",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "It's useful to remember that the method `pop` also _returns_ the removed item:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thật hữu ích khi nhớ rằng phương thức `pop` cũng _trả về_ mục đã bị xóa:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0047",
+      "type": "code",
+      "order": 47,
+      "source_hash": "defe42a558b0b4e002e3757ab61f9fe26b27a445c1a5224f1f9dc7baf5d9c67a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [4, 2, 7, 2, 5]\n\nnumber = my_list.pop(2)\nprint(number)\nprint(my_list)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [4, 2, 7, 2, 5]\n\nnumber = my_list.pop(2)\nprint(number)\nprint(my_list)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "defe42a558b0b4e002e3757ab61f9fe26b27a445c1a5224f1f9dc7baf5d9c67a",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0048",
+      "type": "sample_output",
+      "order": 48,
+      "source_hash": "466b333063715337db5023bba6edc6feea9e75da17cce72a5f8fa47e05473abe",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "7\n[4, 2, 2, 5]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "7\n[4, 2, 2, 5]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n7\n[4, 2, 2, 5]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0049",
+      "type": "paragraph",
+      "order": 49,
+      "source_hash": "43124f1e4d4005a6cc7bf871c787c84ac3d4330057d6fbb3888461ffba1cfe2c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The method `remove`, on the other hand, takes the value of the item to be removed as its argument. For example, this program"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mặt khác, phương thức `remove` lấy giá trị của mục cần xóa làm đối số của nó. Ví dụ, chương trình này"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0050",
+      "type": "code",
+      "order": 50,
+      "source_hash": "dcdf97d495cd7859423b7b425618875381ee0729978517f2cb7696c3543d70c7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [1, 2, 3, 4, 5, 6]\n\nmy_list.remove(2)\nprint(my_list)\nmy_list.remove(5)\nprint(my_list)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [1, 2, 3, 4, 5, 6]\n\nmy_list.remove(2)\nprint(my_list)\nmy_list.remove(5)\nprint(my_list)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "dcdf97d495cd7859423b7b425618875381ee0729978517f2cb7696c3543d70c7",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0051",
+      "type": "paragraph",
+      "order": 51,
+      "source_hash": "5d7576a5303fe27ef9c805ac28a88c06142cfca2356c600144f825099eef1240",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "prints out this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "in ra cái này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0052",
+      "type": "sample_output",
+      "order": 52,
+      "source_hash": "704199d6393e952bf132afadb3d707958e759bd63f50b6459c6c809966b82573",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[1, 3, 4, 5, 6]\n[1, 3, 4, 6]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[1, 3, 4, 5, 6]\n[1, 3, 4, 6]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[1, 3, 4, 5, 6]\n[1, 3, 4, 6]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0053",
+      "type": "paragraph",
+      "order": 53,
+      "source_hash": "7039c501f7e7b2bcbd5979781dbf88bfea1320d5e76156ffad75dec0646751fa",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The method removes the _first_ occurrence of the value in the list, much like the string function `find` returns the first occurrence of a substring:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương thức này loại bỏ sự xuất hiện _first_ của giá trị trong danh sách, giống như hàm chuỗi `find` trả về sự xuất hiện đầu tiên của chuỗi con:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0054",
+      "type": "code",
+      "order": 54,
+      "source_hash": "36e8e6f7e60d60e2d257c746d96b447759fbac16b3da5ab4f0d14a5c0aa95aa2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [1, 2, 1, 2]\n\nmy_list.remove(1)\nprint(my_list)\nmy_list.remove(1)\nprint(my_list)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [1, 2, 1, 2]\n\nmy_list.remove(1)\nprint(my_list)\nmy_list.remove(1)\nprint(my_list)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "36e8e6f7e60d60e2d257c746d96b447759fbac16b3da5ab4f0d14a5c0aa95aa2",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0055",
+      "type": "sample_output",
+      "order": 55,
+      "source_hash": "4227421f017cbb56fc8137c75995a92249ab4a92a52471fdd475d4b4d422c0f0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[2, 1, 2]\n[2, 2]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[2, 1, 2]\n[2, 2]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[2, 1, 2]\n[2, 2]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0056",
+      "type": "exercise",
+      "order": 56,
+      "source_hash": "25643dfba5562bce91f890910c1681c025c3dc97d0df1859223fd40adfe0b1d6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user to choose between addition and removal. Depending on the choice, the program _adds an item to_ or _removes an item from_ the end of a list. The item that is added must always be one greater than the last item in the list. The first item to be added must be 1.\n\nThe list is printed out in the beginning and after each operation. Have a look at the example execution below:\n\n<sample-output>\n\nThe list is now []\na(d)d, (r)emove or e(x)it: **d**\nThe list is now [1]\na(d)d, (r)emove or e(x)it: **d**\nThe list is now [1, 2]\na(d)d, (r)emove or e(x)it: **d**\nThe list is now [1, 2, 3]\na(d)d, (r)emove or e(x)it: **r**\nThe list is now [1, 2]\na(d)d, (r)emove or e(x)it: **d**\nThe list is now [1, 2, 3]\na(d)d, (r)emove or e(x)it: **x**\nBye!\n\n</sample-output>\n\nYou may assume that, if the list is empty, there will not be an attempt to remove items.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình yêu cầu người dùng lựa chọn giữa thêm và bớt. Tùy thuộc vào lựa chọn, chương trình _thêm một mục vào_ hoặc _xóa một mục khỏi_ cuối danh sách. Mục được thêm vào phải luôn lớn hơn mục cuối cùng trong danh sách. Mục đầu tiên được thêm vào phải là 1.\n\nDanh sách được in ra đầu và sau mỗi thao tác. Hãy xem cách thực hiện ví dụ dưới đây:\n\n<sample-output>\n\nDanh sách bây giờ là []\na(d)d, (r)emove hoặc e(x)it: **d**\nDanh sách bây giờ là [1]\na(d)d, (r)emove hoặc e(x)it: **d**\nDanh sách bây giờ là [1, 2]\na(d)d, (r)emove hoặc e(x)it: **d**\nDanh sách bây giờ là [1, 2, 3]\na(d)d, (r)emove hoặc e(x)it: **r**\nDanh sách bây giờ là [1, 2]\na(d)d, (r)emove hoặc e(x)it: **d**\nDanh sách bây giờ là [1, 2, 3]\na(d)d, (r)emove hoặc e(x)it: **x**\nTạm biệt!\n\n</sample-output>\n\nBạn có thể cho rằng nếu danh sách trống thì sẽ không có nỗ lực xóa mục nào.\n\n**NB:** bài tập này không yêu cầu bạn viết bất kỳ hàm nào, vì vậy bạn nên __không__ đặt bất kỳ mã nào trong khối `if __name__ == \"__main__\"`."
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-14_addition_and_removal",
+        "exercise_type": "programming-exercise",
+        "name": "Addition and removal",
+        "tmc_name": "part04-14_addition_and_removal",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0057",
+      "type": "paragraph",
+      "order": 57,
+      "source_hash": "1baca59e1c034ffbcc2c8801843ae922d5b7adb99e9f1360b8d1a4d37be313cd",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If the specified item is not in the list, the `remove` function causes an error. Just like with strings, we can check for the presence of an item with the `in` operator:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu mục được chỉ định không có trong danh sách, hàm `remove` sẽ gây ra lỗi. Cũng giống như với chuỗi, chúng ta có thể kiểm tra sự hiện diện của một mục bằng toán tử `in`:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0058",
+      "type": "code",
+      "order": 58,
+      "source_hash": "723eaea7d6051a7dd3640671340a850b9392b36f53d7ca4d5a79d7d7eae79939",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [1, 3, 4]\n\nif 1 in my_list:\n    print(\"The list contains item 1\")\n\nif 2 in my_list:\n    print(\"The list contains item 2\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [1, 3, 4]\n\nif 1 in my_list:\n    print(\"The list contains item 1\")\n\nif 2 in my_list:\n    print(\"The list contains item 2\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "723eaea7d6051a7dd3640671340a850b9392b36f53d7ca4d5a79d7d7eae79939",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0059",
+      "type": "sample_output",
+      "order": 59,
+      "source_hash": "3cb449d29c17d3e560f031ec62ca872f53547be73e8dc6ede1a584865fe76432",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The list contains item 1"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The list contains item 1"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe list contains item 1\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0060",
+      "type": "exercise",
+      "order": 60,
+      "source_hash": "b7457a2f61f567ef577dcd3c9d04c2dcf3ba249f94c64f918c26189ce252a432",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for words. If the user types in a word for the second time, the program should print out the number of different words typed in, and exit.\n\n<sample-output>\n\nWord: **once**\nWord: **upon**\nWord: **a**\nWord: **time**\nWord: **upon**\nYou typed in 4 different words\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một chương trình yêu cầu người dùng nhập từ. Nếu người dùng nhập một từ lần thứ hai, chương trình sẽ in ra số lượng từ khác nhau đã nhập và thoát.\n\n<sample-output>\n\nLời: **một lần**\nTừ: **trên**\nTừ: **a**\nTừ: **thời gian**\nTừ: **trên**\nBạn đã gõ 4 từ khác nhau\n\n</sample-output>\n\n**NB:** bài tập này không yêu cầu bạn viết bất kỳ hàm nào, vì vậy bạn nên __không__ đặt bất kỳ mã nào trong khối `if __name__ == \"__main__\"`."
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-15_same_word_twice",
+        "exercise_type": "programming-exercise",
+        "name": "Same word twice",
+        "tmc_name": "part04-15_same_word_twice",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0061",
+      "type": "heading",
+      "order": 61,
+      "source_hash": "f7aa883b74df90abdbd59c87a1f0c2da61433ad1499a43f1de827a61aa94902d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Sorting lists"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sắp xếp danh sách"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0062",
+      "type": "paragraph",
+      "order": 62,
+      "source_hash": "56f584c3c83fa09b10856b9bfdcf84b2e52c2a2b421c46b9e7fd87e1b5885895",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The items in a list can be _sorted_ from smallest to greatest with the method `sort`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các mục trong danh sách có thể được _sắp xếp_ từ nhỏ nhất đến lớn nhất bằng phương pháp `sort`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0063",
+      "type": "code",
+      "order": 63,
+      "source_hash": "b5eb9dbce856744dadeb0965d2b55845abab35782c16fa0bfddf552038390b3f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [2,5,1,2,4]\nmy_list.sort()\nprint(my_list)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [2,5,1,2,4]\nmy_list.sort()\nprint(my_list)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "b5eb9dbce856744dadeb0965d2b55845abab35782c16fa0bfddf552038390b3f",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0064",
+      "type": "sample_output",
+      "order": 64,
+      "source_hash": "d45342952c3c76f0322b9bd23133d3067f57211919a3738005c2dcdc3101dcb9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[1, 2, 2, 4, 5]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[1, 2, 2, 4, 5]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[1, 2, 2, 4, 5]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0065",
+      "type": "paragraph",
+      "order": 65,
+      "source_hash": "087b0c99d9bd425152ec0857265779779dab1fbff5b34d7e9c9295aab69f56a2",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Notice how the method modifies the list itself. Sometimes we don't want to change the original list, so we use the function `sorted` instead. It _returns_ a sorted list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lưu ý cách phương thức tự sửa đổi danh sách. Đôi khi chúng ta không muốn thay đổi danh sách gốc nên thay vào đó chúng ta sử dụng hàm `sorted`. Nó _trả về_ một danh sách đã được sắp xếp:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0066",
+      "type": "code",
+      "order": 66,
+      "source_hash": "73ae0d0b21ec5547cb5d0082f18915e643117cb9af44f024a4ffa46fb6f67da6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [2,5,1,2,4]\nprint(sorted(my_list)))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [2,5,1,2,4]\nprint(sorted(my_list)))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "73ae0d0b21ec5547cb5d0082f18915e643117cb9af44f024a4ffa46fb6f67da6",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0067",
+      "type": "sample_output",
+      "order": 67,
+      "source_hash": "d45342952c3c76f0322b9bd23133d3067f57211919a3738005c2dcdc3101dcb9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[1, 2, 2, 4, 5]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[1, 2, 2, 4, 5]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[1, 2, 2, 4, 5]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0068",
+      "type": "paragraph",
+      "order": 68,
+      "source_hash": "9add1e26838f278acda07e0c140ad770b599510b51cdf16760413231ab16fc9f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Remember the difference between the two: `sort` changes the order of the original list in place, whereas `sorted` creates a new, ordered copy of the list. With `sorted` we can preserve the original order of the list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy nhớ sự khác biệt giữa hai điều này: `sort` thay đổi thứ tự của danh sách gốc tại chỗ, trong khi `sorted` tạo một bản sao mới, có thứ tự của danh sách. Với `sorted` chúng ta có thể giữ nguyên thứ tự ban đầu của danh sách:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0069",
+      "type": "code",
+      "order": 69,
+      "source_hash": "66e98e56c21bf6798a9711478be42c32366e6be04e62e3eac925111064aa4ee1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "original = [2, 5, 1, 2, 4]\nin_order = sorted(original)\nprint(original)\nprint(in_order)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "original = [2, 5, 1, 2, 4]\nin_order = sorted(original)\nprint(original)\nprint(in_order)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "66e98e56c21bf6798a9711478be42c32366e6be04e62e3eac925111064aa4ee1",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0070",
+      "type": "sample_output",
+      "order": 70,
+      "source_hash": "f2cb091ac7e4e004de9f4d649a204400d87597507f7588818e55b678251b4868",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "[2, 5, 1, 2, 4]\n[1, 2, 2, 4, 5]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "[2, 5, 1, 2, 4]\n[1, 2, 2, 4, 5]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n[2, 5, 1, 2, 4]\n[1, 2, 2, 4, 5]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0071",
+      "type": "exercise",
+      "order": 71,
+      "source_hash": "6238a67bd5eb05e3aae4e5c26875d282270f6afb2464eafd3582060755884c19",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user to type in values and adds them to a list. After each addition, the list is printed out in two different ways:\n- in the order the items were added\n- ordered from smallest to greatest\n\nThe program exits when the user types in 0.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nNew item: **3**\nThe list now: [3]\nThe list in order: [3]\nNew item: **1**\nThe list now: [3, 1]\nThe list in order: [1, 3]\nNew item: **9**\nThe list now: [3, 1, 9]\nThe list in order: [1, 3, 9]\nNew item: **5**\nThe list now: [3, 1, 9, 5]\nThe list in order: [1, 3, 5, 9]\nNew item: **0**\nBye!\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một chương trình yêu cầu người dùng nhập các giá trị và thêm chúng vào danh sách. Sau mỗi lần thêm, danh sách được in ra theo hai cách khác nhau:\n- theo thứ tự các mục được thêm vào\n- theo thứ tự từ nhỏ đến lớn\n\nChương trình thoát khi người dùng gõ vào 0.\n\nMột ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nVật phẩm mới: **3**\nDanh sách hiện tại: [3]\nDanh sách theo thứ tự: [3]\nMặt hàng mới: **1**\nDanh sách hiện tại: [3, 1]\nDanh sách theo thứ tự: [1, 3]\nVật phẩm mới: **9**\nDanh sách hiện tại: [3, 1, 9]\nDanh sách theo thứ tự: [1, 3, 9]\nHàng mới: **5**\nDanh sách hiện tại: [3, 1, 9, 5]\nDanh sách theo thứ tự: [1, 3, 5, 9]\nMặt hàng mới: **0**\nTạm biệt!\n\n</sample-output>\n\n**NB:** bài tập này không yêu cầu bạn viết bất kỳ hàm nào, vì vậy bạn nên __không__ đặt bất kỳ mã nào trong khối `if __name__ == \"__main__\"`."
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-16_list_twice",
+        "exercise_type": "programming-exercise",
+        "name": "List twice",
+        "tmc_name": "part04-16_list_twice",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0072",
+      "type": "heading",
+      "order": 72,
+      "source_hash": "9135ee759b6b7aa51a1e8c98c9478a36390d9f4467c1d5e9025f59accb118127",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Maximum, minimum and sum"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tối đa, tối thiểu và tổng"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0073",
+      "type": "paragraph",
+      "order": 73,
+      "source_hash": "494f9652b6c68b203f5b25de7e8b5f3e14f2896d5162a73931bdd77c7bf5107a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The functions `max` and `min`, short for maximum and minimum, return the greatest and smallest item in a list, respectively. The function `sum` returns the sum of all items in a list."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các hàm `max` và `min`, viết tắt của giá trị tối đa và tối thiểu, lần lượt trả về mục lớn nhất và nhỏ nhất trong danh sách. Hàm `sum` trả về tổng của tất cả các mục trong danh sách."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0074",
+      "type": "code",
+      "order": 74,
+      "source_hash": "75cd2e01053ed4f7da2b1d986239ef79c2b619d1c83bdfc99c36585a3ce6796d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [5, 2, 3, 1, 4]\n\ngreatest = max(my_list)\nsmallest = min(my_list)\nlist_sum = sum(my_list)\n\nprint(\"Smallest:\", smallest)\nprint(\"Greatest:\", greatest)\nprint(\"Sum:\", list_sum)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [5, 2, 3, 1, 4]\n\ngreatest = max(my_list)\nsmallest = min(my_list)\nlist_sum = sum(my_list)\n\nprint(\"Smallest:\", smallest)\nprint(\"Greatest:\", greatest)\nprint(\"Sum:\", list_sum)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "75cd2e01053ed4f7da2b1d986239ef79c2b619d1c83bdfc99c36585a3ce6796d",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0075",
+      "type": "sample_output",
+      "order": 75,
+      "source_hash": "7eca425a3ddf7b5ef756f414a25cea2629b136f189d808f57d62da60390a3def",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Smallest: 1\nGreatest: 5\nSum: 15"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Smallest: 1\nGreatest: 5\nSum: 15"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nSmallest: 1\nGreatest: 5\nSum: 15\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0076",
+      "type": "heading",
+      "order": 76,
+      "source_hash": "6c64b5ea8941d6498134d1d9f42f01ec3cbdabf759d6d9bbe015e59f45be1d77",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Methods vs functions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương thức và hàm"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0077",
+      "type": "paragraph",
+      "order": 77,
+      "source_hash": "f8856a0187c9e63ed421e9a0bc0095e420146b98d6762ae506badd799aa6c11a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "There are two different ways of processing lists in Python, which can get confusing. For the most part you will use list _methods_, such as `append` and `sort`. They are used with the dot `.` operator on the list variable:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Có hai cách xử lý danh sách khác nhau trong Python, có thể gây nhầm lẫn. Trong hầu hết các trường hợp, bạn sẽ sử dụng danh sách _methods_, chẳng hạn như `append` và `sort`. Chúng được sử dụng với toán tử dấu chấm `.` trên biến danh sách:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0078",
+      "type": "code",
+      "order": 78,
+      "source_hash": "fc7060e0e6fe16f548ac55c71ec7ae6fe7457a2bed88be6b1b902a1571035dc8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = []\n\n# method calls\nmy_list.append(3)\nmy_list.append(1)\nmy_list.append(7)\nmy_list.append(2)\n\n# another method call\nmy_list.sort()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = []\n\n# method calls\nmy_list.append(3)\nmy_list.append(1)\nmy_list.append(7)\nmy_list.append(2)\n\n# another method call\nmy_list.sort()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "fc7060e0e6fe16f548ac55c71ec7ae6fe7457a2bed88be6b1b902a1571035dc8",
+        "length_lines": 10
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0079",
+      "type": "paragraph",
+      "order": 79,
+      "source_hash": "09e09b1fa3a22ed42402dd84da718a22520b54fb1ad1b1380fcd5cda60ffc8e6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Some _functions_ are happy to take a list as an argument. Above we saw the functions `max`,  `min`, `len` and `sorted` do just that:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một số _functions_ vui lòng lấy danh sách làm đối số. Ở trên chúng ta đã thấy các hàm `max`, `min`, `len` và `sorted` thực hiện điều đó:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0080",
+      "type": "code",
+      "order": 80,
+      "source_hash": "9df6b1aa5dac2265b39dab8436bf7eb60ae91abda49b66a138e749758797d42b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "my_list = [3, 2, 7, 1]\n\n# function calls take the list as an argument\ngreatest = max(my_list)\nsmallest = min(my_list)\nlength = len(my_list)\n\nprint(\"Smallest:\", smallest)\nprint(\"Greatest:\", greatest)\nprint(\"Length of the list:\", length)\n\n# another function call \n# the list itself is an argument, the function returns a sorted copy\nin_order = sorted(my_list)\nprint(in_order)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "my_list = [3, 2, 7, 1]\n\n# function calls take the list as an argument\ngreatest = max(my_list)\nsmallest = min(my_list)\nlength = len(my_list)\n\nprint(\"Smallest:\", smallest)\nprint(\"Greatest:\", greatest)\nprint(\"Length of the list:\", length)\n\n# another function call \n# the list itself is an argument, the function returns a sorted copy\nin_order = sorted(my_list)\nprint(in_order)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "9df6b1aa5dac2265b39dab8436bf7eb60ae91abda49b66a138e749758797d42b",
+        "length_lines": 15
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0081",
+      "type": "sample_output",
+      "order": 81,
+      "source_hash": "65a7649b86fe2e4609d3e6d0cda4732c2d8d01b700a1e07dd3017cbc72c80b9f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Smallest: 1\nGreatest: 7\nLength of the list: 4\n[1, 2, 3, 7]"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Smallest: 1\nGreatest: 7\nLength of the list: 4\n[1, 2, 3, 7]"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nSmallest: 1\nGreatest: 7\nLength of the list: 4\n[1, 2, 3, 7]\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0082",
+      "type": "heading",
+      "order": 82,
+      "source_hash": "145294f2a4df5af10a241fe1007fa5835624a99059efcc52b3b4c53aabfcfb62",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A list as an argument or a return value"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Danh sách dưới dạng đối số hoặc giá trị trả về"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0083",
+      "type": "paragraph",
+      "order": 83,
+      "source_hash": "bb8f7506b0ffc8f00a8c5699631a2c945fb391dc1213147b9209e56cdeafa2d9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Just like the built-in functions above, our own functions can also take a list as an argument and produce a list as a return value. The following function works out the central value in an ordered list, also called the _median_ value:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cũng giống như các hàm dựng sẵn ở trên, các hàm của chúng ta cũng có thể lấy danh sách làm đối số và tạo ra danh sách làm giá trị trả về. Hàm sau đây tính ra giá trị trung tâm trong danh sách có thứ tự, còn được gọi là giá trị _median_:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0084",
+      "type": "code",
+      "order": 84,
+      "source_hash": "daca5d64645c0847497e3c892954c38377fba965a617b70f114cdf855f087862",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def median(my_list: list):\n    ordered = sorted(my_list)\n    list_centre = len(ordered) // 2\n    return ordered[list_centre]"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def median(my_list: list):\n    ordered = sorted(my_list)\n    list_centre = len(ordered) // 2\n    return ordered[list_centre]"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "daca5d64645c0847497e3c892954c38377fba965a617b70f114cdf855f087862",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0085",
+      "type": "paragraph",
+      "order": 85,
+      "source_hash": "da229f4aa6ab2444351caddf4c76f2c0453e91c4c2e67e853b1bd24052902f6a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The function creates an ordered version of the list given as an argument and returns the item in the very middle. Notice the integer division operator `//` used here. The index of a list should always be an integer."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm tạo một phiên bản có thứ tự của danh sách được đưa ra dưới dạng đối số và trả về mục ở chính giữa. Lưu ý toán tử chia số nguyên `//` được sử dụng ở đây. Chỉ mục của danh sách phải luôn là số nguyên."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0086",
+      "type": "paragraph",
+      "order": 86,
+      "source_hash": "aa711a0683cfa4aa87fc7c99978d1a7173ceef643df7c9f9ab2a301f4584f2de",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The function works like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm này hoạt động như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0087",
+      "type": "code",
+      "order": 87,
+      "source_hash": "98484f0095a77f9f34fbb71a641196d1938bd33e610e5d36100c5044c784f9d4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "shoe_sizes = [45, 44, 36, 39, 40]\nprint(\"The median of the shoe sizes is\", median(shoe_sizes))\n\nages = [1, 56, 34, 22, 5, 77, 5]\nprint(\"The median of the ages is\", median(ages))"
+      },
+      "translation": {
+        "language": "code",
+        "content": "shoe_sizes = [45, 44, 36, 39, 40]\nprint(\"The median of the shoe sizes is\", median(shoe_sizes))\n\nages = [1, 56, 34, 22, 5, 77, 5]\nprint(\"The median of the ages is\", median(ages))"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "98484f0095a77f9f34fbb71a641196d1938bd33e610e5d36100c5044c784f9d4",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0088",
+      "type": "sample_output",
+      "order": 88,
+      "source_hash": "a5c41c3813ed58c9fd810df7066d166f1d22aff38343bae42de7aeeb683896ee",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The median of the shoe sizes is 40\nThe median of the ages is 22"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The median of the shoe sizes is 40\nThe median of the ages is 22"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe median of the shoe sizes is 40\nThe median of the ages is 22\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0089",
+      "type": "paragraph",
+      "order": 89,
+      "source_hash": "5a2a5c680f6f0a6ca5b314ae4e6a44e06436749f5bbf2b61008513094f4e710c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A function can also return a list. The following function asks the user to type in integers and returns the input as a list:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một hàm cũng có thể trả về một danh sách. Hàm sau yêu cầu người dùng nhập số nguyên và trả về đầu vào dưới dạng danh sách:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0090",
+      "type": "code",
+      "order": 90,
+      "source_hash": "c55e7b863734f1e1528ced62cac2e139393ac46cef7b9ba5dcf1fa9f9d41efbc",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def input_numbers():\n    numbers = []\n    while True:\n        user_input = input(\"Please type in an integer, leave empty to exit: \")\n        if len(user_input) == 0:\n            break\n        numbers.append(int(user_input))\n    return numbers"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def input_numbers():\n    numbers = []\n    while True:\n        user_input = input(\"Please type in an integer, leave empty to exit: \")\n        if len(user_input) == 0:\n            break\n        numbers.append(int(user_input))\n    return numbers"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c55e7b863734f1e1528ced62cac2e139393ac46cef7b9ba5dcf1fa9f9d41efbc",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0091",
+      "type": "paragraph",
+      "order": 91,
+      "source_hash": "33ca82763cdfc86ab3823028d0eb7a7c1484c51183021112fba62a9d3fe9f823",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The function makes use of a helper variable `numbers`, which is a list. All the numbers typed in by the user are added to the list. When the loop is exited from, the function returns the list with the statement `return numbers`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm này sử dụng biến trợ giúp `numbers`, đây là một danh sách. Tất cả các số do người dùng nhập sẽ được thêm vào danh sách. Khi thoát khỏi vòng lặp, hàm trả về danh sách với câu lệnh `return numbers`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0092",
+      "type": "paragraph",
+      "order": 92,
+      "source_hash": "06435c375b2bfa819d754cb62236468cb24e5eb91f976f917e65e237a9e00b58",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Calling the function like this"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Gọi hàm như thế này"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0093",
+      "type": "code",
+      "order": 93,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": ""
+      },
+      "translation": {
+        "language": "code",
+        "content": ""
+      },
+      "metadata": {
+        "language": "",
+        "code_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "length_lines": 0
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0094",
+      "type": "paragraph",
+      "order": 94,
+      "source_hash": "48eb9e63edaf443a92aef893b0e9fdbb9313386670b07945ebe75b946868d39b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "could print this, for example:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "có thể in cái này, ví dụ:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0095",
+      "type": "sample_output",
+      "order": 95,
+      "source_hash": "3cb1bebd8a92f74f1f373a8d90f3c5f0417a3a4849e978d03c8721a4b8de1031",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in an integer, leave empty to exit: **5**\nPlease type in an integer, leave empty to exit: **-22**\nPlease type in an integer, leave empty to exit: **4**\nPlease type in an integer, leave empty to exit: **35**\nPlease type in an integer, leave empty to exit: **1**\nPlease type in an integer, leave empty to exit:\nThe greatest number is 35\nThe median of the numbers is 4"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in an integer, leave empty to exit: **5**\nPlease type in an integer, leave empty to exit: **-22**\nPlease type in an integer, leave empty to exit: **4**\nPlease type in an integer, leave empty to exit: **35**\nPlease type in an integer, leave empty to exit: **1**\nPlease type in an integer, leave empty to exit:\nThe greatest number is 35\nThe median of the numbers is 4"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in an integer, leave empty to exit: **5**\nPlease type in an integer, leave empty to exit: **-22**\nPlease type in an integer, leave empty to exit: **4**\nPlease type in an integer, leave empty to exit: **35**\nPlease type in an integer, leave empty to exit: **1**\nPlease type in an integer, leave empty to exit:\nThe greatest number is 35\nThe median of the numbers is 4\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0096",
+      "type": "paragraph",
+      "order": 96,
+      "source_hash": "5f34d8b63692e421c86fbe06b1c86903f43014e1f1f86f3134f7d64437b42190",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This small example demonstrates one of the most important uses of functions: they can help you divide your code into smaller, easily understandable and logical wholes."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ nhỏ này minh họa một trong những cách sử dụng hàm quan trọng nhất: chúng có thể giúp bạn chia mã thành các phần nhỏ hơn, dễ hiểu và hợp lý."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0097",
+      "type": "paragraph",
+      "order": 97,
+      "source_hash": "f6fc91c6ac2ce43dd492eb13f0a42cd97fa51c41c26de9890574f57da08b173a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Of course the same functionality could be achieved without writing any of our own functions:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tất nhiên, chức năng tương tự có thể đạt được mà không cần viết bất kỳ chức năng nào của chúng ta:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0098",
+      "type": "code",
+      "order": 98,
+      "source_hash": "99efcf5bf59e4cdbf6e0774e9ace2427fe7cc5fc8c9990dd4f0fa656c252e153",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "numbers = []\nwhile True:\n    user_input = input(\"Please type in an integer, leave empty to exit: \")\n    if len(user_input) == 0:\n        break\n    numbers.append(int(user_input))\n\nordered = sorted(numbers)\nlist_centre = len(ordered) // 2\nmedian = ordered[list_centre]\n\nprint(\"The greatest number is\", max(numbers))\nprint(\"The median of the numbers is\", median)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "numbers = []\nwhile True:\n    user_input = input(\"Please type in an integer, leave empty to exit: \")\n    if len(user_input) == 0:\n        break\n    numbers.append(int(user_input))\n\nordered = sorted(numbers)\nlist_centre = len(ordered) // 2\nmedian = ordered[list_centre]\n\nprint(\"The greatest number is\", max(numbers))\nprint(\"The median of the numbers is\", median)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "99efcf5bf59e4cdbf6e0774e9ace2427fe7cc5fc8c9990dd4f0fa656c252e153",
+        "length_lines": 13
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0099",
+      "type": "paragraph",
+      "order": 99,
+      "source_hash": "82a990390bd0c74db86c21ec500e3201bf65c47fc59f55ac1527785e682914a5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In this version, following the programming logic is more difficult, as it is no longer clear which commands are a part of which functionality. The code fulfils the same purposes - reading in input, calculating the median value, and so on - but the structure is less clear."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong phiên bản này, việc tuân theo logic lập trình khó hơn vì không còn rõ lệnh nào là một phần của chức năng nào. Mã thực hiện các mục đích tương tự - đọc đầu vào, tính giá trị trung bình, v.v. - nhưng cấu trúc kém rõ ràng hơn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0100",
+      "type": "paragraph",
+      "order": 100,
+      "source_hash": "096af3754e30d6f4d998145cbcaca71c0ebb828c824bcc26252164af87e1406f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Organising your code into separate functions will improve you program's readability, but also make it easier to handle logical wholes. This in turn helps you verify that the program works as intended, as each function can be tested separately."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Việc sắp xếp code của bạn thành các hàm riêng biệt sẽ cải thiện khả năng đọc chương trình của bạn nhưng cũng giúp việc xử lý tổng thể logic dễ dàng hơn. Điều này sẽ giúp bạn xác minh rằng chương trình hoạt động như dự định vì mỗi chức năng có thể được kiểm tra riêng biệt."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0101",
+      "type": "paragraph",
+      "order": 101,
+      "source_hash": "6dbdc761a97424898aacd3318909c8313e9fca468aa0390ff59074261b58ac5a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Another important use for functions is making code _reusable_. If you need to achieve some functionality multiple times in your program, it is a good idea to create your own function and name it appropriately:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một cách sử dụng quan trọng khác của hàm là tạo mã _reusable_. Nếu bạn cần đạt được một số chức năng nhiều lần trong chương trình của mình, bạn nên tạo chức năng của riêng mình và đặt tên cho nó một cách thích hợp:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0102",
+      "type": "code",
+      "order": 102,
+      "source_hash": "09600498399e16867c0af3e51b7810e10e2d74bb828aafbd8e1e598e44e16006",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(\"Shoe sizes:\")\nshoe_sizes = input_numbers()\n\nprint(\"Weights:\")\nweights = input_numbers()\n\nprint(\"Heights:\")\nheights = input_numbers()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(\"Shoe sizes:\")\nshoe_sizes = input_numbers()\n\nprint(\"Weights:\")\nweights = input_numbers()\n\nprint(\"Heights:\")\nheights = input_numbers()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "09600498399e16867c0af3e51b7810e10e2d74bb828aafbd8e1e598e44e16006",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0103",
+      "type": "exercise",
+      "order": 103,
+      "source_hash": "cb1ceef2afd46897b3529e2c328c226fe9852767a4413239ff13dde7e567f30f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `length` which takes a list as its argument and returns the length of the list.\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nresult = length(my_list)\nprint(\"The length is\", result)\n\n# the list given as an argument doesn't need to be stored in any variable\nresult = length([1, 1, 1, 1])\nprint(\"The length is\", result)\n```\n\n<sample-output>\n\nThe length is 5\nThe length is 4\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng viết một hàm có tên `length` lấy một danh sách làm đối số và trả về độ dài của danh sách.\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nresult = length(my_list)\nprint(\"The length is\", result)\n\n# the list given as an argument doesn't need to be stored in any variable\nresult = length([1, 1, 1, 1])\nprint(\"The length is\", result)\n```\n\n<sample-output>\n\nchiều dài là 5\nchiều dài là 4\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-17_length_of_list",
+        "exercise_type": "programming-exercise",
+        "name": "The length of a list",
+        "tmc_name": "part04-17_length_of_list",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0104",
+      "type": "exercise",
+      "order": 104,
+      "source_hash": "f1120a94bf66efbe88e86002497e3178fc4b4cf6baefcfc1fd9c35168c5ce911",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `mean`, which takes a list of integers as an argument. The function returns the arithmetic mean of the values in the list.\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nresult = mean(my_list))\nprint(\"mean value is\", result)\n```\n\n<sample-output>\n\nmean value is 3.0\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `mean`, hàm này lấy danh sách các số nguyên làm đối số. Hàm trả về giá trị trung bình số học của các giá trị trong danh sách.\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nresult = mean(my_list))\nprint(\"mean value is\", result)\n```\n\n<sample-output>\n\ngiá trị trung bình là 3,0\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-18_mean",
+        "exercise_type": "programming-exercise",
+        "name": "Arithmetic mean",
+        "tmc_name": "part04-18_mean",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0105",
+      "type": "exercise",
+      "order": 105,
+      "source_hash": "6dc8cef256db8daa7edd7044b487750db83df8dc14e2ae95d5e089a9ab0fe04a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named  `range_of_list`, which takes a list of integers as an argument. The function returns the difference between the smallest and the largest value in the list.\n\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nresult = range_of_list(my_list))\nprint(\"The range of the list is\", result)\n```\n\n<sample-output>\n\nThe range of the list is 4\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `range_of_list`, hàm này lấy danh sách các số nguyên làm đối số. Hàm trả về chênh lệch giữa giá trị nhỏ nhất và lớn nhất trong danh sách.\n\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nresult = range_of_list(my_list))\nprint(\"The range of the list is\", result)\n```\n\n<sample-output>\n\nPhạm vi của danh sách là 4\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part04-19_range_of_list",
+        "exercise_type": "programming-exercise",
+        "name": "The range of a list",
+        "tmc_name": "part04-19_range_of_list",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0106",
+      "type": "paragraph",
+      "order": 106,
+      "source_hash": "2b674516cf33d15ec6a35f05523be5fc52eba880c99707d35a7ea29d06a0c493",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "There are many more ways to use lists in Python. The Python [documentation](https://docs.python.org/3/tutorial/datastructures.html) is a good place to start if you want to know more."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Có nhiều cách khác để sử dụng danh sách trong Python. [Tài liệu] Python(https://docs.python.org/3/tutorial/datastructures.html) là một nơi tốt để bắt đầu nếu bạn muốn biết thêm."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0107",
+      "type": "paragraph",
+      "order": 107,
+      "source_hash": "b97eebcf5a0222c688482a2c1f8f4510ba0c7934c136e1f60999bbcc47c2ab75",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!---\nA quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!---\nMột bài kiểm tra để ôn lại nội dung của phần này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part04-3-lists-0108",
+      "type": "quiz",
+      "order": 108,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "4849cd69-1938-5f4f-8805-8445f0f5c015",
+        "attributes": {
+          "id": "4849cd69-1938-5f4f-8805-8445f0f5c015"
+        }
+      }
+    },
+    {
+      "id": "blk-part04-3-lists-0109",
+      "type": "paragraph",
+      "order": 109,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "-->"
+      },
+      "metadata": {}
+    }
+  ]
+}

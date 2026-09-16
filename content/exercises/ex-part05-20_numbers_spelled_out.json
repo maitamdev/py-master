@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-20_numbers_spelled_out",
+  "lesson_id": "part05-3-dictionary",
+  "part": 5,
+  "tmc_name": "part05-20_numbers_spelled_out",
+  "title_original": "Numbers spelled out",
+  "title_vi": "Những con số được đánh vần",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `dict_of_numbers()`, which returns a new dictionary. The dictionary should have the numbers from 0 to 99 as its keys. The value attached to each key should be the number spelled out in words. Please have a look at the example below:\n\n```python\nnumbers = dict_of_numbers()\nprint(numbers[2])\nprint(numbers[11])\nprint(numbers[45])\nprint(numbers[99])\nprint(numbers[0])\n```\n\n<sample-output>\n\ntwo\neleven\nforty-five\nninety-nine\nzero\n\n</sample-output>\n\nNB: Please don't formulate each spelled out number by hand. Figure out how you can use loops and dictionaries in your solution.",
+  "description_vi": "Hãy viết một hàm có tên `dict_of_numbers()` để trả về một từ điển mới. Từ điển phải có các số từ 0 đến 99 làm khóa. Giá trị gắn liền với mỗi khóa phải là số được đánh vần bằng chữ. Xin vui lòng xem ví dụ dưới đây:\n\n```python\nnumbers = dict_of_numbers()\nprint(numbers[2])\nprint(numbers[11])\nprint(numbers[45])\nprint(numbers[99])\nprint(numbers[0])\n```\n\n<sample-output>\n\nhai\nmười một\nbốn mươi lăm\nchín mươi chín\nkhông\n\n</sample-output>\n\nLưu ý: Vui lòng không viết từng số được đánh vần bằng tay. Tìm hiểu cách bạn có thể sử dụng vòng lặp và từ điển trong giải pháp của mình.",
+  "starter_code": "numbers = dict_of_numbers()\nprint(numbers[2])\nprint(numbers[11])\nprint(numbers[45])\nprint(numbers[99])\nprint(numbers[0])",
+  "grading_data_available": false,
+  "source_hash": "53f331142896669e74a8c8cb668c48d17b09cd7ad8f809609494924403458d5c",
+  "order": 76
+}

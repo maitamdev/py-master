@@ -1,0 +1,1400 @@
+{
+  "id": "part03-4-defining-functions",
+  "part": 3,
+  "part_slug": "part-3",
+  "slug": "4-defining-functions",
+  "is_part_index": false,
+  "title_original": "Defining functions",
+  "title_vi": "Xác định hàm",
+  "path": "/part-3/4-defining-functions",
+  "source_path": "data/part-3/4-defining-functions.md",
+  "source_hash": "e47561fea1de99dd9f3be482607093d491cfc6b6065c01ad1ba32a613ac5f698",
+  "order": 1,
+  "blocks_count": 77,
+  "blocks": [
+    {
+      "id": "blk-part03-4-defining-functions-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "e696d73194675c86b8c9032885977cda58052aa14d5c3ece811b85fa9d101efe",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know how to write and call your own functions\n- You will understand what is meant by the argument and the parameter of a function\n- You will be able to define parameters in your own functions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ biết cách viết và gọi các hàm của riêng mình\n- Bạn sẽ hiểu được ý nghĩa của đối số và tham số của hàm\n- Bạn sẽ có thể xác định các tham số trong các hàm của riêng mình"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0002",
+      "type": "heading",
+      "order": 2,
+      "source_hash": "e20932c424a36608fb99597c75dcc77ccf9bc8f48a8455678a1e52fe19775d95",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Parsons Code Lab"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Luyện tập cấu trúc hàm"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "e1c98fed2cdd9e7698fdb63c9de69ff00b92329686a7aa4c0e477caea0c1a6e1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "As part of ongoing research on computer science education at the University of Helsinki, a new programming practice software, Parsons Code Lab, is being developed. In the software, you get to solve programming exercises in the form of [Parsons problems](https://en.wikipedia.org/wiki/Parsons_problem); by ordering and filling in blocks of code."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương pháp luyện tập lập trình [Bài toán Parsons](https://en.wikipedia.org/wiki/Parsons_problem) cho phép người học rèn luyện tư duy tổ chức mã bằng cách sắp xếp và hoàn thiện các khối lệnh theo trình tự logic."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "4589b2dd1349e10a60d01acb82333654501fe55d98a4b5726a5d1a466bac5270",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "By clicking the link below, you'll get access to a set of exercises that lets you review many of the central programming concepts you have learned so far: loops, conditionals, string operations, etc. These exercises are voluntary supporting material and will not affect grading in any way. The course teacher can, however, view statistics on exercise attempts via the teacher dashboard of the software."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy thử thách bản thân với các bài tập thực hành về hàm trong phần này để nắm vững cú pháp."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "8a16ed816c90b43d3abe32ce107d79759deba56b41b8f4af958bcd3c1a21f1f5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "[To exercises](https://parsonscodelab.web.helsinki.fi/laurasini/set/introduction-to-programming-halfway-review)"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "[Đến bài tập](https://parsonscodelab.web.helsinki.fi/laurasini/set/introduction-to-programming-halfway-review)"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "10593a89dbf79e4022484d4b7900ee856ebf468f8955444bb895a98b286dcdad",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Kindly note that the software is in active development and there might be some issues.\nPlease help the development by sharing any possible issues and comments via an anonymous feedback questionnaire! It will take approx. 1 minute to fill in but will help further development immeasurably."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thực hành đều đặn giúp bạn hình thành phản xạ phân rã bài toán thành các hàm nhỏ."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "fa007bed842fb4ffb6b7bb0c7a4902efde4b06ccb10903bd04895c4ccfe35fce",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "[Give feedback](https://elomake.helsinki.fi/lomakkeet/IYqXp/lomake.html)"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "[Gửi phản hồi](https://elomake.helsinki.fi/lomakkeet/IYqXp/lomake.html)"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "ec9617b4d3fc6eafbb4b51492c8a321363fe7d60339b739fde27d3d3882f7a55",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Exercise activity and feedback may be used in research in a completely anonymized form.\nThank you for your contribution!"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hoạt động tập thể dục và phản hồi có thể được sử dụng trong nghiên cứu dưới hình thức hoàn toàn ẩn danh.\nCảm ơn sự đóng góp của bạn!"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0009",
+      "type": "heading",
+      "order": 9,
+      "source_hash": "0ef81421751938f743514789082111850a4182b18eccb6abc8ec64790a1457ff",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The function definition"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Định nghĩa hàm"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "6890e2842ed042eb248821f69e5428ac789148f25571c8efa79936e7c461ff9f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We have already used functions such as `len`, `print` and `input` in our programs. These are functions built into Python, and so they are always ready at our disposal, no matter which environment we are programming in. However, it is also possible to define your own functions."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng tôi đã sử dụng các hàm như `len`, `print` và `input` trong các chương trình của mình. Đây là các hàm được tích hợp trong Python nên chúng luôn sẵn sàng cho chúng ta sử dụng, bất kể chúng ta đang lập trình trong môi trường nào. Tuy nhiên, bạn cũng có thể xác định các hàm của riêng mình."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "5749c203ea91ebdf04d7b8e3ecfd17276901476d24c1cd7a3f0b77894841175d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Before a function can be used, it must be defined. Any function definition begins with the keyword `def`, short for _define_. Then comes the _name_ of the function, followed by parentheses and a colon character. This is called the _header_ of the function. After this, indented just like `while` and `if` blocks, comes the _body_ of the function."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trước khi một hàm có thể được sử dụng, nó phải được xác định. Bất kỳ định nghĩa hàm nào cũng bắt đầu bằng từ khóa `def`, viết tắt của _define_. Sau đó là _name_ của hàm, theo sau là dấu ngoặc đơn và ký tự dấu hai chấm. Đây được gọi là _header_ của hàm. Sau đó, thụt lề giống như các khối `while` và `if`, xuất hiện _body_ của hàm."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "a1b13c7cd1f8010bbc98ff18489208c8cc41532339bfa140f962173f09e15fb1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "For example, the following code defines the function `message`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ: đoạn mã sau xác định hàm `message`:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0013",
+      "type": "code",
+      "order": 13,
+      "source_hash": "fd571f0ae852bd1d3ab21b46f223a0f1467dedaaceb271e1778fbe92061fb56e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def message():\n    print(\"This is my very own function!\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def message():\n    print(\"This is my very own function!\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "fd571f0ae852bd1d3ab21b46f223a0f1467dedaaceb271e1778fbe92061fb56e",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "c0e90f5fd1dc091c6eb73b2015c3f9721c3cd2f9de0b90ff05ef10b8b1fb4c3e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If the program above is executed, nothing seems to happen. This is because the code in the body of the function is only executed when the function is _called_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu chương trình trên được thực thi thì dường như không có gì xảy ra. Điều này là do mã trong phần nội dung của hàm chỉ được thực thi khi hàm được gọi _."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "fba09b2e9b9fef875dabaa6bf7d4f8ad6e7700ecf4898160e52cd38d0ac7056b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Calling a function is as simple as mentioning its name in your code. Adding a function call to the end of the above program, like so"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Gọi một hàm cũng đơn giản như nhắc đến tên của nó trong code của bạn. Thêm lệnh gọi hàm vào cuối chương trình trên, như vậy"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0016",
+      "type": "code",
+      "order": 16,
+      "source_hash": "f00eda253e77bd015bf0add3294b19e16e434330dcc4cbd26b87308e91bc4d2f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def message():\n    print(\"This is my very own function!\")\n\nmessage()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def message():\n    print(\"This is my very own function!\")\n\nmessage()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f00eda253e77bd015bf0add3294b19e16e434330dcc4cbd26b87308e91bc4d2f",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "9ea4d61bed2fa71052e2bc4ca4560255158a3538ecbb0091c3732bec12810f63",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "results in a printed statement:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "dẫn đến một tuyên bố được in:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0018",
+      "type": "sample_output",
+      "order": 18,
+      "source_hash": "83b8c24e1862bda915cd1be863b87d2e161c2af3da427cec702bb70d96e3a38d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "This is my very own function!"
+      },
+      "translation": {
+        "language": "text",
+        "content": "This is my very own function!"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThis is my very own function!\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "48eb71b1c1f404d086617ab2ccb3ae08ad53a55e8ab212a319ea7726aac4c0e8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "When a function has been defined it can be called multiple times:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khi một hàm đã được xác định, nó có thể được gọi nhiều lần:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0020",
+      "type": "code",
+      "order": 20,
+      "source_hash": "58ad1f9fe198b035f945354f18cb83ee4e5896b91fcc50aa35eb475178f8f961",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def message():\n    print(\"This is my very own function!\")\n\nmessage()\nmessage()\nmessage()"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def message():\n    print(\"This is my very own function!\")\n\nmessage()\nmessage()\nmessage()"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "58ad1f9fe198b035f945354f18cb83ee4e5896b91fcc50aa35eb475178f8f961",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0021",
+      "type": "sample_output",
+      "order": 21,
+      "source_hash": "6547e22bd4a04a59ed546a5fdf64a0192dd3125916d251ee46b09021c91eb4d3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "This is my very own function!\nThis is my very own function!\nThis is my very own function!"
+      },
+      "translation": {
+        "language": "text",
+        "content": "This is my very own function!\nThis is my very own function!\nThis is my very own function!"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThis is my very own function!\nThis is my very own function!\nThis is my very own function!\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0022",
+      "type": "text_box",
+      "order": 22,
+      "source_hash": "cc2558b6698c44b8ef9f8c6b45a45c1a012b092e4e34e410172921af36617c67",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "NB: from now on the majority of the exercises on this course will ask you to write your own function(s).\n\nWhen a program consists of only functions, executing it doesn't seem to have any effect. The following code doesn't print out anything, even though there is a print statement:\n\n```python\ndef greet():\n    print(\"Hi!\")\n```\n\nThe reason nothing is printed out is that the code within the body of the `greet` function is only executed when the function is called.\n\nThe \"main\" program below the function should contain appropriate function calls, so that the program can be tested. In fact, Python treats all code that is not within function definitions as part of the _main function_, which gets executed when the file itself is evaluated or executed. So, lets add a function call:\n\n```python\ndef greet():\n    print(\"Hi!\")\n\n# All code not within function definitions is part of\n# the main function of the program\n# Calling our function:\n\ngreet()\n```\n\n**Important**: on this course the automatic tests that are run on the exercise files require an empty main function. No commands should be left in the main function of your solution. That is, any code that you yourself use for testing must be contained in a specially defined `if` block:\n\n```python\ndef greet():\n    print(\"Hi!\")\n\n# Write your main function within a block like this:\nif __name__ == \"__main__\":\n    greet()\n```\n\nAny code left outside the above block causes an error:\n\n<img src=\"3_4_1.png\">\n\nThe purpose of this is to make sure that your solution gets tested on a clean slate, as the tests often check what your functions print out. It is worth noting that the tests will not execute any code from within the `if __name__ == \"__main__\"` block, so no code that is needed to fulfil the requirements of the exercise should be placed within the block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lưu ý: từ bây giờ phần lớn các bài tập trong khóa học này sẽ yêu cầu bạn viết (các) hàm của riêng mình.\n\nKhi một chương trình chỉ bao gồm các hàm, việc thực thi nó dường như không có tác dụng gì. Đoạn mã sau không in ra bất cứ thứ gì, mặc dù có câu lệnh `print`:\n\n```python\ndef greet():\n    print(\"Hi!\")\n```\n\nLý do không có gì được in ra là mã bên trong nội dung của hàm `greet` chỉ được thực thi khi hàm được gọi.\n\nChương trình \"chính\" bên dưới hàm phải chứa các lệnh gọi hàm thích hợp để có thể kiểm tra chương trình. Trên thực tế, Python xử lý tất cả mã không nằm trong định nghĩa hàm như một phần của hàm _main_, được thực thi khi bản thân tệp được đánh giá hoặc thực thi. Vì vậy, hãy thêm một lệnh gọi hàm:\n\n```python\ndef greet():\n    print(\"Hi!\")\n\n# All code not within function definitions is part of\n# the main function of the program\n# Calling our function:\n\ngreet()\n```\n\n**Quan trọng**: trong khóa học này, các bài kiểm tra tự động chạy trên tệp bài tập yêu cầu hàm chính trống. Không được để lại lệnh nào trong chức năng chính của giải pháp của bạn. Nghĩa là, bất kỳ mã nào mà bạn sử dụng để kiểm tra đều phải được chứa trong khối `if` được xác định đặc biệt:\n\n```python\ndef greet():\n    print(\"Hi!\")\n\n# Write your main function within a block like this:\nif __name__ == \"__main__\":\n    greet()\n```\n\nBất kỳ mã nào còn sót lại bên ngoài khối trên đều gây ra lỗi:\n\n<img src=\"3_4_1.png\">\n\nMục đích của việc này là để đảm bảo rằng giải pháp của bạn được thử nghiệm một cách rõ ràng, vì các thử nghiệm thường kiểm tra những gì chức năng của bạn in ra. Điều đáng chú ý là các bài kiểm tra sẽ không thực thi bất kỳ mã nào từ bên trong khối `if __name__ == \"__main__\"`, vì vậy không nên đặt mã nào cần thiết để đáp ứng các yêu cầu của bài tập trong khối."
+      },
+      "metadata": {
+        "variant": "hint",
+        "name_original": "Testing your own functions",
+        "name_vi": "",
+        "attributes": {
+          "variant": "hint",
+          "name": "Testing your own functions"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0023",
+      "type": "exercise",
+      "order": 23,
+      "source_hash": "f2a112417e14b8bb44653401eea0e5044f69c559fa7fa01f27e02fced7beab32",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `seven_brothers`. When the function is called, it should print out the names of the seven brothers in alphabetical order, as in the example below. See the [similarly named exercise in part 1](/part-1/1-getting-started#programming-exercise-fix-the-code-seven-brothers) for more details about the brothers.\n\n\n<sample-output>\n\nAapo\nEero\nJuhani\nLauri\nSimeoni\nTimo\nTuomas\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `seven_brothers`. Khi hàm được gọi, nó sẽ in ra tên của bảy anh em theo thứ tự bảng chữ cái, như trong ví dụ dưới đây. Xem [bài tập có tên tương tự ở phần 1](/part-1/1-getting-started#programming-exercise-fix-the-code-seven-brothers) để biết thêm chi tiết về các anh em.\n\n\n<sample-output>\n\nôi\nEero\nJuhani\nLauri\nSimeoni\ntimo\nkhối u\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-28_seven_brothers",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Seven Brothers",
+        "tmc_name": "part03-28_seven_brothers",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0024",
+      "type": "heading",
+      "order": 24,
+      "source_hash": "9ab31901456e5e07473e827f8491297f220540cdc81aeb117c5053c317850bdd",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Function arguments"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đối số hàm"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0025",
+      "type": "paragraph",
+      "order": 25,
+      "source_hash": "1b381484e295a12161189d5edd0b0aeef88300352c57e4b3620dc29dc1c37fd4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Functions often take one or more _arguments_, which may affect what the function does. For example, the built-in Python functions `print` and `input` take as argument(s) the text that is to be displayed:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm thường có một hoặc nhiều _argument_, điều này có thể ảnh hưởng đến chức năng của hàm. Ví dụ: các hàm Python tích hợp `print` và `input` lấy (các) đối số của văn bản sẽ được hiển thị:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0026",
+      "type": "code",
+      "order": 26,
+      "source_hash": "004b0559c482ce80e32dd7798c369be5b4cda4cea7182b198a999605219aa02e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(\"Hi!\")                           # argument is the string \"Hi!\"\nname = input(\"What is your name? \")    # argument is the string \"What is your name? \"\nprint(name)                            # argument is the value of the variable name"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(\"Hi!\")                           # argument is the string \"Hi!\"\nname = input(\"What is your name? \")    # argument is the string \"What is your name? \"\nprint(name)                            # argument is the value of the variable name"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "004b0559c482ce80e32dd7798c369be5b4cda4cea7182b198a999605219aa02e",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "850352b7498b43f0fe0b1c8eb76bd97784503459eb0a2e3c67b46f7d928ff44a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "It was mentioned before that the terms _argument_ and _parameter_ are often used to refer to the same thing. The distinction is that while _argument_ is used with the data passed to the function when the function is called, _inside_ the function the arguments are assigned to variables called _parameters_. So, approximately, when the function is called, we call the passed bits of data arguments, but when we are defining the function, we call them parameters."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trước đó đã đề cập rằng các thuật ngữ _argument_ và _parameter_ thường được sử dụng để chỉ cùng một thứ. Điểm khác biệt là trong khi _argument_ được sử dụng với dữ liệu được truyền đến hàm khi hàm được gọi, thì _bên trong_ hàm, các đối số được gán cho các biến được gọi là _parameters_. Vì vậy, gần đúng, khi hàm được gọi, chúng ta gọi các bit được truyền của đối số dữ liệu, nhưng khi xác định hàm, chúng ta gọi chúng là tham số."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0028",
+      "type": "paragraph",
+      "order": 28,
+      "source_hash": "889eb3811cf6ab99322a2a92d67a52cef65a449b67246a4376e98e8bf225b2b8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This may seem like a futile semantic distintion, and to make things even muddier, not all sources follow this definition. On this course we attempt to keep the distinction clear, however, as knowing the correct terminology will help you understand other sources besides this course material."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điều này có vẻ giống như một sự phân biệt ngữ nghĩa vô ích và khiến mọi thứ trở nên lầy lội hơn, không phải tất cả các nguồn đều tuân theo định nghĩa này. Tuy nhiên, trong khóa học này, chúng tôi cố gắng phân biệt rõ ràng vì biết thuật ngữ chính xác sẽ giúp bạn hiểu các nguồn khác ngoài tài liệu khóa học này."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "12bf45b266572a6e6662c5b92a2f105c8e91688947f7506e86d4494d5a82235b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's define some functions that take arguments. In the function definition, the parameters are defined within the parentheses after the function name:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy xác định một số hàm lấy đối số. Trong định nghĩa hàm, các tham số được xác định trong dấu ngoặc đơn sau tên hàm:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0030",
+      "type": "code",
+      "order": 30,
+      "source_hash": "4e22d898053f32ad796f79a0e3d3924efe827d9c992706fc1ee8e1d5c331d8b8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def hello(target):\n    print(\"Hello\", target)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def hello(target):\n    print(\"Hello\", target)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4e22d898053f32ad796f79a0e3d3924efe827d9c992706fc1ee8e1d5c331d8b8",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "47a86a774c181ab4cb3b1b4ae2b51fc5a0b7d42b332ec9be603da33d973acf56",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Calling this function twice, like so"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Gọi hàm này hai lần, như vậy"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0032",
+      "type": "code",
+      "order": 32,
+      "source_hash": "9db4d02d33e083e0452369ab93174da451f2b77bd11bacceb88388e848fcbdba",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "hello(\"Emily\")\nhello(\"world!\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "hello(\"Emily\")\nhello(\"world!\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "9db4d02d33e083e0452369ab93174da451f2b77bd11bacceb88388e848fcbdba",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "334b6d633d898d07be4204bb43335b7505504f0f6d01406ca90a6f94ad846d85",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "prints out two different greetings:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "in ra hai lời chào khác nhau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0034",
+      "type": "sample_output",
+      "order": 34,
+      "source_hash": "7d65968699406bb2d0075088b3023d025031214c491d8ec331c5b36557c39959",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hello Emily\nHello world!"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hello Emily\nHello world!"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHello Emily\nHello world!\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "2e38d082cd840519a7ac41e5e71e37a9d50174e96268cf68e105a39c210e6b24",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's take a closer look at the function definition:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy xem xét kỹ hơn về định nghĩa hàm:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0036",
+      "type": "code",
+      "order": 36,
+      "source_hash": "4e22d898053f32ad796f79a0e3d3924efe827d9c992706fc1ee8e1d5c331d8b8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def hello(target):\n    print(\"Hello\", target)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def hello(target):\n    print(\"Hello\", target)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4e22d898053f32ad796f79a0e3d3924efe827d9c992706fc1ee8e1d5c331d8b8",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0037",
+      "type": "paragraph",
+      "order": 37,
+      "source_hash": "7b3a04025cefd8c37a17036d0ce00574ed59c9ac5627e19b03d97659b3674079",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "On the first line, in the function header, we defined that this function takes an argument, and assigns it to a parameter named `target`. In the body of the function the `print` command uses the value stored in `target`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ở dòng đầu tiên, trong tiêu đề hàm, chúng ta đã xác định rằng hàm này nhận một đối số và gán nó cho một tham số có tên `target`. Trong phần nội dung của hàm, lệnh `print` sử dụng giá trị được lưu trữ trong `target`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "acf0a2b0efb646fd0de0d27d45e31afe36b437889abf4798d2b7e23d15b90abc",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "When the function is called, the parameter `target` has the value given as an argument in the function call. For example, the following function call"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khi hàm được gọi, tham số `target` có giá trị được đưa ra làm đối số trong lệnh gọi hàm. Ví dụ: lệnh gọi hàm sau"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0039",
+      "type": "code",
+      "order": 39,
+      "source_hash": "a3d188a45844f674c88fd08eafa58d6cf3f679a892a294436633f5ee977e7663",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "name = \"Alan\"\nhello(name)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "name = \"Alan\"\nhello(name)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a3d188a45844f674c88fd08eafa58d6cf3f679a892a294436633f5ee977e7663",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "ff0c09fc1af3af0a8aea7023c18628d98754cfbd28ca131b89ef68adeb18fade",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "causes the parameter `target` to be set to the value `\"Alan\"`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "làm cho tham số `target` được đặt thành giá trị `\"Alan\"`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0041",
+      "type": "paragraph",
+      "order": 41,
+      "source_hash": "323e99516ae8a9dadb04a178c60b4331851f6d7d110d0f505a7c2c61c896348f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The names of functions and their parameters follow the same principles as the names of variables. They should be descriptive, and contain primarily lowercase letters and underscore characters. Again, there are some exceptions to these guidelines, but we will ignore those for now."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tên hàm và tham số của chúng tuân theo nguyên tắc giống như tên biến. Chúng phải mang tính mô tả và chủ yếu chứa các chữ cái viết thường và ký tự gạch dưới. Một lần nữa, có một số trường hợp ngoại lệ đối với những nguyên tắc này nhưng hiện tại chúng tôi sẽ bỏ qua những trường hợp đó."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0042",
+      "type": "exercise",
+      "order": 42,
+      "source_hash": "3f1bcab040b4205c28ba224ad9d7da86f4a82bc020413d841af020b46d58b815",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The exercise contains the outline of the function `first_character`. Please complete it so that it prints out the first character of the string it takes as its argument.\n\n```python\ndef first_character(text):\n     # write your code here\n\n# testing the function:\nif __name__ == \"__main__\":\n    first_character('python')\n    first_character('yellow')\n    first_character('tomorrow')\n    first_character('heliotrope')\n    first_character('open')\n    first_character('night')\n```\n\n<sample-output>\n\np\ny\nt\nh\no\nn\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bài tập chứa đường viền của hàm `first_character`. Vui lòng hoàn thành nó để nó in ra ký tự đầu tiên của chuỗi mà nó lấy làm đối số.\n\n```python\ndef first_character(text):\n     # write your code here\n\n# testing the function:\nif __name__ == \"__main__\":\n    first_character('python')\n    first_character('yellow')\n    first_character('tomorrow')\n    first_character('heliotrope')\n    first_character('open')\n    first_character('night')\n```\n\n<sample-output>\n\np\ny\nt\nh\nồ\nn\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-29_first_character",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "The first character",
+        "tmc_name": "part03-29_first_character",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0043",
+      "type": "text_box",
+      "order": 43,
+      "source_hash": "0eb0e389e2852b2566c74584421001fde9d356241862b7d9e4c1042a878df705",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Whenever your function takes one or more arguments, it is recommended to test it with various different arguments.\n\nPay special heed to \"special cases\" specific to the type of argument you are using. How will your function behave if the argument is zero or a negative number, or a floating point number instead of an integer? What happens if the argument is an empty string?\n\nIf the exercise assignment doesn't explicitly tell you to include function calls, you may freely include your own within the main function `if` block as explained above. The tests will ignore everything within the if block."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bất cứ khi nào hàm của bạn có một hoặc nhiều đối số, bạn nên kiểm tra hàm đó bằng nhiều đối số khác nhau.\n\nĐặc biệt chú ý đến \"trường hợp đặc biệt\" cụ thể đối với loại đối số bạn đang sử dụng. Hàm của bạn sẽ hoạt động như thế nào nếu đối số bằng 0 hoặc số âm hoặc số dấu phẩy động thay vì số nguyên? Điều gì xảy ra nếu đối số là một chuỗi rỗng?\n\nNếu bài tập bài tập không yêu cầu bạn bao gồm các lệnh gọi hàm một cách rõ ràng, bạn có thể thoải mái đưa lệnh gọi hàm của mình vào khối chức năng chính `if` như đã giải thích ở trên. Các bài kiểm tra sẽ bỏ qua mọi thứ trong khối if."
+      },
+      "metadata": {
+        "variant": "hint",
+        "name_original": "Testing your functions with arguments",
+        "name_vi": "",
+        "attributes": {
+          "variant": "hint",
+          "name": "Testing your functions with arguments"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0044",
+      "type": "heading",
+      "order": 44,
+      "source_hash": "290894c78dfb4546fddc2825f16e1b6b734ae21e5339d6c8991c68a945b14c91",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "More examples"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thêm ví dụ"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0045",
+      "type": "paragraph",
+      "order": 45,
+      "source_hash": "809870728d3b45a4f49262621c9232a607061f2ed6ea321f46101cc4a6f734b2",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at some more examples of functions which take arguments. In the following function definition the parameter is a number:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy xem thêm một số ví dụ về hàm lấy đối số. Trong định nghĩa hàm sau, tham số là một số:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0046",
+      "type": "code",
+      "order": 46,
+      "source_hash": "35a2eb0f83ec954b098ed5b837f203b18c0a1a0c676e31f1448a8480bb62318a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def squared(x):\n    print(f\"The square of the number {x} is {x * x}\")\n\nsquared(2)\nsquared(5)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def squared(x):\n    print(f\"The square of the number {x} is {x * x}\")\n\nsquared(2)\nsquared(5)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "35a2eb0f83ec954b098ed5b837f203b18c0a1a0c676e31f1448a8480bb62318a",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0047",
+      "type": "sample_output",
+      "order": 47,
+      "source_hash": "c217f1ca88a7e43f1fe2216c37837660e11a8fe883d24e520e38eb6de36453ca",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The square of the number 2 is 4\nThe square of the number 5 is 25"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The square of the number 2 is 4\nThe square of the number 5 is 25"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe square of the number 2 is 4\nThe square of the number 5 is 25\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0048",
+      "type": "paragraph",
+      "order": 48,
+      "source_hash": "1a15413415e1e48be9e85e117521133ac469cbb787e6117df1b3acaea2956999",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Meanwhile, in this function definition there is an `if` statement within the body of the function:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong khi đó, trong định nghĩa hàm này có một câu lệnh `if` trong phần thân hàm:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0049",
+      "type": "code",
+      "order": 49,
+      "source_hash": "4ad4becc3610f417bb2f2332d4883c8a54b32a6b03d5f1bfc46f9cd62e22d1f1",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def hello(name):\n    if name == \"Emily\":\n        print(\"Hello\", name)\n    else:\n        print(\"Hi\", name)\n\nhello(\"Emily\")\nhello(\"Mark\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def hello(name):\n    if name == \"Emily\":\n        print(\"Hello\", name)\n    else:\n        print(\"Hi\", name)\n\nhello(\"Emily\")\nhello(\"Mark\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4ad4becc3610f417bb2f2332d4883c8a54b32a6b03d5f1bfc46f9cd62e22d1f1",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0050",
+      "type": "sample_output",
+      "order": 50,
+      "source_hash": "fe523fd61ade7a22278c463d4374842b161c3ee7f8448981afb4eb2c78803e2f",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hello Emily\nHi Mark"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hello Emily\nHi Mark"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHello Emily\nHi Mark\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0051",
+      "type": "paragraph",
+      "order": 51,
+      "source_hash": "89247597f53c68cdbfce7d269a370c75ecc4d768045c4bbf45a028e5cc724c3d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This function takes two arguments:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm này có hai đối số:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0052",
+      "type": "code",
+      "order": 52,
+      "source_hash": "f2bd8b40414f82081fc2146716c16462e6bbe8bdcfc432345a78bfa6b9772ea6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def sum(x, y):\n    result = x + y\n    print(f\"The sum of the arguments {x} and {y} is {result}\")\n\nsum(1, 2)\nsum(5, 24)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def sum(x, y):\n    result = x + y\n    print(f\"The sum of the arguments {x} and {y} is {result}\")\n\nsum(1, 2)\nsum(5, 24)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f2bd8b40414f82081fc2146716c16462e6bbe8bdcfc432345a78bfa6b9772ea6",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0053",
+      "type": "sample_output",
+      "order": 53,
+      "source_hash": "d0ce1fc82879c64919c5904f021c9a916c758d22b93480f00153843407ae7eed",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The sum of the arguments 1 and 2 is 3\nThe sum of the arguments 5 and 24 is 29"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The sum of the arguments 1 and 2 is 3\nThe sum of the arguments 5 and 24 is 29"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe sum of the arguments 1 and 2 is 3\nThe sum of the arguments 5 and 24 is 29\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0054",
+      "type": "paragraph",
+      "order": 54,
+      "source_hash": "2e613e700b9dcbbc1292eb401050c960c6b86896889dc48c82cb19603a9cd323",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The function also includes the helper variable `result`, which it uses to store the sum of its arguments."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hàm này cũng bao gồm biến trợ giúp `result`, biến này sử dụng để lưu trữ tổng các đối số của nó."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0055",
+      "type": "paragraph",
+      "order": 55,
+      "source_hash": "c5232072bc7e631f33ead1da24e5dc94768cdcf911f6c1d58c5667eb29a96d79",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Notice how the names of the parameters within the function definition have no relation to any variables outside it. We might just as well call the above function like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lưu ý rằng tên của các tham số trong định nghĩa hàm không có mối quan hệ nào với bất kỳ biến nào bên ngoài nó. Chúng ta cũng có thể gọi hàm trên như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0056",
+      "type": "code",
+      "order": 56,
+      "source_hash": "651d799fd56363fc03b2de031be36856ccd8f242ea3288084ec6504252edcf8b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "x = 100\ny = 30\nsum(1, 2)\nsum(x + y, 10)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "x = 100\ny = 30\nsum(1, 2)\nsum(x + y, 10)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "651d799fd56363fc03b2de031be36856ccd8f242ea3288084ec6504252edcf8b",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0057",
+      "type": "paragraph",
+      "order": 57,
+      "source_hash": "129aa026870116d32846c7d230a087eb127bdb32fb7ac09eb34642cb6631c4ed",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This should print out"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điều này sẽ in ra"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0058",
+      "type": "sample_output",
+      "order": 58,
+      "source_hash": "9670e46ee8cb33b6dd90e3dc9f3e98a84dfe53d3356133b1cdd84a137e129811",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The sum of the arguments 1 and 2 is 3\nThe sum of the arguments 130 and 10 is 140"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The sum of the arguments 1 and 2 is 3\nThe sum of the arguments 130 and 10 is 140"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe sum of the arguments 1 and 2 is 3\nThe sum of the arguments 130 and 10 is 140\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0059",
+      "type": "paragraph",
+      "order": 59,
+      "source_hash": "e60e644fd0e80f971c6e35e1582fe35040c58adb0ea1eb7dc577b74306e125bd",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the first function call the parameters are assigned the values `x = 1` and `y = 2`. In the second function call they are assigned the values `x = 130` and `y = 10`, regardless of the similarly named variables used in the function call."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong lệnh gọi hàm đầu tiên, các tham số được gán các giá trị `x = 1` và `y = 2`. Trong lệnh gọi hàm thứ hai, chúng được gán các giá trị `x = 130` và `y = 10`, bất kể các biến có tên tương tự được sử dụng trong lệnh gọi hàm."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0060",
+      "type": "paragraph",
+      "order": 60,
+      "source_hash": "1a4a59d0ac6e6e156ebf7c26c0dc0f4677e0e3f4ea0fff30424bf28738db4a3d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We will come back to function definitions in the beginning of the next part of the course."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta sẽ quay lại định nghĩa hàm ở phần đầu của phần tiếp theo của khóa học."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0061",
+      "type": "paragraph",
+      "order": 61,
+      "source_hash": "27cf6f9b4fc4011be6826651e993f3ca22c8ca26679e755aba2aea7e1a44157d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!--a similar warning is in sections 3-4, 4-6 and 5-1, check them all if you're changing this-->\n## Warning: using global variables within functions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!--một cảnh báo tương tự có trong phần 3-4, 4-6 và 5-1, hãy kiểm tra tất cả nếu bạn thay đổi phần này-->\n## Cảnh báo: sử dụng biến toàn cục trong hàm"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0062",
+      "type": "paragraph",
+      "order": 62,
+      "source_hash": "588cae4a1d879f0fb51b32fc67bfeb3f6ab629b3ffa9fd9295730361537c8adf",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the examples above we saw that it is possible to assign new variables within function definitions. The function can also see variables assigned outside it, in the main function. Such variables are called _global_ variables."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong các ví dụ trên, chúng ta thấy rằng có thể gán các biến mới trong định nghĩa hàm. Hàm cũng có thể thấy các biến được gán bên ngoài nó, trong hàm chính. Các biến như vậy được gọi là biến _global_."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0063",
+      "type": "paragraph",
+      "order": 63,
+      "source_hash": "99f27aabfffa53827b6d115e12d9343d346363d9034bc1da05936a8a72c6fcb5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Using global variables from within functions is usually a bad idea. Among other issues, doing so may cause bugs which are difficult to trace."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sử dụng các biến toàn cục từ bên trong các hàm thường là một ý tưởng tồi. Trong số các vấn đề khác, làm như vậy có thể gây ra lỗi khó theo dõi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0064",
+      "type": "paragraph",
+      "order": 64,
+      "source_hash": "f166be0b8a1b5b094b9773e7d09bc3987d94e25b1a443e95efe39c35e865e9a4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Below is an example of a function which uses a global variable \"by mistake\":"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Dưới đây là ví dụ về hàm sử dụng biến toàn cục \"do nhầm lẫn\":"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0065",
+      "type": "code",
+      "order": 65,
+      "source_hash": "979f8f832ec566c48a09128080be3df86a3a6bfaf8f8992be2dd572f37aab2c2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "# this is a global variable\nname = \"Betty\"\n\ndef hello(given_name):\n    # using the global variable instead of the parameter by mistake\n    print(\"Hello\", name)\n\nhello(\"Steve\")\nhello(\"Betty\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "# this is a global variable\nname = \"Betty\"\n\ndef hello(given_name):\n    # using the global variable instead of the parameter by mistake\n    print(\"Hello\", name)\n\nhello(\"Steve\")\nhello(\"Betty\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "979f8f832ec566c48a09128080be3df86a3a6bfaf8f8992be2dd572f37aab2c2",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0066",
+      "type": "sample_output",
+      "order": 66,
+      "source_hash": "020102876b8bbbd9e4557453f6076354b0385f2321187287accfdf47d9529a6d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Hello Betty\nHello Betty"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Hello Betty\nHello Betty"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHello Betty\nHello Betty\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0067",
+      "type": "paragraph",
+      "order": 67,
+      "source_hash": "476b0bdd044bad1a05ce943204ca862a3ea636cd387462c34bbcd98f4ad36e68",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "No matter how many different arguments we call the function with, it will always print out the value `\"Betty\"` stored in the global variable."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cho dù chúng ta gọi hàm với bao nhiêu đối số khác nhau, nó sẽ luôn in ra giá trị `\"Betty\"` được lưu trong biến toàn cục."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0068",
+      "type": "exercise",
+      "order": 68,
+      "source_hash": "288d1273292d4094387720543cf0923154279f7133e0bd654795213e0bc5728a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `mean`, which takes three integer arguments. The function should print out the arithmetic mean of the three arguments.\n\n```python\nmean(5, 3, 1)\nmean(10, 1, 1)\n```\n\n<sample-output>\n\n3.0\n4.0\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `mean`, hàm này nhận ba đối số nguyên. Hàm sẽ in ra giá trị trung bình số học của ba đối số.\n\n```python\nmean(5, 3, 1)\nmean(10, 1, 1)\n```\n\n<sample-output>\n\n3.0\n4.0\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-30_mean",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Mean",
+        "tmc_name": "part03-30_mean",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0069",
+      "type": "exercise",
+      "order": 69,
+      "source_hash": "687972a175a253d4afb95111a67ca611ab8645cc54f34b8802065139ad4359db",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `print_many_times(text, times)`, which takes a string and an integer as arguments. The integer argument specifies how many times the string argument should be printed out:\n\n```python\nprint_many_times(\"hi\", 5)\n\nprint()\n\ntext = \"All Pythons, except one, grow up\"\ntimes = 3\nprint_many_times(text, times)\n```\n<sample-output>\n\nhi\nhi\nhi\nhi\nhi\n\nAll Pythons, except one, grow up.\nAll Pythons, except one, grow up.\nAll Pythons, except one, grow up.\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `print_many_times(text, times)`, hàm này nhận một chuỗi và một số nguyên làm đối số. Đối số nguyên chỉ định số lần đối số chuỗi sẽ được in ra:\n\n```python\nprint_many_times(\"hi\", 5)\n\nprint()\n\ntext = \"All Pythons, except one, grow up\"\ntimes = 3\nprint_many_times(text, times)\n```\n<sample-output>\n\nxin chào\nxin chào\nxin chào\nxin chào\nxin chào\n\nTất cả Pythons, ngoại trừ một con, đều lớn lên.\nTất cả Pythons, ngoại trừ một con, đều lớn lên.\nTất cả Pythons, ngoại trừ một con, đều lớn lên.\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-31_print_many_times",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Print many times",
+        "tmc_name": "part03-31_print_many_times",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0070",
+      "type": "exercise",
+      "order": 70,
+      "source_hash": "879c22e8bbe4fabaea9c048a3b9455c1764cf8e929e1f31c1ab3b005317e664d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `hash_square(length)`, which takes an integer argument. The function prints out a square of hash characters, and the argument specifies the length of the side of the square.\n\n```python\nhash_square(3)\nprint()\nhash_square(5)\n```\n\n<sample-output>\n\n<pre>\n###\n###\n###\n\n#####\n#####\n#####\n#####\n#####\n</pre>\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `hash_square(length)`, hàm này nhận đối số là số nguyên. Hàm in ra một hình vuông gồm các ký tự băm và đối số chỉ định độ dài cạnh của hình vuông.\n\n```python\nhash_square(3)\nprint()\nhash_square(5)\n```\n\n<sample-output>\n\n<pre>\n###\n###\n###\n\n#####\n#####\n#####\n#####\n#####\n</pre>\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-32_square_of_hashes",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "A square of hashes",
+        "tmc_name": "part03-32_square_of_hashes",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0071",
+      "type": "exercise",
+      "order": 71,
+      "source_hash": "abca1f8d3095eb58491b5d5db5d7b265c4c837c201117c7315b825471ad292e5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `chessboard`, which prints out a chessboard made out of ones and zeroes. The function takes an integer argument, which specifies the length of the side of the board. See the examples below for details:\n\n```python\nchessboard(3)\nprint()\nchessboard(6)\n```\n\n<sample-output>\n\n<pre>\n101\n010\n101\n\n101010\n010101\n101010\n010101\n101010\n010101\n</pre>\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `chessboard` để in ra một bàn cờ gồm các số 1 và 0. Hàm lấy một đối số nguyên, xác định độ dài của cạnh bảng. Xem các ví dụ dưới đây để biết chi tiết:\n\n```python\nchessboard(3)\nprint()\nchessboard(6)\n```\n\n<sample-output>\n\n<pre>\n101\n010\n101\n\n101010\n010101\n101010\n010101\n101010\n010101\n</pre>\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-33_chessboard",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Chessboard",
+        "tmc_name": "part03-33_chessboard",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0072",
+      "type": "exercise",
+      "order": 72,
+      "source_hash": "1b6cd7702cf1ee4f1ac978460f52eb6efc4c3ba5da3aafd9645c5a1c379421a1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a function named `squared`, which takes a string argument and an integer argument, and prints out a square of characters as specified by the examples below.\n\n```python\nsquared(\"ab\", 3)\nprint()\nsquared(\"aybabtu\", 5)\n```\n\n<sample-output>\n\n<pre>\naba\nbab\naba\n\naybab\ntuayb\nabtua\nybabt\nuayba\n</pre>\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một hàm có tên `squared`, hàm này nhận một đối số chuỗi và một đối số số nguyên, rồi in ra một hình vuông gồm các ký tự như được chỉ định trong các ví dụ bên dưới.\n\n```python\nsquared(\"ab\", 3)\nprint()\nsquared(\"aybabtu\", 5)\n```\n\n<sample-output>\n\n<pre>\naba\nem yêu\naba\n\naybab\ntuayb\nbỏ đi\nybabt\nuayba\n</pre>\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part03-34_word_squared",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "A word squared",
+        "tmc_name": "part03-34_word_squared",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0073",
+      "type": "paragraph",
+      "order": 73,
+      "source_hash": "b97eebcf5a0222c688482a2c1f8f4510ba0c7934c136e1f60999bbcc47c2ab75",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!---\nA quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!---\nMột bài kiểm tra để ôn lại nội dung của phần này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0074",
+      "type": "quiz",
+      "order": 74,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "b04f1d8b-d207-5a8c-abbd-e42a3af7c12d",
+        "attributes": {
+          "id": "b04f1d8b-d207-5a8c-abbd-e42a3af7c12d"
+        }
+      }
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0075",
+      "type": "paragraph",
+      "order": 75,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "-->"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0076",
+      "type": "paragraph",
+      "order": 76,
+      "source_hash": "e7c1a46e91282cacd4221fc454f07d2669740016f75a092ce3959836e6ef0903",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please respond to a quick questionnaire on this week's materials."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Vui lòng trả lời bảng câu hỏi nhanh về tài liệu của tuần này."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part03-4-defining-functions-0077",
+      "type": "quiz",
+      "order": 77,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "4420ccdc-8422-598a-9057-89b32e8f282a",
+        "attributes": {
+          "id": "4420ccdc-8422-598a-9057-89b32e8f282a"
+        }
+      }
+    }
+  ]
+}

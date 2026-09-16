@@ -1,0 +1,402 @@
+{
+  "id": "part10-2-access-modifiers",
+  "part": 10,
+  "part_slug": "part-10",
+  "slug": "2-access-modifiers",
+  "is_part_index": false,
+  "title_original": "Access modifiers",
+  "title_vi": "",
+  "path": "/part-10/2-access-modifiers",
+  "source_path": "data/part-10/2-access-modifiers.md",
+  "source_hash": "ea325a571a335a76a322c8c2762bf0c94459a5a250eb99b6ae902ff6beb50f2c",
+  "order": 1,
+  "blocks_count": 21,
+  "blocks": [
+    {
+      "id": "blk-part10-2-access-modifiers-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "413182833a486fa58292a8fd59d3100838ce2079ff39d1e0815808ca9115800b",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will understand the access modifiers private and protected\n- You will know how the visibility of traits is determined in Python"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "4ba5a07710b4160b1cddd39431f82ea986dfd30429c8138e893c84201155d186",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If a trait is defined as private in the base class, it is not directly accessible in any derived classes, as was briefly mentioned in the previous section. Let's take a look at an example. In the `Notebook` class below the notes are stored in a list, and the list attribute is private:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0003",
+      "type": "code",
+      "order": 3,
+      "source_hash": "8a222779fc521b3acebea096689c6a8d2ed18460c5d857edd406f1bcd191578c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "\nclass Notebook:\n    \"\"\" A Notebook stores notes in string format \"\"\"\n\n    def __init__(self):\n        # private attribute\n        self.__notes = []\n\n    def add_note(self, note):\n        self.__notes.append(note)\n\n    def retrieve_note(self, index):\n        return self.__notes[index]\n\n    def all_notes(self):\n        return \",\".join(self.__notes)\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "\nclass Notebook:\n    \"\"\" A Notebook stores notes in string format \"\"\"\n\n    def __init__(self):\n        # private attribute\n        self.__notes = []\n\n    def add_note(self, note):\n        self.__notes.append(note)\n\n    def retrieve_note(self, index):\n        return self.__notes[index]\n\n    def all_notes(self):\n        return \",\".join(self.__notes)\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8a222779fc521b3acebea096689c6a8d2ed18460c5d857edd406f1bcd191578c",
+        "length_lines": 16
+      }
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "09024f93e10a98245df18a269d2c4b1da3b8043e92ec0bf52f7b1f7695778609",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "If the integrity of the class is key, making the list attribute `notes` private makes sense. The class provides the client with suitable methods for adding and browsing notes, after all. This approach becomes problematic if we define a new class `NotebookPro`, which inherits the `Notebook` class. The private list attribute is not accessible to the client, but neither is it accessible to the derived classes. If we try to access it, as in the `find_notes` method below, we get an error:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "15b6a990aff3988b8f7cda109ac848154e251bf8b9f1c57c48742d9e9c1284b5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class NotebookPro(Notebook):\n    \"\"\" A better Notebook with search functionality \"\"\"\n    def __init__(self):\n        # This is OK, the constructor is public despite the underscores\n        super().__init__()\n\n    # This causes an error\n    def find_notes(self, search_term):\n        found = []\n        # the attribute __notes is private\n        # the derived class can't access it directly\n        for note in self.__notes:\n            if search_term in note:\n                found.append(note)\n\n        return found"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class NotebookPro(Notebook):\n    \"\"\" A better Notebook with search functionality \"\"\"\n    def __init__(self):\n        # This is OK, the constructor is public despite the underscores\n        super().__init__()\n\n    # This causes an error\n    def find_notes(self, search_term):\n        found = []\n        # the attribute __notes is private\n        # the derived class can't access it directly\n        for note in self.__notes:\n            if search_term in note:\n                found.append(note)\n\n        return found"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "15b6a990aff3988b8f7cda109ac848154e251bf8b9f1c57c48742d9e9c1284b5",
+        "length_lines": 16
+      }
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0006",
+      "type": "sample_output",
+      "order": 6,
+      "source_hash": "7d36228038cbd118f108aa2194894b4422ec14b8f144be76a2e266fd823e1aa3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "AttributeError: 'NotebookPro' object has no attribute '_NotebookPro__notes'"
+      },
+      "translation": {
+        "language": "text",
+        "content": "AttributeError: 'NotebookPro' object has no attribute '_NotebookPro__notes'"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n    \nAttributeError: 'NotebookPro' object has no attribute '_NotebookPro__notes'\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0007",
+      "type": "heading",
+      "order": 7,
+      "source_hash": "27c4ae8fbbb3c1cfa0fe6d68a1808a3302999a02cb353598399a289dcd87cf2f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Protected traits"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "c80c4dc428d6df1e5f398531bf1acfe771b461dea0cd6360a1e739f4f533970e",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Many object oriented programming languages have a feature, usually a special keyword, for _protecting_ traits. This means that a trait should be hidden from the clients of the class, but kept accessible to its subclasses. Python in general abhors keywords, so no such feature is directly available in Python. Instead, there is a _convention_ of marking protected traits in a certain way."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "4e9e045d0e0380b3ecf14a4ecf38b141e77cbd988258bfceaeb6b771b3768b27",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Remember, a trait can be hidden by prefixing its name with two underscores:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0010",
+      "type": "code",
+      "order": 10,
+      "source_hash": "34c54311e60ff0f65dd296909560460c27b3286595562cb772227721c53d0fd8",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def __init__(self):\n    self.__notes = []"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def __init__(self):\n    self.__notes = []"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "34c54311e60ff0f65dd296909560460c27b3286595562cb772227721c53d0fd8",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "31d17ee3e01cce1ab979ec69d1b40e3f8c3b35d0d779d31df4a0723644799c9d",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The agreed convention to _protect_ a trait is to prefix the name with a _single_ underscore. Now, this is _just_ a convention. Nothing prevents a programmer from breaking the convention, but it is considered a bad programming practice."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0012",
+      "type": "code",
+      "order": 12,
+      "source_hash": "54c7e2e7f718dc911cd4f55f6d51c1618f05d93f203efacfc04408f8db1b176d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "def __init__(self):\n    self._notes = []"
+      },
+      "translation": {
+        "language": "code",
+        "content": "def __init__(self):\n    self._notes = []"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "54c7e2e7f718dc911cd4f55f6d51c1618f05d93f203efacfc04408f8db1b176d",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "7282c18a507b1fbe935e048a6c950fd44ce653ada65202e9fe803e26d30b4419",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Below we have the entire Notebook example, with protected `_notes` instead of private `__notes`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0014",
+      "type": "code",
+      "order": 14,
+      "source_hash": "9f44e149d051dd099a0d0cc401e7a217a36d758e819c4e9d4a1b1beef9cc3f1d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Notebook:\n    \"\"\" A Notebook stores notes in string format \"\"\"\n\n    def __init__(self):\n        # protected attribute\n        self._notes = []\n\n    def add_note(self, note):\n        self._notes.append(note)\n\n    def retrieve_note(self, index):\n        return self._notes[index]\n\n    def all_notes(self):\n        return \",\".join(self._notes)\n\nclass NotebookPro(Notebook):\n    \"\"\" A better Notebook with search functionality \"\"\"\n    def __init__(self):\n        # This is OK, the constructor is public despite the underscores\n        super().__init__()\n\n    # This works, the protected attribute is accessible to the derived class\n    def find_notes(self, search_term):\n        found = []\n        for note in self._notes:\n            if search_term in note:\n                found.append(note)\n\n        return found\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Notebook:\n    \"\"\" A Notebook stores notes in string format \"\"\"\n\n    def __init__(self):\n        # protected attribute\n        self._notes = []\n\n    def add_note(self, note):\n        self._notes.append(note)\n\n    def retrieve_note(self, index):\n        return self._notes[index]\n\n    def all_notes(self):\n        return \",\".join(self._notes)\n\nclass NotebookPro(Notebook):\n    \"\"\" A better Notebook with search functionality \"\"\"\n    def __init__(self):\n        # This is OK, the constructor is public despite the underscores\n        super().__init__()\n\n    # This works, the protected attribute is accessible to the derived class\n    def find_notes(self, search_term):\n        found = []\n        for note in self._notes:\n            if search_term in note:\n                found.append(note)\n\n        return found\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "9f44e149d051dd099a0d0cc401e7a217a36d758e819c4e9d4a1b1beef9cc3f1d",
+        "length_lines": 30
+      }
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0015",
+      "type": "paragraph",
+      "order": 15,
+      "source_hash": "14097c930a5a93802567f00987462d3e5ed767a98ae6746339de782a01441563",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Below we have a handy table for the visibility of attributes with different access modifiers:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "7d2685418087f9314b69e1c8968280385e069e8bde5c8465ad82d690bf9e01b5",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Access modifier\t| Example | Visible to client | Visible to derived class\n:--------:|:-------------:|:---:|:----:\nPublic    | `self.name`   | yes | yes\nProtected | `self._name`  | no  | yes\nPrivate   | `self.__name` | no  | no"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "adc3d8e44fd6f32c4f0638ee2e323fcfcf0647b8bebc5329693d5bf446e25ce3",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "Access modifiers work the same with all traits. For example, in the `Person` class below we have the protected method `capitalize_initials`. It can be used from the derived class `Footballer`:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0018",
+      "type": "code",
+      "order": 18,
+      "source_hash": "5947dfb1e4ce5cc4a010d48b59bb16dc949e6a8683cabbea09a1f43ca57a9803",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "class Person:\n    def __init__(self, name: str):\n        self._name = self._capitalize_initials(name)\n\n    def _capitalize_initials(self, name):\n        name_capitalized = []\n        for n in name.split(\" \"):\n            name_capitalized.append(n.capitalize())\n\n        return \" \".join(name_capitalized)\n\n    def __repr__(self):\n        return self.__name\n\nclass Footballer(Person):\n\n    def __init__(self, name: str, nickname: str, position: str):\n        super().__init__(name)\n        # the method is available as it is protected in the base class\n        self.__nickname = self._capitalize_initials(nickname)\n        self.__position = position\n\n    def __repr__(self):\n        r =  f\"Footballer - name: {self._name}, nickname: {self.__nickname}\"\n        r += f\", position: {self.__position}\"\n        return r\n\n# Test the classes\nif __name__ == \"__main__\":\n    jp = Footballer(\"peter pythons\", \"pyper\", \"forward\")\n    print(jp)\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "class Person:\n    def __init__(self, name: str):\n        self._name = self._capitalize_initials(name)\n\n    def _capitalize_initials(self, name):\n        name_capitalized = []\n        for n in name.split(\" \"):\n            name_capitalized.append(n.capitalize())\n\n        return \" \".join(name_capitalized)\n\n    def __repr__(self):\n        return self.__name\n\nclass Footballer(Person):\n\n    def __init__(self, name: str, nickname: str, position: str):\n        super().__init__(name)\n        # the method is available as it is protected in the base class\n        self.__nickname = self._capitalize_initials(nickname)\n        self.__position = position\n\n    def __repr__(self):\n        r =  f\"Footballer - name: {self._name}, nickname: {self.__nickname}\"\n        r += f\", position: {self.__position}\"\n        return r\n\n# Test the classes\nif __name__ == \"__main__\":\n    jp = Footballer(\"peter pythons\", \"pyper\", \"forward\")\n    print(jp)\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5947dfb1e4ce5cc4a010d48b59bb16dc949e6a8683cabbea09a1f43ca57a9803",
+        "length_lines": 31
+      }
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0019",
+      "type": "sample_output",
+      "order": 19,
+      "source_hash": "affddd501455af871ad15ffb325a62d7ff60a5b674bd8dc07dc7cf5e0896b600",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Footballer - name: Peter Pythons, nickname: Pyper, position: forward"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Footballer - name: Peter Pythons, nickname: Pyper, position: forward"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nFootballer - name: Peter Pythons, nickname: Pyper, position: forward\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0020",
+      "type": "exercise",
+      "order": 20,
+      "source_hash": "5d67a0db182e838b72ffbc4cc80d8a56331899c353b7295205474faab2f56a6f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains the class definition for a `SuperHero`.\n\nPlease define a class named `SuperGroup` which represents a group of superheroes. The class should contain the following members:\n\n* **Protected** attributes name (str), location (str) and members (list)\n* A constructor which takes the name and location of the group as arguments, in that order\n* Getter methods for the name and location attributes\n* A method named `add_member(hero: SuperHero)` which adds a new member to the group\n* A method named `print_group` which prints out information about the group and its members, following the format specified below\n\nAn example of the class in action:\n\n```python\nsuperperson = SuperHero(\"SuperPerson\", \"Superspeed, superstrength\")\ninvisible = SuperHero(\"Invisible Inca\", \"Invisibility\")\nrevengers = SuperGroup(\"Revengers\", \"Emerald City\")\n\nrevengers.add_member(superperson)\nrevengers.add_member(invisible)\nrevengers.print_group()\n```\n\n<sample-output>\n\nRevengers, Emerald City\nMembers:\nSuperPerson, superpowers: Superspeed, superstrength\nInvisible Inca, superpowers: Invisibility\n\n</sample-output>\n\nIf you need a refresher on getter and setter methods, please have a look at [this section in the previous part](/part-9/3-encapsulation#getters-and-setters) of the material."
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part10-05_supergroup",
+        "exercise_type": "programming-exercise",
+        "name": "Supergroup",
+        "tmc_name": "part10-05_supergroup",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part10-2-access-modifiers-0021",
+      "type": "exercise",
+      "order": 21,
+      "source_hash": "ea4b3c88e0bce734be7fcb2686443b49fe05aa3a80b5817659d600e590b5db2f",
+      "translation_status": "pending",
+      "original": {
+        "language": "en",
+        "content": "The exercise template contains the class definition for a `MagicPotion` which allows you to save a recipe for a magic potion. The class definition contains a constructor along with the methods\n\n* `add_ingredient(ingredient: str, amount: float)` and\n* `print_recipe()`\n\nPlease define a class named `SecretMagicPotion` which inherits the `MagicPotion` class and allows you to also protect the recipe with a password.\n\nThe new class should have a constructor which also takes the password string as an argument.\n\nThe class should also contain the following methods:\n\n* `add_ingredient(ingredient: str, amount: float, password: str)`\n* `print_recipe(password: str)`\n\nIf the password argument given to either of these methods is wrong, the methods should raise a `ValueError` exception.\n\nIf the password is correct, each method should call the relevant method in the parent class. Do not copy and paste anything from the MagicPotion class.\n\nAn example of how this would work:\n\n```python\ndiminuendo = SecretMagicPotion(\"Diminuendo maximus\", \"hocuspocus\")\ndiminuendo.add_ingredient(\"Toadstool\", 1.5, \"hocuspocus\")\ndiminuendo.add_ingredient(\"Magic sand\", 3.0, \"hocuspocus\")\ndiminuendo.add_ingredient(\"Frogspawn\", 4.0, \"hocuspocus\")\ndiminuendo.print_recipe(\"hocuspocus\")\n\ndiminuendo.print_recipe(\"pocushocus\") # WRONG password!\n```\n\n<sample-output>\n\nDiminuendo maximus:\nToadstool 1.5 grams\nMagic sand 3.0 grams\nFrogspawn 4.0 grams\nTraceback (most recent call last):\n  File \"secret_magic_potion.py\", line 98, in <module>\n    raise ValueError(\"Wrong password!\")\nValueError: Wrong password!\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "exercise_id": "ex-part10-06_secret_magic_potion",
+        "exercise_type": "programming-exercise",
+        "name": "Secret magic potion",
+        "tmc_name": "part10-06_secret_magic_potion",
+        "height": null
+      }
+    }
+  ]
+}

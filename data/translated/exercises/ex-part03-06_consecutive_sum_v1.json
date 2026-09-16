@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-06_consecutive_sum_v1",
+  "lesson_id": "part03-1-loops-with-conditions",
+  "part": 3,
+  "tmc_name": "part03-06_consecutive_sum_v1",
+  "title_original": "The sum of consecutive numbers, version 1",
+  "title_vi": "Tổng các số liên tiếp, phiên bản 1",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user to type in a limit. The program then calculates the sum of consecutive numbers (1 + 2 + 3 + ...) until the sum is at least equal to the limit set by the user. The program should function as follows:\n\n<sample-output>\n\nLimit: **2**\n3\n\n</sample-output>\n\n<sample-output>\n\nLimit: **10**\n10\n\n</sample-output>\n\n<sample-output>\n\nLimit: **18**\n21\n\n</sample-output>\n\nIf you have trouble understanding how the desired output is calculated, the sample outputs in the next exercise may help. You may assume the number typed in by the user is always equal to 2 or higher.",
+  "description_vi": "Hãy viết chương trình yêu cầu người dùng nhập giới hạn. Sau đó, chương trình sẽ tính tổng các số liên tiếp (1 + 2 + 3 + ...) cho đến khi tổng ít nhất bằng giới hạn do người dùng đặt ra. Chương trình sẽ hoạt động như sau:\n\n<sample-output>\n\nGiới hạn: **2**\n3\n\n</sample-output>\n\n<sample-output>\n\nGiới hạn: **10**\n10\n\n</sample-output>\n\n<sample-output>\n\nGiới hạn: **18**\n21\n\n</sample-output>\n\nNếu bạn gặp khó khăn trong việc hiểu cách tính kết quả đầu ra mong muốn, kết quả đầu ra mẫu trong bài tập tiếp theo có thể hữu ích. Bạn có thể giả sử số người dùng nhập vào luôn bằng 2 hoặc cao hơn.",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "814ffe2ea262842255ab81b9dd61fee8385256f83434a3dc2988b30df6bc741d",
+  "order": 66
+}

@@ -1,0 +1,1283 @@
+{
+  "id": "part01-4-arithmetic-operations",
+  "part": 1,
+  "part_slug": "part-1",
+  "slug": "4-arithmetic-operations",
+  "is_part_index": false,
+  "title_original": "Arithmetic operations",
+  "title_vi": "phép tính số học",
+  "path": "/part-1/4-arithmetic-operations",
+  "source_path": "data/part-1/4-arithmetic-operations.md",
+  "source_hash": "62871d2e9df6030ddca719bd9ae403ec1885a013555938bdddd320f03d50640f",
+  "order": 1,
+  "blocks_count": 70,
+  "blocks": [
+    {
+      "id": "blk-part01-4-arithmetic-operations-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "ab820fc214e1ff9a4bce5182637cda6719eebb7a4bb738b77b63a6baa2d242c0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will be able to use variables in various arithmetic operations\n- You will know how to deal with numbers in user input\n- You will know how to cast values into other fundamental data types"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ có thể sử dụng các biến trong các phép tính số học khác nhau\n- Bạn sẽ biết cách xử lý các con số khi người dùng nhập vào\n- Bạn sẽ biết cách truyền giá trị vào các kiểu dữ liệu cơ bản khác"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "1e58d38798c1572a46615c7c1eb91e70a0e8bc2a0fb4d1874e66295d88509a13",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the previous sections you've seen examples with basic arithmetics. In the following table you can see the most common arithmetic operators in Python, with examples:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong các phần trước bạn đã xem các ví dụ về số học cơ bản. Trong bảng sau, bạn có thể thấy các toán tử số học phổ biến nhất trong Python, kèm theo các ví dụ:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0003",
+      "type": "table",
+      "order": 3,
+      "source_hash": "743ce81ef81d779fc40ad95d8da3c7a3e8a524cdc890b1eb54a6d37fefa9644e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "| Operator      | Purpose       | Example      | Result |\n|:-------------:|---------------|--------------|-------|\n| `+`           | Addition      | `2 + 4`      |`6`    |\n| `-`           | Subtraction   | `10 - 2.5`   |`7.5`  |\n| `*`           | Multiplication | `-2 * 123`  |`-246` |\n| `/`           | Division (floating point result) | `9 / 2`     | `4.5` |\n| `//`          | Division (integer result)              | `9 // 2`    | `4`   |\n| `%`           | Modulo        | `9 % 2`      |`1`    |\n| `**`          | Exponentiation | `2 ** 3`    |`8`    |"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "| Nhà điều hành | Mục đích | Ví dụ | Kết quả |\n|:-------------:|---------------|--------------|-------|\n| `+` | Ngoài ra | `2 + 4` |`6` |\n| `-` | Phép trừ | `10 - 2.5` |`7.5` |\n| `*` | Phép nhân | `-2 * 123` |`-246` |\n| `/` | Phép chia (kết quả dấu phẩy động) | `9 / 2` | `4.5` |\n| `//` | Phép chia (kết quả số nguyên) | `9 // 2` | `4` |\n| `%` | Modulo | `9 % 2` |`1` |\n| `**` | lũy thừa | `2 ** 3` |`8` |"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "eaf26366bffbfe80fe1b27e163b37cde9463af19fc392b8d23bbca8ca89b78cf",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The order of operations is familiar from mathematics: first calculate the exponents, then multiplication and division, and finally addition and subtraction. The order can be changed with parentheses."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thứ tự của các phép tính quen thuộc với toán học: đầu tiên tính số mũ, sau đó là phép nhân và chia, cuối cùng là phép cộng và phép trừ. Thứ tự có thể được thay đổi bằng dấu ngoặc đơn."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "df21359cd23a79e912b70048ecc474d5262f7725e22d1f61b65a7944447f3f01",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "For example this bit of code"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ đoạn mã này"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0006",
+      "type": "code",
+      "order": 6,
+      "source_hash": "4273fb66dbd021c9df4b0f8605f622937edc5914db9394ab59ef6f02f351810c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(2 + 3 * 3)\nprint((2 + 3) * 3)"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(2 + 3 * 3)\nprint((2 + 3) * 3)"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4273fb66dbd021c9df4b0f8605f622937edc5914db9394ab59ef6f02f351810c",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0007",
+      "type": "paragraph",
+      "order": 7,
+      "source_hash": "4ee93ecb65c746a2aa5f22b96c16477c37174c82a5526c2ea246ef4ce6a44645",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "prints out"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "in ra"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0008",
+      "type": "sample_output",
+      "order": 8,
+      "source_hash": "aeb0fa801da47725fd56dcd4d811babcf8b656450e5f3ac61439f1a7bf6e4310",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "11\n15"
+      },
+      "translation": {
+        "language": "text",
+        "content": "11\n15"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n11\n15\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0009",
+      "type": "heading",
+      "order": 9,
+      "source_hash": "717404d4a06004976737681452b3f0cb7dad2b1bb89cfd4456ddb02b818a289d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Operands, operators and data types"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Toán hạng, toán tử và kiểu dữ liệu"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "0c9e0fc897c2f941bfb757ae1e7c6f56d6eb462c00ad39def80ebc993b5e9a7c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A calculation usually consists of *operands* and *operators*:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một phép tính thường bao gồm *toán hạng* và *toán tử*:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0011",
+      "type": "image",
+      "order": 11,
+      "source_hash": "8fdcb965db2f856719adadb90abb261b79131c692555d12125a53ac5baefa938",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "1_4_1.png",
+        "alt": "",
+        "attributes": {
+          "src": "1_4_1.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "a6bcdc686d1933b1d9e45f7ad7ee8fdd1fc0db052affb24002951b307138735d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The data type of an operand usually determines the data type of the result: if two integers are added together, the result will also be an integer. If a floating point number is subtracted from another floating point number, the result is a floating point number. In fact, if a single one of the operands in an expression is a floating point number, the result will also be a floating point number, regardless of the other operands."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Kiểu dữ liệu của toán hạng thường xác định kiểu dữ liệu của kết quả: nếu hai số nguyên được cộng với nhau thì kết quả cũng sẽ là số nguyên. Nếu một số dấu phẩy động bị trừ khỏi một số dấu phẩy động khác thì kết quả là số dấu phẩy động. Trong thực tế, nếu một trong các toán hạng trong một biểu thức là số dấu phẩy động thì kết quả cũng sẽ là số dấu phẩy động, bất kể các toán hạng khác."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0013",
+      "type": "paragraph",
+      "order": 13,
+      "source_hash": "a922042950804bbe237161412414556d1cb87e21039a05e973557f0e9da227f0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Division `/` is an exception to this rule. Its result is a floating point number, even if the operands are integers. For example `1 / 5` will result in the floating point number `0.2`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phân khu `/` là một ngoại lệ đối với quy tắc này. Kết quả của nó là một số dấu phẩy động, ngay cả khi toán hạng là số nguyên. Ví dụ `1 / 5` sẽ cho kết quả là số dấu phẩy động `0.2`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "872887e563e75957ffc20b021332504f2ddd0a8f3964cb93070863bfaf13cdad",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Example:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0015",
+      "type": "code",
+      "order": 15,
+      "source_hash": "8288e2b10fb08c02227c23de7eaffe271337488c22ea0bcba82b310136a4873c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "height = 172.5\nweight = 68.55\n\n# the Body Mass Index, or BMI, is calculated by dividing body mass with the square of height\n# height is converted into metres in the formula\nbmi = weight / (height / 100) ** 2\n\nprint(f\"The BMI is {bmi}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "height = 172.5\nweight = 68.55\n\n# the Body Mass Index, or BMI, is calculated by dividing body mass with the square of height\n# height is converted into metres in the formula\nbmi = weight / (height / 100) ** 2\n\nprint(f\"The BMI is {bmi}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8288e2b10fb08c02227c23de7eaffe271337488c22ea0bcba82b310136a4873c",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "0fb89e3330138fe3a59e4fbf708adc71c24a20e8a3f21d82e062bd3e546cefef",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This program prints out the following:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình này in ra như sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0017",
+      "type": "sample_output",
+      "order": 17,
+      "source_hash": "9c0502ae07b08c3c4016b8c3c21ba7f2d6dba3daa373058bc1bbb2e8d3737680",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "The BMI is 23.037177063642087"
+      },
+      "translation": {
+        "language": "text",
+        "content": "The BMI is 23.037177063642087"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nThe BMI is 23.037177063642087\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0018",
+      "type": "paragraph",
+      "order": 18,
+      "source_hash": "a147ec69d1e014093129de2740b846f2a58668b8f0122884ba7f680b034509fa",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Notice Python also has an integer division operator `//`. If the operands are integers, it will produce an integer. The result is rounded down to the nearest integer. For example this program"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lưu ý Python cũng có toán tử chia số nguyên `//`. Nếu toán hạng là số nguyên thì nó sẽ tạo ra một số nguyên. Kết quả được làm tròn xuống số nguyên gần nhất. Ví dụ chương trình này"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0019",
+      "type": "code",
+      "order": 19,
+      "source_hash": "d91137d81ed8dd57ff7246f2f32f99b8280c9f1575cc3055a9f6a0374e0a0c8e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "x = 3\ny = 2\n\nprint(f\"/ operator {x/y}\")\nprint(f\"// operator {x//y}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "x = 3\ny = 2\n\nprint(f\"/ operator {x/y}\")\nprint(f\"// operator {x//y}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d91137d81ed8dd57ff7246f2f32f99b8280c9f1575cc3055a9f6a0374e0a0c8e",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "4ee93ecb65c746a2aa5f22b96c16477c37174c82a5526c2ea246ef4ce6a44645",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "prints out"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "in ra"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0021",
+      "type": "sample_output",
+      "order": 21,
+      "source_hash": "9b858ea9d1b68b0077032dc61fa6923a3bb7698a60e75c6158f9bfa4843d3900",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "/ operator 1.5\n// operator 1"
+      },
+      "translation": {
+        "language": "text",
+        "content": "/ operator 1.5\n// operator 1"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\n/ operator 1.5\n// operator 1\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0022",
+      "type": "heading",
+      "order": 22,
+      "source_hash": "75d07af5fbbfbdda7355deb0ab4f7b2016aaefe39e3c836aabf0a68b603d5c00",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Numbers as input"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Số làm đầu vào"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0023",
+      "type": "paragraph",
+      "order": 23,
+      "source_hash": "5f64500003086c914c0bc3886ea1cb2983ca85a9203ace4423e9072992425d32",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We have already used the `input` command to read in strings from the user. The same function can be used to read in numbers, but the string produced by the function must then be converted to a numeric data type in the program code. In the previous section we cast integers as strings with the `str` function. The same basic principle applies here, but the name of the casting function will be different."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng tôi đã sử dụng lệnh `input` để đọc chuỗi từ người dùng. Hàm tương tự có thể được sử dụng để đọc bằng số, nhưng chuỗi do hàm tạo ra sau đó phải được chuyển đổi thành kiểu dữ liệu số trong mã chương trình. Trong phần trước, chúng ta truyền số nguyên dưới dạng chuỗi bằng hàm `str`. Nguyên tắc cơ bản tương tự được áp dụng ở đây, nhưng tên của hàm truyền sẽ khác."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "a91783f27710ff6123bf7975962256497b961cc6e980a154db909bfb07433451",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A string can be converted into an integer with the function `int`. The following program asks the user for their year of birth and stores it in the variable `input_str`. The program then creates another variable `year`, which contains the year converted into an integer. After this the calculation `2021-year` is possible, using the user-supplied value."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một chuỗi có thể được chuyển đổi thành số nguyên bằng hàm `int`. Chương trình sau hỏi người dùng năm sinh của họ và lưu nó vào biến `input_str`. Sau đó, chương trình tạo một biến khác `year`, chứa năm được chuyển đổi thành số nguyên. Sau đó, có thể tính toán `2021-year` bằng cách sử dụng giá trị do người dùng cung cấp."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0025",
+      "type": "code",
+      "order": 25,
+      "source_hash": "aa223cb2542c144aea511e499f9eaa19cfa9fd5b1200dd23025b7786678408a4",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "input_str = input(\"Which year were you born? \")\nyear = int(input_str)\nprint(f\"Your age at the end of the year 2021: {2021 - year}\" )"
+      },
+      "translation": {
+        "language": "code",
+        "content": "input_str = input(\"Which year were you born? \")\nyear = int(input_str)\nprint(f\"Your age at the end of the year 2021: {2021 - year}\" )"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "aa223cb2542c144aea511e499f9eaa19cfa9fd5b1200dd23025b7786678408a4",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0026",
+      "type": "sample_output",
+      "order": 26,
+      "source_hash": "132455b8dfc5745788e1a30b1e19ef92940ce8ef7f546c2c75436dbcf87e101d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Which year were you born? **1995**\nYour age at the end of the year 2021: 26"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Which year were you born? **1995**\nYour age at the end of the year 2021: 26"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nWhich year were you born? **1995**\nYour age at the end of the year 2021: 26\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "8e6d04b8be5b852462a3e3b8ddefb039a9b475a10a0be869fc7bfb40e71ded39",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Usually you do not need to create two separate variables (like `input_str` and `year` above) to read a number value from the user. Instead, reading the input with the `input` function and converting it with the `int` function can be achieved in one go:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thông thường, bạn không cần tạo hai biến riêng biệt (như `input_str` và `year` ở trên) để đọc giá trị số từ người dùng. Thay vào đó, bạn có thể đọc đầu vào bằng hàm `input` và chuyển đổi nó bằng hàm `int` chỉ trong một lần:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0028",
+      "type": "code",
+      "order": 28,
+      "source_hash": "c18705eb18a65cb5e1a375314c54ec9890d6b70a1d44c80c699ed8ea521e4ae2",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "year = int(input(\"Which year were you born? \"))\nprint(f\"Your age at the end of the year 2021: {2021 - year}\" )"
+      },
+      "translation": {
+        "language": "code",
+        "content": "year = int(input(\"Which year were you born? \"))\nprint(f\"Your age at the end of the year 2021: {2021 - year}\" )"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c18705eb18a65cb5e1a375314c54ec9890d6b70a1d44c80c699ed8ea521e4ae2",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "16de52d24b72f668e38601134a64d13f743cfdb9f18de8e63cf19d740d30eda4",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Similarly, a string can be converted into a floating point number with the function `float`. This programs asks the user for their height and weight, and uses these to calculate their BMI:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tương tự, một chuỗi có thể được chuyển đổi thành số dấu phẩy động bằng hàm `float`. Chương trình này hỏi người dùng về chiều cao và cân nặng của họ và sử dụng những thông tin này để tính chỉ số BMI của họ:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0030",
+      "type": "code",
+      "order": 30,
+      "source_hash": "43f669d7d9acfb4f053d36cbb3ff8f58d217581be711ada36e232aca7b38ebf3",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "height = float(input(\"What is your height? \"))\nweight = float(input(\"What is your weight? \"))\n\nheight = height / 100\nbmi = weight / height ** 2\n\nprint(f\"The BMI is {bmi}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "height = float(input(\"What is your height? \"))\nweight = float(input(\"What is your weight? \"))\n\nheight = height / 100\nbmi = weight / height ** 2\n\nprint(f\"The BMI is {bmi}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "43f669d7d9acfb4f053d36cbb3ff8f58d217581be711ada36e232aca7b38ebf3",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "9f4ae9036d498e7c545360f2723b996050b41bf6b857864add79b0300d8a28f8",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "An example printout from the program:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một bản in ví dụ từ chương trình:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0032",
+      "type": "sample_output",
+      "order": 32,
+      "source_hash": "f7a1b1fa875e7a798a5e86021142181260eab5879b46256591112697e9f43cee",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "What is your height? **163**\nWhat is your weight? **74.45**\nThe BMI is 28.02137829801649"
+      },
+      "translation": {
+        "language": "text",
+        "content": "What is your height? **163**\nWhat is your weight? **74.45**\nThe BMI is 28.02137829801649"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nWhat is your height? **163**\nWhat is your weight? **74.45**\nThe BMI is 28.02137829801649\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0033",
+      "type": "exercise",
+      "order": 33,
+      "source_hash": "17e006a754347c62f9bc80898810156fd955e4c4797ae0f7761451ccd1bff205",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for a number. The program then prints out the number multiplied by five.\n\nThe program should function as follows:\n\n<sample-output>\n\nPlease type in a number: **3**\n3 times 5 is 15\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một chương trình yêu cầu người dùng nhập một số. Chương trình sau đó in ra số nhân với năm.\n\nChương trình sẽ hoạt động như sau:\n\n<sample-output>\n\nVui lòng nhập một số: **3**\n3 nhân 5 là 15\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-13_times_five",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Times five",
+        "tmc_name": "part01-13_times_five",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0034",
+      "type": "exercise",
+      "order": 34,
+      "source_hash": "e52a6392ce8f49341614202670599d25522be8bed3aff9a5b177275a6bb0ed95",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for their name and year of birth. The program then prints out a message as follows:\n\n<sample-output>\n\nWhat is your name? **Frances Fictitious**\nWhich year were you born? **1990**\nHi Frances Fictitious, you will be 31 years old at the end of the year 2021\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình hỏi tên và năm sinh của người dùng. Sau đó chương trình sẽ in ra thông báo như sau:\n\n<sample-output>\n\nTên bạn là gì? **Pháp hư cấu**\nBạn sinh năm nào? **1990**\nXin chào Frances hư cấu, bạn sẽ 31 tuổi vào cuối năm 2021\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-14_name_and_age",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Name and age",
+        "tmc_name": "part01-14_name_and_age",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0035",
+      "type": "heading",
+      "order": 35,
+      "source_hash": "b81c212fe0fcd5d9b54b2eb729553376bbc0af86cfec42fb91646f1a3fae431d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Using variables"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sử dụng biến"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "763d229b0b18b2a22c32f9a65c7a2e023dff47f5a8fc5c7d274ccf2cf94ebdea",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at a program which calculates the sum of three numbers given by the user:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy xem một chương trình tính tổng của ba số do người dùng đưa ra:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0037",
+      "type": "code",
+      "order": 37,
+      "source_hash": "3f828f5909a5e3beea9b6e21672aea041682851cce8c07ccc99164b50947a186",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number1 = int(input(\"First number: \"))\nnumber2 = int(input(\"Second number: \"))\nnumber3 = int(input(\"Third number: \"))\n\nsum = number1 + number2 + number3\nprint(f\"The sum of the numbers: {sum}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number1 = int(input(\"First number: \"))\nnumber2 = int(input(\"Second number: \"))\nnumber3 = int(input(\"Third number: \"))\n\nsum = number1 + number2 + number3\nprint(f\"The sum of the numbers: {sum}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "3f828f5909a5e3beea9b6e21672aea041682851cce8c07ccc99164b50947a186",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0038",
+      "type": "paragraph",
+      "order": 38,
+      "source_hash": "a1319648ef6e58a42ecb5a8f4a1211c209f127d0b5b7f0d178d78036ff648e6d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "An example execution of the program:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một ví dụ thực hiện chương trình:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0039",
+      "type": "sample_output",
+      "order": 39,
+      "source_hash": "ce3a4eca8e400ad8d1279a5fc374d668e5163492b1244acf5c8e9459ffe1fda5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "First number: **5**\nSecond number: **21**\nThird number: **7**\nThe sum of the numbers: 33"
+      },
+      "translation": {
+        "language": "text",
+        "content": "First number: **5**\nSecond number: **21**\nThird number: **7**\nThe sum of the numbers: 33"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nFirst number: **5**\nSecond number: **21**\nThird number: **7**\nThe sum of the numbers: 33\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "b9893398d898381a1065cdca550f4f91dc5ccdcb5d3d68ccb83397a16c56107d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The program uses four different variables, but two would easily suffice in this case:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình sử dụng bốn biến khác nhau, nhưng chỉ hai biến là đủ trong trường hợp này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0041",
+      "type": "code",
+      "order": 41,
+      "source_hash": "34aa2db2c76c45a1cad920da1f96f8edd8a952dc617be7a8a876349c1f079b4a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "sum = 0\n\nnumber = int(input(\"First number: \"))\nsum = sum + number\n\nnumber = int(input(\"Second number: \"))\nsum = sum + number\n\nnumber = int(input(\"Third number: \"))\nsum = sum + number\n\nprint(f\"The sum of the numbers: {sum}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "sum = 0\n\nnumber = int(input(\"First number: \"))\nsum = sum + number\n\nnumber = int(input(\"Second number: \"))\nsum = sum + number\n\nnumber = int(input(\"Third number: \"))\nsum = sum + number\n\nprint(f\"The sum of the numbers: {sum}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "34aa2db2c76c45a1cad920da1f96f8edd8a952dc617be7a8a876349c1f079b4a",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "bb38d40f41cd07d935e381b185176ab2481ca313c7a2f0bca2cbaea7ca479aa3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Now all inputs from the user are read into the one and the same variable `number`. The value of the variable `sum` is _increased_ by the value of the variable `number` each time the user inputs a new number."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bây giờ tất cả đầu vào từ người dùng đều được đọc vào cùng một biến `number`. Giá trị của biến `sum` được _tăng_ bởi giá trị của biến `number` mỗi khi người dùng nhập một số mới."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0043",
+      "type": "paragraph",
+      "order": 43,
+      "source_hash": "2fe05c84ada7a8d3fb76fc62d7109cb62a789fbf49c402aadf4f49fa399a98c5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's take a closer look at this command:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy xem xét kỹ hơn lệnh này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0044",
+      "type": "code",
+      "order": 44,
+      "source_hash": "a3a0e469039e70c5518039c6a6c60a34298113c49e634a197c28ee5deb2b968c",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "sum = sum + number"
+      },
+      "translation": {
+        "language": "code",
+        "content": "sum = sum + number"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a3a0e469039e70c5518039c6a6c60a34298113c49e634a197c28ee5deb2b968c",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0045",
+      "type": "paragraph",
+      "order": 45,
+      "source_hash": "8fad219837b2febf275e1738478125e57d65a02818c64596288befaae01afa6d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Here, the value of the variable `sum` and the value of the variable `number` are added together, and the result is stored back in the variable `sum`. For example, if before the command the value of `sum` is 3 and the value of `number` is 2, after the command is executed, the value of `sum` is 5."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ở đây, giá trị của biến `sum` và giá trị của biến `number` được cộng lại với nhau và kết quả được lưu lại trong biến `sum`. Ví dụ: nếu trước lệnh giá trị của `sum` là 3 và giá trị của `number` là 2 thì sau khi lệnh được thực thi, giá trị của `sum` là 5."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0046",
+      "type": "paragraph",
+      "order": 46,
+      "source_hash": "ad4c5f5f40217eb3d650561f6080754ec1bfdc4d6710dbf033e9ade6ee0def39",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Increasing the value of a variable is a very common operation. As such, there is a commonly used shorthand notation which achieves the same result as the explicit summing up above:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tăng giá trị của một biến là một thao tác rất phổ biến. Như vậy, có một ký hiệu tốc ký thường được sử dụng để đạt được kết quả tương tự như phép tính tổng rõ ràng ở trên:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0047",
+      "type": "code",
+      "order": 47,
+      "source_hash": "9bf7a02f781237e17ead791046bdff0afbe85f46d06d2a862c68dc27973f10fe",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "sum += number"
+      },
+      "translation": {
+        "language": "code",
+        "content": "sum += number"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "9bf7a02f781237e17ead791046bdff0afbe85f46d06d2a862c68dc27973f10fe",
+        "length_lines": 1
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0048",
+      "type": "paragraph",
+      "order": 48,
+      "source_hash": "6cbfdc7108916df0c432c395b419f27832415f3b828b0a28c4cba81f22d49181",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This allows us to write the above program a little more concisely:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điều này cho phép chúng ta viết chương trình trên chính xác hơn một chút:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0049",
+      "type": "code",
+      "order": 49,
+      "source_hash": "8c925c12275697af3d2eac4fb161c724e812d70096151407758c406e7f3cdaaa",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "sum = 0\n\nnumber = int(input(\"First number: \"))\nsum += number\n\nnumber = int(input(\"Second number: \"))\nsum += number\n\nnumber = int(input(\"Third number: \"))\nsum += number\n\nprint(f\"The sum of the numbers: {sum}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "sum = 0\n\nnumber = int(input(\"First number: \"))\nsum += number\n\nnumber = int(input(\"Second number: \"))\nsum += number\n\nnumber = int(input(\"Third number: \"))\nsum += number\n\nprint(f\"The sum of the numbers: {sum}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8c925c12275697af3d2eac4fb161c724e812d70096151407758c406e7f3cdaaa",
+        "length_lines": 12
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0050",
+      "type": "paragraph",
+      "order": 50,
+      "source_hash": "f3cb5a4d648bb57b3751b909ce5ecfd7fe26ea8c7e48b787264bb90e55ccaf0a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In fact, we don't necessarily need the variable `number` at all. The inputs from the user can also be processed like this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trên thực tế, chúng ta không nhất thiết cần biến `number`. Dữ liệu đầu vào từ người dùng cũng có thể được xử lý như thế này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0051",
+      "type": "code",
+      "order": 51,
+      "source_hash": "8dbd902be7772fe21a6a88855f50027f5100ba8969f0bcf0729f5b259686c8df",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "sum = 0\n\nsum += int(input(\"First number: \"))\nsum += int(input(\"Second number: \"))\nsum += int(input(\"Third number: \"))\n\nprint(f\"The sum of the numbers: {sum}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "sum = 0\n\nsum += int(input(\"First number: \"))\nsum += int(input(\"Second number: \"))\nsum += int(input(\"Third number: \"))\n\nprint(f\"The sum of the numbers: {sum}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8dbd902be7772fe21a6a88855f50027f5100ba8969f0bcf0729f5b259686c8df",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0052",
+      "type": "paragraph",
+      "order": 52,
+      "source_hash": "f2a2f598a4bac5064039add42238743016f08f0342a3c9f254a32e5d3a3c00ea",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Of course, it will depend on the context how many variables are needed. If it is required to remember each value the user inputs, it will not be possible to \"reuse\" the same variable to read different values from the user. Consider the following:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tất nhiên, nó sẽ phụ thuộc vào bối cảnh cần bao nhiêu biến. Nếu bắt buộc phải ghi nhớ từng giá trị người dùng nhập vào thì sẽ không thể “tái sử dụng” cùng một biến để đọc các giá trị khác nhau từ người dùng. Hãy xem xét những điều sau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0053",
+      "type": "code",
+      "order": 53,
+      "source_hash": "f914f9801bc3b7afaf502e9a05c55115597fc48c62e2170d0468f7aef026f1a6",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number1 = int(input(\"First number: \"))\nnumber2 = int(input(\"Second number: \"))\n\nprint(f\"{number1} + {number2} = {number1+number2}\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number1 = int(input(\"First number: \"))\nnumber2 = int(input(\"Second number: \"))\n\nprint(f\"{number1} + {number2} = {number1+number2}\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f914f9801bc3b7afaf502e9a05c55115597fc48c62e2170d0468f7aef026f1a6",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0054",
+      "type": "sample_output",
+      "order": 54,
+      "source_hash": "df9f77fc91f40402e5d62a65bc1d077b2629a553bccb6236d41846b376460b3e",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "First number: **2**\nSecond number: **3**\n2 + 3 = 5"
+      },
+      "translation": {
+        "language": "text",
+        "content": "First number: **2**\nSecond number: **3**\n2 + 3 = 5"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nFirst number: **2**\nSecond number: **3**\n2 + 3 = 5\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0055",
+      "type": "paragraph",
+      "order": 55,
+      "source_hash": "94d358f0331eb5829d0b199e95c8e40875e36a0fefad1790383d85c3e22a10ea",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "On the other hand, the above program does not have a named variable for storing the sum of the two values."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mặt khác, chương trình trên không có biến được đặt tên để lưu trữ tổng của hai giá trị."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0056",
+      "type": "paragraph",
+      "order": 56,
+      "source_hash": "1741cc79960e494ce74b525bc926c6a53807874a25da37e285f4f7d15d12f62c",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "\"Reusing\" a variable only makes sense when there is a need to temporarily store things of a similar type and purpose, for example when summing numbers."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "\"Tái sử dụng\" một biến chỉ có ý nghĩa khi có nhu cầu lưu trữ tạm thời những thứ có cùng loại và mục đích tương tự, chẳng hạn như khi tính tổng các số."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0057",
+      "type": "paragraph",
+      "order": 57,
+      "source_hash": "e2cc6a974f782b24dff9f996f36bdb20a0748f9f450eea2380dd859c82c4a736",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the following example the variable `data` is used to first store the name of the user, and then their age. This is not at all sensible."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong ví dụ sau, biến `data` được sử dụng để lưu trữ tên người dùng trước tiên và sau đó là tuổi của họ. Điều này không hợp lý chút nào."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0058",
+      "type": "code",
+      "order": 58,
+      "source_hash": "30fc9310ce6630a73b10d0b32e75f72c27a578c0cfc90f57b562bebb98be683b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "data = input(\"What is your name? \")\nprint(\"Hi \" + data + \"!\")\n\ndata = int(input(\"What is your age? \"))\n# program continues..."
+      },
+      "translation": {
+        "language": "code",
+        "content": "data = input(\"What is your name? \")\nprint(\"Hi \" + data + \"!\")\n\ndata = int(input(\"What is your age? \"))\n# program continues..."
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "30fc9310ce6630a73b10d0b32e75f72c27a578c0cfc90f57b562bebb98be683b",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0059",
+      "type": "paragraph",
+      "order": 59,
+      "source_hash": "f3048b127183334c1e5ff1e36181e9cab587edcf718dc4465c1fe2da51abe8db",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A better idea is to use separate variables, with _descriptive_ names:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ý tưởng tốt hơn là sử dụng các biến riêng biệt, với tên _descriptive_:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0060",
+      "type": "code",
+      "order": 60,
+      "source_hash": "4254a7e2d7a35f7d05cfca50ce5f27080c039fca5565d3baadfa6894761c7425",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "name = input(\"What is your name? \")\nprint(\"Hi \" + name + \"!\")\n\nage = int(input(\"What is your age? \"))\n# program continues..."
+      },
+      "translation": {
+        "language": "code",
+        "content": "name = input(\"What is your name? \")\nprint(\"Hi \" + name + \"!\")\n\nage = int(input(\"What is your age? \"))\n# program continues..."
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "4254a7e2d7a35f7d05cfca50ce5f27080c039fca5565d3baadfa6894761c7425",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0061",
+      "type": "exercise",
+      "order": 61,
+      "source_hash": "772d0366009efe013910cd617bafd824ffac07e2d38df96c96d5871221105be9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for a number of days. The program then prints out the number of seconds in the amount of days given.\n\nThe program should function as follows:\n\n<sample-output>\n\nHow many days? **1**\nSeconds in that many days: 86400\n\n</sample-output>\n\nAnother example:\n\n<sample-output>\n\nHow many days? **7**\nSeconds in that many days: 604800\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một chương trình hỏi người dùng về số ngày. Sau đó chương trình sẽ in ra số giây trong số ngày đã cho.\n\nChương trình sẽ hoạt động như sau:\n\n<sample-output>\n\nBao nhiêu ngày? **1**\nSố giây trong số ngày đó: 86400\n\n</sample-output>\n\nMột ví dụ khác:\n\n<sample-output>\n\nBao nhiêu ngày? **7**\nSố giây trong số ngày đó: 604800\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-15_seconds_in_a_day",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Seconds in a day",
+        "tmc_name": "part01-15_seconds_in_a_day",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0062",
+      "type": "exercise",
+      "order": 62,
+      "source_hash": "a14729faadea0a1db587da89b6efd04242a8bee8290bc5f4ffa95e464429c730",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This program asks the user for three numbers. The program then prints out their product, that is, the numbers multiplied by each other. There is, however, something wrong with the program - it doesn't work quite right, as you can see if you run it. Please fix it.\n\nAn example of the expected execution of the program:\n\n<sample-output>\n\nPlease type in the first number: **2**\nPlease type in the second number: **3**\nPlease type in the third number: **5**\nThe product is 30\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình này yêu cầu người dùng nhập ba số. Sau đó, chương trình sẽ in ra sản phẩm của họ, tức là các số nhân với nhau. Tuy nhiên, có điều gì đó không ổn với chương trình - nó hoạt động không hoàn toàn bình thường, như bạn có thể thấy nếu bạn chạy nó. Hãy sửa nó.\n\nMột ví dụ về việc thực hiện chương trình dự kiến:\n\n<sample-output>\n\nVui lòng nhập số đầu tiên: **2**\nVui lòng nhập số thứ hai: **3**\nVui lòng nhập số thứ ba: **5**\nSản phẩm là 30\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-16_product",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Fix the code: Product",
+        "tmc_name": "part01-16_product",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0063",
+      "type": "exercise",
+      "order": 63,
+      "source_hash": "534de52623a19a2d45921fa29ae1ae959d8fa52b7487013c9f8d3cb4c113243d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for two numbers. The program will then print out the sum and the product of the two numbers.\n\nThe program should function as follows:\n\n<sample-output>\n\nNumber 1: **3**\nNumber 2: **7**\nThe sum of the numbers: 10\nThe product of the numbers: 21\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình yêu cầu người dùng nhập hai số. Sau đó chương trình sẽ in ra tổng và tích của hai số đó.\n\nChương trình sẽ hoạt động như sau:\n\n<sample-output>\n\nSố 1: **3**\nSố 2: **7**\nTổng các số: 10\nTích của các số: 21\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-17_sum_and_product",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Sum and product",
+        "tmc_name": "part01-17_sum_and_product",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0064",
+      "type": "exercise",
+      "order": 64,
+      "source_hash": "c43caf77ce93e0d0b1eca5b2c8a4f1130c4fbcc53375dddef74c71e001f7e8ee",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for four numbers. The program then prints out the sum and the mean of the numbers.\n\nThe program should function as follows:\n\n<sample-output>\n\nNumber 1: **2**\nNumber 2: **1**\nNumber 3: **6**\nNumber 4: **7**\nThe sum of the numbers is 16 and the mean is 4.0\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một chương trình yêu cầu người dùng nhập bốn số. Sau đó chương trình sẽ in ra tổng và giá trị trung bình của các số.\n\nChương trình sẽ hoạt động như sau:\n\n<sample-output>\n\nSố 1: **2**\nSố 2: **1**\nSố 3: **6**\nSố 4: **7**\nTổng của các số là 16 và giá trị trung bình là 4,0\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-18_sum_and_mean",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Sum and mean",
+        "tmc_name": "part01-18_sum_and_mean",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0065",
+      "type": "exercise",
+      "order": 65,
+      "source_hash": "0df67f8697f67ef2d4d2d56ea0cfc52ad00931934227a9c2a976f310697f6ece",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which estimates a user's typical food expenditure.\n\nThe program asks the user how many times a week they eat at the student cafeteria. Then it asks for the price of a typical student lunch, and for money spent on groceries during the week.\n\nBased on this information the program calculates the user's typical food expenditure both weekly and daily.\n\nThe program should function as follows:\n\n<sample-output>\n\nHow many times a week do you eat at the student cafeteria? **4**\nThe price of a typical student lunch? **2.5**\nHow much money do you spend on groceries in a week? **28.5**\n\nAverage food expenditure:\nDaily: 5.5 euros\nWeekly: 38.5 euros\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một chương trình ước tính chi tiêu thực phẩm thông thường của người dùng.\n\nChương trình hỏi người dùng họ ăn bao nhiêu lần một tuần tại căng tin sinh viên. Sau đó, nó hỏi giá một bữa trưa điển hình của sinh viên và số tiền chi tiêu cho cửa hàng tạp hóa trong tuần.\n\nDựa trên thông tin này, chương trình sẽ tính toán mức chi tiêu thực phẩm thông thường của người dùng hàng tuần và hàng ngày.\n\nChương trình sẽ hoạt động như sau:\n\n<sample-output>\n\nBạn ăn bao nhiêu lần một tuần ở căng tin sinh viên? **4**\nGiá một bữa trưa điển hình của sinh viên? **2,5**\nBạn chi bao nhiêu tiền cho cửa hàng tạp hóa trong một tuần? **28,5**\n\nChi tiêu lương thực trung bình:\nHàng ngày: 5,5 euro\nHàng tuần: 38,5 euro\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-19_food_expenditure",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Food expenditure",
+        "tmc_name": "part01-19_food_expenditure",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0066",
+      "type": "exercise",
+      "order": 66,
+      "source_hash": "1a47afc9076c09dd46edd45bd54f02d11eb188cacf9724acbf3556db8710262e",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks for the number of students on a course and the desired group size. The program will then print out the number of groups formed from the students on the course. If the division is not even, one of the groups may have fewer members than specified.\n\nIf you can't get your code working as expected, it is absolutely okay to move on and come back to this exercise later. The topic of the next section is [conditional statements](/part-1/5-conditional-statements). This exercise can also be solved using a conditional construction.\n\n<sample-output>\n\nHow many students on the course? **8**\nDesired group size? **4**\nNumber of groups formed: 2\n\n</sample-output>\n\n<sample-output>\n\nHow many students on the course? **11**\nDesired group size? **3**\nNumber of groups formed: 4\n\n</sample-output>\n\nHint: the integer division operator `//` could come in handy here."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết một chương trình hỏi số lượng sinh viên trong một khóa học và quy mô nhóm mong muốn. Sau đó chương trình sẽ in ra số lượng nhóm được thành lập từ các học viên trong khóa học. Nếu sự phân chia không đồng đều, một trong các nhóm có thể có ít thành viên hơn quy định.\n\nNếu bạn không thể làm cho mã của mình hoạt động như mong đợi, bạn hoàn toàn có thể tiếp tục và quay lại bài tập này sau. Chủ đề của phần tiếp theo là [câu lệnh có điều kiện](/part-1/5-conditional-statements). Bài tập này cũng có thể được giải bằng cách sử dụng cấu trúc có điều kiện.\n\n<sample-output>\n\nCó bao nhiêu học viên trong khóa học? **8**\nQuy mô nhóm mong muốn? **4**\nSố nhóm thành lập: 2\n\n</sample-output>\n\n<sample-output>\n\nCó bao nhiêu học viên trong khóa học? **11**\nQuy mô nhóm mong muốn? **3**\nSố nhóm được thành lập: 4\n\n</sample-output>\n\nGợi ý: toán tử chia số nguyên `//` có thể hữu ích ở đây."
+      },
+      "metadata": {
+        "exercise_id": "ex-part01-20_students_in_groups",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Students in groups",
+        "tmc_name": "part01-20_students_in_groups",
+        "height": null
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0067",
+      "type": "paragraph",
+      "order": 67,
+      "source_hash": "d3ac25ddc7ba9779c0556d543e4994d158e16a5a359347a1321dd236f1af0b67",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!--"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!--"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0068",
+      "type": "paragraph",
+      "order": 68,
+      "source_hash": "0937af8ca0d984621994ab6ab91b7b2cf722e5cf79e7103d9f4567fc678255c7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một bài kiểm tra để ôn lại nội dung của phần này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0069",
+      "type": "quiz",
+      "order": 69,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "d781d54e-9792-5a79-a018-168940390580",
+        "attributes": {
+          "id": "d781d54e-9792-5a79-a018-168940390580"
+        }
+      }
+    },
+    {
+      "id": "blk-part01-4-arithmetic-operations-0070",
+      "type": "paragraph",
+      "order": 70,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "-->"
+      },
+      "metadata": {}
+    }
+  ]
+}

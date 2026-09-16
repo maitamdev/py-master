@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-19_pin_and_number_of_attempts",
+  "lesson_id": "part02-4-simple-loops",
+  "part": 2,
+  "tmc_name": "part02-19_pin_and_number_of_attempts",
+  "title_original": "PIN and number of attempts",
+  "title_vi": "Mã PIN và số lần thử",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which keeps asking the user for a PIN code until they type in the correct one, which is _4321_. The program should then print out the number of times the user tried different codes.\n\n<sample-output>\n\nPIN: **3245**\nWrong\nPIN: **1234**\nWrong\nPIN: **0000**\nWrong\nPIN: **4321**\nCorrect! It took you 4 attempts\n\n</sample-output>\n\nIf the user gets it right on the first try, the program should print out something a bit different:\n\n<sample-output>\n\nPIN: **4321**\nCorrect! It only took you one single attempt!\n\n</sample-output>",
+  "description_vi": "Hãy viết một chương trình liên tục yêu cầu người dùng nhập mã PIN cho đến khi họ nhập đúng mã PIN là _4321_. Sau đó, chương trình sẽ in ra số lần người dùng đã thử các mã khác nhau.\n\n<sample-output>\n\nMã PIN: **3245**\nsai\nMã PIN: **1234**\nsai\nMã PIN: **0000**\nsai\nMã PIN: **4321**\nĐúng! Bạn phải mất 4 lần thử\n\n</sample-output>\n\nNếu người dùng hiểu đúng trong lần thử đầu tiên, chương trình sẽ in ra nội dung hơi khác một chút:\n\n<sample-output>\n\nMã PIN: **4321**\nĐúng! Bạn chỉ mất một lần thử duy nhất!\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "af3913f5aff6250faceffd82404a523231b47199d69c9edade21b2fcdee934ee",
+  "order": 39
+}

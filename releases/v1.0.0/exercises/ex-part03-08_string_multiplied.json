@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-08_string_multiplied",
+  "lesson_id": "part03-2-working-with-strings",
+  "part": 3,
+  "tmc_name": "part03-08_string_multiplied",
+  "title_original": "String multiplied",
+  "title_vi": "Chuỗi nhân lên",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for a string and an amount. The program then prints out the string as many times as specified by the amount. The printout should all be on one line, with no extra spaces or symbols added.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nPlease type in a string: **hiya**\nPlease type in an amount: **4**\nhiyahiyahiyahiya\n\n</sample-output>",
+  "description_vi": "Hãy viết một chương trình yêu cầu người dùng nhập một chuỗi và số tiền. Sau đó, chương trình sẽ in ra chuỗi nhiều lần theo số lượng được chỉ định. Tất cả bản in phải nằm trên một dòng, không thêm dấu cách hoặc ký hiệu.\n\nMột ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nVui lòng nhập một chuỗi: **hiya**\nVui lòng nhập số tiền: **4**\nhiyahiyahiyahiya\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "af7cac0694262b48ccfdc4ac2526b8ed306efb4e2606ce0edc1ced90eaf55556",
+  "order": 14
+}

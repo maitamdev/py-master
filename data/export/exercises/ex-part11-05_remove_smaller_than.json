@@ -1,0 +1,16 @@
+{
+  "id": "ex-part11-05_remove_smaller_than",
+  "lesson_id": "part11-1-list-comprehensions",
+  "part": 11,
+  "tmc_name": "part11-05_remove_smaller_than",
+  "title_original": "Remove smaller than",
+  "title_vi": "Loại bỏ nhỏ hơn",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `remove_smaller_than(numbers: list, limit: int)` which takes a list of integers and a limit value (also in integer format) as its arguments.\n\nThe function should use a list comprehension to produce a new list without the values which are smaller than the limit value.\n\nThe maximum length of the function is two lines of code, including the header line beginning with the `def` keyword.\n\nAn example of the function in use:\n\n```python\nnumbers = [1,65, 32, -6, 9, 11]\nprint(remove_smaller_than(numbers, 10))\n\nprint(remove_smaller_than([-4, 7, 8, -100], 0))\n```\n\n<sample-output>\n\n[65, 32, 11]\n[7, 8]\n\n</sample-output>",
+  "description_vi": "Vui lòng viết một hàm có tên `remove_smaller_than(numbers: list, limit: int)` lấy danh sách các số nguyên và giá trị giới hạn (cũng ở định dạng số nguyên) làm đối số của nó.\n\nHàm nên sử dụng khả năng hiểu danh sách để tạo danh sách mới không có giá trị nhỏ hơn giá trị giới hạn.\n\nĐộ dài tối đa của hàm là hai dòng mã, bao gồm dòng tiêu đề bắt đầu bằng từ khóa `def`.\n\nMột ví dụ về chức năng được sử dụng:\n\n```python\nnumbers = [1,65, 32, -6, 9, 11]\nprint(remove_smaller_than(numbers, 10))\n\nprint(remove_smaller_than([-4, 7, 8, -100], 0))\n```\n\n<sample-output>\n\n[65, 32, 11]\n[7, 8]\n\n</sample-output>",
+  "starter_code": "numbers = [1,65, 32, -6, 9, 11]\nprint(remove_smaller_than(numbers, 10))\n\nprint(remove_smaller_than([-4, 7, 8, -100], 0))",
+  "grading_data_available": false,
+  "source_hash": "cf7aa3be45a6f5f1340cd299621106f18c7c597387dafe0f463811610f0c1f3d",
+  "order": 50
+}

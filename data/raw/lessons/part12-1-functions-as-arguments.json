@@ -1,0 +1,431 @@
+{
+  "id": "part12-1-functions-as-arguments",
+  "part": 12,
+  "part_slug": "part-12",
+  "slug": "1-functions-as-arguments",
+  "is_part_index": false,
+  "title_original": "Functions as arguments",
+  "path": "/part-12/1-functions-as-arguments",
+  "source_path": "data/part-12/1-functions-as-arguments.md",
+  "source_hash": "794b2f802417c1fa192ed5976604aa978ce6547ea73a9dea0eb46a2c4f3f7419",
+  "frontmatter": {
+    "path": "/part-12/1-functions-as-arguments",
+    "title": "Functions as arguments",
+    "hidden": false
+  },
+  "chunks_count": 67,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will be able to sort lists according to different criteria\n- You will know what a lambda expression is\n- You will be able to use lambda expression with other Python functions\n- You will know how a function is passed as an argument to another function",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will be able to sort lists according to different criteria\n- You will know what a lambda expression is\n- You will be able to use lambda expression with other Python functions\n- You will know how a function is passed as an argument to another function\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We are already familiar with the method `sort` and the function `sorted`, which are used to sort lists into their natural order. For numbers and strings this usually works just fine. For anything more complicated than that, however, what Python deems to be the natural order of items is not always what was intended by us as programmers.",
+      "raw_source": "We are already familiar with the method `sort` and the function `sorted`, which are used to sort lists into their natural order. For numbers and strings this usually works just fine. For anything more complicated than that, however, what Python deems to be the natural order of items is not always what was intended by us as programmers."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "For example, a list of tuples is, by default, sorted based on the first item of each tuple:",
+      "raw_source": "For example, a list of tuples is, by default, sorted based on the first item of each tuple:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "products = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\nproducts.sort()\n\nfor product in products:\n    print(product)",
+      "raw_source": "```python\nproducts = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\nproducts.sort()\n\nfor product in products:\n    print(product)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "('apple', 3.95)\n('banana', 5.95)\n('orange', 4.5)\n('watermelon', 4.95)",
+      "raw_source": "<sample-output>\n\n('apple', 3.95)\n('banana', 5.95)\n('orange', 4.5)\n('watermelon', 4.95)\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "But what if we wanted to sort the list based on the price?",
+      "raw_source": "But what if we wanted to sort the list based on the price?"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Functions as arguments",
+      "raw_source": "## Functions as arguments"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A sorting method or function usually accepts an optional second argument which allows you to bypass the default sorting criteria. This second argument is a function which defines how the value of each item on the list is determined. As the list is sorted, Python calls this function when it compares the items to each other.",
+      "raw_source": "A sorting method or function usually accepts an optional second argument which allows you to bypass the default sorting criteria. This second argument is a function which defines how the value of each item on the list is determined. As the list is sorted, Python calls this function when it compares the items to each other."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's take a look at an example:",
+      "raw_source": "Let's take a look at an example:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def order_by_price(item: tuple):\n    # Return the price, which is the second item within the tuple\n    return item[1]\n\nif __name__ == \"__main__\":\n    products = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\n    # Use the function order_by_price for sorting\n    products.sort(key=order_by_price)\n\n    for product in products:\n        print(product)",
+      "raw_source": "```python\ndef order_by_price(item: tuple):\n    # Return the price, which is the second item within the tuple\n    return item[1]\n\nif __name__ == \"__main__\":\n    products = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\n    # Use the function order_by_price for sorting\n    products.sort(key=order_by_price)\n\n    for product in products:\n        print(product)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "('apple', 3.95)\n('orange', 4.5)\n('watermelon', 4.95)\n('banana', 5.95)",
+      "raw_source": "<sample-output>\n\n('apple', 3.95)\n('orange', 4.5)\n('watermelon', 4.95)\n('banana', 5.95)\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Now the list is sorted based on the prices of the items, but what really happens in the program?",
+      "raw_source": "Now the list is sorted based on the prices of the items, but what really happens in the program?"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The function `order_by_price` is actually pretty simple. It takes one item as its argument and returns a value for that item. More specifically, it returns the second item in the tuple, which represents the price. But then we have this line of code, where the `sort` method is called:",
+      "raw_source": "The function `order_by_price` is actually pretty simple. It takes one item as its argument and returns a value for that item. More specifically, it returns the second item in the tuple, which represents the price. But then we have this line of code, where the `sort` method is called:"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "`products.sort(key=order_by_price)`",
+      "raw_source": "`products.sort(key=order_by_price)`"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Here the `sort` method is called with a function as its argument. This is not a reference to the return value of the function, but a reference to _the function itself_. The `sort` method calls this function multiple times, using each item on the list as the argument in turn.",
+      "raw_source": "Here the `sort` method is called with a function as its argument. This is not a reference to the return value of the function, but a reference to _the function itself_. The `sort` method calls this function multiple times, using each item on the list as the argument in turn."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If we include an extra print statement in the function definition of `order_by_price`, we can verify that the function does indeed get called once per each item on the list:",
+      "raw_source": "If we include an extra print statement in the function definition of `order_by_price`, we can verify that the function does indeed get called once per each item on the list:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def order_by_price(item: tuple):\n    # Print the item\n    print(f\"Function call: order_by_price({item})\")\n\n    # Return the price, which is the second item within the tuple\n    return item[1]\n\n\nproducts = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\n# Use the function order_by_price for sorting\nproducts.sort(key=order_by_price)\n\nfor product in products:\n    print(product)",
+      "raw_source": "```python\ndef order_by_price(item: tuple):\n    # Print the item\n    print(f\"Function call: order_by_price({item})\")\n\n    # Return the price, which is the second item within the tuple\n    return item[1]\n\n\nproducts = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\n# Use the function order_by_price for sorting\nproducts.sort(key=order_by_price)\n\nfor product in products:\n    print(product)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Function call: order_by_price(('banana', 5.95))\nFunction call: order_by_price(('apple', 3.95))\nFunction call: order_by_price(('orange', 4.5))\nFunction call: order_by_price(('watermelon', 4.95))\n('apple', 3.95)\n('orange', 4.5)\n('watermelon', 4.95)\n('banana', 5.95)",
+      "raw_source": "<sample-output>\n\nFunction call: order_by_price(('banana', 5.95))\nFunction call: order_by_price(('apple', 3.95))\nFunction call: order_by_price(('orange', 4.5))\nFunction call: order_by_price(('watermelon', 4.95))\n('apple', 3.95)\n('orange', 4.5)\n('watermelon', 4.95)\n('banana', 5.95)\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The order can be _reversed_ with another keyword argument; `reverse`, which is available with both the `sort` method and the `sorted` function:",
+      "raw_source": "The order can be _reversed_ with another keyword argument; `reverse`, which is available with both the `sort` method and the `sorted` function:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "products.sort(key=order_by_price, reverse=True)\n\nt2 = sorted(products, key=order_by_price, reverse=True)",
+      "raw_source": "```python\nproducts.sort(key=order_by_price, reverse=True)\n\nt2 = sorted(products, key=order_by_price, reverse=True)\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "A function definition within a function definition",
+      "raw_source": "## A function definition within a function definition"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We could also include a named function for this new price-based sort functionality we created. Let's add a function named `sort_by_price`:",
+      "raw_source": "We could also include a named function for this new price-based sort functionality we created. Let's add a function named `sort_by_price`:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def order_by_price(item: tuple):\n    return item[1]\n\ndef sort_by_price(items: list):\n    # use the order_by_price function here\n    return sorted(items, key=order_by_price)\n\nproducts = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\nfor product in sort_by_price(products):\n    print(product)",
+      "raw_source": "```python\ndef order_by_price(item: tuple):\n    return item[1]\n\ndef sort_by_price(items: list):\n    # use the order_by_price function here\n    return sorted(items, key=order_by_price)\n\nproducts = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\nfor product in sort_by_price(products):\n    print(product)\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If we know that the helper function `order_by_price` is not used anywhere outside the `sort_by_price` function, we can place the former function definition within the latter function definition:",
+      "raw_source": "If we know that the helper function `order_by_price` is not used anywhere outside the `sort_by_price` function, we can place the former function definition within the latter function definition:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def sort_by_price(items: list):\n    # helper function defined within the function\n    def order_by_price(item: tuple):\n        return item[1]\n\n    return sorted(items, key=order_by_price)",
+      "raw_source": "```python\ndef sort_by_price(items: list):\n    # helper function defined within the function\n    def order_by_price(item: tuple):\n        return item[1]\n\n    return sorted(items, key=order_by_price)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Sort by remaining stock",
+        "tmcname": "part12-01_remaining_stock"
+      },
+      "inner_content": "Please write a function named `sort_by_remaining_stock(items: list)`. The function takes a list of tuples as its argument. The tuples consist of the name, price and remaining stock of a product. The function should return a new list, where the items are sorted according to the stock remaining, lowest value first. The original list should not be changed.\n\nThe function should work as follows:\n\n```python\nproducts = [(\"banana\", 5.95, 12), (\"apple\", 3.95, 3), (\"orange\", 4.50, 2), (\"watermelon\", 4.95, 22)]\n\nfor product in sort_by_remaining_stock(products):\n    print(f\"{product[0]} {product[2]} pcs\")\n```\n\n<sample-output>\norange 2 pcs\napple 3 pcs\nbanana 12 pcs\nwatermelon 22 pcs\n</sample-output>",
+      "raw_source": "<programming-exercise name='Sort by remaining stock' tmcname='part12-01_remaining_stock'>\n\nPlease write a function named `sort_by_remaining_stock(items: list)`. The function takes a list of tuples as its argument. The tuples consist of the name, price and remaining stock of a product. The function should return a new list, where the items are sorted according to the stock remaining, lowest value first. The original list should not be changed.\n\nThe function should work as follows:\n\n```python\nproducts = [(\"banana\", 5.95, 12), (\"apple\", 3.95, 3), (\"orange\", 4.50, 2), (\"watermelon\", 4.95, 22)]\n\nfor product in sort_by_remaining_stock(products):\n    print(f\"{product[0]} {product[2]} pcs\")\n```\n\n<sample-output>\norange 2 pcs\napple 3 pcs\nbanana 12 pcs\nwatermelon 22 pcs\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Sort by number of seasons",
+        "tmcname": "part12-02_seasons"
+      },
+      "inner_content": "Please write a function named `sort_by_seasons(items: list)` which takes a list of dictionaries as its argument. Each dictionary contains the information of a single TV show. The function should sort this list by the number of seasons each show has, in ascending order. The function should not change the original list, but return a new list instead.\n\nThe function should work as follows:\n\n```python\nshows = [{ \"name\": \"Dexter\", \"rating\" : 8.6, \"seasons\":9 }, { \"name\": \"Friends\", \"rating\" : 8.9, \"seasons\":10 },  { \"name\": \"Simpsons\", \"rating\" : 8.7, \"seasons\":32 }  ]\n\nfor show in sort_by_seasons(shows):\n    print(f\"{show['name']} {show['seasons']} seasons\")\n```\n\n<sample-output>\nDexter 9 seasons\nFriends 10 seasons\nSimpsons 32 seasons\n</sample-output>",
+      "raw_source": "<programming-exercise name='Sort by number of seasons' tmcname='part12-02_seasons'>\n\nPlease write a function named `sort_by_seasons(items: list)` which takes a list of dictionaries as its argument. Each dictionary contains the information of a single TV show. The function should sort this list by the number of seasons each show has, in ascending order. The function should not change the original list, but return a new list instead.\n\nThe function should work as follows:\n\n```python\nshows = [{ \"name\": \"Dexter\", \"rating\" : 8.6, \"seasons\":9 }, { \"name\": \"Friends\", \"rating\" : 8.9, \"seasons\":10 },  { \"name\": \"Simpsons\", \"rating\" : 8.7, \"seasons\":32 }  ]\n\nfor show in sort_by_seasons(shows):\n    print(f\"{show['name']} {show['seasons']} seasons\")\n```\n\n<sample-output>\nDexter 9 seasons\nFriends 10 seasons\nSimpsons 32 seasons\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Sort by ratings",
+        "tmcname": "part12-03_ratings"
+      },
+      "inner_content": "Please write a function named `sort_by_ratings(items: list)` which takes a list of dictionaries as its argument. The structure of the dictionaries is identical to the previous exercise. This function should sort the dictionaries in _descending order based on the shows' ratings_. The function should not change the original list, but return a new list instead.\n\n```python\nshows = [{ \"name\": \"Dexter\", \"rating\" : 8.6, \"seasons\":9 }, { \"name\": \"Friends\", \"rating\" : 8.9, \"seasons\":10 },  { \"name\": \"Simpsons\", \"rating\" : 8.7, \"seasons\":32 }  ]\n\nprint(\"Rating according to IMDB\")\nfor show in sort_by_ratings(shows):\n    print(f\"{show['name']}  {show['rating']}\")\n```\n\n<sample-output>\n\nRating according to IMDB\nFriends 8.9\nSimpsons 8.7\nDexter 8.6\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Sort by ratings' tmcname='part12-03_ratings'>\n\nPlease write a function named `sort_by_ratings(items: list)` which takes a list of dictionaries as its argument. The structure of the dictionaries is identical to the previous exercise. This function should sort the dictionaries in _descending order based on the shows' ratings_. The function should not change the original list, but return a new list instead.\n\n```python\nshows = [{ \"name\": \"Dexter\", \"rating\" : 8.6, \"seasons\":9 }, { \"name\": \"Friends\", \"rating\" : 8.9, \"seasons\":10 },  { \"name\": \"Simpsons\", \"rating\" : 8.7, \"seasons\":32 }  ]\n\nprint(\"Rating according to IMDB\")\nfor show in sort_by_ratings(shows):\n    print(f\"{show['name']}  {show['rating']}\")\n```\n\n<sample-output>\n\nRating according to IMDB\nFriends 8.9\nSimpsons 8.7\nDexter 8.6\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Sorting collections of your own objects",
+      "raw_source": "## Sorting collections of your own objects"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Using the same principle, let's write a program which sorts a list of objects from our own `Student` class in two different ways:",
+      "raw_source": "Using the same principle, let's write a program which sorts a list of objects from our own `Student` class in two different ways:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "class Student:\n    \"\"\" The class models a single student \"\"\"\n    def __init__(self, name: str, id: str, credits: int):\n        self.name = name\n        self.id = id\n        self.credits = credits\n\n    def __str__(self):\n        return f\"{self.name} ({self.id}), {self.credits} cr.\"\n\n\ndef by_id(item: Student):\n    return item.id\n\ndef by_credits(item: Student):\n    return item.credits\n\n\nif __name__ == \"__main__\":\n    o1 = Student(\"Archie\", \"a123\", 220)\n    o2 = Student(\"Marvin\", \"m321\", 210)\n    o3 = Student(\"Anna\", \"a999\", 131)\n\n    students = [o1, o2, o3]\n\n    print(\"Sort by id:\")\n    for student in sorted(students, key=by_id):\n        print(student)\n\n    print()\n\n    print(\"Sort by credits:\")\n    for student in sorted(students, key=by_credits):\n        print(student)",
+      "raw_source": "```python\nclass Student:\n    \"\"\" The class models a single student \"\"\"\n    def __init__(self, name: str, id: str, credits: int):\n        self.name = name\n        self.id = id\n        self.credits = credits\n\n    def __str__(self):\n        return f\"{self.name} ({self.id}), {self.credits} cr.\"\n\n\ndef by_id(item: Student):\n    return item.id\n\ndef by_credits(item: Student):\n    return item.credits\n\n\nif __name__ == \"__main__\":\n    o1 = Student(\"Archie\", \"a123\", 220)\n    o2 = Student(\"Marvin\", \"m321\", 210)\n    o3 = Student(\"Anna\", \"a999\", 131)\n\n    students = [o1, o2, o3]\n\n    print(\"Sort by id:\")\n    for student in sorted(students, key=by_id):\n        print(student)\n\n    print()\n\n    print(\"Sort by credits:\")\n    for student in sorted(students, key=by_credits):\n        print(student)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Sort by id:\nArchie (a123), 220 cr.\nAnna (a999), 131 cr.\nMarvin (m321), 210 cr.\n\nSort by credits:\nAnna (a999), 131 cr.\nMarvin (m321), 210 cr.\nArchie (a123), 220 cr.",
+      "raw_source": "<sample-output>\n\nSort by id:\nArchie (a123), 220 cr.\nAnna (a999), 131 cr.\nMarvin (m321), 210 cr.\n\nSort by credits:\nAnna (a999), 131 cr.\nMarvin (m321), 210 cr.\nArchie (a123), 220 cr.\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As you can see above, sorting by different criteria works exactly as intended. If the functions `by_id` and `by_credits` are not needed elsewhere, there are ways of making the implementation simpler. We will return to this topic after these exercises.",
+      "raw_source": "As you can see above, sorting by different criteria works exactly as intended. If the functions `by_id` and `by_credits` are not needed elsewhere, there are ways of making the implementation simpler. We will return to this topic after these exercises."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "ClimbingRoute",
+        "tmcname": "part12-04_climbing_route"
+      },
+      "inner_content": "The exercise template contains the class definition for a `ClimbingRoute`. It works as follows:\n\n```python\nroute1 = ClimbingRoute(\"Edge\", 38, \"6A+\")\nroute2 = ClimbingRoute(\"Smooth operator\", 11, \"7A\")\nroute3 = ClimbingRoute(\"Synchro\", 14, \"8C+\")\n\n\nprint(route1)\nprint(route2)\nprint(route3.name, route3.length, route3.grade)\n```\n\n<sample-output>\n\nEdge, length 38 metres, grade 6A+\nSmooth operator, length 11 metres, grade 7A\nSynchro 14 8C+\n\n</sample-output>\n\n## Sort by length\n\nPlease write a function named `sort_by_length(routes: list)` which returns a new list of routes, sorted by length from longest to shortest.\n\nThe function should work as follows:\n\n```python\nr1 = ClimbingRoute(\"Edge\", 38, \"6A+\")\nr2 = ClimbingRoute(\"Smooth operator\", 11, \"7A\")\nr3 = ClimbingRoute(\"Synchro\", 14, \"8C+\")\nr4 = ClimbingRoute(\"Small steps\", 12, \"6A+\")\n\nroutes = [r1, r2, r3, r4]\n\nfor route in sort_by_length(routes):\n    print(route)\n```\n\n<sample-output>\n\nEdge, length 38 metres, grade 6A+\nSynchro, length 14 metres, grade 8C+\nSmall steps, length 12 metres, grade 6A+\nSmooth operator, length 11 metres, grade 7A\n\n</sample-output>\n\n## Sort by difficulty\n\nPlease write a function named `sort_by_difficulty(routes: list)` which returns a new list of routes, sorted by difficulty, i.e. grade, from hardest to easiest. For routes with the same grade, the longer one is more difficult. The scale of climbing route grades is _4, 4+, 5, 5+, 6A, 6A+, ..._, which in practice works out as the alphabetical order for strings.\n\nThe function should work as follows:\n\n```python\nr1 = ClimbingRoute(\"Edge\", 38, \"6A+\")\nr2 = ClimbingRoute(\"Smooth operator\", 11, \"7A\")\nr3 = ClimbingRoute(\"Synchro\", 14, \"8C+\")\nr4 = ClimbingRoute(\"Small steps\", 12, \"6A+\")\n\nroutes = [r1, r2, r3, r4]\nfor route in sort_by_difficulty(routes):\n    print(route)\n```\n\n<sample-output>\n\nSynchro, length 14 metres, grade 8C+\nSmooth operator, length 11 metres, grade 7A\nEdge, length 38 metres, grade 6A+\nSmall steps, length 12 metres, grade 6A+\n\n</sample-output>\n\n**Hint:** if the order is based on a list or a tuple, by default Python sorts the items first based on the first item, next based on the second item, and so forth:\n\n```python\nmy_list = [(\"a\", 4),(\"a\", 2),(\"b\", 30), (\"b\", 0) ]\nprint(sorted(my_list))\n```\n\n<sample-output>\n\n[('a', 2), ('a', 4), ('b', 0), ('b', 30)]\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='ClimbingRoute' tmcname='part12-04_climbing_route'>\n\nThe exercise template contains the class definition for a `ClimbingRoute`. It works as follows:\n\n```python\nroute1 = ClimbingRoute(\"Edge\", 38, \"6A+\")\nroute2 = ClimbingRoute(\"Smooth operator\", 11, \"7A\")\nroute3 = ClimbingRoute(\"Synchro\", 14, \"8C+\")\n\n\nprint(route1)\nprint(route2)\nprint(route3.name, route3.length, route3.grade)\n```\n\n<sample-output>\n\nEdge, length 38 metres, grade 6A+\nSmooth operator, length 11 metres, grade 7A\nSynchro 14 8C+\n\n</sample-output>\n\n## Sort by length\n\nPlease write a function named `sort_by_length(routes: list)` which returns a new list of routes, sorted by length from longest to shortest.\n\nThe function should work as follows:\n\n```python\nr1 = ClimbingRoute(\"Edge\", 38, \"6A+\")\nr2 = ClimbingRoute(\"Smooth operator\", 11, \"7A\")\nr3 = ClimbingRoute(\"Synchro\", 14, \"8C+\")\nr4 = ClimbingRoute(\"Small steps\", 12, \"6A+\")\n\nroutes = [r1, r2, r3, r4]\n\nfor route in sort_by_length(routes):\n    print(route)\n```\n\n<sample-output>\n\nEdge, length 38 metres, grade 6A+\nSynchro, length 14 metres, grade 8C+\nSmall steps, length 12 metres, grade 6A+\nSmooth operator, length 11 metres, grade 7A\n\n</sample-output>\n\n## Sort by difficulty\n\nPlease write a function named `sort_by_difficulty(routes: list)` which returns a new list of routes, sorted by difficulty, i.e. grade, from hardest to easiest. For routes with the same grade, the longer one is more difficult. The scale of climbing route grades is _4, 4+, 5, 5+, 6A, 6A+, ..._, which in practice works out as the alphabetical order for strings.\n\nThe function should work as follows:\n\n```python\nr1 = ClimbingRoute(\"Edge\", 38, \"6A+\")\nr2 = ClimbingRoute(\"Smooth operator\", 11, \"7A\")\nr3 = ClimbingRoute(\"Synchro\", 14, \"8C+\")\nr4 = ClimbingRoute(\"Small steps\", 12, \"6A+\")\n\nroutes = [r1, r2, r3, r4]\nfor route in sort_by_difficulty(routes):\n    print(route)\n```\n\n<sample-output>\n\nSynchro, length 14 metres, grade 8C+\nSmooth operator, length 11 metres, grade 7A\nEdge, length 38 metres, grade 6A+\nSmall steps, length 12 metres, grade 6A+\n\n</sample-output>\n\n**Hint:** if the order is based on a list or a tuple, by default Python sorts the items first based on the first item, next based on the second item, and so forth:\n\n```python\nmy_list = [(\"a\", 4),(\"a\", 2),(\"b\", 30), (\"b\", 0) ]\nprint(sorted(my_list))\n```\n\n<sample-output>\n\n[('a', 2), ('a', 4), ('b', 0), ('b', 30)]\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Climbing areas",
+        "tmcname": "part12-05_climbing_areas"
+      },
+      "inner_content": "In addition to the `ClimbingRoute` from the previous exercise, the exercise template contains the class definition for a `ClimbingArea`.\n\n```python\nca1 = ClimbingArea(\"Olhava\")\nca1.add_route(ClimbingRoute(\"Edge\", 38, \"6A+\"))\nca1.add_route(ClimbingRoute(\"Great cut\", 36, \"6B\"))\nca1.add_route(ClimbingRoute(\"Swedish route\", 42, \"5+\"))\n\nca2 = ClimbingArea(\"Nummi\")\nca2.add_route(ClimbingRoute(\"Synchro\", 14, \"8C+\"))\n\nca3 = ClimbingArea(\"Nalkkila slab\")\nca3.add_route(ClimbingRoute(\"Small steps\", 12, \"6A+\"))\nca3.add_route(ClimbingRoute(\"Smooth operator\", 11, \"7A\"))\nca3.add_route(ClimbingRoute(\"Piggy not likey\", 12 , \"6B+\"))\nca3.add_route(ClimbingRoute(\"Orchard\", 8, \"6A\"))\n\nprint(ca1)\nprint(ca3.name, ca3.routes())\nprint(ca3.hardest_route())\n```\n\n<sample-output>\n\nOlhava, 3 routes, hardest 6B\nNalkkila slab 4\nSmooth operator, length 9 metres, grade 7A\n\n</sample-output>\n\n## Sort by number of routes\n\nPlease write a function named `sort_by_number_of_routes` which sorts climbing areas in ascending order based on the number of routes they each have.\n\n```python\n# ca1, ca2 and ca3 declared as above\nareas = [ca1, ca2, ca3]\nfor area in sort_by_number_of_routes(areas):\n    print(area)\n\n```\n\n<sample-output>\n\nNummi, 1 routes, hardest 8C+\nOlhava, 3 routes, hardest 6B\nNalkkila slab, 4 routes, hardest 7A\n\n</sample-output>\n\n## Sort by the most difficult route\n\nPlease write a function named `sort_by_most_difficult` which sorts climbing areas in _descending_ order based on the most difficult route in each area.\n\n```python\n# ca1, ca2 and ca3 declared as above\nareas = [ca1, ca2, ca3]\nfor area in sort_by_most_difficult(areas):\n    print(area)\n```\n\n<sample-output>\n\nNummi, 1 routes, hardest 8C+\nNalkkila slab, 4 routes, hardest 7A\nOlhava, 3 routes, hardest 6B\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Climbing areas' tmcname='part12-05_climbing_areas'>\n\nIn addition to the `ClimbingRoute` from the previous exercise, the exercise template contains the class definition for a `ClimbingArea`.\n\n```python\nca1 = ClimbingArea(\"Olhava\")\nca1.add_route(ClimbingRoute(\"Edge\", 38, \"6A+\"))\nca1.add_route(ClimbingRoute(\"Great cut\", 36, \"6B\"))\nca1.add_route(ClimbingRoute(\"Swedish route\", 42, \"5+\"))\n\nca2 = ClimbingArea(\"Nummi\")\nca2.add_route(ClimbingRoute(\"Synchro\", 14, \"8C+\"))\n\nca3 = ClimbingArea(\"Nalkkila slab\")\nca3.add_route(ClimbingRoute(\"Small steps\", 12, \"6A+\"))\nca3.add_route(ClimbingRoute(\"Smooth operator\", 11, \"7A\"))\nca3.add_route(ClimbingRoute(\"Piggy not likey\", 12 , \"6B+\"))\nca3.add_route(ClimbingRoute(\"Orchard\", 8, \"6A\"))\n\nprint(ca1)\nprint(ca3.name, ca3.routes())\nprint(ca3.hardest_route())\n```\n\n<sample-output>\n\nOlhava, 3 routes, hardest 6B\nNalkkila slab 4\nSmooth operator, length 9 metres, grade 7A\n\n</sample-output>\n\n## Sort by number of routes\n\nPlease write a function named `sort_by_number_of_routes` which sorts climbing areas in ascending order based on the number of routes they each have.\n\n```python\n# ca1, ca2 and ca3 declared as above\nareas = [ca1, ca2, ca3]\nfor area in sort_by_number_of_routes(areas):\n    print(area)\n\n```\n\n<sample-output>\n\nNummi, 1 routes, hardest 8C+\nOlhava, 3 routes, hardest 6B\nNalkkila slab, 4 routes, hardest 7A\n\n</sample-output>\n\n## Sort by the most difficult route\n\nPlease write a function named `sort_by_most_difficult` which sorts climbing areas in _descending_ order based on the most difficult route in each area.\n\n```python\n# ca1, ca2 and ca3 declared as above\nareas = [ca1, ca2, ca3]\nfor area in sort_by_most_difficult(areas):\n    print(area)\n```\n\n<sample-output>\n\nNummi, 1 routes, hardest 8C+\nNalkkila slab, 4 routes, hardest 7A\nOlhava, 3 routes, hardest 6B\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Lambda expressions",
+      "raw_source": "## Lambda expressions"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We have mostly worked with functions from the viewpoint of modularity. It is true that functions play an important role in managing the complexity of your programs and avoiding code repetition. Functions are usually written so that they can be used many times.",
+      "raw_source": "We have mostly worked with functions from the viewpoint of modularity. It is true that functions play an important role in managing the complexity of your programs and avoiding code repetition. Functions are usually written so that they can be used many times."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "But sometimes you need something resembling a function that you will use just once. Lambda expressions allow you to create small, anonymous functions which are created (and discarded) as they are needed in the code. The general syntax is as follows:",
+      "raw_source": "But sometimes you need something resembling a function that you will use just once. Lambda expressions allow you to create small, anonymous functions which are created (and discarded) as they are needed in the code. The general syntax is as follows:"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "`lambda <parameters> : <expression>`",
+      "raw_source": "`lambda <parameters> : <expression>`"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Sorting a list of tuples by the second item in each tuple would look like this implemented with a lambda expression:",
+      "raw_source": "Sorting a list of tuples by the second item in each tuple would look like this implemented with a lambda expression:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "products = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\n# Function is created \"on the fly\" with a lambda expression:\nproducts.sort(key=lambda item: item[1])\n\nfor product in products:\n    print(product)",
+      "raw_source": "```python\nproducts = [(\"banana\", 5.95), (\"apple\", 3.95), (\"orange\", 4.50), (\"watermelon\", 4.95)]\n\n# Function is created \"on the fly\" with a lambda expression:\nproducts.sort(key=lambda item: item[1])\n\nfor product in products:\n    print(product)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "('apple', 3.95)\n('orange', 4.5)\n('watermelon', 4.95)\n('banana', 5.95)",
+      "raw_source": "<sample-output>\n\n('apple', 3.95)\n('orange', 4.5)\n('watermelon', 4.95)\n('banana', 5.95)\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The expression",
+      "raw_source": "The expression"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "`lambda item: item[1]`",
+      "raw_source": "`lambda item: item[1]`"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "is equivalent to the function definition",
+      "raw_source": "is equivalent to the function definition"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def price(item):\n    return item[1]",
+      "raw_source": "```python\ndef price(item):\n    return item[1]\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "except for the fact that a lambda function doesn't have a name. This is why lambda functions are called anonymous functions.",
+      "raw_source": "except for the fact that a lambda function doesn't have a name. This is why lambda functions are called anonymous functions."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In every other respect a lambda function is no different from any other function, and they can be used in all the same contexts as any equivalent named function. For example, the following program sorts a list of strings alphabetically by the _last_ character in each string:",
+      "raw_source": "In every other respect a lambda function is no different from any other function, and they can be used in all the same contexts as any equivalent named function. For example, the following program sorts a list of strings alphabetically by the _last_ character in each string:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "strings = [\"Mickey\", \"Mack\", \"Marvin\", \"Minnie\", \"Merl\"]\n\nfor word in sorted(strings, key=lambda word: word[-1]):\n    print(word)",
+      "raw_source": "```python\nstrings = [\"Mickey\", \"Mack\", \"Marvin\", \"Minnie\", \"Merl\"]\n\nfor word in sorted(strings, key=lambda word: word[-1]):\n    print(word)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Minnie\nMack\nMerl\nMarvin\nMickey",
+      "raw_source": "<sample-output>\n\nMinnie\nMack\nMerl\nMarvin\nMickey\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We can also combine list comprehensions, the `join` method and lambda expressions. For example, we could sort strings based on just the vowels in them, ignoring all other characters:",
+      "raw_source": "We can also combine list comprehensions, the `join` method and lambda expressions. For example, we could sort strings based on just the vowels in them, ignoring all other characters:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "strings = [\"Mickey\", \"Mack\", \"Marvin\", \"Minnie\", \"Merl\"]\n\nfor word in sorted(strings, key=lambda word: \"\".join([c for c in word if c in \"aeiou\"])):\n    print(word)",
+      "raw_source": "```python\nstrings = [\"Mickey\", \"Mack\", \"Marvin\", \"Minnie\", \"Merl\"]\n\nfor word in sorted(strings, key=lambda word: \"\".join([c for c in word if c in \"aeiou\"])):\n    print(word)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "Mack\nMarvin\nMerl\nMickey\nMinnie",
+      "raw_source": "<sample-output>\n\nMack\nMarvin\nMerl\nMickey\nMinnie\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Anonymous functions can also be used with other built in Python functions, not just those used for sorting. For example, the `min` and `max` functions also take a keyword argument named `key`. It is used as the criteria for comparing the items when selecting the minimum or maximum value.",
+      "raw_source": "Anonymous functions can also be used with other built in Python functions, not just those used for sorting. For example, the `min` and `max` functions also take a keyword argument named `key`. It is used as the criteria for comparing the items when selecting the minimum or maximum value."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "In the following example we are dealing with audio recordings. First we select the oldest recording, and then the longest:",
+      "raw_source": "In the following example we are dealing with audio recordings. First we select the oldest recording, and then the longest:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "\nclass Recording:\n    \"\"\" The class models a single audio recording \"\"\"\n    def __init__(self, name: str, performer: str, year: int, runtime: int):\n        self.name = name\n        self.performer = performer\n        self.year = year\n        self.runtime = runtime\n\n\n    def __str__(self):\n        return f\"{self.name} ({self.performer}), {self.year}. {self.runtime} min.\"\n\nif __name__ == \"__main__\":\n    r1 = Recording(\"Nevermind\", \"Nirvana\", 1991, 43)\n    r2 = Recording(\"Let It Be\", \"Beatles\", 1969, 35)\n    r3 = Recording(\"Joshua Tree\", \"U2\", 1986, 50)\n\n    recordings = [r1, r2, r3]\n\n\n    print(\"The oldest recording:\")\n    print(min(recordings, key=lambda rec: rec.year))\n\n    print(\"The longest recording:\")\n    print(max(recordings, key=lambda rec: rec.runtime))",
+      "raw_source": "```python\n\nclass Recording:\n    \"\"\" The class models a single audio recording \"\"\"\n    def __init__(self, name: str, performer: str, year: int, runtime: int):\n        self.name = name\n        self.performer = performer\n        self.year = year\n        self.runtime = runtime\n\n\n    def __str__(self):\n        return f\"{self.name} ({self.performer}), {self.year}. {self.runtime} min.\"\n\nif __name__ == \"__main__\":\n    r1 = Recording(\"Nevermind\", \"Nirvana\", 1991, 43)\n    r2 = Recording(\"Let It Be\", \"Beatles\", 1969, 35)\n    r3 = Recording(\"Joshua Tree\", \"U2\", 1986, 50)\n\n    recordings = [r1, r2, r3]\n\n\n    print(\"The oldest recording:\")\n    print(min(recordings, key=lambda rec: rec.year))\n\n    print(\"The longest recording:\")\n    print(max(recordings, key=lambda rec: rec.runtime))\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "The oldest recording:\nLet It Be (Beatles), 1969. 35 min.\nThe longest recording:\nU2 (Joshua Tree), 1986. 50 min.",
+      "raw_source": "<sample-output>\n\nThe oldest recording:\nLet It Be (Beatles), 1969. 35 min.\nThe longest recording:\nU2 (Joshua Tree), 1986. 50 min.\n\n</sample-output>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "BallPlayers",
+        "tmcname": "part12-06_ballplayers"
+      },
+      "inner_content": "The exercise template contains the definition for a class named `BallPlayer`. It has the following public attributes:\n\n* name\n* shirt number `number`\n* scored goals `goals`\n* assists completed `assists`\n* minutes played `minutes`\n\nPlease implement the following functions. NB: each function has a different type of return value.\n\n## Most goals\n\nPlease write a function named `most_goals` which takes a list of ball players as its argument.\n\nThe function should return the name of the player who scored the most goals, in string format.\n\n## Most points\n\nPlease write a function named `most_points`, which takes a list of ball players as its argument.\n\nThe function should return a tuple containing the name and shirt number of the player who has scored the most points. The total number of points is the number of goals and the number of assists combined.\n\n## Least minutes\n\nPlease write a function named `least_minutes`, which takes a list of ball players as its argument.\n\nThe function should return the `BallPlayer` object which has the smallest value of minutes played.\n\nYou can test your functions with the following program:\n\n```python\nif __name__ == \"__main__\":\n    player1 = BallPlayer(\"Archie Bonkers\", 13, 5, 12, 46)\n    player2 = BallPlayer(\"Speedy Tickets\", 7, 2, 26, 55)\n    player3 = BallPlayer(\"Cruella De Hill\", 9, 1, 32, 26)\n    player4 = BallPlayer(\"Devilled Tasmanian\", 12, 1, 11, 41)\n    player5 = BallPlayer(\"Donald Quack\", 4, 3, 9, 12)\n    \n    team = [player1, player2, player3, player4, player5]\n    print(most_goals(team))\n    print(most_points(team))\n    print(least_minutes(team))\n```\n\nThis should print out:\n\n<sample-output>\n\nArchie Bonkers\n('Cruella De Hill', 9)\nBallPlayer(name=Donald Quack, number=4, goals=3, passes=9, minutes=12)\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='BallPlayers' tmcname='part12-06_ballplayers'>\n\nThe exercise template contains the definition for a class named `BallPlayer`. It has the following public attributes:\n\n* name\n* shirt number `number`\n* scored goals `goals`\n* assists completed `assists`\n* minutes played `minutes`\n\nPlease implement the following functions. NB: each function has a different type of return value.\n\n## Most goals\n\nPlease write a function named `most_goals` which takes a list of ball players as its argument.\n\nThe function should return the name of the player who scored the most goals, in string format.\n\n## Most points\n\nPlease write a function named `most_points`, which takes a list of ball players as its argument.\n\nThe function should return a tuple containing the name and shirt number of the player who has scored the most points. The total number of points is the number of goals and the number of assists combined.\n\n## Least minutes\n\nPlease write a function named `least_minutes`, which takes a list of ball players as its argument.\n\nThe function should return the `BallPlayer` object which has the smallest value of minutes played.\n\nYou can test your functions with the following program:\n\n```python\nif __name__ == \"__main__\":\n    player1 = BallPlayer(\"Archie Bonkers\", 13, 5, 12, 46)\n    player2 = BallPlayer(\"Speedy Tickets\", 7, 2, 26, 55)\n    player3 = BallPlayer(\"Cruella De Hill\", 9, 1, 32, 26)\n    player4 = BallPlayer(\"Devilled Tasmanian\", 12, 1, 11, 41)\n    player5 = BallPlayer(\"Donald Quack\", 4, 3, 9, 12)\n    \n    team = [player1, player2, player3, player4, player5]\n    print(most_goals(team))\n    print(most_points(team))\n    print(least_minutes(team))\n```\n\nThis should print out:\n\n<sample-output>\n\nArchie Bonkers\n('Cruella De Hill', 9)\nBallPlayer(name=Donald Quack, number=4, goals=3, passes=9, minutes=12)\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Functions as arguments within your own functions",
+      "raw_source": "## Functions as arguments within your own functions"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We established above that it is possible to pass a reference to a function as an argument to another function. To wrap this section up, let's write our very own function which takes a function as its argument.",
+      "raw_source": "We established above that it is possible to pass a reference to a function as an argument to another function. To wrap this section up, let's write our very own function which takes a function as its argument."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "# the type hint \"callable\" refers to a function\ndef perform_operation(operation: callable):\n    # Call the function which was passed as an argument\n    return operation(10, 5)\n\ndef my_sum(a: int, b: int):\n    return a + b\n\ndef my_product(a: int, b: int):\n    return a * b\n\n\nif __name__ == \"__main__\":\n    print(perform_operation(my_sum))\n    print(perform_operation(my_product))\n    print(perform_operation(lambda x,y: x - y))\n",
+      "raw_source": "```python\n# the type hint \"callable\" refers to a function\ndef perform_operation(operation: callable):\n    # Call the function which was passed as an argument\n    return operation(10, 5)\n\ndef my_sum(a: int, b: int):\n    return a + b\n\ndef my_product(a: int, b: int):\n    return a * b\n\n\nif __name__ == \"__main__\":\n    print(perform_operation(my_sum))\n    print(perform_operation(my_product))\n    print(perform_operation(lambda x,y: x - y))\n\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "15\n50\n5",
+      "raw_source": "<sample-output>\n\n15\n50\n5\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The value returned by the function `perform_operation` depends on which function was passed as an argument. Any function which accepts two arguments would do, no matter whether it is anonymous or named.",
+      "raw_source": "The value returned by the function `perform_operation` depends on which function was passed as an argument. Any function which accepts two arguments would do, no matter whether it is anonymous or named."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Passing references to functions as arguments to other functions might not be something you will end up doing on a daily basis in your programming career, but it can be a useful technique. This following program selects some lines from one file and writes them to another file. The way the lines are selected is determined by a function which returns `True` only if the lines should be copied:",
+      "raw_source": "Passing references to functions as arguments to other functions might not be something you will end up doing on a daily basis in your programming career, but it can be a useful technique. This following program selects some lines from one file and writes them to another file. The way the lines are selected is determined by a function which returns `True` only if the lines should be copied:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def copy_lines(source_file: str, target_file: str, criterion= lambda x: True):\n    with open(source_file) as source, open(target_file, \"w\") as target:\n        for line in source:\n            # Remove any whitespace from beginning and end of line\n            line = line.strip()\n\n            if criterion(line):\n                target.write(line + \"\\n\")\n\n# Some examples\nif __name__ == \"__main__\":\n    # If the third parameter is not given, copy all lines\n    copy_lines(\"first.txt\", \"second.txt\")\n\n    # Copy all non-empty lines\n    copy_lines(\"first.txt\", \"second.txt\", lambda line: len(line) > 0)\n\n    # Copy all lines which contain the word \"Python\"\n    copy_lines(\"first.txt\", \"second.txt\", lambda line: \"Python\" in line)\n\n    # Copy all lines which do not end in a full stop\n    copy_lines(\"first.txt\", \"second.txt\", lambda line: line[-1] != \".\")",
+      "raw_source": "```python\ndef copy_lines(source_file: str, target_file: str, criterion= lambda x: True):\n    with open(source_file) as source, open(target_file, \"w\") as target:\n        for line in source:\n            # Remove any whitespace from beginning and end of line\n            line = line.strip()\n\n            if criterion(line):\n                target.write(line + \"\\n\")\n\n# Some examples\nif __name__ == \"__main__\":\n    # If the third parameter is not given, copy all lines\n    copy_lines(\"first.txt\", \"second.txt\")\n\n    # Copy all non-empty lines\n    copy_lines(\"first.txt\", \"second.txt\", lambda line: len(line) > 0)\n\n    # Copy all lines which contain the word \"Python\"\n    copy_lines(\"first.txt\", \"second.txt\", lambda line: \"Python\" in line)\n\n    # Copy all lines which do not end in a full stop\n    copy_lines(\"first.txt\", \"second.txt\", lambda line: line[-1] != \".\")\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The function definition contains a default value for the keyword parameter `criterion`: `lambda x: True`. This anonymous function always returns `True` regardless of the input. So, the default behaviour is to copy all lines. As usual, if a value is given for a parameter with a default value, the new value replaces the default value.",
+      "raw_source": "The function definition contains a default value for the keyword parameter `criterion`: `lambda x: True`. This anonymous function always returns `True` regardless of the input. So, the default behaviour is to copy all lines. As usual, if a value is given for a parameter with a default value, the new value replaces the default value."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Product search",
+        "tmcname": "part12-07_product_search"
+      },
+      "inner_content": "This exercise deals with products which are stored in tuples. The examples all assume a variable named `products`, which is assigned the following value:\n\n```python\nproducts = [(\"banana\", 5.95, 12), (\"apple\", 3.95, 3), (\"orange\", 4.50, 2), (\"watermelon\", 4.95, 22), (\"kale\", 0.99, 1)]\n```\n\nEach tuple contains three items: name, price and amount.\n\nPlease write a function named `search(products: list, criterion: callable)`. The second argument to the function is a function itself, and it should be able to process a tuple as defined above, and return a Boolean value. The search function should return a new list containing those tuples from the original which fulfil the criterion.\n\nIf we wanted to include only products whose price was under 4 euros, we could use the following criterion function:\n\n```python\ndef price_under_4_euros(product):\n    return product[1] < 4\n```\n\nThe function returns `True` if the second item in the tuple is less than four in value.\n\nAn example of the `search` function in use:\n\n```python\nfor product in search(products, price_under_4_euros):\n    print(product)\n```\n\n<sample-output>\n\n('apple', 3.95, 3)\n('kale', 0.99, 1)\n\n</sample-output>\n\nThe criterion function can also be a lambda function. If we wanted to search for only those products whose amount was at least 11, we could write the following:\n\n```python\nfor product in search(products, lambda t: t[2]>10):\n    print(product)\n```\n\n<sample-output>\n\n('banana', 5.95, 12)\n('watermelon', 4.95, 22)\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Product search' tmcname='part12-07_product_search'>\n\nThis exercise deals with products which are stored in tuples. The examples all assume a variable named `products`, which is assigned the following value:\n\n```python\nproducts = [(\"banana\", 5.95, 12), (\"apple\", 3.95, 3), (\"orange\", 4.50, 2), (\"watermelon\", 4.95, 22), (\"kale\", 0.99, 1)]\n```\n\nEach tuple contains three items: name, price and amount.\n\nPlease write a function named `search(products: list, criterion: callable)`. The second argument to the function is a function itself, and it should be able to process a tuple as defined above, and return a Boolean value. The search function should return a new list containing those tuples from the original which fulfil the criterion.\n\nIf we wanted to include only products whose price was under 4 euros, we could use the following criterion function:\n\n```python\ndef price_under_4_euros(product):\n    return product[1] < 4\n```\n\nThe function returns `True` if the second item in the tuple is less than four in value.\n\nAn example of the `search` function in use:\n\n```python\nfor product in search(products, price_under_4_euros):\n    print(product)\n```\n\n<sample-output>\n\n('apple', 3.95, 3)\n('kale', 0.99, 1)\n\n</sample-output>\n\nThe criterion function can also be a lambda function. If we wanted to search for only those products whose amount was at least 11, we could write the following:\n\n```python\nfor product in search(products, lambda t: t[2]>10):\n    print(product)\n```\n\n<sample-output>\n\n('banana', 5.95, 12)\n('watermelon', 4.95, 22)\n\n</sample-output>\n\n</programming-exercise>"
+    }
+  ]
+}

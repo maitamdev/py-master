@@ -1,0 +1,16 @@
+{
+  "id": "ex-part04-16_list_twice",
+  "lesson_id": "part04-3-lists",
+  "part": 4,
+  "tmc_name": "part04-16_list_twice",
+  "title_original": "List twice",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user to type in values and adds them to a list. After each addition, the list is printed out in two different ways:\n- in the order the items were added\n- ordered from smallest to greatest\n\nThe program exits when the user types in 0.\n\nAn example of expected behaviour:\n\n<sample-output>\n\nNew item: **3**\nThe list now: [3]\nThe list in order: [3]\nNew item: **1**\nThe list now: [3, 1]\nThe list in order: [1, 3]\nNew item: **9**\nThe list now: [3, 1, 9]\nThe list in order: [1, 3, 9]\nNew item: **5**\nThe list now: [3, 1, 9, 5]\nThe list in order: [1, 3, 5, 9]\nNew item: **0**\nBye!\n\n</sample-output>\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "6238a67bd5eb05e3aae4e5c26875d282270f6afb2464eafd3582060755884c19",
+  "order": 71
+}

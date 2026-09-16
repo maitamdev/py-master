@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-27_taking_turns",
+  "lesson_id": "part03-3-more-loops",
+  "part": 3,
+  "tmc_name": "part03-27_taking_turns",
+  "title_original": "Taking turns",
+  "title_vi": "Thay phiên nhau",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user to type in a number. The program then prints out the positive integers between 1 and the number itself, alternating between the two ends of the range as in the examples below.\n\n<sample-output>\n\nPlease type in a number: **5**\n1\n5\n2\n4\n3\n\n</sample-output>\n\n<sample-output>\n\nPlease type in a number: **6**\n1\n6\n2\n5\n3\n4\n\n</sample-output>",
+  "description_vi": "Hãy viết chương trình yêu cầu người dùng nhập vào một số. Sau đó, chương trình in ra các số nguyên dương giữa 1 và chính số đó, xen kẽ giữa hai đầu của dãy như trong ví dụ bên dưới.\n\n<sample-output>\n\nVui lòng nhập một số: **5**\n1\n5\n2\n4\n3\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập một số: **6**\n1\n6\n2\n5\n3\n4\n\n</sample-output>",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "dbd3375ba1c9c7e0e46b22b560eaf67deaf85d033bf4474ad145874da34e9f77",
+  "order": 47
+}

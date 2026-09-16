@@ -1,0 +1,48 @@
+{
+  "part": 14,
+  "slug": "part-14",
+  "title_original": "Part 14",
+  "title_vi": "Phần 14",
+  "lessons": [
+    {
+      "id": "part14-1-game-project",
+      "slug": "1-game-project",
+      "is_index": false,
+      "title_original": "Game project",
+      "path": "/part-14/1-game-project",
+      "blocks_count": 48
+    },
+    {
+      "id": "part14-2-robot-and-boxes",
+      "slug": "2-robot-and-boxes",
+      "is_index": false,
+      "title_original": "Robot and boxes",
+      "path": "/part-14/2-robot-and-boxes",
+      "blocks_count": 41
+    },
+    {
+      "id": "part14-3-finishing-the-game",
+      "slug": "3-finishing-the-game",
+      "is_index": false,
+      "title_original": "Finishing the game",
+      "path": "/part-14/3-finishing-the-game",
+      "blocks_count": 36
+    },
+    {
+      "id": "part14-4-your-own-game",
+      "slug": "4-your-own-game",
+      "is_index": false,
+      "title_original": "Your own game",
+      "path": "/part-14/4-your-own-game",
+      "blocks_count": 34
+    },
+    {
+      "id": "part14-index",
+      "slug": "index",
+      "is_index": true,
+      "title_original": "Part 14",
+      "path": "/part-14",
+      "blocks_count": 2
+    }
+  ]
+}

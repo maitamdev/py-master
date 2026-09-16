@@ -1,0 +1,261 @@
+{
+  "id": "part11-4-more-recursion-examples",
+  "part": 11,
+  "part_slug": "part-11",
+  "slug": "4-more-recursion-examples",
+  "is_part_index": false,
+  "title_original": "More recursion examples",
+  "path": "/part-11/4-more-recursion-examples",
+  "source_path": "data/part-11/4-more-recursion-examples.md",
+  "source_hash": "94d381be79a5698ff10233cd0b4f71e499ceae184abdcd4e2aaca52edd79377c",
+  "frontmatter": {
+    "path": "/part-11/4-more-recursion-examples",
+    "title": "More recursion examples",
+    "hidden": false
+  },
+  "chunks_count": 39,
+  "raw_chunks": [
+    {
+      "raw_type": "custom_container",
+      "component_name": "text-box",
+      "attributes": {
+        "variant": "learningObjectives",
+        "name": "Learning objectives"
+      },
+      "inner_content": "After this section\n\n- You will be familiar with binary trees and some recursive algorithms used to process them",
+      "raw_source": "<text-box variant='learningObjectives' name=\"Learning objectives\">\n\nAfter this section\n\n- You will be familiar with binary trees and some recursive algorithms used to process them\n\n</text-box>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The real advantages of recursion become evident when we come across problems where iterative solutions are difficult to write. Let's take a look at _binary trees_, for instance. A binary tree is a branched structure where we have nodes, and at each node the structure branches, at most, into two child branches with nodes of their own. A binary tree could then look like this (computer science is often considered a branch of the natural sciences, but our understanding of trees is a little topsy-turvy, as you'll notice):",
+      "raw_source": "The real advantages of recursion become evident when we come across problems where iterative solutions are difficult to write. Let's take a look at _binary trees_, for instance. A binary tree is a branched structure where we have nodes, and at each node the structure branches, at most, into two child branches with nodes of their own. A binary tree could then look like this (computer science is often considered a branch of the natural sciences, but our understanding of trees is a little topsy-turvy, as you'll notice):"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "11_4_1_2.png"
+      },
+      "raw_source": "<img src=\"11_4_1_2.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Binary trees should at least theoretically be easy to handle recursively: if we want to perform some operation on every node in the tree, our algorithm simply needs to",
+      "raw_source": "Binary trees should at least theoretically be easy to handle recursively: if we want to perform some operation on every node in the tree, our algorithm simply needs to"
+    },
+    {
+      "raw_type": "list",
+      "content": "1. Process the current node\n2. Call itself on the child node on the left \n3. Call itself on the child node on the right",
+      "raw_source": "1. Process the current node\n2. Call itself on the child node on the left \n3. Call itself on the child node on the right"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "11_4_2_2e.png"
+      },
+      "raw_source": "<img src=\"11_4_2_2e.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As you can see from the image above, both the left and right \"subtrees\" are fully fledged binary trees themselves, and the only node left outside the recursive calls is the parent node, which is processed in step 1, before calling the function recursively. So, we can be sure that when the execution of the function finishes, each node has been visited exactly once.",
+      "raw_source": "As you can see from the image above, both the left and right \"subtrees\" are fully fledged binary trees themselves, and the only node left outside the recursive calls is the parent node, which is processed in step 1, before calling the function recursively. So, we can be sure that when the execution of the function finishes, each node has been visited exactly once."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "An iterative version of a binary tree traversal would be much more complicated, as we would have to somehow keep track of all the nodes we have already visited. The same principles are true for all computational tree structures, not just binary ones.",
+      "raw_source": "An iterative version of a binary tree traversal would be much more complicated, as we would have to somehow keep track of all the nodes we have already visited. The same principles are true for all computational tree structures, not just binary ones."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A binary tree is easily modelled in Python code as well. We only need to write a class definition for a single node. It has a value attribute and attributes for the left and right child nodes:",
+      "raw_source": "A binary tree is easily modelled in Python code as well. We only need to write a class definition for a single node. It has a value attribute and attributes for the left and right child nodes:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "\nclass Node:\n    \"\"\" The class represents a single node in a binary tree \"\"\"\n    def __init__(self, value, left_child:'Node' = None, right_child:'Node' = None):\n        self.value = value\n        self.left_child = left_child\n        self.right_child = right_child",
+      "raw_source": "```python\n\nclass Node:\n    \"\"\" The class represents a single node in a binary tree \"\"\"\n    def __init__(self, value, left_child:'Node' = None, right_child:'Node' = None):\n        self.value = value\n        self.left_child = left_child\n        self.right_child = right_child\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Now let's assume we want to model the following tree:",
+      "raw_source": "Now let's assume we want to model the following tree:"
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "11_4_3.png"
+      },
+      "raw_source": "<img src=\"11_4_3.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "We could achieve this with the following code:",
+      "raw_source": "We could achieve this with the following code:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "if __name__ == \"__main__\":\n    tree = Node(2)\n\n    tree.left_child = Node(3)\n    tree.left_child.left_child = Node(5)\n    tree.left_child.right_child = Node(8)\n\n    tree.right_child = Node(4)\n    tree.right_child.right_child = Node(11)",
+      "raw_source": "```python\nif __name__ == \"__main__\":\n    tree = Node(2)\n\n    tree.left_child = Node(3)\n    tree.left_child.left_child = Node(5)\n    tree.left_child.right_child = Node(8)\n\n    tree.right_child = Node(4)\n    tree.right_child.right_child = Node(11)\n```"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Recursive binary tree algorithms",
+      "raw_source": "## Recursive binary tree algorithms"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "First, let's take a look at an algorithm which prints out all the nodes in a binary tree one by one. In these following examples we will be working with the binary tree defined above.",
+      "raw_source": "First, let's take a look at an algorithm which prints out all the nodes in a binary tree one by one. In these following examples we will be working with the binary tree defined above."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The argument to the printing function is the root node of the binary tree. This is the node at the very top in our illustration above. All other nodes are _children_ to this node:",
+      "raw_source": "The argument to the printing function is the root node of the binary tree. This is the node at the very top in our illustration above. All other nodes are _children_ to this node:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "\ndef print_nodes(root: Node):\n    print(root.value)\n\n    if root.left_child is not None:\n        print_nodes(root.left_child)\n\n    if root.right_child is not None:\n        print_nodes(root.right_child)\n",
+      "raw_source": "```python\n\ndef print_nodes(root: Node):\n    print(root.value)\n\n    if root.left_child is not None:\n        print_nodes(root.left_child)\n\n    if root.right_child is not None:\n        print_nodes(root.right_child)\n\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The function prints the value of the node passed as an argument, and then calls itself on the left and right child nodes, assuming the nodes are defined. This is a very simple algorithm, but it efficiently and reliably traverses all nodes in the tree, no matter the size of the tree. Crucially, no node is visited twice. Each value is printed only once.",
+      "raw_source": "The function prints the value of the node passed as an argument, and then calls itself on the left and right child nodes, assuming the nodes are defined. This is a very simple algorithm, but it efficiently and reliably traverses all nodes in the tree, no matter the size of the tree. Crucially, no node is visited twice. Each value is printed only once."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "If we pass the root node `tree` of the binary tree illustrated above as an argument to the function, it prints out",
+      "raw_source": "If we pass the root node `tree` of the binary tree illustrated above as an argument to the function, it prints out"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "sample-output",
+      "attributes": {},
+      "inner_content": "2\n3\n5\n8\n4\n11",
+      "raw_source": "<sample-output>\n\n2\n3\n5\n8\n4\n11\n\n</sample-output>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "As you can see from the order of the nodesin the printout, the algorithm first moves down the \"left leg\" of the tree down to the very bottom, and from there traverses the other nodes in order.",
+      "raw_source": "As you can see from the order of the nodesin the printout, the algorithm first moves down the \"left leg\" of the tree down to the very bottom, and from there traverses the other nodes in order."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Similarly, we can write an algorithm for calculating the sum of all the values stored in the nodes of the tree:",
+      "raw_source": "Similarly, we can write an algorithm for calculating the sum of all the values stored in the nodes of the tree:"
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def sum_of_nodes(root: Node):\n    node_sum = root.value\n\n    if root.left_child is not None:\n        node_sum += sum_of_nodes(root.left_child)\n\n    if root.right_child is not None:\n        node_sum += sum_of_nodes(root.right_child)\n\n    return node_sum",
+      "raw_source": "```python\ndef sum_of_nodes(root: Node):\n    node_sum = root.value\n\n    if root.left_child is not None:\n        node_sum += sum_of_nodes(root.left_child)\n\n    if root.right_child is not None:\n        node_sum += sum_of_nodes(root.right_child)\n\n    return node_sum\n```"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "The variable `node_sum` is initialised to equal the value of the current node. The value in the variable is then augmented by recursive calls to the node sums of the left and right child trees (first making sure they exist, of course). This result is then returned",
+      "raw_source": "The variable `node_sum` is initialised to equal the value of the current node. The value in the variable is then augmented by recursive calls to the node sums of the left and right child trees (first making sure they exist, of course). This result is then returned"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Greatest node",
+        "tmcname": "part11-16_greatest_node"
+      },
+      "inner_content": "Please write a function named `greatest_node(root: Node)` which takes the root node of a binary tree as its argument.\n\nThe function should return the value of the node with the greatest value within the tree. The tree should be traversed recursively.\n\nHint: the function `sum_of_nodes` in the example above may come in handy.\n\nAn example of how the function should work:\n\n```python\nif __name__ == \"__main__\":\n    tree = Node(2)\n\n    tree.left_child = Node(3)\n    tree.left_child.left_child = Node(5)\n    tree.left_child.right_child = Node(8)\n\n    tree.right_child = Node(4)\n    tree.right_child.right_child = Node(11)\n\n    print(greatest_node(tree))\n```\n\n<sample-output>\n\n11\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Greatest node' tmcname='part11-16_greatest_node'>\n\nPlease write a function named `greatest_node(root: Node)` which takes the root node of a binary tree as its argument.\n\nThe function should return the value of the node with the greatest value within the tree. The tree should be traversed recursively.\n\nHint: the function `sum_of_nodes` in the example above may come in handy.\n\nAn example of how the function should work:\n\n```python\nif __name__ == \"__main__\":\n    tree = Node(2)\n\n    tree.left_child = Node(3)\n    tree.left_child.left_child = Node(5)\n    tree.left_child.right_child = Node(8)\n\n    tree.right_child = Node(4)\n    tree.right_child.right_child = Node(11)\n\n    print(greatest_node(tree))\n```\n\n<sample-output>\n\n11\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "A sorted binary tree",
+      "raw_source": "## A sorted binary tree"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "A binary tree is especially useful when the nodes are sorted in a certain way. This makes finding nodes in the tree fast and efficient.",
+      "raw_source": "A binary tree is especially useful when the nodes are sorted in a certain way. This makes finding nodes in the tree fast and efficient."
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's take a look a tree which is sorted as follows: the left child of each node is smaller than the node itself, and the right child is correspondingly greater.",
+      "raw_source": "Let's take a look a tree which is sorted as follows: the left child of each node is smaller than the node itself, and the right child is correspondingly greater."
+    },
+    {
+      "raw_type": "image",
+      "attributes": {
+        "src": "11_4_1_2.png"
+      },
+      "raw_source": "<img src=\"11_4_1_2.png\">"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Now we can write a recursive algorithm for searching for nodes. The idea is very similar to the binary search from the previous section: if the current node is the node we are looking for, return `True`. Else, continue recursively with either the left or the right child tree. If the node is not defined, return `False`.",
+      "raw_source": "Now we can write a recursive algorithm for searching for nodes. The idea is very similar to the binary search from the previous section: if the current node is the node we are looking for, return `True`. Else, continue recursively with either the left or the right child tree. If the node is not defined, return `False`."
+    },
+    {
+      "raw_type": "code",
+      "language": "python",
+      "code": "def find_node(root: Node, value):\n    if root is None:\n        return False\n\n    if value == root.value:\n        return True\n\n    if value > root.value:\n        return find_node(root.right_child, value)\n\n    return find_node(root.left_child, value)",
+      "raw_source": "```python\ndef find_node(root: Node, value):\n    if root is None:\n        return False\n\n    if value == root.value:\n        return True\n\n    if value > root.value:\n        return find_node(root.right_child, value)\n\n    return find_node(root.left_child, value)\n```"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Bosses and subordinates",
+        "tmcname": "part11-17_bosses_and_subordinates"
+      },
+      "inner_content": "The class `Employee` models an employee of a company:\n\n```python\nclass Employee:\n    def __init__(self, name: str):\n        self.name = name\n        self.subordinates = []\n\n    def add_subordinate(self, employee: 'Employee'):\n        self.subordinates.append(employee)\n```\n\nPlease write a function named `count_subordinates(employee: Employee)` which recursively counts the number of subordinates each employee has.\n\nAn example of the function in action:\n\n```python\nif __name__ == \"__main__\":\n    t1 = Employee(\"Sally\")\n    t2 = Employee(\"Eric\")\n    t3 = Employee(\"Matthew\")\n    t4 = Employee(\"Emily\")\n    t5 = Employee(\"Adele\")\n    t6 = Employee(\"Claire\")\n    t1.add_subordinate(t4)\n    t1.add_subordinate(t6)\n    t4.add_subordinate(t2)\n    t4.add_subordinate(t3)\n    t4.add_subordinate(t5)\n    print(count_subordinates(t1))\n    print(count_subordinates(t4))\n    print(count_subordinates(t5))\n```\n\n<sample-output>\n\n5\n3\n0\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Bosses and subordinates' tmcname='part11-17_bosses_and_subordinates'>\n\nThe class `Employee` models an employee of a company:\n\n```python\nclass Employee:\n    def __init__(self, name: str):\n        self.name = name\n        self.subordinates = []\n\n    def add_subordinate(self, employee: 'Employee'):\n        self.subordinates.append(employee)\n```\n\nPlease write a function named `count_subordinates(employee: Employee)` which recursively counts the number of subordinates each employee has.\n\nAn example of the function in action:\n\n```python\nif __name__ == \"__main__\":\n    t1 = Employee(\"Sally\")\n    t2 = Employee(\"Eric\")\n    t3 = Employee(\"Matthew\")\n    t4 = Employee(\"Emily\")\n    t5 = Employee(\"Adele\")\n    t6 = Employee(\"Claire\")\n    t1.add_subordinate(t4)\n    t1.add_subordinate(t6)\n    t4.add_subordinate(t2)\n    t4.add_subordinate(t3)\n    t4.add_subordinate(t5)\n    print(count_subordinates(t1))\n    print(count_subordinates(t4))\n    print(count_subordinates(t5))\n```\n\n<sample-output>\n\n5\n3\n0\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "heading",
+      "level": 2,
+      "content": "Revisiting the times before recursion",
+      "raw_source": "## Revisiting the times before recursion"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Let's finish off this part of the material with a slightly larger exercise concentrating on object oriented programming principles. We do not recommend using recursion in this series of tasks, but list comprehension techniques will come in useful.",
+      "raw_source": "Let's finish off this part of the material with a slightly larger exercise concentrating on object oriented programming principles. We do not recommend using recursion in this series of tasks, but list comprehension techniques will come in useful."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "OrderBook",
+        "tmcname": "part11-18_order_book"
+      },
+      "inner_content": "In this exercise you will write two different classes, which will in turn form the backbone of the programming exercise which follows this one, where you will write an interactive application.\n\n## Task\n\nPlease write a class named `Task` which models a single task in a software company's list of tasks. Tasks have\n- a description\n- an estimate of the hours required for completing the task\n- the name of the programmer assigned to the task\n- a field for keeping track of whether the task is finished\n- a unique identifier\n\nThe class is used as follows:\n\n```python\nt1 = Task(\"program hello world\", \"Eric\", 3)\nprint(t1.id, t1.description, t1.programmer, t1.workload)\nprint(t1)\nprint(t1.is_finished())\nt1.mark_finished()\nprint(t1)\nprint(t1.is_finished())\nt2 = Task(\"program webstore\", \"Adele\", 10)\nt3 = Task(\"program mobile app for workload accounting\", \"Eric\", 25)\nprint(t2)\nprint(t3)\n```\n\n<sample-output>\n\n1 program hello world Eric 3\n1: program hello world (3 hours), programmer Eric NOT FINISHED\nFalse\n1: program hello world (3 hours), programmer Eric FINISHED\nTrue\n2: program webstore (10 hours), programmer Adele NOT FINISHED\n3: program mobile app for workload accounting (25 hours), programmer Eric NOT FINISHED\n\n</sample-output>\n\nSome clarifications:\n- the state of the task (finished or not yet finished) can be checked with the function `is_finished(self)` which returns a Boolean value\n- a task is not finished when it is created\n- a task is marked as finished by calling the method `mark_finished(self)`\n- the id of a task is a running number which starts with 1. The id of the first task is 1, the id of the second is 2, and so forth.\n\n**Hint**: `id` can be implemented as a [class variable](/part-9/5-class-attributes#class-variables).\n\n## OrderBook\n\nPlease write a class named `OrderBook` which collects all the tasks ordered from the software company. The tasks should be modelled with the class `Task` you just wrote.\n\nThe basic version of an OrderBook is used as follows:\n\n```python\norders = OrderBook()\norders.add_order(\"program webstore\", \"Adele\", 10)\norders.add_order(\"program mobile app for workload accounting\", \"Eric\", 25)\norders.add_order(\"program app for practising mathematics\", \"Adele\", 100)\n\nfor order in orders.all_orders():\n    print(order)\n\nprint()\n\nfor programmer in orders.programmers():\n    print(programmer)\n```\n\n<sample-output>\n\n1: program webstore (10 hours), programmer Adele NOT FINISHED\n2: program mobile app for workload accounting (25 hours), programmer Eric NOT FINISHED\n3: program app for practising mathematics (100 hours), programmer Adele NOT FINISHED\n\nAdele\nEric\n\n</sample-output>\n\nAt this stage your `OrderBook` should provide three methods:\n- `add_order(self, description, programmer, workload)` which adds a new order to the OrderBook. An OrderBook stores the orders internally as `Task` objects. NB: the method should take exactly the arguments mentioned, or else the automated tests will not work correctly.\n- `all_orders(self)` returns a list of all the tasks stored in the OrderBook\n- `programmers(self)` returns a list of the names of all the programmers with tasks stored in the OrderBook. The list should contain each programmer only once\n\n**Hint:** an easy method for removing duplicates is handling the list initially as a [set](https://docs.python.org/3.8/library/stdtypes.html#set). A set is a collection of items where each unique item appears only once. A `set` can be then converted back into a list, and we can then be sure each item is now unique:\n\n```python\nmy_list = [1,1,3,6,4,1,3]\nmy_list2 = list(set(my_list))\nprint(my_list)\nprint(my_list2)\n```\n\n<sample-output>\n\n[1, 1, 3, 6, 4, 1, 3]\n[1, 3, 4, 6]\n\n</sample-output>\n\n## Some more features for OrderBook\n\nPlease write three more methods in your `OrderBook` class.\n\nThe method `mark_finished(self, id: int)` takes the id of the task as its argument and marks the relevant task as finished:\n\n```python\norders = OrderBook()\norders.add_order(\"program webstore\", \"Adele\", 10)\norders.add_order(\"program mobile app for workload accounting\", \"Eric\", 25)\norders.add_order(\"program app for practising mathematics\", \"Adele\", 100)\n\norders.mark_finished(1)\norders.mark_finished(2)\n\nfor order in orders.all_orders():\n    print(order)\n```\n\n<sample-output>\n\n1: program webstore (10 hours), programmer Adele FINISHED\n2: program mobile app for workload accounting (25 hours), programmer Eric FINISHED\n3: program app for practising mathematics (100 hours), programmer Adele NOT FINISHED\n\n</sample-output>\n\nIf there is no task with the given id, the method should raise a `ValueError` exception. If you need a refresher on raising exceptions, please have a look at [part 6](/part-6/3-errors#raising-exceptions).\n\nThe methods `finished_orders(self)` and `unfinished_orders(self)` work as expected: both return a list containing the relevant tasks from the OrderBook.\n\n## Finishing touches to OrderBook\n\nPlease write one last method in your `OrderBook` class: `status_of_programmer(self, programmer: str)` which returns a _tuple_. The tuple should contain the number of finished and unfinished tasks the programmer has assigned to them, along with the estimated hours in both categories.\n\n```python\norders = OrderBook()\norders.add_order(\"program webstore\", \"Adele\", 10)\norders.add_order(\"program mobile app for workload accounting\", \"Adele\", 25)\norders.add_order(\"program app for practising mathematics\", \"Adele\", 100)\norders.add_order(\"program the next facebook\", \"Eric\", 1000)\n\norders.mark_finished(1)\norders.mark_finished(2)\n\nstatus = orders.status_of_programmer(\"Adele\")\nprint(status)\n```\n\n<sample-output>\n\n(2, 1, 35, 100)\n\n</sample-output>\n\nThe first item in the tuple is the number of _finished_ tasks, while the second item is the number of _unfinished_ tasks. The third and fourth items are the sums of workload estimates for the finished and unfinished tasks, respectively.\n\nIf there is no programmer with the given name, the method should raise a `ValueError` exception.",
+      "raw_source": "<programming-exercise name='OrderBook' tmcname='part11-18_order_book'>\n\nIn this exercise you will write two different classes, which will in turn form the backbone of the programming exercise which follows this one, where you will write an interactive application.\n\n## Task\n\nPlease write a class named `Task` which models a single task in a software company's list of tasks. Tasks have\n- a description\n- an estimate of the hours required for completing the task\n- the name of the programmer assigned to the task\n- a field for keeping track of whether the task is finished\n- a unique identifier\n\nThe class is used as follows:\n\n```python\nt1 = Task(\"program hello world\", \"Eric\", 3)\nprint(t1.id, t1.description, t1.programmer, t1.workload)\nprint(t1)\nprint(t1.is_finished())\nt1.mark_finished()\nprint(t1)\nprint(t1.is_finished())\nt2 = Task(\"program webstore\", \"Adele\", 10)\nt3 = Task(\"program mobile app for workload accounting\", \"Eric\", 25)\nprint(t2)\nprint(t3)\n```\n\n<sample-output>\n\n1 program hello world Eric 3\n1: program hello world (3 hours), programmer Eric NOT FINISHED\nFalse\n1: program hello world (3 hours), programmer Eric FINISHED\nTrue\n2: program webstore (10 hours), programmer Adele NOT FINISHED\n3: program mobile app for workload accounting (25 hours), programmer Eric NOT FINISHED\n\n</sample-output>\n\nSome clarifications:\n- the state of the task (finished or not yet finished) can be checked with the function `is_finished(self)` which returns a Boolean value\n- a task is not finished when it is created\n- a task is marked as finished by calling the method `mark_finished(self)`\n- the id of a task is a running number which starts with 1. The id of the first task is 1, the id of the second is 2, and so forth.\n\n**Hint**: `id` can be implemented as a [class variable](/part-9/5-class-attributes#class-variables).\n\n## OrderBook\n\nPlease write a class named `OrderBook` which collects all the tasks ordered from the software company. The tasks should be modelled with the class `Task` you just wrote.\n\nThe basic version of an OrderBook is used as follows:\n\n```python\norders = OrderBook()\norders.add_order(\"program webstore\", \"Adele\", 10)\norders.add_order(\"program mobile app for workload accounting\", \"Eric\", 25)\norders.add_order(\"program app for practising mathematics\", \"Adele\", 100)\n\nfor order in orders.all_orders():\n    print(order)\n\nprint()\n\nfor programmer in orders.programmers():\n    print(programmer)\n```\n\n<sample-output>\n\n1: program webstore (10 hours), programmer Adele NOT FINISHED\n2: program mobile app for workload accounting (25 hours), programmer Eric NOT FINISHED\n3: program app for practising mathematics (100 hours), programmer Adele NOT FINISHED\n\nAdele\nEric\n\n</sample-output>\n\nAt this stage your `OrderBook` should provide three methods:\n- `add_order(self, description, programmer, workload)` which adds a new order to the OrderBook. An OrderBook stores the orders internally as `Task` objects. NB: the method should take exactly the arguments mentioned, or else the automated tests will not work correctly.\n- `all_orders(self)` returns a list of all the tasks stored in the OrderBook\n- `programmers(self)` returns a list of the names of all the programmers with tasks stored in the OrderBook. The list should contain each programmer only once\n\n**Hint:** an easy method for removing duplicates is handling the list initially as a [set](https://docs.python.org/3.8/library/stdtypes.html#set). A set is a collection of items where each unique item appears only once. A `set` can be then converted back into a list, and we can then be sure each item is now unique:\n\n```python\nmy_list = [1,1,3,6,4,1,3]\nmy_list2 = list(set(my_list))\nprint(my_list)\nprint(my_list2)\n```\n\n<sample-output>\n\n[1, 1, 3, 6, 4, 1, 3]\n[1, 3, 4, 6]\n\n</sample-output>\n\n## Some more features for OrderBook\n\nPlease write three more methods in your `OrderBook` class.\n\nThe method `mark_finished(self, id: int)` takes the id of the task as its argument and marks the relevant task as finished:\n\n```python\norders = OrderBook()\norders.add_order(\"program webstore\", \"Adele\", 10)\norders.add_order(\"program mobile app for workload accounting\", \"Eric\", 25)\norders.add_order(\"program app for practising mathematics\", \"Adele\", 100)\n\norders.mark_finished(1)\norders.mark_finished(2)\n\nfor order in orders.all_orders():\n    print(order)\n```\n\n<sample-output>\n\n1: program webstore (10 hours), programmer Adele FINISHED\n2: program mobile app for workload accounting (25 hours), programmer Eric FINISHED\n3: program app for practising mathematics (100 hours), programmer Adele NOT FINISHED\n\n</sample-output>\n\nIf there is no task with the given id, the method should raise a `ValueError` exception. If you need a refresher on raising exceptions, please have a look at [part 6](/part-6/3-errors#raising-exceptions).\n\nThe methods `finished_orders(self)` and `unfinished_orders(self)` work as expected: both return a list containing the relevant tasks from the OrderBook.\n\n## Finishing touches to OrderBook\n\nPlease write one last method in your `OrderBook` class: `status_of_programmer(self, programmer: str)` which returns a _tuple_. The tuple should contain the number of finished and unfinished tasks the programmer has assigned to them, along with the estimated hours in both categories.\n\n```python\norders = OrderBook()\norders.add_order(\"program webstore\", \"Adele\", 10)\norders.add_order(\"program mobile app for workload accounting\", \"Adele\", 25)\norders.add_order(\"program app for practising mathematics\", \"Adele\", 100)\norders.add_order(\"program the next facebook\", \"Eric\", 1000)\n\norders.mark_finished(1)\norders.mark_finished(2)\n\nstatus = orders.status_of_programmer(\"Adele\")\nprint(status)\n```\n\n<sample-output>\n\n(2, 1, 35, 100)\n\n</sample-output>\n\nThe first item in the tuple is the number of _finished_ tasks, while the second item is the number of _unfinished_ tasks. The third and fourth items are the sums of workload estimates for the finished and unfinished tasks, respectively.\n\nIf there is no programmer with the given name, the method should raise a `ValueError` exception.\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "programming-exercise",
+      "attributes": {
+        "name": "Order book application",
+        "tmcname": "part11-19_order_book_application"
+      },
+      "inner_content": "In this exercise you will create an interactive application for administering the tasks ordered from a software company. The implementation is completely up to you, but you may use the building blocks from the previous exercise in your application. The examples in the [last section of part 10](/part-10/4-application-development) can also prove useful.\n\n## Without error handling\n\nThe application should work _exactly_ as follows:\n\n<sample-output>\n\ncommands:\n0 exit\n1 add order\n2 list finished tasks\n3 list unfinished tasks\n4 mark task as finished\n5 programmers\n6 status of programmer\n\ncommand: **1**\ndescription: **program the next facebook**\nprogrammer and workload estimate: **jonah 1000**\nadded!\n\ncommand: **1**\ndescription: **program mobile app for workload accounting**\nprogrammer and workload estimate: **eric 25**\nadded!\n\ncommand: **1**\ndescription: **program an app for music theory revision**\nprogrammer and workload estimate: **nina 12**\nadded!\n\ncommand: **1**\ndescription: **program the next twitter**\nprogrammer and workload estimate: **jonah 55**\nadded!\n\ncommand: **2**\nno finished tasks\n\ncommand: **3**\n1: program the next facebook (1000 hours), programmer jonah NOT FINISHED\n2: program mobile app for workload accounting (25 hours), programmer eric NOT FINISHED\n3: program an app for music theory revision (12 hours), programmer nina NOT FINISHED\n4: program the next twitter (55 hours), programmer jonah NOT FINISHED\n\ncommand: **4**\nid: **2**\nmarked as finished\n\ncommand: **4**\nid: **4**\nmarked as finished\n\ncommand: **2**\n2: program mobile app for workload accounting (25 hours), programmer eric FINISHED\n4: program the next twitter (55 hours), programmer jonah FINISHED\n\ncommand: **3**\n1: program the next facebook (1000 hours), programmer jonah NOT FINISHED\n3: program an app for music theory revision (12 hours), programmer nina NOT FINISHED\n\ncommand: **5**\njonah\neric\nnina\n\ncommand: **6**\nprogrammer: **jonah**\ntasks: finished 1 not finished 1, hours: done 55 scheduled 1000\n\n</sample-output>\n\nThe first exercise point is granted for a working application when all user input is flawless.\n\n## Handling errors in user input\n\nTo gain the second exercise point for this exercise your application is expected to recover from erroneus user input. Any input which does not follow the specified format should produce an error message _erroneous input_, and result in yet another repeat of the loop asking for a new command:\n\n<sample-output>\n\ncommand: **1**\ndescription: **program mobile app for workload accounting**\nprogrammer and workload estimate: **eric xxx**\nerroneous input\n\ncommand: **1**\ndescription: **program mobile app for workload accounting**\nprogrammer and workload estimate: **eric**\nerroneous input\n\ncommand: **4**\nid: **1000000**\nerroneous input\n\ncommand: **4**\nid: **XXXX**\nerroneous input\n\ncommand: **6**\nprogrammer: **unknownprogrammer**\nerroneous input\n\n</sample-output>",
+      "raw_source": "<programming-exercise name='Order book application' tmcname='part11-19_order_book_application'>\n\nIn this exercise you will create an interactive application for administering the tasks ordered from a software company. The implementation is completely up to you, but you may use the building blocks from the previous exercise in your application. The examples in the [last section of part 10](/part-10/4-application-development) can also prove useful.\n\n## Without error handling\n\nThe application should work _exactly_ as follows:\n\n<sample-output>\n\ncommands:\n0 exit\n1 add order\n2 list finished tasks\n3 list unfinished tasks\n4 mark task as finished\n5 programmers\n6 status of programmer\n\ncommand: **1**\ndescription: **program the next facebook**\nprogrammer and workload estimate: **jonah 1000**\nadded!\n\ncommand: **1**\ndescription: **program mobile app for workload accounting**\nprogrammer and workload estimate: **eric 25**\nadded!\n\ncommand: **1**\ndescription: **program an app for music theory revision**\nprogrammer and workload estimate: **nina 12**\nadded!\n\ncommand: **1**\ndescription: **program the next twitter**\nprogrammer and workload estimate: **jonah 55**\nadded!\n\ncommand: **2**\nno finished tasks\n\ncommand: **3**\n1: program the next facebook (1000 hours), programmer jonah NOT FINISHED\n2: program mobile app for workload accounting (25 hours), programmer eric NOT FINISHED\n3: program an app for music theory revision (12 hours), programmer nina NOT FINISHED\n4: program the next twitter (55 hours), programmer jonah NOT FINISHED\n\ncommand: **4**\nid: **2**\nmarked as finished\n\ncommand: **4**\nid: **4**\nmarked as finished\n\ncommand: **2**\n2: program mobile app for workload accounting (25 hours), programmer eric FINISHED\n4: program the next twitter (55 hours), programmer jonah FINISHED\n\ncommand: **3**\n1: program the next facebook (1000 hours), programmer jonah NOT FINISHED\n3: program an app for music theory revision (12 hours), programmer nina NOT FINISHED\n\ncommand: **5**\njonah\neric\nnina\n\ncommand: **6**\nprogrammer: **jonah**\ntasks: finished 1 not finished 1, hours: done 55 scheduled 1000\n\n</sample-output>\n\nThe first exercise point is granted for a working application when all user input is flawless.\n\n## Handling errors in user input\n\nTo gain the second exercise point for this exercise your application is expected to recover from erroneus user input. Any input which does not follow the specified format should produce an error message _erroneous input_, and result in yet another repeat of the loop asking for a new command:\n\n<sample-output>\n\ncommand: **1**\ndescription: **program mobile app for workload accounting**\nprogrammer and workload estimate: **eric xxx**\nerroneous input\n\ncommand: **1**\ndescription: **program mobile app for workload accounting**\nprogrammer and workload estimate: **eric**\nerroneous input\n\ncommand: **4**\nid: **1000000**\nerroneous input\n\ncommand: **4**\nid: **XXXX**\nerroneous input\n\ncommand: **6**\nprogrammer: **unknownprogrammer**\nerroneous input\n\n</sample-output>\n\n</programming-exercise>"
+    },
+    {
+      "raw_type": "paragraph",
+      "content": "Please respond to a quick questionnaire on this part of the course.",
+      "raw_source": "Please respond to a quick questionnaire on this part of the course."
+    },
+    {
+      "raw_type": "custom_container",
+      "component_name": "quiz",
+      "attributes": {
+        "id": "6f999303-e9b3-5aa1-b91f-72283853834b"
+      },
+      "inner_content": "",
+      "raw_source": "<quiz id=\"6f999303-e9b3-5aa1-b91f-72283853834b\"></quiz>"
+    }
+  ]
+}

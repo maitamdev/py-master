@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-28_loyalty_bonus",
+  "lesson_id": "part01-5-conditional-statements",
+  "part": 1,
+  "tmc_name": "part01-28_loyalty_bonus",
+  "title_original": "Loyalty bonus",
+  "title_vi": "Tiền thưởng trung thành",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "This program calculates the end of year bonus a customer receives on their loyalty card. The bonus is calculated with the following formula:\n\n* If there are less than a hundred points on the card, the bonus is 10 %\n* In any other case the bonus is 15 %\n\nThe program should work like this:\n\n<sample-output>\n\nHow many points are on your card? **55**\nYour bonus is 10 %\nYou now have 60.5 points\n\n</sample-output>\n\nBut there is a problem with the program, so with some inputs it doesn't work quite right:\n\n<sample-output>\n\nHow many points are on your card? **95**\nYour bonus is 10 %\nYour bonus is 15 %\nYou now have 120.175 points\n\n</sample-output>\n\nPlease fix the program so that there is always either a 10 % or a 15 % bonus, but never both.",
+  "description_vi": "Chương trình này tính toán tiền thưởng cuối năm mà khách hàng nhận được từ thẻ khách hàng thân thiết của họ. Tiền thưởng được tính theo công thức sau:\n\n* Nếu có ít hơn một trăm điểm trong thẻ, tiền thưởng là 10 %\n* Trong mọi trường hợp khác, tiền thưởng là 15 %\n\nChương trình sẽ hoạt động như thế này:\n\n<sample-output>\n\nThẻ của bạn có bao nhiêu điểm? **55**\nTiền thưởng của bạn là 10%\nBây giờ bạn có 60,5 điểm\n\n</sample-output>\n\nNhưng có một vấn đề với chương trình, vì vậy với một số thông tin đầu vào, nó hoạt động không ổn định:\n\n<sample-output>\n\nThẻ của bạn có bao nhiêu điểm? **95**\nTiền thưởng của bạn là 10%\nTiền thưởng của bạn là 15%\nBây giờ bạn có 120,175 điểm\n\n</sample-output>\n\nVui lòng sửa chương trình để luôn có phần thưởng 10% hoặc 15%, nhưng không bao giờ có cả hai.",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "b6243393232bf1b636c5cf6999852c9b24849d81783f03a7579cd8717d258002",
+  "order": 54
+}

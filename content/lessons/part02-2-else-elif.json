@@ -1,0 +1,779 @@
+{
+  "id": "part02-2-else-elif",
+  "part": 2,
+  "part_slug": "part-2",
+  "slug": "2-else-elif",
+  "is_part_index": false,
+  "title_original": "More conditionals",
+  "title_vi": "Thêm điều kiện",
+  "path": "/part-2/2-else-elif",
+  "source_path": "data/part-2/2-else-elif.md",
+  "source_hash": "0cfc617ad5fad3067095b3dbbed0e1d5951b38a1c7ffd6aae9549c28787fcd95",
+  "order": 1,
+  "blocks_count": 42,
+  "blocks": [
+    {
+      "id": "blk-part02-2-else-elif-0001",
+      "type": "text_box",
+      "order": 1,
+      "source_hash": "173a56dab9d7a742fc8d0494cede2ce716696926fab010f2adafffc65c64d875",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "After this section\n\n- You will know how to create multiple branches within conditional statements\n- You will understand the purpose of `if`, `elif` and `else` statements within a conditional statement\n- You will be able to use the modulo operation `%` in Boolean expressions"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Sau phần này\n\n- Bạn sẽ biết cách tạo nhiều nhánh trong câu lệnh điều kiện\n- Bạn sẽ hiểu mục đích của câu lệnh `if`, `elif` và `else` trong câu lệnh điều kiện\n- Bạn sẽ có thể sử dụng phép toán modulo `%` trong biểu thức Boolean"
+      },
+      "metadata": {
+        "variant": "learningObjectives",
+        "name_original": "Learning objectives",
+        "name_vi": "",
+        "attributes": {
+          "variant": "learningObjectives",
+          "name": "Learning objectives"
+        }
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0002",
+      "type": "paragraph",
+      "order": 2,
+      "source_hash": "22d28272d2bc355eb2f74bb5d0619b76040c8bc2f68b99a2ba4e35ee455933ea",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at a program which asks the user to input a number, and then prints out different messages based on whether the number is negative, positive, or equal to zero:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy xem một chương trình yêu cầu người dùng nhập một số, sau đó in ra các thông báo khác nhau dựa trên việc số đó là âm, dương hay bằng 0:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-2-else-elif-0003",
+      "type": "code",
+      "order": 3,
+      "source_hash": "a4ab1aa580df5092ee2f41d4c315876dadf34e41a6e0408e98cf156d81f3e42b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\n\nif number < 0:\n    print(\"The number is negative\")\n\nif number >= 0:\n    print(\"The number is positive or zero\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\n\nif number < 0:\n    print(\"The number is negative\")\n\nif number >= 0:\n    print(\"The number is positive or zero\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "a4ab1aa580df5092ee2f41d4c315876dadf34e41a6e0408e98cf156d81f3e42b",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "5dae016942c0cf0cff0d57f96e8b2a6d025a63d75dfdd6e1c3086d3534bef078",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This looks a bit clumsy and repetitive. We only ever want to execute one of the `if` blocks, because the input will always be either below zero, or zero or above. That is, either `number < 0` or `number >= 0` is true, but never both at the same time. So, the first conditional statement actually contains all we need here. If it is true, the number is negative. If it is false, the number equals zero or is positive."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Điều này có vẻ hơi vụng về và lặp đi lặp lại. Chúng tôi chỉ muốn thực thi một trong các khối `if`, vì đầu vào sẽ luôn ở dưới 0 hoặc bằng 0 hoặc ở trên. Tức là `number < 0` hoặc `number >= 0` đều đúng nhưng không bao giờ cả hai cùng một lúc. Vì vậy, câu lệnh điều kiện đầu tiên thực sự chứa tất cả những gì chúng ta cần ở đây. Nếu đúng thì số đó là số âm. Nếu sai thì số đó bằng 0 hoặc dương."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-2-else-elif-0005",
+      "type": "paragraph",
+      "order": 5,
+      "source_hash": "50a011382fdd766142f27d9bf4956ac29283203531a1443f3616d0e5629b8016",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Instead of creating a whole another conditional statement, as in the example above, it is possible to create another branch of the same conditional statement to cover all cases _where the condition was false_. This is called the `else` statement."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thay vì tạo một câu lệnh điều kiện khác, như trong ví dụ trên, có thể tạo một nhánh khác của câu lệnh điều kiện tương tự để bao gồm tất cả các trường hợp _trong đó điều kiện là sai_. Đây được gọi là câu lệnh `else`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-2-else-elif-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "c4be20c2511d261937653b3750b5f8eafb61775589176126fb7b4d66bb8c5c62",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The previous example rewritten:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ trước được viết lại:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-2-else-elif-0007",
+      "type": "code",
+      "order": 7,
+      "source_hash": "c753b5dacda0cdd95cf53fb3968486f983ee0d066f31888956630e2657a6d081",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\n\nif number < 0:\n    print(\"The number is negative\")\nelse:\n    print(\"The number is positive or zero\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\n\nif number < 0:\n    print(\"The number is negative\")\nelse:\n    print(\"The number is positive or zero\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c753b5dacda0cdd95cf53fb3968486f983ee0d066f31888956630e2657a6d081",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0008",
+      "type": "paragraph",
+      "order": 8,
+      "source_hash": "ece58fc79c0572c60042ed4b52710b5caaf4ed050c05f54f363d547075ccec66",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "When using an if-else construction, one and exactly one of the branches will always be executed. The following picture illustrates the structure:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khi sử dụng cấu trúc if-else, một và chính xác một trong các nhánh sẽ luôn được thực thi. Hình ảnh sau đây minh họa cấu trúc:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-2-else-elif-0009",
+      "type": "image",
+      "order": 9,
+      "source_hash": "41b8a632696154cb285bbb7578e2c480c134f1dc7db229faa32e4c662ef54589",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "2_2_1.png",
+        "alt": "",
+        "attributes": {
+          "src": "2_2_1.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0010",
+      "type": "paragraph",
+      "order": 10,
+      "source_hash": "5c958f7df6ed4e889216d6c8c9aa230399814441ee25afcdefe7780f4919045a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "NB: there can never be an else branch without an if branch before it. The if-else construction as a whole forms a single _conditional statement_."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lưu ý: không bao giờ có thể có nhánh else nếu không có nhánh if trước nó. Toàn bộ cấu trúc if-else tạo thành một _câu lệnh có điều kiện_."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-2-else-elif-0011",
+      "type": "paragraph",
+      "order": 11,
+      "source_hash": "8b0f2bb99e1c92db1f818fc6b0fc62008120af53f4f066aed18f2e3851abf42a",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The following example checks whether a number given by the user is even or not. Parity can be checked with the modulo operator `%`, which produces the remainder of an integer division operation. When divided by two, if the remainder is zero, the number is even. Otherwise the number is odd."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Ví dụ sau đây kiểm tra xem một số do người dùng đưa ra có phải là số chẵn hay không. Tính chẵn lẻ có thể được kiểm tra bằng toán tử modulo `%`, toán tử này tạo ra phần còn lại của phép chia số nguyên. Khi chia cho 2, nếu số dư bằng 0 thì số đó là số chẵn. Nếu không thì số đó là số lẻ."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-2-else-elif-0012",
+      "type": "code",
+      "order": 12,
+      "source_hash": "894b0e43007e8967e985deb68d1c0fd4b77e41927ed94d349f3cc91edce10f04",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\n\nif number % 2 == 0:\n    print(\"The number is even\")\nelse:\n    print(\"The number is odd\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "number = int(input(\"Please type in a number: \"))\n\nif number % 2 == 0:\n    print(\"The number is even\")\nelse:\n    print(\"The number is odd\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "894b0e43007e8967e985deb68d1c0fd4b77e41927ed94d349f3cc91edce10f04",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0013",
+      "type": "sample_output",
+      "order": 13,
+      "source_hash": "690e0138cd1cecf9472d52276c9bff3ef9f971e5cf9ea6c7cbcfb13ad0ec025a",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in a number: **5**\nThe number is odd"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in a number: **5**\nThe number is odd"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in a number: **5**\nThe number is odd\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "3020d783fbac6bce3ef5133ce034b267be6ed3ddaec54ae4fb02362e55d70565",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Another example with string comparison:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một ví dụ khác về so sánh chuỗi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-2-else-elif-0015",
+      "type": "code",
+      "order": 15,
+      "source_hash": "c77864ae17cf4ce58749cf40820b076710ba052c57e370bbd21aa11eda804534",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "correct = \"kittycat\"\npassword = input(\"Please type in the password: \")\n\nif password == correct:\n    print(\"Welcome\")\nelse:\n    print(\"No admittance\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "correct = \"kittycat\"\npassword = input(\"Please type in the password: \")\n\nif password == correct:\n    print(\"Welcome\")\nelse:\n    print(\"No admittance\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "c77864ae17cf4ce58749cf40820b076710ba052c57e370bbd21aa11eda804534",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0016",
+      "type": "paragraph",
+      "order": 16,
+      "source_hash": "5ddf7956f5bf8d565b2389bbccdd365d8ec7271383e7c7ac3ab08ae63f724265",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "With two different inputs this should print out:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Với hai đầu vào khác nhau, nó sẽ in ra:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-2-else-elif-0017",
+      "type": "sample_output",
+      "order": 17,
+      "source_hash": "c84434d8b09734be9169207ea43f8105e3d98b2147077b9946b8eb9457c30b09",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in the password: **kittycat**\nWelcome"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in the password: **kittycat**\nWelcome"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in the password: **kittycat**\nWelcome\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0018",
+      "type": "sample_output",
+      "order": 18,
+      "source_hash": "6e2f4eda8d1c43adb86e740ec0e3950836ad3c6b95cf7b7fd53a6545178a9134",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Please type in the password: **monkey**\nNo admittance"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Please type in the password: **monkey**\nNo admittance"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nPlease type in the password: **monkey**\nNo admittance\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0019",
+      "type": "exercise",
+      "order": 19,
+      "source_hash": "e40972796cb00d730bba11e67a30cf1128cf33207fdae3147c8607b746754475",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks the user for their age. The program should then print out a message based on whether the user is of age or not, using 18 as the age of maturity.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nHow old are you? **12**\nYou are not of age!\n\n</sample-output>\n\n\n<sample-output>\n\nHow old are you? **32**\nYou are of age!\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình hỏi tuổi của người dùng. Sau đó, chương trình sẽ in ra một thông báo dựa trên việc người dùng có đủ tuổi hay không, sử dụng 18 làm độ tuổi trưởng thành.\n\nMột số ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nBạn bao nhiêu tuổi? **12**\nBạn chưa đủ tuổi!\n\n</sample-output>\n\n\n<sample-output>\n\nBạn bao nhiêu tuổi? **32**\nBạn đã đủ tuổi!\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-04_age_of_maturity",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Age of maturity",
+        "tmc_name": "part02-04_age_of_maturity",
+        "height": "400px"
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0020",
+      "type": "heading",
+      "order": 20,
+      "source_hash": "ee666290ccf493b622acd5f13e51969d8908300f3211dae6747cf8fabb2159d9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Alternative branches using the elif statement"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Các nhánh thay thế sử dụng câu lệnh Elif"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0021",
+      "type": "paragraph",
+      "order": 21,
+      "source_hash": "c6a65c10e3f689e67c74ebfe6a04a2836ed254b270cd45beab34418761da3913",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Often there are more than two options the program should account for. For example, the result of a football match could go three ways: home wins, away wins, or there is a tie."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Thường có nhiều hơn hai lựa chọn mà chương trình nên tính đến. Ví dụ: kết quả của một trận đấu bóng đá có thể diễn ra theo ba cách: đội nhà thắng, sân khách thắng hoặc hòa."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-2-else-elif-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "267227b302c3cbcccc9e556100524e40993eea7555b84137af356fdf6ef880af",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A conditional statement can be added to with an `elif` branch. It is short for the words \"else if\", which means the branch will contain an alternative to the original condition. Importantly, an `elif` statement is executed only if none of the preceding branches is executed."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một câu lệnh có điều kiện có thể được thêm vào bằng nhánh `elif`. Nó là viết tắt của từ \"else if\", nghĩa là nhánh sẽ chứa một điều kiện thay thế cho điều kiện ban đầu. Điều quan trọng là câu lệnh `elif` chỉ được thực thi nếu không có nhánh nào trước đó được thực thi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-2-else-elif-0023",
+      "type": "image",
+      "order": 23,
+      "source_hash": "312609c2a0832cb2f84373164b9a70049399b79553873a14665329dba01c1d10",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "src": "2_2_2.png",
+        "alt": "",
+        "attributes": {
+          "src": "2_2_2.png"
+        }
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "4f5fe0d56ad2c7232da2ea94471301d7713d7f88ac24554c4345a86b202446d0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Let's have a look at a program which determines the winner of a match:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta hãy xem một chương trình xác định người chiến thắng trong một trận đấu:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-2-else-elif-0025",
+      "type": "code",
+      "order": 25,
+      "source_hash": "351bec1e24dfd38b0df6e597be09ee78e423d7451c99281e65938b7e11666e05",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "goals_home = int(input(\"Home goals scored: \"))\ngoals_away = int(input(\"Away goals scored: \"))\n\nif goals_home > goals_away:\n    print(\"The home team won!\")\nelif goals_away > goals_home:\n    print(\"The away team won!\")\nelse:\n    print(\"It's a tie!\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "goals_home = int(input(\"Home goals scored: \"))\ngoals_away = int(input(\"Away goals scored: \"))\n\nif goals_home > goals_away:\n    print(\"The home team won!\")\nelif goals_away > goals_home:\n    print(\"The away team won!\")\nelse:\n    print(\"It's a tie!\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "351bec1e24dfd38b0df6e597be09ee78e423d7451c99281e65938b7e11666e05",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "4e1074b63c7c785740163c88edf57f021c33cc4d4e86ef9a50fa13bae0d27a83",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This program could print out three different statements given different inputs:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chương trình này có thể in ra ba câu lệnh khác nhau với các đầu vào khác nhau:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-2-else-elif-0027",
+      "type": "sample_output",
+      "order": 27,
+      "source_hash": "73a542cf65974d2d9a77db691cb733d7e0de185cc148fcc2a2910be428751e8b",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Home goals scored: **4**\nAway goals scored: **2**\nThe home team won!"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Home goals scored: **4**\nAway goals scored: **2**\nThe home team won!"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHome goals scored: **4**\nAway goals scored: **2**\nThe home team won!\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0028",
+      "type": "sample_output",
+      "order": 28,
+      "source_hash": "5a7cc8d44db07982b53e3b70cc559e2d59da410588a7ef507459a0afb2536723",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Home goals scored: **0**\nAway goals scored: **6**\nThe away team won!"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Home goals scored: **0**\nAway goals scored: **6**\nThe away team won!"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHome goals scored: **0**\nAway goals scored: **6**\nThe away team won!\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0029",
+      "type": "sample_output",
+      "order": 29,
+      "source_hash": "ab1bff72692fc014f66be0718ceeedb8ad2bdef33f17ddf3707eb8a4d7b01fa9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Home goals scored: **3**\nAway goals scored: **3**\nIt's a tie!"
+      },
+      "translation": {
+        "language": "text",
+        "content": "Home goals scored: **3**\nAway goals scored: **3**\nIt's a tie!"
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHome goals scored: **3**\nAway goals scored: **3**\nIt's a tie!\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0030",
+      "type": "paragraph",
+      "order": 30,
+      "source_hash": "80e42f872d347c9f5422a539dec50bb9d2c2f55acccd6fd70112bf979ad91513",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "In the above example there are three alternative branches, exactly one of which will always be executed. However, there is no limit to the number of `elif` branches a conditional statement can contain, and the `else` branch is not mandatory."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trong ví dụ trên có ba nhánh thay thế, chính xác một trong số đó sẽ luôn được thực thi. Tuy nhiên, không có giới hạn về số nhánh `elif` mà một câu lệnh điều kiện có thể chứa và nhánh `else` là không bắt buộc."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-2-else-elif-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "ad11f9f47b67af67a2a0abae77c4506c422ee40e2537fb4fac88981170c0f483",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "This is also a valid conditional statement:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Đây cũng là một tuyên bố có điều kiện hợp lệ:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-2-else-elif-0032",
+      "type": "code",
+      "order": 32,
+      "source_hash": "f35b459cd4e4803729f765f665d80653a58902c83008f0f3c20673fba8db8432",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "print(\"Holiday calendar\")\ndate = input(\"What is the date today? \")\n\nif date == \"Dec 26\":\n    print(\"It's Boxing Day\")\nelif date == \"Dec 31\":\n    print(\"It's Hogmanay\")\nelif date == \"Jan 1\":\n    print(\"It's New Year's Day\")\n\nprint(\"Thanks and bye.\")"
+      },
+      "translation": {
+        "language": "code",
+        "content": "print(\"Holiday calendar\")\ndate = input(\"What is the date today? \")\n\nif date == \"Dec 26\":\n    print(\"It's Boxing Day\")\nelif date == \"Dec 31\":\n    print(\"It's Hogmanay\")\nelif date == \"Jan 1\":\n    print(\"It's New Year's Day\")\n\nprint(\"Thanks and bye.\")"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "f35b459cd4e4803729f765f665d80653a58902c83008f0f3c20673fba8db8432",
+        "length_lines": 11
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0033",
+      "type": "sample_output",
+      "order": 33,
+      "source_hash": "718d18ea5d8e7feaa3f70668f25814c102ee54c1fe622659831aa1c2631e0a0d",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Holiday calendar\nWhat is the date today? **Dec 31**\nIt's Hogmanay\nThanks and bye."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Holiday calendar\nWhat is the date today? **Dec 31**\nIt's Hogmanay\nThanks and bye."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHoliday calendar\nWhat is the date today? **Dec 31**\nIt's Hogmanay\nThanks and bye.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0034",
+      "type": "paragraph",
+      "order": 34,
+      "source_hash": "c9c5bc2434534a91bcc85856f07533abb0013278206906bcc2ee54f314b46bde",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Notice the previous example has no `else` branch. If the user inputs a date which is not mentioned in any of the `if` or `elif` branches, or inputs a date in a different format, none of the three branches of the conditional statement is executed."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lưu ý ví dụ trước không có nhánh `else`. Nếu người dùng nhập một ngày không được đề cập trong bất kỳ nhánh `if` hoặc `elif` nào hoặc nhập ngày ở định dạng khác, thì cả ba nhánh của câu lệnh điều kiện đều không được thực thi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-2-else-elif-0035",
+      "type": "sample_output",
+      "order": 35,
+      "source_hash": "f5231b2fc5f01e8e7547a92b76d6ff380a9b988ec384aa195a63ca15129c4401",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "text",
+        "content": "Holiday calendar\nWhat is the date today? **Dec 25**\nThanks and bye."
+      },
+      "translation": {
+        "language": "text",
+        "content": "Holiday calendar\nWhat is the date today? **Dec 25**\nThanks and bye."
+      },
+      "metadata": {
+        "raw_source": "<sample-output>\n\nHoliday calendar\nWhat is the date today? **Dec 25**\nThanks and bye.\n\n</sample-output>"
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0036",
+      "type": "exercise",
+      "order": 36,
+      "source_hash": "f09adf45ed7d4b1125c780c23d295f7cf745d1e3b1ab399622e3ba302d144cfd",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks for two integer numbers. The program should then print out whichever is greater. If the numbers are equal, the program should print a different message.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nPlease type in the first number: **5**\nPlease type in another number: **3**\nThe greater number was: 5\n\n</sample-output>\n\n<sample-output>\n\nPlease type in the first number: **5**\nPlease type in another number: **8**\nThe greater number was: 8\n\n</sample-output>\n\n<sample-output>\n\nPlease type in the first number: **5**\nPlease type in another number: **5**\nThe numbers are equal!\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình nhập hai số nguyên. Sau đó chương trình sẽ in ra giá trị nào lớn hơn. Nếu các số bằng nhau thì chương trình sẽ in ra một thông báo khác.\n\nMột số ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nVui lòng nhập số đầu tiên: **5**\nVui lòng nhập số khác: **3**\nSố lớn hơn là: 5\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập số đầu tiên: **5**\nVui lòng nhập số khác: **8**\nSố lớn hơn là: 8\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập số đầu tiên: **5**\nVui lòng nhập số khác: **5**\nCác con số đều bằng nhau!\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-05_greater_or_equal",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Greater than or equal to",
+        "tmc_name": "part02-05_greater_or_equal",
+        "height": "400px"
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0037",
+      "type": "exercise",
+      "order": 37,
+      "source_hash": "b910e79353dc92b4e61ccf0685d947ae78be214bfad5c5f47091b3f0b42f5572",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Please write a program which asks for the names and ages of two persons. The program should then print out the name of the elder.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nPerson 1:\nName: **Alan**\nAge: **26**\nPerson 2:\nName: **Ada**\nAge: **27**\nThe elder is Ada\n\n</sample-output>\n\n<sample-output>\n\nPerson 1:\nName: **Bill**\nAge: **1**\nPerson 2:\nName: **Jean**\nAge: **1**\nBill and Jean are the same age\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Hãy viết chương trình hỏi tên và tuổi của 2 người. Sau đó chương trình sẽ in ra tên của người lớn tuổi.\n\nMột số ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nNgười 1:\nTên: **Alan**\nTuổi: **26**\nNgười 2:\nTên: **Ada**\nTuổi: **27**\nAnh cả là Ada\n\n</sample-output>\n\n<sample-output>\n\nNgười 1:\nTên: **Bill**\nTuổi: **1**\nNgười 2:\nTên: **Jean**\nTuổi: **1**\nBill và Jean bằng tuổi nhau\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-06_elder",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "The elder",
+        "tmc_name": "part02-06_elder",
+        "height": "550px"
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0038",
+      "type": "exercise",
+      "order": 38,
+      "source_hash": "057e57aa31602b244605465c36c422e11a1181ffea220e4cca1c210d7c58300b",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Python comparison operators can also be used on strings. String `a` is smaller than string `b` if it comes alphabetically before `b`. Notice however that the comparison is only reliable if\n- the characters compared are of the same case, i.e. both UPPERCASE or both lowercase\n- only the standard English alphabet of a to z, or A to Z, is used.\n\nPlease write a program which asks the user for two words. The program should then print out whichever of the two comes alphabetically last.\n\nYou can assume all words will be typed in lowercase entirely.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nPlease type in the 1st word: **car**\nPlease type in the 2nd word: **scooter**\nscooter comes alphabetically last.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in the 1st word: **zorro**\nPlease type in the 2nd word: **batman**\nzorro comes alphabetically last.\n\n</sample-output>\n\n<sample-output>\n\nPlease type in the 1st word: **python**\nPlease type in the 2nd word: **python**\nYou gave the same word twice.\n\n</sample-output>"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Toán tử so sánh Python cũng có thể được sử dụng trên chuỗi. Chuỗi `a` nhỏ hơn chuỗi `b` nếu nó đứng trước `b` theo thứ tự bảng chữ cái. Tuy nhiên, hãy lưu ý rằng sự so sánh chỉ đáng tin cậy nếu\n- các ký tự được so sánh đều có cùng kiểu chữ, tức là cả chữ HOA hoặc cả chữ thường\n- chỉ sử dụng bảng chữ cái tiếng Anh tiêu chuẩn từ a đến z hoặc từ A đến Z.\n\nHãy viết một chương trình yêu cầu người dùng nhập hai từ. Sau đó, chương trình sẽ in ra bất kỳ cái nào trong hai cái đứng cuối cùng theo thứ tự bảng chữ cái.\n\nBạn có thể cho rằng tất cả các từ sẽ được gõ hoàn toàn bằng chữ thường.\n\nMột số ví dụ về hành vi dự kiến:\n\n<sample-output>\n\nVui lòng nhập từ đầu tiên: **car**\nHãy gõ từ thứ 2: **scooter**\nxe tay ga đến theo thứ tự bảng chữ cái cuối cùng.\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập từ đầu tiên: **zorro**\nHãy gõ từ thứ 2: **batman**\nzorro xuất hiện cuối cùng theo thứ tự bảng chữ cái.\n\n</sample-output>\n\n<sample-output>\n\nVui lòng nhập từ đầu tiên: **python**\nHãy gõ từ thứ 2: **python**\nBạn đã đưa ra cùng một từ hai lần.\n\n</sample-output>"
+      },
+      "metadata": {
+        "exercise_id": "ex-part02-07_alphabetically_last",
+        "exercise_type": "in-browser-programming-exercise",
+        "name": "Alphabetically last",
+        "tmc_name": "part02-07_alphabetically_last",
+        "height": "500px"
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0039",
+      "type": "paragraph",
+      "order": 39,
+      "source_hash": "d3ac25ddc7ba9779c0556d543e4994d158e16a5a359347a1321dd236f1af0b67",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "<!--"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "<!--"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-2-else-elif-0040",
+      "type": "paragraph",
+      "order": 40,
+      "source_hash": "0937af8ca0d984621994ab6ab91b7b2cf722e5cf79e7103d9f4567fc678255c7",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A quiz to review the contents of this section:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một bài kiểm tra để ôn lại nội dung của phần này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part02-2-else-elif-0041",
+      "type": "quiz",
+      "order": 41,
+      "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "en",
+        "content": ""
+      },
+      "translation": {
+        "language": "vi",
+        "content": ""
+      },
+      "metadata": {
+        "quiz_id": "82f644fe-5d89-5153-842a-11d5d11bc059",
+        "attributes": {
+          "id": "82f644fe-5d89-5153-842a-11d5d11bc059"
+        }
+      }
+    },
+    {
+      "id": "blk-part02-2-else-elif-0042",
+      "type": "paragraph",
+      "order": 42,
+      "source_hash": "5d5b9de6d9b95f3e0c950afe742a5bb39cb25f6e6e886c10603310b7bf3cba35",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "-->"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "-->"
+      },
+      "metadata": {}
+    }
+  ]
+}

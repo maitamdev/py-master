@@ -1,0 +1,16 @@
+{
+  "id": "ex-part03-32_square_of_hashes",
+  "lesson_id": "part03-4-defining-functions",
+  "part": 3,
+  "tmc_name": "part03-32_square_of_hashes",
+  "title_original": "A square of hashes",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Please write a function named `hash_square(length)`, which takes an integer argument. The function prints out a square of hash characters, and the argument specifies the length of the side of the square.\n\n```python\nhash_square(3)\nprint()\nhash_square(5)\n```\n\n<sample-output>\n\n<pre>\n###\n###\n###\n\n#####\n#####\n#####\n#####\n#####\n</pre>\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": "hash_square(3)\nprint()\nhash_square(5)",
+  "grading_data_available": false,
+  "source_hash": "879c22e8bbe4fabaea9c048a3b9455c1764cf8e929e1f31c1ab3b005317e664d",
+  "order": 70
+}

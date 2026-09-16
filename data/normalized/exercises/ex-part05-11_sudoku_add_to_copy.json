@@ -1,0 +1,16 @@
+{
+  "id": "ex-part05-11_sudoku_add_to_copy",
+  "lesson_id": "part05-2-references",
+  "part": 5,
+  "tmc_name": "part05-11_sudoku_add_to_copy",
+  "title_original": "Sudoku: add number to a copy of the grid",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "This is the very last sudoku task. This time we will create a slightly different version of the function for adding new numbers to the grid.\n\nThe function `copy_and_add(sudoku: list, row_no: int, column_no: int, number: int)` takes a two-dimensional array representing a sudoku grid, two integers referring to the row and column indexes of a single square, and a single digit between 1 and 9, as its arguments. The function should _return_ a copy of the original grid with the new digit added in the correct location. The function should _not_ change the original grid received as a parameter.\n\nThe `print_sudoku` function from the previous exercise could be useful for testing, and it is used in the example below:\n\n```python\nsudoku  = [\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0]\n]\n\ngrid_copy = copy_and_add(sudoku, 0, 0, 2)\nprint(\"Original:\")\nprint_sudoku(sudoku)\nprint()\nprint(\"Copy:\")\nprint_sudoku(grid_copy)\n```\n\n<sample-output>\n\n<pre>\nOriginal:\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n\nCopy:\n2 _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n_ _ _  _ _ _  _ _ _\n\n</pre>\n\n</sample-output>\n\n**Hint** \nWhen dealing with nested lists you should be extra careful when copying. What all needs to be explicitly copied, and where do changes actually have an effect? The [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit) is a great help here, too, although the size of the sudoku grid will make the view less orderly than usual.",
+  "description_vi": "",
+  "starter_code": "sudoku  = [\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0],\n    [0, 0, 0, 0, 0, 0, 0, 0, 0]\n]\n\ngrid_copy = copy_and_add(sudoku, 0, 0, 2)\nprint(\"Original:\")\nprint_sudoku(sudoku)\nprint()\nprint(\"Copy:\")\nprint_sudoku(grid_copy)",
+  "grading_data_available": false,
+  "source_hash": "c1ec2a243c9187067357e6ae9ed5b81dd2ab1c2c0309eb2e58f351785e000de9",
+  "order": 87
+}

@@ -1,0 +1,644 @@
+{
+  "id": "part14-3-finishing-the-game",
+  "part": 14,
+  "part_slug": "part-14",
+  "slug": "3-finishing-the-game",
+  "is_part_index": false,
+  "title_original": "Finishing the game",
+  "title_vi": "Kết thúc trò chơi",
+  "path": "/part-14/3-finishing-the-game",
+  "source_path": "data/part-14/3-finishing-the-game.md",
+  "source_hash": "18b6422327266cafa63cccbeb1131bc7907f841740e6e1bc7d9feecee3c642f4",
+  "order": 1,
+  "blocks_count": 36,
+  "blocks": [
+    {
+      "id": "blk-part14-3-finishing-the-game-0001",
+      "type": "paragraph",
+      "order": 1,
+      "source_hash": "0c7bb1670d5f1fab63d1e49399798a302218a97451f39915056e0bcbf7c6be1f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Our game is already quite functional, so it is time to add some finishing touches to it. We will add a counter for displaying the moves taken, an option to start a new game and close the game with keyboard input, and a notification for when the player succeeds in solving the game."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trò chơi của chúng tôi đã hoạt động khá tốt, vì vậy đã đến lúc thêm một số bước hoàn thiện vào nó. Chúng tôi sẽ thêm bộ đếm để hiển thị các nước đi đã thực hiện, tùy chọn để bắt đầu trò chơi mới và đóng trò chơi bằng cách nhập bằng bàn phím cũng như thông báo khi người chơi giải thành công trò chơi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0002",
+      "type": "heading",
+      "order": 2,
+      "source_hash": "432ccb7a7c6f052ab2c124b94d5ac2a5229bfe79ee73e69303b40ef6b008d697",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Move counter"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Di chuyển bộ đếm"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0003",
+      "type": "paragraph",
+      "order": 3,
+      "source_hash": "8fb9ba6bdcebeabb8d9eb4b4d01e0716e8a6d7ce03174d7279a96b36d705fcd0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The move counter near the bottom edge of the game window displaye the number of moves taken by the player so far. This can be used to find the solution with the least number of moves."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bộ đếm nước đi gần cạnh dưới cùng của cửa sổ trò chơi hiển thị số nước đi mà người chơi đã thực hiện cho đến nay. Điều này có thể được sử dụng để tìm giải pháp với số lần di chuyển ít nhất."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0004",
+      "type": "paragraph",
+      "order": 4,
+      "source_hash": "510946d915018c4b5dd15bb4d2860ca35fb0219a28c69d29b65388959ed31259",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The counter requires some shanges to the code. First, let's change the constructor so that there is adequate space for the counter, and that we have an appropriate font at our disposal in order to draw the text:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bộ đếm yêu cầu một số thay đổi đối với mã. Trước tiên, hãy thay đổi hàm tạo để có đủ không gian cho bộ đếm và chúng ta có thể sử dụng phông chữ phù hợp để vẽ văn bản:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0005",
+      "type": "code",
+      "order": 5,
+      "source_hash": "d7ed621eb9349c3025069d6f5d89dfb3a1e5eb18db760d54026e1908c481d9d0",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    def __init__(self):\n        ...\n        self.window = pygame.display.set_mode((window_width, window_height + self.scale))\n\n        self.game_font = pygame.font.SysFont(\"Arial\", 24)\n        ..."
+      },
+      "translation": {
+        "language": "code",
+        "content": "    def __init__(self):\n        ...\n        self.window = pygame.display.set_mode((window_width, window_height + self.scale))\n\n        self.game_font = pygame.font.SysFont(\"Arial\", 24)\n        ..."
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d7ed621eb9349c3025069d6f5d89dfb3a1e5eb18db760d54026e1908c481d9d0",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0006",
+      "type": "paragraph",
+      "order": 6,
+      "source_hash": "6874c97913507d4e88968345da603d7edf53d802135b81a21aecffc8cb04bb0f",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The move counter is initialized to zero at the beginning of the game. Each move increases it by one:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bộ đếm nước đi được khởi tạo về 0 khi bắt đầu trò chơi. Mỗi bước di chuyển sẽ tăng nó thêm một:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0007",
+      "type": "code",
+      "order": 7,
+      "source_hash": "8e674b9dbc9ceccd2dc23c6c394ab8aae2682f16210a8bfc8a1a6a0ee67a9cef",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    def new_game(self):\n        ...\n        self.moves = 0"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    def new_game(self):\n        ...\n        self.moves = 0"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "8e674b9dbc9ceccd2dc23c6c394ab8aae2682f16210a8bfc8a1a6a0ee67a9cef",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0008",
+      "type": "code",
+      "order": 8,
+      "source_hash": "d36635100f8a0a3d9109138bbddb79e1df988c5bbf0ddf2f865fe394d3747749",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    def move(self, move_y, move_x):\n        ...\n        self.moves += 1\n"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    def move(self, move_y, move_x):\n        ...\n        self.moves += 1\n"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "d36635100f8a0a3d9109138bbddb79e1df988c5bbf0ddf2f865fe394d3747749",
+        "length_lines": 3
+      }
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0009",
+      "type": "paragraph",
+      "order": 9,
+      "source_hash": "a94fca881a4c4bd40cd205b3f06264255a19e21e93651f0844afcdaffde0ed66",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Each time the window contents are updated, the number of moves taken shown on the screen should also be updated:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Mỗi lần nội dung cửa sổ được cập nhật, số lần di chuyển được hiển thị trên màn hình cũng sẽ được cập nhật:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0010",
+      "type": "code",
+      "order": 10,
+      "source_hash": "84b275a0541410f1049673607b04bbf901c7d5f0d2d28191f3511145cc9639f5",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    def draw_window(self):\n        ...\n        game_text = self.game_font.render(\"Moves: \" + str(self.moves), True, (255, 0, 0))\n        self.window.blit(game_text, (25, self.height * self.scale + 10))\n        ..."
+      },
+      "translation": {
+        "language": "code",
+        "content": "    def draw_window(self):\n        ...\n        game_text = self.game_font.render(\"Moves: \" + str(self.moves), True, (255, 0, 0))\n        self.window.blit(game_text, (25, self.height * self.scale + 10))\n        ..."
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "84b275a0541410f1049673607b04bbf901c7d5f0d2d28191f3511145cc9639f5",
+        "length_lines": 5
+      }
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0011",
+      "type": "heading",
+      "order": 11,
+      "source_hash": "dc14bbc5810a0178f095a766644504378b7c5bbb9c47584f266f2c5678b64a44",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "New game and exiting the game"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trò chơi mới và thoát khỏi trò chơi"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0012",
+      "type": "paragraph",
+      "order": 12,
+      "source_hash": "53b903d00484ca4f1646a2c4a19d5a7f2d0c0bd86b25a74bd4435a41a87a3e71",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Next, let's add keyboard commands for starting a new game with F2 and exiting the game with Esc. Both are rather easy to implement:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tiếp theo, hãy thêm các lệnh bàn phím để bắt đầu trò chơi mới bằng F2 và thoát trò chơi bằng Esc. Cả hai đều khá dễ thực hiện:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0013",
+      "type": "code",
+      "order": 13,
+      "source_hash": "1b3760ced164791c6e0b45ec111718bbf06c2f71baa20bede883a9b25e7576ac",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    def check_events(self):\n        ...\n                if event.key == pygame.K_F2:\n                    self.new_game()\n                if event.key == pygame.K_ESCAPE:\n                    exit()\n        ..."
+      },
+      "translation": {
+        "language": "code",
+        "content": "    def check_events(self):\n        ...\n                if event.key == pygame.K_F2:\n                    self.new_game()\n                if event.key == pygame.K_ESCAPE:\n                    exit()\n        ..."
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "1b3760ced164791c6e0b45ec111718bbf06c2f71baa20bede883a9b25e7576ac",
+        "length_lines": 7
+      }
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0014",
+      "type": "paragraph",
+      "order": 14,
+      "source_hash": "f34c821a2c5b48af61fde10c96e7e2845ff32e12ba5e8f071894d5ccc5b1e326",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "We should also add information about this functionality for the player to see:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Chúng ta cũng nên bổ sung thêm thông tin về hàm này để người chơi thấy:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0015",
+      "type": "code",
+      "order": 15,
+      "source_hash": "5aebff62e986dc1ec7fc5f15238278a62fc713bb5405dc38d0a66322dbfca5d9",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    def draw_window(self):\n        ...\n        game_text = self.game_font.render(\"F2 = new game\", True, (255, 0, 0))\n        self.window.blit(game_text, (200, self.height * self.scale + 10))\n\n        game_text = self.game_font.render(\"Esc = exit game\", True, (255, 0, 0))\n        self.window.blit(game_text, (400, self.height * self.scale + 10))\n        ..."
+      },
+      "translation": {
+        "language": "code",
+        "content": "    def draw_window(self):\n        ...\n        game_text = self.game_font.render(\"F2 = new game\", True, (255, 0, 0))\n        self.window.blit(game_text, (200, self.height * self.scale + 10))\n\n        game_text = self.game_font.render(\"Esc = exit game\", True, (255, 0, 0))\n        self.window.blit(game_text, (400, self.height * self.scale + 10))\n        ..."
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "5aebff62e986dc1ec7fc5f15238278a62fc713bb5405dc38d0a66322dbfca5d9",
+        "length_lines": 8
+      }
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0016",
+      "type": "heading",
+      "order": 16,
+      "source_hash": "edfbae59092b1357ebe498fe71fb04e915b0879e6c285418517bb0ab5b54b6f0",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Solving the game"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Giải quyết trò chơi"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0017",
+      "type": "paragraph",
+      "order": 17,
+      "source_hash": "59758404ba8154cd69473efda74f1b3b44939c27d387f194ff4903d2f04bc107",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The player has solved the game when each box is in one of the target squares. The following method takes care of checking this:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Người chơi đã giải quyết được trò chơi khi mỗi ô nằm ở một trong các ô vuông mục tiêu. Phương pháp sau đây sẽ kiểm tra điều này:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0018",
+      "type": "code",
+      "order": 18,
+      "source_hash": "46653452c4b6b16d80a123fcec708ca822a02404eb3a90d812197b4e2f79dd07",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    def game_solved(self):\n        for y in range(self.height):\n            for x in range(self.width):\n                if self.map[y][x] in [2, 6]:\n                    return False\n        return True"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    def game_solved(self):\n        for y in range(self.height):\n            for x in range(self.width):\n                if self.map[y][x] in [2, 6]:\n                    return False\n        return True"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "46653452c4b6b16d80a123fcec708ca822a02404eb3a90d812197b4e2f79dd07",
+        "length_lines": 6
+      }
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0019",
+      "type": "paragraph",
+      "order": 19,
+      "source_hash": "96e6df716434eb7dca4f0c34259d85dd1d4e638b3db75d67c7cbe4bdb23e19a9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The method goes through all the squares in the game grid. If any of the squares is a 2 (an empty target square) or a 6 (a robot in a target square) the game is not yet solved, so the method returns `False`. If no such square is present in the grid, all target squares must be occupied by boxes, the game is solved, and the method returns `True`."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Phương thức này đi qua tất cả các ô vuông trong lưới trò chơi. Nếu bất kỳ ô nào là 2 (ô mục tiêu trống) hoặc 6 (robot trong ô mục tiêu) thì trò chơi vẫn chưa được giải nên phương thức trả về `False`. Nếu không có ô vuông nào như vậy xuất hiện trong lưới thì tất cả các ô mục tiêu phải được chiếm bởi các ô, trò chơi được giải quyết và phương thức trả về `True`."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0020",
+      "type": "paragraph",
+      "order": 20,
+      "source_hash": "b6ac1f12af0a0ccc606cbb63e86714a0b23468a573cdf0c41f20ab09aac5e401",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "If the player solves the game, we should display an appropriate message with the `draw_window` method:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Nếu người chơi giải được trò chơi, chúng tôi sẽ hiển thị thông báo thích hợp bằng phương thức `draw_window`:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0021",
+      "type": "code",
+      "order": 21,
+      "source_hash": "868fcf196d2b7493bb295437a50ec94716ccf57317275cb9baff2733b5c9da05",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    def draw_window(self):\n        ...\n        if self.game_solved():\n            game_text = self.game_font.render(\"Congratulations, you solved the game!\", True, (255, 0, 0))\n            game_text_x = self.scale * self.width / 2 - game_text.get_width() / 2\n            game_text_y = self.scale * self.height / 2 - game_text.get_height() / 2\n            pygame.draw.rect(self.window, (0, 0, 0), (game_text_x, game_text_y, game_text.get_width(), game_text.get_height()))\n            self.window.blit(game_text, (game_text_x, game_text_y))\n        ..."
+      },
+      "translation": {
+        "language": "code",
+        "content": "    def draw_window(self):\n        ...\n        if self.game_solved():\n            game_text = self.game_font.render(\"Congratulations, you solved the game!\", True, (255, 0, 0))\n            game_text_x = self.scale * self.width / 2 - game_text.get_width() / 2\n            game_text_y = self.scale * self.height / 2 - game_text.get_height() / 2\n            pygame.draw.rect(self.window, (0, 0, 0), (game_text_x, game_text_y, game_text.get_width(), game_text.get_height()))\n            self.window.blit(game_text, (game_text_x, game_text_y))\n        ..."
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "868fcf196d2b7493bb295437a50ec94716ccf57317275cb9baff2733b5c9da05",
+        "length_lines": 9
+      }
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0022",
+      "type": "paragraph",
+      "order": 22,
+      "source_hash": "fe66eed3ea93c3f7339dbee0c500015e94c44cbf9680e80c639c5b2d4a2006a5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "For completeness' sake, let's also change the `move` method so that the player can no longer move when they have solved the game:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Để hoàn thiện hơn, chúng ta cũng hãy thay đổi phương thức `move` để người chơi không thể di chuyển được nữa khi đã giải quyết xong trò chơi:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0023",
+      "type": "code",
+      "order": 23,
+      "source_hash": "bbc4f711372ca98970c50b827d42ef15e8700a77974dbe395ffca7627257ebb7",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    def move(self, move_y, move_x):\n        if self.game_solved():\n            return\n        ..."
+      },
+      "translation": {
+        "language": "code",
+        "content": "    def move(self, move_y, move_x):\n        if self.game_solved():\n            return\n        ..."
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "bbc4f711372ca98970c50b827d42ef15e8700a77974dbe395ffca7627257ebb7",
+        "length_lines": 4
+      }
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0024",
+      "type": "paragraph",
+      "order": 24,
+      "source_hash": "a48fe7d6af3d177b106d29124fc4def10ca2a47d01fbb5c81d148c55386a75a9",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The player can still see the game grid and the final state of the game, however."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tuy nhiên, người chơi vẫn có thể nhìn thấy lưới trò chơi và trạng thái cuối cùng của trò chơi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0025",
+      "type": "heading",
+      "order": 25,
+      "source_hash": "b660606cdd5d120f074f0b22772cf79e4938d43ab32f5be57c2d724ca433df93",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "A hint for testing"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Một gợi ý để thử nghiệm"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0026",
+      "type": "paragraph",
+      "order": 26,
+      "source_hash": "c34f60d1752ced8b2edba4f436c4141be52e95fa9a77688d06dcf81f026d5106",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "When developing games it often happens that you'd want to check what happens in some later situation in the game. For example, in this game the moment where the game is solved is one such situation."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Khi phát triển trò chơi, bạn thường muốn kiểm tra xem điều gì sẽ xảy ra trong một số tình huống sau này trong trò chơi. Ví dụ, trong trò chơi này, thời điểm trò chơi được giải quyết là một trong những tình huống như vậy."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0027",
+      "type": "paragraph",
+      "order": 27,
+      "source_hash": "a2c8029fe272aa86f3d3d1c0f76211d4c5b41a5fb0c9a299965a85234e7dbc73",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "It can be difficult to test the correct functioning of a situation like that, as you'd normally ahve to solve the game to reach that point in the game. As programmers we can make some temporary alleviations in our games, to make it easier to test them. For example, we could add the following to make it temporarily easier to solve the game:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Có thể khó kiểm tra chức năng chính xác của một tình huống như vậy, vì bạn thường phải giải trò chơi để đạt được điểm đó trong trò chơi. Với tư cách là lập trình viên, chúng ta có thể thực hiện một số điều chỉnh tạm thời trong trò chơi của mình để giúp việc kiểm tra chúng dễ dàng hơn. Ví dụ: chúng ta có thể thêm các mục sau để tạm thời giải quyết trò chơi dễ dàng hơn:"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0028",
+      "type": "code",
+      "order": 28,
+      "source_hash": "34ec7db4ddfc4a87aced64e159437e06cba276fe06ee518c36446d74bdfb9697",
+      "translation_status": "not_applicable",
+      "original": {
+        "language": "code",
+        "content": "    def game_solved(self):\n        return True"
+      },
+      "translation": {
+        "language": "code",
+        "content": "    def game_solved(self):\n        return True"
+      },
+      "metadata": {
+        "language": "python",
+        "code_hash": "34ec7db4ddfc4a87aced64e159437e06cba276fe06ee518c36446d74bdfb9697",
+        "length_lines": 2
+      }
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0029",
+      "type": "paragraph",
+      "order": 29,
+      "source_hash": "b5bc2e5e1b94eae5cc7399016bec2a7d30cf241b8ee393f6bfe58c571ff908cb",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Now the method always returns `True`, which means that the game is \"solved\" to begin with. This makes it easy to check that the noification at the end looks good and the player can no longer move on the grid after solving. When this functionality is thoroughly tested, we can revoke the changes."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Bây giờ phương thức này luôn trả về `True`, có nghĩa là trò chơi đã được \"giải quyết\" ngay từ đầu. Điều này giúp dễ dàng kiểm tra xem thông báo ở cuối có ổn không và người chơi không thể di chuyển trên lưới sau khi giải quyết được nữa. Khi hàm này được kiểm tra kỹ lưỡng, chúng tôi có thể thu hồi các thay đổi."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0030",
+      "type": "heading",
+      "order": 30,
+      "source_hash": "3a9d5ed2a0259e9b7a7b6e97323378767d33c32acfa5e7cecef18ccf1ae64011",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Your game on GitHub?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Trò chơi của bạn trên GitHub?"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0031",
+      "type": "paragraph",
+      "order": 31,
+      "source_hash": "77a4655d5995e82470a537f8e23e8f9141a3311022e29e341826fedd63f1a117",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The game is now finished. If you want an easy way to play around with the code and images, you can retrieve the source code from GitHub:"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* [Kho mã nguồn tham khảo Sokoban Game](https://github.com)"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0032",
+      "type": "list",
+      "order": 32,
+      "source_hash": "5cafb9c746e8833cc3233fc7d5a7921c7cf8d3662b8161ac93fb8f4e51f05ff5",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "* [https://github.com/moocfi/sokoban](https://github.com/moocfi/sokoban)"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "* [Kho mã nguồn tham khảo Sokoban Game trên GitHub](https://github.com)"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0033",
+      "type": "paragraph",
+      "order": 33,
+      "source_hash": "cffa92dcdd487c53988f21fb484d644d5a09e64f64587ce69009c1ba1f9104f6",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "GitHub is a popular place for many kinds of programming projects. It can be used to store the source code and other materials of all your own programming projects as well, and your program will then be maintained through git version control, and it can be easily shared with others. You will become very familiar with git and GitHub if you continue on to other mooc.fi programming courses."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "GitHub là một nơi phổ biến cho nhiều loại dự án lập trình. Nó cũng có thể được sử dụng để lưu trữ mã nguồn và các tài liệu khác của tất cả các dự án lập trình của riêng bạn và sau đó chương trình của bạn sẽ được duy trì thông qua kiểm soát phiên bản git và có thể dễ dàng chia sẻ với người khác. Bạn sẽ trở nên rất quen thuộc với git và GitHub nếu tiếp tục tham gia các dự án lập trình thực tế trong tương lai."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0034",
+      "type": "heading",
+      "order": 34,
+      "source_hash": "2ce572ed33765cbfe385a66b20c8b6a08b609395880a43b545d2a32e7c913bc1",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "How many moves are required?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Cần bao nhiêu bước di chuyển?"
+      },
+      "metadata": {
+        "level": 2
+      }
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0035",
+      "type": "paragraph",
+      "order": 35,
+      "source_hash": "fe44649500d13df9f1bcd4f29ae6bfd8f301250cb791b3c2d19ed9387a0cded3",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "The grid in this game is quite small, but the game is not all that easy. The first challenge is simply passing the game, but the next stage is trying to do so with as few moves as possible. How short is the shortest path to a solution?"
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Lưới trong trò chơi này khá nhỏ, nhưng trò chơi không hề dễ dàng như vậy. Thử thách đầu tiên chỉ đơn giản là vượt qua trò chơi, nhưng giai đoạn tiếp theo là cố gắng thực hiện điều đó với càng ít nước đi càng tốt. Con đường ngắn nhất để tìm ra giải pháp là bao lâu?"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "blk-part14-3-finishing-the-game-0036",
+      "type": "paragraph",
+      "order": 36,
+      "source_hash": "8a261822d6aabffdbaeb24b3be30be2531ab178d3a64e824626c2115f5dfde4d",
+      "translation_status": "translated",
+      "original": {
+        "language": "en",
+        "content": "Looking for the shortest possible solution is not an easy task at all, but there are computational solutions to this as well. They are one of the subjects of the _Data Structures and Algorithms_ course."
+      },
+      "translation": {
+        "language": "vi",
+        "content": "Tìm kiếm giải pháp ngắn nhất có thể không phải là một nhiệm vụ dễ dàng chút nào, nhưng cũng có những giải pháp tính toán cho vấn đề này. Chúng là một trong những chủ đề của khóa học _Cấu trúc dữ liệu và thuật toán_."
+      },
+      "metadata": {}
+    }
+  ]
+}

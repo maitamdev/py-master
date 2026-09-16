@@ -1,0 +1,16 @@
+{
+  "id": "ex-part07-09_how_old",
+  "lesson_id": "part07-3-times-and-dates",
+  "part": 7,
+  "tmc_name": "part07-09_how_old",
+  "title_original": "How old",
+  "title_vi": "bao nhiêu tuổi",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for their date of birth, and then prints out how old the user was on the eve of the new millennium. The program should ask for the day, month and year separately, and print out the age in days. Please have a look at the examples below:\n\n<sample-output>\n\nDay: **10**\nMonth: **9**\nYear: **1979**\nYou were 7417 days old on the eve of the new millennium.\n\n</sample-output>\n\n<sample-output>\n\nDay: **28**\nMonth: **3**\nYear: **2005**\nYou weren't born yet on the eve of the new millennium.\n\n</sample-output>\n\nYou may assume all day-month-year combinations given as an argument will be valid dates. That is, there will not be a date like February 31st.",
+  "description_vi": "Hãy viết một chương trình hỏi ngày sinh của người dùng, sau đó in ra tuổi của người dùng vào đêm trước thiên niên kỷ mới. Chương trình sẽ yêu cầu ngày, tháng, năm riêng biệt và in ra tuổi theo ngày. Xin vui lòng xem các ví dụ dưới đây:\n\n<sample-output>\n\nNgày: **10**\nTháng: **9**\nNăm: **1979**\nBạn đã được 7417 ngày tuổi vào đêm trước thiên niên kỷ mới.\n\n</sample-output>\n\n<sample-output>\n\nNgày: **28**\nTháng: **3**\nNăm: **2005**\nBạn vẫn chưa được sinh ra vào đêm trước thiên niên kỷ mới.\n\n</sample-output>\n\nBạn có thể cho rằng tất cả các kết hợp ngày-tháng-năm được đưa ra làm đối số sẽ là ngày hợp lệ. Tức là sẽ không có ngày như ngày 31 tháng 2.",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "82c7a8abee72a6e67e8ec8eec09657566589018a67552354f2b102b594d0cb4f",
+  "order": 29
+}

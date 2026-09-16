@@ -1,0 +1,16 @@
+{
+  "id": "ex-part01-09_utterances",
+  "lesson_id": "part01-2-information-from-the-user",
+  "part": 1,
+  "tmc_name": "part01-09_utterances",
+  "title_original": "Fix the code: Utterances",
+  "title_vi": "Sửa mã: Cách nói",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": null,
+  "description_original": "Here is a program which should ask for three utterances and print them out, like so:\n\n<sample-output>\n\nThe 1st part: **hickory**\nThe 2nd part: **dickory**\nThe 3rd part: **dock**\nhickory-dickory-dock!\n\n</sample-output>\n\nHowever, there is something wrong with the code below. Please fix it.",
+  "description_vi": "Đây là một chương trình sẽ yêu cầu ba câu nói và in chúng ra, như sau:\n\n<sample-output>\n\nPhần 1: **hickory**\nPhần 2: **dickory**\nPhần thứ 3: **bến**\nhickory-dickory-dock!\n\n</sample-output>\n\nTuy nhiên, có điều gì đó không ổn với đoạn mã bên dưới. Hãy sửa nó.",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "3a27784e08e8caf8acd444fc760ecfa171db3101eb0b7b7d68015d538f438dd6",
+  "order": 37
+}

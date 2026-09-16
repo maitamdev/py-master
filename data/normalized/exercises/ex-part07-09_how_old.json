@@ -1,0 +1,16 @@
+{
+  "id": "ex-part07-09_how_old",
+  "lesson_id": "part07-3-times-and-dates",
+  "part": 7,
+  "tmc_name": "part07-09_how_old",
+  "title_original": "How old",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Please write a program which asks the user for their date of birth, and then prints out how old the user was on the eve of the new millennium. The program should ask for the day, month and year separately, and print out the age in days. Please have a look at the examples below:\n\n<sample-output>\n\nDay: **10**\nMonth: **9**\nYear: **1979**\nYou were 7417 days old on the eve of the new millennium.\n\n</sample-output>\n\n<sample-output>\n\nDay: **28**\nMonth: **3**\nYear: **2005**\nYou weren't born yet on the eve of the new millennium.\n\n</sample-output>\n\nYou may assume all day-month-year combinations given as an argument will be valid dates. That is, there will not be a date like February 31st.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "82c7a8abee72a6e67e8ec8eec09657566589018a67552354f2b102b594d0cb4f",
+  "order": 29
+}

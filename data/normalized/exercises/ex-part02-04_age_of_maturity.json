@@ -1,0 +1,16 @@
+{
+  "id": "ex-part02-04_age_of_maturity",
+  "lesson_id": "part02-2-else-elif",
+  "part": 2,
+  "tmc_name": "part02-04_age_of_maturity",
+  "title_original": "Age of maturity",
+  "title_vi": "",
+  "exercise_type": "in-browser-programming-exercise",
+  "height": "400px",
+  "description_original": "Please write a program which asks the user for their age. The program should then print out a message based on whether the user is of age or not, using 18 as the age of maturity.\n\nSome examples of expected behaviour:\n\n<sample-output>\n\nHow old are you? **12**\nYou are not of age!\n\n</sample-output>\n\n\n<sample-output>\n\nHow old are you? **32**\nYou are of age!\n\n</sample-output>",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "e40972796cb00d730bba11e67a30cf1128cf33207fdae3147c8607b746754475",
+  "order": 19
+}

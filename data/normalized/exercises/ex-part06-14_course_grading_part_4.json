@@ -1,0 +1,16 @@
+{
+  "id": "ex-part06-14_course_grading_part_4",
+  "lesson_id": "part06-2-writing-files",
+  "part": 6,
+  "tmc_name": "part06-14_course_grading_part_4",
+  "title_original": "Course grading, part 4",
+  "title_vi": "",
+  "exercise_type": "programming-exercise",
+  "height": null,
+  "description_original": "Let's revisit the course grading project from the previous section. \n\nAs we left if last time, the program read and processed files containing student information, completed exercises and exam results. We'll add a file containing information about the course. An example of the format of the file:\n\n<sample-data>\n\n<pre>\n\nname: Introduction to Programming\nstudy credits: 5\n</pre>\n\n</sample-data>\n\nThe program should then create two files. There should be a file called `results.txt` with the following contents:\n\n<sample-data>\n\n<pre>\nIntroduction to Programming, 5 credits\n======================================\nname                          exec_nbr  exec_pts. exm_pts.  tot_pts.  grade\npekka peloton                 21        5         9         14        0\njaana javanainen              27        6         11        17        1\nliisa virtanen                35        8         14        22        3\n</pre>\n\n</sample-data>\n\nThe statistics section is identical to the results printed out in part 3 of the project. The only addition here is the header section. \n\nAdditionally, there should be a file called `results.csv` with the following format:\n\n<sample-data>\n\n<pre>\n12345678;pekka peloton;0\n12345687;jaana javanainen;1\n12345699;liisa virtanen;3\n</pre>\n\n</sample-data>\n\nWhen the program is executed, it should look like this:\n\n<sample-output>\n\nStudent information: **students1.csv**\nExercises completed: **exercises1.csv**\nExam points: **exam_points1.csv**\nCourse information: **course1.txt**\nResults written to files results.txt and results.csv\n\n</sample-output>\n\nThat is, the program only asks for the names of the input files. All output should be written to the files. The user will only see a message confirming this.\n\n**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == \"__main__\"` block.",
+  "description_vi": "",
+  "starter_code": null,
+  "grading_data_available": false,
+  "source_hash": "9075df1eed3458f9596e24b9cd157c9233015dfa4decd13a387bb0c2f22ce964",
+  "order": 69
+}
