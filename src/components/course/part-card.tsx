@@ -23,80 +23,73 @@ export function PartCard({
   const totalLessons = lessons.length;
   const isAllCompleted = totalLessons > 0 && completedInPart === totalLessons;
 
-  // Next uncompleted lesson or first lesson
   const firstUncompleted = lessons.find((l) => !isLessonComplete(l.id)) || lessons[0];
   const targetHref = firstUncompleted
     ? `/lesson/${firstUncompleted.id}`
     : `/course/part-${part.part}`;
 
   return (
-    <div className="group relative flex flex-col bg-white dark:bg-slate-900/90 rounded-2xl border border-slate-200/90 dark:border-slate-800 p-6 hover:shadow-xl hover:border-sky-500/40 dark:hover:border-sky-500/40 transition-all duration-200">
+    <div className="group relative flex flex-col bg-white dark:bg-white/[0.02] rounded-xl border border-slate-200/80 dark:border-white/[0.06] p-5 hover:border-blue-300/60 dark:hover:border-blue-500/20 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/[0.04]">
       {/* Top badges */}
-      <div className="flex items-center justify-between gap-2 mb-4">
+      <div className="flex items-center justify-between gap-2 mb-3">
         <div className="flex items-center gap-2">
-          <span className="text-xs font-mono font-bold px-2.5 py-1 rounded-md bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 border border-sky-200/60 dark:border-sky-800/40">
-            PHẦN {part.part}
+          <span className="text-xs font-mono font-bold px-2 py-0.5 rounded-md bg-blue-50 dark:bg-blue-500/[0.08] text-blue-600 dark:text-blue-400 border border-blue-200/50 dark:border-blue-500/[0.15]">
+            {String(part.part).padStart(2, '0')}
           </span>
           {isAllCompleted && (
-            <span className="flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded-md border border-emerald-200/60 dark:border-emerald-800/40">
+            <span className="flex items-center gap-1 text-[11px] font-medium text-emerald-600 dark:text-emerald-400">
               <CheckCircle2 className="w-3.5 h-3.5" />
-              Đã xong
+              Hoàn thành
             </span>
           )}
         </div>
-        <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
-          {totalLessons} bài học
-        </span>
       </div>
 
       {/* Part Title */}
-      <Link href={`/course/part-${part.part}`} className="block flex-1 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
-        <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 leading-snug mb-2">
+      <Link href={`/course/part-${part.part}`} className="block flex-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+        <h3 className="text-[15px] font-bold text-slate-900 dark:text-slate-100 leading-snug mb-2">
           {part.title_vi || part.title_original}
         </h3>
       </Link>
 
       {/* Stats */}
-      <div className="flex items-center gap-4 text-xs text-slate-500 dark:text-slate-400 my-3">
-        <div className="flex items-center gap-1.5">
-          <BookOpen className="w-3.5 h-3.5 text-slate-400" />
-          <span>{totalLessons} bài học</span>
+      <div className="flex items-center gap-3.5 text-xs text-slate-400 dark:text-slate-500 my-2">
+        <div className="flex items-center gap-1">
+          <BookOpen className="w-3.5 h-3.5" />
+          <span>{totalLessons} bài</span>
         </div>
         {exercisesCount > 0 && (
-          <div className="flex items-center gap-1.5">
-            <Code className="w-3.5 h-3.5 text-slate-400" />
-            <span>{exercisesCount} bài tập</span>
+          <div className="flex items-center gap-1">
+            <Code className="w-3.5 h-3.5" />
+            <span>{exercisesCount} tập</span>
           </div>
         )}
       </div>
 
       {/* Progress Bar */}
-      <div className="mt-2 mb-5">
+      <div className="mt-2 mb-4">
         <ProgressBar
           value={completedInPart}
           max={totalLessons}
           showLabel={true}
           size="sm"
         />
-        <div className="text-[11px] text-slate-400 mt-1">
-          {completedInPart} trên {totalLessons} bài đã hoàn thành
-        </div>
       </div>
 
       {/* Action CTA */}
-      <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/80 gap-2">
+      <div className="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-white/[0.04]">
         <Link
           href={`/course/part-${part.part}`}
-          className="text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+          className="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
         >
-          Xem chi tiết
+          Chi tiết
         </Link>
         <Link
           href={targetHref}
-          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-sky-600 hover:bg-sky-500 text-white shadow-xs shadow-sky-600/30 transition-all hover:gap-2"
+          className="btn-primary inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs"
         >
-          <span>{completedInPart === 0 ? 'Bắt đầu học' : isAllCompleted ? 'Xem lại' : 'Tiếp tục'}</span>
-          <ArrowRight className="w-3.5 h-3.5" />
+          <span>{completedInPart === 0 ? 'Bắt đầu' : isAllCompleted ? 'Xem lại' : 'Tiếp tục'}</span>
+          <ArrowRight className="w-3 h-3" />
         </Link>
       </div>
     </div>

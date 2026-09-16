@@ -18,33 +18,30 @@ export function ResumeLearningCard({
   const completedCount = progress.completedLessons.length;
 
   return (
-    <div className="w-full max-w-4xl mx-auto my-6 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-sky-900/40 via-blue-900/30 to-indigo-950/40 border border-sky-500/30 backdrop-blur-md shadow-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-      <div className="flex items-start gap-3.5">
-        <div className="p-3 rounded-xl bg-sky-500 text-white shadow-md shadow-sky-500/30 shrink-0 mt-0.5">
-          <Play className="w-5 h-5 fill-white" />
+    <div className="w-full max-w-3xl mx-auto mt-8 p-5 rounded-xl bg-white dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.08] shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4 animate-fade-in">
+      <div className="flex items-start gap-3">
+        <div className="p-2.5 rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5">
+          <Play className="w-4 h-4 fill-current" />
         </div>
         <div>
           <div className="flex items-center gap-2">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-sky-400">
-              Tiếp tục bài học gần nhất
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+              Tiếp tục học
             </span>
-            <span className="text-xs text-slate-400">• Đã hoàn thành {completedCount}/78 bài</span>
+            <span className="text-[11px] text-slate-400 dark:text-slate-500">• {completedCount}/78 bài</span>
           </div>
-          <h3 className="text-lg font-bold text-white mt-1">
-            {lesson ? `Phần ${lesson.part}: ${lesson.title}` : 'Bắt đầu với Lập trình Python'}
+          <h3 className="text-sm font-bold text-slate-900 dark:text-white mt-1">
+            {lesson ? `Phần ${lesson.part}: ${lesson.title}` : 'Bắt đầu với Python'}
           </h3>
-          <p className="text-xs text-slate-300 mt-0.5">
-            Tiếp tục tiến trình học của bạn từ nơi bạn đã dừng lại lần trước.
-          </p>
         </div>
       </div>
 
       <Link
         href={`/lesson/${currentLessonId}`}
-        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl text-sm font-semibold bg-sky-500 hover:bg-sky-400 text-slate-950 shadow-md shadow-sky-500/20 transition-all shrink-0 hover:gap-3"
+        className="btn-primary inline-flex items-center justify-center gap-2 px-5 py-2.5 text-xs shrink-0"
       >
-        <span>Tiếp tục học</span>
-        <ArrowRight className="w-4 h-4" />
+        <span>Tiếp tục</span>
+        <ArrowRight className="w-3.5 h-3.5" />
       </Link>
     </div>
   );

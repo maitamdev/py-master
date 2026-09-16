@@ -71,7 +71,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-slate-50 dark:bg-[#090d16] text-slate-900 dark:text-slate-100 antialiased selection:bg-sky-500/20 selection:text-sky-600 dark:selection:text-sky-300">
+      <body className="min-h-full flex flex-col bg-white dark:bg-[#0a0f1e] text-slate-900 dark:text-slate-100 antialiased selection:bg-blue-500/20 selection:text-blue-700 dark:selection:text-blue-300">
         <Header />
         <main className="flex-1 flex flex-col">{children}</main>
         <Footer />

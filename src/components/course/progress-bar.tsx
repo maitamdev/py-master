@@ -3,32 +3,29 @@
 export function ProgressBar({
   value,
   max,
-  className = '',
   showLabel = false,
   size = 'md',
 }: {
   value: number;
   max: number;
-  className?: string;
   showLabel?: boolean;
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'sm' | 'md';
 }) {
-  const percentage = max > 0 ? Math.min(100, Math.round((value / max) * 100)) : 0;
-
-  const heightClass = size === 'sm' ? 'h-1.5' : size === 'lg' ? 'h-3' : 'h-2';
+  const pct = max > 0 ? Math.round((value / max) * 100) : 0;
+  const h = size === 'sm' ? 'h-1.5' : 'h-2';
 
   return (
-    <div className={`w-full flex items-center gap-3 ${className}`}>
-      <div className={`flex-1 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden ${heightClass}`}>
+    <div className="w-full">
+      <div className={`w-full ${h} rounded-full bg-slate-100 dark:bg-white/[0.04] overflow-hidden`}>
         <div
-          className="h-full bg-gradient-to-r from-sky-500 to-blue-600 rounded-full transition-all duration-300 ease-out"
-          style={{ width: `${percentage}%` }}
+          className={`${h} rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-700 ease-out`}
+          style={{ width: `${pct}%` }}
         />
       </div>
       {showLabel && (
-        <span className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 min-w-9 text-right">
-          {percentage}%
-        </span>
+        <div className="text-[11px] text-slate-400 dark:text-slate-500 mt-1.5 tabular-nums">
+          {value}/{max} · {pct}%
+        </div>
       )}
     </div>
   );

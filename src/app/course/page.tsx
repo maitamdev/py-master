@@ -23,36 +23,36 @@ export default async function CoursePage() {
   }
 
   return (
-    <div className="flex-1 py-10 md:py-14 bg-slate-50/50 dark:bg-[#090d16]">
+    <div className="flex-1 py-12 md:py-16 bg-white dark:bg-[#0a0f1e]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header Banner */}
-        <div className="mb-10 space-y-3">
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">
+        {/* Header */}
+        <div className="mb-12 space-y-3 animate-fade-in">
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">
             <Layers className="w-4 h-4" />
-            <span>Lộ trình đào tạo toàn diện 14 phần</span>
+            <span>Lộ trình đào tạo toàn diện</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Khóa học Lập trình Python Toàn diện
+            Khóa học Lập trình Python
           </h1>
-          <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base max-w-3xl leading-relaxed">
-            Giáo trình 14 phần đưa bạn từ những khái niệm lập trình cơ bản nhất đến các kỹ thuật hướng đối tượng (OOP), cấu trúc dữ liệu nâng cao, xử lý tệp, thuật toán đệ quy và xây dựng ứng dụng hoàn chỉnh.
+          <p className="text-slate-500 dark:text-slate-400 text-sm max-w-3xl leading-relaxed">
+            {course.total_parts} phần đưa bạn từ khái niệm cơ bản đến OOP, cấu trúc dữ liệu nâng cao, đệ quy và xây dựng ứng dụng.
           </p>
 
-          <div className="flex flex-wrap items-center gap-4 pt-2 text-xs font-medium text-slate-500 dark:text-slate-400">
-            <div className="flex items-center gap-1.5 bg-white dark:bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800">
-              <span className="font-bold text-slate-900 dark:text-white">{course.total_parts}</span> phần học
+          <div className="flex flex-wrap items-center gap-3 pt-2 text-xs font-medium text-slate-400 dark:text-slate-500">
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.06]">
+              <span className="font-bold text-slate-900 dark:text-white">{course.total_parts}</span> phần
             </div>
-            <div className="flex items-center gap-1.5 bg-white dark:bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800">
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.06]">
               <span className="font-bold text-slate-900 dark:text-white">{course.total_lessons}</span> bài học
             </div>
-            <div className="flex items-center gap-1.5 bg-white dark:bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800">
-              <span className="font-bold text-slate-900 dark:text-white">{course.total_exercises}</span> bài tập thực hành
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.06]">
+              <span className="font-bold text-slate-900 dark:text-white">{course.total_exercises}</span> bài tập
             </div>
           </div>
         </div>
 
         {/* Parts Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {parts.map((part) => (
             <PartCard
               key={part.part}
